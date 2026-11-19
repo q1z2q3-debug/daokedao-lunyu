@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>君子食无求饱 · 论语第十三课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第十四章通释：子曰「君子食无求饱，居无求安，敏于事而慎于言，就有道而正焉，可谓好学也已」。四条即四道门：去欲（无求饱安）、先行（敏事）、后言（慎言）、求正（就有道）。孔子一生极少许人「好学」，此章即他自己给「好学」下的定义。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E6%B8%A9%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+</style></head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 十四章　第 13 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-b1">四条门</a><a href="#sc-b2">无求饱安</a><a href="#sc-b3">敏事慎言</a><a href="#sc-b4">就有道</a><a href="#sc-b5">许人门槛</a><a href="#sc-b6">注意力预算</a><a href="#sc-b7">三自检</a><a href="#sc-d">时代</a><a href="#sc-e">章旨</a><a href="#sc-f">存疑</a><a href="#sc-g">双卡</a><a href="#sc-h">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理图一 四道门</a><a href="#sc-21">义理图二 力的流向</a><a href="#sc-22">义理图三 就而正之</a><a href="#sc-23">附论一 谁被许过好学</a><a href="#sc-24">附论二 士的食与居</a><a href="#sc-25">附论三 三种正</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>君子食无求饱</h1>
+    <div class="h1-sub">学而 1.14　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「君子<ruby>食<rt>shí</rt></ruby>无求<ruby>饱<rt>bǎo</rt></ruby>，居无求<ruby>安<rt>ān</rt></ruby>，<ruby>敏<rt>mǐn</rt></ruby>于事而<ruby>慎<rt>shèn</rt></ruby>于言，<ruby>就<rt>jiù</rt></ruby>有道而<ruby>正<rt>zhèng</rt></ruby>焉，可谓好<ruby>学<rt>hào xué</rt></ruby>也已。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>食</span></div><div class="tzcap"><span>9 画</span><span>吃饭</span></div></div>
+      <div class="tzitem"><div class="cell"><span>求</span></div><div class="tzcap"><span>7 画</span><span>惦记着要</span></div></div>
+      <div class="tzitem"><div class="cell"><span>敏</span></div><div class="tzcap"><span>11 画</span><span>手快</span></div></div>
+      <div class="tzitem"><div class="cell"><span>慎</span></div><div class="tzcap"><span>13 画</span><span>想好再说</span></div></div>
+      <div class="tzitem"><div class="cell"><span>正</span></div><div class="tzcap"><span>5 画</span><span>校准</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">食</div><div class="v"><b>吃饭。</b>「食无求饱」不是「不吃饭」，是<b>不把「吃得饱饱的」当成每天第一件要办的事</b>。</div></div>
+      <div class="row"><div class="k">求</div><div class="v"><b>惦记着、一心想着要。</b>——<b>一个人心里的「求」是有限的，放在这儿，就放不到那儿。</b></div></div>
+      <div class="row"><div class="k">敏</div><div class="v"><b>快、不拖拉。</b>《说文》「敏，疾也」——<b>该做的事，手先到。</b></div></div>
+      <div class="row"><div class="k">慎</div><div class="v"><b>小心、想好了再说。</b>——<b>不是不说，是别抢着说。</b></div></div>
+      <div class="row"><div class="k">正</div><div class="v"><b>校准，把歪的扶直。</b>「就有道而正焉」，是<b>走到懂的人面前，请他看看我哪儿歪了</b>。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>吃饭、住得舒服，不当成头等大事；做事抢在前头，说话放在后头；再去找懂行的人，请他把自己的毛病指出来</b>——<b>这四样都做到了，才叫「好学」。</b></p>
+    <div class="scene"><b>注意：孔子这里说的「好学」，不是「书读得多」。</b>——<b>是四件很小的事：不贪舒服、手要快、嘴要慢、肯让人挑错。</b>四件都小，四件都难。</div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">食无求饱</div><div class="v">吃饭，<b>不把「吃饱」当追求</b>。有得吃就好，多的一口不必争。</div></div>
+      <div class="row"><div class="k k2">居无求安</div><div class="v">住处，<b>不把「舒服」当追求</b>。能睡就行，软硬一点，不值得占心思。</div></div>
+      <div class="row"><div class="k k2">敏于事</div><div class="v"><b>事情上要快</b>：该做的立刻做，不拖到明天。</div></div>
+      <div class="row"><div class="k k2">慎于言</div><div class="v"><b>说话上要慢</b>：先想一遍，再说出口；没把握的先不说。</div></div>
+      <div class="row"><div class="k k2">就有道</div><div class="v"><b>走到懂行的人那儿去</b>。「就」是走过去，不是等在那儿。</div></div>
+      <div class="row"><div class="k k2">而正焉</div><div class="v"><b>请他看看，把我扶正。</b>——不是请他夸，是请他挑。</div></div>
+    </div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      <b>第一件事：一碗饭。</b>早饭有包子也有粥。小满想吃两笼，可今天的作业还没动。<b>她拿了一笼，吃完就走了。</b>——<b>不是不许她吃，是她知道今天最要紧的不是吃。</b>这就是「食无求饱」：<b>把「求」留给别的事。</b>
+    </div>
+    <div class="scene">
+      <b>第二件事：一句话。</b>班上说：「我昨天在家读了两小时书！」小满其实玩了半宿。<b>她没接话，也没说自己更厉害</b>，只是把作业拿出来写。<b>——「敏于事而慎于言」：手上有活，嘴上就吹不起来。</b>
+    </div>
+    <div class="scene">
+      <b>第三件事：一次请教。</b>她的字总写歪。同桌的字很正。<b>她没有闷着自己练，而是拿着本子过去：「你看我这个横，怎么老往上翘？」</b>同桌指给她看：起笔太轻。<b>——「就有道而正焉」：不必找老师，找那个比你强一点的人也行。</b>
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="list">
+      <li>今天有没有一件「让我舒服一点」的小事，占掉了本该做正事的时间？<b>（不是不许舒服，是看谁排在前面。）</b></li>
+      <li>你上一次「说出口才后悔」的话是什么？<b>要是先说给自己听一遍，还会说吗？</b></li>
+      <li>你身边有谁，在某件事上刚好比你强一点点？<b>你有多久没去问过他了？</b></li>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>「好学」这个词，被用得太随便了。</b>背得多、考得高、读得快，都不一定叫好学。<b>孔子给的标准是四条，四条都不在书上：</b>不贪舒服、手快、嘴慢、肯让人挑错。<b>——前三条管自己，最后一条管脸皮。</b>脸皮不放下来，前三条再好，也只是「自以为是」。</div>
+    <div class="scene"><b>还有一件：让人挑错，是要求来的，不是等来的。</b>「就」是走过去。<b>你不走过去，没人会主动来正你</b>——不是他们不热心，是没人爱管闲事。<b>肯走过去的人，才学得动。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>别把「无求饱安」读成「吃苦教育」。</b>它不是让孩子受穷，是<b>教他排次序</b>：先做该做的，再享受。<b>把「苦」当目的，孩子只学会忍，学不会选。</b></div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>「敏于事」是手快，不是抢功。</b>——<b>教他「先做完，再说话」，而不是「先说话，让别人做」。</b>这差别，小学就看得出来，长大成了两种人。</div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>「慎于言」不是让孩子变闷。</b>慎是「说前想一遍」，不是「不说」。<b>教他一个习惯：重要的答应，先把对方的意思重复一遍，再回答。</b>既慎，又不失礼。</div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>「就有道而正」要有人可「就」。</b>——<b>家里最好有一个「可以问的人」</b>：爸爸懂修东西、妈妈懂做饭、爷爷懂下棋，都算。<b>孩子问的时候，别急着替他做，先为他指一处。</b></div></div>
+      <div class="pair"><div class="k2">五</div><div class="v"><b>给孩子「被正」的经验，也给他「正人」的练习。</b>——<b>轮到他说别人哪儿不对时，教他说「这一步可以再试试」，不说「你错了」。</b>正，是校准，不是判罪。</div></div>
+      <div class="pair"><div class="k2">六</div><div class="v"><b>融西：</b>心理学讲 <b>delayed gratification</b>（延迟满足）——<b>不是压抑欲望，是把欲望排在任务后面</b>；又讲 <b>feedback loop</b>（反馈回路）——<b>没有外部反馈的系统，会一路错下去。</b>「就有道而正焉」，正是这两条的古文版。</div></div>
+      <div class="pair"><div class="k2">七</div><div class="v"><b>一个家里最值钱的，是「允许被指出问题」的气氛。</b>——<b>孩子指出父母一处小错，父母若答「你说得对，我改」，孩子就学到了「正」是可以求来的。</b></div></div>
+    </div>
+  </section>
+
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页</div>
+
+    <h1>君子食无求饱</h1>
+    <div class="h1-sub">连读 · 字义句读 · 四条门 · 无求饱安 · 敏事慎言 · 就有道 · 许人门槛 · 注意力预算 · 三自检 · 时代 · 章旨 · 存疑 · 双卡 · 跨典</div>
+
+    <div class="h2" id="sc-lian">零　连读：从「守界」到「好学」</div>
+    <p class="leadline">1.11 讲「<b>不改</b>」（孝在时间里），1.12 讲「<b>不过</b>」（和在边界里），1.13 讲「<b>近</b>」（诺、恭、托在标准旁），1.14 讲「<b>好学</b>」——<b>前三章讲「怎么不偏」，这一章讲「怎么往上走」。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">1.12<br>给<br>度</div><div class="v">和要到相安为止。<b>——知道「到哪儿为止」。</b></div></div>
+      <div class="row"><div class="k k2">1.13<br>给<br>准</div><div class="v">诺、恭、托各配一把尺。<b>——知道「差多少」。</b></div></div>
+      <div class="row"><div class="k k2">1.14<br>给<br>路</div><div class="v"><b>知道「往哪儿走」</b>：去欲、先行、后言、求正。<b>——这一章把「学」从一个名词，变成一个每天可做的动作。</b></div></div>
+      <div class="row"><div class="k k2">1.15<br>接<br>什么</div><div class="v">1.15「<b>贫而无谄，富而无骄</b>」——讲「贫富」时的姿态。<b>1.14 讲「不求」，1.15 讲「不谄」：一个向内收，一个向外持。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">食</div><div class="v"><b>「无求」不是「不求」，是「不以求之为务」。</b>——<b>朱子注：「不求饱，则心不役于口腹。」</b>「役」字最准：<b>心被嘴使唤，就是役。</b></div></div>
+      <div class="row"><div class="k k2">居</div><div class="v"><b>「居」指居处、住处。</b>「安」是安适。——<b>注家有以「居」为「居心」者（平居之时），亦通：平素不图安逸。</b><b>两读并列，本课取「居处」，兼取「居心」。</b></div></div>
+      <div class="row"><div class="k k2">敏</div><div class="v">《说文》「<b>敏，疾也。</b>」——<b>疾是「快」，不是「聪明」。</b>敏于事＝<b>事到手就办，不悬着。</b>（与今语「敏感」「机敏」不同）</div></div>
+      <div class="row"><div class="k k2">慎</div><div class="v">《说文》「<b>慎，谨也。</b>」——<b>谨不是「怕」，是「不轻发」</b>：话在口里先过一遍。</div></div>
+      <div class="row"><div class="k k2">就</div><div class="v"><b>趋而往之，走过去。</b>——<b>这个字是全章的「动」：不是等人来教，是自己上门。</b></div></div>
+      <div class="row"><div class="k k2">有道</div><div class="v"><b>朱子：「有道，则有道之人也。」</b>——<b>指人，不指世</b>（一说「有道之世」，亦通而稍迂）。<b>「有道」不必是圣人：某一事上比你明白，就是你的「有道」。</b></div></div>
+      <div class="row"><div class="k k2">正</div><div class="v"><b>匡正、就正。</b>——<b>不是「批评」，是「把歪的扶直」。</b>「正焉」的「焉」，是「于彼」：<b>在他那里把我扶正。</b></div></div>
+      <div class="row"><div class="k k2">可谓</div><div class="v"><b>「可以称得上」</b>——<b>一个留有余地的词。</b>孔子不说「是」，说「可谓」：<b>四条做到了，够格称一声「好学」；至于更高，他没说。</b></div></div>
+      <div class="row"><div class="k k2">好学</div><div class="v"><b>好，去声，读 hào，喜爱。</b>——<b>「好学」不是「学得好」，是「爱学」。</b>学得好是结果，好学是<b>每天愿意再来一次</b>。</div></div>
+      <div class="row"><div class="k k2">也已</div><div class="v"><b>语助连用，收得轻。</b>——<b>「可谓好学也已」六个字，语气是平的，不是高的。</b>孔子许人，从来不响。</div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「<b>食无求饱，居无求安</b>／<b>敏于事而慎于言</b>／<b>就有道而正焉</b>／<b>可谓好学也已</b>」——<b>三条做法，一句结论。</b>前两条管「欲」，第三条管「行」，第四条管「求」。<b>四者齐，才下「可谓」二字。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b1">二　四条门：这是孔子给「好学」下的定义</div>
+    <p class="leadline">「好学」二字，在《论语》里出现不到十次，而<b>孔子亲口许人「好学」的，只有颜回一个</b>（6.3、11.7），另有一次<b>自道</b>（5.27）。<b>——所以这一章不是随口一说，是他给「好学」立的门。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">门<br>一</div><div class="v"><b>去欲：食无求饱，居无求安。</b>——<b>先把「心」腾空。</b>心被口腹与安逸占满，学无处落脚。<b>不是戒欲，是让欲退到第二位。</b></div></div>
+      <div class="row"><div class="k k2">门<br>二</div><div class="v"><b>先行：敏于事。</b>——<b>学不是想，是做。</b>手先动，才知道难在哪儿。</div></div>
+      <div class="row"><div class="k k2">门<br>三</div><div class="v"><b>后言：慎于言。</b>——<b>没做过的事不先说，做过的事不必多说。</b>（4.24「讷于言而敏于行」）</div></div>
+      <div class="row"><div class="k k2">门<br>四</div><div class="v"><b>求正：就有道而正焉。</b>——<b>自己看不见自己。</b>所以必须走出去，让人看一眼。<b>这一条，是四条里唯一「向外」的。</b></div></div>
+    </div>
+    <div class="scene"><b>四条的次序，也值得看：</b>先「空」（去欲），再「动」（敏事），再「收」（慎言），最后「求」（就正）。<b>——空则能受，动则能知，收则能信，求则能改。</b>缺第一条，后面三条都只是忙。</div>
+
+    <div class="h2" id="sc-b2">三　无求饱安：说的是次序，不是苦行</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">不是<br>苦行</div><div class="v"><b>孔子从未教人「自讨苦吃」。</b>他吃饭「<b>食不厌精，脍不厌细</b>」（10.6），穿衣有讲究（10.4 缁衣羔裘、素衣麑裘），<b>该讲究的地方一样不省。</b>——<b>那「无求饱安」是什么？是「不当成第一求」。</b></div></div>
+      <div class="row"><div class="k k2">4.9<br>的<br>狠话</div><div class="v">「<b>士志于道，而耻恶衣恶食者，未足与议也。</b>」——<b>「耻」字最要紧：不是「他穿得差」，是「他嫌自己穿得差」。</b>——<b>一个人的心力若有一半用在「怕人看见我穷」，就没法谈道了。</b></div></div>
+      <div class="row"><div class="k k2">7.16<br>的<br>现场</div><div class="v">「<b>饭疏食，饮水，曲肱而枕之，乐亦在其中矣。</b>」——<b>吃粗粮、喝白水、弯着胳膊当枕头。</b>——<b>注意：他没说「苦」，说「乐亦在其中」。</b><b>乐不在清苦本身，在清苦没挡住他做正事。</b></div></div>
+      <div class="row"><div class="k k2">15.32<br>的<br>分工</div><div class="v">「<b>君子谋道不谋食……耕也，馁在其中矣；学也，禄在其中矣。</b>」——<b>「谋」字点破：不是不要食，是不把谋算花在食上。</b>——<b>这一条最现实：时间与心力是定量的，投在哪儿，就长出什么。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b3">四　敏事慎言：先做，后说，少说</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">4.24<br>同<br>一句</div><div class="v">「<b>君子欲讷于言而敏于行。</b>」——<b>「讷」是「说话像有点迟钝」，不是口吃，是「不抢话」。</b>——<b>1.14 说「敏于事」，4.24 说「敏于行」，一也。</b></div></div>
+      <div class="row"><div class="k k2">2.13<br>的<br>算法</div><div class="v">子贡问君子，孔子答：「<b>先行其言，而后从之。</b>」——<b>先把话做了，再让话跟上。</b>——<b>这是「慎言」最硬的一条操作法：说之前，先看看它有没有已经发生。</b></div></div>
+      <div class="row"><div class="k k2">慎<br>不是<br>哑</div><div class="v"><b>孔子反对「不说」。</b>该说的时候，他讲「<b>可与言而不与之言，失人</b>」（15.7）。——<b>所以「慎」是「择时、择法」，不是「闭嘴」。</b>——<b>慎言的对面不是「直言」，是「轻言」。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>三<br>种<br>病</div><div class="v"><b>一说就完</b>（立 flag、宣布计划，说完就有「已经做了」的错觉）；<b>一说就大</b>（把小事说成大事，往后无法兑现）；<b>一说就怨</b>（把情绪当事实报出去）。<b>——三病同一个根：话跑在手前面。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b4">五　就有道而正：学是件「走出去」的事</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">「就」<br>的<br>方向</div><div class="v"><b>「就」是从我这儿，往他那儿去。</b>——<b>不是他来，是我去。</b><b>这一个字，把学习的责任放回了自己身上。</b></div></div>
+      <div class="row"><div class="k k2">《学<br>记》<br>的<br>判词</div><div class="v">「<b>独学而无友，则孤陋而寡闻。</b>」——<b>一个人闷头学，必偏且窄。</b>——<b>「孤陋」不是知识少，是「自己不知道自己偏在哪儿」。</b></div></div>
+      <div class="row"><div class="k k2">正<br>的<br>对<br>象</div><div class="v"><b>不必是名师。</b>——<b>一件上比你明白的人，就是你的「有道」。</b>——<b>会切菜的、会算账的、会哄孩子的、会把话说清楚的，都算。</b><b>孔子这话，把「师」的门槛降到了「某一处比你强」。</b></div></div>
+      <div class="row"><div class="k k2">正<br>的<br>难<br>处</div><div class="v"><b>难不在找，在「受」。</b>——<b>人问的是「我这样行不行」，要的是「行」；对方说「不太行」，脸就挂不住了。</b>——<b>「正焉」二字，考的是脸皮：能不能听完一句不爱听的话，还接着说「那您看该怎么改」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b5">六　「可谓」的门槛：孔子一生许过谁</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">6.3<br>颜回</div><div class="v">鲁哀公问「弟子孰为好学」，孔子答：「<b>有颜回者好学，不迁怒，不贰过。不幸短命死矣，今也则亡，未闻好学者也。</b>」——<b>他给颜回下的两条注，也不是「读书多」，是「不迁怒」「不贰过」。</b></div></div>
+      <div class="row"><div class="k k2">11.7<br>再<br>说</div><div class="v">季康子问同一句，孔子答得几乎一字不差，只多一句「<b>不幸短命死矣，今也则亡</b>」。——<b>同一段话答两个人，说明这不是随口，是他心里的一块碑。</b></div></div>
+      <div class="row"><div class="k k2">5.27<br>自<br>道</div><div class="v">「<b>十室之邑，必有忠信如丘者焉，不如丘之好学也。</b>」——<b>他把自己与常人相比，比的不是「忠信」（他说别人也有），是「好学」。</b>——<b>在他心里，「好学」是唯一他敢说「我比人强」的地方。</b></div></div>
+      <div class="row"><div class="k k2">三<br>处<br>合<br>看</div><div class="v"><b>1.14 给「好学」立门（四条），6.3 给「好学」立深（不迁怒不贰过），5.27 给「好学」立证（孔子自道）。</b>——<b>三者合起来，才是完整的「好学」：门口四条、深处两条、证人在世。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b6">七　「求」的注意力预算</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">定量</div><div class="v"><b>一个人的时间与心力是定量的。</b>——<b>「无求饱安」在经济学上，就是「把预算从消费转到投资」。</b>——<b>不是不消费，是不让消费吃掉全部结余。</b></div></div>
+      <div class="row"><div class="k k2">隐性<br>的<br>求</div><div class="v"><b>最耗人的「求」，不在吃住，在「被看见」。</b>——<b>求点赞、求认可、求不比别人差，是「求饱求安」的现代变体。</b><b>它占的心力，比吃饭多十倍。</b></div></div>
+      <div class="row"><div class="k k2">一<br>个<br>可<br>测<br>的<br>问<br>题</div><div class="v"><b>昨天你有多少分钟，是花在「让自己看起来更好」上的？</b>——<b>又有多少分钟，是花在「让自己真的更好」上的？</b><b>两个数一比，「求」在哪儿，一目了然。</b></div></div>
+    </div>
+    <div class="scene"><b>这一章的锋利之处在于：它不要求你「少享受」，它要求你「换方向」。</b>——<b>享受可以留着，只要它不再占着「第一求」的位置。</b></div>
+
+    <div class="h2" id="sc-b7">八　三病理与三自检</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">病理<br>一</div><div class="v"><b>贪安饱 → 学无空隙。</b>表现：一天到晚「忙」，忙的全是「让自己舒服一点」。<b>代价：</b>心力被日常填满，一年过去，能力没长。<b>——不是懒，是「满」。</b></div></div>
+      <div class="row"><div class="k k2">病理<br>二</div><div class="v"><b>敏言慎事 → 空谈。</b>表现：计划说得漂亮，动手一拖再拖；点评别人的活头头是道，自己的活交不出来。<b>代价：</b>久了没人信他的话。<b>——话说得太早，就把行动的那口气泄了。</b></div></div>
+      <div class="row"><div class="k k2">病理<br>三</div><div class="v"><b>就而不正 → 白跑。</b>表现：拜师、上课、听讲座，听得点头，回来照旧。<b>代价：</b>学成了收藏。<b>——「正」是「改」，不是「知道该改」。</b></div></div>
+      <div class="row"><div class="k k2">自检<br>一</div><div class="v"><b>今早早饭，我有没有为一口吃的耽误正事？</b>（小处最看得出「求」在哪儿）</div></div>
+      <div class="row"><div class="k k2">自检<br>二</div><div class="v"><b>今天说出口的话里，有几件是「已经做了」的？</b>（没做的先不说，说了的先做）</div></div>
+      <div class="row"><div class="k k2">自检<br>三</div><div class="v"><b>上一次有人指出我哪儿不对，是哪天？我当时怎么答的？</b>（答「谢谢」不算；答「我改」才算）</div></div>
+    </div>
+
+    <div class="h2" id="sc-d">九　时代：士的「食」与「居」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">士<br>无<br>世<br>禄</div><div class="v"><b>春秋之士，多无封邑，靠「仕」与「游」吃饭。</b>——<b>「食」与「居」对他们不是小事，是每天的实题。</b>——<b>所以孔子这话，不是富贵人的修养，是奔波人的定力。</b></div></div>
+      <div class="row"><div class="k k2">绝<br>粮<br>现<br>场</div><div class="v">15.2「<b>在陈绝粮，从者病，莫能兴。</b>」子路愠见曰：「君子亦有穷乎？」孔子曰：「<b>君子固穷，小人穷斯滥矣。</b>」——<b>饿到站不起来的时候，这话才见真假。</b></div></div>
+      <div class="row"><div class="k k2">游<br>说<br>之<br>风</div><div class="v"><b>「干七十余君」</b>（《史记·孔子世家》语意）：<b>带着弟子走诸侯，求一个能用他的地方。</b>——<b>这一路，吃住都不定。所以「无求饱安」不是清高，是走路的常识：带太多东西，走不远。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>对<br>照</div><div class="v"><b>通勤、租房、加班餐、房贷</b>——「食」与「居」依然是实题。<b>——这一章不劝人清贫，它只提一个问题：</b><b>你为「食」与「居」付出的那份心力，有没有把「学」的位置挤没了？</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-e">十　章旨</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一<br>句</div><div class="v"><b>好学＝去欲、先行、后言、求正。</b>四条都不在书上，四条都在日子里。</div></div>
+      <div class="row"><div class="k k2">一<br>反</div><div class="v"><b>反过来说：</b>求饱求安、敏言慎事、就而不正——<b>三条，正好把「好学」堵死。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.13<br>合<br>看</div><div class="v">1.13「近」是「往标准上靠」，1.14「就」是「往人那儿走」。<b>——一个靠标准，一个靠人；标准是死的，人是活的。</b><b>所以「正」这件事，非人不可。</b></div></div>
+      <div class="row"><div class="k k2">落<br>点</div><div class="v"><b>「好学」不是一种天分，是一种安排。</b>——<b>把「求」的位置让出来，把「手」放前面，把「嘴」放后面，再走一趟求人挑错的路。</b><b>四件事，一天就能开始。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-f">十一　存疑</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「食无求饱」是否「不求吃饱」</b>　一说「不追求饱」，一说「不贪求美味」。<b>本课取「不以求之为务」，兼含「不贪味」。</b>朱子「心不役于口腹」，最得其实。</div></div>
+      <div class="q"><span>02</span><div><b>「居」字</b>　一训居处（住处），一训「平居」（平素居心）。<b>两读皆通，本课取居处为主，兼取平居。</b></div></div>
+      <div class="q"><span>03</span><div><b>「敏」字</b>　「疾也」（《说文》）／「勉也」（一说通「黾勉」）。<b>本课取「疾而行之」：既快且勤。</b>二者不冲突。</div></div>
+      <div class="q"><span>04</span><div><b>「有道」指人还是指世</b>　朱子指人（有道之人），一说指「有道之世」。<b>本章取人：与「正焉」相配，非人不能正人。</b></div></div>
+      <div class="q"><span>05</span><div><b>四事是否即「好学」全文</b>　一说四条只是「好学之始」，非其全。<b>本课取「门」义：这是入门的四条，非毕业的四条。</b>——<b>孔子说「可谓」，本已留了余地。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-g">十二　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">「无求饱安」就是吃苦受穷，越穷越有德。</div><div class="b"><b>是排次序，不是找苦吃。</b>孔子自己也「食不厌精，脍不厌细」；他只是<b>不让口腹占第一求</b>。（15.32「谋道不谋食」）</div></div>
+      <div class="pair"><div class="a">「敏于事」就是能干、能揽事。</div><div class="b"><b>是「不拖」，不是「抢功」。</b>手先到，是把自己的活办完；<b>揽别人的活来显本事，恰恰是不敏。</b></div></div>
+      <div class="pair"><div class="a">「慎于言」就是少说话、别出头。</div><div class="b"><b>是说前先想，不是不说。</b>该说的话不说，孔子叫「失人」（15.7）。<b>慎的对面是「轻」，不是「直」。</b></div></div>
+      <div class="pair"><div class="a">「就有道」就是拜名师、找靠山。</div><div class="b"><b>是「请人正」，某一件上比你明白的人即可。</b>——<b>「就」是走过去，重点在「正」：他要肯说你不爱听的。</b></div></div>
+      <div class="pair"><div class="a">「好学」就是书读得多、成绩好。</div><div class="b"><b>是四条生活方式：</b>不贪舒服、手快、嘴慢、肯让人挑错。<b>「学得好」是结果，「好学」是每天愿意再来一次。</b></div></div>
+      <div class="pair"><div class="a">「正」就是挨批评，忍着。</div><div class="b"><b>正＝校准：是我走过去请他挑，不是等他来骂我。</b>——<b>请求来的批评是营养，等来的批评是伤。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-h">十三　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《论语》<br>4.9</div><div class="v">「<b>士志于道，而耻恶衣恶食者，未足与议也。</b>」——「耻」字是关：嫌自己穷，就谈不下去。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>4.24</div><div class="v">「<b>君子欲讷于言而敏于行。</b>」——本章第三句的孪生句。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>2.13</div><div class="v">「<b>先行其言，而后从之。</b>」——慎言的操作法：先做，再让话跟上。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>7.16</div><div class="v">「<b>饭疏食，饮水，曲肱而枕之，乐亦在其中矣。</b>」——清苦没挡住正事，所以有乐。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>15.32</div><div class="v">「<b>君子谋道不谋食……学也，禄在其中矣。</b>」——心力投向哪里，长出的就是什么。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>6.3</div><div class="v">「<b>有颜回者好学，不迁怒，不贰过。</b>」——「好学」的深处两条。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>5.27</div><div class="v">「<b>不如丘之好学也。</b>」——孔子唯一敢自许的地方。</div></div>
+      <div class="row"><div class="k k2">《礼记》<br>学记</div><div class="v">「<b>独学而无友，则孤陋而寡闻。</b>」——「就有道」的注脚。</div></div>
+      <div class="row"><div class="k k2">《中庸》</div><div class="v">「<b>博学之，审问之，慎思之，明辨之，笃行之。</b>」——五步，与本章四条相表里。</div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　待供图</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1328×1776 竖幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary>
+          <p>古淡水墨立轴，纸本米色 #FBF7EC 底，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面取「君子食无求饱，居无求安，敏于事而慎于言，就有道而正焉」之义：一间简朴的学舍廊下，一案一席，案上只一碗粗食、一盂水、一卷摊开的简；中年士人挽袖伏案书写（手在前，笔在手）；对面一位年长者坐而执简，侧身指点一处（不是评功，是在改字）；门外远处一名少年正拾级而来，手抱一捆简（「就有道」的那个「就」）。器物简省，不设丰盛酒食，不作苦相。竖幅 3:4，人物居下三分之二，上方留白。不写字、不画书页文字、不生成任何水印。</p>
+        </details>
+        <div class="note">图注：图到后另补「读图」五条（看案上有什么、看伏案的手、看长者的指、看门外来的少年、看屋舍的简）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　四道门：空、动、收、求</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="好学的四道门：去欲、先行、后言、求正">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 四道门都过了，才挂得上这块匾</text>
+
+        <rect x="24" y="56" width="96" height="112" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="72" y="76" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">门一 · 空</text>
+        <text x="72" y="104" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">去欲</text>
+        <text x="72" y="124" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">食无求饱</text>
+        <text x="72" y="140" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">居无求安</text>
+        <text x="72" y="158" text-anchor="middle" font-family="serif" font-size="8" fill="#A2503B">心腾空，才装得下</text>
+
+        <rect x="132" y="56" width="96" height="112" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="180" y="76" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">门二 · 动</text>
+        <text x="180" y="104" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">敏于事</text>
+        <text x="180" y="124" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">事到手就办</text>
+        <text x="180" y="140" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">不悬着</text>
+        <text x="180" y="158" text-anchor="middle" font-family="serif" font-size="8" fill="#A2503B">做过了才知道难</text>
+
+        <rect x="240" y="56" width="96" height="112" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="288" y="76" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">门三 · 收</text>
+        <text x="288" y="104" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">慎于言</text>
+        <text x="288" y="124" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">没做的先不说</text>
+        <text x="288" y="140" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">说过的先做过</text>
+        <text x="288" y="158" text-anchor="middle" font-family="serif" font-size="8" fill="#A2503B">话跑在手后面</text>
+
+        <rect x="348" y="56" width="108" height="112" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+        <text x="402" y="76" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">门四 · 求</text>
+        <text x="402" y="100" text-anchor="middle" font-family="serif" font-size="12" fill="#A2503B">就有道</text>
+        <text x="402" y="116" text-anchor="middle" font-family="serif" font-size="12" fill="#A2503B">而正焉</text>
+        <text x="402" y="124" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">走过去，请他挑</text>
+        <text x="402" y="140" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">不是请他夸</text>
+        <text x="402" y="158" text-anchor="middle" font-family="serif" font-size="8" fill="#A2503B">唯一向外的一门</text>
+
+        <rect x="150" y="196" width="180" height="34" fill="#2F2A24"/>
+        <text x="240" y="218" text-anchor="middle" font-family="serif" font-size="12" fill="#FBF7EC" letter-spacing="2">可谓好学也已</text>
+        <line x1="240" y1="170" x2="240" y2="192" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="240,196 234,186 246,186" fill="#8A8074"/>
+
+        <text x="240" y="254" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">空 → 动 → 收 → 求：缺第一门，后三门只是忙；缺第四门，前三门只是自以为是</text>
+        <text x="240" y="276" text-anchor="middle" font-family="serif" font-size="9" fill="#5C5347">孔子说「可谓」，不说「是」——这匾是入门匾，不是毕业匾</text>
+      </svg>
+      <div class="figcap">△ 四道门的次序不是随口的：<b>先能把心腾空，才动得起来；先动过，话才收得住；收得住，才听得进人话。</b></div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　「求」的流向：心力只有那么多</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="心力分配：一条流向饱安被看见，一条流向学">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 定量的一缸水，只有两个出口</text>
+
+        <ellipse cx="120" cy="150" rx="52" ry="46" fill="#F6F1E3" stroke="#C58A73"/>
+        <text x="120" y="144" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">心力</text>
+        <text x="120" y="162" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">每日定量</text>
+
+        <rect x="212" y="70" width="216" height="8" fill="#DCD5C8"/>
+        <rect x="212" y="70" width="176" height="8" fill="#C58A73"/>
+        <polygon points="388,62 400,74 388,86" fill="#C58A73"/>
+        <rect x="212" y="70" width="176" height="8" fill="#C58A73" opacity="0"/>
+        <rect x="228" y="86" width="150" height="34" fill="#FBF1EC" stroke="#A2503B"/>
+        <text x="303" y="102" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">饱 · 安 · 被看见</text>
+        <text x="303" y="114" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">花掉就没了，不留存</text>
+
+        <rect x="212" y="180" width="216" height="8" fill="#DCD5C8"/>
+        <rect x="212" y="180" width="64" height="8" fill="#4A5C55"/>
+        <polygon points="276,172 288,184 276,196" fill="#4A5C55"/>
+        <rect x="292" y="196" width="132" height="34" fill="#F2F6F3" stroke="#4A5C55"/>
+        <text x="358" y="212" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">学 · 手艺 · 校准</text>
+        <text x="358" y="224" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">会累积，会复利</text>
+
+        <line x1="120" y1="150" x2="210" y2="76" stroke="#C58A73" stroke-width="1"/>
+        <line x1="120" y1="150" x2="210" y2="184" stroke="#4A5C55" stroke-width="1"/>
+
+        <text x="240" y="256" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">「无求饱安」不是关上上面那根管，是把它的流量调小</text>
+        <text x="240" y="274" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">调小不是清苦：是让下面那根管，有水流过</text>
+      </svg>
+      <div class="figcap">△ 「求」不是道德问题，是配比问题——<b>水流向哪儿，一年后你就是什么样子。</b></div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　就而正之：把自己递过去</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="就有道而正：左侧歪线被右侧正线扶直，箭头标注就">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 「正」是把歪的扶直，不是把人压平</text>
+
+        <line x1="40" y1="120" x2="40" y2="200" stroke="#8A8074" stroke-width="1"/>
+        <text x="40" y="216" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">我</text>
+        <path d="M72,196 C96,160 104,140 132,96" fill="none" stroke="#A2503B" stroke-width="2.2"/>
+        <text x="100" y="222" text-anchor="middle" font-family="serif" font-size="8.5" fill="#A2503B">以为直，其实歪</text>
+
+        <path d="M132,96 L300,96" fill="none" stroke="#DCD5C8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <polygon points="300,96 290,90 290,102" fill="#DCD5C8"/>
+        <text x="216" y="86" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">「就」：走过去</text>
+
+        <line x1="320" y1="60" x2="320" y2="212" stroke="#2F2A24" stroke-width="1"/>
+        <text x="320" y="228" text-anchor="middle" font-family="serif" font-size="9" fill="#2F2A24">有道者</text>
+        <text x="336" y="152" font-family="serif" font-size="9" fill="#5C5347">他不用替你走</text>
+        <text x="336" y="168" font-family="serif" font-size="9" fill="#5C5347">只把这条线给你看</text>
+
+        <path d="M300,96 L340,96" fill="none" stroke="#4A5C55" stroke-width="1.6"/>
+        <circle cx="300" cy="96" r="3" fill="#4A5C55"/>
+        <text x="352" y="88" font-family="serif" font-size="9" fill="#4A5C55">这条才是直</text>
+
+        <rect x="76" y="248" width="328" height="36" fill="#FBF1EC" stroke="#A2503B"/>
+        <text x="240" y="270" text-anchor="middle" font-family="serif" font-size="10" fill="#2F2A24">正 = 拿他的线，比我的线；差的这一段，就是我要改的地方</text>
+      </svg>
+      <div class="figcap">△ 「正」从来不等于「被否定」：<b>他给的是那根线，不是一句判决。</b>——会不会接这根线，才是好学与不好学的分界。</div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　孔子一生，只许过一个人「好学」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">6.3<br>答<br>哀公</div><div class="v">「<b>有颜回者好学，不迁怒，不贰过。不幸短命死矣，今也则亡，未闻好学者也。</b>」——<b>「今也则亡」四字，是斩钉截铁的：没有了。</b></div></div>
+      <div class="row"><div class="k k2">11.7<br>答<br>康子</div><div class="v">同一问，同一答，字句几乎不改。<b>——同一个人、两处场合、两次说一样的话，可见这不是门面话，是心里认下的判词。</b></div></div>
+      <div class="row"><div class="k k2">5.27<br>自<br>道</div><div class="v">「<b>十室之邑，必有忠信如丘者焉，不如丘之好学也。</b>」——<b>他说：忠信这样的人到处都有；但「好学」，他没见过比我更甚的。</b>——<b>这是孔子一生唯一一次拿自己跟别人比，比的是「好学」。</b></div></div>
+      <div class="row"><div class="k k2">1.14<br>定<br>义</div><div class="v"><b>那么「好学」到底是什么？就是这一章的四条。</b>——<b>6.3 说的是「深处」（不迁怒、不贰过），1.14 说的是「入口」（去欲、先行、后言、求正）。</b><b>两处合起来，才是全貌：入口四条，深处两条。</b></div></div>
+      <div class="row"><div class="k k2">三<br>千<br>弟<br>子</div><div class="v"><b>「弟子三千，身通六艺者七十有二」</b>（《史记·孔子世家》）。——<b>七十二人里，他生前只许了一个「好学」。</b><b>这个比例，足以说明这个词在他心里的分量。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-24">附论二　士的食与居：这话不是给富贵人说的</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">身<br>份</div><div class="v"><b>春秋的「士」，是贵族最下一层</b>：有身份，无封邑；能读书，不能收租。<b>——「食」与「居」是每天的实题，不是风雅的话题。</b></div></div>
+      <div class="row"><div class="k k2">出<br>路</div><div class="v"><b>两条：仕（做家臣），教（授徒）。</b>——<b>前者要看人脸色，后者要看人肯不肯来。</b>——<b>所以「无求饱安」四个字，在那个处境里，是一种「不把命交给饭碗」的骨气。</b></div></div>
+      <div class="row"><div class="k k2">绝<br>粮</div><div class="v">15.2 陈蔡之间绝粮，「从者病，莫能兴」。<b>子路气得问「君子亦有穷乎」，孔子答「君子固穷，小人穷斯滥矣」。</b>——<b>「固穷」不是「安于穷」，是「穷的时候还守得住」。前后文一对，本章才落地。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日</div><div class="v"><b>今天的「士」，是打工人、是自由职业者、是学生。</b>——<b>「食」是房租与外卖，「居」是通勤与合租。</b><b>这一章问的不是「你要不要清贫」，是「你有没有给自己留出一块不被生存占满的地方」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-25">附论三　三种「正」：自正、友正、师正</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">自正</div><div class="v"><b>内省。</b>曾子「<b>吾日三省吾身</b>」（1.4）即此。<b>长处：随时可做。短处：看不见自己的盲区。</b>——<b>只靠自正，必然越省越自洽。</b></div></div>
+      <div class="row"><div class="k k2">友正</div><div class="v"><b>同辈切磋。</b>「<b>朋友切切偲偲</b>」（13.28）即此。<b>长处：说得进话，不至于拘礼。短处：同辈往往同病，看不远。</b></div></div>
+      <div class="row"><div class="k k2">师正</div><div class="v"><b>就有道而正焉。</b>——<b>长处：他走过的路在你前面，能指出你连问都问不出的那处。短处：要放下脸。</b>——<b>三者缺一不可，而「师正」最难求，因为它要人先承认「我看不见自己」。</b></div></div>
+      <div class="row"><div class="k k2">四步<br>做法</div><div class="v"><b>① 先定一件具体的事</b>（不泛泛地问「我怎么样」）<b>② 带着东西去</b>（稿子、作品、方案，空口无凭）<b>③ 只问一处</b>（「这一处你觉得该怎么改」，不问「好不好」）<b>④ 当场复述一遍</b>（用自己的话说回去，让对方确认没听错）。<b>四步做完，「正」才不是寒暄。</b></div></div>
+      <div class="row"><div class="k k2">一<br>句<br>收</div><div class="v"><b>世上最难求的不是「名师」，是「肯说你不爱听的话的人」。</b>——<b>遇到一个，就该常去。</b></div></div>
+    </div>
+    <div class="scene"><b>这一章说到底，是四个动作：放下碗、伸出手、闭住嘴、走出去。</b>——<b>四个动作都不大，难在每天做一遍。</b><b>孔子说「可谓好学也已」，语气平得像在说别人的事；正因平，才重。</b></div>
+
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 13 课　v1.0　（2026-11-20）</div>
+  </footer>
+
+</div>
+</body>
+</html>
