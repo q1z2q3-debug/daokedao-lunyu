@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.7.1**，已刊 **8 件**（前言一篇 + 学而一至七章）
+- 当前版本 **v0.7.2**，已刊 **8 件**（前言一篇 + 学而一至七章）
 
 ---
 
@@ -81,7 +81,7 @@ python3 scripts/build_site.py      # 站点
 ## 六、引用与许可
 
 ```
-润泽．润泽说 道可道之论语 · 学而篇（v0.7.1）．2026．
+润泽．润泽说 道可道之论语 · 学而篇（v0.7.2）．2026．
 https://q1z2q3-debug.github.io/daokedao-lunyu/
 ```
 
