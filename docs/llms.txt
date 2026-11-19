@@ -19,7 +19,7 @@
 - 第十二课｜信近于义，言可复也｜三个「近」是三把尺：诺贴着义，恭贴着礼，托身贴着可亲。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/12.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.11.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.11.1，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
