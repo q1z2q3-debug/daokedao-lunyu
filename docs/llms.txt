@@ -16,7 +16,7 @@
 - 第九课｜慎终追远，民德归厚矣｜两件收不到回音的事，把一个人、一家、一地的壁练厚。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/09.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.9.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.9.1，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
