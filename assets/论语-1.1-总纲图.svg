@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 566" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="一课之纲：一句三站，一线收放" font-family="'Noto Serif SC','Songti SC',serif">
+<defs><marker id="kk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6E6459"/></marker></defs>
+
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">一 课 之 纲</text>
+<text x="20" y="58" font-size="20" fill="#2F2A24">一句三站，一线收放</text>
+<text x="20" y="80" font-size="10.5" fill="#6E6459">自证 → 互证 → 不假外证；发而不耗，守而不僵。</text>
+
+<rect x="20" y="96" width="340" height="86" fill="none" stroke="#DCCBB0"/>
+<text x="38" y="122" font-size="13" fill="#2F2A24">学而时习之　自证</text>
+<text x="38" y="146" font-size="10.5" fill="#6E6459">学为阴（受），习为阳（发）；时是当口。</text>
+<text x="38" y="166" font-size="10.5" fill="#6E6459">练熟自悦：证在自己身上，不必等人点头。</text>
+
+<line x1="190" y1="182" x2="190" y2="210" stroke="#6E6459" stroke-width="1.4" marker-end="url(#kk)"/>
+<text x="201" y="202" font-size="10" fill="#6E6459">有可告人者</text>
+
+<rect x="20" y="216" width="340" height="86" fill="none" stroke="#DCCBB0"/>
+<text x="38" y="242" font-size="13" fill="#2F2A24">有朋自远方来　互证</text>
+<text x="38" y="266" font-size="10.5" fill="#6E6459">朋＝同门，友＝同志；两条通道对接，各递所见。</text>
+<text x="38" y="286" font-size="10.5" fill="#6E6459">扩界四法：换盲区、交叉验证、叠视角、复述。</text>
+
+<line x1="190" y1="302" x2="190" y2="330" stroke="#6E6459" stroke-width="1.4" marker-end="url(#kk)"/>
+<text x="201" y="322" font-size="10" fill="#6E6459">若终于无人知</text>
+
+<rect x="20" y="336" width="340" height="86" fill="#F8F3E6" stroke="#A2503B"/>
+<text x="38" y="362" font-size="13" fill="#2F2A24">人不知而不愠　不假外证</text>
+<text x="38" y="386" font-size="10.5" fill="#6E6459">两端：我讲他不懂／他讲我不懂；怒在评价处止息。</text>
+<text x="38" y="406" font-size="10.5" fill="#6E6459">圆有大小，界有虚实；实线易愠，虚线可移。</text>
+
+<line x1="20" y1="440" x2="360" y2="440" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="464" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">三 条 判 准</text>
+
+<text x="26" y="492" font-size="10.5" fill="#2F2A24">一　界之虚实</text>
+<text x="26" y="510" font-size="9.5" fill="#6E6459">实线封闭，虚线可移</text>
+<text x="146" y="492" font-size="10.5" fill="#2F2A24">二　学之移界</text>
+<text x="146" y="510" font-size="9.5" fill="#6E6459">扩、深、破</text>
+<text x="266" y="492" font-size="10.5" fill="#2F2A24">三　教之就界</text>
+<text x="266" y="510" font-size="9.5" fill="#6E6459">小、中、大三入口</text>
+
+<line x1="20" y1="530" x2="360" y2="530" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="190" y="554" font-size="10.5" fill="#6E6459" text-anchor="middle">圆之大小只分远近，界之虚实才分君子。</text>
+</svg>

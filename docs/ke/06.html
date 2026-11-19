@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>弟子入则孝 · 论语第六课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第一第六章通释：弟子入则孝，出则弟，谨而信，泛爱众，而亲仁；行有余力，则以学文。先事后文是次序而非轻重，文灭其质与质胜而野两偏皆避；泛爱非平爱，谨非拘。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E7%9C%81%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(4,86px);gap:14px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(4,1fr);gap:12px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 六章　第 6 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读 1.5</a><a href="#sc-8">字义句读</a><a href="#sc-era">时代背景 学在官府到私学</a><a href="#sc-9">章旨</a><a href="#sc-10">两种偏</a><a href="#sc-11">分寸四条</a><a href="#sc-12">反面五病</a><a href="#sc-13">张力</a><a href="#sc-14">脉络</a><a href="#sc-15">跨典</a><a href="#sc-16">存疑</a><a href="#sc-17">双卡</a><a href="#sc-18">阴阳五蕴</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一（待供图）</a><a href="#sc-20">义理图一 七事三层</a><a href="#sc-21">义理图二 两偏</a><a href="#sc-22">附论一 弟子规</a><a href="#sc-23">附论二 六艺之文</a><a href="#sc-24">附论三 余力两解</a><a href="#sc-25">附论四 私学兴起</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>弟子入则孝</h1>
+    <div class="h1-sub">学而 1.6　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「<ruby>弟<rt>dì</rt></ruby>子入则<ruby>孝<rt>xiào</rt></ruby>，出则<ruby>弟<rt>tì</rt></ruby>，<ruby>谨<rt>jǐn</rt></ruby>而<ruby>信<rt>xìn</rt></ruby>，<ruby>泛<rt>fàn</rt></ruby>爱众，而亲仁。<ruby>行<rt>xíng</rt></ruby>有余力，则以学<ruby>文<rt>wén</rt></ruby>。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>孝</span></div><div class="tzcap"><span>7 画</span><span>待父母好</span></div></div>
+      <div class="tzitem"><div class="cell"><span>谨</span></div><div class="tzcap"><span>13 画</span><span>做事有常</span></div></div>
+      <div class="tzitem"><div class="cell"><span>信</span></div><div class="tzcap"><span>9 画</span><span>说话有实</span></div></div>
+      <div class="tzitem"><div class="cell"><span>文</span></div><div class="tzcap"><span>4 画</span><span>诗书六艺</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">孝</div><div class="v"><b>在家里，先想到父母。</b>吃完饭收自己的碗，也顺手把奶奶的收了；出门先说一声去哪儿。</div></div>
+      <div class="row"><div class="k">谨</div><div class="v"><b>做事有常，不是今天做明天忘。</b>书包每天睡前收好，水杯每天放回原位——不用人催。</div></div>
+      <div class="row"><div class="k">信</div><div class="v"><b>说出口的话，有实。</b>答应带的那本书，第二天真在书包里；没把握的事，不说满话。</div></div>
+      <div class="row"><div class="k">文</div><div class="v"><b>书、字、礼、乐、算，都是文。</b>不是只会做题，是知道前人怎么想、事情怎么做。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead">先把人做好：<b>在家对父母好，出门对年长的人敬，做事有常，说话算数，对大家都存一分好意，多靠近心地好的人。</b>这些做完了还有力气，再去读书。</p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p class="lead">跟我念：<br>「在家孝顺父母，出门敬重兄长；做事有常，说话有实；广泛地爱人，亲近有仁德的人。<b>这些做到了，还有余力，就去学文。</b>」<br>念完想一想：最后一句为什么要加「还有余力」？</p>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      早上，奶奶咳嗽，你倒了杯温水端过去——<b>这是「入则孝」。</b><br>
+      出门遇见邻居爷爷，你先问候一声——<b>这是「出则弟」。</b><br>
+      到了学校，你答应过同桌带的那本漫画，真带来了——<b>这是「信」。</b><br>
+      新同学找不到食堂，你带他去——<b>这是「泛爱众」。</b><br>
+      班里那个总帮人捡球、从不告状的同学，你愿意跟他一桌——<b>这是「亲仁」。</b><br>
+      晚上作业写完了，你才去翻那本讲星星的书——<b>这是「行有余力，则以学文」。</b><br>
+      六件事做完，天还没黑。这一天，就是孔子说的「弟子」。
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <ol class="list">
+      <li>为什么先做人、后读书？——书是教你怎么做的，做都还没做，书就成了话。</li>
+      <li>「泛爱众」是所有人都一样爱吗？——是「不藏私」，不是「不分远近」。紧接着就说「亲仁」，离好人近一点。</li>
+      <li>「有余力才学文」，是不是读书不重要？——不是。是<b>次序</b>：先把该做的做了，读书才读得进去。</li>
+    </ol>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <ol class="list">
+      <li>别人看你，不看你会背多少，看你怎么待人。</li>
+      <li>「有常」两个字最难：做一天容易，做一年才是本事。</li>
+      <li>答应之前想一想，答应之后不必人催。</li>
+      <li>书要读，但不能拿读书当不做事的理由。</li>
+    </ol>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">勘俗见</div><div class="v">「弟子」常被当成「徒弟」，此章被读成师徒之规。<b>弟子是少年后生</b>，这话是对自家孩子说的，不是对学徒说的。另一误读是把它当「读书最重要」的根据——原文恰恰把「学文」排在最后。</div></div>
+      <div class="row"><div class="k k2">现代<br>对照</div><div class="v">今天分得更细：品格教育（做人）与学业（读书）常被当成两套系统，甚至互相挤占。<b>此章给的是一种次序</b>：先把做人的事落稳，学业才有落点。</div></div>
+      <div class="row"><div class="k k2">常变<br>主线</div><div class="v"><b>礼的形式一直在变，条目没变。</b>古时晨昏定省，今日一句「我出门了」；古时侍奉汤药，今日陪一趟医院。<b>变的只是动作，敬与照顾没有变。</b></div></div>
+      <div class="row"><div class="k k2">教与学<br>二分</div><div class="v">这一章几乎全在「习」（发）：<b>七事里六件是做的，只有末一件是学的。</b>在家里，让孩子做一件真事，比讲十条道理有效。</div></div>
+      <div class="row"><div class="k k2">时代<br>落点</div><div class="v">今日之「余力」被课外班占满。<b>孩子没有余力，就永远轮不到「学文」的自主那一层</b>——只剩被安排的学习，没有自己想读的书。</div></div>
+      <div class="row"><div class="k k2">融西<br>对照</div><div class="v">服务学习（service learning）把「做事」放进课表，先服务再反思；学徒制也是先上手、后讲理。<b>与「行有余力则学文」同一次序，只是他们叫作「经验先行」。</b></div></div>
+      <div class="row"><div class="k k2">可做<br>一件</div><div class="v">今晚只加一条规矩：<b>先做一件家里的事（收碗、倒垃圾、给长辈倒水），再开始写作业。</b>不检查、不评价，做满七天再说。</div></div>
+    </div>
+  </section>
+
+
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页 · 古今汇观</div>
+
+    <h1>弟子入则孝</h1>
+    <div class="h1-sub">句读 · 时代背景 · 章旨 · 两种偏 · 分寸四条 · 反面 · 张力 · 脉络 · 跨典 · 存疑</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「弟子入则孝，出则弟，谨而信，泛爱众，而亲仁。行有余力，则以学文。」
+    </div>
+
+    <div class="h2" id="sc-lian">零　连读 1.5：一国之事，缩回一人之身</div>
+    <p class="leadline">上一章说一国，这一章说一个少年；条目没少，尺度更小。</p>
+    <div class="scene">1.5 五事是「治人者该做什么」，1.6 七事是「一个少年该做什么」。<b>两章共用一副骨架：先把事做对，再谈别的。</b><br><br>
+    可对照：敬事≈谨（都是把事当事），信＝信（一字不动），爱人≈泛爱众（都是把好意放出去）。<b>多了两件：亲仁、学文。</b>少了一件：使民以时——那是治人才有的权，少年没有。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">同一<br>骨架</div><div class="v">先事后文、先行后言。<b>1.5 的五事，1.6 的七事，都在立「先做什么」。</b></div></div>
+      <div class="row"><div class="k k2">一处<br>倒转</div><div class="v">1.5 对外发令，1.6 对内立身；<b>发令要「时」，立身要「常」。</b></div></div>
+      <div class="row"><div class="k k2">一处<br>新增</div><div class="v">「学文」是 1.5 所无。<b>治国者不必博学，少年必须有文。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-8">一　字义与句读</div>
+    <p class="leadline">七件事，四组，由内而外，由行而文。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">弟子</div><div class="v">少年后生，对父兄而言。<b>不是「徒弟」。</b></div></div>
+      <div class="row"><div class="k k2">入<br>出</div><div class="v">在家／出门。一说「入父宫、出己宫」，见存疑。<b>无论何解，都是「两处一个样」。</b></div></div>
+      <div class="row"><div class="k k2">弟<br>tì</div><div class="v">同「悌」，善事兄长。<b>顺着年齿而敬，不是讨好。</b></div></div>
+      <div class="row"><div class="k k2">谨</div><div class="v">朱子「行之有常」：<b>做事有常规，不忽作忽辍。</b></div></div>
+      <div class="row"><div class="k k2">信</div><div class="v">朱子「言之有实」：<b>话里有东西，不是空话。</b>与 1.4、1.5 的「信」同源。</div></div>
+      <div class="row"><div class="k k2">泛<br>爱众</div><div class="v">泛＝广，众＝众人。<b>把好意放得广，不藏私。</b>不是「一样爱」。</div></div>
+      <div class="row"><div class="k k2">亲仁</div><div class="v">亲＝近，仁者＝有仁德的人。<b>主动靠近好人，不是等好人来。</b></div></div>
+      <div class="row"><div class="k k2">行有<br>余力</div><div class="v">前六事做过了，还有余力。<b>「余力」是条件，见存疑与附论三。</b></div></div>
+      <div class="row"><div class="k k2">文</div><div class="v">朱子「诗书六艺之文」。<b>典籍与技艺，不只是文字。</b></div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「入则孝，出则弟」一对；「谨而信」一句；「泛爱众，而亲仁」一对；「行有余力，则以学文」一结。<b>四组由亲及疏、由行及文，末一组是全章的闸门。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-era">二　时代背景：学的门槛，在一百年里被搬低</div>
+    <p class="leadline">孔子之前，学在王官；孔子之后，学在路上。</p>
+    <div class="scene">要懂这一章的分量，得先知道「弟子」二字在孔子之前指谁。<b>三代之教，学在官府</b>：典籍、历法、礼乐、卜祝，都收在王官手里；教的人是有职的官，学的人是有位的人。学问不是人人可求，是跟着身份走的。<br><br>
+    到春秋之末，这套东西松了。<b>不是一天松的，是三处同时松：书流出去，人散出去，位不再世袭。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">学在<br>官府</div><div class="v">典籍、礼器、乐律由王官执掌；官学设于公宫之侧（《礼记·王制》「小学在公宫南之左，大学在郊」）。<b>学问附在官署上，离开官署就没有学问。</b></div></div>
+      <div class="row"><div class="k k2">书流<br>出去</div><div class="v">《左传·昭公二十六年（前 516）》记：<b>「王子朝……奉周之典籍以奔楚。」</b>王室内乱，周室典籍随着失败者南走——<b>书第一次大批离开王城。</b></div></div>
+      <div class="row"><div class="k k2">人散<br>出去</div><div class="v">《论语·微子》记乐官四散：「太师挚适齐，亚饭干适楚，三饭缭适蔡，四饭缺适秦，鼓方叔入于河，播鼗武入于汉，少师阳、击磬襄入于海。」<b>掌乐的人各走一方，把技艺带到了各国。</b></div></div>
+      <div class="row"><div class="k k2">位不<br>再世袭</div><div class="v">井田渐坏、耕具改良，庶人可上升；「士」从贵族下层脱出来，成为<b>可流动的职业</b>。<b>出身不再决定能不能学，学什么决定能做什么。</b></div></div>
+      <div class="row"><div class="k k2">入政<br>之路</div><div class="v">《左传·襄公三十一年》子产曰：<b>「侨闻学而后入政，未闻以政学者也。」</b>做官之前先学，已成时论——<b>于是学成了仕进的门，而非身份的装饰。</b></div></div>
+      <div class="row"><div class="k k2">孔子<br>开门</div><div class="v">「有教无类」（《卫灵公》15.39）不分出身；「自行束脩以上，吾未尝无诲焉」（《述而》7.7）——<b>一束干肉为礼，门槛低到近乎没有。</b></div></div>
+      <div class="row"><div class="k k2">弟子<br>其人</div><div class="v">颜回「一箪食，一瓢饮，在陋巷」（《雍也》6.11）；子贡学后经商于曹、鲁之间（《史记·货殖列传》）；子路出身乡野，好勇力（《史记·仲尼弟子列传》）。<b>弟子多非世卿之家；三千之数系《史记》所记，取其规模。</b></div></div>
+      <div class="row"><div class="k k2">规模<br>与形式</div><div class="v">《史记·孔子世家》记弟子三千、身通六艺者七十二人。<b>教的形式也从官署的「授」变为师徒的「问」</b>——问答、侍坐、从游。</div></div>
+      <div class="row"><div class="k k2">但仍<br>要成本</div><div class="v">简册要抄、师要养、闲要有。<b>门槛降低了，没有降到零</b>——这正是「行有余力」四字的分量所在。</div></div>
+    </div>
+    <p class="leadline">所以这一章不是「贵族家训」，是<b>入学须知</b>：来学的人先得做到这六件，才轮得到第七件。</p>
+
+    <div class="h2" id="sc-9">三　章旨：这是次序，不是轻重</div>
+    <p class="leadline">先事后文；文不在末位，文在「有余力」处。</p>
+    <div class="scene">本章常被读成「读书不重要」，恰恰相反：<b>它给了「文」一个位置，只是位置在后。</b><br><br>
+    次序的用意有二：一是防「会说不会做」，二是防「做了说不出」。<b>两头都防，才叫立教。</b></div>
+
+    <div class="h2" id="sc-10">四　朱子与洪氏：两种偏都要避</div>
+    <p class="leadline">文灭其质，质胜而野——一个太早，一个太晚。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">文灭<br>其质</div><div class="v">先学文而不行，文就成了装饰。<b>这正是 1.3「巧言令色」的学理版</b>：话说得漂亮，人没长起来。</div></div>
+      <div class="row"><div class="k k2">质胜<br>而野</div><div class="v">只行不学文，做得对却说不出、传不下。朱子谓<b>无以考圣贤之成法、识事理之当然</b>——凭自己摸索，摸到的是自己的边界。</div></div>
+      <div class="row"><div class="k k2">「有余<br>力」</div><div class="v">三字是闸门：<b>拦的是「未行而先文」，不是「终身不文」。</b>把闸门当墙，是读反了。</div></div>
+    </div>
+
+    <div class="h2" id="sc-11">五　分寸四条</div>
+    <p class="leadline">每一条都有一步之差的误读。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">泛爱<br>非平爱</div><div class="v">泛是「广、不私」，不是「不分远近」。<b>紧接「而亲仁」，说明爱有朝向</b>：对所有人存好意，对好人更近一步。</div></div>
+      <div class="row"><div class="k k2">谨非<br>拘</div><div class="v">谨是行之有常，不是不敢动。<b>有常的人敢担事，拘的人只会守形。</b></div></div>
+      <div class="row"><div class="k k2">余力<br>非借口</div><div class="v">说「我没余力」而终身不学文，是把条件读成了免除。<b>余力可以攒，不可以等。</b></div></div>
+      <div class="row"><div class="k k2">入出<br>非两套<br>人格</div><div class="v">在家恭顺、出门换一副脸，是把「入出」读成了场合。<b>同一份敬，带到两处；两处一致，才叫弟。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-12">六　反面：五病</div>
+    <p class="leadline">五病都不在「做错」，在「只做一半」。</p>
+    <div class="scene"><b>只文不行 → 文灭其质</b>（会说不会做）；<b>只行不文 → 质胜而野</b>（会做说不出）；<b>泛爱而无亲仁 → 爱滥</b>（好意被耗散，谁都想帮，谁都帮不到）；<b>谨而无信 → 拘</b>（守规矩守到不敢说实话）；<b>孝弟止于家 → 门外冷</b>（家里和气，出门生硬）。</div>
+
+    <div class="h2" id="sc-13">七　张力：孔子自己删诗书、教六艺</div>
+    <p class="leadline">若文可缓，何以一生治文？</p>
+    <div class="scene">此章末句最容易读成「文不重要」，可孔子一生做的正是「文」的事：删《诗》《书》，正《乐》，教六艺。<b>可见他排的是「次序」，不是「价值」。</b><br><br>
+    更深一层的张力在这里：<b>对已成人的学者，是「学而时习」——先学后习；对未成人的少年，是「行有余力则学文」——先做后学。</b>同一对阴阳，对象不同，次序就倒过来。这正是全书反复讲的「时」。</div>
+
+    <div class="h2" id="sc-14">八　脉络</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">承 1.2</div><div class="v">「孝弟也者，其为仁之本」——此章把那个「本」落成七条可做的事。</div></div>
+      <div class="row"><div class="k k2">承 1.3</div><div class="v">1.3 判「饰」；此章的谨与信，是<b>反饰的两件实器</b>。</div></div>
+      <div class="row"><div class="k k2">承 1.4</div><div class="v">三省之「信」，在此成为「言之有实」；<b>一章之信，落到一句话上。</b></div></div>
+      <div class="row"><div class="k k2">承 1.5</div><div class="v">五事缩为七事：爱人→泛爱众；敬事→谨。<b>治国之纲，退为立身之目。</b></div></div>
+      <div class="row"><div class="k k2">接下 1.7</div><div class="v">子夏「贤贤易色」——重德轻色，与「亲仁」同调；<b>1.6 说亲近谁，1.7 说看重什么。</b></div></div>
+      <div class="row"><div class="k k2">后世</div><div class="v">《弟子规》全取此章为总纲（见附论一）：<b>承了条目，未全承次第。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-15">九　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">弟子<br>规</div><div class="v">「弟子规，圣人训：首孝弟，次谨信，泛爱众，而亲仁，有余力，则学文」——<b>逐句取自此章</b>，是它最直接的承袭（辨其得失见附论一）。</div></div>
+      <div class="row"><div class="k k2">孟子<br>告子下</div><div class="v">「尧舜之道，孝弟而已矣」——<b>把孝弟推到极处</b>：不是入门功夫，是道的全部。</div></div>
+      <div class="row"><div class="k k2">礼记<br>学记</div><div class="v">「一年视离经辨志」——学文有次第、有考核。<b>「文」不是泛读，是有阶次的功课。</b></div></div>
+      <div class="row"><div class="k k2">今用</div><div class="v">服务学习（service learning）先做再反思；学徒制先上手后讲理；品格教育独立成课。<b>三者都在重排「行」与「文」的次序。标今用，为引申。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-16">十　存疑</div>
+    <ol class="list">
+      <li>「入／出」何解？——一说在家／出门，一说入父宫／出己宫。<b>两说都可通，本读本取前者，后者存疑。</b></li>
+      <li>「余力」是「行毕之余力」，还是「暇日」？——两解微异：前者说先后，后者说时间。<b>并存，不裁一。</b></li>
+      <li>「文」的范围？——朱子取诗书六艺；后世或窄化为文辞。<b>窄化之后，「文灭其质」之病更易发生。</b></li>
+      <li>《弟子规》是否等同此章？——它承条目而不全承次第，且增改了不少具体规条。<b>可作入门，不可代经。</b></li>
+    </ol>
+
+    <div class="h2" id="sc-17">十一　双卡对照</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">弟子＝徒弟，此章是师徒之规</div><div class="b">弟子＝少年后生；这话是对自家孩子说的</div></div>
+      <div class="pair"><div class="a">「有余力则学文」＝读书不重要</div><div class="b">是次序，不是轻重；无文则质胜而野</div></div>
+      <div class="pair"><div class="a">泛爱众＝所有人都一样爱</div><div class="b">泛是广而不私；紧接「亲仁」，爱有朝向</div></div>
+      <div class="pair"><div class="a">谨＝拘谨、不敢说话</div><div class="b">谨是行之有常：做事不忽作忽辍</div></div>
+    </div>
+
+    <div class="h2" id="sc-18">十二　阴阳与五蕴</div>
+    <p class="leadline">七事一收、一发、再一收。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">阴阳</div><div class="v">孝弟谨信是收（阴，向内守）；泛爱众、亲仁是发（阳，向外放）；学文又是收（阴，向内蓄）。<b>一收一发一收，成一轮。</b></div></div>
+      <div class="row"><div class="k k2">次序<br>可倒</div><div class="v">1.1 对成人：学而后习（先收后发）；1.6 对少年：行而后文（先发后收）。<b>同一对阴阳，对象不同，次序即倒——此谓「时」。</b></div></div>
+      <div class="row"><div class="k k2">五蕴杯</div><div class="v">孝弟是杯底，谨信是杯壁，泛爱是杯口，学文是注进去的水。<b>无器则水无处可盛；器成而空着，则终是一器。</b></div></div>
+      <div class="row"><div class="k k2">般若</div><div class="v">七事即非七事，是名七事：<b>不是七条规矩，是七次「先做」。</b>执条目为德行之表而不问其次序，即以器为道。</div></div>
+    </div>
+  </section>
+
+
+    <div class="h2" id="sc-19">图一 · 典故（待供图）</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1328×1776 竖幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary><p>国学少儿插画，古淡水墨，宣纸肌理，淡雅设色，温润清朗。<b>画面取「行有余力，则以学文」之义。</b>庭院一角，天光尚亮未点灯：一名十二三岁少年，衣袖微卷、额有薄汗，肩上担子方卸、水桶放在阶下，扫帚斜倚墙边，院子已扫得干净；他已在石案前坐下，双手展开一卷竹简，案上一盏清水。远处院门半掩，可见他先前出入的痕迹。<b>不画书童侍立、不画师长督课、不画挑灯夜读、不写「学文」诸字</b>；让「事已做完，人才坐得下来」这一层自己说话。米白、浅青、淡赭、墨灰为主；午后斜光，竹影落案；留白充足。画面文字：不添加文字。</p></details>
+        <div class="note">图注：图到后另补「读图」五条（看桶与帚、看院子、看案上、看天光、看少年坐姿）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一 · 七事三层</div>
+    <p class="leadline">七事分三层：<b>门内（孝弟）→ 门外（谨信、爱众、亲仁）→ 余力（学文）。</b>前两层是「行」，第三层是「文」；层与层之间隔着一个条件：余力。</p>
+    <div class="figsvg">
+<svg viewBox="0 0 380 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="七事三层：门内门外余力学文" font-family="'Noto Serif SC','Songti SC',serif" style="width:100%;max-width:580px;display:block;margin:0 auto;height:auto">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 一</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">七事三层</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">由门内而门外，由行而文。</text>
+
+<rect x="20" y="96" width="340" height="78" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="118" font-size="10.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">门 内</text>
+<text x="34" y="144" font-size="13" fill="#2F2A24">入则孝</text>
+<text x="196" y="144" font-size="13" fill="#2F2A24">出则弟</text>
+<text x="344" y="118" font-size="10.5" fill="#8A8074" text-anchor="end" font-family="'Noto Sans SC',sans-serif">行</text>
+<text x="34" y="166" font-size="10" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">对父母；对年长者。同一份敬，带到两处。</text>
+
+<line x1="190" y1="182" x2="190" y2="192" stroke="#C9B79A" stroke-width="1"/>
+<path d="M186 188 L190 196 L194 188" stroke="#C9B79A" stroke-width="1.2" fill="none"/>
+
+<rect x="20" y="202" width="340" height="150" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="224" font-size="10.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">门 外</text>
+<text x="344" y="224" font-size="10.5" fill="#8A8074" text-anchor="end" font-family="'Noto Sans SC',sans-serif">行</text>
+<text x="34" y="250" font-size="12.5" fill="#2F2A24">谨</text>
+<text x="82" y="250" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">行之有常：不忽作忽辍</text>
+<text x="34" y="276" font-size="12.5" fill="#2F2A24">信</text>
+<text x="82" y="276" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">言之有实：话里有东西</text>
+<text x="34" y="302" font-size="12.5" fill="#2F2A24">泛爱众</text>
+<text x="82" y="302" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">广而不私：好意放得宽</text>
+<text x="34" y="328" font-size="12.5" fill="#2F2A24">亲仁</text>
+<text x="82" y="328" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">主动靠近好人，爱有朝向</text>
+
+<line x1="190" y1="354" x2="190" y2="376" stroke="#C9B79A" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="202" y="370" font-size="10.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif">行有余力（条件）</text>
+
+<rect x="20" y="384" width="340" height="70" fill="#FBF6EA" stroke="#CDB99C"/>
+<text x="34" y="406" font-size="10.5" fill="#4A5C55" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">余 力</text>
+<text x="344" y="406" font-size="10.5" fill="#4A5C55" text-anchor="end" font-family="'Noto Sans SC',sans-serif">文</text>
+<text x="34" y="432" font-size="13" fill="#2F2A24">则以学文</text>
+<text x="112" y="432" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">诗书六艺：前人的成法与事理</text>
+
+<text x="20" y="478" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">六件做过了，才轮得到第七件；次序不是轻重。</text>
+<text x="20" y="498" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">器成而空着，终是一器；无水之器，亦不成用。</text>
+</svg>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二 · 文灭其质与质胜而野</div>
+    <p class="leadline">两条路都偏：<b>先文后行，文成装饰；先行无文，做而说不出。</b>「有余力」三字正在两偏之间。</p>
+    <div class="figsvg">
+<svg viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="文灭其质与质胜而野：两种偏" font-family="'Noto Serif SC','Songti SC',serif" style="width:100%;max-width:580px;display:block;margin:0 auto;height:auto">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 二</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">两偏之间</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">一个太早，一个太晚；中间是「有余力」。</text>
+
+<rect x="20" y="96" width="162" height="182" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="120" font-size="12" fill="#A2503B">先文后行</text>
+<text x="34" y="150" font-size="11" fill="#2F2A24">文灭其质</text>
+<text x="34" y="176" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">会说不会做</text>
+<text x="34" y="200" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">话漂亮，人没长起来</text>
+<text x="34" y="232" font-size="10.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif">即 1.3 之「饰」</text>
+<text x="34" y="258" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">早一步，成了浮华</text>
+
+<rect x="198" y="96" width="162" height="182" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="212" y="120" font-size="12" fill="#4A5C55">先行无文</text>
+<text x="212" y="150" font-size="11" fill="#2F2A24">质胜而野</text>
+<text x="212" y="176" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">会做说不出</text>
+<text x="212" y="200" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">无成法可考，无所以然</text>
+<text x="212" y="232" font-size="10.5" fill="#4A5C55" font-family="'Noto Sans SC',sans-serif">止于自己的边界</text>
+<text x="212" y="258" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">晚一步，成了粗野</text>
+
+<line x1="20" y1="312" x2="360" y2="312" stroke="#DCCBB0" stroke-width="1"/>
+<text x="20" y="336" font-size="11.5" fill="#2F2A24">行有余力，则以学文。</text>
+<text x="20" y="360" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">先做六件，再读第七件；两偏都不落。</text>
+<text x="20" y="384" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">「有余力」是闸门，不是墙：拦早不拦晚。</text>
+</svg>
+    </div>
+
+    <div class="h2" id="sc-22">附论一　《弟子规》与此章：承了什么，漏了什么</div>
+    <p class="leadline">承的是条目，漏的是次第。</p>
+    <div class="scene">《弟子规》总纲八句，几乎逐字照录此章：<b>「弟子规，圣人训：首孝弟，次谨信，泛爱众，而亲仁，有余力，则学文。」</b>后世童蒙由此入门，功不可没。<br><br>
+    它甚至把洪氏「两偏」的意思也用白话写了出来：<b>「不力行，但学文，长浮华，成何人；但力行，不学文，任己见，昧理真。」</b>——可见此章的骨架，一直被准确记住。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">所承</div><div class="v">七事条目、次第骨架、两偏之戒，都在。<b>入门读它，捷径。</b></div></div>
+      <div class="row"><div class="k k2">所改</div><div class="v">语态由「子曰」改为「圣人训」，训诫化；<b>并大量增补具体规条</b>（晨必盥、冠必正之类）。</div></div>
+      <div class="row"><div class="k k2">所窄</div><div class="v">「文」被窄化为读书写字；「泛爱众」被写成利害（亲仁则「无限好」，不亲则「无限害」）。<b>由德性转为得失。</b></div></div>
+      <div class="row"><div class="k k2">所失</div><div class="v">「行有余力」的条件意味淡了：条目一旦成册，背诵本身成了「行」。<b>可作入门，不可代经。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-23">附论二　六艺之文：当时「学文」学的是什么</div>
+    <p class="leadline">文不是文章，是六样手艺加一套典籍。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">六艺</div><div class="v">礼（仪节与分寸）、乐（歌与舞）、射（射箭）、御（驾车）、书（书写）、数（计算）。<b>半是典籍，半是技能。</b></div></div>
+      <div class="row"><div class="k k2">成本</div><div class="v">简册难得、师难得、闲难得。<b>「有余力」三字，是当时的现实条件，不是修辞。</b></div></div>
+      <div class="row"><div class="k k2">次序</div><div class="v">《学记》「一年视离经辨志」——先离经（读通句读），再辨志（看出志向）。<b>学文也有阶次。</b></div></div>
+      <div class="row"><div class="k k2">今用</div><div class="v">今之六艺，约略当通识与手艺：读、写、算、体、艺、器。<b>标今用，取其结构，不强配。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-24">附论三　「余力」两解与今日之病</div>
+    <div class="scene">「余力」有两解：<b>一说是「行毕之余力」</b>——前六件做过了，还有精力，再去学文，重次序；<b>一说是「暇日」</b>——空闲的日子，重时间。两解微异，但都指同一件事：<b>学文要有余裕，不是挤出来的。</b><br><br>
+    今日之病正在这里：孩子的时间被课表填满，<b>「余力」被提前支取干净</b>，于是「学文」只剩下被安排的那一层，没有自己坐下来翻一本书的那一刻。此章末句，在今天读，最扎人的不是「先做人」，是「有余力」。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">解一</div><div class="v">行毕之余力（精力有余）：<b>次序义</b>——先做，再做下一层。</div></div>
+      <div class="row"><div class="k k2">解二</div><div class="v">暇日（时间有余）：<b>条件义</b>——有闲，才读得进去。</div></div>
+      <div class="row"><div class="k k2">今病</div><div class="v">余力被课表支取干净，<b>学文变成被安排的学习，自主那一层消失。</b></div></div>
+      <div class="row"><div class="k k2">可做</div><div class="v">每周留半日不排课，<b>由孩子自己决定读什么</b>；不考、不问，只放在那里。</div></div>
+    </div>
+    <div class="h2" id="sc-25">附论四　私学兴起：知识怎样从官府流到民间</div>
+    <p class="leadline">书流出、人散出、位不再世袭——三条路，通向同一件事。</p>
+    <div class="scene">私学的出现，常被说成孔子一个人的功业。这话不全对：<b>与孔子同时，郑国的邓析就在民间教人诉讼</b>（《吕氏春秋·离谓》记其「与民之有狱者约」）。私人授学不是一人之举，是一整个制度松动之后的自然结果。<b>孔子之功，在规模、在系统、在「有教无类」这条纲领。</b><br><br>
+    三条通路，各自都能独立成论，合起来才解释得通：<b>书出来了，人出来了，位空出来了。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一、书<br>脱官</div><div class="v">周室典籍原本只在王城。王子朝之乱后「奉周之典籍以奔楚」，<b>书随人走，王城之外始有副本</b>。诸侯国渐有自己的藏书与史官。</div></div>
+      <div class="row"><div class="k k2">二、人<br>脱官</div><div class="v">乐官四散（《微子》），掌礼、掌乐者失职而以技自食。<b>技艺离开官署，就有了「师徒」这种关系</b>——师不必有职，弟子不必有位。</div></div>
+      <div class="row"><div class="k k2">三、位<br>脱世袭</div><div class="v">世卿世禄松动，「学而后入政」成为共识；到战国养士成风。<b>学的回报从「守住家位」变成「换一个位置」</b>，学遂成为可投资的事。</div></div>
+      <div class="row"><div class="k k2">后果一<br>内容变</div><div class="v">官学所教，本为祭祀与政务之需；私学所教，转向<b>修身与为政的通用能力</b>——诗书礼乐从「职事之技」变成「成人之学」。</div></div>
+      <div class="row"><div class="k k2">后果二<br>目的变</div><div class="v">「子张学干禄」（《为政》2.18）——<b>学与禄的关系被摆到桌面上谈</b>，这在学在官府的年代不可想象。孔子答以「多闻阙疑」，不否定求禄，先正其法。</div></div>
+      <div class="row"><div class="k k2">后果三<br>师变</div><div class="v">师从「有职之官」变为「无位之师」。「不在其位，不谋其政」（《泰伯》8.14）——<b>无位而有言，是私学时代的新身份。</b></div></div>
+      <div class="row"><div class="k k2">与本章<br>何干</div><div class="v">正因学不再是身份，才需要一套<b>「入门次序」</b>：来的人出身各不相同，先立六件共同的事，再谈各自要读的书。<b>七事是资格，不是门第。</b></div></div>
+      <div class="row"><div class="k k2">限度</div><div class="v">门槛降了，成本没消：简册、师、闲仍在。<b>所以「行有余力」不是客套话，是当时的分流线。</b></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　第 6 课　v1.1　（2026-11-19）</div>
+    <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>道千乘之国 · 论语第五课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第一第五章通释：道千乘之国，敬事而信，节用而爱人，使民以时。五事为「治之大概」，归为不欺与不竭两路；敬是主一无适，信是政令必践，节用不伤财，爱人不害民，以时不夺其时。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E7%9C%81%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(4,86px);gap:14px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(4,1fr);gap:12px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 五章　第 5 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读 1.4</a><a href="#sc-8">字义句读</a><a href="#sc-era">时代背景</a><a href="#sc-9">章旨</a><a href="#sc-10">朱子分释</a><a href="#sc-11">五事不可互换</a><a href="#sc-12">五病</a><a href="#sc-13">为何五条</a><a href="#sc-14">脉络</a><a href="#sc-15">跨典</a><a href="#sc-16">存疑</a><a href="#sc-17">双卡</a><a href="#sc-18">阴阳五蕴</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一（待供图）</a><a href="#sc-20">义理图一 五事链</a><a href="#sc-21">义理图二 不欺不竭</a><a href="#sc-22">附论一 千乘</a><a href="#sc-23">附论二 农隙</a><a href="#sc-24">附论三 委吏乘田</a><a href="#sc-25">附论四 商鞅徙木</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>道千乘之国</h1>
+    <div class="h1-sub">学而 1.5　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「<ruby>道<rt>dǎo</rt></ruby><ruby>千<rt>qiān</rt></ruby><ruby>乘<rt>shèng</rt></ruby>之国，<ruby>敬<rt>jìng</rt></ruby>事而<ruby>信<rt>xìn</rt></ruby>，<ruby>节<rt>jié</rt></ruby>用而爱人，使民以<ruby>时<rt>shí</rt></ruby>。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>敬</span></div><div class="tzcap"><span>12 画</span><span>心不跑开</span></div></div>
+      <div class="tzitem"><div class="cell"><span>信</span></div><div class="tzcap"><span>9 画</span><span>说了就做</span></div></div>
+      <div class="tzitem"><div class="cell"><span>节</span></div><div class="tzcap"><span>5 画</span><span>用多少留多少</span></div></div>
+      <div class="tzitem"><div class="cell"><span>时</span></div><div class="tzcap"><span>7 画</span><span>该做的时候</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">敬</div><div class="v"><b>做这件事的时候，心不跑开。</b>削一支铅笔，削到笔尖正好，不是在削的时候想着下课去哪儿玩。</div></div>
+      <div class="row"><div class="k">信</div><div class="v"><b>说出去的话，算数。</b>老师说「明天带你们去操场」，明天就真去；说了不算，下回谁也不听。</div></div>
+      <div class="row"><div class="k">节</div><div class="v"><b>该用多少用多少，余下的留着。</b>灯不用就关，纸背后还能写——不是小气，是给后面留余地。</div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>该做的时候做，不该做的时候不做。</b>人家正插秧，你就别喊他去搬东西——误了这一季，一年就少一季。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead">管一个很大的地方，其实只有五件事：<b>办事认真、说到做到、少花钱、疼人、别在人家最忙的时候支使人。</b>五件事，没有一件是大事。</p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p class="lead">跟我念：<br>「管一个千辆兵车的大国——办事要认真，说话要算数，用钱要省，待人要疼，让人干活要看时候。」<br>念的时候想一想：这五句，哪一句是在说「我」，哪一句是在说「别人」？</p>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      星期一，你是小组长。老师说：「这周的板报，你们组负责。」<br>
+      你嘴上答应得痛快，回家就忘了量尺寸——<b>这是「信」没落地。</b><br>
+      星期三，组里剩下半盒彩笔、三张卡纸。有同学说「再买一盒吧」，你说「先用完这些」——<b>这是「节」。</b><br>
+      星期五要考试，有人提议「今天下午把板报赶出来，让小明别复习了」。你说「不行，考完再弄」——<b>这是「使民以时」。</b><br>
+      五件事里，你一天里其实都做过。只是没人给它起名字。
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <ol class="list">
+      <li>为什么第一件是「敬事」？——事情是你答应的，心先放在事上。心不在，后面四件都是做样子。</li>
+      <li>「节用」就是省钱吗？——不是不花，是不乱花。该买的书要买，不该买的第三盒笔可以不买。</li>
+      <li>「使民以时」就是少让人干活吗？——不是少干，是别在最要紧的时候抽人。该干的时候照样干。</li>
+    </ol>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <ol class="list">
+      <li>答应之前先想一下，答应之后就做到。信不在嘴上，在明天。</li>
+      <li>省下来的东西，是留给以后的自己，不是留给小气。</li>
+      <li>支使人的时候先问一句：他现在最要紧的是什么？</li>
+      <li>管事不难，难在这五件小事一件也不漏。</li>
+    </ol>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">勘俗见</div><div class="v">「道千乘之国」常被读成讲兵车、讲国力，好像与孩子无关。<b>其实这一章讲的是「管事」，而孩子天天在管事</b>：管作业、管值日、管小组、管自己的零花钱。五件事都可以在家里演练。</div></div>
+      <div class="row"><div class="k k2">现代<br>对照</div><div class="v">企业讲三条：说到做到（信）、成本可控（节用）、不占用关键路径（以时）。<b>与五事同一结构</b>：先把承诺兑现，再把成本压住，再做时间安排。</div></div>
+      <div class="row"><div class="k k2">常变<br>主线</div><div class="v"><b>变的是制度，不变的是「不欺」与「不竭」。</b>春秋征役要避农时，今天要避考试周、避生病、避家里有事——<b>「时」换了历法，避的意思没换。</b></div></div>
+      <div class="row"><div class="k k2">教与学<br>二分</div><div class="v">前四章多在「学」（受），此章全是「习」（发）：<b>把学到的用出去，才知道学没学到。</b>让孩子当一次小组长、管一次家用，比讲十遍道理有用。</div></div>
+      <div class="row"><div class="k k2">时代<br>落点</div><div class="v">古代「节用」是省民力，今天还要加一条：<b>省注意力</b>。孩子的日程排得比大人满，就是「夺其时」。留白，是这一章给现代家庭的话。</div></div>
+      <div class="row"><div class="k k2">融西<br>对照</div><div class="v">公共财政有条老规矩：<b>量入为出、预算先行</b>——先定花多少，再定做什么，正是「节用」。项目管理里的「关键路径保护」，正是「使民以时」：别在要紧处抽人。</div></div>
+      <div class="row"><div class="k k2">可做<br>一件</div><div class="v">这周让孩子管一件事，只给五条：<b>答应了就做到、花钱先记账、别在最忙时支使人、东西用完归位、做的时候心在事上。</b>周末一起对一遍，不评价，只对账。</div></div>
+    </div>
+  </section>
+
+
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页 · 古今汇观</div>
+
+    <h1>道千乘之国</h1>
+    <div class="h1-sub">句读 · 时代背景 · 章旨 · 朱子分释 · 五事不可互换 · 五病 · 脉络 · 跨典 · 存疑</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「道千乘之国，敬事而信，节用而爱人，使民以时。」
+    </div>
+
+    <div class="h2" id="sc-lian">零　连读 1.4：尺度变大，标准不变</div>
+    <p class="leadline">一个人怎么查自己，就怎么治一个国。</p>
+    <div class="scene">1.4 是曾子三问：忠、信、习——查的是自己。1.5 是孔子五事：敬、信、节用、爱人、以时——治的是别人。<b>尺度从一人扩到一国，条目却几乎没换。</b><br><br>
+    忠与敬同源：忠是「尽己」，敬是「主一无适」——都是把心全放在这件事上。信这个字，一章到一章<b>一字不动</b>：交友之信与政令之信，是同一个「说话算数」。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一字<br>不动</div><div class="v">「信」在两章里都出现，都不改。<b>对人守信与对民守信，不是两种德，是同一种。</b></div></div>
+      <div class="row"><div class="k k2">一义<br>相通</div><div class="v">忠＝尽己，敬＝主一无适。前者说力出尽，后者说心不跑——<b>一个管用力，一个管用心。</b></div></div>
+      <div class="row"><div class="k k2">一界<br>分开</div><div class="v">1.4 用问句（乎），留余地；1.5 用条款（而），不留余地。<b>查己可以问，治人必须定。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-8">一　字义与句读</div>
+    <p class="leadline">五个词，五道关。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">道<br>dǎo</div><div class="v">治。朱子「道，治也」。与「导」通：不是发号施令，是<b>导之使正</b>。</div></div>
+      <div class="row"><div class="k k2">千乘<br>shèng</div><div class="v">一乘＝一车四马，配甲士步卒。千乘为诸侯大国之数。<b>举千乘，是举一个「数得出来的国」</b>，非虚指（详见附论一）。</div></div>
+      <div class="row"><div class="k k2">敬</div><div class="v">朱子以「主一无适」释之：<b>心主于一，不他向。</b>不是恭敬的姿态，是注意力的位置。</div></div>
+      <div class="row"><div class="k k2">信</div><div class="v">朱子谓信在<b>赏罚之当、政令之践</b>。信的对象是政令，不是民心；民心是结果，不是条目。</div></div>
+      <div class="row"><div class="k k2">节用</div><div class="v">朱子「不伤财」。节不是不用，是<b>不妄用</b>——该用的用，不该用的不启。</div></div>
+      <div class="row"><div class="k k2">爱人</div><div class="v">朱子「不害民」。爱不是施惠，是<b>不加害</b>。这一层最要紧：能不害，已是爱。</div></div>
+      <div class="row"><div class="k k2">使民<br>以时</div><div class="v">不夺其时。时＝农隙。征役要在人不忙的时候，<b>不是不征，是不夺</b>。</div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">五事三顿：「敬事而信」一顿，「节用而爱人」一顿，「使民以时」一顿。<b>前两顿皆「内—外」对举（心与政、财与民），末一顿单立，落到「时」——全章在此收口。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-era">二　时代背景：一个数得出来的国</div>
+    <p class="leadline">治国之言，出自一个管过账、管过牛羊的人。</p>
+    <div class="scene">「千乘」不是修辞。一乘有定编制，千乘有定规模，说得出数，就说得清难处：<b>人要吃饭，农时有定，府库有限，政令一出就得兑现。</b><br><br>
+    孔子不是只在讲台上论政。他年轻时做委吏（管仓廪账目），说「会计当而已矣」；做乘田（管牧场），说「牛羊茁壮长而已矣」（《孟子·万章下》，详见附论三）。<b>「敬事」二字，是从账本和牛棚里长出来的。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">千乘<br>之数</div><div class="v">约十万之众的国力，春秋唯齐、晋等大国当之；鲁、卫为中等。<b>举千乘，取其「大而难治」。</b></div></div>
+      <div class="row"><div class="k k2">农时<br>之重</div><div class="v">春耕、夏耘、秋收，一岁之中可役者惟农隙。<b>夺一时，误一年；误一年，饥一岁。</b></div></div>
+      <div class="row"><div class="k k2">士人<br>受事</div><div class="v">1.4 说士人游仕受事；1.5 说受了事之后怎么治。<b>两章相接，正是「受」与「施」。</b></div></div>
+      <div class="row"><div class="k k2">为何<br>只五事</div><div class="v">刑、赋、兵、礼皆未及——不是不知，是<b>先把不能犯的五条立住</b>。</div></div>
+      <div class="row"><div class="k k2">接下</div><div class="v">1.6「弟子入则孝，出则弟，谨而信，泛爱众」——<b>五事的个人版</b>：谨而信即敬信，泛爱众即爱人。</div></div>
+    </div>
+
+    <div class="h2" id="sc-9">三　章旨：治之大概</div>
+    <p class="leadline">五事是纲，不是制度大全。</p>
+    <div class="scene">朱子释此章，止于五事，不及刑赋兵礼，其意若曰「治之大概」。<b>正因不全，才看得清底：一国的底，不过是「不欺」与「不竭」。</b><br><br>
+    不欺：敬与信——心里有、嘴上算。不竭：节用、爱人、以时——财不竭、力不竭、时不竭。<b>五事合起来，只此四字。</b></div>
+
+    <div class="h2" id="sc-10">四　朱子分释：五句五义</div>
+    <p class="leadline">五句都不说「如何做」，只说「不可如何」。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">敬<br>主一<br>无适</div><div class="v">心主于一，不他向。<b>反面是「怠」：事在手上，心在别处。</b></div></div>
+      <div class="row"><div class="k k2">信<br>政令<br>必践</div><div class="v">赏罚当，政令践。<b>反面是「诈」：说了不算，算了不改。</b></div></div>
+      <div class="row"><div class="k k2">节用<br>不伤财</div><div class="v">不妄用。<b>反面是「奢」：用不以度，取不以节。</b></div></div>
+      <div class="row"><div class="k k2">爱人<br>不害民</div><div class="v">不加害。<b>反面是「酷」：以民为力，不以民为人。</b></div></div>
+      <div class="row"><div class="k k2">使民<br>不夺时</div><div class="v">役在农隙。<b>反面是「怨」：夺其所以生，虽令不从。</b></div></div>
+    </div>
+    <p class="leadline">四句是禁令，末一句是次序——<b>「时」管的是先后，不是多少。</b></p>
+
+    <div class="h2" id="sc-11">五　分寸：五事不可互换</div>
+    <p class="leadline">取一舍四，即成偏政。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">节用<br>代爱人</div><div class="v">省到人身上，就是<b>苛</b>。</div></div>
+      <div class="row"><div class="k k2">爱人<br>代节用</div><div class="v">惠到府库空，就是<b>滥</b>。</div></div>
+      <div class="row"><div class="k k2">信代敬</div><div class="v">兑现而无心，就是<b>机械</b>。</div></div>
+      <div class="row"><div class="k k2">敬代信</div><div class="v">有心而无践，就是<b>空诚</b>。</div></div>
+      <div class="row"><div class="k k2">以时<br>代一切</div><div class="v">什么都等「合适的时候」，就是<b>拖延</b>。</div></div>
+    </div>
+    <p class="leadline">这五条不是推想。孔子之后一百二十年，有人只取一条去治国，成与败都留下了证据——<b>商鞅徙木，见附论四。</b></p>
+
+    <div class="h2" id="sc-12">六　反面：五事生五病</div>
+    <p class="leadline">五病相连：怠生诈，诈生奢，奢生酷，酷生怨。</p>
+    <div class="scene">五事不是五条并列的美德，是一条链：<b>心不在事上（怠）→ 说话不算（诈）→ 用度无节（奢）→ 待民以力（酷）→ 民怨令不行。</b><br><br>
+    所以要治，也从链头治：<b>先把「敬」扶起来。</b>敬一立，后四病失其根；敬一倒，后四条条文都成空文。</div>
+
+    <div class="h2" id="sc-13">七　张力：为什么只是五条</div>
+    <p class="leadline">少到能记住，才守得住。</p>
+    <div class="scene">五事之简，是缺点也是设计。太简则不足治，太繁则民不堪——<b>五条正落在「能记住、能对照」的密度上。</b><br><br>
+    这与 1.4 的三问同一种思路：<b>条目少到可以每天过一遍，制度才活得下去。</b>治国与修身，用的是同一把尺：不是定得多高，是定得多实。</div>
+
+    <div class="h2" id="sc-14">八　脉络</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">承一</div><div class="v">1.1 的「时」是当口；此章的「时」是<b>农隙</b>——同一个字，从个人落到政事。</div></div>
+      <div class="row"><div class="k k2">承二</div><div class="v">1.2 的「本」是孝弟；此章的「本」是<b>不欺与不竭</b>。家之本与人国之本，一层层放大。</div></div>
+      <div class="row"><div class="k k2">承三</div><div class="v">1.3 判「饰」；此章五事全是<b>反饰</b>：敬反饰于内，信反饰于外。</div></div>
+      <div class="row"><div class="k k2">承四</div><div class="v">1.4 的忠信，在此章成为政令。<b>私德一入公事，标准不变，只添了「时」。</b></div></div>
+      <div class="row"><div class="k k2">接下</div><div class="v">1.6「弟子入则孝……谨而信，泛爱众」——治国之纲，退回做人之目。</div></div>
+    </div>
+
+    <div class="h2" id="sc-15">九　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">易·节</div><div class="v">《节》卦彖辞「节以制度，不伤财，不害民」——<b>与此章「节用而爱人」几乎逐字相合。</b>可见「节用—爱人」不是一家之言，是那个时代对治道的共识。</div></div>
+      <div class="row"><div class="k k2">孟子<br>梁惠王</div><div class="v">「不违农时，谷不可胜食也」——「使民以时」的展开版；又「省刑罚，薄税敛」，即节用爱人之目。</div></div>
+      <div class="row"><div class="k k2">老子<br>六十章</div><div class="v">「治大国若烹小鲜」——不扰。与「使民以时」同一气味：<b>不是不管，是不乱翻。</b></div></div>
+      <div class="row"><div class="k k2">管子<br>牧民</div><div class="v">「凡有地牧民者，务在四时，守在仓廪」——时与财并重，与此章次序相合。</div></div>
+      <div class="row"><div class="k k2">商君<br>列传</div><div class="v">徙木予金，「以明不欺」——<b>「信」在技术层面的实证。</b>然其信无敬无爱，故法可行而民不堪（详见附论四）。</div></div>
+      <div class="row"><div class="k k2">颜渊<br>12.7</div><div class="v">子贡问政，孔子曰「足食，足兵，民信之矣」；必不得已而去，先去兵，再去食，<b>「民无信不立」</b>。信在五事中最不可去——但方向不同，见附论四。</div></div>
+      <div class="row"><div class="k k2">今用</div><div class="v">公共财政的「量入为出、预算先行」即节用；项目管理的「关键路径保护」即使民以时。<b>标今用，为引申。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-16">十　存疑</div>
+    <ol class="list">
+      <li>「千乘之国」是实指某国，还是举成数？——春秋兵力记载不一，千乘之称亦随国力升降。<b>存疑：不作实指，取「大而难治」之意。</b></li>
+      <li>「道」读 dǎo 还是 dào？——朱子训「治」，今多读 dǎo；作「导」义时亦读 dǎo。<b>音随义，不必执一。</b></li>
+      <li>五事够不够治国？——朱子自谓大概；后儒补以教、刑、赋。此章不作制度设计，<b>只立「最低不可犯」</b>，不足处当以他章他书补之，不以此章为全。</li>
+    </ol>
+
+    <div class="h2" id="sc-17">十一　双卡对照</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">千乘之国是讲军事、讲国力</div><div class="b">借大国之数说治理之难；落点在五事，不在兵车</div></div>
+      <div class="pair"><div class="a">敬就是态度恭敬、礼数周到</div><div class="b">敬是「主一无适」：心在一事上，不他向。姿态是果，不是因</div></div>
+      <div class="pair"><div class="a">信是取信于民</div><div class="b">信是政令必践、赏罚必当；民信是结果，不是条目</div></div>
+      <div class="pair"><div class="a">使民以时就是少派役</div><div class="b">不是少征，是不夺其时：该征则征，农隙才征</div></div>
+    </div>
+
+    <div class="h2" id="sc-18">十二　阴阳与五蕴</div>
+    <p class="leadline">五事收放各半，末一事管节律。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">阴阳</div><div class="v">敬、信属阳（对外兑现）；节用、爱人属阴（对内克制）；<b>使民以时是「节律」，在阴阳之间</b>，管的是先后，不是多少。</div></div>
+      <div class="row"><div class="k k2">五蕴杯</div><div class="v">敬信是杯底（可托付），节用是壁厚（不漏），爱人是口径（不溢），以时是注水的节奏。<b>底薄则政虚，壁薄则财漏，口大则施滥，无节则民疲。</b></div></div>
+      <div class="row"><div class="k k2">般若</div><div class="v">五事即非五事，是名五事：<b>不是五条政纲，是五个「不可」。</b>执五事为政绩之表，而不问其心，即是以器为道。</div></div>
+    </div>
+  </section>
+
+
+    <div class="h2" id="sc-19">图一 · 典故（待供图）</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1328×1776 竖幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary><p>国学少儿插画，古淡水墨，宣纸肌理，淡雅设色，温润清朗。<b>画面取「使民以时」之义。</b>春耕时节，水田里农人弯腰插秧，远处一人（吏者）立于田埂，手执简册遥望，并不上前；路口停着一辆空役车，车辕搁地、无人驱赶——表示「此时不征」。田边小儿提水壶送水，妇人直腰擦汗。<b>不画鞭打、不画催逼、不画跪拜、不写「使民以时」四字</b>；让「田里有人忙、路上无车行」这一对照自己说话。米白、浅青、淡赭、墨灰为主；晨光斜照，水面有薄雾；留白充足，田埂横贯画面下三分之一。画面文字：不添加文字。</p></details>
+        <div class="note">图注：图到后另补「读图」五条（看田、看埂、看空车、看吏者、看天色）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一 · 五事一条链</div>
+    <p class="leadline">五事不是五条并列的美德，是一条链：<b>心在事上（敬）→ 话算数（信）→ 用有度（节）→ 不害人（爱）→ 不夺时（时）。</b>链头一倒，后四条失其根。</p>
+    <div class="figsvg">
+<svg viewBox="0 0 380 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="五事一条链：敬信节爱时" font-family="'Noto Serif SC','Songti SC',serif" style="width:100%;max-width:580px;display:block;margin:0 auto;height:auto">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 一</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">五事一条链</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">前一环不立，后一环即空文。</text>
+
+<rect x="20" y="98" width="340" height="68" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="124" font-size="12" fill="#A2503B">一</text>
+<text x="58" y="124" font-size="14" fill="#2F2A24">敬事</text>
+<text x="344" y="124" font-size="10.5" fill="#A2503B" text-anchor="end" font-family="'Noto Sans SC',sans-serif">不欺</text>
+<text x="58" y="150" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">心在一事上，不他向</text>
+
+<line x1="190" y1="172" x2="190" y2="182" stroke="#C9B79A" stroke-width="1"/>
+<path d="M186 178 L190 186 L194 178" stroke="#C9B79A" stroke-width="1.2" fill="none"/>
+
+<rect x="20" y="192" width="340" height="68" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="218" font-size="12" fill="#A2503B">二</text>
+<text x="58" y="218" font-size="14" fill="#2F2A24">信</text>
+<text x="344" y="218" font-size="10.5" fill="#A2503B" text-anchor="end" font-family="'Noto Sans SC',sans-serif">不欺</text>
+<text x="58" y="244" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">政令必践，赏罚必当</text>
+
+<line x1="190" y1="266" x2="190" y2="276" stroke="#C9B79A" stroke-width="1"/>
+<path d="M186 272 L190 280 L194 272" stroke="#C9B79A" stroke-width="1.2" fill="none"/>
+
+<rect x="20" y="286" width="340" height="68" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="312" font-size="12" fill="#4A5C55">三</text>
+<text x="58" y="312" font-size="14" fill="#2F2A24">节用</text>
+<text x="344" y="312" font-size="10.5" fill="#4A5C55" text-anchor="end" font-family="'Noto Sans SC',sans-serif">不竭</text>
+<text x="58" y="338" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">不伤财：该用则用，不启其端</text>
+
+<line x1="190" y1="360" x2="190" y2="370" stroke="#C9B79A" stroke-width="1"/>
+<path d="M186 366 L190 374 L194 366" stroke="#C9B79A" stroke-width="1.2" fill="none"/>
+
+<rect x="20" y="380" width="340" height="68" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="406" font-size="12" fill="#4A5C55">四</text>
+<text x="58" y="406" font-size="14" fill="#2F2A24">爱人</text>
+<text x="344" y="406" font-size="10.5" fill="#4A5C55" text-anchor="end" font-family="'Noto Sans SC',sans-serif">不竭</text>
+<text x="58" y="432" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">不害民：能不害，已是爱</text>
+
+<line x1="190" y1="454" x2="190" y2="464" stroke="#C9B79A" stroke-width="1"/>
+<path d="M186 460 L190 468 L194 460" stroke="#C9B79A" stroke-width="1.2" fill="none"/>
+
+<rect x="20" y="474" width="340" height="44" fill="#FBF6EA" stroke="#CDB99C"/>
+<text x="34" y="496" font-size="12" fill="#8A8074">五</text>
+<text x="58" y="496" font-size="14" fill="#2F2A24">使民以时</text>
+<text x="344" y="496" font-size="10.5" fill="#8A8074" text-anchor="end" font-family="'Noto Sans SC',sans-serif">节律</text>
+<text x="58" y="514" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">不夺其时：该征则征，农隙才征</text>
+</svg>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二 · 不欺与不竭</div>
+    <p class="leadline">五事只归两路：<b>对内不欺，对外不竭。</b>不欺则民信，不竭则民安；两路都断，政令虽出，无人应。</p>
+    <div class="figsvg">
+<svg viewBox="0 0 380 404" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="不欺与不竭：五事归两路" font-family="'Noto Serif SC','Songti SC',serif" style="width:100%;max-width:580px;display:block;margin:0 auto;height:auto">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 二</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">不欺与不竭</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">五事归两路；两路皆断，令出无应。</text>
+
+<rect x="20" y="96" width="162" height="214" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="120" font-size="13" fill="#A2503B">不欺</text>
+<text x="34" y="148" font-size="11" fill="#2F2A24">敬事：心在事上</text>
+<text x="34" y="172" font-size="11" fill="#2F2A24">信：政令必践</text>
+<text x="34" y="204" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">病：怠 → 诈</text>
+<text x="34" y="236" font-size="11" fill="#A2503B">→ 民信</text>
+<text x="34" y="264" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">说什么，就是什么</text>
+
+<rect x="198" y="96" width="162" height="214" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="212" y="120" font-size="13" fill="#4A5C55">不竭</text>
+<text x="212" y="148" font-size="11" fill="#2F2A24">节用：不伤财</text>
+<text x="212" y="172" font-size="11" fill="#2F2A24">爱人：不害民</text>
+<text x="212" y="196" font-size="11" fill="#2F2A24">以时：不夺时</text>
+<text x="212" y="222" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">病：奢 → 酷 → 怨</text>
+<text x="212" y="250" font-size="11" fill="#4A5C55">→ 民安</text>
+<text x="212" y="278" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">拿多少，留多少</text>
+
+<line x1="190" y1="108" x2="190" y2="300" stroke="#DCCBB0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="20" y1="332" x2="360" y2="332" stroke="#DCCBB0" stroke-width="1"/>
+<text x="20" y="356" font-size="11.5" fill="#2F2A24">治之大概，不过此二者。</text>
+<text x="20" y="378" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">不欺则令行，不竭则民留；缺一，另一也不长久。</text>
+</svg>
+    </div>
+
+    <div class="h2" id="sc-22">附论一　千乘之国，数得出来吗</div>
+    <p class="leadline">古注所记编制不一，但「千乘」之为大国，没有异议。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一乘<br>之制</div><div class="v">一乘＝一车四马。随车甲士、步卒、徒役之数，古注家说法不一（有甲士三人、步卒七十二人之说，亦有合徒役近百人之说）。<b>本读本不作精确换算，取其量级。</b></div></div>
+      <div class="row"><div class="k k2">千乘<br>之量</div><div class="v">若近百年一乘，千乘即近十万之众。<b>春秋之世，惟齐、晋等大国能当此数</b>；鲁、卫为中等。</div></div>
+      <div class="row"><div class="k k2">为何<br>举千乘</div><div class="v">不说「治天下」，说「治千乘之国」——<b>取一个「大到难治、又数得清」的尺度</b>：难处具体，条目才落得下。</div></div>
+      <div class="row"><div class="k k2">天子<br>万乘</div><div class="v">旧说天子万乘、诸侯千乘（《孟子》亦有「万乘之国」语）。<b>此数系礼制与国力的混合说法，不可当账册读。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-23">附论二　使民以时：一年的役与农隙</div>
+    <p class="leadline">时不是「有空」，是「不误那一季」。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">农事<br>之序</div><div class="v">春耕、夏耘、秋收，三时皆忙；<b>大体可役者惟冬之农隙。</b>夺春一日，误一岁之苗；夺秋一日，误一岁之食。</div></div>
+      <div class="row"><div class="k k2">「时」<br>不止季</div><div class="v">时亦含「日」的节律：晨昏、寒暑、忙闲。<b>同是一人，忙时抽与闲时抽，代价不同。</b></div></div>
+      <div class="row"><div class="k k2">孟子<br>之证</div><div class="v">「不违农时，谷不可胜食也」——<b>把「以时」与「足食」直接挂上</b>：不夺时不是宽仁，是治国之本。</div></div>
+      <div class="row"><div class="k k2">今用</div><div class="v">今日之「农时」是考试周、产期、病中、农忙、赶工。<b>在这些时候抽人，古义与今义同罚。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-24">附论三　孔子做过委吏与乘田</div>
+    <div class="scene">《孟子·万章下》记：<b>「孔子尝为委吏矣，曰：『会计当而已矣。』尝为乘田矣，曰：『牛羊茁壮长而已矣。』」</b>——管仓廪的账，只求账目对得上；管牧场的牛羊，只求它们长得壮。<br><br>
+    这两句话，是「敬事」的最小样本：<b>不喊口号，只说这一件事做到了没有。</b>而说「道千乘之国」的人，正是从这两件小事里出来的。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">会计<br>当</div><div class="v">账对得上，就是敬。<b>治国的「信」，先在一本账里学会。</b></div></div>
+      <div class="row"><div class="k k2">牛羊<br>壮</div><div class="v">牲畜长得好，就是爱。<b>治国的「爱人」，先从「不害」学会。</b></div></div>
+      <div class="row"><div class="k k2">与<br>不器</div><div class="v">先做委吏、乘田（为器），再论治国（不器）。<b>可器而不着于器，此人是样本。</b></div></div>
+      <div class="row"><div class="k k2">今用</div><div class="v">今按：凡论治道而未经实务者，其言多浮。先管一件事、一本账、一队人，再谈大局。</div></div>
+    </div>
+    <div class="h2" id="sc-25">附论四　商鞅徙木：信的实证，与信的病</div>
+    <p class="leadline">孔子之后一百二十年，有人只拿五事中的一条去治国。</p>
+    <div class="scene">《史记·商君列传》记：<b>「令既具，未布，恐民之不信，已乃立三丈之木于国都市南门，募民有能徙置北门者予十金。民怪之，莫敢徙。复曰『能徙者予五十金』。有一人徙之，辄予五十金，以明不欺。卒下令。」</b><br><br>
+    三丈之木，从南门搬到北门，本不值五十金。<b>他买的不是那根木头，是「我说的话算数」这件事。</b>一根木头搬过去，全部法令才搬得过去——这是「信」最干净的实验。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">徙木<br>之信</div><div class="v">赏必兑现，则令可行。<b>正是朱子所谓「赏罚之当、政令之践」的实证</b>：信不在德，先在「算数」。</div></div>
+      <div class="row"><div class="k k2">十年<br>之效</div><div class="v">《史记》又记「行之十年，秦民大说，道不拾遗，山无盗贼，家给人足」。<b>信能立国，此其证。</b></div></div>
+      <div class="row"><div class="k k2">初令<br>之苦</div><div class="v">同书记「令行于民期年，秦民之国都言初令之不便者以千数」。<b>法信而行，民苦而诉</b>——信立起来了，爱没有。</div></div>
+      <div class="row"><div class="k k2">太史<br>公评</div><div class="v">《史记》太史公曰：「商君，其天资刻薄人也。」<b>刻薄者，非不信也，无敬无爱也。</b></div></div>
+      <div class="row"><div class="k k2">两手<br>之辨</div><div class="v">孔子之信：我对你算数；商鞅之信：你若不从，法必加你。<b>同一个「信」，一个是待人的凭据，一个是驱人的鞭子。</b></div></div>
+      <div class="row"><div class="k k2">与<br>五事</div><div class="v">此即「以信代敬则机械，以信代爱则酷」的实证。<b>五事取一，可强一时；取一舍四，终不能久。</b>商鞅身死车裂，秦亦二世而亡——不是信无效，是信无本。</div></div>
+      <div class="row"><div class="k k2">今用</div><div class="v">制度的可信度，靠一次次兑现攒出来（徙木）；但只有兑现没有体恤，制度就变成压力。<b>信是地基，不是房子。</b></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　第 5 课　v1.1　（2026-11-19）</div>
+    <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
+  </footer>
+
+</div>
+</body>
+</html>

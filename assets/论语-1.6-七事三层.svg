@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="七事三层：门内门外余力学文" font-family="'Noto Serif SC','Songti SC',serif">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 一</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">七事三层</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">由门内而门外，由行而文。</text>
+
+<rect x="20" y="96" width="340" height="78" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="118" font-size="10.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">门 内</text>
+<text x="34" y="144" font-size="13" fill="#2F2A24">入则孝</text>
+<text x="196" y="144" font-size="13" fill="#2F2A24">出则弟</text>
+<text x="344" y="118" font-size="10.5" fill="#8A8074" text-anchor="end" font-family="'Noto Sans SC',sans-serif">行</text>
+<text x="34" y="166" font-size="10" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">对父母；对年长者。同一份敬，带到两处。</text>
+
+<line x1="190" y1="182" x2="190" y2="192" stroke="#C9B79A" stroke-width="1"/>
+<path d="M186 188 L190 196 L194 188" stroke="#C9B79A" stroke-width="1.2" fill="none"/>
+
+<rect x="20" y="202" width="340" height="150" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="224" font-size="10.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">门 外</text>
+<text x="344" y="224" font-size="10.5" fill="#8A8074" text-anchor="end" font-family="'Noto Sans SC',sans-serif">行</text>
+<text x="34" y="250" font-size="12.5" fill="#2F2A24">谨</text>
+<text x="82" y="250" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">行之有常：不忽作忽辍</text>
+<text x="34" y="276" font-size="12.5" fill="#2F2A24">信</text>
+<text x="82" y="276" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">言之有实：话里有东西</text>
+<text x="34" y="302" font-size="12.5" fill="#2F2A24">泛爱众</text>
+<text x="82" y="302" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">广而不私：好意放得宽</text>
+<text x="34" y="328" font-size="12.5" fill="#2F2A24">亲仁</text>
+<text x="82" y="328" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">主动靠近好人，爱有朝向</text>
+
+<line x1="190" y1="354" x2="190" y2="376" stroke="#C9B79A" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="202" y="370" font-size="10.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif">行有余力（条件）</text>
+
+<rect x="20" y="384" width="340" height="70" fill="#FBF6EA" stroke="#CDB99C"/>
+<text x="34" y="406" font-size="10.5" fill="#4A5C55" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">余 力</text>
+<text x="344" y="406" font-size="10.5" fill="#4A5C55" text-anchor="end" font-family="'Noto Sans SC',sans-serif">文</text>
+<text x="34" y="432" font-size="13" fill="#2F2A24">则以学文</text>
+<text x="112" y="432" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">诗书六艺：前人的成法与事理</text>
+
+<text x="20" y="478" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">六件做过了，才轮得到第七件；次序不是轻重。</text>
+<text x="20" y="498" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">器成而空着，终是一器；无水之器，亦不成用。</text>
+</svg>

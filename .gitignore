@@ -1,0 +1,5 @@
+_shots/
+docs/_shots/
+__pycache__/
+*.pyc
+.DS_Store

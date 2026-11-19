@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="三问三关：事友学各一关" font-family="'Noto Serif SC','Songti SC',serif">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 一</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">三问三关</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">一句一关；答得出，就算过。</text>
+
+<rect x="20" y="98" width="340" height="84" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="122" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">事</text>
+<text x="60" y="122" font-size="12.5" fill="#2F2A24">为人谋而不忠乎</text>
+<text x="60" y="146" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">查：力出尽了没有</text>
+<text x="340" y="122" font-size="14" fill="#A2503B" text-anchor="end">忠</text>
+
+<rect x="20" y="192" width="340" height="84" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="216" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">友</text>
+<text x="60" y="216" font-size="12.5" fill="#2F2A24">与朋友交而不信乎</text>
+<text x="60" y="240" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">查：话落地了没有</text>
+<text x="340" y="216" font-size="14" fill="#A2503B" text-anchor="end">信</text>
+
+<rect x="20" y="286" width="340" height="84" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="310" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">学</text>
+<text x="60" y="310" font-size="12.5" fill="#2F2A24">传不习乎</text>
+<text x="60" y="334" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">查：手上过了一遍没有</text>
+<text x="340" y="310" font-size="14" fill="#4A5C55" text-anchor="end">习</text>
+
+<line x1="20" y1="392" x2="360" y2="392" stroke="#DCCBB0" stroke-width="1"/>
+<text x="20" y="416" font-size="11.5" fill="#2F2A24">三问都答得出，这一日就结清。</text>
+<text x="20" y="438" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">答不出的，只记一件，明天做。</text>
+</svg>

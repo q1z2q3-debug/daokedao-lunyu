@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="认知的三重证明：自证、互证、不假外证" font-family="'Noto Serif SC','Songti SC',serif">
+<defs>
+<marker id="k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6E6459"/></marker>
+</defs>
+
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">认 知 的 三 重 证 明</text>
+
+<rect x="20" y="40" width="340" height="92" fill="none" stroke="#DCCBB0"/>
+<rect x="34" y="60" width="38" height="38" fill="none" stroke="#4A5C55"/>
+<text x="53" y="87" font-size="18" fill="#4A5C55" text-anchor="middle">自</text>
+<text x="88" y="74" font-size="15" fill="#2F2A24">学而时习　自证</text>
+<text x="88" y="98" font-size="11" fill="#6E6459">练熟自悦：证在自己身上，不必等人点头。</text>
+<text x="88" y="118" font-size="10" fill="#8A7A66">阴 · 向内</text>
+
+<line x1="190" y1="136" x2="190" y2="166" stroke="#6E6459" stroke-width="1.4" marker-end="url(#k)"/>
+<text x="201" y="156" font-size="10.5" fill="#6E6459">然后有可告人者</text>
+
+<rect x="20" y="174" width="340" height="92" fill="none" stroke="#DCCBB0"/>
+<rect x="34" y="194" width="38" height="38" fill="none" stroke="#A2503B"/>
+<text x="53" y="221" font-size="18" fill="#A2503B" text-anchor="middle">互</text>
+<text x="88" y="208" font-size="15" fill="#2F2A24">有朋远来　互证</text>
+<text x="88" y="232" font-size="11" fill="#6E6459">讲问相校：证在两人之间，异处即疑。</text>
+<text x="88" y="252" font-size="10" fill="#8A7A66">阳 · 向外</text>
+
+<line x1="190" y1="270" x2="190" y2="300" stroke="#6E6459" stroke-width="1.4" marker-end="url(#k)"/>
+<text x="201" y="290" font-size="10.5" fill="#6E6459">若终于无人知</text>
+
+<rect x="20" y="308" width="340" height="92" fill="#F8F3E6" stroke="#A2503B"/>
+<rect x="34" y="328" width="38" height="38" fill="none" stroke="#2F2A24"/>
+<text x="53" y="355" font-size="18" fill="#2F2A24" text-anchor="middle">无</text>
+<text x="88" y="342" font-size="15" fill="#2F2A24">人不知而不愠　不假外证</text>
+<text x="88" y="366" font-size="11" fill="#6E6459">不靠人知，故不为人不知而怒。</text>
+<text x="88" y="386" font-size="10" fill="#8A7A66">阴 · 复归于内</text>
+
+<line x1="20" y1="424" x2="360" y2="424" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="190" y="450" font-size="14" fill="#A2503B" text-anchor="middle" letter-spacing="2">三证俱足，方称君子</text>
+
+<text x="20" y="484" font-size="11" fill="#2F2A24">愠，是我把「我是谁」交出去、等别人盖章的那一刻。</text>
+<text x="20" y="510" font-size="11" fill="#2F2A24">不愠，不是不要人知，是不把自家性命寄在人知上。</text>
+
+<line x1="20" y1="536" x2="360" y2="536" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="560" font-size="10.5" fill="#6E6459">知我（了解）　知用（任用）　知心（真懂）——三层都不必等</text>
+<text x="20" y="584" font-size="10.5" fill="#6E6459">学在自己身上成立，朋在彼此之间对证，怒在评价处止息。</text>
+<text x="20" y="612" font-size="10.5" fill="#8A7A66">图为示意：三证非三步功序，是一件事的三面。</text>
+</svg>

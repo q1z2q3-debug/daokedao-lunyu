@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 730" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="学是移界，教是就界：扩、深、破与因材施教" font-family="'Noto Serif SC','Songti SC',serif">
+<defs>
+<marker id="kk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6E6459"/></marker>
+</defs>
+
+<text x="20" y="28" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">学 与 教 · 界 与 层</text>
+<text x="20" y="60" font-size="20" fill="#2F2A24">学是移界，教是就界</text>
+<text x="20" y="82" font-size="10.5" fill="#6E6459">学：扩 → 深 → 破　　教：按他能接住的圆说</text>
+
+<line x1="20" y1="98" x2="360" y2="98" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="122" font-size="12" fill="#A2503B">学 · 界往外移</text>
+
+<circle cx="104" cy="228" r="22" fill="none" stroke="#4A5C55" stroke-width="1.7"/>
+<circle cx="104" cy="228" r="37" fill="none" stroke="#4A5C55" stroke-width="1.2" stroke-dasharray="5 4"/>
+<circle cx="104" cy="228" r="52" fill="none" stroke="#4A5C55" stroke-width="1" stroke-dasharray="3 5" opacity="0.55"/>
+<text x="104" y="232" font-size="9.5" fill="#6E6459" text-anchor="middle">今日</text>
+<line x1="128" y1="204" x2="166" y2="166" stroke="#6E6459" stroke-width="1.3" marker-end="url(#kk)"/>
+
+<text x="184" y="152" font-size="11.5" fill="#2F2A24">一　扩　容得下更多</text>
+<text x="184" y="170" font-size="9.8" fill="#6E6459">别人的圆进来，不挤。</text>
+<text x="184" y="200" font-size="11.5" fill="#2F2A24">二　深　透得进一层</text>
+<text x="184" y="218" font-size="9.8" fill="#6E6459">同一物，看见第二层。</text>
+<text x="184" y="248" font-size="11.5" fill="#2F2A24">三　破　出得去，回得来</text>
+<text x="184" y="266" font-size="9.8" fill="#6E6459">知界所在，故能越界。</text>
+
+<text x="20" y="300" font-size="10.5" fill="#A2503B">学不是往圆里装东西，是把圆往外移；装多了仍是旧界。</text>
+
+<line x1="20" y1="322" x2="360" y2="322" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="346" font-size="12" fill="#A2503B">教 · 就着他的界说</text>
+
+<circle cx="58" cy="394" r="9" fill="none" stroke="#A2503B" stroke-width="1.5"/>
+<text x="96" y="386" font-size="11.5" fill="#2F2A24">圆小：说事、举喻</text>
+<text x="96" y="404" font-size="9.8" fill="#6E6459">先给一个能上手、能看见的例子。</text>
+
+<line x1="20" y1="424" x2="360" y2="424" stroke="#E6D8C2" stroke-width="1" stroke-dasharray="3 4"/>
+
+<circle cx="58" cy="462" r="17" fill="none" stroke="#A2503B" stroke-width="1.5"/>
+<text x="96" y="454" font-size="11.5" fill="#2F2A24">圆中：讲理、对证</text>
+<text x="96" y="472" font-size="9.8" fill="#6E6459">点出两处差集，让他自己补上。</text>
+
+<line x1="20" y1="492" x2="360" y2="492" stroke="#E6D8C2" stroke-width="1" stroke-dasharray="3 4"/>
+
+<circle cx="58" cy="530" r="26" fill="none" stroke="#A2503B" stroke-width="1.5"/>
+<text x="96" y="522" font-size="11.5" fill="#2F2A24">圆大：论道、互破</text>
+<text x="96" y="540" font-size="9.8" fill="#6E6459">各出各的界，不必谁服谁。</text>
+
+<line x1="20" y1="572" x2="360" y2="572" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="598" font-size="10.5" fill="#2F2A24">因材施教，不是把话讲浅，是按他的圆选入口。</text>
+<text x="20" y="620" font-size="10.5" fill="#6E6459">讲深了他接不住——愠由此生；讲浅了他不满足——慢由此生。</text>
+
+<line x1="20" y1="646" x2="360" y2="646" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="672" font-size="11" fill="#A2503B">学的尽头不是无所不知，是知道自己站在哪个圆里。</text>
+<text x="20" y="696" font-size="10.5" fill="#6E6459">知界，才能越界；越界，仍知回程——此谓不器。</text>
+</svg>

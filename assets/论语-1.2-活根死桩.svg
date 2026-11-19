@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 476" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="活根与死桩" font-family="'Noto Serif SC','Songti SC',serif">
+<text x="20" y="24" font-size="12.6" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">本 与 桩</text>
+<text x="20" y="56" font-size="23" fill="#2F2A24">活根与死桩</text>
+<text x="20" y="76" font-size="12.1" fill="#6E6459">考的是桩，养的是根；桩能拔，根会疼。</text>
+
+<line x1="190" y1="92" x2="190" y2="316" stroke="#DCCBB0" stroke-width="1" stroke-dasharray="4 4"/>
+
+<text x="26" y="110" font-size="12.6" fill="#A2503B">活根 · 本</text>
+<line x1="22" y1="244" x2="180" y2="244" stroke="#C9B79A" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="30" y1="252" x2="46" y2="252" stroke="#DCCBB0" stroke-width="1"/>
+<line x1="60" y1="252" x2="76" y2="252" stroke="#DCCBB0" stroke-width="1"/>
+<line x1="120" y1="252" x2="136" y2="252" stroke="#DCCBB0" stroke-width="1"/>
+<line x1="150" y1="252" x2="166" y2="252" stroke="#DCCBB0" stroke-width="1"/>
+<path d="M100 244 C98 222 100 206 100 190" stroke="#4A5C55" stroke-width="2.4" fill="none"/>
+<ellipse cx="100" cy="178" rx="26" ry="16" fill="none" stroke="#4A5C55" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M100 206 C90 196 84 188 78 182" stroke="#4A5C55" stroke-width="1.4" fill="none"/>
+<path d="M100 200 C110 190 118 184 126 180" stroke="#4A5C55" stroke-width="1.4" fill="none"/>
+<path d="M100 244 C90 258 80 266 68 274" stroke="#A2503B" stroke-width="1.8" fill="none"/>
+<path d="M100 244 C110 258 120 266 132 274" stroke="#A2503B" stroke-width="1.8" fill="none"/>
+<path d="M100 244 C100 260 98 270 96 280" stroke="#A2503B" stroke-width="1.5" fill="none"/>
+<text x="26" y="298" font-size="10.9" fill="#6E6459">会吸水：随土随水而调</text>
+<text x="26" y="316" font-size="10.9" fill="#6E6459">会松：松了就复守</text>
+<text x="26" y="334" font-size="10.9" fill="#6E6459">拔了会疼：伤在生机</text>
+
+<text x="208" y="110" font-size="12.6" fill="#5C5347">死桩 · 本的替身</text>
+<line x1="204" y1="244" x2="358" y2="244" stroke="#C9B79A" stroke-width="1.1" stroke-dasharray="5 4"/>
+<rect x="254" y="150" width="40" height="92" fill="#F8F3E6" stroke="#A2503B" stroke-width="1.6"/>
+<rect x="248" y="236" width="52" height="8" fill="none" stroke="#A2503B" stroke-width="1"/>
+<rect x="232" y="116" width="84" height="28" fill="#F8F3E6" stroke="#A2503B"/>
+<text x="274" y="136" font-size="17.2" fill="#A2503B" text-anchor="middle">孝</text>
+<text x="208" y="298" font-size="10.9" fill="#6E6459">打进去的：从外面立</text>
+<text x="208" y="316" font-size="10.9" fill="#6E6459">只验外形：摆得出就算</text>
+<text x="208" y="334" font-size="10.9" fill="#6E6459">拔了不疼：本来是空的</text>
+
+<line x1="20" y1="352" x2="360" y2="352" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="374" font-size="11.5" fill="#2F2A24">「本」是可练可验的行为，故能当根；</text>
+<text x="20" y="392" font-size="11.5" fill="#2F2A24">「忠」「义」远在朝堂，日常无可验，故不能当本。</text>
+<text x="20" y="416" font-size="10.9" fill="#6E6459">汉末谣谚：「举秀才，不知书；察孝廉，父别居。」</text>
+<text x="20" y="432" font-size="10.9" fill="#6E6459">（见葛洪《抱朴子·审举》）一旦可考，桩就插下去。</text>
+<text x="190" y="462" font-size="11.5" fill="#6E6459" text-anchor="middle">本不考，才立得住；一考，就成桩。</text>
+</svg>

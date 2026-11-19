@@ -1,0 +1,20 @@
+# 润泽说 道可道之论语 · 学而篇
+
+> 《论语》通释读本，连载中。底本朱熹《论语集注》，全书四百九十八章，一章一课。
+> 每课两页：少儿页（可念、可见）与成人页（可考、可查）。义理图手写 SVG；被否定的解读撤出正文另立「存疑」。
+
+## 已刊
+- 前言｜读法 · 总纲 · 体例｜先读它说什么，再谈它意味着什么。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/00-pre.html
+- 第一课｜学而时习之，不亦说乎｜学是受，习是发；一阴一阳，才是这一句的全部。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/01.html
+- 第二课｜其为人也孝弟，而好犯上者，鲜矣｜本立而道生：孝弟是根，不是姿态。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/02.html
+- 第三课｜巧言令色，鲜矣仁｜饰在外，实在内；「鲜」不是零。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/03.html
+- 第四课｜吾日三省吾身｜「省」是查事，不是定罪。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/04.html
+- 第五课｜道千乘之国，敬事而信，节用而爱人，使民以时｜五事归两路：不欺与不竭。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/05.html
+- 第六课｜弟子入则孝，出则弟，谨而信，泛爱众，而亲仁｜先事后文，是次序，不是轻重。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/06.html
+
+## 引用
+润泽《润泽说 道可道之论语 · 学而篇》v0.6.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
+
+## 义理口径
+一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
+不新造名相；凡解读须指回原文的哪个字、哪一句；指不回者入「存疑」。

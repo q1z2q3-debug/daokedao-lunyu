@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="粉饰之墙：粉层厚而胎层薄" font-family="'Noto Serif SC','Songti SC',serif">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 一</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">粉饰之墙</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">灰可抹厚，坯不可换；灰愈厚，坯愈隐。</text>
+
+<text x="30" y="104" font-size="11" fill="#8A8074" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">人前</text>
+<text x="286" y="104" font-size="11" fill="#8A8074" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">人后</text>
+
+<!-- 墙体 -->
+<rect x="108" y="112" width="64" height="252" fill="#E4BFA6"/>
+<rect x="172" y="112" width="26" height="252" fill="#EFE0C2"/>
+<line x1="108" y1="112" x2="108" y2="364" stroke="#A2503B" stroke-width="1.4"/>
+<line x1="172" y1="112" x2="172" y2="364" stroke="#A2503B" stroke-width="1.4"/>
+<line x1="198" y1="112" x2="198" y2="364" stroke="#C9B79A" stroke-width="1"/>
+<line x1="108" y1="112" x2="198" y2="112" stroke="#A2503B" stroke-width="1.4"/>
+<line x1="124.0" y1="112" x2="102.0" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="128.4" y1="112" x2="106.4" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="132.8" y1="112" x2="110.8" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="137.2" y1="112" x2="115.2" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="141.6" y1="112" x2="119.6" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="146.0" y1="112" x2="124.0" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="150.4" y1="112" x2="128.4" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="154.8" y1="112" x2="132.8" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="159.2" y1="112" x2="137.2" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="163.6" y1="112" x2="141.6" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="168.0" y1="112" x2="146.0" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="172.4" y1="112" x2="150.4" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="176.8" y1="112" x2="154.8" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="181.2" y1="112" x2="159.2" y2="364" stroke="#D8AC8E" stroke-width="0.8"/><line x1="185.6" y1="112" x2="163.6" y2="364" stroke="#D8AC8E" stroke-width="0.8"/>
+<!-- 竖排名 -->
+
+<text x="140" y="176" font-size="12.5" fill="#7A3A28" text-anchor="middle">言 · 色</text>
+<text x="140" y="196" font-size="9.5" fill="#9A6A50" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">可髹可抹</text>
+<text x="185" y="176" font-size="15" fill="#5C5347" text-anchor="middle">心</text>
+<text x="185" y="196" font-size="9" fill="#8A8074" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">胎</text>
+<!-- 致饰箭头：从人后向左投进灰泥 -->
+<line x1="330" y1="152" x2="212" y2="152" stroke="#8A8074" stroke-width="0.9" stroke-dasharray="4 4"/>
+<path d="M218 147 L206 152 L218 157" stroke="#8A8074" stroke-width="1.4" fill="none"/>
+<text x="352" y="136" font-size="10.5" fill="#6E6459" text-anchor="end">力气都送到外面</text>
+
+<!-- 悦人箭头：从墙向左送到人前 -->
+<line x1="104" y1="316" x2="34" y2="316" stroke="#A2503B" stroke-width="0.9" stroke-dasharray="4 4"/>
+<path d="M48 311 L36 316 L48 321" stroke="#A2503B" stroke-width="1.4" fill="none"/>
+<text x="34" y="306" font-size="11" fill="#A2503B">务以悦人</text>
+
+<!-- 地面 -->
+<line x1="20" y1="364" x2="356" y2="364" stroke="#C9B79A" stroke-width="1.1" stroke-dasharray="6 4"/>
+<line x1="24" y1="372" x2="36" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="46" y1="372" x2="58" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="68" y1="372" x2="80" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="90" y1="372" x2="102" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="112" y1="372" x2="124" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="134" y1="372" x2="146" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="156" y1="372" x2="168" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="178" y1="372" x2="190" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="200" y1="372" x2="212" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="222" y1="372" x2="234" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="244" y1="372" x2="256" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="266" y1="372" x2="278" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="288" y1="372" x2="300" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="310" y1="372" x2="322" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="332" y1="372" x2="344" y2="372" stroke="#DCCBB0" stroke-width="1"/><line x1="354" y1="372" x2="366" y2="372" stroke="#DCCBB0" stroke-width="1"/>
+<line x1="20" y1="392" x2="356" y2="392" stroke="#DCCBB0" stroke-width="1"/>
+<text x="20" y="412" font-size="10.8" fill="#2F2A24">一磕，灰落，坯现——仁之所以「鲜」，正因外面这层太厚。</text>
+<text x="20" y="432" font-size="10.8" fill="#2F2A24">「鲜」不是抹掉那些点，是点上覆了灰。</text>
+<text x="20" y="456" font-size="10.5" fill="#8A8074">示意图：粉层＝致饰于外，坯层＝本心；人前／人后为位置标注，非实景。</text>
+<text x="190" y="484" font-size="11" fill="#6E6459" text-anchor="middle">粉可抹，胎不可换。</text>
+</svg>

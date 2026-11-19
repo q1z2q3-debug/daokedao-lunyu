@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="一力两途：务本与悦人" font-family="'Noto Serif SC','Songti SC',serif">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">连 读 图</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">一力两途</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">同一个「务」字，两处用力方向相反。</text>
+
+<text x="30" y="108" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">1.3</text>
+<text x="190" y="94" font-size="13" fill="#A2503B" text-anchor="middle">面 · 言与色（饰）</text>
+<text x="190" y="112" font-size="10.5" fill="#9A6A50" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">巧言令色 · 务以悦人</text>
+<text x="190" y="129" font-size="10.5" fill="#A2503B" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">→ 仁鲜</text>
+
+<line x1="190" y1="186" x2="190" y2="152" stroke="#A2503B" stroke-width="1.2"/>
+<path d="M185 160 L190 148 L195 160" stroke="#A2503B" stroke-width="1.4" fill="none"/>
+
+<rect x="112" y="190" width="156" height="56" fill="#F8F3E6" stroke="#C9B79A"/>
+<text x="190" y="214" font-size="18" fill="#2F2A24" text-anchor="middle">务</text>
+<text x="190" y="234" font-size="10" fill="#8A8074" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">力气往哪使（只有一份）</text>
+
+<line x1="190" y1="246" x2="190" y2="318" stroke="#4A5C55" stroke-width="1.2"/>
+<path d="M185 310 L190 322 L195 310" stroke="#4A5C55" stroke-width="1.4" fill="none"/>
+
+<text x="30" y="322" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">1.2</text>
+<text x="190" y="340" font-size="13" fill="#4A5C55" text-anchor="middle">根 · 孝弟（本）</text>
+<text x="190" y="360" font-size="10.5" fill="#3F514B" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">君子务本 · 本立而道生</text>
+<text x="190" y="379" font-size="10.5" fill="#4A5C55" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">→ 道生</text>
+
+<line x1="20" y1="398" x2="356" y2="398" stroke="#DCCBB0" stroke-width="1"/>
+<text x="20" y="424" font-size="11" fill="#2F2A24">1.2 说本会松；1.3 说出它为什么松——水被外面吸走了。</text>
+<text x="20" y="446" font-size="11" fill="#2F2A24">次序不可倒：先立本，再防饰；只防饰，教出的是沉默。</text>
+<text x="190" y="478" font-size="11" fill="#6E6459" text-anchor="middle">给谁，谁长。</text>
+</svg>

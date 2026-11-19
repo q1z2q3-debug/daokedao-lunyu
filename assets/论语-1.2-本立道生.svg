@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="本立道生：根、立、生、守" font-family="'Noto Serif SC','Songti SC',serif">
+<defs><marker id="rr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#4A5C55"/></marker></defs>
+<text x="20" y="24" font-size="12.6" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">何 为 本 · 何 以 立</text>
+<text x="20" y="56" font-size="24.1" fill="#2F2A24">本立而道生</text>
+<text x="20" y="78" font-size="12.1" fill="#6E6459">根不是教条，道不是外加的规矩；根活，路才长出来。</text>
+
+<line x1="24" y1="300" x2="356" y2="300" stroke="#C9B79A" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="30" y="318" font-size="10.9" fill="#8A8074">土 上</text>
+
+<path d="M190 300 C188 262 190 224 190 196" stroke="#4A5C55" stroke-width="2.6" fill="none"/>
+<path d="M190 214 C176 196 164 182 152 170" stroke="#4A5C55" stroke-width="2" fill="none"/>
+<path d="M190 204 C206 190 218 180 232 172" stroke="#4A5C55" stroke-width="2" fill="none"/>
+<path d="M152 170 C146 162 142 156 140 148" stroke="#4A5C55" stroke-width="1.4" fill="none"/>
+<circle cx="140" cy="146" r="3.4" fill="#4A5C55"/>
+<circle cx="234" cy="170" r="3.4" fill="#4A5C55"/>
+<circle cx="190" cy="193" r="3.4" fill="#4A5C55"/>
+
+<path d="M190 300 C180 318 168 328 152 338" stroke="#A2503B" stroke-width="2.2" fill="none"/>
+<path d="M190 300 C198 320 212 330 226 340" stroke="#A2503B" stroke-width="2.2" fill="none"/>
+<path d="M190 300 C190 322 188 338 186 352" stroke="#A2503B" stroke-width="1.8" fill="none"/>
+<path d="M152 338 C144 344 140 348 138 356" stroke="#A2503B" stroke-width="1.3" fill="none"/>
+<path d="M226 340 C232 346 236 350 238 358" stroke="#A2503B" stroke-width="1.3" fill="none"/>
+
+<text x="244" y="146" font-size="12.6" fill="#4A5C55">道 · 阳（发）</text>
+<text x="244" y="164" font-size="10.9" fill="#6E6459">当行之路，自根而出</text>
+<text x="96" y="344" font-size="12.6" fill="#A2503B" text-anchor="end">本 · 阴（藏）</text>
+<text x="96" y="362" font-size="10.9" fill="#6E6459" text-anchor="end">木下曰本，根也</text>
+<text x="200" y="238" font-size="12.1" fill="#2F2A24">立</text>
+<text x="200" y="256" font-size="10.3" fill="#6E6459">务者，专力从事</text>
+
+<path d="M240 176 C310 210 316 268 286 302 C264 328 240 344 222 350" stroke="#4A5C55" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#rr)"/>
+<text x="300" y="238" font-size="11.5" fill="#4A5C55">复守其母</text>
+<text x="300" y="254" font-size="10.3" fill="#6E6459">回程</text>
+
+<line x1="20" y1="382" x2="360" y2="382" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="406" font-size="13.2" fill="#A2503B">本</text>
+<text x="44" y="406" font-size="12.1" fill="#2F2A24">所自出，不是全部</text>
+<text x="44" y="424" font-size="10.9" fill="#6E6459">仁自亲始：孝弟是爱最初发用的一段，不是仁的边界。</text>
+<text x="20" y="450" font-size="13.2" fill="#A2503B">立</text>
+<text x="44" y="450" font-size="12.1" fill="#2F2A24">专力去做，不是知道了</text>
+<text x="44" y="468" font-size="10.9" fill="#6E6459">务字要紧：根是练出来的，不是想出来的。</text>
+<text x="20" y="494" font-size="13.2" fill="#A2503B">生</text>
+<text x="44" y="494" font-size="12.1" fill="#2F2A24">自缘而长，不是造作</text>
+<text x="44" y="512" font-size="10.9" fill="#6E6459">道由内生，故「生」与「作」相对：述而不作。</text>
+
+<line x1="20" y1="528" x2="360" y2="528" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="550" font-size="11.5" fill="#2F2A24">老子五十四章：善建者不拔，善抱者不脱。</text>
+<text x="20" y="568" font-size="10.9" fill="#6E6459">建在内不在外：建的是人心里的那条线，不是楼台。</text>
+<text x="20" y="590" font-size="11.5" fill="#2F2A24">老子五十二章：得母知子，复守其母。</text>
+<text x="20" y="608" font-size="10.9" fill="#6E6459">出去是顺水，回来是逆水；道生之后还有半步。</text>
+<text x="20" y="630" font-size="11.5" fill="#2F2A24">老子三十九章：贵以贱为本，高以下为基。</text>
+<text x="20" y="648" font-size="10.9" fill="#6E6459">一切立着的，都靠一个不显眼的部分立着。</text>
+
+<line x1="20" y1="664" x2="360" y2="664" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="190" y="686" font-size="11.5" fill="#6E6459" text-anchor="middle">根断树死，砖抽墙倒；本立则路宽。</text>
+</svg>

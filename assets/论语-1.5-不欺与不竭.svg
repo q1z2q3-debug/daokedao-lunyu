@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 404" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="不欺与不竭：五事归两路" font-family="'Noto Serif SC','Songti SC',serif">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 二</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">不欺与不竭</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">五事归两路；两路皆断，令出无应。</text>
+
+<rect x="20" y="96" width="162" height="214" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="120" font-size="13" fill="#A2503B">不欺</text>
+<text x="34" y="148" font-size="11" fill="#2F2A24">敬事：心在事上</text>
+<text x="34" y="172" font-size="11" fill="#2F2A24">信：政令必践</text>
+<text x="34" y="204" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">病：怠 → 诈</text>
+<text x="34" y="236" font-size="11" fill="#A2503B">→ 民信</text>
+<text x="34" y="264" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">说什么，就是什么</text>
+
+<rect x="198" y="96" width="162" height="214" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="212" y="120" font-size="13" fill="#4A5C55">不竭</text>
+<text x="212" y="148" font-size="11" fill="#2F2A24">节用：不伤财</text>
+<text x="212" y="172" font-size="11" fill="#2F2A24">爱人：不害民</text>
+<text x="212" y="196" font-size="11" fill="#2F2A24">以时：不夺时</text>
+<text x="212" y="222" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">病：奢 → 酷 → 怨</text>
+<text x="212" y="250" font-size="11" fill="#4A5C55">→ 民安</text>
+<text x="212" y="278" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">拿多少，留多少</text>
+
+<line x1="190" y1="108" x2="190" y2="300" stroke="#DCCBB0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="20" y1="332" x2="360" y2="332" stroke="#DCCBB0" stroke-width="1"/>
+<text x="20" y="356" font-size="11.5" fill="#2F2A24">治之大概，不过此二者。</text>
+<text x="20" y="378" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">不欺则令行，不竭则民留；缺一，另一也不长久。</text>
+</svg>

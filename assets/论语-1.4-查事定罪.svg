@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 404" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="查事与定罪：两种自省的分界" font-family="'Noto Serif SC','Songti SC',serif">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 二</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">查事与定罪</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">同一句话，问法不同，结果两样。</text>
+
+<rect x="20" y="96" width="162" height="234" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="34" y="120" font-size="13" fill="#A2503B">查事</text>
+<text x="34" y="148" font-size="10.5" fill="#2F2A24">有具体的事</text>
+<text x="34" y="172" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">哪句答应了没做</text>
+<text x="34" y="204" font-size="10.5" fill="#2F2A24">有可量的尺</text>
+<text x="34" y="228" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">尽·实·熟，自己判得</text>
+<text x="34" y="260" font-size="10.5" fill="#2F2A24">有期可结</text>
+<text x="34" y="284" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">记一件，明天补</text>
+<text x="34" y="316" font-size="11" fill="#A2503B">→ 越查越能做</text>
+
+<rect x="198" y="96" width="162" height="234" fill="#FBF6EA" stroke="#E0D3BA"/>
+<text x="212" y="120" font-size="13" fill="#8A8074">定罪</text>
+<text x="212" y="148" font-size="10.5" fill="#5C5347">说不出哪件事</text>
+<text x="212" y="172" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">只剩「我不行」</text>
+<text x="212" y="204" font-size="10.5" fill="#5C5347">没有尺</text>
+<text x="208" y="228" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">拿别人分数当尺</text>
+<text x="212" y="260" font-size="10.5" fill="#5C5347">没有终期</text>
+<text x="212" y="284" font-size="10.5" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">一直挂着，不结</text>
+<text x="212" y="316" font-size="11" fill="#8A8074">→ 越查越不敢动</text>
+
+<line x1="190" y1="108" x2="190" y2="320" stroke="#DCCBB0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="20" y1="352" x2="360" y2="352" stroke="#DCCBB0" stroke-width="1"/>
+<text x="20" y="376" font-size="11.5" fill="#2F2A24">「省」是查账：查得清，改得动。</text>
+<text x="20" y="396" font-size="10.5" fill="#6E6459" font-family="'Noto Sans SC',sans-serif">「省」若成了罚站，就不是这一章的意思了。</text>
+</svg>

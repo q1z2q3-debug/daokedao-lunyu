@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 380 1150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="有朋自远方来：学之阴阳与认知扩大示意" font-family="'Noto Serif SC','Songti SC',serif">
+<defs>
+<marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#A2503B"/></marker>
+<marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#4A5C55"/></marker>
+<marker id="k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6E6459"/></marker>
+</defs>
+
+<text x="20" y="30" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">朋 · 学 之 阴 阳</text>
+<text x="20" y="62" font-size="22" fill="#2F2A24" letter-spacing="1">有朋自远方来</text>
+<text x="20" y="84" font-size="11.5" fill="#6E6459">同门曰朋　同志曰友　春秋私学，弟子自远方来</text>
+
+<rect x="20" y="100" width="340" height="110" fill="none" stroke="#DCCBB0"/>
+<text x="38" y="124" font-size="13" fill="#4A5C55" letter-spacing="1">阴 · 学（受纳）</text>
+<text x="38" y="158" font-size="19" fill="#2F2A24" letter-spacing="4">听　读　记　涵泳</text>
+<text x="38" y="184" font-size="11" fill="#6E6459">向内 · 收敛 · 静｜先收住自己，才有可告人者</text>
+
+<line x1="190" y1="212" x2="190" y2="250" stroke="#6E6459" stroke-width="1.5" marker-end="url(#k)"/>
+<text x="201" y="236" font-size="10.5" fill="#6E6459">学有所得</text>
+
+<circle cx="190" cy="276" r="20" fill="none" stroke="#6E6459" stroke-width="1.2"/>
+<text x="190" y="283" font-size="16" fill="#2F2A24" text-anchor="middle">我</text>
+
+<rect x="52" y="292" width="276" height="180" fill="#F8F3E6"/>
+<text x="190" y="314" font-size="10" fill="#8A7A66" text-anchor="middle" letter-spacing="5">同　门　通　道</text>
+
+<line x1="300" y1="326" x2="300" y2="446" stroke="#A2503B" stroke-width="2" marker-end="url(#o)"/>
+<line x1="80" y1="446" x2="80" y2="328" stroke="#4A5C55" stroke-width="2" marker-end="url(#g)"/>
+
+<text x="292" y="374" font-size="11.5" fill="#A2503B" text-anchor="end">我之所习，讲与彼听</text>
+<text x="292" y="392" font-size="10" fill="#A2503B" text-anchor="end" letter-spacing="1">阳 · 发</text>
+<text x="92" y="424" font-size="11.5" fill="#4A5C55">彼之所疑，还问于我</text>
+<text x="92" y="442" font-size="10" fill="#4A5C55" letter-spacing="1">阴 · 受</text>
+
+<circle cx="190" cy="490" r="20" fill="none" stroke="#6E6459" stroke-width="1.2"/>
+<text x="190" y="497" font-size="16" fill="#2F2A24" text-anchor="middle">彼</text>
+
+<text x="190" y="538" font-size="11.5" fill="#2F2A24" text-anchor="middle">朋＝同门（同师受业）　友＝同志（同愿同行）</text>
+<text x="190" y="560" font-size="10.5" fill="#6E6459" text-anchor="middle">春秋：官学衰、私学兴；束脩为礼，问难切磋。</text>
+
+<line x1="190" y1="580" x2="190" y2="614" stroke="#6E6459" stroke-width="1.5" marker-end="url(#k)"/>
+<text x="201" y="602" font-size="10.5" fill="#6E6459">习而后知不足</text>
+
+<rect x="20" y="622" width="340" height="110" fill="none" stroke="#DCCBB0"/>
+<text x="38" y="646" font-size="13" fill="#A2503B" letter-spacing="1">阳 · 习（发用）</text>
+<text x="38" y="680" font-size="19" fill="#2F2A24" letter-spacing="4">讲　辩　行　教</text>
+<text x="38" y="706" font-size="11" fill="#6E6459">向外 · 发用 · 动｜教，是最实的习</text>
+
+<line x1="20" y1="758" x2="360" y2="758" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="20" y="782" font-size="11.5" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">认 知 如 何 扩 大</text>
+
+<rect x="20" y="796" width="340" height="62" fill="none" stroke="#DCCBB0" stroke-dasharray="4 4"/>
+<text x="36" y="822" font-size="14" fill="#2F2A24">一　互换盲区</text>
+<text x="36" y="844" font-size="11" fill="#6E6459">我所略处，正是彼所详；借来一双眼。</text>
+
+<rect x="20" y="868" width="340" height="62" fill="none" stroke="#DCCBB0" stroke-dasharray="4 4"/>
+<text x="36" y="894" font-size="14" fill="#2F2A24">二　交叉验证</text>
+<text x="36" y="916" font-size="11" fill="#6E6459">同处为常，异处为疑，疑处生新解。</text>
+
+<rect x="20" y="940" width="340" height="62" fill="none" stroke="#DCCBB0" stroke-dasharray="4 4"/>
+<text x="36" y="966" font-size="14" fill="#2F2A24">三　视角叠加</text>
+<text x="36" y="988" font-size="11" fill="#6E6459">一物两看，边界相接，所见之面由一而二。</text>
+
+<rect x="20" y="1012" width="340" height="62" fill="none" stroke="#DCCBB0" stroke-dasharray="4 4"/>
+<text x="36" y="1038" font-size="14" fill="#2F2A24">四　复述逼真</text>
+<text x="36" y="1060" font-size="11" fill="#6E6459">讲给他听，卡住的那一句，就是明日要补处。</text>
+
+<line x1="20" y1="1092" x2="360" y2="1092" stroke="#DCCBB0" stroke-width="1.1"/>
+<text x="190" y="1114" font-size="10.5" fill="#6E6459" text-anchor="middle">杏坛设教　束脩为礼　游学问难　同门切磋　教学相长</text>
+</svg>
