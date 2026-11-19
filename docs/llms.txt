@@ -17,7 +17,7 @@
 - 第十课｜夫子至于是邦也，必闻其政｜五德不是技巧，是可接近性；以得之，是德之得。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/10.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.9.3，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.9.4，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
