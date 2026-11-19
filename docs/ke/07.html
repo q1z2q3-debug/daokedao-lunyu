@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>父在观其志 · 论语第七课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第一第七章通释：父在观其志，父没观其行，三年无改于父之道，可谓孝矣。三个时间点看同一个人；无改不是守旧，是不忍遽改；此章与《里仁》4.20 重出。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E8%A7%80%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(4,86px);gap:14px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(4,1fr);gap:12px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 七章　第 7 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读 1.6</a><a href="#sc-8">字义句读</a><a href="#sc-era">时代背景</a><a href="#sc-9">章旨</a><a href="#sc-10">朱子两条</a><a href="#sc-11">分寸五条</a><a href="#sc-12">反面</a><a href="#sc-13">张力</a><a href="#sc-14">脉络</a><a href="#sc-15">跨典</a><a href="#sc-16">存疑</a><a href="#sc-17">双卡</a><a href="#sc-18">阴阳五蕴</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一（待供图）</a><a href="#sc-20">义理图一 两窗一线</a><a href="#sc-21">义理图二 改与不改</a><a href="#sc-22">附论一 三年之丧</a><a href="#sc-23">附论二 父之道三解</a><a href="#sc-24">附论三 今天继什么</a><a href="#sc-25">附论四 只言父</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>父在观其志</h1>
+    <div class="h1-sub">学而 1.7　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「<ruby>父<rt>fù</rt></ruby>在，<ruby>观<rt>guān</rt></ruby>其<ruby>志<rt>zhì</rt></ruby>；父<ruby>没<rt>mò</rt></ruby>，观其<ruby>行<rt>xíng</rt></ruby>；三<ruby>年<rt>nián</rt></ruby>无改于父之<ruby>道<rt>dào</rt></ruby>，可谓<ruby>孝<rt>xiào</rt></ruby>矣。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>父</span></div><div class="tzcap"><span>4 画</span><span>生我养我</span></div></div>
+      <div class="tzitem"><div class="cell"><span>观</span></div><div class="tzcap"><span>6 画</span><span>仔细地看</span></div></div>
+      <div class="tzitem"><div class="cell"><span>志</span></div><div class="tzcap"><span>7 画</span><span>心里想去的地方</span></div></div>
+      <div class="tzitem"><div class="cell"><span>道</span></div><div class="tzcap"><span>12 画</span><span>做事的老办法</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">观</div><div class="v"><b>不是听人说，是自己看。</b>看一个人，要看他手上的事，不看他嘴上的话。</div></div>
+      <div class="row"><div class="k">志</div><div class="v"><b>心里想去的地方。</b>没人管的时候，你想去哪儿、想成为什么样的人，那就是志。</div></div>
+      <div class="row"><div class="k">行</div><div class="v"><b>真的做出来的事。</b>说了不算，做了才算；一天不算，一直做才算。</div></div>
+      <div class="row"><div class="k">道</div><div class="v"><b>做事的老办法、老规矩。</b>爸爸修东西的次序、待人的方式、说过的话，都是他的「道」。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead">爸爸在的时候，看你<b>心里往哪儿想</b>；爸爸不在了，看你<b>手上怎么做</b>；三年之内，不急着把爸爸做对的事丢掉——这三样合起来，才叫孝。</p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p class="lead">跟我念：<br>「父亲在的时候，看他的心往哪儿去；父亲不在了，看他实际怎么做；三年不改变父亲的好做法，这才叫孝。」<br>念完想一想：为什么爸爸在的时候只能看「心」，爸爸不在了才能看「事」？</p>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      爷爷的木工房里，爸爸在刨一块板，你在旁边递砂纸——<b>你在看他怎么用力、怎么量、怎么跟来修椅子的人说话。</b>这是「观」。<br>
+      爸爸出门几天，那把坏椅子还在。你自己找来木条，照他上次的样子补上，补得歪，但你补了——<b>这是「观其行」。</b><br>
+      爸爸回来后说：这样补不行，得从里面加一道。你记下了，下次照他的法子做——<b>这就是「无改于父之道」。</b><br>
+      三年后你终于改了：把补法换成更好的一种。改之前你说了一句：<b>「爸，不是你那法子不好，是这块料不适合。」</b>——改，也带着敬。<br>
+      这一段，就是孔子说的「孝」。
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <ol class="list">
+      <li>爸爸在，为什么只看「心」，不看「事」？——因为那时很多事不由你做主：钱、时间、家里的事，都在爸爸手上。能看出来的，是你想往哪儿走。</li>
+      <li>为什么爸爸不在了才看「事」？——因为约束一去掉，人才露底。没人管的时候还做对的事，那才是真的。</li>
+      <li>爸爸做得不对，也要三年不改吗？——不是。改的是「不对」的，不改的是「他做对的」；只是改的时候，别急着说他什么都不对。</li>
+    </ol>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <ol class="list">
+      <li>看一个人，看他在没人管的时候做什么。</li>
+      <li>想接手一件事，先看三年，别急着改。</li>
+      <li>要改，先说清「哪一点不对」，不说「你全不对」。</li>
+      <li>孝不是听话，是把上一代做对的事接住、做下去。</li>
+    </ol>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">勘俗见</div><div class="v">常见误读有二：一是把「三年无改」读成<b>「父母做的全对，一律照做」</b>；二是把「父在观志」读成<b>「孩子的心要跟父亲一样」</b>。原文观的是「志之所向」，不是「志之内容」；守的是「父之道」，不是「父之全部」。</div></div>
+      <div class="row"><div class="k k2">现代<br>对照</div><div class="v">今天的「父在」不是管束，是<b>资源与经验还在场</b>；「父没」也不是断绝，是<b>轮到你做主</b>。两段各有各的看法：在时要看孩子的心，不在时要看孩子的手。</div></div>
+      <div class="row"><div class="k k2">常变<br>主线</div><div class="v"><b>形式一直在变：守丧三年变成守三年不删父亲的旧照片、不拆他的老店；「道」从家法变成手艺、客户名单、一句口头禅。</b>敬与继，没有变。</div></div>
+      <div class="row"><div class="k k2">教与学<br>二分</div><div class="v">这一章是「学」与「习」各占一半：<b>「观」是学</b>（看父亲怎么做，收进来）；<b>「行」是习</b>（轮到自己做，发出去）。只观不行，是看客；只行不观，是瞎摸。</div></div>
+      <div class="row"><div class="k k2">时代<br>落点</div><div class="v">今天家里真正要「继」的，多半不是家业，是<b>一套做事的方法和一副待人的脾气</b>。孩子接不接得住，看的不是他背不背家训，是他在你不在场时怎么处理一件事。</div></div>
+      <div class="row"><div class="k k2">融西<br>对照</div><div class="v">西方有两样东西与此章同构：<b>学徒制（apprenticeship）三年出师</b>，先照师父的法子做，做熟了才许改；<b>家族企业接班（succession）</b>，讲「传承」也讲「转型」，且明说「照抄上一代是失败」。两边都承认：<b>先接住，再改。</b></div></div>
+      <div class="row"><div class="k k2">可做<br>一件</div><div class="v">找一件父辈（或祖辈）做过的事——补一只凳子、腌一坛菜、记一本账——<b>照他的法子完整做三次，第三次再谈改。</b>做完和孩子说一句：哪一步你想改，为什么。</div></div>
+    </div>
+  </section>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页 · 古今汇观</div>
+
+    <h1>父在观其志</h1>
+    <div class="h1-sub">句读 · 时代背景 · 章旨 · 朱子两条 · 分寸五条 · 反面 · 张力 · 脉络 · 跨典 · 存疑</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「父在，观其志；父没，观其行；三年无改于父之道，可谓孝矣。」
+    </div>
+
+    <div class="h2" id="sc-lian">零　连读 1.6：横的清单，纵的时间</div>
+    <p class="leadline">1.6 问「做什么」，1.7 问「什么时候看得出」。</p>
+    <div class="scene">1.6 给少年一张横的清单：入孝出弟、谨信、爱众亲仁、余力学文——七件事排开，看的是<b>内容全不全</b>。这一章换了一个维度：<b>父在、父没、三年</b>，三个时间点，看同一个人。<br><br>
+    合起来才完整：<b>1.6 说孝的形状，1.7 说孝的长度。</b>只有形状没有长度，孝是一次表态；只有长度没有形状，孝是一段空等。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一横<br>一纵</div><div class="v">1.6 是条目（横），1.7 是时序（纵）。<b>两章共用一句判语：「可谓孝矣」。</b>1.6 判的是做没做到，1.7 判的是守没守住。</div></div>
+      <div class="row"><div class="k k2">同一<br>个「观」</div><div class="v">1.6 已出现「观」的雏形：看一个人待人如何。1.7 把它拆成两段——<b>父在观志（看心），父没观行（看事）。</b></div></div>
+      <div class="row"><div class="k k2">一处<br>收紧</div><div class="v">1.6 的「余力」是条件，可以攒；1.7 的「三年」是期限，<b>不能省</b>。</div></div>
+    </div>
+
+    <div class="h2" id="sc-8">一　字义与句读</div>
+    <p class="leadline">三个时间点，一个判语；八个字眼，各有分界。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">父在</div><div class="v">父在世，子未自专。<b>不是「父在旁边监视」，是「家事不由你做主」。</b>《礼记·坊记》：「父母在，不敢有其身，不敢私其财。」</div></div>
+      <div class="row"><div class="k k2">观</div><div class="v">察也，看其行事之实。<b>与「听」相对</b>：听其言是听来的，观是看出来的。1.3 说「巧言令色」，正为此设。</div></div>
+      <div class="row"><div class="k k2">志</div><div class="v">心之所向。朱子：「志者，心之所之也。」<b>注意：观的是「向」，不是「内容」</b>——看你想往哪儿走，不是要求你走我这条路。</div></div>
+      <div class="row"><div class="k k2">没</div><div class="v">殁，去世。古字通用。<b>「父没」是约束解除的那一刻</b>，也是本章的转折点。</div></div>
+      <div class="row"><div class="k k2">行</div><div class="v">所行之事。<b>父没后子得自专，行才见真。</b>同一件事，父在时做是「奉命」，父没后做是「自立」。</div></div>
+      <div class="row"><div class="k k2">三年</div><div class="v">丧期之数，亦为「久之义」。<b>三层：丧制之实、继政之喻、心期之缓。</b>见附论一。</div></div>
+      <div class="row"><div class="k k2">无改</div><div class="v">不更改。<b>不是「一律不改」，是「不急着改」</b>。朱子两说并存：是道则终身，非道则三年后改，皆「不忍遽改」。</div></div>
+      <div class="row"><div class="k k2">道</div><div class="v">父之所行之道。<b>三解：政令／家法／志向</b>，见附论二。本读本取「父所行之善道」。</div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「父在，观其志」一停；「父没，观其行」一停；「三年无改于父之道」一顿；「可谓孝矣」一收。<b>三停一收，是三个时间点加一个判语</b>，不是四句并列的德行。</div></div>
+    </div>
+
+    <div class="h2" id="sc-era">二　时代背景：父在，子不得自专</div>
+    <p class="leadline">不是尊卑的空话，是制度：财、田、祭祀、婚嫁，都在父手上。</p>
+    <div class="scene">宗法之世，家是一级单位，父是一家的主。子「不得自专」有实指：<b>不私财、不专事、不自娶</b>。《礼记·坊记》说得最直：「父母在，不敢有其身，不敢私其财。」——连「身」都不归自己。<br><br>
+    所以「父在观志」不是取巧，是<b>当时唯一可行的观察法</b>：行为不由己，只有心还归自己。父亲说什么你应什么，父亲做什么你跟着做——这都一样；不一样的，是你心里另有一套，还是真把这一套认下了。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">制度<br>实指</div><div class="v">「不敢有其身」＝身不由己（婚娶、出行）；「不敢私其财」＝财不私蓄；「不专事」＝大事须禀。<b>三样合起来，才是「父在」的分量。</b></div></div>
+      <div class="row"><div class="k k2">三年<br>之丧</div><div class="v">《阳货》17.21：宰我问三年之丧，「期已久矣」，孔子答<b>「子生三年，然后免于父母之怀」</b>——这句话反证：<b>当时确有人以三年为太久，制度已在松动。</b></div></div>
+      <div class="row"><div class="k k2">继嗣<br>之政</div><div class="v">春秋之世，嗣君初立，多沿父政，不遽更张。《左传》屡见「修先君之好」「不改先君之政」。<b>本章的政治影子在此：改政太快，人心不定。</b></div></div>
+      <div class="row"><div class="k k2">士人<br>流动</div><div class="v">到孔子之时，士已可游学、可仕他国。<b>「父之道」不再只是家法，也可以是师法、手艺、志向</b>——本章因此能从小家庭讲到大人生。</div></div>
+      <div class="row"><div class="k k2">孔门<br>重出</div><div class="v">此章与《里仁》4.20 字句全同。<b>一句话在《论语》里出现两次，说明它在孔门被反复讲授</b>——不是随手一说，是要紧的一课。</div></div>
+    </div>
+    <p class="leadline">所以这一章是在<b>旧制尚在、新路已开</b>的当口说的：它承认「子不得自专」这个事实，然后在这事实里找出一条能看出人来的路。</p>
+
+    <div class="h2" id="sc-9">三　章旨：三个时间点，一次连续</div>
+    <p class="leadline">志、行、守，是三段，不是三德。</p>
+    <div class="scene">本章最容易被读成三条并列的德行：要看志向、要看行为、要守三年。这样读，三条彼此无关。<b>其实它是一条线：同一个人的三个时刻，一次连续。</b><br><br>
+    <b>父在观志</b>——约束还在，看你想往哪儿；<b>父没观行</b>——约束一去，看你做什么；<b>三年无改</b>——不急着否定，把事做出来再说改不改。<b>三段缺一，孝即不成立：</b>只有志没有行，是空想；只有行没有守，是急切；只有守没有志行，是木头。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">缺志</div><div class="v">只照着做，不问为什么——<b>这样接不住事，只接住了动作。</b></div></div>
+      <div class="row"><div class="k k2">缺行</div><div class="v">心里想得好，手上没做过——<b>父在不显，父没即露。</b></div></div>
+      <div class="row"><div class="k k2">缺守</div><div class="v">刚一接手就全改——<b>改得对，也伤了那份「继」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-10">四　朱子两条：观与守</div>
+    <p class="leadline">一条讲「怎么看」，一条讲「怎么守」。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">观</div><div class="v">朱子《集注》：<b>「父在，子不得自专，而志则可知，故观其志；父没，然后其行可见，故观其行。」</b>——观不是猜心，是看「可知」与「可见」的那一层。</div></div>
+      <div class="row"><div class="k k2">守</div><div class="v">朱子释「父之道」为「父之所行」，守之三年。<b>《朱子语类》大意：父之道若是，终身不改可也；若不是，则不可一日不改，但不忍遽改，须三年后改。</b></div></div>
+      <div class="row"><div class="k k2">关键<br>一转</div><div class="v">由这一条，<b>「无改」的对面不是「必改」，是「不忍遽改」</b>——三年是缓期，不是铁律。把三年当铁律，就把孝读成了守旧。</div></div>
+      <div class="row"><div class="k k2">限度</div><div class="v">「不忍遽改」也有边界：<b>若父之道明显不善而贻害他人，则不可守</b>。孝不是免责的借口，见张力一节。</div></div>
+    </div>
+
+    <div class="h2" id="sc-11">五　分寸五条</div>
+    <p class="leadline">每一条都差一步就成病。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">观志<br>非窥心</div><div class="v">看「所向」，不看隐私。<b>志是方向，不是日记。</b></div></div>
+      <div class="row"><div class="k k2">无改<br>非不改<br>一切</div><div class="v">分界在「是不是父的道」。<b>父的道里的错处，不属于「道」，属于「病」</b>——病要治，不必等三年。</div></div>
+      <div class="row"><div class="k k2">三年<br>非死数</div><div class="v">丧期之实、政治之喻、心期之缓，三层并存。<b>死守三十六个月，是把「心期」读成了「刑期」。</b></div></div>
+      <div class="row"><div class="k k2">孝非<br>照抄</div><div class="v">继志述事，不是复制。<b>《中庸》：「善继人之志，善述人之事者也。」</b>继的是志，述的是事，都不是形。</div></div>
+      <div class="row"><div class="k k2">观行<br>在自由<br>之后</div><div class="v">约束一去，才见真章。<b>所以「父没观行」比「父在观志」更硬</b>：前者可以装，后者装不了太久。</div></div>
+    </div>
+
+    <div class="h2" id="sc-12">六　反面：两面各有一种病</div>
+    <p class="leadline">同一句话，往左一步是控制，往右一步是守旧。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">左病<br>以观志<br>为控制</div><div class="v">把「观其志」用成「验其志」：<b>只许孩子想我所想的</b>，一想别的就是「不孝」。这不是观，是审。<b>原文观的是「向何处」，不是「向我所指之处」。</b></div></div>
+      <div class="row"><div class="k k2">右病<br>以无改<br>为守旧</div><div class="v">把「三年无改」用成「一切不改」：错的也守，坏的也守，还称这是孝。<b>守的是道，不是病；连病一起守，是以器为道。</b></div></div>
+      <div class="row"><div class="k k2">两病<br>同源</div><div class="v">都把「父」与「父之道」混为一物：<b>父是人，道是事。</b>敬其人，不等于承其全部；承其道，不等于复制其人。</div></div>
+    </div>
+
+    <div class="h2" id="sc-13">七　张力：孝与改</div>
+    <p class="leadline">本章最紧的一处，不是「守」，是「守到什么时候可以改」。</p>
+    <div class="scene">父若做错，孝要你改——不改，是看着错延续；可立刻改，又像在父亲尸骨未寒时否定他一生。<b>孔子给的解法不是「改」或「不改」，是「时间」。</b><br><br>
+    三年，不是「等」，是<b>「忍住不急着否定」</b>：先把他的事做完、做熟，知道他为什么那样做；三年之后若还要改，改得出来，也说得清楚——<b>「不是你那法子不好，是这块料不适合。」</b>这句话，三年前说不出口，三年后说得出口，因为手上有了东西。<br><br>
+    所以「三年」真正买的，不是对父亲的敬，是<b>自己的资格</b>：没有做过，就没有资格改。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">不改<br>之由</div><div class="v">不知其所以然，改也是乱改。<b>先接住，才谈得上改。</b></div></div>
+      <div class="row"><div class="k k2">必改<br>之由</div><div class="v">道有不善而害人，<b>此时「不忍」不能压过「不可」</b>——见附论二末条。</div></div>
+      <div class="row"><div class="k k2">判据</div><div class="v"><b>问一句：我改它，是因为它错，还是因为我想证明自己？</b>前者是孝里的改，后者是改里的不孝。</div></div>
+    </div>
+
+    <div class="h2" id="sc-14">八　脉络：学而篇里的第一次「时间」</div>
+    <p class="leadline">前六章讲「学什么、怎么学」，第七章第一次把「一生」放进来。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">前六章</div><div class="v">1.1 学与习；1.2 本立道生；1.3 鲜矣仁；1.4 三省；1.5 五事；1.6 七事。<b>都在「当下怎么做」。</b></div></div>
+      <div class="row"><div class="k k2">本章</div><div class="v">第一次出现「父没」「三年」——<b>把「当下」拉长成「一生的一段」</b>。此后的 1.8「慎终追远」接着讲丧祭，同一条时间感。</div></div>
+      <div class="row"><div class="k k2">重出</div><div class="v">与《里仁》4.20 全同。<b>重出即强调</b>：孔门讲孝，不只在「养」，在「继」。</div></div>
+      <div class="row"><div class="k k2">往后</div><div class="v">《为政》2.5「生，事之以礼；死，葬之以礼，祭之以礼」——<b>把本章的三段扩成四礼</b>。</div></div>
+    </div>
+
+    <div class="h2" id="sc-15">九　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">中庸</div><div class="v"><b>「夫孝者，善继人之志，善述人之事者也。」</b>——这是「无改」的正解：继志、述事，不是守形。</div></div>
+      <div class="row"><div class="k k2">孝经<br>谏诤</div><div class="v">「父有争臣，则子不可以不争于父。」——<b>孝含谏，不含盲从。</b>这一条与本章的「不忍遽改」互为边界：敬而不谀。</div></div>
+      <div class="row"><div class="k k2">孟子<br>告子下</div><div class="v">「尧舜之道，孝弟而已矣」——把孝弟推到极处。<b>与 1.2「本立而道生」同调。</b></div></div>
+      <div class="row"><div class="k k2">礼记<br>坊记</div><div class="v">「父母在，不敢有其身，不敢私其财。」——<b>「父在」的制度实指，本章时代背景一节所据。</b></div></div>
+      <div class="row"><div class="k k2">今用</div><div class="v">学徒制三年出师；家族企业接班讲「传承」与「转型」；未竟之志的接续。<b>三者都在重排「接住」与「改」的次序。标今用，为引申。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-16">十　存疑</div>
+    <ol class="list">
+      <li>「三年」是三十六个月，还是「久之义」？——<b>丧制取实数，此章取「久之义」，两存不裁。</b></li>
+      <li>「父之道」是政令、家法，还是志向？——三解并存，本读本取「父所行之善道」，见附论二。</li>
+      <li>本章只言父，母何在？——宗法语境以父为主；<b>今日读当并及母，另见附论四。</b></li>
+      <li>父之道不善，是否仍三年不改？——<b>朱子两说并存</b>：是则终身，非则三年后改；但若贻害他人，则不可守。此为读本所加的一条边界，非原文所有。</li>
+    </ol>
+
+    <div class="h2" id="sc-17">十一　双卡对照</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">父在观志＝看孩子听不听话</div><div class="b">观其志之所向，非验其是否与我同</div></div>
+      <div class="pair"><div class="a">三年无改＝父亲做的全对，一律照做</div><div class="b">守的是道，不是病；错处不必等三年</div></div>
+      <div class="pair"><div class="a">孝＝顺从，不许有自己想法</div><div class="b">孝含谏（《孝经》），继志述事非复制</div></div>
+      <div class="pair"><div class="a">父没即自由，可以全改</div><div class="b">改得对不对，先看你有没有做过</div></div>
+    </div>
+
+    <div class="h2" id="sc-18">十二　阴阳与五蕴</div>
+    <p class="leadline">一收、一发、一守中。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">阴阳</div><div class="v">父在观志是收（阴，向内看心）；父没观行是发（阳，向外看事）；三年无改是守中（太极，缓期）。<b>一收一发一守，成一轮。</b></div></div>
+      <div class="row"><div class="k k2">与 1.6<br>对看</div><div class="v">1.6 对少年：先行后文（先发后收）；1.7 对成人：先观后行（先收后发）。<b>同一对阴阳，对象不同，次序即倒——此谓「时」。</b></div></div>
+      <div class="row"><div class="k k2">五蕴杯</div><div class="v">志是杯底（心之所向），行是杯壁（做出来的形），三年是杯口那一道缓。<b>器成需要时间；器未成而先改器，改的只是形。</b></div></div>
+      <div class="row"><div class="k k2">般若</div><div class="v">父之道即非父之道，是名父之道：<b>不是一条不可动的规矩，是一份要接住、也要传到下一代手里的东西。</b>执形为道，即以器为道。</div></div>
+    </div>
+  </section>
+
+  <section class="leaf adult" id="extra">
+    <div class="leaf-tag">图与附论</div>
+
+    <div class="h2" id="sc-19">图一 · 典故（待供图）</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1328×1776 竖幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary><p>国学插画，古淡水墨，宣纸肌理，淡雅设色，温润清朗。<b>画面取「父在观其志」之义，一图两时：</b>左半，父亲在院中教一名少年刨木，少年立于侧、双手递上墨斗，眼睛看着父亲的手而不是看着镜头；父亲背微驼、手上有旧疤，动作极稳。右半，同一院落，父亲已不在，少年独坐案前，用同一把刨子刨同一块料，案角放着父亲用过的墨斗与一只旧茶碗，院中梅花初落。<b>两半之间不画分界线，让「同一个院子、同一个人、同一件工具」自己说话。</b>不画神像、不画书童成群、不写「孝」字，不画父亲影像或鬼魂。米白、浅青、淡赭、墨灰为主；侧光，木屑在光里。画面文字：不添加文字。</p></details>
+        <div class="note">图注：图到后另补「读图」五条（看手、看工具、看少年眼神、看空位、看梅）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一 · 两窗一线</div>
+    <p class="leadline">三个时间点，两次观察，一段缓期。<b>父在只能观志，父没方能观行，三年之内不改其道。</b></p>
+    <div class="figsvg">
+<svg viewBox="0 0 380 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="两窗一线：父在观志、父没观行、三年无改" font-family="'Noto Serif SC','Songti SC',serif" style="width:100%;max-width:580px;display:block;margin:0 auto;height:auto">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 一</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">两窗一线</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">三个时间点，看同一个人。</text>
+
+<rect x="16" y="96" width="100" height="136" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="66" y="118" font-size="10.5" fill="#A2503B" text-anchor="middle" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">父 在</text>
+<text x="66" y="150" font-size="15" fill="#2F2A24" text-anchor="middle">观其志</text>
+<text x="66" y="176" font-size="10" fill="#6E6459" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">子不得自专</text>
+<text x="66" y="194" font-size="10" fill="#6E6459" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">看心往哪儿去</text>
+
+<rect x="132" y="96" width="100" height="136" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="182" y="118" font-size="10.5" fill="#A2503B" text-anchor="middle" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">父 没</text>
+<text x="182" y="150" font-size="15" fill="#2F2A24" text-anchor="middle">观其行</text>
+<text x="182" y="176" font-size="10" fill="#6E6459" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">约束既去</text>
+<text x="182" y="194" font-size="10" fill="#6E6459" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">看手做什么</text>
+
+<rect x="248" y="96" width="116" height="136" fill="#FBF3E7" stroke="#C9A98F"/>
+<text x="306" y="118" font-size="10.5" fill="#A2503B" text-anchor="middle" font-family="'Noto Sans SC',sans-serif" letter-spacing="2">三 年</text>
+<text x="306" y="146" font-size="14" fill="#2F2A24" text-anchor="middle">无改于</text>
+<text x="306" y="166" font-size="14" fill="#2F2A24" text-anchor="middle">父之道</text>
+<text x="306" y="190" font-size="10" fill="#6E6459" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">缓期，不是铁律</text>
+
+<line x1="118" y1="164" x2="128" y2="164" stroke="#A2503B" stroke-width="1.2"/>
+<polygon points="128,164 122,160.5 122,167.5" fill="#A2503B"/>
+<line x1="234" y1="164" x2="244" y2="164" stroke="#A2503B" stroke-width="1.2"/>
+<polygon points="244,164 238,160.5 238,167.5" fill="#A2503B"/>
+
+<line x1="20" y1="250" x2="360" y2="250" stroke="#E0D6C4"/>
+
+<text x="20" y="274" font-size="13" fill="#A2503B" letter-spacing="1">志 · 行 · 守</text>
+<text x="112" y="274" font-size="11" fill="#6E6459">三段，不是三德：缺一段，孝就不成立。</text>
+<text x="20" y="298" font-size="11" fill="#6E6459">看得见的是志与行；守的，是那一份不忍。</text>
+<text x="20" y="318" font-size="10" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">本图为示意，依学而 1.7 义理绘制。</text>
+</svg>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二 · 改与不改的分界</div>
+    <p class="leadline">先问「是不是父的道」，再问「改不改」。<b>是道则守，非道则改，但都不忍遽改。</b></p>
+    <div class="figsvg">
+<svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="改与不改的分界：是道终身可守，非道三年后改" font-family="'Noto Serif SC','Songti SC',serif" style="width:100%;max-width:580px;display:block;margin:0 auto;height:auto">
+<text x="20" y="26" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif" letter-spacing="3">义 理 图 二</text>
+<text x="20" y="58" font-size="21" fill="#2F2A24">改与不改</text>
+<text x="20" y="78" font-size="12" fill="#6E6459">先分是不是，再谈改不改。</text>
+
+<rect x="96" y="96" width="188" height="44" fill="#F8F3E6" stroke="#CDB99C"/>
+<text x="190" y="124" font-size="14" fill="#2F2A24" text-anchor="middle">父之所行之道</text>
+
+<polyline points="150,140 100,180" fill="none" stroke="#8A8074" stroke-width="1.1"/>
+<polygon points="100,180 106,174 98,172" fill="#8A8074"/>
+<polyline points="230,140 280,180" fill="none" stroke="#8A8074" stroke-width="1.1"/>
+<polygon points="280,180 274,172 282,174" fill="#8A8074"/>
+<text x="96" y="164" font-size="11" fill="#A2503B" text-anchor="end" font-family="'Noto Sans SC',sans-serif">是　善</text>
+<text x="284" y="164" font-size="11" fill="#A2503B" font-family="'Noto Sans SC',sans-serif">非　不善</text>
+
+<rect x="30" y="184" width="140" height="46" fill="#FBF3E7" stroke="#C9A98F"/>
+<text x="100" y="212" font-size="13" fill="#2F2A24" text-anchor="middle">终身可守</text>
+<rect x="210" y="184" width="140" height="46" fill="#FBF3E7" stroke="#C9A98F"/>
+<text x="280" y="212" font-size="13" fill="#2F2A24" text-anchor="middle">不忍遽改</text>
+
+<text x="100" y="248" font-size="9.5" fill="#6E6459" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">虽终身无改，可也</text>
+<text x="280" y="248" font-size="9.5" fill="#6E6459" text-anchor="middle" font-family="'Noto Sans SC',sans-serif">三年后改，仍带着敬</text>
+
+<line x1="20" y1="268" x2="360" y2="268" stroke="#E0D6C4"/>
+<text x="20" y="290" font-size="11.5" fill="#6E6459">改不改不急着分，先问：它是不是父的道。</text>
+<text x="20" y="310" font-size="10" fill="#8A8074" font-family="'Noto Sans SC',sans-serif">本图为示意；朱子两说并存，见存疑第四条。</text>
+</svg>
+    </div>
+
+    <div class="h2" id="sc-22">附论一　三年之丧：一句反问撑起来的制度</div>
+    <div class="scene">「三年」不是孔子的发明，是旧制；孔子做的是<b>给它一个理由</b>。<br><br>
+    《阳货》17.21：宰我问：「三年之丧，期已久矣。君子三年不为礼，礼必坏；三年不为乐，乐必崩。」孔子答得极短：<b>「子生三年，然后免于父母之怀。」</b>——你三岁才离得开父母的怀抱，那就用三年还这一段。<br><br>
+    注意宰我的角度：他说的不是「我不孝」，是「制度成本太高，礼乐会坏」。<b>这是一场关于「时间成本」的辩论，不是一场道德训话。</b>孔子没有驳他的账，只说了一句更硬的话：这笔账，本来就该还。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">制度<br>来源</div><div class="v">三年之丧非孔子始创，<b>上古丧制已有等差</b>；孔子所争的是「不可废」。</div></div>
+      <div class="row"><div class="k k2">理由</div><div class="v">「免于父母之怀」——<b>以身体的最初三年，还最后三年。</b>不是礼数，是账。</div></div>
+      <div class="row"><div class="k k2">对手<br>之说</div><div class="v">宰我之忧在「礼坏乐崩」：<b>时间是有机会成本的。</b>此说不可轻废。</div></div>
+      <div class="row"><div class="k k2">本章<br>用法</div><div class="v">1.7 的「三年」不必尽读作丧期，<b>取其「久之义」亦可</b>：一段足够长、长到来得及看清的时间。</div></div>
+    </div>
+
+    <div class="h2" id="sc-23">附论二　「父之道」三解</div>
+    <p class="leadline">政令、家法、志向——三种读法，各有各的边界。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">解一<br>政令</div><div class="v">嗣君继位，三年不改父之政。<b>政治读法</b>：改政太快，人心不定；此解最贴合「父没」二字的权力语境。</div></div>
+      <div class="row"><div class="k k2">解二<br>家法</div><div class="v">一家之规矩、产业、人情往来。<b>生活读法</b>：父亲怎么待人、怎么记事、怎么分配，都是「道」。</div></div>
+      <div class="row"><div class="k k2">解三<br>志向</div><div class="v">父未竟之志。<b>义理读法</b>：与《中庸》「继人之志」相合——守的不是做法，是那件他没能做完的事。</div></div>
+      <div class="row"><div class="k k2">三解<br>关系</div><div class="v">不是互斥，是三层：<b>政令在外，家法在中，志向在内。</b>本章可三层同读，不必裁一。</div></div>
+      <div class="row"><div class="k k2">边界</div><div class="v">无论何解，<b>「道」指其善者</b>；不善者属「病」，不属「道」。这一点朱子与后世注家大体一致。</div></div>
+    </div>
+
+    <div class="h2" id="sc-24">附论三　今天继什么</div>
+    <div class="scene">古人继的是家业与家法，今人多数没有家业可继。但「父之道」并未消失，它换了形态：<b>一套做事的方法、一副待人的脾气、一件没做完的事、一句总挂在嘴边的话。</b><br><br>
+    今天的「三年」，也不是守丧，是<b>一段不急着评判的时间</b>：把父辈的事完整做几遍，做熟了，再谈改。做不熟就改，改的多半是自己的急躁。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">可继<br>之一</div><div class="v">手艺：一门具体的做法（补、修、种、算）。<b>做三遍才知其所以然。</b></div></div>
+      <div class="row"><div class="k k2">可继<br>之二</div><div class="v">待人之道：怎么对待比自己弱的人。<b>这一条比手艺更值钱，也更容易断。</b></div></div>
+      <div class="row"><div class="k k2">可继<br>之三</div><div class="v">未竟之事：他一直想做而没做成的那一件。<b>继志，不必继形。</b></div></div>
+      <div class="row"><div class="k k2">不可继</div><div class="v">偏见、坏脾气、拖着的旧账。<b>这些不是「道」，是「病」。</b></div></div>
+      <div class="row"><div class="k k2">可做</div><div class="v">与父辈（或祖辈）录一段口述：<b>「你这一行，最难的一步是哪一步？」</b>录下来，孩子听。三年后再听一遍。</div></div>
+    </div>
+
+    <div class="h2" id="sc-25">附论四　只言父，母何在</div>
+    <div class="scene">本章只言父，是宗法语境使然：<b>家以父为主，财、田、祭祀、婚嫁皆在父手</b>，故「观志」「观行」都以父为坐标。这不是说母不重要，是说这句话的问题意识在「继嗣」上。<br><br>
+    今日读，当并及母，且要补一条古人未及说透的：<b>母之道，常在「日用之常」里</b>——怎么吃饭、怎么待人、怎么在难处不慌。这些不进家谱，却最容易被接住。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">原文<br>局限</div><div class="v">宗法之制，<b>祭祀与继嗣以父系为轴</b>；本章的问题意识在此，不必为古人讳。</div></div>
+      <div class="row"><div class="k k2">今日<br>读法</div><div class="v">「父」可读作「上一代的主事者」——<b>父母皆在其内</b>。此为引申，非原文所有，须标明。</div></div>
+      <div class="row"><div class="k k2">母之道</div><div class="v">多在日用之常：<b>饮食、作息、待客、临事不慌。</b>不著于文字，却最难改。</div></div>
+      <div class="row"><div class="k k2">一句<br>提醒</div><div class="v">若只继父不继母，<b>继的是一半的家。</b></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　第 7 课　v1.0　（2026-11-19）</div>
+    <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
+  </footer>
+
+</div>
+</body>
+</html>

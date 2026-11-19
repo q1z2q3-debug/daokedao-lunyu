@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.6.0**，已刊 **7 件**（前言一篇 + 学而一至六章）
+- 当前版本 **v0.7.0**，已刊 **8 件**（前言一篇 + 学而一至七章）
 
 ---
 
@@ -43,6 +43,7 @@
 | 第四课 | 吾日三省吾身 | 「省」是查事，不是定罪 | [04](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/04.html) |
 | 第五课 | 道千乘之国，敬事而信，节用而爱人，使民以时 | 五事归两路：不欺与不竭 | [05](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/05.html) |
 | 第六课 | 弟子入则孝，出则弟，谨而信，泛爱众，而亲仁 | 先事后文，是次序，不是轻重 | [06](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/06.html) |
+| 第七课 | 父在，观其志；父没，观其行；三年无改于父之道 | 三个时间点看同一个人；无改不是守旧，是不忍遽改 | [07](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/07.html) |
 
 ---
 
@@ -80,7 +81,7 @@ python3 scripts/build_site.py      # 站点
 ## 六、引用与许可
 
 ```
-润泽．润泽说 道可道之论语 · 学而篇（v0.6.0）．2026．
+润泽．润泽说 道可道之论语 · 学而篇（v0.7.0）．2026．
 https://q1z2q3-debug.github.io/daokedao-lunyu/
 ```
 
