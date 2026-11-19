@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>礼之用，和为贵 · 论语第十一课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第十二章通释：有子曰「礼之用，和为贵。先王之道，斯为美；小大由之。有所不行，知和而和，不以礼节之，亦不可行也」。礼是界，和是容，节是度：无礼之和是混，无和之礼是僵，无节之和是苟合。并与「和而不同」「礼别异，乐和同」互证。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E6%B8%A9%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+</style></head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 十二章　第 11 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-b1">「和」的两读</a><a href="#sc-b2">礼者，节也</a><a href="#sc-b3">先王之道</a><a href="#sc-b4">小大由之</a><a href="#sc-b5">有所不行</a><a href="#sc-b6">知和而和</a><a href="#sc-b7">三张脸</a><a href="#sc-b8">无和之礼</a><a href="#sc-c">和而不同</a><a href="#sc-d">时代</a><a href="#sc-e">章旨</a><a href="#sc-f">存疑</a><a href="#sc-g">双卡</a><a href="#sc-h">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一 乡饮酒礼</a><a href="#sc-20">义理图一 礼·和·节</a><a href="#sc-21">义理图二 一条岔路</a><a href="#sc-22">义理图三 和而同</a><a href="#sc-23">附论一 有子</a><a href="#sc-24">附论二 「和」字来路</a><a href="#sc-25">附论三 三种和稀泥</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>礼之用，和为贵</h1>
+    <div class="h1-sub">学而 1.12　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">有子曰：</span>「<ruby>礼<rt>lǐ</rt></ruby>之用，<ruby>和<rt>hé</rt></ruby>为<ruby>贵<rt>guì</rt></ruby>。先王之道，斯为美；小大由之。有所不行，知和而和，不以礼<ruby>节<rt>jié</rt></ruby>之，亦不可行也。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>礼</span></div><div class="tzcap"><span>5 画</span><span>分清先后</span></div></div>
+      <div class="tzitem"><div class="cell"><span>和</span></div><div class="tzcap"><span>8 画</span><span>合得来</span></div></div>
+      <div class="tzitem"><div class="cell"><span>贵</span></div><div class="tzcap"><span>9 画</span><span>最要紧</span></div></div>
+      <div class="tzitem"><div class="cell"><span>节</span></div><div class="tzcap"><span>5 画</span><span>有分寸</span></div></div>
+      <div class="tzitem"><div class="cell"><span>行</span></div><div class="tzcap"><span>6 画</span><span>走得通</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">礼</div><div class="v"><b>规矩，也是秩序：谁先谁后、谁多谁少、这件事该怎么办。</b>礼本义是祭器与祭仪，后来指一切「<b>分得清</b>」的做法。<b>礼不是拿来压人的，是让大家不必猜。</b></div></div>
+      <div class="row"><div class="k">和</div><div class="v"><b>合得来。</b>古人说「和」，最早是说<b>几种声音合在一起，好听</b>。<b>和不是「都一样」</b>——锣和鼓不一样，合起来才好听。</div></div>
+      <div class="row"><div class="k">贵</div><div class="v"><b>最要紧的地方。</b>「和为贵」，不是说和气最值钱，是说<b>礼真正起作用的地方，在让人相处得来</b>。</div></div>
+      <div class="row"><div class="k">节</div><div class="v"><b>像竹子的节——有段、有界、有分寸。</b>节不是砍断，是<b>知道到哪儿为止</b>。<b>没有节，什么都让到底，最后连根都让没了。</b></div></div>
+      <div class="row"><div class="k">行</div><div class="v"><b>行得通。</b>「有所不行」——有些做法，走不通。<b>不是错在「和」，是错在「只求和」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>礼是分先后、定分寸的规矩，和是大家在一起舒服。</b>礼最可贵的地方，是让人相处得来；大事小事都照这个来。<b>可是只知道求和、把规矩撤了，反而会乱——那不叫和，叫没边。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p class="lead">跟我念：<br>「有子说：<b>礼的用处，最可贵的是让人相和。</b>从前圣王的道理，好就好在这里，大事小事都顺着它。<b>也有走不通的时候：只知道求和、一味求和，不用礼来有分寸地管住它，那也走不通。</b>」<br>念完想一想：<b>为什么「求和」也会走不通？</b></p>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      班里排值日：周一张三擦黑板，周二李四倒垃圾，周三你摆桌椅——<b>这张表就是「礼」</b>：分清楚，谁也不必争。<br>
+      周三你发烧请假，李四说「我替你」，周四你还他一次。<b>这就是「和」</b>：表是死的，人是活的，能换、能帮，班才像个班。<br>
+      后来变味了：小胖发现「只要我说一声累，总有人替我」，于是他一周让人替了三次，<b>从不还</b>。值日表成了纸，别人开始嘀咕：「凭什么总是我？」<br>
+      <b>问题不在「替」，在「一味替」。</b>——这就是有子说的「知和而和，不以礼节之，亦不可行也」。<br>
+      班会上大家补了一条：<b>换班要先说、要还、一学期最多三次。</b>表又能用了，人也还是和气。<br>
+      <b>礼给了一条线，和在这条线之内活动；线撤了，和气也留不住。</b>
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <ol class="list">
+      <li>「和为贵」是不是叫人别提意见、别吵架？——不是。<b>和是「合得来」，不是「不出声」。</b>有子后面紧跟着一句「不以礼节之，亦不可行」——他恰恰在防「一味求和」。</li>
+      <li>礼是不是很麻烦、很老套？——礼的本事是<b>省事</b>：谁先谁后、谁坐哪儿、话怎么说是清楚的，<b>人不用每一件事都重新争一遍</b>。没有礼的地方，事事都要现场吵。</li>
+      <li>「有所不行」是谁不行？——是<b>那种做法</b>不行：只顾着和、把分寸撤掉的做法，走不通。<b>不是礼不行，也不是和不行。</b></li>
+    </ol>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <ol class="list">
+      <li>该排队就排队，该说谢谢就说谢谢——<b>规矩不是给大人看的，是让大家都省心。</b></li>
+      <li>帮人可以，但要说清楚「这一次」和「下次还我」。</li>
+      <li>不同意的时候说「我觉得」，不要憋着，也不要翻脸。</li>
+      <li>答应的事做不到，先说明，不要拖到别人来问。</li>
+    </ol>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">勘俗见</div><div class="v">这一章最常被读成「<b>和气生财、别伤和气</b>」，于是「和」成了<b>取消是非</b>的借口。<b>原文后半句正是拦这个的</b>：「知和而和，不以礼节之，亦不可行也」——<b>只求和、不要分寸，也不行。</b></div></div>
+      <div class="row"><div class="k k2">现代<br>对照</div><div class="v">西方有两样东西与本章可对看：<b>civility</b>（civitas 城邦：陌生人共处的举止）与 <b>rule of law</b>（规则之治）。<b>前者近「和」，后者近「礼」。</b>缺了后者，civility 会变成不敢得罪人；缺了前者，规则会变成冷冰冰的执法。</div></div>
+      <div class="row"><div class="k k2">常变<br>主线</div><div class="v"><b>礼的形一直在变</b>：跪拜变鞠躬、书信变电话、请安变问候、族规变班规。<b>不变的是「节」</b>：谁先、谁后、到哪儿为止。<b>一形式变了就喊「礼崩」，是执器为道；分寸丢了才真叫礼崩。</b></div></div>
+      <div class="row"><div class="k k2">教与学<br>二分</div><div class="v"><b>礼可以「学」</b>——条文、次序、称谓，讲一遍就会；<b>和只能「习」</b>——要在一次真实的冲突里，练到「说了真话还没翻脸」。<b>所以家里别只教规矩，要留出练习的场合：分东西、换班、道歉、拒绝。</b></div></div>
+      <div class="row"><div class="k k2">时代<br>落点</div><div class="v">这一代孩子不缺表达，缺<b>分寸</b>：要么一味忍（不敢说不），要么一句就炸（不会转弯）。<b>本章给的正是第三条路：先有界，再谈情。</b>——界清楚了，人才敢放松。</div></div>
+      <div class="row"><div class="k k2">融西<br>对照</div><div class="v">英文 <b>boundary</b>（边界）与本章的「节」几乎同义：<b>不是把人推开，是让关系可持续。</b>西方家庭常讲「set a boundary」，中国家庭常讲「别伤和气」——<b>两者合起来，才是有子这一句。</b></div></div>
+      <div class="row"><div class="k k2">可做<br>一件</div><div class="v">本周挑一件事，<b>把「默认」说成「明说」</b>：谁洗碗、几点回家、借多久还。<b>说清楚那天，家里的火气往往反而小。</b></div></div>
+    </div>
+
+  </section>
+
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页</div>
+
+    <h1>礼之用，和为贵</h1>
+    <div class="h1-sub">连读 · 字义句读 · 「和」的两读 · 礼者节也 · 先王之道 · 小大由之 · 有所不行 · 知和而和 · 三张脸 · 无和之礼 · 和而不同 · 时代 · 章旨 · 存疑 · 双卡 · 跨典</div>
+
+    <div class="h2" id="sc-lian">零　连读：上一章守时间，这一章守边界</div>
+    <p class="leadline">上一章（1.11）讲的是<b>时间里的孝</b>：父在观志、父没观行、三年无改。这一章（1.12）讲的是<b>关系里的度</b>：礼要分，和要合，合到哪儿为止。<b>两章合看，是一件事的两面——都讲「不过」。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">上一章</div><div class="v">讲「<b>不改</b>」：三年之内不急着把父亲做对的事推翻。<b>不改，是给哀敬留出时间。</b></div></div>
+      <div class="row"><div class="k k2">这一章</div><div class="v">讲「<b>不过</b>」：和要到「相安」为止，过了就成苟合。<b>不过，是给关系留出余地。</b></div></div>
+      <div class="row"><div class="k k2">下一章</div><div class="v">1.13「<b>信近于义，言可复也；恭近于礼，远耻辱也</b>」——把「节」落到「信」与「恭」上：许诺要有边界，恭敬要有分寸。<b>三章连读，是一条关于「度」的线。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">有子</div><div class="v">有若，鲁人，孔子弟子。<b>《学而》里他的话有三章（1.2、1.12、1.13）</b>，仅次于孔子本人。<b>称「有子」而不称名</b>，与称「曾子」同例——<b>编者很可能出自有子、曾子之门</b>（柳宗元《论语辩》已有此说）。</div></div>
+      <div class="row"><div class="k k2">礼</div><div class="v"><b>禮</b>，从示从豊（豊是祭器）。本义是<b>祭神之仪</b>，引申为一切「分」：<b>先后、尊卑、亲疏、轻重</b>。朱子：「礼者，天理之节文，人事之仪则。」</div></div>
+      <div class="row"><div class="k k2">用</div><div class="v"><b>施行、发挥作用。</b>「礼之用」不是「礼的用处」，是<b>礼在运行的时候</b>——礼不在竹简上，在人做事的那一刻。</div></div>
+      <div class="row"><div class="k k2">和</div><div class="v"><b>龢</b>（从龠从禾）本义是<b>乐音相和</b>；「和」（从禾从口）是<b>应和</b>。二字后来通用。<b>「和」一开始就不是「一样」，是「不一样的东西合在一起」。</b></div></div>
+      <div class="row"><div class="k k2">贵</div><div class="v"><b>可贵、要紧。</b>不是「贵贱」之贵，是「<b>礼的价值最高处在这儿</b>」。</div></div>
+      <div class="row"><div class="k k2">先王</div><div class="v">三代圣王（尧舜禹汤文武）。<b>孔子一派用「先王」不是说复古，是立一个标准</b>：「斯为美」——<b>美在这里</b>。</div></div>
+      <div class="row"><div class="k k2">小大<br>由之</div><div class="v"><b>由，从、循。</b>大事小事都顺着这个理走。<b>不是说大小事一个尺寸，是都循同一个「节」。</b></div></div>
+      <div class="row"><div class="k k2">节</div><div class="v"><b>節，竹约也</b>——竹节，引申为「<b>止</b>」为「<b>度</b>」。《易·节卦》「节以制度，不伤财，不害民」。<b>节是礼的骨头。</b></div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「礼之用，和为贵。<b>∥</b>先王之道，斯为美，小大由之。<b>∥</b>有所不行：知和而和，不以礼节之，亦不可行也。<b>」</b>——<b>三截：立论、引证、转折。</b>第三截的冒号是关键的断法：<b>「有所不行」是结论，「知和而和」是原因。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b1">二　「和」的两读：音乐之和与应和之和</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">乐音<br>之和</div><div class="v"><b>龢，从龠从禾</b>：龠是排箫，禾是声之谐。《说文》：「龢，调也。」<b>五音不同而能成曲，这才叫和。</b>——所以「和」的前提是<b>「不同」</b>；<b>全同的音，不成调。</b></div></div>
+      <div class="row"><div class="k k2">应和<br>之和</div><div class="v"><b>和，从口从禾</b>：一唱一和，声音相应。<b>「和」里有「回应」的意思</b>：你说，我应；不是我说了算，也不是你说了算。</div></div>
+      <div class="row"><div class="k k2">由此<br>定名</div><div class="v"><b>和人相处，像乐音相和</b>：各有其声、各在其位，合起来才成调。<b>把「和」读成「一律」，是把音乐读成了静音。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b2">三　礼者，节也：礼的本事是「分」，不是「压」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">礼<br>做<br>什么</div><div class="v"><b>礼的第一功能是「分」</b>：《礼记·乐记》「<b>礼者，别异也</b>」——分先后、分轻重、分亲疏。<b>分了，人才知道自己在哪儿；知道在哪儿，才不必抢。</b></div></div>
+      <div class="row"><div class="k k2">分<br>不<br>是<br>压</div><div class="v"><b>分是让位置清楚，不是让位低的人受辱。</b>《论语》里孔子对礼最狠的批评，恰恰是冲着「把礼做成排场」去的：3.1 八佾、3.2《雍》彻、3.6 旅泰山。<b>他反的是「僭」，不是「礼」。</b></div></div>
+      <div class="row"><div class="k k2">礼<br>省<br>事</div><div class="v"><b>没有礼的地方，事事都要现场争。</b>谁先发言、谁坐主位、红包给多少——每件事都得重新谈判，谈一次伤一次。<b>礼把这些「谈」提前做完，省下的是人心。</b></div></div>
+      <div class="row"><div class="k k2">礼<br>生<br>敬</div><div class="v">《礼记·曲礼》「<b>礼者，自卑而尊人</b>」——行礼的人先把自己放低一点。<b>所以礼不是拿来自抬的，是拿来自抑的。</b>这一层，正接上一章「温良恭俭让」的「恭」。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b3">四　先王之道，斯为美</div>
+    <p class="leadline">「先王之道」不是「古代的办法」，是<b>一个经过时间检验的标准</b>。有子把它抬出来，是给「和」找根据：<b>和不是我的偏好，是先王之道里最可称美的一处。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">孔子<br>的<br>态度</div><div class="v">3.14「周监于二代，郁郁乎文哉！<b>吾从周</b>」——<b>从周，是从「文」</b>：制度、仪节、文化的累积。<b>不是从「旧」，是从「厚」。</b></div></div>
+      <div class="row"><div class="k k2">为<br>何<br>称<br>美</div><div class="v"><b>美在「小大由之」</b>：这套东西不是只管朝堂大典，是管到乡里、家里、饭桌上。<b>一套只在庙堂有效的礼，是摆设；能管到小事的礼，才是道。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b4">五　小大由之：不是一律，是同理</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">小</div><div class="v">进门先敲门、借东西先说、吃饭等长辈先动筷。<b>小事上的节，练的是「知道有别人」。</b></div></div>
+      <div class="row"><div class="k k2">大</div><div class="v">婚丧、祭祀、朝聘、刑罚。<b>大事上的节，定的是「一个社会的骨架」。</b></div></div>
+      <div class="row"><div class="k k2">同<br>理</div><div class="v"><b>同一个「节」，两种刻度。</b>不是把大礼照搬到小事上（那就成了繁文），也不是小事就不讲礼（那就成了随便）。<b>朱子所谓「小大必由之」——由的是理，不是仪。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b5">六　有所不行：一句话的两种断法</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">断法<br>甲<br>（通行）</div><div class="v">「小大由之，<b>有所不行</b>：知和而和，不以礼节之，亦不可行也。」——<b>大事小事都循和，但有一种情形行不通：只求和而不以礼节之。</b>朱子即取此读。</div></div>
+      <div class="row"><div class="k k2">断法<br>乙</div><div class="v">「小大由之有所不行」连读，解为「<b>也有行不通的地方</b>」，下句说明原因。<b>与甲实同，只是标点之别。</b></div></div>
+      <div class="row"><div class="k k2">要害</div><div class="v"><b>无论怎么断，结论只有一个：「和」不能单独成立，必须有「节」托着。</b>——这一句是全章的枢轴，也是防止「和为贵」被读成「和稀泥」的唯一闸门。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b6">七　知和而和：和稀泥的病理</div>
+    <p class="leadline">「知和而和」四字极准：<b>知道「和」是好东西，于是就一心求和</b>——注意力全在「别翻脸」上，把「什么事该怎么说清楚」忘了。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">病理<br>一</div><div class="v"><b>取消是非</b>：两边都有理，各打五十大板；或者「都别说了」。</b>结果是<b>错的事没被纠正，只是被按住</b>。</div></div>
+      <div class="row"><div class="k k2">病理<br>二</div><div class="v"><b>转移代价</b>：表面上谁也不伤，实际是<b>让最能忍的那个人承担</b>。「你让一让他」，一让十年。</div></div>
+      <div class="row"><div class="k k2">病理<br>三</div><div class="v"><b>无限延期</b>：今天不谈，明天再说；「以后再说」说到没有以后。<b>和成了拖延的别名。</b></div></div>
+      <div class="row"><div class="k k2">判据<br>三条</div><div class="v"><b>①有没有是非</b>（错的事有没有被指出）<b>②有没有人付代价</b>（是否总由同一人让）<b>③有没有期限</b>（谈不谈得完）。<b>三条缺一条，「和」就已经变成了「忍」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b7">八　无节之和的三张脸</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">讨好</div><div class="v"><b>先把自己放低到没有位置。</b>别人说什么都应，应到最后没人知道你想要什么。<b>这不是和，是消失。</b></div></div>
+      <div class="row"><div class="k k2">苟合</div><div class="v"><b>明知不对，仍凑在一起。</b>《论语》里孔子最看不起这种：<b>「巧言、令色、足恭」</b>（《公冶长》5.25「巧言、令色、足恭，左丘明耻之」）。<b>足恭——过分恭敬，就是苟合的脸。</b></div></div>
+      <div class="row"><div class="k k2">取消<br>原则</div><div class="v"><b>把「大家都同意」当成最高标准</b>，于是没人敢先说出不同意见。<b>一致的沉默，比吵架更伤组织。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b8">九　无和之礼的三张脸</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">僵</div><div class="v"><b>只有程序，没有人。</b>该走的流程一步不差，该问的「你还好吗」一句没有。<b>礼成了挡箭牌。</b></div></div>
+      <div class="row"><div class="k k2">苛</div><div class="v"><b>拿礼挑人。</b>别人一点不合规矩就被指出来，自己却从不自查。<b>《论语》里这叫「责人」，孔子说君子「躬自厚而薄责于人」（15.15）。</b></div></div>
+      <div class="row"><div class="k k2">形式<br>主义</div><div class="v"><b>礼做得漂亮，心里没有。</b>3.4「礼，与其奢也，宁俭；丧，与其易也，宁戚」——<b>孔子早就把「重形式轻实质」判过了。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-c">十　和而不同：本章的最好注脚</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">13.23</div><div class="v">「<b>君子和而不同，小人同而不和。</b>」——<b>和＝不同者能共处；同＝相同者却互相拆台。</b>八字把本章说尽了：<b>「和」从来不要求「同」。</b></div></div>
+      <div class="row"><div class="k k2">乐记</div><div class="v">「<b>乐者，天地之和也</b>；礼者，天地之序也。和，故百物皆化；序，故群物皆别。」——<b>礼管「别」，乐管「和」；一序一和，才成一套。</b>本章说的正是这两者的接缝。</div></div>
+      <div class="row"><div class="k k2">中庸</div><div class="v">「<b>致中和，天地位焉，万物育焉</b>」；又「<b>和而不流</b>」——<b>和而不流：能与人相和，却不随波逐流。</b>这四个字，比「和」字本身更近有子之意。</div></div>
+      <div class="row"><div class="k k2">左传</div><div class="v">「<b>礼，国之干也</b>」——礼是国的躯干。<b>干倒了，国就立不住。</b>有子说「小大由之」，正是这个意思的另一说法。</div></div>
+    </div>
+
+    <div class="h2" id="sc-d">十一　时代：礼变成仪，和变成谄</div>
+    <p class="leadline">有子这句话，不是书斋里的定义，是<b>冲着当时的病说的</b>。春秋晚期有两种病同时发作：<b>一边把礼做成表演，一边把和做成讨好。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">礼<br>成<br>表<br>演</div><div class="v"><b>礼器越用越大，仪节越排越盛，心里却空了。</b>3.1 八佾舞于庭、3.2 三家以《雍》彻、3.6 季氏旅于泰山——<b>都是「把天子的排场拿来用」</b>。孔子叹「<b>礼云礼云，玉帛云乎哉</b>」（《阳货》17.11「礼云礼云，玉帛云乎哉？乐云乐云，钟鼓云乎哉？」）。</div></div>
+      <div class="row"><div class="k k2">和<br>成<br>谄</div><div class="v"><b>陪臣执国命、家臣事主，靠的是迎合。</b>「<b>足恭</b>」之风即起——恭敬过了头，就是有求于人。<b>有子说「知和而和」，正是点这种人的名。</b></div></div>
+      <div class="row"><div class="k k2">乡<br>饮<br>酒<br>礼</div><div class="v">这是「礼之用，和为贵」最现成的现场：<b>乡里聚会，六十者坐、五十者立，长者先饮，少者侍奉；席间有歌、有揖、有酬。</b><b>尊卑分明，却笑语不断</b>——<b>礼与和同时在场，这就是有子想留住的场面。</b>（《仪礼·乡饮酒礼》）</div></div>
+      <div class="row"><div class="k k2">今之<br>对照</div><div class="v"><b>会议上的「我没意见」、家族群里的「都听你的」、公司里的「以大局为重」</b>——形式变了，病理没变。<b>有子那句话，今天仍然是最实用的一句管理箴言。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-e">十二　章旨</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">三层<br>结构</div><div class="v"><b>礼（界）→ 和（容）→ 节（度）。</b>礼给出边界，和给出弹性，节保证弹性不越界。<b>三层齐了才成立；缺一层，另两层都会坏。</b></div></div>
+      <div class="row"><div class="k k2">一句<br>反证</div><div class="v">若「和」可独立成立，有子不必写后半句；<b>他偏写了后半句，说明他要防的正是「只求和」。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.10<br>合看</div><div class="v">1.10 讲「<b>以得之</b>」：不靠手段而得人心；1.12 讲「<b>以礼节之</b>」：得人心也要有边界。<b>一个讲怎么得，一个讲得住了怎么守。</b></div></div>
+      <div class="row"><div class="k k2">落点</div><div class="v"><b>礼不是捆人的绳，是让人不必抢的线；和不是取消是非，是让不同的人还能坐在一处；节是那条线，划在「谁承担」上。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-f">十三　存疑</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「和」是否即今之「和谐」</b>　相近，但古义偏「相应、相调」，<b>不含「没有冲突」之意</b>。今人以「和谐＝没有矛盾」读之，已从「和」滑到了「同」。</div></div>
+      <div class="q"><span>02</span><div><b>「礼之用」的「用」</b>　一解「用处」，一解「施行」。<b>取「施行」</b>：礼不在条文里，在人做事的那一刻——与前章「行迹」之义正相接。</div></div>
+      <div class="q"><span>03</span><div><b>「先王之道」是否专指三代</b>　旧注多指三代圣王（尧舜禹汤文武）；亦有解为「古之圣王所行之道」的一般说法。<b>两说并存</b>，取义无别：都是给「和」立一个超出个人偏好的标准。</div></div>
+      <div class="q"><span>04</span><div><b>「有所不行」的主语</b>　一解「礼有所不行」，一解「事有所不行」。<b>取「事」</b>：某种做法走不通，语气更顺，与下句「知和而和」也接得更紧。</div></div>
+      <div class="q"><span>05</span><div><b>有子为何能列三章</b>　因其「似孔子」而被门人推为师（《孟子·滕文公上》《史记·仲尼弟子列传》）；<b>《论语》称「有子」而不称名，暗示编者是曾子、有子之门人</b>。此为柳宗元以来的推论，<b>非定论</b>。</div></div>
+    </div>
+
+    <div class="h2" id="sc-g">十四　双卡对照</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">俗见</div><div class="v">和为贵＝凡事别伤和气，能忍就忍。</div></div>
+      <div class="row"><div class="k k2">正解</div><div class="v"><b>和是「不同者能共处」，忍是「不同者被按住」。</b>有子后半句正是防忍。</div></div>
+      <div class="row"><div class="k k2">俗见</div><div class="v">礼是繁文缛节，越少越好。</div></div>
+      <div class="row"><div class="k k2">正解</div><div class="v"><b>礼省的是「每件事都要现场争」的成本。</b>该省的是「排场」，不是「分寸」。</div></div>
+      <div class="row"><div class="k k2">俗见</div><div class="v">「知和而和」是提倡以和为贵。</div></div>
+      <div class="row"><div class="k k2">正解</div><div class="v"><b>是批评。</b>四字是病名：只知求和、把节撤了。</div></div>
+      <div class="row"><div class="k k2">俗见</div><div class="v">和＝一致，意见不同就是不和。</div></div>
+      <div class="row"><div class="k k2">正解</div><div class="v"><b>13.23 说反了：「和而不同」。</b>和的前提恰恰是「不同」——同了，才不需要「和」。</div></div>
+      <div class="row"><div class="k k2">俗见</div><div class="v">这是讲社交技巧的一章。</div></div>
+      <div class="row"><div class="k k2">正解</div><div class="v"><b>是讲制度与关系结构的一章</b>：界、容、度三者如何配。</div></div>
+      <div class="row"><div class="k k2">俗见</div><div class="v">礼和和是对立的（讲礼就伤和气）。</div></div>
+      <div class="row"><div class="k k2">正解</div><div class="v"><b>礼正是和的容器。</b>没有容器，和气存不住——班级值日表一撤，和气三天就散。</div></div>
+    </div>
+
+    <div class="h2" id="sc-h">十五　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《学而》<br>1.13</div><div class="v">「<b>信近于义，言可复也；恭近于礼，远耻辱也</b>」——<b>下一章即讲「节」的两种失守：许得太多、恭得过头。</b></div></div>
+      <div class="row"><div class="k k2">《子路》<br>13.23</div><div class="v">「<b>君子和而不同，小人同而不和</b>」——本章最硬的注脚。</div></div>
+      <div class="row"><div class="k k2">《八佾》<br>3.4</div><div class="v">「<b>礼，与其奢也，宁俭；丧，与其易也，宁戚</b>」——<b>礼之质重于礼之文。</b></div></div>
+      <div class="row"><div class="k k2">《八佾》<br>3.14</div><div class="v">「<b>周监于二代，郁郁乎文哉！吾从周</b>」——「先王之道，斯为美」的来处。</div></div>
+      <div class="row"><div class="k k2">《阳货》<br>17.11</div><div class="v">「<b>礼云礼云，玉帛云乎哉？乐云乐云，钟鼓云乎哉</b>」——<b>礼不在器物，在敬。</b></div></div>
+      <div class="row"><div class="k k2">《礼记》<br>乐记</div><div class="v">「<b>乐者，天地之和也；礼者，天地之序也</b>」；「<b>礼者，别异也</b>」——一序一和，正合本章。</div></div>
+      <div class="row"><div class="k k2">《礼记》<br>曲礼</div><div class="v">「<b>礼者，自卑而尊人</b>」——礼是自抑，不是自抬。</div></div>
+      <div class="row"><div class="k k2">《中庸》</div><div class="v">「<b>致中和，天地位焉，万物育焉</b>」；「<b>和而不流</b>」——和而不流，是本章的正解。</div></div>
+      <div class="row"><div class="k k2">《左传》</div><div class="v">「<b>礼，国之干也</b>」——礼是国的躯干。</div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　乡饮酒礼</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1328×1776 竖幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary>
+          <p>古淡水墨立轴，纸本米色 #FBF7EC 底，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面取「礼之用，和为贵」之义：乡间厅堂或庭院，乡饮酒礼正在进行——长者在席上举爵，年少者捧盘、执壶侍立，一人揖让，一人侧身回应，众人在座而笑语相和；案上器具陈设有序（爵、豆、俎），席位有先后之别；窗外一株老树、远山淡墨。人物神情平和，不作庄严压迫状，衣纹简笔。竖幅 3:4，人物居下三分之二，上方留白。不写字、不画乐器特写、不作夸张手势、不生成任何水印与文字。</p>
+        </details>
+        <div class="note">图注：图到后另补「读图」五条（看座次、看举爵的手、看侍立的少年、看器具的次序、看人的脸色）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　礼、和、节：三者互撑</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 330" role="img" aria-label="礼、和、节三角互撑：礼给出界，和给出容，节给出度">
+        <text x="240" y="20" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 三者缺一，另两者皆坏</text>
+
+        <circle cx="240" cy="180" r="42" fill="none" stroke="#DCD5C8" stroke-width="1" stroke-dasharray="4 4"/>
+        <text x="240" y="178" text-anchor="middle" font-family="serif" font-size="11" fill="#5C5347">小大由之</text>
+        <text x="240" y="194" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">同一个理</text>
+
+        <rect x="196" y="44" width="88" height="44" fill="#FFFDF6" stroke="#A2503B" stroke-width="1.2"/>
+        <text x="240" y="64" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">礼</text>
+        <text x="240" y="80" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">界：先后轻重</text>
+
+        <rect x="300" y="208" width="88" height="44" fill="#FFFDF6" stroke="#A2503B" stroke-width="1.2"/>
+        <text x="344" y="228" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">和</text>
+        <text x="344" y="244" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">容：相安相调</text>
+
+        <rect x="92" y="208" width="88" height="44" fill="#FFFDF6" stroke="#A2503B" stroke-width="1.2"/>
+        <text x="136" y="228" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">节</text>
+        <text x="136" y="244" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">度：到哪儿止</text>
+
+        <line x1="278" y1="88" x2="316" y2="206" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="316,206 310,197 320,199" fill="#8A8074"/>
+        <text x="322" y="150" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">和为贵</text>
+
+        <line x1="202" y1="88" x2="164" y2="206" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="164,206 160,197 170,199" fill="#8A8074"/>
+        <text x="158" y="150" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">节以制度</text>
+
+        <line x1="182" y1="230" x2="298" y2="230" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="298,230 289,225 289,235" fill="#8A8074"/>
+        <text x="240" y="222" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">不以礼节之，不可行</text>
+
+        <text x="240" y="288" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">礼管「别」，和管「同处」，节管「别与同处的界线」</text>
+        <text x="240" y="308" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">缺礼则混，缺和则僵，缺节则散——三种坏法，各缺一条</text>
+      </svg>
+      <div class="figcap">△ 三条边都是双向的：礼要靠和才落地，和要靠节才存住，节要靠礼才有据。</div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　一条岔路：遇分歧，往哪走</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 340" role="img" aria-label="小大由之遇分歧后分两路：知和而和则散，以礼节之则可久">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 同一个起点，两种结局</text>
+
+        <rect x="120" y="34" width="240" height="42" fill="#F6F1E3" stroke="#A2503B"/>
+        <text x="240" y="54" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">小大由之：循和而行</text>
+        <text x="240" y="68" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">大事小事都照这个理</text>
+
+        <line x1="240" y1="76" x2="240" y2="102" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="240,102 235,93 245,93" fill="#8A8074"/>
+
+        <rect x="120" y="104" width="240" height="42" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="240" y="124" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">有所不行：遇到分歧</text>
+        <text x="240" y="138" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">总有意见不同的时候</text>
+
+        <line x1="222" y1="146" x2="130" y2="196" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="130,196 130,186 139,191" fill="#8A8074"/>
+        <line x1="258" y1="146" x2="350" y2="196" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="350,196 341,191 350,186" fill="#8A8074"/>
+
+        <rect x="30" y="198" width="200" height="44" fill="#F6F1E3" stroke="#A2503B" stroke-dasharray="5 3"/>
+        <text x="130" y="218" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">知和而和（只求和）</text>
+        <text x="130" y="232" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">把界撤了，先别翻脸</text>
+
+        <rect x="250" y="198" width="200" height="44" fill="#FFFDF6" stroke="#4A5C55"/>
+        <text x="350" y="218" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">以礼节之（守住界）</text>
+        <text x="350" y="232" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">说清是非与代价</text>
+
+        <line x1="130" y1="242" x2="130" y2="272" stroke="#C58A73" stroke-width="1"/>
+        <polygon points="130,272 125,263 135,263" fill="#C58A73"/>
+        <line x1="350" y1="242" x2="350" y2="272" stroke="#4A5C55" stroke-width="1"/>
+        <polygon points="350,272 345,263 355,263" fill="#4A5C55"/>
+
+        <rect x="30" y="274" width="200" height="42" fill="#FBF1EC" stroke="#A2503B"/>
+        <text x="130" y="294" text-anchor="middle" font-family="serif" font-size="11" fill="#A2503B">亦不可行：和气也散</text>
+        <text x="130" y="308" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">有人替着忍，忍到头就翻</text>
+
+        <rect x="250" y="274" width="200" height="42" fill="#F2F6F3" stroke="#4A5C55"/>
+        <text x="350" y="294" text-anchor="middle" font-family="serif" font-size="11" fill="#4A5C55">可久：和终于站住</text>
+        <text x="350" y="308" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">界清楚，人才敢放松</text>
+      </svg>
+      <div class="figcap">△ 岔口上只有一个变量：礼有没有在场。撤了礼，求和反而不成和。</div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　和而不同，同而不和</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 270" role="img" aria-label="和而不同为两圆相交，同而不和为两圆重合">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 两个圆，两种关系</text>
+
+        <circle cx="112" cy="130" r="56" fill="#FFFDF6" stroke="#A2503B" stroke-width="1.2"/>
+        <circle cx="176" cy="130" r="56" fill="none" stroke="#4A5C55" stroke-width="1.2"/>
+        <path d="M144 79 A56 56 0 0 1 144 181 A56 56 0 0 1 144 79 Z" fill="#A2503B" opacity="0.18"/>
+        <text x="78" y="132" text-anchor="middle" font-family="serif" font-size="11" fill="#A2503B">甲</text>
+        <text x="210" y="132" text-anchor="middle" font-family="serif" font-size="11" fill="#4A5C55">乙</text>
+        <text x="144" y="132" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">共处</text>
+
+        <text x="144" y="216" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">和而不同</text>
+        <text x="144" y="234" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">各有其声，合而成调</text>
+        <text x="144" y="250" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">交界处是「节」，不是「吞并」</text>
+
+        <line x1="246" y1="46" x2="246" y2="252" stroke="#DCD5C8" stroke-width="1" stroke-dasharray="3 4"/>
+
+        <circle cx="370" cy="130" r="56" fill="#F6F1E3" stroke="#A2503B" stroke-width="1.2"/>
+        <circle cx="370" cy="130" r="56" fill="none" stroke="#4A5C55" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <text x="370" y="128" text-anchor="middle" font-family="serif" font-size="11" fill="#A2503B">甲＝乙</text>
+        <text x="370" y="144" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">只剩一个声音</text>
+
+        <text x="370" y="216" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">同而不和</text>
+        <text x="370" y="234" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">表面一致，底下互相拆台</text>
+        <text x="370" y="250" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">「同则不继」：《国语》史伯</text>
+      </svg>
+      <div class="figcap">△ 左：不同而能共处，靠的是中间那层「节」。右：合到只剩一个，反而无从相和。</div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　有子：一个被推上师座的人</div>
+    <p class="leadline">《学而》十六章，孔子之外说话的人只有两位：<b>有子三章（1.2、1.12、1.13）、曾子两章（1.4、1.9）</b>。<b>一个弟子的话被编在孔子之后、位置这么前，不是偶然。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">其人</div><div class="v">有若，字子有（一说子若），鲁人。《史记·仲尼弟子列传》：「<b>有若，鲁人，字子有，少孔子四十三岁</b>。」——比孔子小四十三岁，孔子卒时他约三十岁。</div></div>
+      <div class="row"><div class="k k2">像<br>孔子</div><div class="v">《史记》记：「<b>孔子既没，弟子思慕，有若状似孔子，弟子相与共立为师，师之如夫子时也。</b>」——<b>长相像，被推上去坐了师位。</b></div></div>
+      <div class="row"><div class="k k2">被<br>请<br>下</div><div class="v">《史记》：弟子问了两件旧事（孔子行前令备雨具而果雨、孔子预言商瞿得子），有若不能对，弟子说「<b>非夫子也</b>」，遂请下之。<b>——坐上去靠脸，坐不住靠学问。</b></div></div>
+      <div class="row"><div class="k k2">孟子<br>另<br>说</div><div class="v">《孟子·滕文公上》：<b>子夏、子张、子游「以有若似圣人，欲以所事孔子事之」，强曾子；曾子曰「不可——江汉以濯之，秋阳以暴之，皜皜乎不可尚已」。</b><b>两说并存</b>：一说已立而请下，一说曾子当场拦住。<b>史迁与孟轲，各记一面。</b></div></div>
+      <div class="row"><div class="k k2">三章<br>的<br>分量</div><div class="v"><b>1.2 讲本</b>（孝弟为仁之本）／<b>1.12 讲度</b>（礼之用，和为贵）／<b>1.13 讲约</b>（信近于义）。<b>三章合起来，是一套「社会生活的底线」：先立本，再定度，最后守约。</b>——学者认为这正是有子一派被编在前面的原因。</div></div>
+    </div>
+    <div class="scene"><b>所以这一章有个有趣的背景：</b>说「礼之用，和为贵」的人，<b>自己就经历过一次「被推上去、又被请下来」</b>。<b>他讲「节」，讲得不是空话。</b></div>
+
+    <div class="h2" id="sc-24">附论二　「和」字的来路：从排箫到调羹</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">字形</div><div class="v"><b>龢</b>：从龠（排箫）从禾，本义「<b>乐音调和</b>」。《说文》：「龢，调也。」<b>和</b>：从口从禾，本义「<b>应和</b>」，一唱一和。<b>二字后通用，但底子都是「不同的东西合起来」。</b></div></div>
+      <div class="row"><div class="k k2">史伯<br>定义</div><div class="v">《国语·郑语》周太史伯答郑桓公：「<b>和实生物，同则不继。</b>以他平他谓之和，故能丰长而物归之；若以同裨同，尽乃弃矣。」——<b>「以他平他」：用「另一个」来平衡「这一个」，才叫和。</b><b>这是先秦对「和」最精确的定义，比《论语》更早。</b></div></div>
+      <div class="row"><div class="k k2">晏婴<br>喻羹</div><div class="v">《左传》昭公二十年，晏子论「和」与「同」：<b>「和如羹焉：水火醯醢盐梅，以烹鱼肉……」</b>——<b>一味咸、一味淡都不成羹；君臣之间也要「可否相济」。</b><b>调羹之喻，正是有子「礼之用」的另一种说法：各味不同，靠火候与配比（节）才成味。</b></div></div>
+      <div class="row"><div class="k k2">后世<br>三层</div><div class="v"><b>①乐之和</b>（《乐记》「乐者，天地之和也」）<b>②心之和</b>（《中庸》「致中和」）<b>③人与人之和</b>（13.23「和而不同」）。<b>三层同一理：不同者能相济。</b></div></div>
+      <div class="row"><div class="k k2">今日<br>之辨</div><div class="v"><b>「和谐」若被读成「没有不同声音」，就已经从「和」滑到了「同」</b>——<b>而史伯早说过：同则不继。</b>一个只剩一种声音的地方，不是最和的地方，是最难生长的地方。</div></div>
+    </div>
+
+    <div class="h2" id="sc-25">附论三　三种和稀泥：组织、家庭、朋友</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">组织<br>里</div><div class="v"><b>病：</b>「大家都不容易」「以大局为重」，于是错的事没人纠，能扛的人一直扛。<b>药：</b>把「谁承担」摆到桌上——<b>定事、定人、定期</b>。「以大局为重」若从不落到具体的人，就是让最老实的人付账。</div></div>
+      <div class="row"><div class="k k2">家庭<br>里</div><div class="v"><b>病：</b>「一家人不说两家话」「忍一忍就过去了」，于是旧账年年累积，一次爆发翻十年。<b>药：</b><b>把默认说明说</b>——谁洗碗、几点回、借多久还。<b>说清楚不是伤感情，是给感情留余地。</b></div></div>
+      <div class="row"><div class="k k2">朋友<br>间</div><div class="v"><b>病：</b>「你随便」「我都行」，于是每次都由同一个人迁就，久了就生怨。<b>药：</b><b>允许说「我不想」</b>——<b>能说不的关系，才是能久的关系。</b>（参 13.23「和而不同」）</div></div>
+      <div class="row"><div class="k k2">四步<br>做法</div><div class="v"><b>①先立界</b>（把规矩明说出来）<b>②再容异</b>（允许不同，不急着统一）<b>③把代价说清</b>（谁让、让多少、让到什么时候）<b>④定期限</b>（这次让，下不为例）。<b>四步做完，「和」才不是「忍」。</b></div></div>
+    </div>
+    <div class="scene"><b>所以这一章，不必读成「做人要和气」。</b>它是一句<b>很硬的话</b>：<b>和气要能存住，必须有边界托着；没有边界的和气，三个月就散。</b>——<b>先分清，再谈情；界清楚，人才敢放松。</b></div>
+
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 11 课　v1.0　（2026-11-20）</div>
+  </footer>
+
+</div>
+</body>
+</html>

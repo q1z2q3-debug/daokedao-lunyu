@@ -15,9 +15,10 @@
 - 第八课｜君子不重则不威，学则不固｜不重是病，学是药；无友不如己，是承认人人有一处胜我。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/08.html
 - 第九课｜慎终追远，民德归厚矣｜两件收不到回音的事，把一个人、一家、一地的壁练厚。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/09.html
 - 第十课｜夫子至于是邦也，必闻其政｜五德不是技巧，是可接近性；以得之，是德之得。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/10.html
+- 第十一课｜礼之用，和为贵｜礼是界，和是容，节是度：无礼则混，无和则僵，无节则散。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/11.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.9.5，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.10.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
