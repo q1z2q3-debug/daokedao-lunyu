@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>慎终追远 · 论语第九课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第一第九章通释：曾子曰「慎终追远，民德归厚矣」。慎终者丧尽其礼，追远者祭尽其诚；本章最深处在于「对不能回报你的人仍尽礼」——对能回报的人好是交换，对不能回报的人好才是德。辨朱子民德归厚之教化读与风气读；「慎终如始」为《老子》语，不可与此「慎终」相串。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E5%8E%9A%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(4,86px);gap:14px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(4,1fr);gap:12px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 九章　第 9 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读 1.7–1.8</a><a href="#sc-b">字义句读</a><a href="#sc-b1">终</a><a href="#sc-b2">远</a><a href="#sc-b3">不回报</a><a href="#sc-b4">厚</a><a href="#sc-b5">归厚</a><a href="#sc-c">章旨</a><a href="#sc-d">阴阳</a><a href="#sc-e">存疑</a><a href="#sc-f">双卡</a><a href="#sc-g">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一（待供图）</a><a href="#sc-20">义理图一 两件不回报的事</a><a href="#sc-21">义理图二 一条时间线</a><a href="#sc-22">义理图三 归厚两读</a><a href="#sc-23">附论一 曾子</a><a href="#sc-24">附论二 三年之丧</a><a href="#sc-25">附论三 厚的谱系</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>慎终追远</h1>
+    <div class="h1-sub">学而 1.9　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">曾子曰：</span>「<ruby>慎<rt>shèn</rt></ruby><ruby>终<rt>zhōng</rt></ruby><ruby>追<rt>zhuī</rt></ruby><ruby>远<rt>yuǎn</rt></ruby>，民德归<ruby>厚<rt>hòu</rt></ruby>矣。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>慎</span></div><div class="tzcap"><span>13 画</span><span>不轻忽</span></div></div>
+      <div class="tzitem"><div class="cell"><span>终</span></div><div class="tzcap"><span>8 画</span><span>最后一程</span></div></div>
+      <div class="tzitem"><div class="cell"><span>远</span></div><div class="tzcap"><span>7 画</span><span>走远了的先人</span></div></div>
+      <div class="tzitem"><div class="cell"><span>厚</span></div><div class="tzcap"><span>9 画</span><span>厚道</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">慎</div><div class="v"><b>小心，不马虎。</b>不是害怕，是把这件事当成一件要认真做的事。心字旁，说的就是心里知道轻重。</div></div>
+      <div class="row"><div class="k">终</div><div class="v"><b>一个人的最后一程。</b>这个字本来说的是「到最后」，在这里说的是人过世。加上「慎」，就是：送他走的时候，一件一件做到。</div></div>
+      <div class="row"><div class="k">远</div><div class="v"><b>走远了的人。</b>爷爷奶奶的爷爷奶奶，你没见过，但他们把家传到了你手里。追，就是回头去找他们。</div></div>
+      <div class="row"><div class="k">厚</div><div class="v"><b>厚道，不是老实好欺负。</b>地厚，庄稼才长得住；人厚，别人才敢靠你。薄的人一碰就翻，厚的人撑得住。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead">送人走，要认真；<b>记住走远的人，要真心</b>。这两件事做完，一个人就厚了；<b>一家这样做，一村人也会跟着厚起来</b>。</p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p class="lead">跟我念：<br>「曾子说：送一个人的最后一程，要尽心尽力；纪念走远的先人，要真心真意。<b>这样做久了，大家的心就一起变厚了。</b>」<br>念完想一想：那些人已经不能谢谢你了，为什么还要为他们做事？</p>
+
+    <p class="lead">顺带看一眼这个字：<b>「厚」字里有一层一层的土。</b>土堆得厚，才长得出东西；人也是这样。</p>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      清明，全家上山。你手里提着一小桶水和一块旧布，任务是<b>把碑上的字擦干净</b>。<br>
+      碑上有土，字的缝里长着青苔。你擦一遍，缝里还有；再擦一遍，字就出来了——你忽然看清那是太爷爷的名字，<b>一个你只在照片里见过的人。</b><br>
+      爸爸在旁边不说话，只是把你擦过的地方又抹了一遍。奶奶摆上三只小杯，倒了一点酒，说：「他爱喝这个。」<br>
+      你不懂为什么给一个不能喝的人倒酒。奶奶说：<b>「他喝不喝得到，我不知道。我记得他爱喝，这个我知道。」</b><br>
+      你这才明白：<b>这件事没有回报</b>。他们不能谢你、不能夸你、也不能帮你。可正是这件事没有回报，做起来才是你真心。
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <ol class="list">
+      <li>他们已经不能谢谢你了，为什么还要为他们做事？——正因为不能谢你，所以你做了，才不是因为想得到什么。对能回报你的人好，像做买卖；对不能回报的人好，才是你的心。</li>
+      <li>「厚」是不是就是老实、好欺负？——不是。厚是「撑得住」：地厚才能长庄稼，人厚别人才敢靠。薄的人一碰就翻脸，那看着凶，其实最薄。</li>
+      <li>为什么一家人这样做，别人也会变？——因为心会传染。孩子看见大人怎样对待走了的人，就学会怎样对待活着的人。</li>
+    </ol>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <ol class="list">
+      <li>答应送人的事，一件一件做到，别图省事。</li>
+      <li>一年至少一次，翻翻老照片，说出一位已经过世的亲人的名字和一件事。</li>
+      <li>对人好，不必先问「他能不能回报我」。</li>
+      <li>厚不是不说话，是有分量、撑得住。</li>
+    </ol>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">勘俗见</div><div class="v">常见误读有三：把「慎终」读成<b>「丧事排场要大」</b>；把「追远」读成<b>「烧纸求保佑」</b>；把「民德归厚」读成<b>「管出来的风气」</b>。<b>三处都读偏了：慎是尽心不留憾，追是记得不该忘的人，厚是化出来的、不是管出来的。</b></div></div>
+      <div class="row"><div class="k k2">现代<br>对照</div><div class="v">今天最缺的是<b>「亲手做」</b>：丧事整套外包，连擦碑、捧土、写悼词都交给别人；清明变成一天假，扫墓变成打卡。<b>慎终追远的力量，恰恰在这些笨拙的小动作里</b>——手一碰到土，心才碰到人。</div></div>
+      <div class="row"><div class="k k2">常变<br>主线</div><div class="v"><b>形式一直在变：</b>土葬变树葬海葬，烧纸变献花，家庙变相册与家谱，跪拜变鞠躬。有人一改就说「礼崩」。<b>不变的是那一条：不该忘的人，不能忘；该尽心的事，不能省。</b>形式是器，敬是道。</div></div>
+      <div class="row"><div class="k k2">教与学<br>二分</div><div class="v"><b>「慎终」偏「学」</b>——孩子先看见大人怎样送人，才知道这件事的分量；<b>「追远」偏「习」</b>——轮到他擦碑、捧土、记名字。只讲道理不带他做，他学到的只是道理。</div></div>
+      <div class="row"><div class="k k2">时代<br>落点</div><div class="v">这一代孩子最缺<b>「死亡的经验」</b>：老人过世在医院与殡仪馆，孩子被挡在门外，以为死是一件不必面对的事。<b>结果不是不怕死，是轻薄</b>——不知道有分量的事是什么样，也就长不出分量。<b>让他参与一点点（擦一张照片、写一句话），比讲一百遍「要孝顺」有用。</b></div></div>
+      <div class="row"><div class="k k2">融西<br>对照</div><div class="v">罗马人把 <b>pietas</b> 列为最高德性之一——本义是<b>对神、对父母、对国家的本分</b>，西塞罗《论义务》即以之为「正义之基」。它与「慎终追远」几乎是同一个东西：<b>对不能回报者尽责。</b>今天英语里的 <b>remembrance</b>（纪念）、纪念日的两分钟静默，也是同一件事的另一种做法。</div></div>
+      <div class="row"><div class="k k2">可做<br>一件</div><div class="v">定一个日子（忌日或清明），<b>全家做三件小事</b>：擦一次照片或碑、说一个这个人的故事、给他做一道他爱吃的菜。<b>不拍视频、不发朋友圈</b>——只做给那个人看，做给自己记住。</div></div>
+    </div>
+  </section>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页 · 古今汇观</div>
+
+    <h1>慎终追远，民德归厚矣</h1>
+    <div class="h1-sub">连读 1.7–1.8 · 字义句读 · 终 · 远 · 不回报 · 厚 · 归厚两读 · 章旨 · 阴阳 · 存疑 · 双卡 · 跨典</div>
+
+    <div class="src">
+      <span class="who">曾子曰：</span>「慎终追远，民德归厚矣。」
+    </div>
+
+    <div class="h2" id="sc-lian">零　连读 1.7–1.8：一条线从「在」拉到「终」</div>
+    <p class="leadline">1.7 讲父亲在的时候怎么看一个人，1.8 讲有错怎么改，1.9 忽然讲起了<b>人走了以后</b>。三章挨着，不是随手排的。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">1.7</div><div class="v">「父在，观其志；父没，观其行；三年无改于父之道。」——<b>父母在，也父母刚走</b>：看一个人怎么守。</div></div>
+      <div class="row"><div class="k k2">1.8</div><div class="v">「过则勿惮改。」——<b>对自己的过</b>：一刻不肯苟安。</div></div>
+      <div class="row"><div class="k k2">1.9</div><div class="v">「慎终追远。」——<b>对已走的人</b>：丧尽其礼，祭尽其诚。<b>1.7 的「三年」正是此处「慎终」的礼制表述。</b></div></div>
+      <div class="row"><div class="k k2">同一条线</div><div class="v">把三章连起来，是一条<b>时间轴</b>：父母在 → 父母终 → 先祖远 → 后人。<b>同一个「敬」，在不同的时间位置上，换成不同的动作。</b>1.7 是「不忍遽改」，1.9 是「不敢轻忽」。</div></div>
+      <div class="row"><div class="k k2">为何<br>忽然<br>换人</div><div class="v">1.8 还是孔子语，1.9 换成<b>曾子语</b>——全章唯一。语气也变了：不再是「你要怎样」，而是「大家会怎样」。<b>从一个人的修养，转到一群人的风气。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">慎</div><div class="v"><b>谨，不轻忽。</b>不是害怕，是<b>把它当成一件要认真做的事</b>。朱子：「终者，人之所易忽也，而能谨之。」</div></div>
+      <div class="row"><div class="k k2">终</div><div class="v"><b>人的最后一程</b>（丧）。孔安国：「慎终者，<b>丧尽其哀</b>。」朱子：「慎终者，<b>丧尽其礼</b>。」——一重情，一重分寸，详见第二节。</div></div>
+      <div class="row"><div class="k k2">追</div><div class="v"><b>回头去找</b>。不是「追求」，是<b>追上已经走远的人</b>：把他们从遗忘里拉回来。</div></div>
+      <div class="row"><div class="k k2">远</div><div class="v"><b>久远的先人。</b>邢昺：「追远者，谓<b>追录先祖</b>，祭尽其诚也。」详见第三节。</div></div>
+      <div class="row"><div class="k k2">民德</div><div class="v"><b>众人的德性</b>，不是「百姓的道德水平」这种考核语。德是一人一人的心，民德是这些心凑在一起的样子。</div></div>
+      <div class="row"><div class="k k2">归厚</div><div class="v"><b>归向厚。</b>「归」是回、是聚：<b>散着的心，往「厚」这一处聚过去。</b>详见第六节。</div></div>
+    </div>
+    <div class="quote"><span class="t">句读</span>曾子曰：「慎终，追远，民德归厚矣。」<br><span class="note2">两句两个动作（慎终／追远），一句一个结果（民德归厚）。<b>不是「因为慎终追远，所以民德归厚」的交易句，是「这样做久了，风气自然往厚处走」的因果句。</b></span></div>
+
+    <div class="h2" id="sc-b1">二　终：人之所易忽</div>
+    <p class="leadline">先看两家的注，只差一个字，却把「慎终」分成了两面。</p>
+    <div class="quote"><span class="t">孔安国</span>慎终者，丧尽其哀。</div>
+    <div class="quote"><span class="t">朱熹《集注》</span>慎终者，丧尽其礼。……终者，人之所易忽也，而能谨之。</div>
+    <div class="scene"><b>「哀」是情，「礼」是分寸。</b>孔安国抓的是里头那团火，朱子抓的是外头那道尺。<b>两面缺一面都不成：</b>只有哀没有礼，是哭到失控、办到失序；只有礼没有哀，是流程走完、人没到场。<b>「慎」字正好卡在这两者之间——心里有火，手上还有尺。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">为何<br>易忽</div><div class="v">朱子点得极准：<b>「终者，人之所易忽也。」</b>人走了，他不会再来催你、不会再看你做得怎样——<b>做得好做得差，没人追究，最容易糊过去。</b></div></div>
+      <div class="row"><div class="k k2">「慎」<br>落在<br>何处</div><div class="v">不在排场，在<b>那些没人检查的细节</b>：名字有没有写对、他爱吃的有没有摆上、答应过他的事有没有办完、来送的人有没有人招呼。<b>易忽处，正是慎处。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.7<br>相接</div><div class="v">1.7 的「三年无改于父之道」，就是「慎终」的礼制形式。<b>三年不是等一个期限，是给「不忍」留出时间。</b>急急改掉，不是效率，是薄。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b2">三　远：人之所易忘</div>
+    <p class="leadline">「终」是一个人，「远」是一串人；前者近而痛，后者远而淡。</p>
+    <div class="quote"><span class="t">朱熹《集注》</span>追远者，祭尽其诚。……远者，人之所易忘也，而能追之。</div>
+    <div class="scene">请注意朱子的对句：<b>「终」是所易忽，「远」是所易忘。</b>——<b>忽是当下不用心，忘是时间把它擦掉。</b>这两样，一个败于懒，一个败于久。<b>「慎终追远」四字，正是同时对付这两样。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">追<br>什么</div><div class="v">不是追一个名字，是追<b>这个人做过什么、说过什么、为什么这个家成了现在这样</b>。邢昺说「追录先祖」——<b>录，是记下来</b>：不记，就真的没有了。</div></div>
+      <div class="row"><div class="k k2">追到<br>第几代</div><div class="v">《礼记》讲「五世而斩」，普通人家记到四五代就断。这正说明：<b>追远是件要用力的事</b>——不写、不讲、不带孩子去看，两代就忘了。</div></div>
+      <div class="row"><div class="k k2">今人<br>之忘</div><div class="v">不是不孝，是<b>没有载体</b>。老屋拆了、家谱没续、老人走了没录一句话。<b>忘不是心坏，是没有东西帮你记。</b>所以「追远」在今天首先是一件<b>动手保存</b>的事。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b3">四　不能回报：本章最深的一处</div>
+    <p class="leadline">为什么偏偏是丧与祭，最能让人变厚？<b>因为这两件事，收不到回音。</b></p>
+    <div class="scene">给活人做事，多半有回音：他谢你、他记你、他下次帮你。<b>给走了的人做事，一点回音也没有</b>——他不会谢你，不会夸你，不会在你难的时候出现。<b>可你仍然做，一件一件做到。</b><br><br>这就是「厚」的来历：<b>对能回报你的人好，是交换；对不能回报的人好，才是德。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">祭<br>如在</div><div class="v">《八佾》3.12：「祭如在，祭神如神在。」——<b>他不是不知道人不在，是选择「如在」。</b>「如」这个字最重：明明知道没有回音，还是照有回音那样做。</div></div>
+      <div class="row"><div class="k k2">安的<br>底线</div><div class="v">《阳货》17.21 宰我要改三年之丧，孔子只问一句：「<b>于女安乎？</b>」——礼的最后一关不是合不合规矩，是<b>你心里安不安</b>。省掉该做的事，省下来的那点轻松，会变成心里的不安。</div></div>
+      <div class="row"><div class="k k2">厚<br>从何<br>长成</div><div class="v"><b>厚不是天生的性格，是练出来的。</b>练法就是：<b>反复做那些没有回报的事</b>。做一次是勉强，做十年就成了这个人。丧祭之所以能「厚民德」，是因为它<b>年复一年地训练「无所为而为」</b>。</div></div>
+      <div class="row"><div class="k k2">反过<br>来说</div><div class="v"><b>一个只做有回报之事的人，不会厚，只会精。</b>精于计算的人看着聪明，遇事却撑不住：因为他的每一分付出都要先问「值不值」。<b>「值不值」问多了，人就薄了。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b4">五　厚：一人之壁，一群人之壁</div>
+    <p class="leadline">1.8 的「重」是一只器的壁厚；1.9 的「厚」是很多只器摞在一起之后的厚度。</p>
+    <div class="scene"><b>厚，本义是土层的厚度。</b>《易·坤·大象》：「地势坤，君子以<b>厚德载物</b>。」——<b>厚是为了「载」</b>：土厚才长庄稼，人厚才承得住事、承得住人。<b>所以「厚」不是软，是承载力。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">厚与<br>薄</div><div class="v"><b>薄不是瘦，是一碰就破。</b>薄的人怕吃亏、怕被看轻、怕别人不知道自己好——<b>一碰就翻脸，看着最硬，其实最薄</b>；厚的人不必证明自己厚，所以碰一下也不翻。</div></div>
+      <div class="row"><div class="k k2">一人<br>之厚</div><div class="v">一个人厚，表现很朴素：<b>答应的事办完；不占小便宜；别人说错话不当场拆；有难处自己先顶一段。</b>——都是「重」的动作，做久了积成「厚」。</div></div>
+      <div class="row"><div class="k k2">一群<br>人之厚</div><div class="v">一群人都这样，就成了风气：<b>办事不必先防人，说话不必先留三分。</b>这种地方住着省力——<b>省下来的力气，就是「厚」给的红利。</b></div></div>
+      <div class="row"><div class="k k2">厚<br>不可<br>速成</div><div class="v"><b>厚是时间的函数。</b>土层一年长不了几寸；一个人的厚，要几十年；一个地方的厚，要几代人。<b>所以凡说「三年建成好风气」的，多半建的是面子，不是厚。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b5">六　归厚：朱子两读，其实是一件事</div>
+    <div class="quote"><span class="t">朱熹《集注》</span>民德归厚，谓下民化之，其德亦归于厚。……故以此自为，则己之德厚；下民化之，则其德亦归于厚也。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">读一<br>自上</div><div class="v"><b>在上者这样做，下面的人被感化，德也变厚。</b>朱子的读法，落在「化」字上——<b>不是下令，是照着做给人看。</b></div></div>
+      <div class="row"><div class="k k2">读二<br>自下</div><div class="v"><b>家家这样做，风气自己往厚处聚。</b>没有谁在推，是无数人的小动作加在一起，把标准抬高了。</div></div>
+      <div class="row"><div class="k k2">其实<br>一件事</div><div class="v">两读都成立，因为<b>「化」本来就是双向的</b>：上面做给下面看，下面做给旁边看，旁边做给下一辈看。<b>德不是被宣布的，是被看见的。</b></div></div>
+      <div class="row"><div class="k k2">不是<br>交易</div><div class="v">这句话最容易被读成功利句：「我慎终追远，民德就归厚」——<b>像在换好处。</b>原文没有这个「就」字。<b>它说的是长期结果，不是即时回报</b>；而且做这件事的人，本来也不该图这个。</div></div>
+    </div>
+
+    <div class="h2" id="sc-c">七　章旨：两个动作，一个结果</div>
+    <p class="leadline">十六个字，结构极简：<b>两个动作（慎终、追远）＋一个结果（民德归厚）。</b>难的是看清那条因果线。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">动作一</div><div class="v"><b>慎终：对人最后一程不轻忽。</b>——针对「易忽」，药方是「谨」，落点是<b>丧尽其礼</b>（兼尽其哀）。</div></div>
+      <div class="row"><div class="k k2">动作二</div><div class="v"><b>追远：对走远的人不遗忘。</b>——针对「易忘」，药方是「记」，落点是<b>祭尽其诚</b>。</div></div>
+      <div class="row"><div class="k k2">中间<br>那一环</div><div class="v">两件事有一个共同点：<b>收不到回音。</b>所以它们训练的不是「礼数」，是<b>「无所为而为」的习惯</b>。这一环看不见，却是全章转轴。</div></div>
+      <div class="row"><div class="k k2">结果</div><div class="v"><b>民德归厚：一群人变厚。</b>不是一人变好，是<b>标准被抬高</b>——大家都这么做，薄的人自己待不住。</div></div>
+      <div class="row"><div class="k k2">走错<br>方向</div><div class="v">把这两件事做成<b>排场</b>，则厚不成，反成薄：比谁花得多、比谁来得齐——<b>这就把「对死者的敬」换成了「对活人的炫耀」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-d">八　阴阳：阴尽处的一线阳</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">终为<br>阴之<br>尽</div><div class="v"><b>死是阴走到尽头</b>：一切收束，一切安静，再没有回应。这一头若停在这里，就是彻底的薄。</div></div>
+      <div class="row"><div class="k k2">追为<br>阳之<br>续</div><div class="v"><b>记得，是在阴尽处仍点着的一线阳。</b>人已经不在了，名字还在、故事还在、每年那一天还有人摆三只杯——<b>阳没有断。</b></div></div>
+      <div class="row"><div class="k k2">厚在<br>接缝<br>处</div><div class="v"><b>厚不是阴，也不是阳，是阴阳交接处的那层土。</b>阴尽而不绝、阳续而不喧——这种「接得住」的状态，就是厚。</div></div>
+      <div class="row"><div class="k k2">与<br>1.8<br>反向</div><div class="v">1.8 是「阳之开」：一学，壳上开缝，人往外走。1.9 是「阴之守」：一祭，缝口合拢，人往里收。<b>一开一守，一年一轮：学要往外，祭要往内。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-e">九　存疑：五处</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div>「终」训丧（孔安国「丧尽其哀」、朱子「丧尽其礼」、邢昺「慎其父母之终」），此为正解。<b>但须防串读：</b>《老子》六十四章「慎终如始，则无败事」的「终」是「事情的结尾」，「慎终如始」是「到结尾还像开头一样谨慎」——<b>字同而义不同，两处不可互训。</b></div></div>
+      <div class="q"><span>02</span><div>「民德归厚」两读：一为<b>教化读</b>（朱子：在上者为之，下民化之而德厚）；一为<b>风气读</b>（家家自为，其德自聚）。两读不冲突，因「化」本双向。<b>本书并存，不裁其一。</b></div></div>
+      <div class="q"><span>03</span><div>「追远」的对象：邢昺专指<b>先祖</b>；亦有泛读为「追念远者」（先贤、师友、故人）。<b>本章语境在丧祭，故以先祖为主，泛读并存。</b></div></div>
+      <div class="q"><span>04</span><div>本章是<b>曾子语</b>，《论语》里曾子语共数处（1.4 三省、1.9 此章、8.3–8.5 疾与三贵）。<b>曾子一派偏重丧祭与孝</b>，与孔子语气的分寸不同：孔子讲「敬」，曾子讲「化」——由己及人、由人及众。</div></div>
+      <div class="q"><span>05</span><div>「归」字两解：<b>归向</b>（趋向于厚）／<b>归之于</b>（使德归于厚）。前者主语是「民德」，后者隐含一个使之者。<b>取前者，因原文无「使」字。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-f">十　双卡对照</div>
+    <div class="cards">
+      <div class="cardshd"><span>常见读法</span><span>本章本义</span></div>
+      <div class="pair"><div class="a">慎终＝丧事办得排场大</div><div class="b"><b>慎终＝易忽处不轻忽</b>：没人检查的细节，一件一件做到</div></div>
+      <div class="pair"><div class="a">追远＝烧纸求保佑</div><div class="b"><b>追远＝记住不该忘的人</b>：录其名、讲其事、带后辈去看</div></div>
+      <div class="pair"><div class="a">民德归厚＝管出来的风气</div><div class="b"><b>民德归厚＝化出来的</b>：看见→跟着做→标准抬高</div></div>
+      <div class="pair"><div class="a">厚＝老实、软弱、好欺负</div><div class="b"><b>厚＝承载力</b>：土厚才长庄稼，人厚才承得住事</div></div>
+      <div class="pair"><div class="a">对死者尽礼＝做给活人看</div><div class="b"><b>正因为没有回音</b>，做了才是德；有回音的，那叫交换</div></div>
+      <div class="pair"><div class="a">「慎终如始」＝本章慎终</div><div class="b"><b>字同义异</b>：《老子》语指「事之结尾」，不可与此章互训</div></div>
+    </div>
+    <div class="cardhint">左栏是今天最流行的读法，右栏是回到注疏与时代语境后的读法。</div>
+
+    <div class="h2" id="sc-g">十一　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《八佾》<br>3.12</div><div class="v">「<b>祭如在，祭神如神在。</b>」——「如」字是全章的心法：明知无回音，仍照有回音那样做。</div></div>
+      <div class="row"><div class="k k2">《为政》<br>2.5</div><div class="v">「<b>生，事之以礼；死，葬之以礼，祭之以礼。</b>」——把「慎终追远」落到礼制上的三句话，孔子答孟懿子问孝。</div></div>
+      <div class="row"><div class="k k2">《中庸》</div><div class="v">「<b>事死如事生，事亡如事存</b>，孝之至也。」——「如」再进一层：不是做到像，是<b>当成他还受用</b>。</div></div>
+      <div class="row"><div class="k k2">《阳货》<br>17.21</div><div class="v">宰我问三年之丧，孔子曰「<b>于女安乎</b>」——礼的底线在「安」：省掉的不是时间，是心。</div></div>
+      <div class="row"><div class="k k2">《荀子》<br>礼论</div><div class="v">「丧礼者，以生者饰死者也，大象其生以送其死也。」——丧礼是<b>活着的人用自己懂得的方式，送他去</b>；所以它同时也在教活着的人。</div></div>
+      <div class="row"><div class="k k2">《易·坤》</div><div class="v">「地势坤，君子以<b>厚德载物</b>。」——「厚」的用处是「载」：不载物的厚，只是堆着。</div></div>
+      <div class="row"><div class="k k2">《老子》<br>六四</div><div class="v">「<b>慎终如始，则无败事。</b>」——同为「慎终」，彼指事之结尾，此指人之终。并置而不互训，正是读古书的分寸。</div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　典故图位</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1328×1776 竖幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary>
+          <p>古淡水墨立轴，纸本米色，#FBF7EC 底，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面取「慎终追远」之义：清明清晨的山坡，一座旧碑前，一位中年人蹲身用旧布擦碑上的字，动作极轻；一个少年捧着一只木桶（或一束新草）立在一旁，眼睛看着那人擦过的地方；稍远处一位老妇摆三只小杯、倒一点酒，神情平常。碑旁有青苔与残叶，远处淡墨村舍与一缕炊烟。留白多，人物不作神像、不作悲恸状，衣纹简笔。竖幅 3:4，人物居下三分之二，上方留白。不画鬼魂、不画香火缭绕、不写「孝」字、不生成任何水印与文字。</p>
+        </details>
+        <div class="note">图注：图到后另补「读图」五条（看手、看桶、看杯、看青苔、看炊烟）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　两个没有回音的动作</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="慎终与追远两个无回音的动作，通向民德归厚">
+        <text x="240" y="16" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 两个动作，一个结果</text>
+
+        <rect x="24" y="32" width="206" height="86" fill="#FFFDF6" stroke="#A2503B"/>
+        <text x="127" y="54" text-anchor="middle" font-family="serif" font-size="13" fill="#A2503B">慎终</text>
+        <text x="127" y="74" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">终者 · 人之所易忽</text>
+        <text x="127" y="94" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">丧尽其礼（兼尽其哀）</text>
+        <text x="127" y="112" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">药方：谨</text>
+
+        <rect x="250" y="32" width="206" height="86" fill="#FFFDF6" stroke="#A2503B"/>
+        <text x="353" y="54" text-anchor="middle" font-family="serif" font-size="13" fill="#A2503B">追远</text>
+        <text x="353" y="74" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">远者 · 人之所易忘</text>
+        <text x="353" y="94" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">祭尽其诚</text>
+        <text x="353" y="112" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">药方：录</text>
+
+        <line x1="127" y1="118" x2="228" y2="150" stroke="#8A8074" stroke-width="1"/>
+        <line x1="353" y1="118" x2="252" y2="150" stroke="#8A8074" stroke-width="1"/>
+
+        <circle cx="240" cy="152" r="30" fill="#F6F1E3" stroke="#A2503B" stroke-width="1"/>
+        <text x="240" y="150" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">收不到</text>
+        <text x="240" y="165" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">回音</text>
+
+        <line x1="240" y1="182" x2="240" y2="204" stroke="#A2503B" stroke-width="1.2"/>
+
+        <rect x="80" y="206" width="320" height="46" fill="#FFFDF6" stroke="#A2503B" stroke-width="1.2"/>
+        <text x="240" y="228" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">民德归厚</text>
+        <text x="240" y="244" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">不是一人变好，是一群人的标准被抬高</text>
+
+        <text x="240" y="286" text-anchor="middle" font-family="serif" font-size="10.5" fill="#8A8074">对能回报的人好＝交换　·　对不能回报的人好＝德</text>
+      </svg>
+      <div class="figcap">中间那一环看不见，却是全章转轴：正因为没有回音，做了才是德。</div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　一条线：从「在」拉到「终」</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 250" role="img" aria-label="从父母在到父母终、先祖远、后人归厚的时间线">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 同一个「敬」，换成不同的动作</text>
+
+        <line x1="40" y1="122" x2="440" y2="122" stroke="#DCD5C8" stroke-width="1.4"/>
+        <circle cx="60" cy="122" r="5" fill="#A2503B"/>
+        <circle cx="180" cy="122" r="5" fill="#A2503B"/>
+        <circle cx="300" cy="122" r="5" fill="#A2503B"/>
+        <circle cx="420" cy="122" r="5" fill="#8A8074"/>
+
+        <text x="60" y="84" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">父母在</text>
+        <text x="60" y="102" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">1.7 观其志</text>
+        <text x="60" y="146" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">看你怎么守</text>
+
+        <text x="180" y="84" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">父母终</text>
+        <text x="180" y="102" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">1.9 慎终</text>
+        <text x="180" y="146" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">丧尽其礼</text>
+
+        <text x="300" y="84" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">先祖远</text>
+        <text x="300" y="102" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">1.9 追远</text>
+        <text x="300" y="146" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">祭尽其诚</text>
+
+        <text x="420" y="84" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">后人</text>
+        <text x="420" y="102" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">民德归厚</text>
+        <text x="420" y="146" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">照着你做</text>
+
+        <path d="M60,170 L60,190 M180,170 L180,190 M300,170 L300,190 M420,170 L420,190" stroke="#DCD5C8" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="240" y="212" text-anchor="middle" font-family="serif" font-size="11" fill="#8A8074">敬不是一个词，是一个动作在不同时间位置上的换装</text>
+        <text x="240" y="234" text-anchor="middle" font-family="serif" font-size="10.5" fill="#A2503B">1.7 的「三年无改」，就是 1.9「慎终」的礼制形式</text>
+      </svg>
+      <div class="figcap">三章连读才看出：这条线是从「在」一直拉到「终」的。</div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　「归厚」两读，其实是一件事</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 232" role="img" aria-label="民德归厚：自上而化与自下而聚，实为一事">
+        <text x="240" y="16" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 「化」本来就双向</text>
+
+        <rect x="160" y="28" width="160" height="38" fill="#FFFDF6" stroke="#A2503B"/>
+        <text x="240" y="53" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">民德归厚</text>
+
+        <line x1="200" y1="66" x2="128" y2="92" stroke="#8A8074" stroke-width="1"/>
+        <line x1="280" y1="66" x2="352" y2="92" stroke="#8A8074" stroke-width="1"/>
+
+        <rect x="24" y="94" width="206" height="72" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="127" y="116" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">读一　自上而化</text>
+        <text x="127" y="136" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">在上者为之，下民化之</text>
+        <text x="127" y="154" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">朱子《集注》</text>
+
+        <rect x="250" y="94" width="206" height="72" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="353" y="116" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">读二　自下而聚</text>
+        <text x="353" y="136" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">家家自为，其德自聚</text>
+        <text x="353" y="154" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">无谁在推，标准自抬</text>
+
+        <line x1="127" y1="166" x2="220" y2="184" stroke="#DCD5C8" stroke-width="1"/>
+        <line x1="353" y1="166" x2="260" y2="184" stroke="#DCD5C8" stroke-width="1"/>
+
+        <rect x="90" y="186" width="300" height="34" fill="#F6F1E3" stroke="#DCD5C8"/>
+        <text x="240" y="208" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">看见 → 跟着做 → 标准抬高：德不是被宣布的，是被看见的</text>
+      </svg>
+      <div class="figcap">两读不必裁一：上面做给下面看，下面做给旁边看，旁边做给下一辈看。</div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　曾子：说这句话的人</div>
+    <p>全篇《学而》里，孔子的话占绝大多数，<b>1.4 与 1.9 是曾子的</b>。曾参，字子舆，鲁国南武城人，小孔子四十六岁，是孔子晚年弟子中最年少的一批。《史记·仲尼弟子列传》记他「<b>孔子以为能通孝道，故授之业</b>」。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">以孝<br>著称</div><div class="v">《大戴礼记》存《曾子》十篇，多论孝与丧祭；旧题曾子门人所记的《孝经》，也托在他的名下。<b>「慎终追远」出自他口，不是偶然——这是他一生用力处。</b></div></div>
+      <div class="row"><div class="k k2">与<br>孔子<br>分界</div><div class="v">孔子讲「敬」「如在」，落点在<b>一个人的心</b>；曾子讲「民德归厚」，落点在<b>一群人的风气</b>。<b>由己及人、由人及众</b>，这条线在曾子手里被拉长了。</div></div>
+      <div class="row"><div class="k k2">语气<br>之变</div><div class="v">1.4「吾日三省吾身」是自省式，1.9「民德归厚矣」是观察式。<b>「矣」字收尾，是一种可以验证的断定</b>：这样做，你看吧，会长成那样。</div></div>
+      <div class="row"><div class="k k2">须防<br>一说</div><div class="v">不可因此把本章读成「<b>孝道宣传语</b>」。曾子在这里说的是<b>丧祭的社会效果</b>，不是劝人孝顺父母；对象是「民德」，不是「子德」。</div></div>
+    </div>
+
+    <div class="h2" id="sc-24">附论二　三年之丧：礼的底线是「安」</div>
+    <p>「慎终」在礼制上最实的一块，是三年之丧。《阳货》17.21：宰我问「三年之丧，期已久矣」，主张改为一年。孔子没有斥他，只问：</p>
+    <div class="quote"><span class="t">《阳货》17.21</span>食夫稻，衣夫锦，于女安乎？……女安，则为之。</div>
+    <div class="scene">这一问是全章的底。<b>孔子把礼的判据，从「合不合规矩」退回到「你心里安不安」。</b>宰子答「安」，孔子便说「女安，则为之」——<b>不是准许，是放手：你既然安，那就去做，我不再辩。</b>接着才有一句极重的话：「予之不仁也！」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">「安」<br>为何<br>是底线</div><div class="v">因为礼只能规定动作，不能规定感受。<b>省掉该做的事，省下来的是时间，留下的是不安。</b>不安不会当场发作，它会在很多年后某个夜里发作。</div></div>
+      <div class="row"><div class="k k2">三年<br>何义</div><div class="v">孔子答宰我：<b>「子生三年，然后免于父母之怀。」</b>——三年不是刑罚的年限，是<b>一个人被抱了三年才落地走路</b>。礼不过是把这件事还回去一点。</div></div>
+      <div class="row"><div class="k k2">今人<br>怎么<br>用</div><div class="v">不必照搬三年。<b>可用的部分是这个结构：把「该做的事」做完，把「该留的时间」留够。</b>哪怕只是七七、百日、一年一次——<b>有没有那段时间，差别很大。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-25">附论三　「厚」的谱系：一人的壁，一家的土，一国的风</div>
+    <p>「厚」在《论语》与先秦典籍里，是同一个字在三层上长：</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一人</div><div class="v"><b>1.8 的「重」＝一只器的壁厚。</b>壁先厚，器才盛得住。<b>这是「厚」最小的一层。</b></div></div>
+      <div class="row"><div class="k k2">一家</div><div class="v"><b>1.9 的「慎终追远」＝一家人的土层。</b>祖辈做过什么、怎么送人、记住谁——<b>孩子是在这层土里长起来的</b>，土薄则根浅。</div></div>
+      <div class="row"><div class="k k2">一国</div><div class="v"><b>「民德归厚」＝一个地方的风。</b>风不是喊出来的，是多少人家的土连成一片之后，地面上才有的一种气候。</div></div>
+      <div class="row"><div class="k k2">《易》</div><div class="v">「地势坤，君子以<b>厚德载物</b>。」——厚是为了载；不载物的厚，只是堆着。</div></div>
+      <div class="row"><div class="k k2">《老子》<br>三八</div><div class="v">「大丈夫<b>处其厚，不居其薄</b>；处其实，不居其华。」——与曾子同一取径：<b>往厚处站，不往薄处站</b>。两家论「道」不同，此处却同调。</div></div>
+    </div>
+    <div class="scene">把三层连起来，这一章就不是「丧祭之礼」的技术帖，而是<b>一个关于厚度的完整论述</b>：<b>一个人怎么变厚（重）→ 一家怎么变厚（慎终追远）→ 一地怎么变厚（民德归厚）。</b>三层同构，都是时间加动作，都没有捷径。</div>
+
+
+  </section>
+
+
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 9 课　v1.0　（2026-11-19）</div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -12,10 +12,11 @@
 - 第五课｜道千乘之国，敬事而信，节用而爱人，使民以时｜五事归两路：不欺与不竭。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/05.html
 - 第六课｜弟子入则孝，出则弟，谨而信，泛爱众，而亲仁｜先事后文，是次序，不是轻重。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/06.html
 - 第七课｜父在，观其志；父没，观其行；三年无改于父之道｜三个时间点看同一个人；无改不是守旧，是不忍遽改。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/07.html
-- 第八课｜君子不重则不威，学则不固｜重是壁，忠信是底：重→威→固是一条链，不是三句格言。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/08.html
+- 第八课｜君子不重则不威，学则不固｜不重是病，学是药；无友不如己，是承认人人有一处胜我。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/08.html
+- 第九课｜慎终追远，民德归厚矣｜两件收不到回音的事，把一个人、一家、一地的壁练厚。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/09.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.8.4，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.9.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
