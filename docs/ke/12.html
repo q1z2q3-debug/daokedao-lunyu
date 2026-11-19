@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>信近于义 · 论语第十二课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第十三章通释：有子曰「信近于义，言可复也；恭近于礼，远耻辱也；因不失其亲，亦可宗也」。三个「近」字是全章骨架：承诺要贴着合宜，恭敬要贴着分寸，托身要贴着可亲。信不合义则尾生之信，恭不合礼则足恭受辱，因非其人则所依皆虚。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E6%B8%A9%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+</style></head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 十三章　第 12 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-b1">三个「近」</a><a href="#sc-b2">信近义</a><a href="#sc-b3">恭近礼</a><a href="#sc-b4">因不失亲</a><a href="#sc-b5">亦可宗</a><a href="#sc-b6">三病理</a><a href="#sc-b7">信的失效</a><a href="#sc-b8">分寸学</a><a href="#sc-d">时代</a><a href="#sc-e">章旨</a><a href="#sc-f">存疑</a><a href="#sc-g">双卡</a><a href="#sc-h">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理图一 三道关</a><a href="#sc-21">义理图二 近不是是</a><a href="#sc-22">义理图三 三个坑</a><a href="#sc-23">附论一 盟诅时代</a><a href="#sc-24">附论二 恭与敬</a><a href="#sc-25">附论三 依附的伦理</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>信近于义</h1>
+    <div class="h1-sub">学而 1.13　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">有子曰：</span>「<ruby>信<rt>xìn</rt></ruby>近于<ruby>义<rt>yì</rt></ruby>，言可<ruby>复<rt>fù</rt></ruby>也。<ruby>恭<rt>gōng</rt></ruby>近于礼，远<ruby>耻<rt>chǐ</rt></ruby><ruby>辱<rt>rǔ</rt></ruby>也。因不失其<ruby>亲<rt>qīn</rt></ruby>，亦可<ruby>宗<rt>zōng</rt></ruby>也。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>信</span></div><div class="tzcap"><span>9 画</span><span>说话算数</span></div></div>
+      <div class="tzitem"><div class="cell"><span>近</span></div><div class="tzcap"><span>7 画</span><span>贴着标准</span></div></div>
+      <div class="tzitem"><div class="cell"><span>义</span></div><div class="tzcap"><span>3 画</span><span>该不该</span></div></div>
+      <div class="tzitem"><div class="cell"><span>恭</span></div><div class="tzcap"><span>10 画</span><span>有礼的样子</span></div></div>
+      <div class="tzitem"><div class="cell"><span>宗</span></div><div class="tzcap"><span>8 画</span><span>靠得住</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">信</div><div class="v"><b>答应别人的事，真的做到。</b>「信」字是「人」加「言」——<b>人说的话，要能站住</b>。<b>但这一章不是叫你「什么话都做到」</b>，是先看这句话该不该答应。</div></div>
+      <div class="row"><div class="k">近</div><div class="v"><b>靠过去、贴着。</b>像把尺子贴在线上量一量。<b>「近」用在这里，不是说「差不多就行」，是说「尽量挨着对的走」。</b></div></div>
+      <div class="row"><div class="k">义</div><div class="v"><b>该做的、合适的。</b>古人说「义者，宜也」——<b>「宜」就是刚刚好、正合适</b>。</div></div>
+      <div class="row"><div class="k">恭</div><div class="v"><b>恭敬的样子：鞠躬、问好、让人先走。</b><b>恭是外面的那层，敬是里面的那层。</b>外面这层要有尺寸，过了就滑稽。</div></div>
+      <div class="row"><div class="k">宗</div><div class="v"><b>可以依靠、可以跟着学的人。</b>「亦可宗也」，是说<b>这样的人，也可以把他当主心骨</b>。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>答应别人之前，先看看这件事该不该做</b>——该做的，才谈得上「说到做到」。<b>对人客气要有分寸</b>——太过了，不是有礼，是难堪。<b>跟谁在一起、靠谁，要看清这个人靠不靠得住</b>——跟错了人，前面两样都用错了地方。</p>
+    <div class="scene"><b>三个「近」字，是三把尺子。</b>信要贴着「该不该」，恭要贴着「分寸」，依靠要贴着「这个人可不可亲」。<b>——不是「做到满分」，是「别偏太远」。</b></div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">信近义</div><div class="v">答应的事，<b>先看看该不该做</b>；该做的，才说「我做到」。</div></div>
+      <div class="row"><div class="k k2">言可复</div><div class="v">说出去的话，<b>能兑现</b>。「复」是回来——<b>话说出去，还能原样回来，不倒。</b></div></div>
+      <div class="row"><div class="k k2">恭近礼</div><div class="v">恭敬要有<b>尺寸</b>：什么时候鞠、鞠多深、对谁。合尺寸，才叫礼。</div></div>
+      <div class="row"><div class="k k2">远耻辱</div><div class="v">分寸合适的人，<b>很少被人笑话、也不会自取其辱</b>。</div></div>
+      <div class="row"><div class="k k2">因不失亲</div><div class="v">「因」是<b>依靠、跟着</b>；靠的人，<b>得是真正可亲、可托付的人</b>。</div></div>
+      <div class="row"><div class="k k2">亦可宗</div><div class="v">这样的人，<b>就可以把他当主心骨</b>——出了事能找他，他也不会把人带歪。</div></div>
+    </div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      <b>第一件事：一本书。</b>小满答应了同学，明天带那套漫画来。可这套书是表哥的，表哥早说过「不借人」。<b>小满想了想，去找同学说：「这书是表哥的，我得先问过他；你要是不急，我后天给你带。」</b>——<b>先看这件事该不该答应，再答应。这就是「信近于义」。</b>如果她硬答应、明天又拿不出来，嘴上守信，反而失信。
+    </div>
+    <div class="scene">
+      <b>第二件事：一个鞠躬。</b>小满在校门口见老师，急着行礼，<b>腰弯得太猛，帽子掉了</b>，全班都笑。老师也笑，说没事。<b>可她自己也脸红——恭敬是真的，只是没有分寸。</b>第二天她把帽子摘了再行礼，稳稳的，没人笑。<b>这就是「恭近于礼，远耻辱也」。</b>
+    </div>
+    <div class="scene">
+      <b>第三件事：一次组队。</b>手工课三人一组。有人拉小满和「最爱偷懒、拿了别人材料不还」的孩子一组。<b>小满没当面说坏话，只说：「我跟他一组做过，材料老丢，我想跟能一起做完的人一组。」</b>——<b>这就是「因不失其亲」：跟谁在一起，要看那个人靠不靠得住。</b>这不是势利，是<strong>为自己的时间找个可靠的伴</strong>。
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="list">
+      <li>如果有人请你「替他保密一件坏事」，你答应了，还该不该做到？<b>（想想：信要贴着「该不该」。）</b></li>
+      <li>你对人特别客气，对方反而不好意思，是不是你的「恭」过头了？<b>（想想：恭要贴着「分寸」。）</b></li>
+      <li>你身边有没有一个人，答应的事一定做、也不占人便宜？<b>（那就是「可宗」的人。）</b></li>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>「说到做到」是一句好话，但它有个前提：答应的那件事，本身是能做的、该做的。</b>——<b>答应得太快，往往不是因为守信，是因为怕当场让人不高兴。</b>真正守信的人，<b>答应之前会先停一下</b>：这件事我做得到吗？该做吗？<b>停的这一下，就是「近于义」。</b></div>
+    <div class="scene"><b>还有一件事：跟谁在一起，是会被带成什么样子的。</b>——<b>不是要你挑「厉害的」，是要你挑「说话算话、不占人便宜」的。</b>这样的人，「亦可宗也」。</div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>别把「守信」教成「有求必应」。</b>孩子答应得太快，往往是不敢拒绝。<b>教他一句缓冲：「我先想想能不能做到，晚上答复你。」</b>——这一句，比十次「你要守信」有用。</div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>让他知道「承诺」有边界。</b>答应了的事若本身有害（替人圆谎、替人隐瞒欺负人的事），<b>不做才是守信</b>——因为守的是「义」，不是「话」。</div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>恭敬要有分寸，不是越卑越好。</b>孩子见长辈低头不敢看人，不是礼，是怯。<b>礼是「看着对方、把话说清」，不是「把自己缩小」。</b></div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>「远耻辱」不是怕丢脸。</b>它的意思是：<b>分寸拿得住的人，不会把自己放到被人轻慢的位置上。</b>——<b>这是自护，不是怕人。</b></div></div>
+      <div class="pair"><div class="k2">五</div><div class="v"><b>「因不失其亲」是择友，不是攀附。</b>教孩子看三样：<b>答应的事做不做、别人的东西拿不拿、背后说不说人。</b>三样都过的，才值得常在一起。</div></div>
+      <div class="pair"><div class="k2">六</div><div class="v"><b>融西：</b>西方讲「promise-keeping」，也讲「undue promise」（不该许的诺）——<b>许了不该许的诺，比不许更伤人。</b>又讲 civility：<b>礼貌有分寸，过分殷勤反让人不安（too familiar）。</b>两边说的是同一件事：<b>承诺与客气，都要落在「合宜」上。</b></div></div>
+      <div class="pair"><div class="k2">七</div><div class="v"><b>一个家最该有的，是「说得出不同意的氛围」。</b>孩子敢说「这个我不想答应」，家才有「和」可言；<b>只敢答应、不敢拒绝的孩子，长大最容易被人拿住。</b></div></div>
+    </div>
+  </section>
+
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页</div>
+
+    <h1>信近于义</h1>
+    <div class="h1-sub">连读 · 字义句读 · 三个「近」 · 信近义 · 恭近礼 · 因不失亲 · 亦可宗 · 三病理 · 信的失效 · 分寸学 · 时代 · 章旨 · 存疑 · 双卡 · 跨典</div>
+
+    <div class="h2" id="sc-lian">零　连读：上一章讲「不过」，这一章讲「贴边」</div>
+    <p class="leadline">1.11 是「<b>不改</b>」（时间里的孝），1.12 是「<b>不过</b>」（关系里的度），1.13 是「<b>近</b>」（承诺与恭敬的校准），1.14 是「<b>不求</b>」（把心思放在哪儿）。<b>四章连读，是一条线：先立界，再守界，再校准，再定序。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">1.11</div><div class="v">守<b>时间</b>：三年无改于父之道。</div></div>
+      <div class="row"><div class="k k2">1.12</div><div class="v">守<b>边界</b>：和要到相安为止，过了成苟合。</div></div>
+      <div class="row"><div class="k k2">1.13</div><div class="v">守<b>校准</b>：诺要贴着义，恭要贴着礼，依靠要贴着可亲。<b>——界立好了，还得会说「贴上去」。</b></div></div>
+      <div class="row"><div class="k k2">1.14</div><div class="v">定<b>次序</b>：「食无求饱，居无求安」——<b>不是不求，是把「求」放到正事上</b>。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">有子</div><div class="v"><b>《学而》十六章，有子的话占三章（1.2、1.12、1.13）</b>，比曾子多。<b>三章各管一头：1.2 讲「本」（孝弟为仁之本），1.12 讲「度」（礼之用和为贵），1.13 讲「准」（三个近）。</b>——<b>本、度、准，一套完整的做人之学。</b></div></div>
+      <div class="row"><div class="k k2">信</div><div class="v">《说文》：「<b>信，诚也。从人言。</b>」——<b>人言为信</b>：说出口的话，要能立在人前。<b>不是「我说的都对」，是「我说的能兑现」。</b></div></div>
+      <div class="row"><div class="k k2">近</div><div class="v">贴、靠、比邻。<b>此处是「校准」义，不是「差不多」义。</b>——<b>「近」承认做不到十足，但要求「往那儿靠」。</b>一个字，既让了步，也立了标准。</div></div>
+      <div class="row"><div class="k k2">义</div><div class="v">《中庸》：「<b>义者，宜也。</b>」——<b>合宜、正当、该当</b>。不是「对我有利」，是「放在这件事上，恰如其分」。</div></div>
+      <div class="row"><div class="k k2">复</div><div class="v"><b>朱子：「复，践言也。」</b>——说了能践。另一读：「<b>复，反复也</b>」，即这话经得起再想一遍、再核一遍。<b>两读都通：一读重「做到」，一读重「经得起」。</b>（见存疑 01）</div></div>
+      <div class="row"><div class="k k2">恭</div><div class="v"><b>敬之形于外者</b>：拱手、低眉、退步。《说文》「恭，肃也」——<b>肃是「收」</b>：把身体收住、把姿态放低。<b>恭在貌，敬在心。</b></div></div>
+      <div class="row"><div class="k k2">远</div><div class="v"><b>「远」是使动：使之远离。</b>——<b>不是「不怕丢脸」，是「不把自己放到会被人轻慢的位置上」。</b>分寸拿得住的人，自取其辱的机会少。</div></div>
+      <div class="row"><div class="k k2">因</div><div class="v"><b>朱子：「因，仍也。」</b>——<b>依靠、沿袭、跟着</b>。孔安国则训「亲也」（因仍亲爱）。<b>两说合起来最顺：所依仍（因）是所亲（亲）。</b>（见存疑 02）</div></div>
+      <div class="row"><div class="k k2">亲</div><div class="v">两解：<b>甲</b>——所依靠的人，须是<b>可亲可托</b>的（择人）；<b>乙</b>——所依靠的<b>不离自己的亲族</b>（宗法之义）。<b>甲说通于义理，乙说合于春秋宗法之实。</b>本章取甲为主，乙为辅。</div></div>
+      <div class="row"><div class="k k2">宗</div><div class="v"><b>主也、尊也、可依归也。</b>——<b>不是「祖宗」，是「可以拿他当主心骨」。</b>「亦可宗也」，是给「因不失其亲」发的一张证明：<b>这样的人，值得托付。</b></div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「<b>信近于义</b>，言可复也。／<b>恭近于礼</b>，远耻辱也。／<b>因不失其亲</b>，亦可宗也。」——<b>三句并列，各是「条件—结果」：前件是校准，后件是效验。</b>三句的句式完全一样，说明有子是<b>有意排成一组</b>的。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b1">二　三个「近」：全章的骨架</div>
+    <p class="leadline">这一章最要紧的不是「信」「恭」「因」，是那三个「<b>近</b>」字。<b>——不是「信即是义」，而是「信要近于义」。</b>这个分寸，是全章的眼。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">为何<br>不说<br>「即」</div><div class="v"><b>因为做不到。</b>人许诺时未必全看得清后果，行恭时未必次次拿准分寸，托身时未必一眼认出可托之人。<b>说「即」，就假；说「近」，才真。</b>——<b>有子给的是「可执行的道德」，不是「完美的道德」。</b></div></div>
+      <div class="row"><div class="k k2">「近」<br>也立了<br>下限</div><div class="v"><b>「近」不是无限制的宽容。</b>近，是贴近；<b>贴不上，就是「远」——那就不是这一章所说的事了。</b>信远于义，则不叫信，叫执；恭远于礼，则不叫恭，叫谄。<b>一个字两头都管：既容人做不到，也逼人别跑偏。</b></div></div>
+      <div class="row"><div class="k k2">校准<br>而非<br>打折</div><div class="v"><b>「校准」有标准、有方向、有反复</b>：「差不多」没有标准、没有方向、一次就完。<b>——前者是手艺，后者是敷衍。</b>（详见第九节）</div></div>
+    </div>
+    <div class="scene"><b>所以这一章可以读成一句现代话：</b>你的承诺、你的礼貌、你的关系，<b>都需要一个「校验器」</b>。校验器不是让你少做，是让你做得准。</div>
+
+    <div class="h2" id="sc-b2">三　信近于义：许诺的第一道关</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">孟子<br>最直</div><div class="v">《孟子·离娄下》：「<b>言不必信，行不必果，惟义所在。</b>」——<b>这是「信近于义」最不留情面的注脚：话可以不兑现，只看该不该。</b>孟子不是教人失信，是教人<b>别把「守信」当成免于思考的挡箭牌</b>。</div></div>
+      <div class="row"><div class="k k2">孔子<br>更早</div><div class="v">13.20：「<b>言必信，行必果，硁硁然小人哉</b>」——<b>「言必信」在这里不是夸奖，是「小人的固执」。</b>又 15.18：「君子义以为质，礼以行之，孙以出之，<b>信以成之</b>」——<b>义是质地，信只是把它做成的手段。</b>手段不能反客为主。</div></div>
+      <div class="row"><div class="k k2">尾生<br>之戒</div><div class="v">《庄子·盗跖》：「<b>尾生与女子期于梁下，女子不来，水至不去，抱梁柱而死。</b>」——<b>守信守到死，守的却不是义。</b>后世以尾生为「信」的典型，其实他是<b>「信而不知义」的典型</b>。<b>信离开义，就成了自毁。</b></div></div>
+      <div class="row"><div class="k k2">今天<br>的形态</div><div class="v"><b>「我答应过，不能反悔」——</b>于是替人圆谎、替人背锅、替人担保到还不起。<b>真正的关口在前面：当初不该答应。</b>——<b>迟到的守诺，往往是为当初的轻诺付账。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b3">四　恭近于礼：恭敬的第二道关</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">8.2<br>的<br>警告</div><div class="v">「<b>恭而无礼则劳</b>」——朱子注：「劳，谓劳而无功。」<b>恭敬而不合分寸，白费力气，还让人不舒服。</b>——<b>「礼」在这里是分寸的刻度尺，不是繁文缛节。</b></div></div>
+      <div class="row"><div class="k k2">5.25<br>足恭</div><div class="v">「巧言、令色、<b>足恭</b>，左丘明耻之，丘亦耻之。」——<b>「足恭」是「过分恭敬」</b>：把腰弯到不像话，让人无处安放。<b>孔子不说它「不好」，说它「可耻」。</b>——<b>过度的恭，是把对方架起来。</b></div></div>
+      <div class="row"><div class="k k2">貌与心</div><div class="v">16.10「<b>貌思恭</b>」——恭是「貌」上的事；心上的事叫「敬」。<b>貌恭而心不敬，是演技；心敬而貌失度，是笨拙。</b>——<b>有子要的是「貌合度」，孔子要的是「心貌俱到」。</b></div></div>
+      <div class="row"><div class="k k2">过恭<br>成谄</div><div class="v">3.13「<b>非其鬼而祭之，谄也</b>」——<b>祭错了对象，恭敬就成了讨好。</b>——<b>「远耻辱」的「辱」，往往不是别人给的，是自己凑上去的。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b4">五　因不失其亲：托身的第三道关</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">「因」<br>是什么</div><div class="v"><b>不是「因为」，是「依靠」。</b>——<b>人总要「因」：依靠父母、师长、朋友、主上、同伴。</b>这一句不讨论「要不要靠」，只讨论「<b>靠谁</b>」。</div></div>
+      <div class="row"><div class="k k2">春秋<br>之实</div><div class="v">春秋之士，出处是第一等大事：<b>投卿大夫为家臣，谓之「陪臣」</b>。<b>投对了人，一生有托；投错了人，跟着一起败。</b>——<b>「因不失其亲」，是那个时代最实在的生存命题。</b></div></div>
+      <div class="row"><div class="k k2">孔子<br>的<br>三次<br>考题</div><div class="v"><b>阳货召（17.1）——不去</b>，且以「吾将仕矣」虚应之；<b>公山弗扰召（17.5）——子欲往</b>，子路不悦，孔子说「<b>如有用我者，吾其为东周乎</b>」，<b>终未成行</b>；<b>佛肸召（17.7）——子欲往</b>，子路再拦，孔子以「<b>吾岂匏瓜也哉？焉能系而不食</b>」自解，<b>亦未往</b>。——<b>「欲往」是真的想做事，「未往」是真的看人。</b></div></div>
+      <div class="row"><div class="k k2">今日<br>之<br>「因」</div><div class="v"><b>选公司、选合伙人、选导师、选队友——都是「因」。</b>——<b>看三样：说话算不算、分利公不公、出事担不担。</b>三样都过的，才「不失其亲」。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b5">六　亦可宗：一张可依归的证明</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">宗<br>的本义</div><div class="v"><b>宗，尊也，主也</b>——庙中祭始祖之所叫「宗」，引申为「<b>所尊、所依</b>」。「亦可宗也」＝<b>可以把他当作主心骨</b>。</div></div>
+      <div class="row"><div class="k k2">为什么<br>是「亦」</div><div class="v"><b>「亦」字轻，分量重。</b>——<b>不是「一定宗」，是「也就可以宗了」。</b>有子没有说「此人必为天下之主」，只说<b>「这样的人，够得上被依靠」</b>。<b>一个「亦」字，把话说得既不夸张，也不含糊。</b></div></div>
+      <div class="row"><div class="k k2">「宗」<br>与<br>「党」</div><div class="v"><b>宗是可依，党是相护。</b>——<b>宗讲「他能担」，党讲「他护我」。</b>两者形似而实反：<b>宗者以义相与，党者以利相结。</b>（参 15.22「君子矜而不争，群而不党」）</div></div>
+      <div class="row"><div class="k k2">今<br>用</div><div class="v"><b>一个团队里，谁「可宗」？</b>——<b>不是最能说的，是出了事第一个到场、分钱时最后一个拿的人。</b>这种人不多，遇到要认。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b6">七　三病理与三判据</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">病理<br>一</div><div class="v"><b>信不近义 → 盲诺。</b>答应得太快，兑现得太死。<b>表现：</b>「我答应过，不能改」成了万能借口；<b>代价：</b>替人作伪、替人担保、把自己搭进去。<b>（尾生之信）</b></div></div>
+      <div class="row"><div class="k k2">病理<br>二</div><div class="v"><b>恭不近礼 → 谄。</b>把姿态压到极低，让别人舒服，让自己失位。<b>表现：</b>抢着敬酒、抢着埋单、抢着认错；<b>代价：</b>被人轻慢，还落个「假」。<b>（足恭）</b></div></div>
+      <div class="row"><div class="k k2">病理<br>三</div><div class="v"><b>因失其亲 → 附势。</b>靠上去时只看「他有势」，不看「他是否可亲」。<b>表现：</b>跟对人时得意，跟错人时同沉；<b>代价：</b>所依一倒，自己连站的地方都没有。<b>（依附非人）</b></div></div>
+      <div class="row"><div class="k k2">判据<br>一</div><div class="v"><b>合宜否：</b>把这件事放到「与我有关系的人」身上想一想，还站得住吗？<b>站不住，就是远于义。</b></div></div>
+      <div class="row"><div class="k k2">判据<br>二</div><div class="v"><b>分寸否：</b>我这个姿态，对方接得住吗？<b>接不住，就是远于礼</b>——不是他不识好歹，是我过了。</div></div>
+      <div class="row"><div class="k k2">判据<br>三</div><div class="v"><b>可亲否：</b>我若落难，此人会来吗？<b>不会来的，只能共利，不可共难</b>——那就别把身家押上去。<b>（这三条，比任何「识人术」都硬。）</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b7">八　三种「信」的失效：质、盟、法</div>
+    <p class="leadline">「信近于义」这句话之所以要紧，是因为<b>信一旦离开义，就必然要找外物来担保</b>——<b>人质、盟誓、刑罚，一样一样加上去。</b>这一节看的是<b>「信」的三种替代品</b>。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">以质<br>为信</div><div class="v"><b>周郑交质</b>（前 720）：周王室与郑国互派人质。<b>《左传》借君子之口说：「信不由中，质无益也。」</b>——<b>信不是从心里出的，押个人质也没用。</b></div></div>
+      <div class="row"><div class="k k2">以盟<br>为信</div><div class="v">春秋盟誓成风（<b>《春秋》书盟一百余次</b>），歃血、载书、埋牲，仪式愈重，说明<b>信愈薄</b>。<b>——盟是「信已不存」之后才拿出来的东西。</b></div></div>
+      <div class="row"><div class="k k2">以法<br>为信</div><div class="v">商鞅<b>徙木立信</b>：立三丈之木于南门，能徙者予十金。——<b>这是「信」被技术化：信不再是人的品质，是国家可操作的信用。</b><b>有效，但把「义」抽掉了</b>：法行则信，法废则无。</div></div>
+      <div class="row"><div class="k k2">共同<br>机理</div><div class="v"><b>三者都是「外挂」：</b>把「人为什么守信」的答案，从「<b>该不该</b>」换成了「<b>敢不敢不守</b>」。<b>——有子这一句，是把信从外挂拆回来：信之所以成立，因为所许之事合宜。</b></div></div>
+    </div>
+    <div class="scene"><b>补一条：12.7 子贡问政</b>——「足食，足兵，民信之矣」，孔子说可以「去兵、去食」，唯独「<b>民无信不立</b>」不可去。<b>——信是最后一样不能撤的东西；正因为不能撤，才更要在许的时候看准。</b></div>
+
+    <div class="h2" id="sc-b8">九　「近」的分寸学：校准不是打折</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">有<br>标准</div><div class="v"><b>校准的前提是有刻度。</b>说「差不多」，是连刻度都不看；说「差一点」，是<b>知道标准在哪儿，量过了，还差这么多</b>。——<b>前者放弃，后者计量。</b></div></div>
+      <div class="row"><div class="k k2">有<br>方向</div><div class="v"><b>「近」是有方向的：往义上靠，往礼上靠，往可亲上靠。</b>——<b>没有方向的「近」，只是「像」。</b>世上最像礼的东西是谄，最像信的东西是执。</div></div>
+      <div class="row"><div class="k k2">有<br>反复</div><div class="v"><b>校准要靠次数：这次偏了三寸，下次收回来。</b>——<b>所以「近」是一辈子的活，不是一次性的判断。</b>有子用一个「近」字，把道德从「考试」变成了「手艺」。</div></div>
+      <div class="row"><div class="k k2">工程<br>上的<br>同构</div><div class="v"><b>公差（tolerance）：</b>没有一个零件是绝对精确的，但每个零件都有公差带，<b>在带内即合格</b>。<b>「近」就是道德的公差带</b>：不要求零误差，但要求不出带。<b>——出了带，机器就装不上；出了「近」，人也合不到一处。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-d">十　时代：盟诅成风，信要抵押</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一<br>件<br>大<br>事</div><div class="v"><b>前 720 年，周郑交质。</b>周平王与郑庄公互派王子为质——<b>天子与诸侯之间，已经要靠人质来担保了。</b>《左传》隐三年记君子评语：「<b>信不由中，质无益也。明恕而行，要之以礼，虽无有质，谁能间之？</b>」——<b>「要之以礼」四个字，正是「恭近于礼」的同一思路：靠礼来约束，不靠质。</b></div></div>
+      <div class="row"><div class="k k2">盟<br>的<br>技<br>术</div><div class="v"><b>盟礼：</b>凿地为坎、杀牲、取血、歃血、载书、埋书。<b>一套下来，郑重得很。</b>——<b>可《春秋》里背盟的事，比盟还多。</b><b>仪式愈繁，信的成色愈可疑。</b></div></div>
+      <div class="row"><div class="k k2">孔<br>子<br>的<br>态<br>度</div><div class="v"><b>《论语》全书无一语及盟。他讲「<b>主忠信</b>」（1.8）、「<b>民无信不立</b>」（12.7），<b>都是从人心讲信，从不从盟诅讲信。</b>——<b>这是立场的不同：有子与孔子，把信放在「义」上，不放在「约」上。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>对<br>照</div><div class="v"><b>合同、公证、担保、征信分</b>——都是「质」与「盟」的现代形态。<b>它们有用，但它们只是「信不存时的备件」。</b>——<b>一个社会把这些做得再精密，也不能替代「所许之事合宜」这一条。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-e">十一　章旨</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一<br>句</div><div class="v"><b>许诺、恭敬、依托，三件事都要有个「校验器」；校验器分别是义、礼、可亲。</b></div></div>
+      <div class="row"><div class="k k2">一<br>反</div><div class="v"><b>若反过来说：</b>信而不义是执，恭而不礼是谄，因而失亲是附。<b>——三种毛病，一种病根：把「形式」当成了「标准」。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.12<br>合<br>看</div><div class="v">1.12 给的是<b>「度」</b>（和要到哪儿为止），1.13 给的是<b>「准」</b>（怎么知道到了没有）。<b>——有度无准，度是空的；有准无度，准是死的。</b></div></div>
+      <div class="row"><div class="k k2">落<br>点</div><div class="v"><b>「近」不是怯，是最诚实的道德姿态。</b>——<b>它承认人会偏，又要求人一次次往回靠。</b><b>一辈子「近」下去，就是「及」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-f">十二　存疑</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「复」的读法</b>　朱子训「践言」（说了做到）；另一说「复，反复也」，谓此言可再核、可再思。<b>两读不必相废：践言是果，可再核是因。本课以践言为主，兼取「经得起再想一遍」。</b></div></div>
+      <div class="q"><span>02</span><div><b>「因」字</b>　朱子「因，仍也」（所依仍）；孔安国「因，亲也」；又有一说读为「姻」，谓婚姻之亲。<b>三说并存。本课取「所依仍是所亲」，实兼朱、孔二义。</b></div></div>
+      <div class="q"><span>03</span><div><b>「宗」字</b>　一训「宗主」（可尊为主），一训「宗敬」（可敬），一联系宗法之「宗」。<b>本课取「可依归」——即可以被托付。三训在此句效果相近。</b></div></div>
+      <div class="q"><span>04</span><div><b>「亲」指谁</b>　甲说指「可亲之人」（有德可托）；乙说指「亲族」。<b>春秋宗族未全散，乙说有其现实；但本章语气在论「择人」，甲说更长。两说并列，不强行归一。</b></div></div>
+      <div class="q"><span>05</span><div><b>三句是并列还是递进</b>　并列（信、恭、因三事）／递进（由言到行到所依，一层深一层）。<b>本课取并列，但承认末句最重：前两句讲「怎么说、怎么做」，末句讲「跟谁」——那是根。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-g">十三　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd">俗见 / 正解</div>
+      <div class="pair"><div class="k2">俗见</div><div class="v">信就是「说到做到」，答应了就得办。</div></div>
+      <div class="pair"><div class="k2">正解</div><div class="v"><b>答应了「该做的」才要办</b>；不该做的承诺，兑现了反而是害人。<b>（《孟子》「言不必信，惟义所在」）</b></div></div>
+      <div class="pair"><div class="k2">俗见</div><div class="v">恭就是有礼貌，越客气越好。</div></div>
+      <div class="pair"><div class="k2">正解</div><div class="v"><b>恭要合分寸</b>；过了叫「足恭」，孔子说「可耻」。<b>礼貌过头，是把对方架起来。</b></div></div>
+      <div class="pair"><div class="k2">俗见</div><div class="v">「因不失其亲」是找靠山，谁有势跟谁。</div></div>
+      <div class="pair"><div class="k2">正解</div><div class="v"><b>靠的人得「可亲」——能共难、肯担事</b>。只看势，势倒人也倒。<b>（阳货、公山、佛肸三召，孔子终不往）</b></div></div>
+      <div class="pair"><div class="k2">俗见</div><div class="v">「近」就是「差不多」，凑合着来。</div></div>
+      <div class="pair"><div class="k2">正解</div><div class="v"><b>近是校准：有刻度、有方向、反复靠。</b>差不多是放弃标准，差一点是量过标准。<b>（公差带）</b></div></div>
+      <div class="pair"><div class="k2">俗见</div><div class="v">「言可复」是「话可以重复说一遍」。</div></div>
+      <div class="pair"><div class="k2">正解</div><div class="v"><b>复是践言：说出去的话能落地、不倒。</b>——<b>说了两遍而没做到，比说一遍更糟。</b></div></div>
+      <div class="pair"><div class="k2">俗见</div><div class="v">「宗」是「祖宗」，「亦可宗」是「可以当祖宗供着」。</div></div>
+      <div class="pair"><div class="k2">正解</div><div class="v"><b>宗是「可依归」：出了事能找他，他不会把人带歪。</b>——<b>是主心骨，不是牌位。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-h">十四　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《孟子》<br>离娄下</div><div class="v">「<b>言不必信，行不必果，惟义所在。</b>」——本章第一句的最近注脚。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>13.20</div><div class="v">「<b>言必信，行必果，硁硁然小人哉。</b>」——「信」若不与义配，只是小人的固执。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>15.18</div><div class="v">「<b>义以为质，礼以行之，孙以出之，信以成之。</b>」——<b>义是质地，礼是行法，信是成器。</b></div></div>
+      <div class="row"><div class="k k2">《论语》<br>8.2</div><div class="v">「<b>恭而无礼则劳。</b>」——恭须合礼，否则劳而无功。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>5.25</div><div class="v">「<b>巧言、令色、足恭，左丘明耻之，丘亦耻之。</b>」——过恭之耻，孔子亲口认领。</div></div>
+      <div class="row"><div class="k k2">《孟子》<br>万章下</div><div class="v"><b>「仕非为贫也，而有时乎为贫。」</b>——出处（因）之难，孟子说得最细。<b>可与「因不失其亲」对读。</b></div></div>
+      <div class="row"><div class="k k2">《左传》<br>隐三年</div><div class="v">「<b>信不由中，质无益也。……要之以礼，虽无有质，谁能间之？</b>」——以礼约束，不以质约束。</div></div>
+      <div class="row"><div class="k k2">《中庸》</div><div class="v">「<b>义者宜也，尊贤为大。</b>」——义的定义，与「宜」相通。</div></div>
+      <div class="row"><div class="k k2">《庄子》<br>盗跖</div><div class="v"><b>尾生抱柱</b>——信而不知义的极端样本。<b>反面教材，非正面。</b></div></div>
+    </div>
+    <div class="h2" id="sc-19">图一　待供图</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1328×1776 竖幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary>
+          <p>古淡水墨立轴，纸本米色 #FBF7EC 底，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面取「信近于义，恭近于礼，因不失其亲」之义：城外桥边，一青年与一老者相对——青年一手按在胸前作许诺状，另一手微抬作「且慢」状；老者颔首，身后一童子抱简侍立；桥下水缓，远处渡口有一舟将发未发（取「言可复」之意：说出的话要能回来）。不作夸张手势，人物神情沉着，衣纹简笔。竖幅 3:4，人物居下三分之二，上方留白。不写字、不画文字、不生成任何水印。</p>
+        </details>
+        <div class="note">图注：图到后另补「读图」五条（看按胸的手、看「且慢」的手、看老者的颔首、看将发未发的舟、看童子的站位）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　三道关：起点 → 关口 → 出口</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="三道关：信经义关可复，恭经礼关远辱，因经亲关可宗">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 三个「近」是三道关口</text>
+
+        <rect x="26" y="46" width="96" height="46" fill="#FFFDF6" stroke="#C58A73" stroke-width="1"/>
+        <text x="74" y="66" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">信</text>
+        <text x="74" y="82" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">我说了</text>
+        <polygon points="130,69 140,62 140,76" fill="#C58A73"/>
+        <rect x="144" y="46" width="110" height="46" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+        <text x="199" y="66" text-anchor="middle" font-family="serif" font-size="12" fill="#A2503B">关口：义</text>
+        <text x="199" y="82" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">该不该做</text>
+        <polygon points="262,69 272,62 272,76" fill="#C58A73"/>
+        <rect x="276" y="46" width="110" height="46" fill="#F2F6F3" stroke="#4A5C55" stroke-width="1.2"/>
+        <text x="331" y="66" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">言可复</text>
+        <text x="331" y="82" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">说了能回来</text>
+
+        <rect x="26" y="116" width="96" height="46" fill="#FFFDF6" stroke="#C58A73" stroke-width="1"/>
+        <text x="74" y="136" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">恭</text>
+        <text x="74" y="152" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">我把腰弯下</text>
+        <polygon points="130,139 140,132 140,146" fill="#C58A73"/>
+        <rect x="144" y="116" width="110" height="46" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+        <text x="199" y="136" text-anchor="middle" font-family="serif" font-size="12" fill="#A2503B">关口：礼</text>
+        <text x="199" y="152" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">弯到哪儿为止</text>
+        <polygon points="262,139 272,132 272,146" fill="#C58A73"/>
+        <rect x="276" y="116" width="110" height="46" fill="#F2F6F3" stroke="#4A5C55" stroke-width="1.2"/>
+        <text x="331" y="136" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">远耻辱</text>
+        <text x="331" y="152" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">不把自己摆矮</text>
+
+        <rect x="26" y="186" width="96" height="46" fill="#FFFDF6" stroke="#C58A73" stroke-width="1"/>
+        <text x="74" y="206" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">因</text>
+        <text x="74" y="222" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">我靠上去</text>
+        <polygon points="130,209 140,202 140,216" fill="#C58A73"/>
+        <rect x="144" y="186" width="110" height="46" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+        <text x="199" y="206" text-anchor="middle" font-family="serif" font-size="12" fill="#A2503B">关口：亲</text>
+        <text x="199" y="222" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">此人可托否</text>
+        <polygon points="262,209 272,202 272,216" fill="#C58A73"/>
+        <rect x="276" y="186" width="110" height="46" fill="#F2F6F3" stroke="#4A5C55" stroke-width="1.2"/>
+        <text x="331" y="206" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">亦可宗</text>
+        <text x="331" y="222" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">可当主心骨</text>
+
+        <text x="240" y="258" text-anchor="middle" font-family="serif" font-size="9.5" fill="#5C5347">三关同一形式：左边是我的动作，中间是标准，右边是效验</text>
+        <text x="240" y="276" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">标准不设在动作里，设在动作与人的关系里</text>
+      </svg>
+      <div class="figcap">△ 三道关的排布一模一样，说明有子是有意成组：<b>凡是要给出去的东西，都先过一道尺。</b></div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　「近」不是「是」：标尺上的那一寸</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="标尺：远—近—是，近是校准不是打折">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 一条尺上的三个位置</text>
+
+        <line x1="40" y1="140" x2="440" y2="140" stroke="#8A8074" stroke-width="1.2"/>
+        <polygon points="440,140 430,135 430,145" fill="#8A8074"/>
+        <text x="40" y="158" font-family="serif" font-size="9" fill="#8A8074">远</text>
+        <text x="424" y="158" font-family="serif" font-size="9" fill="#A2503B">是</text>
+
+        <g stroke="#DCD5C8" stroke-width=".9">
+          <line x1="80" y1="132" x2="80" y2="148"/><line x1="120" y1="132" x2="120" y2="148"/>
+          <line x1="160" y1="132" x2="160" y2="148"/><line x1="200" y1="132" x2="200" y2="148"/>
+          <line x1="240" y1="132" x2="240" y2="148"/><line x1="280" y1="132" x2="280" y2="148"/>
+          <line x1="320" y1="132" x2="320" y2="148"/><line x1="360" y1="132" x2="360" y2="148"/>
+          <line x1="400" y1="132" x2="400" y2="148"/>
+        </g>
+        <line x1="420" y1="108" x2="420" y2="172" stroke="#A2503B" stroke-width="1.6"/>
+        <text x="420" y="102" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">标准：义·礼·亲</text>
+
+        <rect x="404" y="120" width="16" height="20" fill="#A2503B" opacity="0.14"/>
+        <polygon points="404,168 420,168 412,182" fill="#C58A73"/>
+        <text x="396" y="196" text-anchor="middle" font-family="serif" font-size="10" fill="#2F2A24">近</text>
+        <text x="396" y="212" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">公差带</text>
+
+        <text x="200" y="196" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">差不多：没有刻度</text>
+        <line x1="120" y1="206" x2="280" y2="206" stroke="#DCD5C8" stroke-width="1"/>
+
+        <rect x="40" y="226" width="186" height="52" fill="#FBF1EC" stroke="#A2503B"/>
+        <text x="133" y="246" text-anchor="middle" font-family="serif" font-size="10" fill="#2F2A24">差一点：量过标准，还差一寸</text>
+        <text x="133" y="263" text-anchor="middle" font-family="serif" font-size="9" fill="#A2503B">知道差在哪儿 —— 这是功夫</text>
+
+        <rect x="252" y="226" width="186" height="52" fill="#F6F1E3" stroke="#C58A73"/>
+        <text x="345" y="246" text-anchor="middle" font-family="serif" font-size="10" fill="#2F2A24">差不多：根本没量</text>
+        <text x="345" y="263" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">不知道差在哪儿 —— 这是放弃</text>
+      </svg>
+      <div class="figcap">△ 「近」之所以能当标准，是因为它<b>承认距离、并且知道距离的方向</b>。</div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　三个坑：执　谄　附</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="三个坑：信不近义成执，恭不近礼成谄，因失其亲成附">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 同一病根的三种变形</text>
+
+        <rect x="28" y="48" width="132" height="86" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="94" y="72" text-anchor="middle" font-family="serif" font-size="16" fill="#2F2A24">执</text>
+        <text x="94" y="92" text-anchor="middle" font-family="serif" font-size="9" fill="#A2503B">信不近义</text>
+        <text x="94" y="110" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">尾生抱柱，水至不去</text>
+        <text x="94" y="126" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">守的是话，不是事</text>
+
+        <rect x="174" y="48" width="132" height="86" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="240" y="72" text-anchor="middle" font-family="serif" font-size="16" fill="#2F2A24">谄</text>
+        <text x="240" y="92" text-anchor="middle" font-family="serif" font-size="9" fill="#A2503B">恭不近礼</text>
+        <text x="240" y="110" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">足恭，左丘明耻之</text>
+        <text x="240" y="126" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">把对方架起来</text>
+
+        <rect x="320" y="48" width="132" height="86" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="386" y="72" text-anchor="middle" font-family="serif" font-size="16" fill="#2F2A24">附</text>
+        <text x="386" y="92" text-anchor="middle" font-family="serif" font-size="9" fill="#A2503B">因失其亲</text>
+        <text x="386" y="110" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">附势者，势倒人倒</text>
+        <text x="386" y="126" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">靠的是势，不是人</text>
+
+        <line x1="28" y1="152" x2="452" y2="152" stroke="#DCD5C8" stroke-width="1"/>
+
+        <rect x="98" y="176" width="284" height="52" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.4"/>
+        <text x="240" y="197" text-anchor="middle" font-family="serif" font-size="10.5" fill="#2F2A24">共同病根：把「形式」当成了「标准」</text>
+        <text x="240" y="216" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">守着话，弯着腰，贴着势 —— 三样都在，义礼亲全丢了</text>
+
+        <text x="240" y="256" text-anchor="middle" font-family="serif" font-size="9.5" fill="#5C5347">药方只有一味：许之前停一下，弯之前看一眼，靠之前问一句「他会不会来」</text>
+        <text x="240" y="276" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">三个动作都很小，小到不必下决心；正因为小，做得到</text>
+      </svg>
+      <div class="figcap">△ 三种毛病都不是「太坏」，是<b>「太用力」——用力在形式上，没用力在标准上。</b></div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　盟诅时代：信何以要找抵押</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">交质<br>现场</div><div class="v"><b>前 720 年，周平王崩，周人将畀虢公政。</b>郑庄公怨周，周郑遂交质：<b>周王子狐质于郑，郑公子忽质于周。</b>——<b>天子与诸侯互押亲子，这是春秋「信」的空前贬值。</b></div></div>
+      <div class="row"><div class="k k2">君子<br>的<br>判词</div><div class="v">《左传》隐三年：「<b>信不由中，质无益也。明恕而行，要之以礼，虽无有质，谁能间之？</b>」——<b>「信不由中」四字，拆穿了抵押的本质：质能扣住人，扣不住心。</b>「要之以礼」四字，则给了正解：<b>用礼来约束，不用人来押。</b></div></div>
+      <div class="row"><div class="k k2">盟<br>之<br>礼</div><div class="v"><b>盟有专礼：</b>为载书、凿坎、杀牲、执牛耳、歃血、埋书于坎、司盟掌之（《周礼·秋官·司盟》）。<b>《春秋》二百四十二年间，书盟者一百余次。</b>——<b>次数本身就是症状：越是反复宣誓，越是没人当真。</b></div></div>
+      <div class="row"><div class="k k2">孔子<br>为<br>何<br>不谈<br>盟</div><div class="v">《论语》无一语及「盟」。<b>他讲「主忠信」（1.8）、「民无信不立」（12.7），都在人心上做功夫。</b>——<b>有子此章亦然：把信放回「义」，不放回「约」。</b></div></div>
+      <div class="row"><div class="k k2">今日<br>三件<br>抵押<br>物</div><div class="v"><b>①合同</b>（约）<b>②征信</b>（质）<b>③担保人</b>（盟）。<b>三样都该有，三样都别指望。</b>——<b>它们能保证「不敢不守」，保证不了「愿意守」。</b>愿意守的那部分，只能由「所许之事合宜」来生。</div></div>
+    </div>
+
+    <div class="h2" id="sc-24">附论二　恭与敬：貌上的那层，心上的那层</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">字<br>分<br>两<br>层</div><div class="v"><b>恭在貌，敬在心。</b>《说文》「恭，肃也」——<b>肃是收束身体</b>；敬则是「<b>不敢慢</b>」，是心里的一种持守。<b>貌可伪，心不可伪。</b></div></div>
+      <div class="row"><div class="k k2">《论<br>语》<br>里<br>的<br>恭</div><div class="v"><b>8.2</b>「恭而无礼则劳」<b>／13.19</b>「居处恭，执事敬」<b>／16.10</b>「貌思恭」<b>／15.5</b>「恭己正南面而已矣」<b>／5.25</b>「足恭」之耻。<b>五处合看，恭的分寸被划得很清楚：可以低，不可以塌。</b></div></div>
+      <div class="row"><div class="k k2">过恭<br>为<br>何<br>可耻</div><div class="v"><b>因为过恭会让对方欠债。</b>——<b>你把姿态压得太低，对方就必须「还」点什么：还笑、还客气、还人情。</b>一段关系里凭空多了债，就不干净了。<b>礼的要义是「彼此都不欠」，所以过恭反而失礼。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>的<br>两<br>种<br>病</div><div class="v"><b>一病：把「恭」当资源</b>——见谁都弯腰，弯出一身人情债；<b>二病：把「不恭」当率真</b>——当面顶撞，自谓直爽。<b>——两病同源：都不肯花力气去拿那个「分寸」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-25">附论三　依附的伦理：士的出处与今日的择业</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">士<br>无<br>定<br>主</div><div class="v"><b>春秋之士，不世袭、不封土，「仕」是唯一出路。</b>——<b>可「仕」必有主：主是谁，决定一生。</b>所以「因不失其亲」在当时不是道德清谈，是<b>职业伦理</b>。</div></div>
+      <div class="row"><div class="k k2">三<br>次<br>召<br>命</div><div class="v"><b>阳货（17.1）：</b>孔子不见，被送一豚，才「往拜之」，遇诸途，以「吾将仕矣」虚应。<b>公山弗扰（17.5）：</b>「子欲往」，子路拦，孔子叹「吾其为东周乎」，<b>终未行</b>。<b>佛肸（17.7）：</b>「子欲往」，子路再拦，孔子以匏瓜自解，<b>亦未行</b>。<b>——「欲往」是志，「不往」是判。</b></div></div>
+      <div class="row"><div class="k k2">为<br>何<br>欲<br>往</div><div class="v"><b>因为「天下无道久矣」，任何一处可试的地方都舍不得。</b>——<b>这正是有子此章的难处所在：一个人越想做实事，越容易被「有势者」招手。</b>「因不失其亲」不是给冷眼人的，是给热心人的。</div></div>
+      <div class="row"><div class="k k2">今<br>日<br>择<br>业<br>四<br>问</div><div class="v"><b>① 他的话算不算？（对上）② 分利公不公？（对下）③ 出事谁担？（对难）④ 走的时候，能不能体面？（对散）</b>——<b>四问答完，再谈薪水。</b>薪水买的是当下，四问定的是三年后。</div></div>
+      <div class="row"><div class="k k2">一<br>句<br>收</div><div class="v"><b>「因」这件事，最怕的不是跟错人，是「明知不对还跟着」。</b>——<b>跟错人是运气，跟着是选择。</b></div></div>
+    </div>
+    <div class="scene"><b>这一章说到底，是给「热心人」写的一份防身术：</b>你要许诺、要恭敬、要托身——<b>三件事都得有个尺子。尺子不在别人手里，在自己停下来的那一秒里。</b></div>
+
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 12 课　v1.0　（2026-11-20）</div>
+  </footer>
+
+</div>
+</body>
+</html>
