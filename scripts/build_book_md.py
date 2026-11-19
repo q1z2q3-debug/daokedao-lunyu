@@ -21,8 +21,8 @@ subtitle: 学而篇 · 通释读本（连载）
 author: 润泽
 base: 朱熹《论语集注》
 chapters: 498
-published: 前言 + 学而一至九章
-version: 0.9.1
+published: 前言 + 学而一至十章
+version: 0.9.2
 date: 2026-11-19
 ---
 

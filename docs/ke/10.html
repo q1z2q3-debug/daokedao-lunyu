@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>夫子至于是邦也 · 论语第十课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第一第十章通释：子禽问子贡「夫子至于是邦也，必闻其政，求之与？抑与之与」，子贡答「夫子温、良、恭、俭、让以得之」。五德不是技巧，是可接近性；「得」与「德」古音同部，夫子之得是德之得，不是贝之得。并辨「温而厉」以正「温良恭俭让＝老好人」之俗见。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E6%B8%A9%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 十章　第 10 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-b1">子禽之问</a><a href="#sc-b2">五德</a><a href="#sc-b3">「求」被改写</a><a href="#sc-b4">得与德</a><a href="#sc-b5">五德是不是软</a><a href="#sc-c">章旨</a><a href="#sc-d">阴阳</a><a href="#sc-e">时代</a><a href="#sc-f">存疑</a><a href="#sc-g">双卡</a><a href="#sc-h">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一（待供图）</a><a href="#sc-20">义理图一 两种求</a><a href="#sc-21">义理图二 五德回路</a><a href="#sc-22">义理图三 得与德</a><a href="#sc-23">附论一 子贡</a><a href="#sc-24">附论二 周游列国</a><a href="#sc-25">附论三 五德的谱系</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>夫子至于是邦也</h1>
+    <div class="h1-sub">学而 1.10　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">子禽问于子贡曰：</span>「夫子至于<ruby>是<rt>shì</rt></ruby>邦也，必闻其政，<ruby>求<rt>qiú</rt></ruby>之与？<ruby>抑<rt>yì</rt></ruby>与之与？」<br>
+      <span class="who">子贡曰：</span>「夫子<ruby>温<rt>wēn</rt></ruby>、<ruby>良<rt>liáng</rt></ruby>、<ruby>恭<rt>gōng</rt></ruby>、<ruby>俭<rt>jiǎn</rt></ruby>、<ruby>让<rt>ràng</rt></ruby>以得之。夫子之求之也，其诸异乎人之求之与？」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>温</span></div><div class="tzcap"><span>12 画</span><span>和气</span></div></div>
+      <div class="tzitem"><div class="cell"><span>良</span></div><div class="tzcap"><span>7 画</span><span>直心</span></div></div>
+      <div class="tzitem"><div class="cell"><span>恭</span></div><div class="tzcap"><span>10 画</span><span>敬人</span></div></div>
+      <div class="tzitem"><div class="cell"><span>俭</span></div><div class="tzcap"><span>9 画</span><span>不铺张</span></div></div>
+      <div class="tzitem"><div class="cell"><span>让</span></div><div class="tzcap"><span>5 画</span><span>不抢先</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">温</div><div class="v"><b>和气，不冷。</b>冬天的手是温的，握上去不躲。<b>温不是没脾气</b>——孔子还有个「厉」字配着，温里有分寸。</div></div>
+      <div class="row"><div class="k">良</div><div class="v"><b>心是直的，不绕弯。</b>不做手脚、不藏着话。<b>良的人，你跟他说话不用先想三遍。</b></div></div>
+      <div class="row"><div class="k">恭</div><div class="v"><b>把人当回事。</b>见面起身、听人把话说完、不打断。<b>恭不是低三下四</b>，是我知道你有你的分量。</div></div>
+      <div class="row"><div class="k">俭</div><div class="v"><b>不铺张，也不占。</b>够用就好，不摆阔、不多拿。<b>俭的人站在哪儿，都不显得挤。</b></div></div>
+      <div class="row"><div class="k">让</div><div class="v"><b>不抢先。</b>路让一步、话让一句、好处让人先拿。<b>让不是怕</b>，是我不必争这一下也站得稳。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead">孔子每到一个国家，<b>人家都愿意把自家的事讲给他听</b>。不是他去打听，是他这个人<b>让人愿意说</b>——温和、直心、敬人、不铺张、不抢先，谁在他面前都放得下心。</p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p class="lead">跟我念：<br>「子禽问子贡：老师每到一个国家，一定能听到那里的政事——<b>是他去求来的，还是人家主动告诉他的？</b>」<br>「子贡说：老师是靠<b>温和、直心、恭敬、俭省、谦让</b>得到的。老师那种「求」，大概跟别人的求不一样吧。」<br>念完想一想：<b>为什么同一个「求」字，可以是两件相反的事？</b></p>
+
+    <p class="lead">再看一个字：<b>「得」和「德」在古代读音相同。</b>子贡说「以得之」，听着也像「以德得之」——不是抢来的，是养出来的。</p>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      班里转来一个新同学。第一天，就有三四个人围着他，把班里的事全告诉他：哪个老师最严、哪个座位最晒、食堂哪一样菜最好吃、值日表怎么排。<br>
+      你有点奇怪：<b>他一句也没打听啊。</b><br>
+      你回想他做的事：别人说话，他<b>把笔放下，眼睛看着对方</b>；有人把水杯碰倒了，他先递纸巾，<b>没等人家说对不起</b>；说到自己原来的学校，他只说「挺好的」，<b>没有一句「我们那儿比这儿强」</b>；排队时他总站在最后。<br>
+      傍晚你问他：「你怎么什么都知道？」他愣了一下，说：<b>「我没问啊，是他们告诉我的。」</b><br>
+      你这才明白：<b>有的人靠打听知道事情，有的人靠「让人愿意说」知道事情。</b>前一种，人一走消息就断；后一种，走到哪儿都有人肯讲。
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <ol class="list">
+      <li>「必闻其政」是不是他去打听？——「闻」是听到，不是打探。子禽问得实在：一个没有官职的人，凭什么每到一个国家都知道人家的国政？子贡给的答案不是「他打听」，是「人家愿意说」。</li>
+      <li>温、良、恭、俭、让，是不是五样「好脾气」？——不是。它们不是天生的性格，是<b>一天一天做出来的动作</b>：慢半拍回话、把话听完、不多拿一样、不抢先一步。做得久了，人才有这种「让人觉得舒服」的样子。</li>
+      <li>「让」是不是吃亏？——让的是<b>一步、一句、一次先后</b>，不是让掉该做的事。<b>孔子说「不能以礼让为国，如礼何」</b>——让是治国的东西，不是软弱的人拿来给自己找台阶的。</li>
+    </ol>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <ol class="list">
+      <li>别人说话时，把手里的事放下，看他的眼睛。</li>
+      <li>说到自己的东西，少一句「我们那儿更好」。</li>
+      <li>排队、进门、上菜，让别人先一步。</li>
+      <li>想知道事情，先让人放心——别急着打听。</li>
+    </ol>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">勘俗见</div><div class="v">常见误读有三：把五德读成「<b>老好人五件套</b>」；把「必闻其政」读成「<b>孔子爱打听政治、会走关系</b>」；把「求」读成「<b>求人办事</b>」。<b>三处都读反了：五德是有分寸的（温而厉），闻政是别人愿意说，求是「以德得之」。</b></div></div>
+      <div class="row"><div class="k k2">现代<br>对照</div><div class="v">今天的「人脉」多是<b>求来的</b>：加微信、递名片、请客、托人介绍——拿到的是联系方式，不是信任。<b>孔子那种是「可接近性」</b>：别人愿意在他面前说真话，因为说完不会被拿去用。<b>前者是抓，后者是养。</b></div></div>
+      <div class="row"><div class="k k2">常变<br>主线</div><div class="v"><b>形式一直在变：</b>拜见变微信，问政变座谈会，名片变二维码，席间敬酒变群里打招呼。<b>不变的是：人只肯把要紧的事，讲给让他安心的人。</b>手段一年一换，安心几十年才养成。</div></div>
+      <div class="row"><div class="k k2">教与学<br>二分</div><div class="v"><b>五德只可「习」，不可「学」。</b>讲一百遍「你要温和」，孩子学到的只是词；<b>让他练一次「把话听完再回」，他才习到一点点。</b>所以这一章在少儿页只给动作，不给定义。</div></div>
+      <div class="row"><div class="k k2">时代<br>落点</div><div class="v">这一代孩子最不缺<b>「获取信息」</b>：搜索、短视频、群聊，什么都能查到。<b>最缺的是「相处」</b>——面对面时不知怎么看人、怎么听完、怎么不抢。<b>结果信息越多，人越孤立：知道天下事，没有一个肯跟他说心里话的人。</b></div></div>
+      <div class="row"><div class="k k2">融西<br>对照</div><div class="v">英文 <b>civility</b> 出自 <b>civitas</b>（城邦）——本义不是「礼貌」，是<b>一群陌生人共同生活所需要的举止</b>。这正是温良恭俭让的用处：不是让人喜欢你，是让人<b>敢跟你共处</b>。今语所谓 <b>approachability</b>（可接近性），不过是它的现代译名。</div></div>
+      <div class="row"><div class="k k2">可做<br>一件</div><div class="v"><b>一周只练一条。</b>第一周练「让」：饭桌不抢先夹、进门让人先走。第二周练「俭」：一周不买非必要的东西。第三周练「恭」：每天把一个人的话听完不打断。<b>一次一条，做完再说下一条。</b></div></div>
+    </div>
+  </section>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页 · 古今汇观</div>
+
+    <h1>夫子至于是邦也，必闻其政</h1>
+    <div class="h1-sub">连读 · 字义句读 · 子禽之问 · 五德 · 「求」被改写 · 得与德 · 五德是不是软 · 章旨 · 阴阳 · 时代 · 存疑 · 双卡 · 跨典</div>
+
+    <div class="src">
+      <span class="who">子禽问于子贡曰：</span>「夫子至于是邦也，必闻其政，求之与？抑与之与？」<br>
+      <span class="who">子贡曰：</span>「夫子温、良、恭、俭、让以得之。夫子之求之也，其诸异乎人之求之与？」
+    </div>
+
+    <div class="h2" id="sc-lian">零　连读：镜头忽然对准了孔子本人</div>
+    <p class="leadline">1.1–1.9 讲的都是「话」：学、孝、省、敬、厚。到 1.10，<b>第一次出现了「行迹」</b>——孔子在列国之间走动，人人愿意把国政讲给他听。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">与<br>1.9<br>相接</div><div class="v">1.9 讲<b>对死者的礼</b>（慎终追远），1.10 讲<b>对生者的礼</b>（温良恭俭让）。<b>一条线两头：对走了的人不肯苟，对活着的人不肯逼。</b>两章加起来，才是「厚」的完整样子——厚不是只对一边。</div></div>
+      <div class="row"><div class="k k2">叙事<br>转折</div><div class="v">前面九章都是「子曰」「有子曰」「曾子曰」，是<b>言论的汇编</b>。1.10 换了写法：两个人对话，说的是<b>老师本人的样子</b>。<b>《论语》从这一章开始，有了「孔子的形象」。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.1<br>首尾</div><div class="v">1.1 最后一句「<b>人不知而不愠，不亦君子乎</b>」；1.16 最后一句「<b>不患人之不己知，患不知人也</b>」。<b>学而篇以「不求人知」起、以「不求人知」收，1.10 正是中间那个实证：不求人知，反而天下人愿意告诉他。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.8<br>对看</div><div class="v">1.8 讲「重」——壁要厚，人才有威；1.10 讲五德——<b>壁厚了之后，外面是什么手感</b>。重是里子，温良恭俭让是面子；<b>只有里子没有面子，是硬；只有面子没有里子，是滑。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">子禽</div><div class="v"><b>陈亢，字子禽。</b>旧说孔子弟子（郑玄、司马迁）；亦有说为子贡门人——本章问法像晚辈请教。两说并存。详见存疑一。</div></div>
+      <div class="row"><div class="k k2">子贡</div><div class="v"><b>端木赐，字子贡，卫人。</b>孔门四科中「言语」第一，善货殖，孔子晚年最倚重的弟子之一。详见附论一。</div></div>
+      <div class="row"><div class="k k2">夫子</div><div class="v">本义「<b>大夫之子</b>」（有爵者的称谓），春秋时已用作<b>对男子的尊称</b>，孔门专用以称孔子。所以「夫子」起初不是「老师」的意思，是「那位先生」。</div></div>
+      <div class="row"><div class="k k2">至于是邦</div><div class="v"><b>「至于」＝到达；「是邦」＝这个国家。</b>不是「至于」这类现代连词。孔子周游，每到一国。</div></div>
+      <div class="row"><div class="k k2">闻</div><div class="v"><b>听到、得知。</b>不作「打听」。一字之别，全章立骨：<b>闻是被动地到，打听是主动地取。</b></div></div>
+      <div class="row"><div class="k k2">求／与</div><div class="v"><b>求＝主动索取；与＝别人给。</b>子禽把可能只列了这两个。</div></div>
+      <div class="row"><div class="k k2">抑</div><div class="v"><b>还是、或者。</b>「求之与？抑与之与？」＝是求来的呢，还是人家给的？</div></div>
+      <div class="row"><div class="k k2">其诸</div><div class="v"><b>齐鲁语气的揣度词</b>，相当于「大概、想来」。朱子注：「其诸，疑辞。」<b>它让子贡的话留了余地——不是断言，是一种有把握的推测。</b></div></div>
+    </div>
+    <div class="quote"><span class="t">句读</span>子禽问于子贡曰：「夫子至于是邦也，必闻其政——求之与？抑与之与？」<br>子贡曰：「夫子温、良、恭、俭、让以得之。夫子之求之也，其诸异乎人之求之与？」<br><span class="note2">一问两选项（求／与），一答出<b>第三项</b>（以得之）。<b>全章的结构是一场「选项不够用」的示范。</b></span></div>
+
+    <div class="h2" id="sc-b1">二　子禽之问：一个真问题</div>
+    <p class="leadline">子禽问的不是「孔子爱不爱聊政治」，问的是一件制度上的怪事：<b>一个没有官职的布衣，凭什么知道人家的国政？</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">当时的<br>常规</div><div class="v">春秋之世，要知道一国政事，常规路径有三：<b>做官</b>（在其位）、<b>游说</b>（献策换信任）、<b>交结</b>（走大夫的门路）。<b>孔子一条也不走，却「必闻其政」——所以子禽要问。</b></div></div>
+      <div class="row"><div class="k k2">他给的<br>两选项</div><div class="v"><b>「求之」＝他去要；「与之」＝人家给他。</b>一个是主动，一个是被动。<b>子禽的框架里，只有这两种可能。</b></div></div>
+      <div class="row"><div class="k k2">这个问<br>为何<br>重要</div><div class="v">因为它把「孔子凭什么」摊到了明处。<b>子贡若答「人家给的」，孔子就成了被动受惠者；若答「他去求的」，孔子就成了干谒者。</b>两个答案都不好听——<b>这正是子贡要绕开的地方。</b></div></div>
+      <div class="row"><div class="k k2">「必」<br>字</div><div class="v"><b>「必」是「没有一次例外」。</b>不是偶然碰上一回，是走到哪儿都如此。<b>这个字把问题加重了：不是运气，是规律。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b2">三　五德：夫子以何「得」之</div>
+    <div class="quote"><span class="t">朱熹《集注》</span>温，和厚也；良，易直也；恭，庄敬也；俭，节制也；让，谦逊也。<b>五者，夫子之盛德光辉接于人者也。</b></div>
+    <p class="leadline">请注意朱子末句的分寸：他说的不是「孔子有五条优点」，而是<b>「盛德的光辉，接到别人身上」</b>——五德是<b>别人能感到的东西</b>，不是自己心里的一张清单。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">温</div><div class="v"><b>和厚</b>：不冷、不硬、不逼人。<b>它的反面不是「凶」，是「冷」</b>——冷的人不必凶，也能让人不敢开口。</div></div>
+      <div class="row"><div class="k k2">良</div><div class="v"><b>易直</b>：平易而正直。<b>「易」是不难接近，「直」是不绕弯。</b>两样都要：只易不直是滑，只直不易是刺。</div></div>
+      <div class="row"><div class="k k2">恭</div><div class="v"><b>庄敬</b>：对人、对事有敬意。<b>恭不是姿态低，是把对方当回事。</b>《述而》7.38 说孔子「恭而安」——恭而不安，就成了拘谨。</div></div>
+      <div class="row"><div class="k k2">俭</div><div class="v"><b>节制</b>：不铺张、不多取。<b>俭不只是省钱，是不占空间</b>：一个人不占，别人才舒展。</div></div>
+      <div class="row"><div class="k k2">让</div><div class="v"><b>谦逊</b>：不抢先。<b>《里仁》4.13：「不能以礼让为国，如礼何？」</b>——让是治国之具，不是弱者的退路。</div></div>
+      <div class="row"><div class="k k2">五者<br>为何<br>是<br>「一」</div><div class="v">朱子用「光辉」二字，意思很清楚：<b>这不是五条并列的德目，是同一个「厚」在五个接触面上的手感。</b>里子是一个，外面看是五样——<b>像一只手，正面、背面、侧面都不同，但只有一只手。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b3">四　「求」被改写：全章的题眼</div>
+    <div class="quote"><span class="t">子贡</span>夫子之求之也，其诸异乎人之求之与？</div>
+    <div class="scene"><b>子贡没有否认「求」。</b>他说的是：夫子也在求，只是<b>他那种求，和别人那种求不是一回事</b>。<br><br>别人之求，是<b>向外伸手</b>：要消息、要门路、要一句引荐。夫子之求，是<b>向内养</b>：把温良恭俭让养到身上，让愿意说的人自己走过来。<b>同一个「求」字，方向相反。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">为何<br>不直接<br>说「与」</div><div class="v">若答「人家给的」，孔子就成了<b>被人恩赐的人</b>，此事与他的德行无关。<b>子贡要保住的是：这件事的原因在孔子自己身上。</b></div></div>
+      <div class="row"><div class="k k2">为何<br>不直接<br>说「求」</div><div class="v">若答「求的」，孔子就成了<b>干谒者</b>，与当时游说之士无异。<b>子贡要保住的第二件是：孔子不靠手段。</b></div></div>
+      <div class="row"><div class="k k2">第三<br>答案</div><div class="v"><b>「以得之」。</b>「得」既不是求（要），也不是与（受），是<b>由自身的状态产生的结果</b>。<b>这是汉语里极精确的一手：把「因果」从「交易」里摘出来。</b></div></div>
+      <div class="row"><div class="k k2">「其诸」<br>的<br>分寸</div><div class="v">他没有说「夫子必不求」，只说「<b>大概不一样吧</b>」。<b>这个「大概」，是子贡的分寸：他护着老师，但不替老师吹。</b>会说话的人，恰在此处见。</div></div>
+    </div>
+
+    <div class="h2" id="sc-b4">五　得与德：一个字源上的呼应</div>
+    <div class="scene"><b>「得」与「德」上古音同部</b>（均属端母职部，一说音近通用）。文献里早有明文：《礼记·乐记》「<b>德者，得也。</b>」——<b>德，就是「得」的那个「得」；不是得到外物，是得到自己该有的样子。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">字形<br>之别</div><div class="v"><b>得</b>从彳从贝（道上拾贝，得物）；<b>德</b>从彳从直心（道上正心，得己）。<b>一个向外拿，一个向内立。</b></div></div>
+      <div class="row"><div class="k k2">子贡<br>的<br>用意</div><div class="v">他说「<b>以得之</b>」而不用「以取之」。<b>孔子所「得」的，不是消息，是「人家肯说」这件事本身</b>——而这件东西，只能由「德」换来。</div></div>
+      <div class="row"><div class="k k2">反过来<br>看今人</div><div class="v">今天多数人求的是「<b>贝</b>的得」：信息、资源、关系、流量。<b>拿到就完，用完就断。</b>「<b>德</b>的得」慢，但拿一次管很久：<b>人愿意再来找你。</b></div></div>
+      <div class="row"><div class="k k2">须防<br>过度</div><div class="v">不可据此说「孔子不求任何东西」。<b>本章明说「夫子之求之也」</b>——孔子确实在「求」，只是他的求是<b>修养式的求</b>，不是索取式的求。<b>把「不求」当成清高，是另一种误读。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b5">六　五德是不是「软」</div>
+    <p class="leadline">这是本章最容易走偏的地方：一说温良恭俭让，就想到「老好人」。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">温而厉</div><div class="v">《述而》7.38：<b>「子温而厉，威而不猛，恭而安。」</b>——<b>温，后面紧跟着「厉」。</b>温不是没有棱角，是<b>棱角不扎人</b>。</div></div>
+      <div class="row"><div class="k k2">五德<br>各有<br>反面</div><div class="v"><b>温而无厉＝软；良而无直＝滑；恭而无安＝拘；俭而无度＝吝；让而无守＝怯。</b>——<b>每一样失去骨，都变成它的赝品。</b></div></div>
+      <div class="row"><div class="k k2">孔子<br>的<br>硬处</div><div class="v">同一部书里：<b>「八佾舞于庭，是可忍也，孰不可忍也」（3.1）</b>；<b>「吾未见刚者」（5.10）</b>；对齐景公问政答「君君、臣臣、父父、子子」（12.11）。<b>温良恭俭让，是硬人的软法，不是软人的全部。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.8<br>相连</div><div class="v"><b>重是壁，五德是壁的手感。</b>壁不厚，手感再好也是一层皮；壁厚而外面是尖刺，也没人敢靠。<b>1.8 与 1.10 合起来，才是「器」的完整规格。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-c">七　章旨：提问的框架不够用</div>
+    <p class="leadline">这一章真正的意思，不在「五德」这四个字后面的五个字，而在<b>它的结构</b>：一个二选一的问题，被一个第三答案解掉。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">问</div><div class="v"><b>求之与？抑与之与？</b>——要，还是受。子禽的框架是「交易框架」：一切都归于「谁主动」。</div></div>
+      <div class="row"><div class="k k2">答</div><div class="v"><b>以得之。</b>——既不是要，也不是受。子贡给出的框架是<b>「状态框架」</b>：不是谁做了什么，是<b>他是什么样的人</b>。</div></div>
+      <div class="row"><div class="k k2">为何<br>重要</div><div class="v">凡用「交易框架」看人，只能看见手段；<b>凡用「状态框架」看人，才看得见修养。</b>子禽不算笨，他只是<b>手里只有两把尺</b>。</div></div>
+      <div class="row"><div class="k k2">落点</div><div class="v"><b>必闻其政，不是本事，是结果。</b>因是温良恭俭让，果是「人家愿意说」。<b>想要果，得回去种因；绕过因去追果，就是「求」。</b></div></div>
+      <div class="row"><div class="k k2">走错<br>方向</div><div class="v">把五德做成<b>一套待人技巧</b>（见人先笑、说话先夸、礼物先到），则仍是「求」——<b>技巧骗得过一次，骗不过十年；十年之后，人还是只肯跟让他安心的人说真话。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-d">八　阴阳：取在外，得在内</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">求为<br>阳之<br>取</div><div class="v"><b>「求」是阳：向外、向上、向人伸手。</b>它的动作是「拿」，它的时间是一瞬，它的结果是「得到一次」。</div></div>
+      <div class="row"><div class="k k2">与为<br>阴之<br>受</div><div class="v"><b>「与」是阴：向内、向下、被人给予。</b>它的动作是「接」，它的问题是把主动权交给了别人。</div></div>
+      <div class="row"><div class="k k2">得在<br>阴阳<br>之间</div><div class="v"><b>「得」不是第三条路，是阴阳相生的那一点。</b>内养（阴）足了，外至（阳）自然来。<b>既不是他拿，也不是人给——是长出来的。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.1<br>同构</div><div class="v">1.1 讲「学」（阴，受）与「习」（阳，发）；1.10 讲「养」（阴）与「得」（阳）。<b>学而篇反复讲同一件事：先把里头做实，外面才成。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-e">九　时代：一个游说成风的年代</div>
+    <div class="scene">孔子周游列国，<b>前 497 年离鲁，前 484 年返鲁，前后十四年</b>，历卫、曹、宋、郑、陈、蔡诸国。那正是「士」开始流动的时代：<b>游说、干谒、献策、纵横，是当时读书人求用的常规手段。</b>孔子不用这些手段，却每到一个国家都有人来问政——<b>所以这一章在当时读来，是一件奇事，不是一句好话。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">常规<br>手段</div><div class="v"><b>投其所好（谈富国强兵）、走门路（先见家臣）、献祥瑞（造舆论）。</b>《孟子》里还留着这类人的影子：<b>「以顺为正者，妾妇之道也。」</b></div></div>
+      <div class="row"><div class="k k2">孔子<br>的<br>实例</div><div class="v">《为政》2.19 鲁哀公问「何为则民服」；《颜渊》12.11 齐景公问政，孔子答「君君臣臣父父子子」。<b>都是别人来问，他才答。</b></div></div>
+      <div class="row"><div class="k k2">他也<br>拒绝</div><div class="v">《卫灵公》15.1 卫灵公问阵（军事），孔子答：「<b>俎豆之事，则尝闻之矣；军旅之事，未之学也。</b>」次日即行。<b>可见「闻其政」不是逢迎，是有人问、他肯答；问非所问，他就不答。</b></div></div>
+      <div class="row"><div class="k k2">今之<br>对照</div><div class="v">今日的「游说」换了衣裳：路演、私域、圈层、资源置换。<b>手段越精巧，越显得「以得之」笨。</b>但笨的那条，才经得住十年。</div></div>
+    </div>
+
+    <div class="h2" id="sc-f">十　存疑：五处</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>子禽是谁？</b>郑玄：「子禽，弟子陈亢也。」《史记·仲尼弟子列传》亦有陈亢字子禽。<b>但本章问法像晚辈请教子贡，故旧有「子禽为子贡门人」之说</b>（因《论语》中此人两见，皆与子贡相涉）。<b>两说并存，本书不裁。</b></div></div>
+      <div class="q"><span>02</span><div><b>「闻其政」两解：</b>一为<b>得知</b>（听到、了解其国之政）；一为<b>与闻</b>（参与、预闻政事）。<b>取前者</b>：孔子周游时并无官职，「与闻」无从谈起；且「闻」字本义即「听到」。<b>但须知道旧注有此异说。</b></div></div>
+      <div class="q"><span>03</span><div><b>「其诸」之训：</b>朱子「疑辞」，即揣度之词（大概）。亦有解为「岂非」「或者」者。<b>取「大概」</b>，因它最合子贡护师而不夸师的分寸。</div></div>
+      <div class="q"><span>04</span><div><b>五德是五德，还是一种德的光辉？</b>朱子明言「五者，夫子之盛德光辉接于人者」——<b>是同一盛德在五个接触面上的表现，不是五条并列德目。</b>后世（尤其明清）多作五条德目讲，遂成「五种好脾气」，<b>此为本读要纠的地方。</b></div></div>
+      <div class="q"><span>05</span><div><b>「抑与之与」的「与」：</b>一解<b>给予</b>（主动告知）；一解<b>许可、赞与</b>。<b>取「给予」</b>，与上文「求」相对，文气最顺。</div></div>
+    </div>
+
+    <div class="h2" id="sc-g">十一　双卡对照</div>
+    <div class="cards">
+      <div class="cardshd"><span>常见读法</span><span>本章本义</span></div>
+      <div class="pair"><div class="a">温良恭俭让＝老好人五件套</div><div class="b"><b>五德是有骨的</b>：温而厉、恭而安、让而有守；失了骨，五样都成赝品</div></div>
+      <div class="pair"><div class="a">必闻其政＝孔子爱打听、会走关系</div><div class="b"><b>是别人愿意说</b>；问非所问他就不答（卫灵公问阵，次日即行）</div></div>
+      <div class="pair"><div class="a">「求」＝求人办事</div><div class="b"><b>夫子也在求</b>，只是向内养德，不由外索取</div></div>
+      <div class="pair"><div class="a">「得之」＝得到了消息与门路</div><div class="b"><b>得的是「人肯说」这件事本身</b>——它只能由德换来</div></div>
+      <div class="pair"><div class="a">五德是天生性格</div><div class="b"><b>五德是练出来的动作</b>：慢半拍、把话听完、不多拿、不抢先</div></div>
+      <div class="pair"><div class="a">这一章是夸孔子的话</div><div class="b"><b>这一章是一次「换框架」的示范</b>：二选一被第三答案解掉</div></div>
+    </div>
+    <div class="cardhint">左栏是今天最流行的读法，右栏是回到注疏与时代语境后的读法。</div>
+
+    <div class="h2" id="sc-h">十二　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《学而》<br>1.1</div><div class="v">「<b>人不知而不愠，不亦君子乎？</b>」——开篇即立「不求人知」之志；1.10 是它的实证。</div></div>
+      <div class="row"><div class="k k2">《学而》<br>1.16</div><div class="v">「<b>不患人之不己知，患不知人也。</b>」——篇末再收一次。一篇之内三处呼应，可见编者有意。</div></div>
+      <div class="row"><div class="k k2">《述而》<br>7.38</div><div class="v">「<b>子温而厉，威而不猛，恭而安。</b>」——校正「温良恭俭让＝软」的第一把尺子。</div></div>
+      <div class="row"><div class="k k2">《里仁》<br>4.13</div><div class="v">「<b>不能以礼让为国，如礼何？</b>」——让是治国之具，非弱者退路。</div></div>
+      <div class="row"><div class="k k2">《卫灵公》<br>15.1</div><div class="v">卫灵公问阵，孔子曰「<b>军旅之事，未之学也</b>」，明日遂行。——「闻其政」的边界：问什么，他答什么；不该答的，他不答。</div></div>
+      <div class="row"><div class="k k2">《礼记》<br>乐记</div><div class="v">「<b>德者，得也。</b>」——「以得之」三字的字源底子：得己谓之德。</div></div>
+      <div class="row"><div class="k k2">《易》<br>谦卦</div><div class="v">「<b>谦尊而光，卑而不可逾。</b>」——让而愈显、卑而不可越，正是「让」的骨。</div></div>
+      <div class="row"><div class="k k2">《孟子》<br>尽心上</div><div class="v">「<b>夫君子所过者化，所存者神</b>，上下与天地同流。」——「至于是邦也」的最好注脚：走过的地方，人就被他化了一点。</div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　典故图位</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一（图位）</div>
+        <div class="ph" style="height:auto;padding:10px 0 6px;font-size:12px;letter-spacing:.06em;color:#8A8074">待作者供图 · 1776×1328 横幅</div>
+        <details class="prompt" open><summary>提示词（存档）</summary>
+          <p>古淡水墨横幅，纸本米色 #FBF7EC，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面取「夫子至于是邦也，必闻其政」之义：城门外道旁，一辆简朴的牛车停着，孔子（宽衣、无须饰物、神情温和）立于车侧，微微侧身听人说话；对面一位着深衣的该国大夫拱手相询，另一人在旁记录简册；两名弟子侍立在后，子贡在前侧，手执半卷简。远处城门、行人、淡淡远山。人物不作光晕、不作神圣化，衣纹简笔，墨色清透。横幅 4:3，人物居右三分之二，左侧留出道路与远景。不写字、不作夸张手势、不生成任何水印与文字。</p>
+        </details>
+        <div class="note">图注：图到后另补「读图」五条（看孔子侧身的幅度、看大夫的拱手、看记录者的笔、看那辆车、看子贡的位置）。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　两种「求」</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="别人之求与夫子之求的方向相反">
+        <text x="240" y="16" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 同一个「求」字，两个方向</text>
+
+        <rect x="24" y="32" width="206" height="96" fill="#FFFDF6" stroke="#8A8074"/>
+        <text x="127" y="54" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">别人之求</text>
+        <text x="127" y="74" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">向外伸手：打听 · 攀缘 · 献策</text>
+        <text x="127" y="94" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">得到的是「消息」</text>
+        <text x="127" y="114" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">人一走，消息就断</text>
+
+        <rect x="250" y="32" width="206" height="96" fill="#FFFDF6" stroke="#A2503B"/>
+        <text x="353" y="54" text-anchor="middle" font-family="serif" font-size="13" fill="#A2503B">夫子之求</text>
+        <text x="353" y="74" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">向内养德：温 · 良 · 恭 · 俭 · 让</text>
+        <text x="353" y="94" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">得到的是「人愿意说」</text>
+        <text x="353" y="114" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">走到哪儿都有人肯讲</text>
+
+        <line x1="127" y1="128" x2="212" y2="164" stroke="#8A8074" stroke-width="1"/>
+        <line x1="353" y1="128" x2="268" y2="164" stroke="#A2503B" stroke-width="1"/>
+
+        <circle cx="240" cy="182" r="34" fill="#F6F1E3" stroke="#A2503B" stroke-width="1.2"/>
+        <text x="240" y="180" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">以得之</text>
+        <text x="240" y="196" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">不取而致</text>
+
+        <line x1="240" y1="216" x2="240" y2="238" stroke="#A2503B" stroke-width="1.2"/>
+
+        <rect x="110" y="240" width="260" height="34" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="240" y="262" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">夫子也在求，只是他那种求，不是索取</text>
+      </svg>
+      <div class="figcap">子贡没有否认「求」，他只是把「求」的方向掉转了过来。</div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　五德回路</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="温良恭俭让如何通向必闻其政">
+        <text x="240" y="16" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 因在己，果在人</text>
+
+        <rect x="26" y="34" width="118" height="30" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="85" y="54" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">温　和厚</text>
+        <rect x="26" y="70" width="118" height="30" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="85" y="90" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">良　易直</text>
+        <rect x="26" y="106" width="118" height="30" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="85" y="126" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">恭　庄敬</text>
+        <rect x="26" y="142" width="118" height="30" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="85" y="162" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">俭　节制</text>
+        <rect x="26" y="178" width="118" height="30" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="85" y="198" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">让　谦逊</text>
+
+        <text x="85" y="232" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">一只手的五个面</text>
+
+        <line x1="146" y1="121" x2="196" y2="121" stroke="#A2503B" stroke-width="1.2"/>
+        <circle cx="222" cy="121" r="26" fill="#F6F1E3" stroke="#A2503B"/>
+        <text x="222" y="118" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">盛德</text>
+        <text x="222" y="132" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">光辉</text>
+
+        <line x1="248" y1="121" x2="296" y2="121" stroke="#A2503B" stroke-width="1.2"/>
+
+        <rect x="298" y="84" width="156" height="54" fill="#FFFDF6" stroke="#A2503B" stroke-width="1.2"/>
+        <text x="376" y="106" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">接于人</text>
+        <text x="376" y="124" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">人觉得可以放心</text>
+
+        <line x1="376" y1="140" x2="376" y2="170" stroke="#DCD5C8" stroke-width="1"/>
+
+        <rect x="298" y="172" width="156" height="46" fill="#F6F1E3" stroke="#A2503B"/>
+        <text x="376" y="192" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">必闻其政</text>
+        <text x="376" y="208" text-anchor="middle" font-family="serif" font-size="9.5" fill="#8A8074">人家愿意说</text>
+
+        <text x="240" y="276" text-anchor="middle" font-family="serif" font-size="10.5" fill="#8A8074">不是他去拿，是别人肯给——因在己，果在人</text>
+      </svg>
+      <div class="figcap">五德是同一个「厚」在五个接触面上的手感，不是五条并列的优点。</div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　「得」与「德」</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 258" role="img" aria-label="得与德的字形与义理之别">
+        <text x="240" y="16" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 同音两字，一向外一向内</text>
+
+        <rect x="24" y="32" width="206" height="88" fill="#FFFDF6" stroke="#8A8074"/>
+        <text x="127" y="60" text-anchor="middle" font-family="serif" font-size="20" fill="#2F2A24">得</text>
+        <text x="127" y="82" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">彳 + 贝：道上拾贝</text>
+        <text x="127" y="102" text-anchor="middle" font-family="serif" font-size="10.5" fill="#8A8074">向外拿：得物 · 一次即断</text>
+
+        <rect x="250" y="32" width="206" height="88" fill="#FFFDF6" stroke="#A2503B"/>
+        <text x="353" y="60" text-anchor="middle" font-family="serif" font-size="20" fill="#A2503B">德</text>
+        <text x="353" y="82" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">彳 + 直心：道上正心</text>
+        <text x="353" y="102" text-anchor="middle" font-family="serif" font-size="10.5" fill="#8A8074">向内立：得己 · 越久越厚</text>
+
+        <line x1="127" y1="120" x2="216" y2="150" stroke="#8A8074" stroke-width="1"/>
+        <line x1="353" y1="120" x2="264" y2="150" stroke="#A2503B" stroke-width="1"/>
+
+        <rect x="120" y="152" width="240" height="36" fill="#F6F1E3" stroke="#A2503B"/>
+        <text x="240" y="176" text-anchor="middle" font-family="serif" font-size="11.5" fill="#2F2A24">德者，得也（《礼记·乐记》）</text>
+
+        <text x="240" y="212" text-anchor="middle" font-family="serif" font-size="11" fill="#5C5347">子贡说「以得之」，听来也是「以德得之」</text>
+        <text x="240" y="234" text-anchor="middle" font-family="serif" font-size="10.5" fill="#8A8074">不是抢来的，是养出来的</text>
+      </svg>
+      <div class="figcap">上古「得」「德」音同部；这一层呼应，正是「以得之」三字的底子。</div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　子贡：最会说话的人，夸他的老师</div>
+    <p>端木赐，字子贡，卫人。孔门四科，<b>「言语」一项，他与宰我并列第一</b>（《先进》11.3）。同门里口才最好的一个人，说老师「温良恭俭让」——<b>这不是修辞，是他日日相处之后的观察。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">能<br>办事</div><div class="v">《史记·仲尼弟子列传》记他奉孔子之命出使，<b>「存鲁、乱齐、破吴、强晋而霸越」</b>，司马迁评「<b>子贡一出，五国各有变</b>」。<b>这样一个能翻动五国的人，说老师只有五个字。</b></div></div>
+      <div class="row"><div class="k k2">会<br>经商</div><div class="v">「<b>赐不受命，而货殖焉，亿则屡中</b>」（11.19）——判断行情常准。孔子也承认他富。</div></div>
+      <div class="row"><div class="k k2">守墓<br>六年</div><div class="v">孔子卒，弟子服三年，「<b>唯子贡庐于冢上，凡六年，然后去</b>」（《史记·孔子世家》）。<b>说「慎终追远」的是曾子（1.9），把「追远」做得最久的，是子贡。</b></div></div>
+      <div class="row"><div class="k k2">一句<br>终身</div><div class="v">「有一言而可以终身行之者乎？」子曰：「<b>其恕乎！己所不欲，勿施于人。</b>」（15.24）——<b>问的是能终身行的一句，可见他求的是「可久」，不是「可用」。</b></div></div>
+      <div class="row"><div class="k k2">本课<br>的<br>分量</div><div class="v">由一个<b>政治能量极大、商业极成功、口才极好</b>的人来说「老师靠温良恭俭让得人」，<b>这句话就不像鸡汤，像证词。</b>因为这样的人最知道「求」能拿到什么、拿不到什么。</div></div>
+    </div>
+
+    <div class="h2" id="sc-24">附论二　十四年周游与「必闻其政」的实景</div>
+    <p>前 497 年，孔子去鲁适卫；前 484 年返鲁。十四年间，<b>他多数时候没有官职</b>——这正是子禽一问的现实背景。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">行迹</div><div class="v">卫 → 曹 → 宋 → 郑 → 陈 → 蔡 → 楚（至叶）→ 复返卫。<b>「至于是邦」四字，是一段实打实的路程。</b></div></div>
+      <div class="row"><div class="k k2">谁<br>来问</div><div class="v">鲁哀公问「何为则民服」（2.19）；齐景公问政（12.11）；叶公问政（13.16）；卫灵公问阵（15.1）。<b>来问的是国君、是执政，不是他自己找上门。</b></div></div>
+      <div class="row"><div class="k k2">他<br>不答<br>什么</div><div class="v">卫灵公问军阵，他答「未之学也」，<b>次日就走</b>。这一条极要紧：<b>「必闻其政」不等于「什么都说」。</b>有边界，才显出「闻」不是「媚」。</div></div>
+      <div class="row"><div class="k k2">困厄<br>之时</div><div class="v">陈蔡之间绝粮，从者病，子路愠见。孔子仍「弦歌不辍」。——<b>五德不是顺境里的姿态，是在饿着肚子时还剩下的那点分寸。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.9<br>合看</div><div class="v">1.9 讲「一个地方怎么变厚」，1.10 讲「一个人怎么让一个地方愿意开口」。<b>前者靠岁月，后者靠分寸；两章合起来，才是「风化」的全貌。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-25">附论三　五德的谱系：从「光辉」到「软技能」</div>
+    <p>温良恭俭让五字，两千多年来走了三段路：<b>由「德之光」变成「德之目」，再变成「人之术」。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">第一段<br>宋儒</div><div class="v">朱子说「<b>盛德光辉接于人者</b>」——五者是<b>一个德的五种显现</b>。这是最贴近本章的读法。</div></div>
+      <div class="row"><div class="k k2">第二段<br>家训</div><div class="v">明清以下，五字多被编入家训、蒙书，做成<b>子弟的行为条目</b>——由「光辉」降为「规矩」。<b>降了之后，仍有用；但「为何而做」的那一层丢了。</b></div></div>
+      <div class="row"><div class="k k2">第三段<br>今日</div><div class="v">五德被译成 <b>soft skills</b>（软技能），与沟通技巧、情绪管理并列。<b>「软」这个字，正是本章要纠的</b>：它本来是有骨的。</div></div>
+      <div class="row"><div class="k k2">我的<br>判断</div><div class="v"><b>五德的现代名字，不是「软技能」，是「可接近性」（approachability）。</b>它不是让你讨人喜欢，是让人<b>敢把要紧的事交给你说</b>。<b>这是一项社会资本，且是唯一不能速成的一项。</b></div></div>
+      <div class="row"><div class="k k2">回到<br>本章</div><div class="v">子禽只看见「他怎么知道」；子贡答的是「<b>他为什么值得被告诉</b>」。<b>一个问技术，一个答资格。</b>——两千五百年后，这个差别仍然是最要紧的差别。</div></div>
+    </div>
+    <div class="scene">所以这一章，不必读成「孔子真厉害」。它更像一句提醒：<b>你若想知道更多，先让自己成为「别人肯告诉你」的那种人。</b>五德不是门票，是座位——<b>坐得稳，人才肯过来坐你旁边。</b></div>
+
+
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 10 课　v1.0　（2026-11-19）</div>
+  </footer>
+
+</div>
+</body>
+</html>
