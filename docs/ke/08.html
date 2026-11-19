@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>君子不重则不威 · 论语第八课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第一第八章通释：君子不重则不威，学则不固；主忠信；无友不如己者；过则勿惮改。重为人负囊橐而挺立；威取《左传》威仪畏爱象之义；威与固本是一对；与 1.7 三年无改为缓改、此为速改之对读。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E9%87%8D%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(4,86px);gap:14px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(4,1fr);gap:12px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 八章　第 8 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读 1.7</a><a href="#sc-8">字义句读</a><a href="#sc-8a">重字源</a><a href="#sc-8b">威</a><a href="#sc-8c">固</a><a href="#sc-8d">忠信</a><a href="#sc-8e">无友不如己</a><a href="#sc-8f">惮改</a><a href="#sc-9">章旨</a><a href="#sc-10">阴阳</a><a href="#sc-11">存疑</a><a href="#sc-12">双卡</a><a href="#sc-13">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一（待供图）</a><a href="#sc-20">义理图一 三重链</a><a href="#sc-21">义理图二 固两读</a><a href="#sc-22">义理图三 择友三读</a><a href="#sc-23">附论一 春秋威仪</a><a href="#sc-24">附论二 择友公案</a><a href="#sc-25">附论三 两种改</a></div>
+  </div>
+
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+
+    <h1>君子不重则不威</h1>
+    <div class="h1-sub">学而 1.8　底本：朱熹《论语集注》</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「君子不<ruby>重<rt>zhòng</rt></ruby>则不<ruby>威<rt>wēi</rt></ruby>，<ruby>学<rt>xué</rt></ruby>则不<ruby>固<rt>gù</rt></ruby>。主<ruby>忠<rt>zhōng</rt></ruby><ruby>信<rt>xìn</rt></ruby>。无友不如己者。<ruby>过<rt>guò</rt></ruby>则勿<ruby>惮<rt>dàn</rt></ruby>改。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>重</span></div><div class="tzcap"><span>9 画</span><span>站得稳，有分量</span></div></div>
+      <div class="tzitem"><div class="cell"><span>威</span></div><div class="tzcap"><span>9 画</span><span>让人敬你、学你</span></div></div>
+      <div class="tzitem"><div class="cell"><span>固</span></div><div class="tzcap"><span>8 画</span><span>学得牢</span></div></div>
+      <div class="tzitem"><div class="cell"><span>改</span></div><div class="tzcap"><span>7 画</span><span>错了就换</span></div></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="k">重</div><div class="v"><b>不是脸板起来，是人站得住。</b>这个字画的是一个人背着满满一袋东西，还站得笔直。</div></div>
+      <div class="row"><div class="k">威</div><div class="v"><b>别人敬你，还愿意照你学。</b>不是凶，不是嗓门大，是你说的话和做的事是一回事。</div></div>
+      <div class="row"><div class="k">固</div><div class="v"><b>学得牢，抓得住。</b>像用钉子钉进木头，不是用胶水粘上去。</div></div>
+      <div class="row"><div class="k">改</div><div class="v"><b>错了就换，别怕难。</b>「惮」是怕麻烦、怕丢脸——真正的难不在认错，在当众认错。</div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead">一个人先要<b>站得稳、有分量</b>；没有分量，别人不会敬你，你学的东西也挂不住。心里要有<b>忠信</b>打底；交朋友要交<b>能互相往上抬</b>的；做错了，<b>别怕麻烦，赶快改</b>。</p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p class="lead">跟我念：<br>「君子不厚重，就没有威严；学的东西也不牢固。要把忠信当作主心骨。不要交不能互相长进的朋友。有了过错，不要怕难而不改。」<br>念完想一想：为什么「站不稳」会让人「学不牢」？</p>
+
+    <p class="lead">顺带看一眼这个字：<b>「重」上面是一个背着大袋子的「人」。</b>袋子装满，人还站得直——这才叫有分量。</p>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene">
+      练字课上，老师让你写一横。你手腕一甩就写过去，歪了；同学在旁边笑，你也笑。<b>这是「轻」。</b><br>
+      老师不说话，自己坐下来写一横：腰立直，肩沉下去，笔走得很慢，一笔足足走了五秒。教室里一下子安静了——<b>这就是「威」，不用喊。</b><br>
+      你照她的样子重新写：腰立直，肩沉下去。写了十遍，第十遍那一横才稳住——<b>这就是「固」，钉进去了。</b><br>
+      下课时你说：「刚才那一遍我写错了，我以为快就是好。」——<b>这就是「过则勿惮改」。</b><br>
+      一句「我错了」说得不难，难的是当着笑你的人说。说出来了，你反而站得比刚才稳。
+    </div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <ol class="list">
+      <li>为什么「站不稳」会「学不牢」？——因为手一飘，字就飘；心一飘，记的东西就散。不是学得少，是没处放。</li>
+      <li>「威」是不是要让人怕你？——不是。真正的威，是别人敬你，还愿意照着你学。让人怕的，多半是凶，不是威。</li>
+      <li>「无友不如己者」是不是只交比我强的朋友？——那样的话，比你强的人也不肯交你了。它的意思是：别专挑让自己舒服的朋友，要挑能互相往上抬的。</li>
+    </ol>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <ol class="list">
+      <li>先站直，再写字；先坐稳，再读书。</li>
+      <li>想让人敬你，不靠嗓门，靠你说的和做的是一回事。</li>
+      <li>朋友之间，看谁能把谁往上抬，不看谁比谁强。</li>
+      <li>发现自己错了，当天就说，别过夜。</li>
+    </ol>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">勘俗见</div><div class="v">常见误读有三：把「重」读成<b>「板着脸、不苟言笑」</b>；把「威」读成<b>「让孩子怕」</b>；把「无友不如己」读成<b>「只跟成绩好的人玩」</b>。<b>三处都读偏了方向：重是分量，威是可信，择友是互相长进。</b></div></div>
+      <div class="row"><div class="k k2">现代<br>对照</div><div class="v">今天的「重」不在脸上，在<b>一致</b>：说八点睡就八点睡，说不用手机吃饭就不看手机。<b>孩子判断一个大人有没有分量，看的正是这种一致</b>，不是音量。</div></div>
+      <div class="row"><div class="k k2">常变<br>主线</div><div class="v"><b>「威」的样子一直在变：跪坐听训变成对坐商量，戒尺变成规则表，家长会上的训话变成每天十分钟的聊天。</b>不变的是那一条：<b>你说的话，你自己先做到。</b></div></div>
+      <div class="row"><div class="k k2">教与学<br>二分</div><div class="v"><b>「重」与「威」偏「学」</b>——孩子先看见一个站得住的大人，才学会站；<b>「固」与「改」偏「习」</b>——轮到他写十遍、轮到他认错。只讲道理不示范，孩子学到的只是道理；只示范不让他练，孩子只是观众。</div></div>
+      <div class="row"><div class="k k2">时代<br>落点</div><div class="v">这一代孩子最不缺信息，最缺<b>「挂得住」的结构</b>：一天里有一件必须做完的事、一个必须守的时刻。<b>「学则不固」在今天多半不是智力问题，是节奏问题</b>——什么都碰一下，什么都不落地。</div></div>
+      <div class="row"><div class="k k2">融西<br>对照</div><div class="v">「重」在西方的近义词是 <b>gravitas</b>——拉丁语本义就是「重量」，罗马人把它列为领袖第一德；今天英美讲 <b>executive function（自控与执行功能）</b>，研究发现它与学业成就的相关，常常强过智商。两边说的是同一件事：<b>先有分量与自控，才谈得上才学。</b></div></div>
+      <div class="row"><div class="k k2">可做<br>一件</div><div class="v">挑一件小事——进门先洗手、睡前把书包收好——<b>全家一起守二十一天，大人守得比孩子更严。</b>第二十二天问孩子：这几天你看见谁做到了、谁没做到？<b>让他自己发现「分量」是什么。</b></div></div>
+    </div>
+  </section>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页 · 古今汇观</div>
+
+    <h1>君子不重则不威，学则不固</h1>
+    <div class="h1-sub">连读 1.7 · 字义句读 · 重字源 · 威 · 固 · 忠信 · 无友不如己 · 惮改 · 章旨 · 阴阳 · 存疑 · 双卡 · 跨典</div>
+
+    <div class="src">
+      <span class="who">子曰：</span>「君子不重则不威，学则不固。主忠信。无友不如己者。过则勿惮改。」
+    </div>
+
+    <div class="h2" id="sc-lian">零　连读 1.7：同一个人，两种改</div>
+    <p class="leadline">上一章说「三年无改」，这一章说「勿惮改」。同一部书里紧挨着，两种「改」，方向相反。</p>
+    <div class="scene">1.7「三年无改于父之道」——讲的是<b>守</b>：有些东西，不急着动。1.8「过则勿惮改」——讲的是<b>改</b>：有些东西，一刻也不许拖。<br><br>
+    粗看像矛盾，细看是分工：<b>该慢的是「道」，该快的是「过」。</b>分不清这两样的人，一辈子都在做反事——该守的老规矩，一有新鲜就想换掉；该改的老毛病，一拖就是三十年。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">缓与<br>速</div><div class="v">1.7 的「无改」不是不改，是<b>不忍遽改</b>——手里还热着，别急着推翻。1.8 的「勿惮改」是<b>不容稍缓</b>——朱子说「自治不勇，则恶日长」。<b>慢，是因为那里有敬；快，是因为那里有险。</b></div></div>
+      <div class="row"><div class="k k2">判据<br>一条</div><div class="v">拿什么分「道」与「过」？<b>看它对不对人有害。</b>一条做法只是旧、只是不顺手，那是「道」的范围，可以慢慢来；一条做法已经在害人——害自己、害孩子、害做事的人——那就是「过」，一天都不该留。</div></div>
+      <div class="row"><div class="k k2">接上<br>一章</div><div class="v">1.7 立的是「时间里的孝」，1.8 立的是「身上的分量」。一个人<b>有分量，才守得住该守的；有勇气，才改得掉该改的。</b>两章合起来，是一个人的「稳」与「活」。</div></div>
+    </div>
+
+    <div class="h2" id="sc-8">一　字义与句读</div>
+    <p class="leadline">四句，四层，一层托一层。先把字认准，句读才不会走样。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">重</div><div class="v"><b>厚重。</b>不是迟缓，不是冷脸，是<b>有分量、立得住</b>。朱子：「重，厚重。」</div></div>
+      <div class="row"><div class="k k2">威</div><div class="v"><b>威严。</b>朱子：「威，威严也。」但「威严」二字今天已被读成「凶」，须回到春秋语境去看（见第三节）。</div></div>
+      <div class="row"><div class="k k2">固</div><div class="v"><b>坚固</b>（朱子）。另一读作<b>固蔽、蔽塞</b>（孔安国），两说并见邢昺《注疏》，见第四节。</div></div>
+      <div class="row"><div class="k k2">主</div><div class="v"><b>以之为主。</b>不是「主张」，是<b>把它放在最里面、当底子</b>。朱子：「学者必以是为主焉。」</div></div>
+      <div class="row"><div class="k k2">无友<br>不如己</div><div class="v">「无」通「毋」，禁止辞（朱子）。「不如己」三字是全章最难处，见第六节。</div></div>
+      <div class="row"><div class="k k2">惮</div><div class="v"><b>畏难。</b>朱子：「惮，畏难也。」不是「怕错」，是<b>怕改起来费劲、丢脸</b>。</div></div>
+    </div>
+    <div class="quote"><span class="t">句读</span>君子不重，则不威；学，则不固。主忠信。无友不如己者。过，则勿惮改。<br><span class="note2">前三句一读到底：不重 → 不威 → 学不固，是一条因果；后三句转为三件实事：立底、择友、改过。</span></div>
+
+    <div class="h2" id="sc-8a">二　重：一个人背着装满的袋子，还站得直</div>
+    <p class="leadline">「重」这个字，画的不是表情，是一个人的<b>姿势</b>。</p>
+    <p>甲骨文的「重」，从「人」从「東」。「東」不是方向，是<b>扎起来的囊橐</b>——一只装满东西、捆紧口的袋子。整个字就是<b>一个人背着满满一袋东西</b>。金文或在下面加「土」（壬，人挺立于地），强调「站住」。《说文》：「重，厚也。从壬，东声。」段玉裁注：「按壬者，人挺立于地，为厚重象」「厚斯重矣，引申为郑重、重叠。」</p>
+    <div class="scene">请把这两层分开看：<b>「背满」是分量，「挺立」是姿态。</b>只背满而不挺立，是压弯了的人；只挺立而不背满，是空架子。<b>「重」是两样同时成立——有东西在身，而且站得住。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">不是<br>慢</div><div class="v">今人把「稳重」读成「说话慢、动作慢、不表态」。<b>那是慢，不是重。</b>重是<b>话有内容、事有交代、人能担事</b>——他慢，是因为在想；他快，也照样重。</div></div>
+      <div class="row"><div class="k k2">不是<br>冷</div><div class="v">把脸板起来、不笑、少说话，是<b>「威」的假货</b>，也是最省力的一种装。真正的重里带着温度：<b>他记得你的事，他说过的话算数。</b></div></div>
+      <div class="row"><div class="k k2">壁厚</div><div class="v">用我们自己的话说：<b>「重」是一只器的壁厚。</b>器要能盛，先要有壁；壁太薄，装什么漏什么。「君子不器」不是不要成器，是<b>可器而不着于器</b>——但成器的头一件事，是壁先厚起来。</div></div>
+      <div class="row"><div class="k k2">今日<br>何处</div><div class="v">不在脸上，在<b>一致</b>：说几点到就几点到；答应了的事，哪怕没人盯着也做完；说过「我不知道」就说，不糊。<b>一致攒够了，人就有分量；分量是攒出来的，不是摆出来的。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-8b">三　威：可畏，且可象</div>
+    <p class="leadline">「威」在孔子那个时代，不是「凶」，是<b>「让人敬，并且让人愿意照着学」</b>。这句话有出处。</p>
+    <p>《左传·襄公三十一年》，卫侯问北宫文子什么叫「威仪」，答曰：「<b>有威而可畏谓之威，有仪而可象谓之仪。</b>君有君之威仪，其臣畏而爱之，则而象之，故能有其国家，令闻长世……<b>是以上下能相固也。</b>」</p>
+    <div class="scene">这段话里藏着三个字，正解本章：<b>畏、爱、象。</b>畏是「有分量，不敢轻慢」；爱是「敬里有亲」；象是<b>「可以照着做」</b>。<br><br>
+    所以「威」从来不是单向的压迫，它是<b>一种可被模仿的存在</b>：<b>因为你站得住，别人才敢照着你站。</b>只让人怕的，是势；让人又敬又愿意照做的，才是威。</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">畏而<br>不爱</div><div class="v">只有畏，是<b>权势</b>。人前低头，人后绕道；你一走，规矩就散。<b>那不叫威，那叫怕。</b></div></div>
+      <div class="row"><div class="k k2">爱而<br>不象</div><div class="v">只有爱，是<b>好人缘</b>。大家喜欢你，但没人照你做；你说的话好听，落不到别人身上。<b>那也不叫威。</b></div></div>
+      <div class="row"><div class="k k2">可象</div><div class="v">「象」是威的试金石：<b>你做的事，别人学得会吗？</b>你若靠天赋、靠脾气、靠位置，别人学不会，那就只是你的个人风格；你若靠一套能重复的做法，别人学得会——<b>那才叫威。</b></div></div>
+      <div class="row"><div class="k k2">今日<br>错位</div><div class="v">今天最常见的错位，是<b>用「怕」冒充「威」</b>：家长靠吼，主管靠压，老师靠罚。短期有效，长期只剩一件事——<b>人学会在你面前装，学会在你背后散。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-8c">四　固：威与固，本是一对</div>
+    <p class="leadline">这一节是本课最要紧的一处发现：<b>「威」和「固」，在《左传》里原本就是一对词。</b></p>
+    <p>北宫文子论威仪，落脚一句是「<b>是以上下能相固也</b>」——威仪的功用，正是让人与人之间「相固」。<b>威不是用来压人的，是用来把关系固住的。</b>孔子说「不重则不威，学则不固」，正接在这条线上：<b>重 → 威 → 固，不是两句并列，是一条链。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">第一<br>读</div><div class="v"><b>固＝坚固</b>（朱子）。「轻乎外者，必不能坚乎内，故不厚重则无威严，而所学亦不坚固也。」——外面浮的人，里面一定不牢。<b>学的东西挂不住，是因为挂它的钉子松了。</b></div></div>
+      <div class="row"><div class="k k2">第二<br>读</div><div class="v"><b>固＝固蔽、蔽塞</b>（孔安国）。「又当学先王之道，以致博闻强识，则不固蔽也。」——不学，则见识闭塞不通。郑玄注《曲礼》「固，谓不达于礼」，焦循《论语补疏》引之以证此说；杨逢彬亦以时代用法判孔说为近。</div></div>
+      <div class="row"><div class="k k2">两读<br>相通</div><div class="v">看似相反，其实是一件事的两面：<b>学不牢的人，也一定学不通。</b>钉子没钉进去，木头就没打开——<b>「不固」既是「不牢」，也是「不通」。</b>所以不必硬分胜负，取「坚固」为主读（合于本章句法：「不重则……」），存「固蔽」为第二读。</div></div>
+      <div class="row"><div class="k k2">为何<br>连着</div><div class="v">因为「固」的根在<b>关系</b>上：人不重，就没有可象之威；没有可象之威，就没有人跟着你做；没有人跟着你做，<b>你学的那点东西就只在你一个人身上，一散就没了。</b>学之所以能固，靠的是一群人互相钉住。</div></div>
+    </div>
+
+    <div class="h2" id="sc-8d">五　主忠信：底与壁</div>
+    <p class="leadline">如果说「重」是壁，那么「忠信」就是<b>底</b>——器里真正盛东西的那一面。</p>
+    <p>朱子注：「人不忠信，则事皆无实，为恶则易，为善则难，故学者必以是为主焉。」<b>「事皆无实」四个字最重</b>：不忠不信的人，做的事看着成立，其实里头是空的。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">忠</div><div class="v"><b>尽己。</b>对自己那一头：答应的事，用尽力气做到；做不到，早说。<b>忠不是忠君，是对事尽己。</b></div></div>
+      <div class="row"><div class="k k2">信</div><div class="v"><b>不欺。</b>对别人那一头：说的话与知道的事对得上；不知道就说不知道。<b>信不是不失约，是不糊人。</b></div></div>
+      <div class="row"><div class="k k2">为何<br>是「主」</div><div class="v">因为它是<b>所有别的德行的底座</b>：一个人不忠不信，他的聪明会变成算计，他的勤快会变成表演，他的礼会变成客套。<b>底一虚，壁上挂的一切都掉下来。</b></div></div>
+      <div class="row"><div class="k k2">与上<br>一句</div><div class="v">「重」讲的是<b>别人看得见的分量</b>，「忠信」讲的是<b>没人看见时你是什么样</b>。两样合起来才立得住：<b>外面有分量，里面不空。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-8e">六　无友不如己者：一句吵了两千年的话</div>
+    <p class="leadline">这五个字，从皇侃到苏东坡到王夫之，一路有人反对。反对得最有道理的一条是：<b>若人人都只交比自己强的，那比你强的人凭什么交你？</b></p>
+    <div class="quote"><span class="t">皇侃《论语义疏》</span>若人皆慕胜己为友，则胜己者岂友我耶？</div>
+    <div class="quote"><span class="t">苏轼《论语说》</span>世之陋者乐以不己若者为友，则自足而日损，故以此戒之。如必胜己而后友，则胜己者亦不与吾友矣。</div>
+    <div class="quote"><span class="t">王夫之《读四书大全说》</span>安所得必胜己者而友之！必求胜己，则友孤矣。</div>
+    <div class="scene">三家不是要驳孔子，是在替这五个字<b>找一条不荒唐的读法</b>。三条线索合起来，读法就出来了：</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">目的<br>在哪</div><div class="v">朱子：「<b>友所以辅仁</b>，不如己，则无益而有损。」——「友」的功能是<b>辅仁</b>，不是结伴、不是资源、不是热闹。所以判断标准不在地位、不在才学高下，<b>在「能不能互相把仁往上抬」</b>。</div></div>
+      <div class="row"><div class="k k2">动机<br>在哪</div><div class="v">东坡点出的是<b>「自足」</b>：人爱找不如自己的，因为舒服、因为被捧着。<b>「无友不如己」戒的是这份自足</b>，不是禁你交凡人。</div></div>
+      <div class="row"><div class="k k2">蔡谟<br>之解</div><div class="v">「上同乎胜己所以进也，下同乎不如己所以退也。」《韩诗外传》记南假子语同此意：「<b>高比所以广德也，下比所以狭行也。</b>」——<b>向上比，德量变宽；向下比，行履变窄。</b></div></div>
+      <div class="row"><div class="k k2">另一<br>读法</div><div class="v">亦有解作「<b>没有朋友是不如我的</b>」——即见人人皆有所长，己常有所短。这一读把「无」当「没有」，文法上可通，义理上也深：<b>它把「择友」翻成了「看人」。</b>两读并存，各有其用。</div></div>
+      <div class="row"><div class="k k2">定解</div><div class="v"><b>不必找比自己强的，但不可专找让自己舒服的。</b>择友的标准不是「他比我强」，是「<b>我们能不能把彼此往上抬</b>」。一个肯说你错处的人，比十个夸你的人有用；一个只会陪你骂人的朋友，是最贵的一种耗损。</div></div>
+    </div>
+
+    <div class="h2" id="sc-8f">七　过则勿惮改：怕的不是错，是难</div>
+    <p class="leadline">这一句常被读成「有错就改」，太轻了。朱子注里有一个字，把它压住了：<b>惮是畏难，不是畏错。</b></p>
+    <div class="quote"><span class="t">朱熹《集注》</span>惮，畏难也。自治不勇，则恶日长，故有过则当速改，不可畏难而苟安也。</div>
+    <div class="quote"><span class="t">程子</span>学问之道无他也，知其不善，则速改以从善而已。</div>
+    <div class="scene">人为什么明知有错还不改？多半不是不知道，是<b>改起来太麻烦</b>：要认、要赔、要重来、要在人前丢一次脸。<b>「惮」字抓的正是这一层——不是良心坏了，是力气不够。</b></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">恶日<br>长</div><div class="v">朱子说「则恶日长」：<b>错不会自己停在那里，它会自己长。</b>今天拖一句道歉，明年就要拖一整件事。拖延不是把问题冻住，是把问题养大。</div></div>
+      <div class="row"><div class="k k2">苟安</div><div class="v">「畏难而苟安」——<b>苟安是这世上最贵的一种安稳。</b>看着没事，其实是用明天的利滚今天的账。</div></div>
+      <div class="row"><div class="k k2">与<br>1.7<br>对读</div><div class="v">1.7 要你「缓」：对父之道，三年不忍遽改。1.8 要你「速」：对自己的过，一刻不肯苟安。<b>一缓一速，正是同一个人身上的两种德：敬与勇。</b>只会缓的人，守着旧错一辈子；只会速的人，把该敬的也一并推翻。</div></div>
+      <div class="row"><div class="k k2">改的<br>范围</div><div class="v">注意「过」的边界：<b>「过」是有害的那部分，不是「与我不同」的那部分。</b>把别人的不同当过错去改，是另一种不改——不肯改自己的窄。</div></div>
+    </div>
+    <div class="h2" id="sc-9">八　章旨：一条链，不是四句格言</div>
+    <p class="leadline">四句话，读成四条格言，就散了；读成一条链，才立得住。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">链</div><div class="v"><b>重 → 威 → 固</b>：有分量，才让人敬而愿学；有人愿学，学才不只在自己身上，才固得住。</div></div>
+      <div class="row"><div class="k k2">底</div><div class="v"><b>主忠信</b>：这一切的底。底一虚，分量是装的，威是势，学是话。</div></div>
+      <div class="row"><div class="k k2">助</div><div class="v"><b>无友不如己</b>：一个人钉不住自己，要靠别人钉。<b>择友是把「固」外包出去的那一半。</b></div></div>
+      <div class="row"><div class="k k2">机</div><div class="v"><b>过则勿惮改</b>：链会锈，底会漏，人要能自己修。<b>改过是这套结构的自愈机制。</b></div></div>
+      <div class="row"><div class="k k2">游氏<br>之评</div><div class="v">游氏曰：「君子之道，<b>以威重为质，而学以成之</b>。学之道，必以忠信为主，而以胜己者辅之。然或吝于改过，则终无以入德，而贤者亦未必乐告以善道，故以过勿惮改终焉。」——<b>宋人已把这条链说全了：质、成、主、辅、终，五个字，五道工序。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-10">九　阴阳：收与发</div>
+    <p class="leadline">一章四句，正好是一收一发、一底一助、一守一改。</p>
+    <div class="chips"><span class="chip yin">重 · 收</span><span class="chip yang">威 · 发</span><span class="chip yin">忠信 · 底</span><span class="chip yang">友 · 助</span><span class="chip yang">改 · 转</span></div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">重是<br>阴</div><div class="v"><b>往里收、往厚走。</b>不显、不争、不解释，只把自己压实。阴不是弱，是<b>蓄</b>。</div></div>
+      <div class="row"><div class="k k2">威是<br>阳</div><div class="v"><b>往外发、被人见。</b>但阳必须自阴出：<b>没有蓄过的发，是躁；蓄足了才发，才是威。</b></div></div>
+      <div class="row"><div class="k k2">固是<br>合</div><div class="v"><b>收得住，又发得出，才叫固。</b>只收不发，是一潭死水；只发不收，是一阵风。学之所以能固，是阴阳交而成形。</div></div>
+      <div class="row"><div class="k k2">不固<br>之象</div><div class="v"><b>「学则不固」，说白了是阳气一路发散，没有阴去承接。</b>今天学十样、明天忘九样，不是脑子不够，是身上没有一处蓄得住。</div></div>
+      <div class="row"><div class="k k2">五蕴<br>此处</div><div class="v">本章<b>不宜硬配五蕴</b>：重、威、固都是「形质与关系」层面的词，硬套色受想行识，就成了凑栏目。<b>只留一句：重是壁，忠信是底，学是器里真正盛住的那点东西。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-11">十　存疑：四处未定</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div>「学则不固」是承「不重」而来，还是独立一句？作「君子不重则不威，学则不固」，则「固」取坚固（朱子）；若读作「学，则不固」，则「固」易取固蔽（孔安国、焦循）。<b>句读一动，字义就跟着动</b>——这是本章最需要留心的一处。</div></div>
+      <div class="q"><span>02</span><div>《子罕》9.25 重出此章后半：「主忠信，毋友不如己者，过则勿惮改」，无前二句。朱子注曰「<b>重出而逸其半</b>」。这说明后半三句原可能单行，编者合为一章——<b>合得好不好，历来无定论</b>。</div></div>
+      <div class="q"><span>03</span><div>「无」通「毋」为禁止辞，朱子已明；但若作「没有」解，全句义理转向（见第六节另一读法）。<b>两读并存，取其一而不废其二。</b></div></div>
+      <div class="q"><span>04</span><div>「威」字本义，《说文》训「姑也」（威姑，即婆婆），与春秋「威仪」之「威」已非一义。本章之「威」当从《左传》北宫文子之义，不从《说文》。<b>字源与词义在此分叉，不可硬牵。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-12">十一　双卡对照</div>
+    <div class="cards">
+      <div class="cardshd"><span>常见读法</span><span>本章本义</span></div>
+      <div class="pair"><div class="a">重＝板着脸、不笑、说话慢</div><div class="b"><b>重＝有分量、站得住</b>：一致、担事、话有内容</div></div>
+      <div class="pair"><div class="a">威＝让人怕</div><div class="b"><b>威＝畏而爱之、则而象之</b>：可敬，且可被照着做</div></div>
+      <div class="pair"><div class="a">学则不固＝学了就不固执</div><div class="b"><b>不重则学不牢（亦不通）</b>：钉子松了，挂不住</div></div>
+      <div class="pair"><div class="a">无友不如己＝只交比自己强的</div><div class="b"><b>戒自足、以辅仁为准</b>：不找舒服的，找能互抬的</div></div>
+      <div class="pair"><div class="a">过则勿惮改＝有错就改</div><div class="b"><b>惮是畏难</b>：怕的是麻烦与丢脸，故曰「恶日长」</div></div>
+      <div class="pair"><div class="a">忠信＝老实、不撒谎</div><div class="b"><b>忠是尽己，信是不欺</b>：底不虚，事才有实</div></div>
+    </div>
+    <div class="cardhint">左栏是今天最流行的读法，右栏是回到注疏与时代语境后的读法。</div>
+
+    <div class="h2" id="sc-13">十二　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《学记》</div><div class="v">「<b>独学而无友，则孤陋而寡闻。</b>」——正为「无友不如己」作注：学不能关门，门要有人进出。</div></div>
+      <div class="row"><div class="k k2">《荀子》</div><div class="v">「君子居必择乡，游必就士，所以<b>防邪僻而近中正</b>也。」——择友不是势利，是<b>选环境</b>；环境比意志更早起作用。</div></div>
+      <div class="row"><div class="k k2">《颜氏<br>家训》</div><div class="v">「人在年少，神情未定，所与款狎，熏渍陶染……<b>潜移暗化，自然似之。</b>」——少年与谁亲近，最后会长成谁的样子，<b>且是在不知不觉中</b>。</div></div>
+      <div class="row"><div class="k k2">《卫灵公》<br>15.30</div><div class="v">「<b>过而不改，是谓过矣。</b>」——过之所以为过，不在犯，在留。<b>不改，才把「一件事」变成「一个过」。</b></div></div>
+      <div class="row"><div class="k k2">《雍也》<br>6.3</div><div class="v">「<b>不贰过。</b>」——颜回之能，不在不犯错，在<b>不犯第二次同一个错</b>。这是「改」的最高标准。</div></div>
+      <div class="row"><div class="k k2">《孟子》</div><div class="v">「子路，人告之以有过则<b>喜</b>。」——听到自己有过错就高兴，因为<b>又得了一处可改的地方</b>。此为「勿惮改」的心法。</div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　典故图位</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一 · 负囊而行（待作者供图）</div>
+        <div class="ph">图位 · 1328×1776 竖幅 · 古淡水墨</div>
+        <details class="prompt"><summary>供图提示词</summary>
+          <p>古淡水墨立轴，纸本米色，#FBF7EC 底，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面：一条山间石径，一位青年背着装满竹简的旧布囊，囊口扎紧、压得肩背下沉，但他腰背笔直、步子稳；径旁一株老树，树下有童子仰头看他，手里握着半卷竹简。远山淡墨，留白多。人物不作神像，不作圣人相，衣纹简笔。构图竖幅 3:4，人物居下三分之二，上方留白题字位。右下角不生成任何水印与文字。</p>
+        </details>
+        <div class="note">图位留白。图到后此处换为图版，并补五条「读图」。</div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　三重链</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 330" role="img" aria-label="重到威到固的链条示意图">
+        <defs>
+          <marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L7,4.5 L0,9 z" fill="#A2503B"/>
+          </marker>
+          <marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L7,4.5 L0,9 z" fill="#7C6D5C"/>
+          </marker>
+        </defs>
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 一章四句的结构</text>
+
+        <rect x="70" y="34" width="300" height="58" fill="#FFFDF6" stroke="#A2503B" stroke-width="1"/>
+        <text x="220" y="58" text-anchor="middle" font-family="serif" font-size="16" fill="#2F2A24" letter-spacing="3">重</text>
+        <text x="220" y="78" text-anchor="middle" font-family="serif" font-size="11.5" fill="#5C5347">背满而挺立 · 有分量</text>
+
+        <line x1="220" y1="92" x2="220" y2="118" stroke="#A2503B" stroke-width="1.2" marker-end="url(#ar1)"/>
+
+        <rect x="70" y="120" width="300" height="58" fill="#FFFDF6" stroke="#A2503B" stroke-width="1"/>
+        <text x="220" y="144" text-anchor="middle" font-family="serif" font-size="16" fill="#2F2A24" letter-spacing="3">威</text>
+        <text x="220" y="164" text-anchor="middle" font-family="serif" font-size="11.5" fill="#5C5347">畏 · 爱 · 象 —— 可被照着做</text>
+
+        <line x1="220" y1="178" x2="220" y2="204" stroke="#A2503B" stroke-width="1.2" marker-end="url(#ar1)"/>
+
+        <rect x="70" y="206" width="300" height="58" fill="#FFFDF6" stroke="#A2503B" stroke-width="1"/>
+        <text x="220" y="230" text-anchor="middle" font-family="serif" font-size="16" fill="#2F2A24" letter-spacing="3">固</text>
+        <text x="220" y="250" text-anchor="middle" font-family="serif" font-size="11.5" fill="#5C5347">学得牢 · 上下相固</text>
+
+        <path d="M382,235 C440,235 440,63 382,63" fill="none" stroke="#7C6D5C" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#ar2)"/>
+        <text x="452" y="150" text-anchor="middle" font-family="serif" font-size="10.5" fill="#7C6D5C" transform="rotate(90 452 150)">学成则人更厚</text>
+
+        <rect x="70" y="278" width="300" height="36" fill="#F6F1E3" stroke="#DCD5C8"/>
+        <text x="220" y="300" text-anchor="middle" font-family="serif" font-size="11.5" fill="#5C5347">底：主忠信　｜　助：择友　｜　机：改过</text>
+      </svg>
+      <div class="figcap">「重→威→固」不是三句格言，是一条链；虚线回环表示学成之后人又更厚一层。</div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　「学则不固」两读</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 250" role="img" aria-label="学则不固两读分叉示意图">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 一个字的两条读法</text>
+
+        <rect x="176" y="30" width="128" height="42" fill="#FFFDF6" stroke="#A2503B"/>
+        <text x="240" y="57" text-anchor="middle" font-family="serif" font-size="14" fill="#2F2A24">君子不重</text>
+
+        <line x1="240" y1="72" x2="130" y2="104" stroke="#A2503B" stroke-width="1"/>
+        <line x1="240" y1="72" x2="350" y2="104" stroke="#A2503B" stroke-width="1"/>
+
+        <rect x="38" y="106" width="184" height="66" fill="#FFFDF6" stroke="#7C6D5C"/>
+        <text x="130" y="128" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">固＝坚固</text>
+        <text x="130" y="146" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">朱子取此读</text>
+        <text x="130" y="162" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">钉松了，挂不住</text>
+
+        <rect x="258" y="106" width="184" height="66" fill="#FFFDF6" stroke="#7C6D5C"/>
+        <text x="350" y="128" text-anchor="middle" font-family="serif" font-size="13" fill="#2F2A24">固＝固蔽</text>
+        <text x="350" y="146" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">孔安国 · 郑玄 · 焦循</text>
+        <text x="350" y="162" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">木头没打开，学不通</text>
+
+        <line x1="130" y1="172" x2="240" y2="202" stroke="#7C6D5C" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="350" y1="172" x2="240" y2="202" stroke="#7C6D5C" stroke-width="1" stroke-dasharray="4 4"/>
+
+        <rect x="96" y="204" width="288" height="38" fill="#F6F1E3" stroke="#DCD5C8"/>
+        <text x="240" y="228" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">两读相通：不牢的学，正是不通的学</text>
+      </svg>
+      <div class="figcap">主读取「坚固」，因本章句法承「不重」而来；「固蔽」并存为第二读。</div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　「无友不如己」三读</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 290" role="img" aria-label="无友不如己三读对照示意图">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12.5" fill="#8A8074" letter-spacing="2">示意 · 五个字，三种读法</text>
+
+        <rect x="20" y="34" width="136" height="118" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="88" y="58" text-anchor="middle" font-family="serif" font-size="12.5" fill="#2F2A24">只交胜己者</text>
+        <text x="88" y="80" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">皇侃已驳</text>
+        <text x="88" y="100" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">胜己者岂友我？</text>
+        <text x="88" y="120" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">必求胜己，则友孤</text>
+        <text x="88" y="140" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">此读不成立</text>
+
+        <rect x="172" y="34" width="136" height="118" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="240" y="58" text-anchor="middle" font-family="serif" font-size="12.5" fill="#2F2A24">戒「自足」</text>
+        <text x="240" y="80" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">苏轼</text>
+        <text x="240" y="100" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">乐以不己若者为友</text>
+        <text x="240" y="120" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">则自足而日损</text>
+        <text x="240" y="140" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">戒的是舒服</text>
+
+        <rect x="324" y="34" width="136" height="118" fill="#FFFDF6" stroke="#DCD5C8"/>
+        <text x="392" y="58" text-anchor="middle" font-family="serif" font-size="12.5" fill="#2F2A24">以「辅仁」为准</text>
+        <text x="392" y="80" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">朱熹</text>
+        <text x="392" y="100" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">友所以辅仁</text>
+        <text x="392" y="120" text-anchor="middle" font-family="serif" font-size="10.5" fill="#5C5347">不在位、不在才</text>
+        <text x="392" y="140" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">此读立得住</text>
+
+        <line x1="88" y1="152" x2="240" y2="184" stroke="#DCD5C8" stroke-width="1"/>
+        <line x1="240" y1="152" x2="240" y2="184" stroke="#DCD5C8" stroke-width="1"/>
+        <line x1="392" y1="152" x2="240" y2="184" stroke="#DCD5C8" stroke-width="1"/>
+
+        <rect x="66" y="186" width="348" height="40" fill="#FFFDF6" stroke="#A2503B"/>
+        <text x="240" y="211" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">定解：不必找比我强的，但不可专找让我舒服的</text>
+
+        <rect x="66" y="236" width="348" height="40" fill="#F6F1E3" stroke="#DCD5C8"/>
+        <text x="240" y="261" text-anchor="middle" font-family="serif" font-size="11.5" fill="#5C5347">另读：「没有朋友是不如我的」——见贤思齐，翻「择友」为「看人」</text>
+      </svg>
+      <div class="figcap">三读并列，可见此句之难不在文字，在「友」的目的究竟为何。</div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　春秋的「威仪」：一个词的时代</div>
+    <p>孔子说「不重则不威」时，「威」在他耳朵里是什么声音？不是「严厉」，是「威仪」的威。</p>
+    <p>《左传·襄公三十一年》记：卫侯在楚，见令尹围之威仪，觉其「似君」，因而问北宫文子「何谓威仪」。答曰：「有威而可畏谓之威，有仪而可象谓之仪。君有君之威仪，其臣畏而爱之，则而象之，故能有其国家，令闻长世。臣有臣之威仪，其下畏而爱之，故能守其官职，保族宜家。<b>顺是以下皆如是，是以上下能相固也。</b>」</p>
+    <p>这段话透露三层：<b>其一，「威」与「仪」是配套的</b>——威在气，仪在形，一内一外；<b>其二，威的检验标准是「可象」</b>——能不能被人照着做；<b>其三，威的功用是「相固」</b>——把君臣上下固在一起，不是压住。</p>
+    <div class="scene">春秋是「礼」还在、但正在崩的时代。<b>贵族社会靠两样东西维系秩序：一是刑，二是威仪。</b>刑在外，威仪在内。一个人失了威仪，不只丢脸，是<b>失了「为民之则」的资格</b>——《左传》同篇引《诗》「敬慎威仪，惟民之则」，说的正是这个。<br><br>
+    孔子把「威」从贵族的仪仗里拿出来，<b>改接到「重」上</b>：不靠车马服饰、不靠世卿之位，靠你这个人有没有分量。<b>这是把「威」平民化了，也是把它内在化了。</b></div>
+
+    <div class="h2" id="sc-24">附论二　「无友不如己」千年公案</div>
+    <p class="leadline">这一句是《论语》里被反驳最多的一句。把诸家原文摆在一起，反而最清楚。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">皇侃</div><div class="v">「若人皆慕胜己为友，则胜己者岂友我耶？」——最早点破逻辑困境。</div></div>
+      <div class="row"><div class="k k2">苏轼</div><div class="v">「世之陋者乐以不己若者为友，则自足而日损，故以此戒之。如必胜己而后友，则胜己者亦不与吾友矣。」——先破后立：戒自足是真意。</div></div>
+      <div class="row"><div class="k k2">蔡谟</div><div class="v">「上同乎胜己所以进也，下同乎不如己所以退也。」——把择友读成「方向选择」。</div></div>
+      <div class="row"><div class="k k2">《韩诗<br>外传》</div><div class="v">南假子曰：「夫高比所以广德也，下比所以狭行也。」——比上则德宽，比下则行窄。</div></div>
+      <div class="row"><div class="k k2">朱熹</div><div class="v">「无、毋通，禁止辞也……友所以辅仁，不如己，则无益而有损。」——以「辅仁」定「友」之职分。</div></div>
+      <div class="row"><div class="k k2">王夫之</div><div class="v">「安所得必胜己者而友之！必求胜己，则友孤矣。」——从可行性上彻底否掉「只交胜己」的读法。</div></div>
+      <div class="row"><div class="k k2">程树德</div><div class="v">《论语集释》并列诸说，不断一语——<b>可见此句至今无定解</b>，这正是它值得反复读的原因。</div></div>
+    </div>
+
+    <div class="h2" id="sc-25">附论三　《论语》里的「改」：一条谱系</div>
+    <p>「改」在《论语》里是一条清晰的线，1.8 只是其中的一环：</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">1.7</div><div class="v">三年无改于父之道——<b>对「道」要缓</b>，缓里有敬。</div></div>
+      <div class="row"><div class="k k2">1.8</div><div class="v">过则勿惮改——<b>对「过」要速</b>，速里有勇。</div></div>
+      <div class="row"><div class="k k2">6.3</div><div class="v">不贰过——<b>改的质量标准</b>：同一个错不犯第二次。</div></div>
+      <div class="row"><div class="k k2">9.25</div><div class="v">本章后半重出——<b>文本上的痕迹</b>，见存疑第二条。</div></div>
+      <div class="row"><div class="k k2">15.30</div><div class="v">过而不改，是谓过矣——<b>过的定义</b>：犯不算过，留才算过。</div></div>
+      <div class="row"><div class="k k2">19.21</div><div class="v">君子之过也，如日月之食焉；过也人皆见之，更也人皆仰之——<b>改的社会性</b>：改过是一次公开的复明。</div></div>
+    </div>
+    <div class="scene">把这条线连起来看，孔子对「改」的看法有一个完整的骨架：<b>该缓的缓（守道）、该速的速（改过）、不重复（不贰过）、不滞留（过而不改是谓过）、不怕被看见（人皆仰之）。</b></div>
+  </section>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 8 课　v1.0　（2026-11-19）</div>
+  </footer>
+
+</div>
+</body>
+</html>
