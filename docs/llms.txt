@@ -15,7 +15,7 @@
 - 第八课｜君子不重则不威，学则不固｜重是壁，忠信是底：重→威→固是一条链，不是三句格言。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/08.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.8.1，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.8.2，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
