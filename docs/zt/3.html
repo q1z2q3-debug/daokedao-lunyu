@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>这是不是回忆 · 2.4 读法辨｜润泽说 道可道之论语</title>
+<meta name="description" content="2.4「吾十有五而志于学」是自述还是回忆：形态、语境、用途三问分判；六阶是刻度不是台阶，末阶是卸载。">
+<meta property="og:title" content="这是不是回忆 · 2.4 读法辨">
+<meta property="og:description" content="形态自述，写法追述，用途路标；「回忆」只对一半。">
+<link rel="canonical" href="https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  p{margin:0 0 15px;text-align:justify;color:var(--ink);line-height:1.95}
+  p:last-of-type{margin-bottom:4px}
+  .figsvg svg{max-width:720px}
+  /* 专题：小屏用正确列名，替代原「俗见／正解」前缀 */
+  .cards.kzA .pair .a::before{content:"孔子　";color:var(--muted)}
+  .cards.kzA .pair .b::before{content:"老子　";color:var(--ochre-soft)}
+  .cards.kzB .pair .a::before{content:"俗读　";color:var(--muted)}
+  .cards.kzB .pair .b::before{content:"辨析　";color:var(--ochre-soft)}
+  @media (max-width:640px){
+    .cards.kzA .cardshd,.cards.kzB .cardshd{display:grid}
+  }
+
+.cards.xbA .pair .a::before{content:"假设　";color:var(--muted)}
+.cards.xbA .pair .b::before{content:"检验　";color:var(--ochre-soft)}
+.cards.xbB .pair .a::before{content:"问　";color:var(--muted)}
+.cards.xbB .pair .b::before{content:"答　";color:var(--ochre-soft)}
+@media(max-width:640px){.cards.xbA .cardshd,.cards.xbB .cardshd{display:grid}}
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;border-top:0}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+.figsvg svg{max-width:470px}
+@media(max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}.figsvg svg{max-width:100%}}
+</style></head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>专题</b>　2.4 读法辨 · 这是不是回忆　第 3 篇 / 专题</div>
+  </div>
+<div class="toc">
+    <div class="toc-t"><span class="lbl">本篇</span><a href="#sc-0">拆三问</a><a href="#sc-1">形态</a><a href="#sc-2">语境</a><a href="#sc-3">三个假设</a><a href="#sc-4">吾衰也</a><a href="#sc-5">为何整齐</a><a href="#sc-6">在为政</a><a href="#sc-7">两种代价</a><a href="#sc-8">判词</a><a href="#sc-9">存疑</a><a href="#sc-10">附论</a></div>
+  </div>
+      <div class="leaf adult">
+    <div class="leaf-tag">专题 · 2.4 读法辨</div>
+    <h1>这是不是回忆</h1>
+    <div class="h1-sub">2.4「吾十有五而志于学」的一句话辨｜形态、语境、用途，三处分开问才答得准</div>
+    <div class="src"><span class="who">本章</span>「吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。」</div>
+    <p style="margin-top:16px"><b>这一问不能用「是」或「不是」答。</b>「回忆」两个字里装着三件不同的事：这一段在文本上是什么、这话几时对谁说、记下来是做什么用的。混在一起问，只能答成「是也不是」，等于没答。分开问，各有各的答。</p>
+
+<div class="h2" id="sc-0">一　先把一个问题拆成三个</div>
+    <p class="lead"><b>形态、语境、用途——三问三答，最后才能合成一句判词。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">形态</div><div class="v">它在文本上是什么？自述、追述、回忆、语录，是四种不同的东西。<b>这一问只看字面，能查。</b></div></div>
+      <div class="row"><div class="k">语境</div><div class="v">这话几时说的、对谁说的？<b>这一问《论语》没有交代，只能列可能，不能定。</b></div></div>
+      <div class="row"><div class="k">用途</div><div class="v">记下来给谁看、做什么用？<b>这一问从注家与编次可推，最该作准。</b></div></div>
+    </div>
+    <p>三问里，只有第一问能靠字面核实，第三问能靠注家与编次推断，中间那一问永远悬着。<b>所以读法应当从「用途」立，不从「猜测」立。</b>这是本篇的方法，也是我们全部通释的方法：能查的查，能推的标明是推，查不到又推不出的，就留着。</p>
+    <div class="figs single">
+      <svg viewBox="0 0 400 530" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 一问拆三问，三答合一判</text>
+<rect x="34" y="42" width="332" height="48" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="200" y="72" text-anchor="middle" font-size="15" fill="#2F2A24">这是孔子在回忆自己的一生吗</text>
+<rect x="34" y="108" width="82" height="82" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="75" y="154" text-anchor="middle" font-size="16" fill="#2F2A24">形态</text>
+<rect x="124" y="108" width="242" height="82" fill="#FCFAF6" stroke="#DCD5C8"/>
+<text x="140" y="134" font-size="13" fill="#5C5347">文本上是什么</text>
+<text x="140" y="156" font-size="13" fill="#8A8074">自述 · 追述 · 回忆</text>
+<text x="140" y="178" font-size="13.5" fill="#A2503B">→ 可以查</text>
+<rect x="34" y="204" width="82" height="82" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="75" y="250" text-anchor="middle" font-size="16" fill="#2F2A24">语境</text>
+<rect x="124" y="204" width="242" height="82" fill="#FCFAF6" stroke="#DCD5C8"/>
+<text x="140" y="230" font-size="13" fill="#5C5347">几时说的 · 对谁说的</text>
+<text x="140" y="252" font-size="13" fill="#8A8074">《论语》无交代</text>
+<text x="140" y="274" font-size="13.5" fill="#A2503B">→ 不可考</text>
+<rect x="34" y="300" width="82" height="82" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="75" y="346" text-anchor="middle" font-size="16" fill="#A2503B">用途</text>
+<rect x="124" y="300" width="242" height="82" fill="#FCFAF6" stroke="#DCD5C8"/>
+<text x="140" y="326" font-size="13" fill="#5C5347">记下来做什么用</text>
+<text x="140" y="348" font-size="13" fill="#8A8074">注家与编次可推</text>
+<text x="140" y="370" font-size="13.5" fill="#A2503B">→ 可推</text>
+<line x1="200" y1="396" x2="200" y2="414" stroke="#A2503B"/>
+<rect x="34" y="414" width="332" height="70" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="200" y="440" text-anchor="middle" font-size="13.5" fill="#2F2A24">形态：自述　写法：追述　用途：路标</text>
+<text x="200" y="466" text-anchor="middle" font-size="13" fill="#A2503B">「回忆」只对一半——有回望，无叙旧</text>
+<text x="200" y="512" text-anchor="middle" font-size="11.5" fill="#8A8074">查得到的靠查，推得出的标「推」，查不到又推不出的，留着</text>
+</svg>
+      <div class="figcap">三问分流：同一个问题，三个口子各有各的答法；合判在最后一行。</div>
+    </div>
+
+    <div class="h2" id="sc-1">二　形态：全书唯一一段按年排下来的自述</div>
+    <p>这一问的答案在字面上，四条证据，条条可核。</p>
+    <div class="rows">
+      <div class="row"><div class="k">起句</div><div class="v">以<b>「吾」</b>起句。孔子自称「吾」的地方并不少——「吾与回言终日」「吾未见好德如好色者」「吾道一以贯之」——<b>但以「吾」起句、把年岁一岁一岁排下来的，只此一处。</b></div></div>
+      <div class="row"><div class="k">骨架</div><div class="v"><b>六个「而」。</b>十五而志、三十而立、四十而不惑……六个分句同一副骨架：<b>到某岁，则如何。</b>「而」在此是承接，一路连下去，不是转折。</div></div>
+      <div class="row"><div class="k">语气</div><div class="v"><b>全段没有一个叹词，没有一句评价。</b>无「矣」、无「哉」、无「乎」。这与「甚矣吾衰也」「久矣吾不复梦见周公」那种带叹的句子，<b>不是一种文体</b>。</div></div>
+      <div class="row"><div class="k">收束</div><div class="v"><b>止于七十，之后无话。</b>孔子卒年七十三，七十以后尚有三年，一字未及。</div></div>
+    </div>
+    <div class="scene"><b>四条合起来，形态可以定了：自述——而且是自述里最克制的一种，只报节点，不叙情节。</b>——<b>报节点的人，心里有次序；叙情节的人，心里才有事。</b></div>
+
+    <div class="h2" id="sc-2">三　语境：《论语》一个字都没有交代</div>
+    <p>这一章除「子曰」二字外，没有任何情境：谁问的、几时说、说给谁、说时在做什么，全无。它属于《论语》里那批<b>「无头章」</b>——只有话，没有现场。《论语》里这样的章不少，读的时候若硬补一个现场，补出来的往往是自己想看的那一幕。</p>
+    <p>可能的来历，不外三种。三种都不能证，也都不能否，所以三条并列，不作取舍：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>弟子记孔子晚年语。</b>最通行，也最省事——因为读起来像。但「像」不是证。<b>此说只能当推定。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>对某一弟子而发，原有问答，编纂时削去前半。</b>孔子惯于因材施教，问答体在《论语》里是常态；若原有「某问」在前，被削，也无从追。<b>此说不可证，亦不可否。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>编纂者为「学」立一个全程范式，编在此处。</b>此说从「位置」看得出一点影子，见第七节。<b>仍属推断。</b></div></div>
+    </div>
+    <p>有一句话要在这里记住：<b>语境不可考，用途却可推。</b>不知道他几岁说的，不等于不知道这段话是做什么用的。前者是史料问题，后者是义理问题；史料缺了，义理照样能站住——只要不拿推定的史料去冒充事实。</p>
+    <p>补一句老实话：若按最常见的推定（七十以后），那正处在最后一阶刚站上就要走的那三年。<b>这一点很要紧，但它是推定，不是事实，所以只能放在括号里说。</b></p>
+
+    <div class="h2" id="sc-3">四　「回忆」三个隐含假设，逐个检验</div>
+    <p>「回忆」不是一个中性的词。它一出口，就带进来三个假设。三个都要过检验，过不了，这个词就只能当半用。</p>
+    <div class="cards xbA">
+      <div class="cardshd"><span>隐含假设</span><span>文本检验</span></div>
+      <div class="pair"><div class="a"><b>一　有一个明确的「回望时刻」</b>——说的此刻，与所忆的当年，中间隔着一个「现在」。</div><div class="b"><b>没有。</b>全段无「今」、无「老」、无「不复」、无「向者」。一个字都没有。<b>「回忆」需要一个「现在」，这一段没有现在。</b></div></div>
+      <div class="pair"><div class="a"><b>二　所说都是已完成的定论</b>——六阶是六个「已经做到了」。</div><div class="b"><b>最险在末阶。</b>七十到七十三只三年。朱子注「从心所欲不逾矩」作<b>「浑然」</b>——浑然是境界语，不是成就语。把一个境界说成一项成果，是把三年当成了完成态。</div></div>
+      <div class="pair"><div class="a"><b>三　说者是感怀，不是立教</b>——句子背后有一份心情。</div><div class="b"><b>语气全平。</b>六个短语，无叹无评（见第二节）。<b>感怀必有叹；这一段无叹，所以不是感怀，是立序。</b></div></div>
+    </div>
+    <p>三问三不过。<b>「回忆」这个词，到这里只能保住「回望」那一半，保不住「叙旧」那一半。</b></p>
+    <div class="figs single">
+      <svg viewBox="0 0 400 470" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 回忆需要的四样，这一段有没有</text>
+<text x="40" y="78" font-size="13.5" fill="#2F2A24">一　有一个明确的回望时刻</text>
+<text x="52" y="108" font-size="12" fill="#8A8074">回忆要「有」</text>
+<text x="196" y="108" font-size="12.5" fill="#A2503B">这一段：无</text>
+<line x1="34" y1="130" x2="366" y2="130" stroke="#EFE6D2"/>
+<text x="40" y="174" font-size="13.5" fill="#2F2A24">二　六阶都是已完成的事</text>
+<text x="52" y="204" font-size="12" fill="#8A8074">回忆要「是」</text>
+<text x="196" y="204" font-size="12.5" fill="#A2503B">这一段：未（末阶仅三年）</text>
+<line x1="34" y1="226" x2="366" y2="226" stroke="#EFE6D2"/>
+<text x="40" y="270" font-size="13.5" fill="#2F2A24">三　语气是感怀，不是立教</text>
+<text x="52" y="300" font-size="12" fill="#8A8074">回忆要「叹」</text>
+<text x="196" y="300" font-size="12.5" fill="#A2503B">这一段：平，无叹</text>
+<line x1="34" y1="322" x2="366" y2="322" stroke="#EFE6D2"/>
+<text x="40" y="366" font-size="13.5" fill="#2F2A24">四　有一个收束的终章</text>
+<text x="52" y="396" font-size="12" fill="#8A8074">回忆要「有」</text>
+<text x="196" y="396" font-size="12.5" fill="#8A8074">这一段：不设（止于七十）</text>
+<line x1="34" y1="418" x2="366" y2="418" stroke="#EFE6D2"/>
+<text x="200" y="446" text-anchor="middle" font-size="12.5" fill="#4A5C55">四问四不过：只剩「回望」，保不住「叙旧」</text>
+</svg>
+      <div class="figcap">四问四检：每一问两行——上一行是「回忆」的要求，下一行是这一段里的实况。</div>
+    </div>
+
+    <div class="h2" id="sc-4">五　最硬的一处对照：「甚矣吾衰也」</div>
+    <p>不必绕推论。孔子真回忆的时候是什么样子，《论语》里另有一句，摆上来一比就清楚：</p>
+    <div class="scene"><b>「甚矣吾衰也！久矣吾不复梦见周公。」</b>——这才是回忆：有衰、有久、有不复；有时刻，有心情，有一个明明白白的「现在」。</div>
+    <p>再看 2.4：通篇<b>不言衰、不言老、不言不复</b>。它报的是志、立、不惑、知、顺、从心——<b>六个词全是朝向，没有一个回顾。</b></p>
+    <p>一个要回忆的人，会说「我老了」；一个要立序的人，才说「到这一步是这样」。<b>这一处对照比任何推论都硬</b>：同一部书、同一个人、同一种自称，一句带叹，一句不带；带叹的那句在说自己，不带叹的这句在给路。</p>
+
+    <div class="h2" id="sc-5">六　六阶为什么这样整齐</div>
+    <p>十年一阶，六阶五十五年，齐得像一把尺。人不是这样长的。原因有两条，都要说清，不能含糊过去：</p>
+    <div class="rows">
+      <div class="row"><div class="k">整饬</div><div class="v"><b>追述必压缩，压缩必取整。</b>事后理次序，本来就会把参差抹平。这恰恰是「追述」的常态——<b>所以整齐不是「不是回忆」的证据，反是「追述」的证据。</b></div></div>
+      <div class="row"><div class="k">刻度</div><div class="v"><b>教学取成数。</b>「三人行必有我师」的「三」、「三省」的「三」，都是约举。约举是为了让人记得住、对得上。<b>六阶是刻度，不是年表。</b></div></div>
+    </div>
+    <p>这一条要摊开说：<b>要读年表，去读《史记·孔子世家》；要读刻度，才读这一章。</b>两者不是一回事，硬把刻度当年表读，就会去算「三十岁那年他究竟做了什么」，然后发现算不出——那不是《论语》缺了材料，是问法错了。</p>
+    <p>我们的口径一向是：读经典取义理之整，不取考据之细。<b>但「十年一阶是约举」这一条必须标出来，因为它是考据能提异议的地方。</b>义理不能靠装作没看见来站稳。</p>
+
+    <div class="h2" id="sc-6">七　它为什么在「为政」</div>
+    <p>看位置：为政篇前四章依次是——为政以德（2.1）、思无邪（2.2）、道之以政（2.3）、吾十有五（2.4）。</p>
+    <p>前三章都在讲「怎么治」，第四章忽然讲「一个人怎么长」。看着像跳了，其实是一根钉子：<b>把「政」的根，钉回到「学」上。</b>政从哪里来？先从一个人自己长出来。这与「为政以德」的「德」是同一件事的两头——<b>德是得于心而不失，学是得的过程</b>；先有过程，才谈得上不失。</p>
+    <p>照这个编次读，这一章不是自传，是「学」的纲领：<b>为政篇讲治，先讲治的人是怎么长出来的。</b></p>
+    <p><b>这一条是本篇的编次之见，标明为「见」，不列为定论。</b>编次之意，古人已有争论，我们只取它读起来最顺、又与全书互证最紧的那一层，不敢说这就是编者原意。</p>
+
+    <div class="h2" id="sc-7">八　两种读法，各有代价</div>
+    <p>读成回忆，代价是什么？<b>六阶成了圣人的私事。</b>「他做到了，我做不到」——于是这一章变成一座碑，碑上刻的是别人的身高。碑可以瞻仰，不能走路。</p>
+    <p>读成路标，好处是什么？<b>六阶与走路的人有关。</b>但路标也有它自己的风险，这一层必须说：<b>它会变成考核表。</b>四十岁没「不惑」便自疑，五十岁没「知天命」便惶惶，六十岁还听不进话便觉得此生完了。这一章本来解缚，读歪了反成加压。</p>
+    <p>防的办法，就在第十九课已经抽出来的那条主线上。<b>朱子注这六阶，三次用到「无所事」</b>：三十「无所事志」，四十「无所事守」，七十「无所事乎守之」。三次都是说——<b>越往后，动作越少。</b></p>
+    <div class="figs single">
+      <svg viewBox="0 0 400 520" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="24" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 六阶是刻度，不是台阶</text>
+<text x="46" y="48" font-size="11" fill="#5C5347">年岁 · 阶名</text>
+<text x="252" y="48" font-size="11" fill="#A2503B">其实是减掉的</text>
+<circle cx="38" cy="80" r="4" fill="#A2503B"/>
+<text x="52" y="85" font-size="14" fill="#2F2A24">十五</text>
+<text x="118" y="85" font-size="13" fill="#5C5347">志于学</text>
+<text x="252" y="85" font-size="12.5" fill="#A2503B">还要立志</text>
+<line x1="34" y1="100" x2="366" y2="100" stroke="#EFE6D2"/>
+<circle cx="38" cy="132" r="4" fill="#A2503B"/>
+<text x="52" y="137" font-size="14" fill="#2F2A24">三十</text>
+<text x="118" y="137" font-size="13" fill="#5C5347">而立</text>
+<text x="252" y="137" font-size="12.5" fill="#A2503B">还要守</text>
+<line x1="34" y1="152" x2="366" y2="152" stroke="#EFE6D2"/>
+<circle cx="38" cy="184" r="4" fill="#A2503B"/>
+<text x="52" y="189" font-size="14" fill="#2F2A24">四十</text>
+<text x="118" y="189" font-size="13" fill="#5C5347">不惑</text>
+<text x="252" y="189" font-size="12.5" fill="#A2503B">惑</text>
+<line x1="34" y1="204" x2="366" y2="204" stroke="#EFE6D2"/>
+<circle cx="38" cy="236" r="4" fill="#A2503B"/>
+<text x="52" y="241" font-size="14" fill="#2F2A24">五十</text>
+<text x="118" y="241" font-size="13" fill="#5C5347">知天命</text>
+<text x="252" y="241" font-size="12.5" fill="#A2503B">疑</text>
+<line x1="34" y1="256" x2="366" y2="256" stroke="#EFE6D2"/>
+<circle cx="38" cy="288" r="4" fill="#A2503B"/>
+<text x="52" y="293" font-size="14" fill="#2F2A24">六十</text>
+<text x="118" y="293" font-size="13" fill="#5C5347">耳顺</text>
+<text x="252" y="293" font-size="12.5" fill="#A2503B">执</text>
+<line x1="34" y1="308" x2="366" y2="308" stroke="#EFE6D2"/>
+<circle cx="38" cy="340" r="4" fill="#A2503B"/>
+<text x="52" y="345" font-size="14" fill="#2F2A24">七十</text>
+<text x="118" y="345" font-size="13" fill="#5C5347">从心</text>
+<text x="252" y="345" font-size="12.5" fill="#A2503B">守本身</text>
+<line x1="34" y1="360" x2="366" y2="360" stroke="#EFE6D2"/>
+<line x1="34" y1="412" x2="366" y2="412" stroke="#8A8074" stroke-dasharray="4 4"/>
+<circle cx="38" cy="426" r="3" fill="#8A8074"/>
+<text x="52" y="431" font-size="13" fill="#8A8074">卒七十三</text>
+<text x="118" y="431" font-size="12.5" fill="#8A8074">七十之后仅三年</text>
+<text x="200" y="470" text-anchor="middle" font-size="11.5" fill="#4A5C55">朱子注三次「无所事」</text>
+<text x="200" y="490" text-anchor="middle" font-size="11.5" fill="#4A5C55">三十无所事志 · 四十无所事守 · 七十无所事乎守之</text>
+</svg>
+      <div class="figcap">刻度与卸载：六行是六阶，右边是这一步实际减掉的；末阶之后仅三年。</div>
+    </div>
+    <p>照这个读法，<b>刻度量的不是「得到了什么」，是「减掉了什么」</b>：三十减掉的是「还要立志」这件事，四十减掉的是「还要守」这件事，七十减掉的是「守」这件事本身。</p>
+    <div class="scene"><b>六阶不是六级台阶，是六次卸载。</b>——<b>扛着走的人，才会把刻度读成考核；卸下来的人，只看见路。</b></div>
+
+    <div class="h2" id="sc-8">九　判词，四层</div>
+    <div class="cards xbB">
+      <div class="cardshd"><span>问</span><span>答</span></div>
+      <div class="pair"><div class="a"><b>形态</b></div><div class="b"><b>自述。</b>全书唯一一段按年排下来的自述，只报节点，不叙情节。</div></div>
+      <div class="pair"><div class="a"><b>写法</b></div><div class="b"><b>追述。</b>事后理序，取整压缩；整齐是追述的痕迹，不是回忆的破绽。</div></div>
+      <div class="pair"><div class="a"><b>用途</b></div><div class="b"><b>路标。</b>程子说得分明：「此特以己之体验示人，使学者有所持循。」</div></div>
+      <div class="pair"><div class="a"><b>「回忆」</b></div><div class="b"><b>只对一半。</b>有回望（不然分不出阶），无叙旧（不然不会不叹、不言衰、不设终章）。</div></div>
+    </div>
+    <p><b>一句收：形态上是追述，用途上是路标；「回忆」这个词，会把路标读成日记。</b></p>
+
+    <div class="h2" id="sc-9">十　存疑五条</div>
+    <div class="doubt">
+      <div class="q"><span>一</span><div><b>说话之年不可考。</b>通行推定「七十以后」，但文本无证。若真在七十后，最后一阶只有三年。<b>此条影响判词的分量，不影响判词的方向。</b></div></div>
+      <div class="q"><span>二</span><div><b>「而」字之解，本篇不引注文。</b>有以「而」为「转语」者，我未核对原注，故此处只作「承接」用，不援引。<b>不引未核之注，是这一部的规矩。</b></div></div>
+      <div class="q"><span>三</span><div><b>六阶是否成数，无直接证据。</b>据孔子惯用成数推定「十年一阶为约举」。若他确实一年一年说到，此推定即错，但「刻度而非年表」的读法不受影响。</div></div>
+      <div class="q"><span>四</span><div><b>本章是否原有问答而被削去前半，无从追。</b>《论语》中问答体为常态，此章独无问，可疑而不可断。</div></div>
+      <div class="q"><span>五</span><div><b>末阶可作「已至」解否，注家有异。</b>朱子作「浑然」，本课取「境界语，非成就语」。若作「已至」解，则本篇第四节第二项须让步——但那要看把三年怎么算。</div></div>
+    </div>
+
+    <div class="h2" id="sc-10">十一　附论</div>
+    <div class="h3">附论一　若真是回忆，它缺了什么</div>
+    <p>四样都缺：<b>无终章</b>（止于七十，之后三年不提）；<b>无起点</b>（十五以前一字不及）；<b>无衰语</b>（不言老、不言不复）；<b>无对象</b>（不交代说给谁）。</p>
+    <p>四缺俱全，恰好说明它要的不是「我的一生」，是「学的次第」。<b>回忆要有头有尾有对象；立序只要骨节。</b></p>
+    <div class="h3">附论二　一句话怎么读才不吃亏</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>别把刻度当年表。</b>「三十而立」不是三十岁那年做成了什么，是三十岁这个位置该有的样子。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>别把末阶当奖章。</b>「从心」不是通关，是把「守」这个动作卸掉了。<b>奖章要人来发，卸载不用。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>别停在「他做到了」。</b>要接着问一句：<b>他减掉了什么？</b>问出这一句，这一章才与你有关。</div></div>
+    </div>
+    <div class="h3">附论三　本篇的口径声明</div>
+    <p>本篇属专题，<b>不释全经</b>。2.4 的逐句通释以第十九课为准（字义七字、句读三层、六阶三次「无所事」、不惑与知命分层、耳顺辨、从心不逾矩、时代三事、存疑七条）。</p>
+    <p>此篇只辨一问：<b>这是不是孔子在回忆自己的一生。</b>兼补三条读法：刻度非年表、末阶是卸载、位置在为政。所引原文皆出《论语》《朱子集注》，推断处标「推」或「见」，未核处标「未核」，不敢以推为证。</p>
+    <div class="tzg">
+      <div class="tzitem"><div class="cell">形态</div><div class="tzcap">自述　只报节点</div></div>
+      <div class="tzitem"><div class="cell">写法</div><div class="tzcap">追述　取整压缩</div></div>
+      <div class="tzitem"><div class="cell">用途</div><div class="tzcap">路标　使人持循</div></div>
+      <div class="tzitem"><div class="cell">「回忆」</div><div class="tzcap">对一半　有回望无叙旧</div></div>
+    </div>
+  </div>
+
+      <div class="parent">
+    <div class="h3">给家长的一句话</div>
+    <div class="pair"><div class="k2">一</div><div class="v"><b>孩子问「这是孔子在回忆自己的一生吗」，可以先答：他在说自己怎么一步步长起来的，不是在想从前。</b>——「回忆」是想从前，这一段是报次第。</div></div>
+    <div class="pair"><div class="k2">二</div><div class="v"><b>接着可以问一句：这六步里，哪一步不是「得到了」什么，而是「不用再」做什么了？</b>——问出这一句，六阶就从别人的身高，变成孩子自己的路。</div></div>
+  </div>
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　专题第三篇</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-20　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>

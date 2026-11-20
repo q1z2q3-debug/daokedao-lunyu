@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.6**，已刊 **22 件**（前言一篇 + 学而十六章 + 为政四章 + 专题二篇）
+- 当前版本 **v0.15.7**，已刊 **23 件**（前言一篇 + 学而十六章 + 为政四章 + 专题三篇）
 
 ---
 
@@ -58,6 +58,7 @@
 | 第十九课 | 吾十有五而志于学 | 六阶六门：朱子注三次「无所事」——进德之序，是减动作之序；不惑知当然，知命知所以然。 | [19](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/19.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
+| 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
 
 ---
 
