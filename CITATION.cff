@@ -5,7 +5,7 @@ abstract: "《论语》通释读本，一章一课、一课两页（少儿页可
 authors:
   - name: "润泽"
 date-released: 2026-11-19
-version: 0.14.1
+version: 0.15.0
 license: CC-BY-NC-SA-4.0
 repository-code: "https://github.com/q1z2q3-debug/daokedao-lunyu"
 url: "https://q1z2q3-debug.github.io/daokedao-lunyu/"

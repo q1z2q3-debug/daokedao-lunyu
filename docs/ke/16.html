@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>不患人之不己知 · 论语第十五课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第十六章通释：子曰「不患人之不己知，患不知人也」。学而篇首尾：1.1「人不知而不愠」与本句成对。两个方向一否一肯；四条改道（14.30 患不能／15.19 病无能／4.14 求为可知／1.16 患不知人）；知人三察（2.10）与知言（20.3）。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E6%B8%A9%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+</style>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 16 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-b1">北辰之喻</a><a href="#sc-b2">无为辨</a><a href="#sc-b3">德与政刑</a><a href="#sc-b4">范氏四句</a><a href="#sc-b5">三自检</a><a href="#sc-d">时代</a><a href="#sc-e">章旨</a><a href="#sc-f">存疑</a><a href="#sc-g">双卡</a><a href="#sc-h">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理图一 北辰</a><a href="#sc-21">义理图二 政刑与德礼</a><a href="#sc-22">义理图三 德之三层</a><a href="#sc-23">附论一 为什么用星</a><a href="#sc-24">附论二 无为的误读</a><a href="#sc-25">附论三 孔子做过的官</a></div>
+  </div>
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+    <h1>为政以德</h1>
+    <div class="h1-sub">为政 2.1　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子曰：</span>「为<ruby>政<rt>zhèng</rt></ruby>以<ruby>德<rt>dé</rt></ruby>，譬如<ruby>北<rt>běi</rt></ruby><ruby>辰<rt>chén</rt></ruby>，居其所而众星<ruby>共<rt>gǒng</rt></ruby>之。」
+    </div>
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>政</span></div><div class="tzcap"><span>9 画</span><span>把人扶正</span></div></div>
+      <div class="tzitem"><div class="cell"><span>德</span></div><div class="tzcap"><span>15 画</span><span>心里真有</span></div></div>
+      <div class="tzitem"><div class="cell"><span>北</span></div><div class="tzcap"><span>5 画</span><span>北边那颗</span></div></div>
+      <div class="tzitem"><div class="cell"><span>辰</span></div><div class="tzcap"><span>7 画</span><span>天上的时辰</span></div></div>
+      <div class="tzitem"><div class="cell"><span>共</span></div><div class="tzcap"><span>6 画</span><span>绕过来</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">政</div><div class="v"><b>这个字的本义，就是「正」：把人扶正。</b>——<b>不是「管」，不是「压」，是把歪的扶直。</b><b>所以「为政」不是当官，是让一个地方正起来。</b></div></div>
+      <div class="row"><div class="k">德</div><div class="v"><b>这个字的本义，就是「得」：心里真得到一样东西，还不丢。</b>——<b>不是嘴上会说，是心里真有。</b><b>——说得好听，做起来又是另一套，那就不叫德。</b></div></div>
+      <div class="row"><div class="k">北</div><div class="v"><b>北边。</b>——<b>古人看天，北边那颗星几乎不动，别的星都绕着它转。</b><b>——它就是天上那个「定盘星」。</b></div></div>
+      <div class="row"><div class="k">辰</div><div class="v"><b>时辰、天体。</b>「北辰」合起来就是北极星。<b>——古人靠它认方向：找到了它，就知道自己在哪儿。</b></div></div>
+      <div class="row"><div class="k">共</div><div class="v"><b>这里读 gǒng，就是「拱」：围着、绕着、向着。</b>——<b>不是「共同」的共。</b><b>——念对了，这句就活了：众星不是被拉着转，是自己绕过来。</b></div></div>
+    </div>
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>想让别人走正路，先得自己站正；你站得稳，大家自然围着你转。</b>（为政 2.1）</p>
+    <div class="scene"><b>孔子打了个比方，只有四个画面。</b>——<b>一个人，站在那儿不动；一颗星，挂在天上不动；满天星，绕着它转；一群人，也跟着走过来。</b><b>——这一章里没有一句「你要如何如何」，只有一个「站在那儿」的人。</b></div>
+    <div class="h2" id="sc-3">共读</div>
+    <div class="rows">
+      <div class="row"><div class="k">上半</div><div class="v">「<b>为政以德</b>」——<b>治理一个地方，靠的是「德」。</b>——<b>「以」就是「用」：用德，不用吼、不用罚来撑场面。</b></div></div>
+      <div class="row"><div class="k">比方</div><div class="v">「<b>譬如北辰</b>」——<b>打个比方：就像北极星。</b>——<b>为什么拿星比？因为星离得远、又不说话，可所有星都听它的。</b></div></div>
+      <div class="row"><div class="k">不动</div><div class="v">「<b>居其所</b>」——<b>待在自己该在的位置上，不乱动。</b>——<b>注意：是不乱动，不是不动手。它不动，别的事才转得起来。</b></div></div>
+      <div class="row"><div class="k k2">绕<br>过来</div><div class="v">「<b>而众星共之</b>」——<b>满天星绕着它转、向着它。</b>——<b>这是全章最要紧的一笔：不是它把星拽过来，是星自己绕过来。</b><b>——人心也是这样：你正，人家自己会过来；你拽，人家就躲。</b></div></div>
+      <div class="row"><div class="k">一句</div><div class="v"><b>这一章只教一个动作：站正，站定，别乱晃。</b>——<b>剩下的，交给别人自己走过来。</b></div></div>
+    </div>
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene"><b>场景一：</b>轮到小宁当值日班长。<b>他喊了十遍「别讲话了」，没人听；后来他自己先坐下来写作业，教室慢慢就静了。</b>——<b>喊，是「政」；坐下来，是「德」。</b></div>
+    <div class="scene"><b>换个方向：</b>他若是靠记名字、告老师来压人，<b>大家会怕他，但不会服他</b>——<b>怕的人一转身就说他坏话；服的人会在他不在时也照做。</b><b>这就是「民免而无耻」和「有耻且格」的差别。</b></div>
+    <div class="scene"><b>场景二：</b>家里，爸爸一边刷手机，一边叫孩子「快去读书」。<b>孩子嘴上答应，心里不服。</b>——<b>不是话不对，是站的那个位置不对。</b><b>——同一句话，从一个正在读书的人嘴里说出来，分量完全不同。</b></div>
+    <div class="scene"><b>再往深一层：</b>「德」不是老好人。<b>不敢管、什么都答应、谁也不敢得罪，那不是德，是没主意。</b>——<b>真有德的人，该说的会说，该拦的会拦；只是他先做到，才说得出口。</b></div>
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="list">
+      <li>你们班（或你们组）里，<b>哪个人不用喊，大家也愿意跟着他做</b>？他做对了什么？</li>
+      <li>你有没有过「说了一句话，别人不服」的时候？<b>想一想：是你那句话不对，还是你站的位置不对？</b></li>
+      <li>如果把自己比作一颗星，<b>你是绕着别人转的那颗，还是别人绕着转的那颗？</b>为什么？</li>
+    </div>
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>人这一辈子，总会有一小块地方归你管。</b>——<b>可能是一个小组、一个班、一个家、一间店。</b><b>归你管的时候，你最先想的是「怎么让他们听我的」，还是「我自己做成了什么样」？</b></div>
+    <div class="scene"><b>孔子给的答案很笨：先做出来。</b>——<b>你做到了，话就短了；你没做到，话就得多说十遍，还不管用。</b></div>
+    <div class="scene"><b>还有一层：别急着当那颗星。</b>——<b>星不是抢来的，是站出来的。</b><b>——你在一件小事上稳了三年，别人自然把事交到你手上。</b></div>
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>孩子不听话时，先看自己手上在做什么。</b>——<b>你在刷手机，他在写作业，这句话就没有分量。</b><b>——不是要你陪着写，是要你别在「说」的时候「做着相反的事」。</b></div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>「德」不是让孩子当老好人。</b>——<b>不敢拒绝、谁都不敢得罪、被抢了玩具还笑，那不是德，是怕。</b><b>——教他：该让的让，该争的争，说话要有主意。</b></div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>家里立规矩，靠「说清一次 + 自己做到」比靠罚有用。</b>——<b>罚能管住这一次，管不住下一次；孩子服的是「你说的话你自己也守」。</b></div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>「居其所」这四个字，家里最该学。</b>——<b>父母的位子是父母，不是朋友、不是监工、不是提款机。</b><b>——站错了位，怎么使劲都别扭。</b></div></div>
+      <div class="pair"><div class="k2">五</div><div class="v"><b>别把「众星共之」教成「大家都得听我的」。</b>——<b>星是绕着转，不是被摁着头转。</b><b>——孩子若只会压人，长大就是个没人跟的人。</b></div></div>
+      <div class="pair"><div class="k2">六</div><div class="v"><b>融西：</b>组织行为学里讲 <b>leadership by example</b>（以身作则的领导）与「<b>心理安全感</b>」——<b>团队服的不是嗓门，是「他说的话自己先做到」。</b><b>——两千五百年前那颗星，讲的是同一件事。</b></div></div>
+      <div class="pair"><div class="k2">七</div><div class="v"><b>一个孩子若从小只会「等人来管我」，长大就只会等。</b>——<b>家里能给的最好的东西，是让他早早尝到「我自己做成了，别人自然过来」的滋味。</b></div></div>
+    </div>
+  </section>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>为政以德</h1>
+    <div class="h1-sub">连读 · 字义句读 · 北辰之喻 · 无为辨 · 德与政刑 · 范氏四句 · 时代 · 章旨 · 存疑 · 双卡 · 跨典</div>
+    <div class="h2" id="sc-lian">零　连读：从「学」到「政」</div>
+    <p class="leadline">学而十六章，讲的是一个人怎么把自己立起来；为政开篇，讲的是立起来之后，这一小块地方怎么正。<b>——从「己」到「人」，从「学」到「用」，孔子一转手，就把话头挪到了「政」。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">学而<br>收篇</div><div class="v">1.16「<b>不患人之不己知，患不知人也</b>」——<b>先把眼睛从「我」转到「人」。</b><b>——视野换了，才有条件谈「怎么对一群人」。</b></div></div>
+      <div class="row"><div class="k k2">为政<br>开篇</div><div class="v">2.1「<b>为政以德</b>」——<b>接的正是这个视野：既然看的是人，那治人靠什么？</b><b>——孔子没有先给制度，先给了一个人。</b></div></div>
+      <div class="row"><div class="k k2">两章<br>之间</div><div class="v"><b>学而给的是「人样」，为政给的是「人样如何落到事上」。</b>——<b>前者管自己，后者管一片。</b><b>——中间那条线，就是「德」：先在自己身上长成，才可能在别人身上起作用。</b></div></div>
+      <div class="row"><div class="k k2">一句<br>过渡</div><div class="v"><b>自己没长成，去管人，只能靠手段；自己长成了，管人就成了带人。</b><b>——手段见效快，带人见效慢；可手段一撤，人立刻散。</b></div></div>
+    </div>
+    <div class="scene"><b>所以这一章不能当政治学说读。</b>——<b>它先说一句「用德」，紧接着不解释德是什么，只给了一个画面：一颗星不动，满天星绕着它转。</b><b>——孔子把定义交给了图，因为「德」这件事，说得越细越像口号。</b></div>
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">政</div><div class="v"><b>朱子：「政之为言正也，所以正人之不正也。」</b>——<b>这一个字里就藏着定义：政不是「管」，是「正」。</b><b>——「正人之不正」四字，把「管人」和「扶正」分得清清楚楚。</b></div></div>
+      <div class="row"><div class="k k2">德</div><div class="v"><b>朱子：「德之为言得也，得于心而不失也。」</b>——<b>两个要点：一是「得于心」（真到手，不是听来的），二是「不失」（拿住了，不丢）。</b><b>——所以德不是知识，是状态：你身上有没有这样东西。</b></div></div>
+      <div class="row"><div class="k k2">北辰</div><div class="v"><b>朱子：「北辰，北极，天之枢也。」</b>——<b>「枢」是门轴、转轴：不转的那个轴，让门转起来。</b><b>——这个字选得极准：轴不动，门才动。</b></div></div>
+      <div class="row"><div class="k k2">居其<br>所</div><div class="v"><b>朱子：「居其所，不动也。」</b>——<b>「其所」是本位：它不跑、不挪、不去边上使劲。</b><b>——注意，是「不动」，不是「无为」的「不为」——它在那儿，是实的。</b></div></div>
+      <div class="row"><div class="k k2">共</div><div class="v"><b>朱子：「共，向也，言众星四面旋绕而归向之也。」</b>——<b>读音作 gǒng，即「拱」。</b><b>——「四面旋绕而归向」，一共三个动作：四面（从各处来）、旋绕（绕着转）、归向（朝着它）。</b></div></div>
+      <div class="row"><div class="k k2">为政<br>以德</div><div class="v"><b>「以」是凭借、用。</b>——<b>「为政以德」＝用德去为政，不是「为政」和「德」各说一半。</b><b>——语序上，德是工具，也是底气：拿什么去正人？拿你身上真有的那点东西。</b></div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「<b>为政／以德</b>」，「<b>譬如／北辰</b>」，「<b>居其所／而众星共之</b>」——<b>一句比方，三层递进：先说用什么，再说像什么，最后说它一不动，别的东西就转起来了。</b></div></div>
+    </div>
+    <div class="h2" id="sc-b1">二　北辰一喻，好在三处</div>
+    <p class="leadline">孔子一生用过很多比方：松柏、岁寒、北辰、北辰之外的还有「为山」「平川」。<b>——唯独这一个，他拿来比「治」。为什么？因为北辰身上有三样，正是「德」的三样。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一<br>不<br>动</div><div class="v"><b>它不动：不推、不拉、不喊、不走。</b>——<b>满天星都在动，只有它不动；可正因为它不动，别人才知道哪儿是北。</b><b>——一个总是改主意、总是换口径的人，再能干，也没人拿他当坐标。</b></div></div>
+      <div class="row"><div class="k k2">二<br>居<br>中</div><div class="v"><b>它在中心，不在边上。</b>——<b>边上使劲，是把力气花在「推别人」上；中心不动，是把力气花在「自己是准的」上。</b><b>——差之毫厘：前者越使劲越乱，后者越静越定。</b></div></div>
+      <div class="row"><div class="k k2">三<br>人<br>自<br>来</div><div class="v"><b>众星「共」之，是自己绕过来，不是被拽过来。</b>——<b>这是全章的分水岭：靠拽，得到的是服从；靠正，得到的是归向。</b><b>——服从是暂时的，归向是可以自己持续下去的。</b></div></div>
+      <div class="row"><div class="k k2">为<br>何<br>用<br>星</div><div class="v"><b>因为星离得远、又不出声，可满天都听它的。</b>——<b>这正是「德」的处境：它不占舞台，不靠音量，甚至常常不被看见，可它一旦在那儿，所有人都绕着它安排自己。</b></div></div>
+    </div>
+    <div class="scene"><b>这个比方的厉害之处，在于它不承诺效果。</b>——<b>孔子没说「你德立了，天下必治」；他只说「其象如此」——像这样，是这个样子。</b><b>——成效归天时，姿势归自己。</b></div>
+    <div class="h2" id="sc-b2">三　「无为」辨：儒家的无为，不是撒手不管</div>
+    <p class="leadline">这一章最容易被读歪的地方，是朱子注里那句「<b>则无为而天下归之</b>」。<b>——一读「无为」，就有人以为孔子主张什么都不做。这是把两个「无为」混成了一个。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">程子<br>的<br>话</div><div class="v">「<b>为政以德，然后无为。</b>」——<b>注意次序：先「以德」，后「无为」。</b><b>——无为是德立之后的结果，不是德立之前的姿态。</b><b>——先无为，是懒；先立后无为，是定。</b></div></div>
+      <div class="row"><div class="k k2">道家<br>的<br>无为</div><div class="v"><b>道家的无为，是「不干预」：少动手，任其自然。</b>——<b>它的对手是「多事」。</b></div></div>
+      <div class="row"><div class="k k2">儒家<br>的<br>无为</div><div class="v"><b>儒家的无为，是「不烦扰」：该做的事一件不少，只是不靠反复折腾来维持。</b>——<b>它的对手是「扰」。</b><b>——一省一扰，差在「多余的动作」上，不在「动作的有无」上。</b></div></div>
+      <div class="row"><div class="k k2">落地<br>的<br>样子</div><div class="v"><b>规矩照立，礼照行，刑照有；只是不天天开会、不事事督查、不朝令夕改。</b>——<b>人不必猜你明天又改什么，力气就都用在做事上了。</b></div></div>
+      <div class="row"><div class="k k2">另<br>一<br>证</div><div class="v">15.5「<b>无为而治者，其舜也与？夫何为哉？恭己正南面而已矣。</b>」——<b>舜的「无为」，是「恭己正南面」：把自己端正，坐在该坐的位置上。</b><b>——你看，还是那颗星：不动，不喊，位置对。</b></div></div>
+    </div>
+    <div class="h2" id="sc-b3">四　德与政刑：2.3 是这一章的落地卷</div>
+    <p class="leadline">2.1 只说「用德」，没说「不用别的」。<b>——隔一章，2.3 把话说全了。两章合看，才是完整的治理观。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">2.3<br>上<br>半</div><div class="v">「<b>道之以政，齐之以刑，民免而无耻。</b>」——<b>用政令引导、用刑罚齐一，百姓只求「免」（不犯事、不受罚），心里却没有羞耻。</b><b>——行为被管住了，心没被管住。</b></div></div>
+      <div class="row"><div class="k k2">2.3<br>下<br>半</div><div class="v">「<b>道之以德，齐之以礼，有耻且格。</b>」——<b>用德引导、用礼齐一，百姓「有耻」（自己不肯那样做）且「格」（来、至，归向）。</b><b>——注意「格」字，与 2.1 的「共」是一个意思：自己走过来。</b></div></div>
+      <div class="row"><div class="k k2">两<br>章<br>的<br>关<br>系</div><div class="v"><b>2.1 讲「凭什么」，2.3 讲「凭什么之后，人成了什么样」。</b>——<b>前者是方法，后者是效果；前者给姿势，后者给证据。</b><b>——所以 2.1 不是理想主义，它有下一章的实证接着。</b></div></div>
+      <div class="row"><div class="k k2">刑<br>礼<br>不<br>废</div><div class="v"><b>孔子没有说废刑。他只是说：靠刑立起来的东西，只能到「免」为止。</b>——<b>要再往上一层，得靠德与礼。</b><b>——这是一个层次问题，不是一个取舍问题。</b></div></div>
+    </div>
+    <div class="h2" id="sc-b4">五　范氏四句：这一章最好的注脚</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">三<br>层<br>果</div><div class="v"><b>「不动而化、不言而信、无为而成。」</b>——<b>三句话，三个「不」：不动、不言、无为。</b><b>——而后面各跟一个「成」：化、信、成。省掉的都是动作，得到的都是结果。</b></div></div>
+      <div class="row"><div class="k k2">三<br>层<br>法</div><div class="v"><b>「所守者至简而能御烦，所处者至静而能制动，所务者至寡而能服众。」</b>——<b>守的简、处的静、务的寡，都不是「少」，是「收在一处」。</b><b>——力气不收在一处，就会被一百件小事摊薄。</b></div></div>
+      <div class="row"><div class="k k2">为<br>何<br>能<br>御<br>烦</div><div class="v"><b>因为烦是「多」，简是「一」。</b>——<b>以一对多，靠的不是更快，是更准：一条准的规矩，抵一百条临时的补丁。</b></div></div>
+      <div class="row"><div class="k k2">为<br>何<br>能<br>服<br>众</div><div class="v"><b>因为众在找方向，不在找热闹。</b>——<b>热闹给的是兴奋，方向给的是安心。</b><b>——一个能让人安心的点，比十个会喊的人有用。</b></div></div>
+    </div>
+    <div class="h2" id="sc-b5">六　三病理与三自检</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">病<br>理<br>一</div><div class="v"><b>以「喊得响」为有力 → 事倍功半。</b>表现：开会多、口号多、检查多，一件事反复强调。<b>代价：</b>人被喊疲了，真话不说了。<b>——声音越大，越像没有底。</b></div></div>
+      <div class="row"><div class="k k2">病<br>理<br>二</div><div class="v"><b>以「德」为软 → 不敢管、和稀泥。</b>表现：什么都答应，谁也不敢得罪，出事就说「大家都不容易」。<b>代价：</b>规矩废了，认真的人先走。<b>——这不是德，是没有主意。</b></div></div>
+      <div class="row"><div class="k k2">病<br>理<br>三</div><div class="v"><b>把「无为」读成「不管」 → 失控。</b>表现：不立规矩、不做判断，事到临头再扑火。<b>代价：</b>底下人各自为政，最后还是要用更重的手段收拾。<b>——先无为，是懒；先立后无为，才是定。</b></div></div>
+      <div class="row"><div class="k k2">自<br>检<br>一</div><div class="v"><b>我手上有没有一件事，是「我不动它也在转」的？</b>——如果没有，说明所有事都靠我在推；推得动一时，推不动一年。</div></div>
+      <div class="row"><div class="k k2">自<br>检<br>二</div><div class="v"><b>我最近一次立规矩，靠的是罚，还是靠人服？</b>——靠罚立起来的，你一转身就松；靠服立起来的，你不在也照做。</div></div>
+      <div class="row"><div class="k k2">自<br>检<br>三</div><div class="v"><b>我最费力的那件事，是不是本来可以省掉？</b>——把它写下来，问一句：这件事不做，会真的少什么？<b>——问完常常发现：不少什么，只是不放心。</b></div></div>
+    </div>
+    <div class="h2" id="sc-d">七　时代：他不是空谈的人</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">春<br>秋<br>的<br>政</div><div class="v"><b>政在诸侯，陪臣执国命；礼崩而令繁，令繁而民疲。</b>——<b>那个时代最不缺的就是「政」与「刑」：谁也不缺手段，缺的是「凭什么」。</b></div></div>
+      <div class="row"><div class="k k2">他<br>做<br>过<br>的<br>官</div><div class="v"><b>中都宰，一年而四方则之；为司空；为大司寇；摄相事；堕三都而败，去鲁。</b>（《史记·孔子世家》）——<b>这不是一个只在讲台上说话的人。</b><b>——他真管过一座城、一片工、一国之刑狱。</b></div></div>
+      <div class="row"><div class="k k2">失<br>败<br>的<br>那<br>一<br>节</div><div class="v"><b>堕三都，是要拆掉三家权臣的私邑城墙；拆到一半，成不了，他走了。</b>——<b>所以这一章不是「德治必胜」的许诺。</b><b>——孔子自己就没赢；他留下的是一个姿势，不是一个战果。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>对<br>照</div><div class="v"><b>今天最像「政刑」的，是 KPI 与流程：指标一压，行为就齐了，心却没动。</b>——<b>最像「德礼」的，是一个团队里那句「这事他做，我放心」。</b><b>——前者管得住出勤，后者管得住判断。</b></div></div>
+    </div>
+    <div class="h2" id="sc-e">八　章旨</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一<br>句</div><div class="v"><b>为政的根，不在你做了多少动作，而在你是个什么人；德立而事简，人自归向。</b></div></div>
+      <div class="row"><div class="k k2">一<br>反</div><div class="v"><b>反过来说：以手段代德必疲，以软弱代德必乱，以不管代无为必散。</b>——<b>三条，正好把这一章读歪。</b></div></div>
+      <div class="row"><div class="k k2">与<br>学<br>而<br>合<br>看</div><div class="v"><b>学而是「立己」，为政是「正人」；立己不到，正人就成了压人。</b>——<b>两篇相接处，正是「德」这一个字。</b></div></div>
+      <div class="row"><div class="k k2">落<br>点</div><div class="v"><b>两个动作：</b>① 找出你管的那一小块地方，把最费力的三件事各问一句「不做会少什么」；② 定一条你自己先守的规矩，守满三个月再谈要求别人。</div></div>
+    </div>
+    <div class="h2" id="sc-f">九　存疑</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>北辰是否即今日所说北极星</b>　朱子以「北极、天之枢」释之，是就观测印象立说；今天文学知北极星亦因岁差而渐变。<b>本课取「喻」不取「实测」</b>：孔子借的是「天上有个不动之点」这个经验，非天文定义。</div></div>
+      <div class="q"><span>02</span><div><b>「共」的读音与义</b>　朱子读「向」（gǒng，同拱）；亦有读 gòng 作「共同」者。<b>本课从朱子</b>：作「向」才与「众星四面旋绕」相应。</div></div>
+      <div class="q"><span>03</span><div><b>「无为」是否为道家概念之挪用</b>　儒典自有其「无为」：15.5 以「恭己正南面」释舜之无为。<b>本课取「不烦扰」义，与道家「不干预」分列</b>，不使孔子借道家语立说。</div></div>
+      <div class="q"><span>04</span><div><b>本章与 2.3 是否本为一章</b>　文势紧接，旧有合读者；今本分立。<b>本课从今本，合观而不合章</b>：2.1 给姿势，2.3 给证据，各自成章更清楚。</div></div>
+      <div class="q"><span>05</span><div><b>孔子为政是否成功</b>　中都宰一年而四方则之，是成；堕三都而败去鲁，是不成。<b>本课不将本章读作「德治必成」的保证</b>，只读作「德治如何用力」——成与不成，另有天时。</div></div>
+    </div>
+    <div class="h2" id="sc-g">十　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">「为政」就是会管人、手段高。</div><div class="b"><b>「政」的本义是「正」——正人之不正。</b>先把自己扶正，才有资格谈扶正别人；<b>手段高而无德，是压人，不是为政。</b></div></div>
+      <div class="pair"><div class="a">「德」就是道德口号、讲漂亮话。</div><div class="b">朱子说「得于心而不失」：<b>真到手、且不丢。</b>——会说而做不到，正是「未得」；<b>德是可以验证的：看他在没人看见时怎么做。</b></div></div>
+      <div class="pair"><div class="a">北辰之喻是教领导「什么都不干」。</div><div class="b"><b>是「不乱动」，不是「不动手」。</b>该立的规矩一条不少，只是不靠天天改、事事查来维持；<b>轴不动，门才转得起来。</b></div></div>
+      <div class="pair"><div class="a">「无为」＝撒手不管。</div><div class="b">程子说得明白：<b>「为政以德，然后无为」——先立后无为。</b>先无为是懒，先立后无为是定；<b>儒家无为是「不烦扰」，不是「不做事」。</b></div></div>
+      <div class="pair"><div class="a">讲德治就是软弱、不敢罚。</div><div class="b"><b>刑与礼都不废。</b>2.3 说得清楚：靠政刑只能到「免而无耻」，要再上一层得靠德礼；<b>这是层次，不是取舍。</b></div></div>
+      <div class="pair"><div class="a">这章是给国君的，与常人无关。</div><div class="b"><b>凡有一个人听你的，你就在为政。</b>——带一个实习生、管一个家、领一个小组，都是同一件事：<b>你站得正不正，决定他们往哪儿走。</b></div></div>
+    </div>
+    <div class="h2" id="sc-h">十一　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《论语》<br>2.3</div><div class="v">「<b>道之以政，齐之以刑，民免而无耻；道之以德，齐之以礼，有耻且格。</b>」——本章的落地卷。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>12.19</div><div class="v">「<b>君子之德风，小人之德草。草上之风，必偃。</b>」——德怎么起作用：不是推，是风过草偃。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>13.6</div><div class="v">「<b>其身正，不令而行；其身不正，虽令不从。</b>」——「居其所」的另一说法。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>15.5</div><div class="v">「<b>无为而治者，其舜也与？夫何为哉？恭己正南面而已矣。</b>」——儒家「无为」的正解。</div></div>
+      <div class="row"><div class="k k2">《尚书》<br>蔡仲<br>之命</div><div class="v">「<b>皇天无亲，惟德是辅。</b>」——德之所以能为政，因为它是天所辅的那个东西。</div></div>
+      <div class="row"><div class="k k2">《孟子》<br>公孙<br>丑上</div><div class="v">「<b>以德服人者，中心悦而诚服也。</b>」——「众星共之」的心理学版本。</div></div>
+      <div class="row"><div class="k k2">《老子》<br>五十七章</div><div class="v">「<b>治大国若烹小鲜。</b>」——道家无为的典型说法，可与本章对读，见两家分野。</div></div>
+      <div class="row"><div class="k k2">《史记》<br>孔子<br>世家</div><div class="v"><b>中都宰一年而四方则之；为司空、大司寇、摄相事；堕三都而败。</b>——这一章的作者，是真做过的人。</div></div>
+    </div>
+    <div class="h2" id="sc-19">图一　旷野：不动的那一点</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一　图位（待作者供图）</div>
+        <details class="prompt" open><summary>提示词（待生成）</summary>
+          <p>古淡水墨立轴，纸本米色 #FBF7EC 底，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面取「为政以德，譬如北辰，居其所而众星共之」之义：旷野高台，长者（孔子）背手立定，身不侧、足不移，仰首看天，看的是北方那一点；天上星斗疏疏落落，却都成弧、向着那一点旋绕，其中一颗最亮而几乎不动。台下有四五人各执其事（一人抱简、一人扶犁、一人担物），都朝着台上做事，没有一个人抬头看台上的人——他们不是在仰望他，是在照着他的方向干活。台不高，人不高，星很远；全画无一句口号、无一字榜文。构图极静，不画众人围观，不作威仪相。竖幅 3:4，人物居下三分之二，上方留大片夜空。不写字、不画书页文字、不生成任何水印。</p>
+        </details>
+        <div class="figcap">图位说明：人不动、星自绕、台下各执其事而不仰望——「居其所」画成「不挪位」，「众星共之」画成「各自朝这个方向干活」。图到位后补「读图五处」。</div>
+      </div>
+    </div>
+    <div class="h2" id="sc-20">义理图一　北辰：不动的那一点，定了满天星</div>
+<div class="figsvg">
+  <svg viewBox="0 0 480 300" role="img" aria-label="北辰不动，众星旋绕归向">
+    <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 一个不动的点，满天星绕着它转</text>
+    <path d="M240 64 C262.9 49.7 260.4 95.3 240 108" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="240" cy="64" r="3.2" fill="#8A8074"/>
+    <polygon points="240,108 243,115 237,115" fill="#C58A73"/>
+    <path d="M299.4 88.6 C325.7 94.7 291.7 125.1 268.3 119.7" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="299.4" cy="88.6" r="3.2" fill="#8A8074"/>
+    <polygon points="268.3,119.7 265.5,126.8 261.2,122.5" fill="#C58A73"/>
+    <path d="M324 148 C338.3 170.9 292.7 168.4 280 148" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="324" cy="148" r="3.2" fill="#8A8074"/>
+    <polygon points="280,148 273,151 273,145" fill="#C58A73"/>
+    <path d="M299.4 207.4 C293.3 233.7 262.9 199.7 268.3 176.3" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="299.4" cy="207.4" r="3.2" fill="#8A8074"/>
+    <polygon points="268.3,176.3 261.2,173.5 265.5,169.2" fill="#C58A73"/>
+    <path d="M240 232 C217.1 246.3 219.6 200.7 240 188" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="240" cy="232" r="3.2" fill="#8A8074"/>
+    <polygon points="240,188 237,181 243,181" fill="#C58A73"/>
+    <path d="M180.6 207.4 C154.3 201.3 188.3 170.9 211.7 176.3" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="180.6" cy="207.4" r="3.2" fill="#8A8074"/>
+    <polygon points="211.7,176.3 214.5,169.2 218.8,173.5" fill="#C58A73"/>
+    <path d="M156 148 C141.7 125.1 187.3 127.6 200 148" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="156" cy="148" r="3.2" fill="#8A8074"/>
+    <polygon points="200,148 207,145 207,151" fill="#C58A73"/>
+    <path d="M180.6 88.6 C186.7 62.3 217.1 96.3 211.7 119.7" fill="none" stroke="#DCD5C8" stroke-width="1.1"/>
+    <circle cx="180.6" cy="88.6" r="3.2" fill="#8A8074"/>
+    <polygon points="211.7,119.7 218.8,122.5 214.5,126.8" fill="#C58A73"/>
+    <circle cx="240" cy="148" r="9" fill="#FFFDF6" stroke="#2F2A24" stroke-width="1.4"/>
+    <circle cx="240" cy="148" r="2.6" fill="#A2503B"/>
+    <text x="434" y="44" text-anchor="end" font-family="serif" font-size="9" fill="#A2503B">众星共之</text>
+    <text x="434" y="58" text-anchor="end" font-family="serif" font-size="8" fill="#8A8074">四面旋绕而归向</text>
+    <line x1="60" y1="252" x2="420" y2="252" stroke="#DCD5C8"/>
+    <text x="240" y="274" text-anchor="middle" font-family="serif" font-size="10" fill="#2F2A24">圆心即北辰 · 居其所：它不动，别人才知道哪儿是北</text>
+    <text x="240" y="292" text-anchor="middle" font-family="serif" font-size="9" fill="#A2503B">不是星被推着转，是星自己绕过来</text>
+  </svg>
+</div>
+    <div class="h2" id="sc-21">义理图二　两种治：政刑止于「免」，德礼至于「格」</div>
+<div class="figsvg">
+  <svg viewBox="0 0 480 320" role="img" aria-label="政刑与德礼两种治，及各自的结果">
+    <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 2.3：一个管到行为，一个立到心里</text>
+    <text x="137" y="42" text-anchor="middle" font-family="serif" font-size="10" fill="#8A8074">道之以政 · 齐之以刑</text>
+    <text x="343" y="42" text-anchor="middle" font-family="serif" font-size="10" fill="#A2503B">道之以德 · 齐之以礼</text>
+<rect x=57 y=56 width=160 height=40 fill="#FFFDF6" stroke="#C58A73"/>
+<text x=137.0 y=80.0 text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">政令</text>
+<rect x=57 y=110 width=160 height=40 fill="#FFFDF6" stroke="#C58A73"/>
+<text x=137.0 y=134.0 text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">刑罚</text>
+<rect x=57 y=164 width=160 height=40 fill="#FFFDF6" stroke="#C58A73"/>
+<text x=137.0 y=188.0 text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">行为被管住</text>
+<rect x=263 y=56 width=160 height=40 fill="#FBF1EC" stroke="#A2503B"/>
+<text x=343.0 y=80.0 text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">德</text>
+<rect x=263 y=110 width=160 height=40 fill="#FBF1EC" stroke="#A2503B"/>
+<text x=343.0 y=134.0 text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">礼</text>
+<rect x=263 y=164 width=160 height=40 fill="#FBF1EC" stroke="#A2503B"/>
+<text x=343.0 y=188.0 text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">心被立起来</text>
+    <line x1="137" y1="96" x2="137" y2="110" stroke="#DCD5C8"/>
+    <line x1="343" y1="96" x2="343" y2="110" stroke="#DCD5C8"/>
+    <line x1="137" y1="150" x2="137" y2="164" stroke="#DCD5C8"/>
+    <line x1="343" y1="150" x2="343" y2="164" stroke="#DCD5C8"/>
+<rect x=57 y=220 width=160 height=44 fill="#F6F1E3" stroke="#8A8074"/>
+<text x=137.0 y=246.0 text-anchor="middle" font-family="serif" font-size="12" fill="#5C5347">民免而无耻</text>
+<rect x=263 y=220 width=160 height=44 fill="#FBF1EC" stroke="#A2503B"/>
+<text x=343.0 y=246.0 text-anchor="middle" font-family="serif" font-size="12" fill="#A2503B">有耻且格</text>
+    <line x1="137" y1="204" x2="137" y2="220" stroke="#B5A897" stroke-dasharray="4 3"/>
+    <line x1="343" y1="204" x2="343" y2="220" stroke="#A2503B"/>
+    <line x1="60" y1="290" x2="420" y2="290" stroke="#DCD5C8"/>
+    <text x="240" y="308" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">「免」是躲开罚，「格」是自己走过来——层次之差，不是取舍之差</text>
+  </svg>
+</div>
+    <div class="h2" id="sc-22">义理图三　德的三层：得于心、不失、及人</div>
+<div class="figsvg">
+  <svg viewBox="0 0 480 340" role="img" aria-label="德的三层：得于心、不失、及人">
+    <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 范氏三句，是把这三层说成了三种果</text>
+    <rect x="56" y="52" width="252" height="52" fill="#FFFDF6" stroke="#8A8074"/>
+    <text x="182" y="76" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">一 · 得于心</text>
+    <text x="182" y="93" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">真到手，不是听来的</text>
+    <line x1="182" y1="104" x2="182" y2="138" stroke="#B5A897"/>
+    <polygon points="182,138 178,132 186,132" fill="#B5A897"/>
+    <rect x="56" y="138" width="252" height="52" fill="#FFFDF6" stroke="#C58A73"/>
+    <text x="182" y="162" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">二 · 不失</text>
+    <text x="182" y="179" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">拿住了，不丢</text>
+    <line x1="182" y1="190" x2="182" y2="224" stroke="#B5A897"/>
+    <polygon points="182,224 178,218 186,218" fill="#B5A897"/>
+    <rect x="56" y="224" width="252" height="52" fill="#FBF1EC" stroke="#A2503B"/>
+    <text x="182" y="248" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">三 · 及人</text>
+    <text x="182" y="265" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">在身上，也在别人身上</text>
+    <text x="332" y="78" font-family="serif" font-size="10" fill="#A2503B">不动而化</text>
+    <text x="332" y="94" font-family="serif" font-size="8" fill="#8A8074">省一个动作，得一个结果</text>
+    <text x="332" y="164" font-family="serif" font-size="10" fill="#A2503B">不言而信</text>
+    <text x="332" y="180" font-family="serif" font-size="8" fill="#8A8074">省一个动作，得一个结果</text>
+    <text x="332" y="250" font-family="serif" font-size="10" fill="#A2503B">无为而成</text>
+    <text x="332" y="266" font-family="serif" font-size="8" fill="#8A8074">省一个动作，得一个结果</text>
+    <line x1="60" y1="312" x2="420" y2="312" stroke="#DCD5C8"/>
+    <text x="240" y="330" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">德不是知识，是状态：在不在你身上，看得出来</text>
+  </svg>
+</div>
+    <div class="h2" id="sc-23">附论一　为什么用星作比</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">因<br>为<br>它<br>远</div><div class="v"><b>星离人最远，却在给人指路。</b>——<b>德也是这样：它不站在你面前说话，可你做事时，心里有这个人在，就知道哪条线不能过。</b></div></div>
+      <div class="row"><div class="k k2">因<br>为<br>它<br>静</div><div class="v"><b>星不出声，可夜里所有赶路的人都看它。</b>——<b>话多的人给的是命令，话少而准的人给的是坐标。</b><b>——命令要人服从，坐标让人自愿。</b></div></div>
+      <div class="row"><div class="k k2">因<br>为<br>它<br>可<br>验</div><div class="v"><b>抬头就能看：哪颗在动，哪颗不动。</b>——<b>人也是这样：说一百句「我很正」，不如看他三年里有没有挪过位。</b><b>——德是唯一可以被时间验证的东西。</b></div></div>
+      <div class="row"><div class="k k2">一<br>句<br>收</div><div class="v"><b>孔子不给你一套制度，给你一个坐标。</b>——<b>制度会换，坐标不换：谁把位置站对了，谁那儿就聚人。</b></div></div>
+    </div>
+    <div class="h2" id="sc-24">附论二　「无为」两千年的误读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">误<br>读<br>的<br>起<br>点</div><div class="v"><b>朱子一句「则无为而天下归之」，被人当成「什么都不用做」。</b>——<b>其实是倒装：因为「为政以德」，所以「无为」而天下归之。</b><b>——因果被读成了主张。</b></div></div>
+      <div class="row"><div class="k k2">两<br>个<br>无<br>为</div><div class="v"><b>道家：不干预（对手是「多事」）；儒家：不烦扰（对手是「扰」）。</b>——<b>一个取消动作，一个删掉多余动作。</b><b>——差之毫厘，行之千里。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>的<br>样<br>子</div><div class="v"><b>一个把流程做顺、把判断留给做事的人的管理者，是儒家无为；</b><b>一个什么都不管、出事再骂人的管理者，是假的儒家无为，真的懒。</b></div></div>
+      <div class="row"><div class="k k2">一<br>句<br>收</div><div class="v"><b>无为不是省掉做事，是省掉「因为不放心而多出来的那些事」。</b>——<b>省下来的力气，才够用来站定。</b></div></div>
+    </div>
+    <div class="h2" id="sc-25">附论三　孔子做过的官</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">中<br>都<br>宰</div><div class="v"><b>五十岁后为鲁中都宰，「一年，四方皆则之」</b>（《史记·孔子世家》）——<b>一个县邑，一年，别处都来学他。</b><b>——这是「为政以德」唯一有据的实证之一。</b></div></div>
+      <div class="row"><div class="k k2">司<br>空<br>与<br>司<br>寇</div><div class="v"><b>由中都宰为司空，由司空为大司寇。</b>——<b>管过工程，管过刑狱。</b><b>——所以 2.3 那两句「政刑／德礼」，不是书斋里的比较，是他手里的两套工具。</b></div></div>
+      <div class="row"><div class="k k2">摄<br>相<br>事</div><div class="v"><b>夹谷之会，摄相事，以礼折齐，齐人归郓、讙、龟阴之田。</b>——<b>这一回他是靠「礼」赢的，不是靠兵。</b><b>——德礼能办事，这是硬证据。</b></div></div>
+      <div class="row"><div class="k k2">堕<br>三<br>都</div><div class="v"><b>欲拆三家私邑之城，堕成、堕郈而郕不可堕，事败，去鲁，周游十四年。</b>——<b>这是他政治生涯的终点。</b><b>——所以本章读作「姿势」，不读作「必胜」：他给了方法，天时没给他结果。</b></div></div>
+    </div>
+    <div class="scene"><b>为政一篇，从这里开。</b>——<b>孔子没有先讲「怎么管」，先讲「你是个什么人」；没有先给制度，先给了一颗星。</b><b>——后面二十三章，讲的全是这颗星怎么落到具体的事上：怎么教、怎么察、怎么举直、怎么不欺。</b><b>一颗星，二十四章，一条路。</b></div>
+  </section>
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 16 课　v1.0　（2026-11-21）</div>
+  </footer>
+</div>
+</body>
+</html>

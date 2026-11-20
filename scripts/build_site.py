@@ -60,6 +60,8 @@ COURSES = [
      "守、化、益三级：不做只是及格，做出才算长进；切磋琢磨是减法。"),
     ("15", "论语·第十五课·不患人之不己知（阅读版）.html", "第十五课", "不患人之不己知，患不知人也",
      "学而收篇：眼睛从「别人看我」转向「我看别人」；四条改道，三张知人的尺。"),
+    ("16", "论语·第十六课·为政以德（阅读版）.html", "第十六课", "为政以德，譬如北辰",
+     "为政开篇：政者正也，德者得也；居其所而不动，众星自向，事简而人归。"),
 ]
 
 SERIES = [
@@ -178,19 +180,19 @@ def cover_block():
         seal="论",
         gatha_first=("学而时习之", "不亦说乎"),
         gatha_second=("人不知而不愠", "不亦君子乎"),
-        meta=["底本　朱熹《论语集注》", "体例　一章一课 · 两页双读", "已刊　前言与学而一至十五章", "v" + VERSION + " · 二〇二六"],
+        meta=["底本　朱熹《论语集注》", "体例　一章一课 · 两页双读", "已刊　前言 · 学而十六章 · 为政首章", "v" + VERSION + " · 二〇二六"],
     )
 
 
 def frontis_block():
     return kit.frontis(
         title="润泽说 道可道之论语",
-        sub="学而篇 · 通释读本（连载）",
+        sub="论语 · 通释读本（连载）",
         lines=[
             ("底本", "朱熹《论语集注》，参校何晏《集解》、刘宝楠《正义》"),
             ("体例", "一章一课；每课少儿页七块、成人页十三至十四节"),
             ("图", "典故图由作者供图；义理图手写 SVG，随课附文件"),
-            ("进度", "全书四百九十八章，已刊前言与一至十章"),
+            ("进度", "全书四百九十八章，已刊前言、学而十六章、为政首章"),
             ("版本", "v" + VERSION),
         ],
         seal="论",
@@ -211,12 +213,12 @@ def toc_items():
 
 def build_index():
     body = """<div class="wrap">
-<div class="top"><div>润 泽 说 · 道 可 道 之 论 语</div><div><b>学而篇</b>　连载 · v%s</div></div>
+<div class="top"><div>润 泽 说 · 道 可 道 之 论 语</div><div><b>学而 · 为政</b>　连载 · v%s</div></div>
 <div class="hd">
   <div class="series">润 泽 说 · 道 可 道</div>
-  <h1 class="title">论语 · 学而篇</h1>
+  <h1 class="title">论语 · 通释</h1>
   <p class="sub">一章一课，一课两页；少儿页可念，成人页可考。底本朱熹《论语集注》。</p>
-  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>16</em> 件</span><span>版本 v%s</span></div>
+  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>17</em> 件</span><span>版本 v%s</span></div>
 </div>
 
 <h2>卷首语<small>为什么这样读</small></h2>
@@ -224,7 +226,7 @@ def build_index():
 <p>贯穿全书一条总纲：<b>一阴一阳之谓道</b>——学是受（阴、向内收），习是发（阳、向外放）。只学不习，是替别人保管知识；只习不学，是自己摸黑走路。</p>
 <p>所以每一课都问一句：这章说的是<b>哪件事、哪个字</b>？说不出，就退入存疑，不写成定论。</p>
 
-<h2>已刊十六件<small>前言 · 学而一至十五章</small></h2>
+<h2>已刊十七件<small>前言 · 学而十六章 · 为政首章</small></h2>
 <p class="lead">按课次顺序；每件都有少儿页与成人页，另附义理图。</p>
 <div class="list">%s</div>
 <a class="btn" href="book.html">从卷首读起（封面 · 扉页 · 前言）</a>
@@ -251,16 +253,16 @@ def build_index():
 <div class="series-grid">%s</div>
 
 <div class="foot">
-  <div>润泽说 道可道之论语 · 学而篇　v%s　（2026-11-19）</div>
+  <div>润泽说 道可道之论语 · 通释　v%s　（2026-11-21）</div>
   <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
   <div>全书四百九十八章，按篇连载；本书为第一批七件。许可：CC BY-NC-SA 4.0</div>
   <div><a href="https://github.com/q1z2q3-debug/daokedao-lunyu">GitHub 仓库</a><a href="book.html">卷首</a><a href="sitemap.xml">站点地图</a></div>
 </div>
 </div>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Book","name":"润泽说 道可道之论语 · 学而篇",
+{"@context":"https://schema.org","@type":"Book","name":"润泽说 道可道之论语 · 通释",
 "author":{"@type":"Person","name":"润泽"},"inLanguage":"zh-CN","bookEdition":"v%s",
-"description":"《论语》学而篇通释读本，一章一课，少儿页与成人页双读；底本朱熹《论语集注》。全书四百九十八章，按篇连载。",
+"description":"《论语》通释读本，一章一课，少儿页与成人页双读；底本朱熹《论语集注》。全书四百九十八章，按篇连载。",
 "publisher":{"@type":"Organization","name":"润泽说 道可道"},
 "hasPart":[%s]}
 </script>""" % (
@@ -274,8 +276,8 @@ def build_index():
     )
     open(os.path.join(DOCS, "index.html"), "w", encoding="utf-8").write(
         shell(
-            "润泽说 道可道之论语 · 学而篇｜《论语》通释读本（连载）",
-            "《论语》学而篇通释：一章一课，少儿页可念、成人页可考。已刊前言与学而一至十五章，底本朱熹《论语集注》，义理图手写、存疑另立。",
+            "润泽说 道可道之论语 · 通释｜《论语》通释读本（连载）",
+            "《论语》通释：一章一课，少儿页可念、成人页可考。已刊前言、学而十六章、为政首章，底本朱熹《论语集注》，义理图手写、存疑另立。",
             body,
             SITE + "/",
         )
@@ -301,7 +303,7 @@ def build_book():
 <h2 style="font-size:26px;letter-spacing:.16em;margin:44px 0 10px">六课目录</h2>
 <div class="list">%s</div>
 <div class="foot">
-  <div>润泽说 道可道之论语 · 学而篇　卷首　v%s　（2026-11-19）</div>
+  <div>润泽说 道可道之论语 · 通释　卷首　v%s　（2026-11-21）</div>
   <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
 </div>
 </div>
@@ -320,7 +322,7 @@ def build_book():
 NAV = """<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
 font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
 display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
-<span>润泽说 · 道可道之论语 · 学而篇</span>
+<span>润泽说 · 道可道之论语 · 通释</span>
 <a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
 """
 
@@ -362,7 +364,7 @@ def build_meta():
         "User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\n"
         "Sitemap: %s/sitemap.xml\n" % SITE)
 
-    llms = """# 润泽说 道可道之论语 · 学而篇
+    llms = """# 润泽说 道可道之论语 · 通释
 
 > 《论语》通释读本，连载中。底本朱熹《论语集注》，全书四百九十八章，一章一课。
 > 每课两页：少儿页（可念、可见）与成人页（可考、可查）。义理图手写 SVG；被否定的解读撤出正文另立「存疑」。
@@ -373,7 +375,7 @@ def build_meta():
         llms += "- %s｜%s｜%s：%s/%s/ke/%s.html\n" % (no, verse, gist, SITE, "", slug)
     llms += """
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v%s，%s/
+润泽《润泽说 道可道之论语 · 通释》v%s，%s/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
