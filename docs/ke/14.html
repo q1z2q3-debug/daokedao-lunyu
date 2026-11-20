@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>贫而无谄，富而无骄 · 论语第十四课｜润泽说 道可道</title>
+<meta name="description" content="《论语》学而第十五章通释：子贡问「贫而无谄，富而无骄，何如」，子曰「可也。未若贫而乐，富而好礼者也」，子贡引《诗》「如切如磋，如琢如磨」，孔子许以「始可与言《诗》」。三层：守（无谄无骄）、化（乐与好礼）、益（切磋琢磨）。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23FBF7EC' font-family='serif'%3E%E6%B8%A9%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 学而篇</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　学而第一 · 十五章　第 14 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-b1">两级台阶</a><a href="#sc-b2">子贡</a><a href="#sc-b3">「可也」</a><a href="#sc-b4">乐与好礼</a><a href="#sc-b5">「无」不如「有」</a><a href="#sc-b6">引诗</a><a href="#sc-b7">二次言诗</a><a href="#sc-b8">三自检</a><a href="#sc-d">时代</a><a href="#sc-e">章旨</a><a href="#sc-f">存疑</a><a href="#sc-g">双卡</a><a href="#sc-h">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理图一 两级台阶</a><a href="#sc-21">义理图二 两种句式</a><a href="#sc-22">义理图三 一层层削</a><a href="#sc-23">附论一 会做生意的学生</a><a href="#sc-24">附论二 四种料两种刀</a><a href="#sc-25">附论三 两次「始可与言诗」</a></div>
+  </div>
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+    <h1>贫而无谄，富而无骄</h1>
+    <div class="h1-sub">学而 1.15　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子贡问曰：</span>「贫而无<ruby>谄<rt>chǎn</rt></ruby>，富而无<ruby>骄<rt>jiāo</rt></ruby>，何如？」子曰：「可也。未若贫而<ruby>乐<rt>lè</rt></ruby>，富而<ruby>好<rt>hào</rt></ruby>礼者也。」子贡曰：「《诗》云：『如切如<ruby>磋<rt>cuō</rt></ruby>，如琢如<ruby>磨<rt>mó</rt></ruby>』，其斯之谓<ruby>与<rt>yú</rt></ruby>？」子曰：「赐也，始可与言《诗》已矣，告诸往而知来者。」
+    </div>
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>谄</span></div><div class="tzcap"><span>10 画</span><span>弯着腰说好话</span></div></div>
+      <div class="tzitem"><div class="cell"><span>骄</span></div><div class="tzcap"><span>9 画</span><span>看不起人</span></div></div>
+      <div class="tzitem"><div class="cell"><span>乐</span></div><div class="tzcap"><span>5 画</span><span>心里有高兴事</span></div></div>
+      <div class="tzitem"><div class="cell"><span>好</span></div><div class="tzcap"><span>6 画</span><span>乐意去做</span></div></div>
+      <div class="tzitem"><div class="cell"><span>磨</span></div><div class="tzcap"><span>16 画</span><span>一遍一遍蹭</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">谄</div><div class="v"><b>为了得点好处，弯着腰说好话。</b>《说文》「谄，谀也」——<b>不是穷本身可耻，是「因为穷就把腰弯下去」</b>。</div></div>
+      <div class="row"><div class="k">骄</div><div class="v"><b>觉得自己了不起，看人往低处看。</b>——<b>不是有钱就骄，是「因为有钱就替别人做主」。</b></div></div>
+      <div class="row"><div class="k">乐</div><div class="v"><b>心里真有高兴的事。</b>这里读 lè，不读「音乐」的 yuè。——<b>「贫而乐」不是「穷着也挺好」，是「穷没把我高兴的事拿走」。</b></div></div>
+      <div class="row"><div class="k">好</div><div class="v"><b>乐意、喜欢去做。</b>读 hào。——<b>「好礼」不是「懂礼」，是「愿意按规矩待人」。</b></div></div>
+      <div class="row"><div class="k">磨</div><div class="v"><b>拿石头一遍一遍地蹭。</b>「切磋琢磨」四个字，都是<b>把多余的部分去掉</b>，不是往上加。</div></div>
+    </div>
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>穷的时候不弯腰，富的时候不看人低——这已经不错了；但「不错」不是「好」。</b>更好的，是<b>穷的时候心里还有高兴的事，富的时候还乐意按规矩待人</b>。（学而 1.15）</p>
+    <div class="scene"><b>读这一章，先记住两句话：</b>「<b>不做坏事，是守住了底线；做点好事，才算往上走了一层。</b>」——<b>子贡说的是前一句，孔子补的是后一句。</b></div>
+    <div class="h2" id="sc-3">共读</div>
+    <div class="rows">
+      <div class="row"><div class="k">问</div><div class="v">子贡问的是：「<b>穷的时候不巴结人，富的时候不瞧不起人，这样算怎么样？</b>」——<b>他问得很实在，不是空话。</b></div></div>
+      <div class="row"><div class="k">答</div><div class="v">孔子说：「<b>可也。</b>」——<b>这两个字是「还行」「够了」。不是「很好」。</b></div></div>
+      <div class="row"><div class="k">补</div><div class="v">接着又补一句：「<b>未若贫而乐，富而好礼者也。</b>」——<b>「未若」就是「还不如」。</b>孔子把话往上抬了一格。</div></div>
+      <div class="row"><div class="k">再问</div><div class="v">子贡立刻想起《诗经》里两句：「<b>如切如磋，如琢如磨。</b>」——<b>磨骨头、磨玉石，都是一层一层来的。</b>他问：「说的是这个意思吧？」</div></div>
+      <div class="row"><div class="k">许</div><div class="v">孔子很高兴：「<b>赐也，始可与言《诗》已矣。</b>」——<b>赐是子贡的名字。</b>「现在可以跟你谈诗了」，这是很高的夸奖。</div></div>
+    </div>
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene"><b>场景一：</b>班里同学过生日，请全班吃蛋糕，还送了每人一个小礼物。<b>小宁家里不宽裕，那天他笑着说「我不爱吃甜的」，把头低下去。</b>——<b>这不是礼貌，这是「谄」的开头：为了不让人看出自己没有，先说一句不真的话。</b></div>
+    <div class="scene"><b>正确的做法不是硬撑，也不是躲。</b>他可以照常吃那一块，可以说「谢谢你，我拿这个」，不必解释自己家。<b>——穷不丢人，为穷说假话才丢人。</b></div>
+    <div class="scene"><b>场景二：</b>小安这次考了第一，回家一路把卷子举在手上，进门先问「你们谁考了多少」。<b>——他不是想分享，是想看别人低一头。</b>这叫骄。<b>骄不在钱上，在人上。</b></div>
+    <div class="scene"><b>再往上走一步是什么样？</b>小安考了第一，第二天把笔记借给没考好的同桌；小宁家不宽裕，班里排值日他挑最累的那一班。<b>——这两个动作，孔子叫「乐」与「好礼」。</b></div>
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="list">
+      <li>你有没有过一次，为了让别人不看出你「没有」，说了一句不太真的话？<b>那句是什么？</b></li>
+      <li>你考得好、或者家里给你买了新东西的那天，<b>你是怎么让同学知道的？</b></li>
+      <li>除了「我没做坏事」，这一年你有没有做过<b>一件主动对别人好的事</b>？</li>
+    </div>
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>这一章最要紧的一句话是：「不做坏事」，只是及格。</b>——<b>一个人可以一辈子不巴结人、不瞧不起人，也可以一辈子没高兴过、没好好待过人。</b>两样都做到，孔子才说「未若」。</div>
+    <div class="scene"><b>还有一件：好东西是磨出来的，不是想出来的。</b>「如切如磋，如琢如磨」——<b>骨头要一刀一刀锉，玉石要一遍一遍磨。</b>写作、算题、练琴、跑步，都一样：<b>没有一层一层削下去，就没有光。</b></div>
+    <div class="scene"><b>子贡为什么被夸？</b>因为他<b>从老师说的「守」，自己推出了「进」</b>。<b>——孔子夸的不是他背得出诗，是他会往前想一步。</b></div>
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>别把「无谄」教成「不许要」。</b>孩子该拿的那一份，要敢拿。<b>真正的无谄是「我不必解释我家」，不是「我什么都不要」。</b>——把「不敢要」当骨气，孩子会学会躲。</div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>「骄」要指出来，但要指在「替别人做主」上。</b>孩子说「这题这么简单你都不会」，这不是显摆，是<b>他心里已经把同学放到低处了</b>。<b>——纠正这一句，比没收他的新玩具管用。</b></div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>「贫而乐」要给孩子真的乐处。</b>——<b>穷不穷是一时的事，有没有一件让他忘了时间的事，是一辈子的事。</b>一件乐器、一门手艺、一群朋友，都算。<b>有了这个，「穷」就不占满他整个心。</b></div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>「富而好礼」不是教孩子花钱办事。</b>礼是「按规矩待人」：答应的事做到、进门先打招呼、别人说话时不插嘴。<b>——这些一分钱不花，比请客有用。</b></div></div>
+      <div class="pair"><div class="k2">五</div><div class="v"><b>让孩子看见「磨」的过程。</b>——<b>不要说「你真聪明」，说「这一段你改了四遍，第四遍比第一遍好」。</b>「如切如磋」这四个字，孩子听得懂，只是要有人指给他看。</div></div>
+      <div class="pair"><div class="k2">六</div><div class="v"><b>融西：</b>心理学把人的动机分两路——<b>prevention focus</b>（防错：别出事、别丢脸）与 <b>promotion focus</b>（求成：想做好、想长进）。<b>「无谄无骄」是前者，「乐与好礼」是后者。</b>——只开前一路的孩子，长大后很稳，也很少有劲。</div></div>
+      <div class="pair"><div class="k2">七</div><div class="v"><b>家里若有两样东西，孩子就不容易长歪：</b>一样是「穷也可以说」的气氛，一样是「有本事要指给别人看」的习惯。<b>——前者防谄，后者防骄，也顺手把「进」的方向给指出来了。</b></div></div>
+    </div>
+  </section>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>贫而无谄，富而无骄</h1>
+    <div class="h1-sub">连读 · 字义句读 · 两级台阶 · 子贡 · 「可也」 · 乐与好礼 · 「无」不如「有」 · 引诗 · 二次言诗 · 三自检 · 时代 · 章旨 · 存疑 · 双卡 · 跨典</div>
+    <div class="h2" id="sc-lian">零　连读：从「守界」到「守位」</div>
+    <p class="leadline">1.12 讲「<b>不改</b>」（孝在时间里），1.13 讲「<b>不过</b>」（和在边界里），1.14 讲「<b>近</b>」（诺、恭、托在标准旁），1.15 讲「<b>好学</b>」（四条门在日子里）。<b>——四章都在教人「不偏」。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">1.12<br>给<br>度</div><div class="v">和要到相安为止。<b>——知道「到哪儿为止」。</b></div></div>
+      <div class="row"><div class="k k2">1.13<br>给<br>准</div><div class="v">诺、恭、托各配一把尺。<b>——知道「差多少」。</b></div></div>
+      <div class="row"><div class="k k2">1.14<br>给<br>路</div><div class="v">去欲、先行、后言、求正。<b>——知道「往哪儿走」。</b></div></div>
+      <div class="row"><div class="k k2">1.15<br>给<br>位</div><div class="v"><b>知道「站在自己的位置上，怎么站得住」。</b>——贫是一处，富是一处；<b>两处都是人最容易变形的地方。</b></div></div>
+    </div>
+    <div class="scene"><b>这一章在《论语》里有个特别的位置：</b>全书只记了<b>两次</b>孔子说「<b>始可与言《诗》已矣</b>」——<b>一次给子夏（3.8），一次给子贡（1.15）。</b>两次都是学生自己从一句话推出了另一句话。<b>——所以这一章不只是讲贫富，它还示范了「什么叫真会读书」。</b></div>
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">谄</div><div class="v">《说文》「<b>谄，谀也。</b>」朱子「<b>卑屈也。</b>」——<b>卑屈二字，把「穷」和「弯腰」分开了：穷是处境，卑屈是动作。</b>所以「贫而无谄」不是「穷而不穷」，是<b>穷而不做那个弯腰的动作</b>。</div></div>
+      <div class="row"><div class="k k2">骄</div><div class="v">朱子「<b>矜肆也。</b>」——<b>矜是「自持」，肆是「放开来」。</b>骄不是「有钱」，是<b>心里把自己放高一格，于是替别人做起主来。</b></div></div>
+      <div class="row"><div class="k k2">何如</div><div class="v"><b>「这样怎么样」——不是请评判人，是请评判这一套做法。</b>——<b>子贡问得克制：他不问「我怎么样」，问「这条路怎么样」。</b></div></div>
+      <div class="row"><div class="k k2">可也</div><div class="v">朱子「<b>可其如此也。</b>」——<b>「行」「够了」，不是「好」。</b>——<b>《论语》里孔子的许人，从来不满口。</b>这一句的斤两，得放在「未若」二字旁边才称得出来。</div></div>
+      <div class="row"><div class="k k2">未若</div><div class="v"><b>不如。</b>——<b>这两个字是全章的转轴：前一句是「无」，后一句是「有」。</b>孔子不是否定子贡，是<b>把「守」推到「化」</b>。</div></div>
+      <div class="row"><div class="k k2">乐</div><div class="v"><b>读 lè（朱子注「乐，音洛」）</b>，不是「礼乐」之 yuè。——<b>「贫而乐」＝穷着而自有可乐。</b><b>注意：不是「以贫为乐」。</b>以贫为乐是阿Q，<b>穷里有乐是「穷没拿走我的乐处」。</b></div></div>
+      <div class="row"><div class="k k2">好礼</div><div class="v"><b>好，去声 hào，喜爱。</b>礼者，节文也。<b>——「好礼」不是「懂礼数」，是「乐意按节文走」。</b><b>一字之差：懂礼的人在场上不出错，好礼的人在心里不轻慢。</b></div></div>
+      <div class="row"><div class="k k2">切磋<br>琢磨</div><div class="v">《诗·卫风·淇奥》「<b>有匪君子，如切如磋，如琢如磨。</b>」——朱子：「<b>治骨角者，以刀简切磋之；治玉石者，以锥凿琢磨之。</b>」<b>两种料，两样刀，同一件事：一层一层去掉多余。</b></div></div>
+      <div class="row"><div class="k k2">其斯<br>之谓与</div><div class="v"><b>「大概说的就是这个吧」</b>——「与」同「欤」，疑问语气。<b>——子贡没有把话说死。</b>他是在猜，等老师点头。<b>这一个「与」字，是这一章最见学生分寸的地方。</b></div></div>
+      <div class="row"><div class="k k2">告诸<br>往而<br>知来</div><div class="v"><b>给他看已经发生的一段，他能推出还没发生的一段。</b>——「往」是已说的，「来」是未说的。<b>这是孔子对「会读书」的定义：不是记住，是能推。</b></div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「<b>贫而无谄，富而无骄</b>／何如」——<b>子贡问</b>。「<b>可也</b>／<b>未若贫而乐，富而好礼者也</b>」——<b>孔子分两截答，前一截只是「可」，后一截才是「未若」。</b>「<b>其斯之谓与</b>」——<b>子贡自语</b>。「<b>赐也，始可与言《诗》已矣</b>／<b>告诸往而知来者</b>」——<b>孔子先许人，再给理由。</b></div></div>
+    </div>
+    <div class="h2" id="sc-b1">二　两级台阶：守、化、益</div>
+    <p class="leadline">子贡说的是「<b>不做什么</b>」，孔子补的是「<b>有什么</b>」，子贡自己又添上「<b>还能再怎么</b>」。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一<br>级<br>守</div><div class="v"><b>无谄、无骄。</b>——<b>挡住两个坏动作：不弯腰、不替人做主。</b>——<b>这一段的本事是「用力」：一直压着自己。</b>压得住，所以叫「可」；<b>但也一直在压，所以「可」不是「好」。</b></div></div>
+      <div class="row"><div class="k k2">二<br>级<br>化</div><div class="v"><b>贫而乐，富而好礼。</b>——<b>长出两个好动作：心里有乐处、待人按节文。</b>——<b>这一段不靠压，靠「有东西可吃」。</b>心里满的，不必压；<b>礼不是绳子，是愿意。</b></div></div>
+      <div class="row"><div class="k k2">三<br>级<br>益</div><div class="v"><b>如切如磋，如琢如磨。</b>——<b>不是「到了」，是「还能再削一层」。</b>——<b>这一级从此没有终点：磨完了粗的，还有细的。</b></div></div>
+      <div class="row"><div class="k k2">朱子<br>的<br>眼</div><div class="v">「<b>无谄无骄，则知自守矣，而未能超乎贫富之外也。乐则心广体胖而忘其贫，好礼则安处善、乐循理，亦不自知其富矣。</b>」——<b>「超乎贫富之外」五个字，是全章的钥匙。</b><b>「无谄无骄」还在贫富里面站着，「乐与好礼」已经站到贫富外面去了。</b></div></div>
+    </div>
+    <div class="scene"><b>三级的次序不能倒：</b>先守住（不弯腰、不做主），再化成（有乐处、有节文），最后磨细（一层一层）。<b>——守不住的人，谈「乐」是空的；没化开的人，谈「磨」只是苦。</b></div>
+    <div class="h2" id="sc-b2">三　子贡：这句话是他自己走过的路</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">朱子<br>的<br>断语</div><div class="v">「<b>子贡货殖，盖先贫后富，而尝用力于自守者，故其言如此。</b>」——<b>这一句注极重要：它把「无谄无骄」从一句格言，还原成一个人的经验。</b></div></div>
+      <div class="row"><div class="k k2">11.19<br>的<br>旁证</div><div class="v">子曰：「<b>回也其庶乎，屡空。赐不受命，而货殖焉，亿则屡中。</b>」——<b>「亿」是猜度，猜得屡次准。</b>——<b>孔子说这话时，一半是叹，一半也认他的本事。</b></div></div>
+      <div class="row"><div class="k k2">《史<br>记》<br>的<br>出身</div><div class="v">《货殖列传》：「<b>子贡既学于仲尼，退而仕于卫，废著鬻财于曹、鲁之间……七十子之徒，赐最为饶益。</b>」——<b>在曹、鲁之间做囤积贩卖，七十子中最富。</b></div></div>
+      <div class="row"><div class="k k2">为<br>什<br>么<br>是<br>他<br>问</div><div class="v"><b>从穷里爬出来的人，最清楚「无谄」要花多大力气；也最容易停在「无骄」——因为他一路都是靠「压住自己」赢的。</b>——<b>所以这一问不是假设，是自陈。</b></div></div>
+    </div>
+    <div class="scene"><b>这一层值得记住：</b>《论语》里最好的一些问题，是<b>一个人拿自己的经验来对答案</b>。<b>子贡问的不是「书上怎么说」，是「我这一路，算不算对」。</b>——<b>孔子答「可也」，是先认下他这份辛苦，再说「还能往上去」。</b></div>
+    <div class="h2" id="sc-b3">四　「可也」两个字的分寸</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">不是<br>否定</div><div class="v"><b>「可也」不是「不行」。</b>朱子说「可其如此」——<b>这条路可以走，走得通。</b>——<b>孔子若真看不上，他不会说「可」，会说「未若」而不说前一句。</b></div></div>
+      <div class="row"><div class="k k2">不是<br>夸</div><div class="v"><b>也不是「好极了」。</b>——<b>若已是极致，后面那句「未若」就无处安放。</b><b>「可」这个字，正好留出一格空，让「未若」站进去。</b></div></div>
+      <div class="row"><div class="k k2">为<br>什<br>么<br>不<br>说<br>满</div><div class="v"><b>孔子许人，从不满口。</b>——<b>说满了，学生就不必再往前走了。</b><b>「可谓好学也已」是留一格的许，「可也」也是留一格的许。</b></div></div>
+      <div class="row"><div class="k k2">译<br>法<br>的<br>坑</div><div class="v"><b>常见的错译是把「可也」译成「很好」。</b>——<b>一译成「很好」，「未若」就成了打脸；一译成「还行」，后面那句才立得住。</b><b>这一章的分寸，全在这两个字的斤两上。</b></div></div>
+    </div>
+    <div class="h2" id="sc-b4">五　「乐」与「好礼」到底乐什么、好什么</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">乐<br>不<br>是<br>安<br>贫</div><div class="v"><b>「贫而乐」最容易被读成「穷着也挺好」。</b>——<b>那是把「乐」的对象错成了「贫」。</b><b>朱子说得准：「心广体胖而忘其贫」——乐的对象是「心广体胖」，贫只是被忘掉的那一件。</b></div></div>
+      <div class="row"><div class="k k2">乐<br>的<br>现<br>场</div><div class="v">7.16「<b>饭疏食，饮水，曲肱而枕之，乐亦在其中矣。</b>」——<b>吃粗粮、喝白水、弯胳膊当枕头。</b>——<b>他没说「这样很好」，他说「乐亦在其中」：乐在里头，粗食白水在外头。</b></div></div>
+      <div class="row"><div class="k k2">好<br>礼<br>好<br>什<br>么</div><div class="v"><b>好的是「节文」，不是「排场」。</b>——<b>排场是花钱买给人看，节文是按规矩待人。</b><b>朱子「安处善、乐循理」：安于善，乐于循理。</b>——<b>循理这两个字，一分钱不要。</b></div></div>
+      <div class="row"><div class="k k2">《曲<br>礼》<br>的<br>对<br>句</div><div class="v">「<b>富贵而知好礼，则不骄不淫；贫贱而知好礼，则志不慑。</b>」——<b>这句把两头的病与药都点齐了：富的病是骄与淫，贫的病是慑（怯）。</b>——<b>「好礼」两头都治：富者不淫，贫者不怯。</b></div></div>
+    </div>
+    <div class="scene"><b>所以「未若」这两个字，不是要人更高尚，是要人更「有东西」。</b>——<b>穷的人有的是时间、是手艺、是朋友；富的人有的是余力、是位置、是话的分量。</b><b>孔子问的是：这些，你用了没有？</b></div>
+    <div class="h2" id="sc-b5">六　为什么「无」不如「有」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">否<br>定<br>式<br>的<br>极<br>限</div><div class="v"><b>「无谄」「无骄」都是否定句：只要不做，就成立。</b>——<b>它有一个致命的方便：什么都不做，也算做到了。</b><b>——一个躺着的人，最容易通过这两条。</b></div></div>
+      <div class="row"><div class="k k2">肯<br>定<br>式<br>的<br>难<br>处</div><div class="v"><b>「乐」「好礼」是肯定句：非得做出点什么，才算数。</b>——<b>它要花时间、要挑对象、要承担「人家不领情」。</b><b>肯定句永远比否定句贵。</b></div></div>
+      <div class="row"><div class="k k2">守<br>与<br>化<br>的<br>分<br>工</div><div class="v"><b>守是「不让坏的进来」，化是「让好的长出来」。</b>——<b>两件事不冲突，但只有前者，人生是一场长期的防守。</b><b>——防守不输，也不会赢。</b></div></div>
+      <div class="row"><div class="k k2">这<br>一<br>章<br>的<br>现<br>实<br>用<br>处</div><div class="v"><b>一个人若只会「不做坏事」，他在单位里最安全，也最没有存在感。</b>——<b>升上去的，往往是那个「多做了点什么」的人。</b><b>这不是世故，这是孔子在两千五百年前就说的「未若」。</b></div></div>
+    </div>
+    <div class="scene"><b>说得再直一点：</b>「无谄无骄」是<b>及格线</b>，「乐与好礼」是<b>及格线之上那一层</b>。<b>——及格线守一辈子，也只能拿到「可也」两个字。</b><b>这两个字不难听，但它不是「好」。</b></div>
+    <div class="h2" id="sc-b6">七　引诗：子贡把「治器」的工夫搬来「治人」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">原<br>诗</div><div class="v">《诗·卫风·淇奥》首章：「<b>瞻彼淇奥，绿竹猗猗。有匪君子，如切如磋，如琢如磨。</b>」——「匪」通「斐」，有文采。<b>——原诗是拿治器的四道工序，说一个君子的修养。</b></div></div>
+      <div class="row"><div class="k k2">《诗<br>序》<br>的<br>旧<br>说</div><div class="v">《毛诗序》：「<b>《淇奥》，美武公之德也。</b>」——<b>卫武公，九十岁还听人谏。</b>——<b>所以原诗里的「磨」，本就有「老了还在磨」的意思。</b></div></div>
+      <div class="row"><div class="k k2">四<br>个<br>字<br>的<br>手<br>艺</div><div class="v">朱子：「<b>治骨角者，以刀简切磋之；治玉石者，以锥凿琢磨之。</b>」——<b>骨、角用刀锉（切、磋），玉、石用锥凿再磨（琢、磨）。</b><b>——四字不是四个动作，是「粗料」与「细料」两套工序，一层比一层细。</b></div></div>
+      <div class="row"><div class="k k2">为<br>什<br>么<br>子<br>贡<br>想<br>到<br>这<br>句</div><div class="v"><b>老师刚说「可也」，又说「未若」——这就是「还能再磨」。</b>——<b>他听出的不是「我不够好」，是「这事没完」。</b><b>——同一个动作，从「骨角」挪到「人」，就成了一种学法。</b></div></div>
+    </div>
+    <div class="scene"><b>引诗的分寸，也值得看：</b>子贡没说「我懂了」，也没说「您说得对」，他说「<b>其斯之谓与</b>」——<b>「大概就是这个意思吧」。</b>——<b>猜，而且留了余地；等老师点头，才敢算懂。</b><b>这一句，是《论语》里最像「学生」的一句话。</b></div>
+    <div class="h2" id="sc-b7">八　「始可与言《诗》」：全书只两次</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">1.15<br>子<br>贡</div><div class="v"><b>从「无谄无骄→乐、好礼」，推出「一层一层磨」。</b>——<b>他推的是「程度」，从「做到」推到「做到还要再做到」。</b></div></div>
+      <div class="row"><div class="k k2">3.8<br>子<br>夏</div><div class="v">子夏问「<b>巧笑倩兮，美目盼兮，素以为绚兮</b>」何谓，孔子答「<b>绘事后素</b>」（先有白底，才上彩），子夏接一句「<b>礼后乎？</b>」（礼也是后加的？），孔子说「<b>起予者商也，始可与言《诗》已矣</b>」——<b>「起予」是「你把我点亮了」。</b></div></div>
+      <div class="row"><div class="k k2">两<br>次<br>的<br>共<br>同<br>点</div><div class="v"><b>都不是背得出诗，都是从「已说的」推出「没说的」。</b>——<b>子夏从「底色」推出「礼在质后」，子贡从「守得住」推出「还能磨」。</b><b>——孔子两次夸的是同一件事：会推。</b></div></div>
+      <div class="row"><div class="k k2">孔<br>子<br>的<br>诗<br>学</div><div class="v">17.9「<b>诗可以兴，可以观，可以群，可以怨。</b>」——<b>兴是「由彼及此」，观是「由诗见世」。</b>——<b>所以诗在他手里不是文献，是原料：拿来推事、推人、推自己。</b></div></div>
+    </div>
+    <div class="scene"><b>说得透一点：</b>「<b>告诸往而知来</b>」这六个字，是孔子给「会读书」下的定义。<b>——往是已经给你的，来是你自己推出来的。</b><b>只会复述「往」的人，读一辈子书，也只是个书架。</b></div>
+    <div class="h2" id="sc-b8">九　三病理与三自检</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">病<br>理<br>一</div><div class="v"><b>以贫为耻 → 谄。</b>表现：借东西先笑三分、说话先自贬一句、聚会先说自己忙。<b>代价：</b>越谦卑越没人当真，最后连自己也不信自己。<b>——不是穷伤人，是「怕人看出穷」伤人。</b></div></div>
+      <div class="row"><div class="k k2">病<br>理<br>二</div><div class="v"><b>以富为恃 → 骄。</b>表现：替人做主、替人下结论、把别人的客气当服气。<b>代价：</b>身边只剩点头的人。<b>——骄最狠的地方，是它让人失去「听见真话」的能力。</b></div></div>
+      <div class="row"><div class="k k2">病<br>理<br>三</div><div class="v"><b>只守不进 → 停在「我没做坏事」。</b>表现：一辈子不巴结、不傲慢，也一辈子没主动待过人。<b>代价：</b>安全、干净、也薄。<b>——孔子给这类人的评语，正是「可也」。</b></div></div>
+      <div class="row"><div class="k k2">自<br>检<br>一</div><div class="v"><b>上个月有没有一次，我为了「不被看轻」说了一句不实的话？</b>（不是大谎，是那种「顺口抬一下」的话）</div></div>
+      <div class="row"><div class="k k2">自<br>检<br>二</div><div class="v"><b>最近一次有人跟我意见不同，我是听完了，还是用「我有我的道理」压过去了？</b>（骄常常披着「讲理」的衣服）</div></div>
+      <div class="row"><div class="k k2">自<br>检<br>三</div><div class="v"><b>除去「不做坏事」，这一年我做过哪一件「主动待人的好事」？</b>（想不出来，就是停在一级台阶上）</div></div>
+    </div>
+    <div class="h2" id="sc-d">十　时代：贫富第一次成了「可变的事」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">旧<br>秩<br>序</div><div class="v"><b>西周世卿世禄：贫富随身份来，身份随出生来。</b>——<b>一个人穷，多半因为他生在下一层，不是因为他做错了什么。</b>——<b>所以「谄」「骄」在旧秩序里，是「礼」的问题，不是「德」的问题。</b></div></div>
+      <div class="row"><div class="k k2">新<br>现<br>实</div><div class="v"><b>春秋末，井田坏、世禄松、货殖起。</b>——<b>子贡在曹、鲁之间囤积贩卖，成了七十子中最富的一个。</b><b>——贫富开始可以「自己挣」，于是「姿态」第一次成了个人的题目。</b></div></div>
+      <div class="row"><div class="k k2">孔<br>子<br>的<br>立<br>场</div><div class="v"><b>他不否定致富，也不赞美穷。</b>——<b>他只管一件事：人在这个位置上，别变形。</b><b>——「无谄无骄」是防变形，「乐与好礼」是长出样子。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>对<br>照</div><div class="v"><b>今天的贫富，比春秋更可见</b>：朋友圈晒、同学会、家长群、房价与工资单。<b>——「谄」变了形：装、缩、晒；「骄」也变了形：凡尔赛、居高临下的「建议」。</b><b>这一章一个字不用改，换一身衣服就还能用。</b></div></div>
+    </div>
+    <div class="h2" id="sc-e">十一　章旨</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">一<br>句</div><div class="v"><b>「不做」是及格，「做出」才是长进。</b>——<b>守住底线不算本事，往上添一层才算。</b></div></div>
+      <div class="row"><div class="k k2">一<br>反</div><div class="v"><b>反过来说：</b>以贫为耻必谄，以富为恃必骄，只守不进必薄。<b>——三条，正好把这一章堵死在一级台阶上。</b></div></div>
+      <div class="row"><div class="k k2">与<br>1.14<br>合<br>看</div><div class="v">1.14 讲「不求」（把欲退后），1.15 讲「不谄」（把腰直起）。<b>——一个向内收，一个向外持。</b><b>1.14 说「就有道而正」，1.15 说「告诸往而知来」：一个是走出去问人，一个是坐下来推事。</b></div></div>
+      <div class="row"><div class="k k2">落<br>点</div><div class="v"><b>这一章最实用的两个动作：</b>① 该拿的那份，抬起头拿；② 除「不做坏事」之外，每季做一件「主动待人的事」。<b>——这两件做到，「可也」就慢慢变成「未若」。</b></div></div>
+    </div>
+    <div class="h2" id="sc-f">十二　存疑</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「贫而乐」有没有「道」字</b>　今本作「贫而乐」，郑玄本、皇侃本作「<b>贫而乐道</b>」。<b>朱子从今本，不取「道」字。</b>——<b>本课取今本，兼采「乐道」之义：无「道」字，乐的对象更宽（凡可乐者）；有「道」字，则专指道。</b>两读俱通，今本更含蓄。</div></div>
+      <div class="q"><span>02</span><div><b>「可也」是许是抑</b>　一说「仅可」（略有不足），一说「许可」（认可）。<b>本课取「及格之许」：认下这条路，同时留着「未若」。</b>——<b>朱子「可其如此」，正合此解。</b></div></div>
+      <div class="q"><span>03</span><div><b>「何如」问人还是问行</b>　一说是子贡自问「我这样如何」，一说是问「此道如何」。<b>本课取问行：与下文「可也」「未若」皆评其做法，非评其人。</b></div></div>
+      <div class="q"><span>04</span><div><b>「切磋琢磨」是原义还是移用</b>　原诗美武公之德（《毛诗序》），本指治器工序。<b>子贡是「移用」：把治器的工序移来治人。</b>——<b>本课取移用义，并保留原诗的「老而愈磨」一层。</b></div></div>
+      <div class="q"><span>05</span><div><b>「告诸往而知来」的往与来</b>　往＝孔子已言者（无谄无骄之可），来＝孔子未言者（乐、好礼、更进一层）。<b>本课取此解。</b>——<b>另一说「往」指诗之本事，「来」指诗外之意，亦通。</b></div></div>
+      <div class="q"><span>06</span><div><b>「赐不受命」何解</b>　一说「不受教命」（不守师命而自殖），一说「不待命」（不由世禄而得富）。<b>历来无定说，本课不取一端</b>，只据「货殖」「屡中」的事实说子贡。</div></div>
+    </div>
+    <div class="h2" id="sc-g">十三　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">「贫而无谄」是教人认命，穷就该安分。</div><div class="b"><b>是教人不弯腰，不是教人不挣扎。</b>穷不是错，<b>为穷而说假话、为穷而先自贬，才是「谄」。</b>该拿的那份，要抬起头拿。</div></div>
+      <div class="pair"><div class="a">「富而无骄」就是有钱人别显摆。</div><div class="b"><b>骄不是显摆，是「心里替别人做主」。</b>不显摆的人也会骄——<b>一句话里的「你不懂」「听我的」，比晒车更骄。</b></div></div>
+      <div class="pair"><div class="a">孔子否定了子贡，说无谄无骄没用。</div><div class="b"><b>孔子说的是「可也」：及格。</b>不是否定，是<b>认下这一层，再指上一层</b>。<b>先把「可」听清，才听得懂「未若」。</b></div></div>
+      <div class="pair"><div class="a">「贫而乐」是穷开心、自我安慰。</div><div class="b"><b>乐的对象不是「贫」，是「别的可吃的东西」。</b>——<b>穷着还有一件让我忘了时间的事，那才叫乐。</b>以贫为乐是阿Q，穷里不失乐是本事。</div></div>
+      <div class="pair"><div class="a">「富而好礼」是有钱人做慈善、讲排场。</div><div class="b"><b>好礼是「乐意按节文待人」，花钱买不到。</b>——<b>答应的事做到、进门先打招呼、不插话、不替人做主</b>：这些一分钱不花，比请客有用。排场恰恰不是礼。</div></div>
+      <div class="pair"><div class="a">「始可与言《诗》」是夸子贡聪明、记性好。</div><div class="b"><b>夸的是「能推」：从已经说的，推出还没说的。</b>——<b>背得出诗的人很多，能从诗里推出「这事没完」的人，全书只有两个。</b></div></div>
+    </div>
+    <div class="h2" id="sc-h">十四　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《诗》<br>卫风·淇奥</div><div class="v">「<b>有匪君子，如切如磋，如琢如磨。</b>」——本章引诗所本。</div></div>
+      <div class="row"><div class="k k2">《礼记》<br>曲礼上</div><div class="v">「<b>富贵而知好礼，则不骄不淫；贫贱而知好礼，则志不慑。</b>」——本章「好礼」二字的最好注脚。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>3.8</div><div class="v">「<b>起予者商也，始可与言《诗》已矣。</b>」——另一次「始可与言诗」，子夏由「素」推出「礼」。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>11.19</div><div class="v">「<b>赐不受命，而货殖焉，亿则屡中。</b>」——子贡致富的旁证。</div></div>
+      <div class="row"><div class="k k2">《史记》<br>货殖列传</div><div class="v">「<b>废著鬻财于曹、鲁之间……七十子之徒，赐最为饶益。</b>」——先贫后富的出身。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>7.16</div><div class="v">「<b>饭疏食，饮水，曲肱而枕之，乐亦在其中矣。</b>」——「贫而乐」的现场版。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>15.2</div><div class="v">「<b>君子固穷，小人穷斯滥矣。</b>」——穷时守得住，是本章的地基。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>17.9</div><div class="v">「<b>诗可以兴，可以观，可以群，可以怨。</b>」——孔子为什么把诗当原料。</div></div>
+    </div>
+    <div class="h2" id="sc-19">图一　廊下：一条不弯的腰，一块没磨完的玉</div>
+    <div class="figs single">
+      <div class="fig" id="fig1">
+        <div class="cap">图一　图位（待作者供图）</div>
+        <details class="prompt" open><summary>提示词（待生成）</summary>
+          <p>古淡水墨立轴，纸本米色 #FBF7EC 底，墨 #2F2A24、赭 #A2503B、青灰 #4A5C55。画面取「贫而无谄，富而无骄；未若贫而乐，富而好礼」之义：一间敞廊，两人对坐。左为青年（子贡，三十许，衣素而整，拱手前问，腰是直的，不是弯的）；右为长者（孔子，侧身而坐，一手按膝，一手微抬，答话状，神情平）。案上只放三样：一块未琢完的玉石、一把磨石、一只粗陶碗——碗里是清水，不设酒食。廊外远处：一辆空牛车、一段城墙、几个负薪而过的人。近处地上一片凿下的碎石屑（「如切如磋」的痕）。构图克制，不画富人炫耀，也不画穷人苦相。竖幅 3:4，人物居下三分之二，上方留白。不写字、不画书页文字、不生成任何水印。</p>
+        </details>
+        <div class="figcap">图位说明：一腰一直（无谄）、一碗清水（不求饱）、一块未完工的玉（如琢如磨）。图到位后补「读图五处」。</div>
+      </div>
+    </div>
+    <div class="h2" id="sc-20">义理图一　三行台阶：守、化、益</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="三级台阶：无谄无骄、乐与好礼、切磋琢磨">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 「可也」在第一级，「未若」把楼梯往上抬</text>
+        <rect x="40" y="180" width="130" height="56" fill="#F6F1E3" stroke="#C58A73"/>
+        <text x="105" y="198" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">一级 · 守</text>
+        <text x="105" y="216" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">无谄 · 无骄</text>
+        <text x="105" y="230" text-anchor="middle" font-family="serif" font-size="8" fill="#A2503B">不做两个坏动作</text>
+        <rect x="170" y="140" width="130" height="96" fill="#FFFDF6" stroke="#C58A73"/>
+        <text x="235" y="158" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">二级 · 化</text>
+        <text x="235" y="176" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">乐 · 好礼</text>
+        <text x="235" y="190" text-anchor="middle" font-family="serif" font-size="8" fill="#A2503B">长出两个好动作</text>
+        <text x="235" y="206" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">不靠压，靠有东西吃</text>
+        <rect x="300" y="98" width="140" height="138" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+        <text x="370" y="116" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">三级 · 益</text>
+        <text x="370" y="138" text-anchor="middle" font-family="serif" font-size="12" fill="#A2503B">切磋琢磨</text>
+        <text x="370" y="154" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">一层一层去掉多余</text>
+        <text x="370" y="170" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">磨完粗的，还有细的</text>
+        <text x="370" y="186" text-anchor="middle" font-family="serif" font-size="8" fill="#A2503B">到此仍不算完</text>
+        <line x1="40" y1="236" x2="440" y2="236" stroke="#DCD5C8" stroke-width="1"/>
+        <text x="240" y="262" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">朱子：「无谄无骄，则知自守矣，而未能超乎贫富之外也」</text>
+        <text x="240" y="282" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">台阶不是拿来站的，是拿来走的</text>
+      </svg>
+      <div class="figcap">△ 三级不是三种境界，是<b>同一件事的三层深度</b>：<b>守住、化开、磨细。</b></div>
+    </div>
+    <div class="h2" id="sc-21">义理图二　两种句式：否定句与肯定句</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 300" role="img" aria-label="否定式无谄无骄与肯定式乐与好礼的对照">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 同一件事，两种说法，两种活法</text>
+        <rect x="44" y="56" width="184" height="120" fill="#F6F1E3" stroke="#8A8074"/>
+        <text x="136" y="80" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">否定式</text>
+        <text x="136" y="102" text-anchor="middle" font-family="serif" font-size="12" fill="#5C5347">无谄　无骄</text>
+        <text x="136" y="124" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">只要不做，就成立</text>
+        <text x="136" y="146" text-anchor="middle" font-family="serif" font-size="8.5" fill="#A2503B">什么都不做，也能通过</text>
+        <text x="136" y="164" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">——孔子评：可也</text>
+        <rect x="252" y="56" width="184" height="120" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.4"/>
+        <text x="344" y="80" text-anchor="middle" font-family="serif" font-size="11" fill="#2F2A24">肯定式</text>
+        <text x="344" y="102" text-anchor="middle" font-family="serif" font-size="12" fill="#5C5347">乐　好礼</text>
+        <text x="344" y="124" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">非得做出，才算数</text>
+        <text x="344" y="146" text-anchor="middle" font-family="serif" font-size="8.5" fill="#A2503B">要花时间、要挑对象</text>
+        <text x="344" y="164" text-anchor="middle" font-family="serif" font-size="8.5" fill="#8A8074">——孔子评：未若</text>
+        <line x1="240" y1="60" x2="240" y2="172" stroke="#DCD5C8" stroke-width="1"/>
+        <text x="240" y="196" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">否定句便宜，肯定句贵；便宜的句子，人人都能及格</text>
+        <rect x="60" y="212" width="360" height="44" fill="#FBF1EC" stroke="#A2503B"/>
+        <text x="240" y="232" text-anchor="middle" font-family="serif" font-size="10" fill="#2F2A24">守是挡住坏的，化是长出好的</text>
+        <text x="240" y="248" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">挡住只是不输，长出来才赢</text>
+        <text x="240" y="282" text-anchor="middle" font-family="serif" font-size="9" fill="#5C5347">一个人若只会「不做坏事」，安全、干净，也薄</text>
+      </svg>
+      <div class="figcap">△ 这一章的锋利处不在「别弯腰」，在<b>「弯不弯腰是防守，有没有可敬的人可敬的事，才是人生」</b>。</div>
+    </div>
+    <div class="h2" id="sc-22">义理图三　一块料，四道工序</div>
+    <div class="figsvg">
+      <svg viewBox="0 0 480 320" role="img" aria-label="切磋琢磨四道工序对同一块料逐层削去多余">
+        <text x="240" y="18" text-anchor="middle" font-family="serif" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 四道工序削同一块料，一层比一层细</text>
+        <rect x="180" y="112" width="120" height="92" fill="#FBF1EC" stroke="#2F2A24"/>
+        <text x="240" y="150" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">这块料</text>
+        <text x="240" y="170" text-anchor="middle" font-family="serif" font-size="8.5" fill="#A2503B">去掉的是多余</text>
+        <text x="240" y="186" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">不是往里加</text>
+        <line x1="240" y1="88" x2="240" y2="106" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="240,112 234,102 246,102" fill="#8A8074"/>
+        <text x="240" y="80" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">切</text>
+        <text x="240" y="66" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">锯开：先取大形</text>
+        <line x1="308" y1="158" x2="336" y2="158" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="342,158 332,152 332,164" fill="#8A8074"/>
+        <text x="360" y="156" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">磋</text>
+        <text x="360" y="172" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">锉平：骨角用刀</text>
+        <line x1="240" y1="212" x2="240" y2="232" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="240,238 234,228 246,228" fill="#8A8074"/>
+        <text x="240" y="256" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">琢</text>
+        <text x="240" y="270" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">凿刻：玉石用锥</text>
+        <line x1="172" y1="158" x2="144" y2="158" stroke="#8A8074" stroke-width="1"/>
+        <polygon points="138,158 148,152 148,164" fill="#8A8074"/>
+        <text x="120" y="156" text-anchor="middle" font-family="serif" font-size="12" fill="#2F2A24">磨</text>
+        <text x="120" y="172" text-anchor="middle" font-family="serif" font-size="8" fill="#8A8074">磨光：一遍一遍</text>
+        <text x="240" y="296" text-anchor="middle" font-family="serif" font-size="9.5" fill="#2F2A24">四刀下去，还是同一块料——只是多余少了</text>
+        <text x="240" y="312" text-anchor="middle" font-family="serif" font-size="9" fill="#8A8074">磋琢磨不是加法，是减法</text>
+      </svg>
+      <div class="figcap">△ 「如切如磋，如琢如磨」八个字，讲的是<b>一件很硬的事：好东西都是削出来的，不是攒出来的。</b></div>
+    </div>
+    <div class="h2" id="sc-23">附论一　一个会做生意的学生</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">出<br>身</div><div class="v"><b>子贡，姓端木，名赐。</b>——<b>朱子说他「先贫后富」。</b><b>所以「贫而无谄」这四个字，他是从自己身上量出来的，不是从书上抄的。</b></div></div>
+      <div class="row"><div class="k k2">手<br>段</div><div class="v"><b>「废著鬻财」：低买高卖，囤积待价。</b>——<b>「亿则屡中」：猜行情，屡次猜中。</b><b>——孔子把这个本事记下来了，一半是叹他不用在道上，一半也认他的眼力。</b></div></div>
+      <div class="row"><div class="k k2">排<br>场</div><div class="v">《货殖列传》：「<b>结驷连骑，束帛之币以聘享诸侯，所至，国君无不分庭与之抗礼。</b>」——<b>四马一车，带着币帛去见诸侯，诸侯跟他分庭抗礼。</b><b>——这就是「富」的现场：一个学生，走到了国君的对面。</b></div></div>
+      <div class="row"><div class="k k2">一<br>出<br>之<br>效</div><div class="v">《史记·仲尼弟子列传》记「<b>子贡一出，存鲁，乱齐，破吴，强晋而霸越</b>」——<b>一张嘴，动了五国。</b>——<b>这一段近于纵横家言，未必尽实；但它说明一件事：这个人的「话」，是有分量的。</b></div></div>
+      <div class="row"><div class="k k2">另<br>一<br>面</div><div class="v"><b>他也有被老师点住的时候。</b>——<b>「赐也，女以予为多学而识之者与？」（15.3）</b>——<b>孔子一再把他从「聪明」里拽出来。</b>——<b>所以本章末句的许，来得不容易：那是「你终于不只用聪明了」。</b></div></div>
+    </div>
+    <div class="h2" id="sc-24">附论二　四种料，两样刀</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">四<br>字<br>的<br>次<br>序</div><div class="v"><b>切（锯开）、磋（锉平）、琢（凿刻）、磨（磨光）</b>——<b>四个字，一道比一道细。</b>——<b>先说「切」，因为先要取大形；最后说「磨」，因为光在最后。</b></div></div>
+      <div class="row"><div class="k k2">两<br>样<br>料</div><div class="v"><b>骨、角软而韧，所以用刀锉（切、磋）；玉、石硬而脆，所以用锥凿再磨（琢、磨）。</b>——<b>朱子注就是这么分的。</b><b>——料不同，刀不同；但「去多余」这件事一样。</b></div></div>
+      <div class="row"><div class="k k2">为<br>什<br>么<br>用<br>在<br>人<br>身<br>上</div><div class="v"><b>因为人也有「多余的部分」：多余的脾气、多余的姿态、多余的解释。</b>——<b>这些不是加上去的，是削下去的。</b><b>——所以「修养」这个词，原文里是手艺词，不是道德词。</b></div></div>
+      <div class="row"><div class="k k2">今<br>日<br>的<br>用<br>法</div><div class="v"><b>写一段话，改四遍：第一遍取大形（切），第二遍去冗（磋），第三遍改句（琢），第四遍读顺（磨）。</b>——<b>四遍不是同一件事做四次，是四道不同的工序。</b><b>——多数人改文章只做第一遍，然后叫它「打磨过了」。</b></div></div>
+    </div>
+    <div class="h2" id="sc-25">附论三　两次「始可与言诗」</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">3.8<br>子<br>夏</div><div class="v">「<b>绘事后素</b>」→「<b>礼后乎</b>」——<b>子夏从「画画先有白底」，推出「礼在质之后」。</b>——<b>孔子说「起予者商也」：你把我点亮了。</b></div></div>
+      <div class="row"><div class="k k2">1.15<br>子<br>贡</div><div class="v">「<b>可也／未若</b>」→「<b>如切如磋</b>」——<b>子贡从「还能更好」，推出「这事要一层层磨」。</b>——<b>孔子说「始可与言《诗》已矣」。</b></div></div>
+      <div class="row"><div class="k k2">对<br>称<br>之<br>处</div><div class="v"><b>一个从「质」推到「礼」（横向：由内到外），一个从「守」推到「益」（纵向：由浅到深）。</b>——<b>两次都是从「已给的」推到「未给的」。</b><b>——这就是「告诸往而知来」的两个样本。</b></div></div>
+      <div class="row"><div class="k k2">诗<br>在<br>孔<br>子<br>手<br>里</div><div class="v"><b>不是抒情，不是背诵，是「推理的原料」。</b>——<b>他拿诗里的一个动作（治器），去说一个道理（修养）；学生拿这个道理，再去推另一件事。</b><b>——诗在这里，是杠杆。</b></div></div>
+      <div class="row"><div class="k k2">一<br>句<br>收</div><div class="v"><b>会读书的人，读一句能长出三句；不会读的人，读三句只剩一句。</b>——<b>孔子夸子贡与子夏，夸的都是「长出来的那两句」。</b></div></div>
+    </div>
+    <div class="scene"><b>这一章说到底，是三个动作：把腰直起来、把心里那点乐处留住、把多余的一层层削掉。</b>——<b>三个动作，都不大。</b><b>孔子给的第一句评语只是「可也」，第二句才是「未若」：他不是看不上子贡，他是知道子贡还能往上走一层。</b></div>
+  </section>
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 14 课　v1.0　（2026-11-20）</div>
+  </footer>
+</div>
+</body>

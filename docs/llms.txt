@@ -18,9 +18,10 @@
 - 第十一课｜礼之用，和为贵｜礼是界，和是容，节是度：无礼则混，无和则僵，无节则散。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/11.html
 - 第十二课｜信近于义，言可复也｜三个「近」是三把尺：诺贴着义，恭贴着礼，托身贴着可亲。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/12.html
 - 第十三课｜君子食无求饱，居无求安｜好学四条门：去欲、先行、后言、求正——四条都不在书上。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/13.html
+- 第十四课｜贫而无谄，富而无骄｜守、化、益三级：不做只是及格，做出才算长进；切磋琢磨是减法。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/14.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.12.1，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.13.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
