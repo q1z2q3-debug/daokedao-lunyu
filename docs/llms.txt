@@ -20,7 +20,7 @@
 - 第十三课｜君子食无求饱，居无求安｜好学四条门：去欲、先行、后言、求正——四条都不在书上。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/13.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 学而篇》v0.12.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 学而篇》v0.12.1，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
