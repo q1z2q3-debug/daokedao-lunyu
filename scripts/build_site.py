@@ -58,6 +58,8 @@ COURSES = [
      "好学四条门：去欲、先行、后言、求正——四条都不在书上。"),
     ("14", "论语·第十四课·贫而无谄富而无骄（阅读版）.html", "第十四课", "贫而无谄，富而无骄",
      "守、化、益三级：不做只是及格，做出才算长进；切磋琢磨是减法。"),
+    ("15", "论语·第十五课·不患人之不己知（阅读版）.html", "第十五课", "不患人之不己知，患不知人也",
+     "学而收篇：眼睛从「别人看我」转向「我看别人」；四条改道，三张知人的尺。"),
 ]
 
 SERIES = [
@@ -176,7 +178,7 @@ def cover_block():
         seal="论",
         gatha_first=("学而时习之", "不亦说乎"),
         gatha_second=("人不知而不愠", "不亦君子乎"),
-        meta=["底本　朱熹《论语集注》", "体例　一章一课 · 两页双读", "已刊　前言与学而一至十四章", "v" + VERSION + " · 二〇二六"],
+        meta=["底本　朱熹《论语集注》", "体例　一章一课 · 两页双读", "已刊　前言与学而一至十五章", "v" + VERSION + " · 二〇二六"],
     )
 
 
@@ -214,7 +216,7 @@ def build_index():
   <div class="series">润 泽 说 · 道 可 道</div>
   <h1 class="title">论语 · 学而篇</h1>
   <p class="sub">一章一课，一课两页；少儿页可念，成人页可考。底本朱熹《论语集注》。</p>
-  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>15</em> 件</span><span>版本 v%s</span></div>
+  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>16</em> 件</span><span>版本 v%s</span></div>
 </div>
 
 <h2>卷首语<small>为什么这样读</small></h2>
@@ -222,7 +224,7 @@ def build_index():
 <p>贯穿全书一条总纲：<b>一阴一阳之谓道</b>——学是受（阴、向内收），习是发（阳、向外放）。只学不习，是替别人保管知识；只习不学，是自己摸黑走路。</p>
 <p>所以每一课都问一句：这章说的是<b>哪件事、哪个字</b>？说不出，就退入存疑，不写成定论。</p>
 
-<h2>已刊十五件<small>前言 · 学而一至十四章</small></h2>
+<h2>已刊十六件<small>前言 · 学而一至十五章</small></h2>
 <p class="lead">按课次顺序；每件都有少儿页与成人页，另附义理图。</p>
 <div class="list">%s</div>
 <a class="btn" href="book.html">从卷首读起（封面 · 扉页 · 前言）</a>
@@ -273,7 +275,7 @@ def build_index():
     open(os.path.join(DOCS, "index.html"), "w", encoding="utf-8").write(
         shell(
             "润泽说 道可道之论语 · 学而篇｜《论语》通释读本（连载）",
-            "《论语》学而篇通释：一章一课，少儿页可念、成人页可考。已刊前言与学而一至十四章，底本朱熹《论语集注》，义理图手写、存疑另立。",
+            "《论语》学而篇通释：一章一课，少儿页可念、成人页可考。已刊前言与学而一至十五章，底本朱熹《论语集注》，义理图手写、存疑另立。",
             body,
             SITE + "/",
         )
@@ -352,7 +354,7 @@ def build_meta():
     urls = ["", "book.html"] + ["ke/%s.html" % c[0] for c in COURSES]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for u in urls:
-        sm += "<url><loc>%s/%s</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq></url>\n" % (SITE, u)
+        sm += "<url><loc>%s/%s</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq></url>\n" % (SITE, u)
     sm += "</urlset>\n"
     open(os.path.join(DOCS, "sitemap.xml"), "w", encoding="utf-8").write(sm)
 
