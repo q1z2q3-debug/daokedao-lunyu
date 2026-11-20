@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第二十课　无违：生事死葬祭（为政 2.5）｜润泽说 道可道之论语</title>
+<meta name="description" content="为政 2.5 孟懿子问孝通释：无违不是听父亲的话，是不背于理、不违礼；礼即理之节文；生事死葬祭一条礼贯到底。">
+<link rel="canonical" href="https://q1z2q3-debug.github.io/daokedao-lunyu/ke/20.html">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style></head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 20 课 / 498</div>
+  </div>
+<div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">无违两读</a><a href="#sc-d">不当面说</a><a href="#sc-e">礼即节文</a><a href="#sc-f">生死祭</a><a href="#sc-g">三家僭礼</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 两读</a><a href="#sc-21">义理二 节文</a><a href="#sc-22">义理三 全程</a><a href="#sc-23">附论一 不改口</a><a href="#sc-24">附论二 四问孝</a><a href="#sc-25">附论三 边界</a></div>
+  </div>
+  <section class="leaf kid" id="kid">
+<div class="leaf-tag">少儿页</div>
+    <h1>无违：生事死葬祭</h1>
+    <div class="h1-sub">为政 2.5　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">孟懿子问孝。子曰：</span>「无<ruby>违<rt>wéi</rt></ruby>。」樊迟<ruby>御<rt>yù</rt></ruby>，子告之曰：「孟孙问孝于我，我对曰，无违。」樊迟曰：「何谓也？」子曰：「生，事之以礼；死，<ruby>葬<rt>zàng</rt></ruby>之以礼，<ruby>祭<rt>jì</rt></ruby>之以礼。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>违</span></div><div class="tzcap"><span>7 画</span><span>背过去、岔开</span></div></div>
+      <div class="tzitem"><div class="cell"><span>御</span></div><div class="tzcap"><span>12 画</span><span>赶车</span></div></div>
+      <div class="tzitem"><div class="cell"><span>葬</span></div><div class="tzcap"><span>12 画</span><span>把人埋好</span></div></div>
+      <div class="tzitem"><div class="cell"><span>祭</span></div><div class="tzcap"><span>11 画</span><span>摆上供，请他来</span></div></div>
+      <div class="tzitem"><div class="cell"><span>礼</span></div><div class="tzcap"><span>5 画</span><span>做事的度数</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">违</div><div class="v"><b>「背过去、岔开」。</b>——<b>两个人朝一个方向走，一个偏了，就是违。</b><b>——「无违」，就是一直没偏。</b></div></div>
+      <div class="row"><div class="k">御</div><div class="v"><b>赶车。</b>——<b>两只手都占着，缰绳在手里，眼睛在路上。</b><b>——孔子就是在车上，对着这个赶车的人说话。</b></div></div>
+      <div class="row"><div class="k">葬</div><div class="v"><b>把一个人好好埋起来。</b>——<b>藏起来，不叫风吹着、雨淋着。</b><b>——「好好」，不是「排场大」。</b></div></div>
+      <div class="row"><div class="k">祭</div><div class="v"><b>摆上吃的、穿的，恭恭敬敬请他回来。</b>——<b>碗筷摆几副、什么时候摆，都有规矩。</b></div></div>
+      <div class="row"><div class="k">礼</div><div class="v"><b>做一件事该有的「度数」。</b>——<b>几步、几次、几分、几时，都定好。</b><b>——礼不是拿来管你的，是让事情刚刚好。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>孔子说「无违」，不是「听爸爸的话」，是「别离开礼」。</b>（为政 2.5）</p>
+    <div class="scene"><b>他把话分两截说：</b>先只给两个字——别偏离；<b>等学生赶车的时候，才补全：</b>生的时候按礼奉养，走的时候按礼安葬，走了以后按礼祭。</div>
+    <div class="scene"><b>所以孝的尺子，不在「听不听大人的」，在「合不合礼」。</b>——<b>大人说的对，就听；说的不合礼，就不听，这还是不违。</b></div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p>有个鲁国的大夫来问孝。孔子只说了两个字：「无违。」大夫没再问，走了。</p>
+    <p>后来孔子出门，学生樊迟替他赶车。孔子在车上说：「刚才孟孙问我孝，我答的是『无违』。」樊迟一边赶车一边问：「这是什么意思？」</p>
+    <p>孔子这才把话说明：<b>他活着，按礼奉养；他走了，按礼安葬；走远了，按礼祭他。</b></p>
+    <div class="scene"><b>为什么第一次不明说？</b>——<b>当着人家儿子的面，说他父亲哪里不合礼，这话说不出口。</b><b>——要劝住一个人，自己先得站得住；话也一样，得挑个不失礼的地方说。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene"><b>外婆走了，家里要办丧事。</b></div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v">远房亲戚说：「排场得大，不然人家说不孝。」——<b>这是把「大」当成了「孝」。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v">妈妈说：「按规矩来。该办的都办，不该办的省下，把钱留着给外婆修坟、给表弟交学费。」——<b>这是把「度」当成了「孝」。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v">你自己那几天，把外婆的碗筷照旧摆上一副，摆够一百天。——<b>这是「祭之以礼」，是自己能做的。</b></div></div>
+    </div>
+    <div class="scene"><b>这三件事，哪一件最难？</b>——<b>第二件最难：要顶住旁边人的话。</b><b>——孔子那一章，讲的就是这一件。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>「无违」的「违」，违的是谁？</b>——<b>违的是「礼」，不是「爸爸」。</b>爸爸的话和礼对上了，听话就是守礼；对不上，守礼才算没违。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>孔子为什么先不说清，等车上才说？</b>——<b>因为要护住那个人。</b>当面指出人家父亲的不是，是伤人；换个地方说，话才送得进去。</div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>「生、死、祭」三件事，哪件最容易被省掉？</b>——<b>第三件。</b>人走了几年，碗筷就不摆了。<b>礼最怕的不是大办，是忘了办。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>「听话」和「做对」，有时候不是一件事。</b>——<b>听话最容易，做对要自己想一遍。</b><b>——孔子这一章，把「做对」交给了规矩，不交给谁的嗓门大。</b></div>
+    <div class="scene"><b>要劝人，先看场合。</b>——<b>同样一句话，当着外人说，是打人脸；背着人说，是递把伞。</b><b>——这不是绕弯子，这是把话说到能落地的地方。</b></div>
+    <div class="scene"><b>礼不是给别人看的，是给自己心安的。</b>——<b>少办一场，睡得更稳；多办一场，累的是活人，老人也收不到。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>这一章不等于「让孩子必须听话」，也不等于「让孩子跟你顶着干」。</b>——它给的尺子是「合不合礼」，不是「谁说了算」。<b>家里先把这个尺子摆出来，孩子才有话可讲。</b></div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>孩子问「大人说的不对怎么办」，这一章正好用。</b>——<b>可以先问一句：这件事按规矩该怎么做？</b>把「对不对」从「谁敢」挪到「该不该」，话就不吵了。</div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>丧事上最容易被「排场」绑架。</b>——<b>量力而合礼，比借钱办大场面更孝。</b>朱子说「一于礼而不苟，其尊亲也至矣」：合礼就是尊亲到极处。<b>这句话，替很多家庭松了绑。</b></div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>「祭」这一格，家里能教。</b>——<b>清明、忌日、一碗饭、一句话，都是祭。</b>孩子从小做过，礼就长在他身上，不必等长大再学。</div></div>
+    </div>
+  </section>
+
+  <section class="leaf adult" id="adult">
+<div class="leaf-tag">成人页</div>
+    <h2 id="sc-lian" style="margin-top:0">零　连读：为政五章，立势、立教、立次第、立时、立度</h2>
+    <p>为政篇前五章是一组。<b>2.1 立势</b>——为政以德，譬如北辰：讲姿势。<b>2.2 立教</b>——思无邪：讲入口。<b>2.3 立次第</b>——道之以政⋯⋯有耻且格：讲两层器。<b>2.4 立时</b>——吾十有五而志于学：讲耐心。<b>2.5 立度</b>——无违，生事死葬祭以礼：讲分寸。</p>
+    <p>为什么第五句忽然从「治民」转到「事亲」？因为这一篇的根在这儿：<b>一个人的分寸，最早是在家里学会的。</b>能把父母的丧事按度数办，才谈得上把一国的政按度数办。<b>立度，是五章的收口。</b></p>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <p>本章一共五个人物动作（问、答、御、告、问）与一条礼。先把字收干净。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">孟懿子</div><div class="v"><b>鲁大夫，三桓之一，孟孙氏，名何忌。</b>朱子：「孟懿子，鲁大夫，仲孙氏，名何忌。」<b>「孟孙」「仲孙」一氏两称</b>，本章孔子口中称「孟孙」，是称氏不称名，当时常礼。</div></div>
+      <div class="row"><div class="k k2">无违</div><div class="v">朱子：「<b>无违，谓不背于理。</b>」——<b>这四个字是全章枢纽。</b>注意朱子用的是「理」，不是「亲」；用的是「背」，不是「顺」。</div></div>
+      <div class="row"><div class="k k2">樊迟</div><div class="v">弟子，名须，字子迟。<b>本章他有两重身份：御者，与传话的人。</b>他不是旁观者，是被派去把话送到的人。</div></div>
+      <div class="row"><div class="k k2">御</div><div class="v"><b>驾车。</b>——手上有缰绳，眼睛在路上。<b>孔子挑这个时候说话，不是随手：车上没有第三个人，话说得下去，也散得出去。</b></div></div>
+      <div class="row"><div class="k k2">事</div><div class="v"><b>不止奉养。</b>昏定晨省、服劳、承欢、几谏，都在「事」这一格里。<b>「事之以礼」是把这一整套都纳入度数。</b></div></div>
+      <div class="row"><div class="k k2">葬　祭</div><div class="v"><b>丧与祭各有度数：</b>棺椁衣衾、衰麻哭踊、卜宅卜日；时序、牲牢、斋戒、尸祝。<b>度数在，礼才在；度数一乱，厚也成了僭。</b></div></div>
+      <div class="row"><div class="k k2">礼</div><div class="v">朱子：「<b>礼，即理之节文也。</b>」——<b>节是分寸，文是刻痕。</b>理不可见，刻成动作才可见；刻成动作的那一套，就是礼。</div></div>
+    </div>
+    <div class="h3">句读三层</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">其一</div><div class="v"><b>「无违」二字单独成句，先给壳，后填瓤。</b>孔子先不给定义，是因为问的人不一样——同一个「孝」字，对僭礼的人要警，对多忧的人要宽（见 2.6）。</div></div>
+      <div class="row"><div class="k k2">其二</div><div class="v"><b>「生，事之以礼；死，葬之以礼，祭之以礼」是一句三停。</b>生一事，死二事（葬、祭）。<b>孝的全程，一句说完，一个不留。</b></div></div>
+      <div class="row"><div class="k k2">其三</div><div class="v"><b>「我对曰，无违」——孔子转述自己的答话，一字不改。</b>他不改口，只补下文。<b>这一句的严，值得单独说（见附论一）。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-c">二　无违的两读</div>
+    <p>「无违」两个字，古来两读。两读都不是望文生义，都有来历：</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">一读</div><div class="v"><b>无违＝不违亲之意。</b>父怎么说就怎么做，父命即孝。<b>把判据交给父亲。</b>——这一读最省力，也最容易被听成。</div></div>
+      <div class="row"><div class="k k2">二读</div><div class="v"><b>无违＝不背于理，即不违礼。</b>合礼则行，不合礼则不行，虽父命亦不从。<b>把判据交给礼。</b>——朱子取此读。</div></div>
+    </div>
+    <p class="lead"><b>两读的差别不是程度，是方向：一读把判据交给父亲，一读把判据交给礼。</b>前者顺从，后者守正。</p>
+    <p>朱子为什么断在第二读？理由就写在注里一句：<b>「恐其失指，而以从亲之令为孝」</b>——怕他把「无违」听成「听父亲的话就是孝」。<b>这一句是注文的自我说明：注家知道自己要拦的是什么。</b></p>
+    
+
+    <div class="h2" id="sc-d">三　为什么不当面说清</div>
+    <p>孔子没有当面把「不背于理」四个字说出来，而是等樊迟驾车时在车上讲。这不是偶然，三层理由：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>不斥人亲之过。</b>懿子问的是自己如何孝；孔子若当场说「你父亲那样不合礼」，等于当着人子之面评其父。<b>这话说出口，孝没教成，先伤了孝。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>懿子「未达而不能问」。</b>朱子说他没听懂，又不接着问。<b>当面再讲一遍，他仍可能不懂，却已落得人子难堪。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>借弟子之口转达，留一层余地。</b>话经樊迟传过去，懿子听到的不是当面训，是一个可以自己回去想的说法。<b>余地不是含糊，是让人自己走到结论上去。</b></div></div>
+    </div>
+    <div class="scene"><b>要紧的一层在这里：孔子纠正的是一件不合礼的事，用的方法本身也合礼。</b>——<b>方法与内容同一，这才是本章最讲究的地方。</b><b>——若他当众斥其父，纵使说对了，也已经先违了礼。</b></div>
+    <p>可与 4.x「事父母几谏，见志不从，又敬不违，劳而不怨」对读（里仁 4.18）：<b>几谏是「微谏」，不违是「不违礼」。</b>同一个「不违」，在两处都是「不离开礼」，不是「不开口」。</p>
+
+    <div class="h2" id="sc-e">四　礼即理之节文</div>
+    <p>朱子这一句，把礼从「外在规矩」里救了出来：</p>
+    <div class="rows">
+      <div class="row"><div class="k">理</div><div class="v"><b>这件事本来该怎样。</b>——不是谁规定的，是事之理如此。<b>父母生我，我当报；这是理，不是条约。</b></div></div>
+      <div class="row"><div class="k k2">节文</div><div class="v"><b>把「该怎样」切成可见的度数：</b>几步、几次、几分、几时。<b>节是分寸，文是刻痕。</b></div></div>
+      <div class="row"><div class="k k2">仪节</div><div class="v"><b>度数落成动作：</b>跪、拜、哭、献。<b>动作可以学，度数要懂；只学动作不懂度数，就是「礼云礼云」。</b></div></div>
+    </div>
+    
+    <p>由此可以得两句：<b>「不背于理」与「不违礼」是一件事的两面</b>——理是里，礼是表；<b>「合礼」不等于「薄待」</b>——礼自有其厚处，只是厚有度。</p>
+    <p>这一层最要紧，因为它解掉了本章最大的疑：<b>把孝交给礼，会不会太冷？</b>朱子的答是「一于礼而不苟，其尊亲也至矣」——<b>合礼不是少给，是给到刚好；刚好，才是尊。</b></p>
+
+    <div class="h2" id="sc-f">五　生、死、祭：孝的全程</div>
+    
+    <div class="rows">
+      <div class="row"><div class="k">生</div><div class="v"><b>事之以礼。</b>养、敬、顺、谏——四样都在这一格。<b>「至于犬马，皆能有养；不敬，何以别乎」（2.7）正是这一格的注脚。</b></div></div>
+      <div class="row"><div class="k">死</div><div class="v"><b>葬之以礼。</b>棺椁衣衾、衰麻哭踊、卜宅卜日，都有度数。<b>「厚」不是孝，「度」才是。</b></div></div>
+      <div class="row"><div class="k">祭</div><div class="v"><b>祭之以礼。</b>时序、牲牢、斋戒。<b>这一格最容易被省——人走久了，碗筷就不摆了。</b>可与 1.9「慎终追远」互证。</div></div>
+    </div>
+
+    <div class="h2" id="sc-g">六　时代：三家僭礼</div>
+    <p>朱子注末一句：「<b>是时三家僭礼，故夫子以是警之。</b>」这一句把本章从「家教」拉回「时局」。</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">三家</div><div class="v">鲁国三桓——<b>孟孙、叔孙、季孙</b>，皆桓公之后，世执国政。<b>孟懿子即孟孙氏之主。</b></div></div>
+      <div class="row"><div class="k k2">僭例</div><div class="v">季氏以大夫而舞八佾（3.1）；三家以《雍》彻（3.2）。<b>都是拿天子之礼，安在自己家里。</b></div></div>
+      <div class="row"><div class="k k2">本章</div><div class="v">所警正在丧祭一端：<b>以「厚」为孝，以「排场」为礼。</b>所以「葬之以礼、祭之以礼」六个字，在当时是一句反潮流的话——<b>它把「厚」拉回到「度」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-h">七　章旨</div>
+    <div class="scene"><b>一句：孝的判据不在顺亲之意，而在合礼——礼即理之节文；生事、死葬、祭，一条礼贯到底。</b>——<b>一反：这不是「听父母话」的注脚，它恰恰说：父命可以不合礼，子可以不从，而不从仍算孝。</b><b>——一辨：孔子不当面说，是分寸，不是圆滑；方法与内容同一。</b></div>
+
+    <div class="h2" id="sc-i">八　存疑六条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「无违」旧有两解，朱子取「不背于理」。</b>另一解「不违亲意」并非全无来历——它正是朱子要拦的那一读。<b>本课取朱子而不废别说，读者可两存。</b></div></div>
+      <div class="q"><span>02</span><div><b>「孟孙」「仲孙」一氏两称。</b>本章用「孟孙」，他处用「孟懿子」，属当时称法之常，非异文，亦非两人。</div></div>
+      <div class="q"><span>03</span><div><b>《左传》昭公七年记孟僖子临终命二子（懿子、南宫敬叔）学礼于孔子。</b>若采此说，「无违」兼有「不违父命（学礼）」一层。<b>此为推定，本章无明文，只作旁参，不列为解。</b></div></div>
+      <div class="q"><span>04</span><div><b>朱子「是时三家僭礼」是泛言时风，抑或专指懿子本人？</b>注文只言「是时」，未断。<b>本课取「泛言时风而切其家」，标为取向，不作定论。</b></div></div>
+      <div class="q"><span>05</span><div><b>「未达而不能问」的「不能」，是「不来问」还是「不敢问」？</b>注文未详。<b>两说于义皆通，不影响本章读法。</b></div></div>
+      <div class="q"><span>06</span><div><b>本章是否原有懿子再问、被编纂时削去？</b>本章一问答而止，樊迟之问补了后半，形制完整；<b>然《论语》问答体常有删削，无可证，存疑。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-j">九　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a"><b>无违＝听父母的话</b>，父命即孝。</div><div class="b"><b>无违＝不背于理，即不违礼。</b>朱子怕的正是前一种：「恐其失指，而以从亲之令为孝」。</div></div>
+      <div class="pair"><div class="a"><b>当面不说，是圆滑</b>——该讲的话不讲，绕。</div><div class="b"><b>不当面说，是不斥人亲之过。</b>方法本身也合礼。<b>他纠正的是一件不合礼的事，用的方法却合礼——这才是分寸。</b></div></div>
+      <div class="pair"><div class="a"><b>礼是外在的规矩</b>，别人定下来管我的。</div><div class="b"><b>礼是理的节文。</b>理不可见，刻成度数才可见。<b>所以守礼不是服从，是把事做到刚好。</b></div></div>
+      <div class="pair"><div class="a"><b>孝看丧葬排场</b>——办得大才叫孝。</div><div class="b"><b>一于礼而不苟。</b>排场不是礼，厚要有度。<b>三家僭礼，正是把「大」当成了「孝」。</b></div></div>
+      <div class="pair"><div class="a"><b>孔子答孝各不相同，是随口应对。</b></div><div class="b"><b>同篇四问孝，各按其人。</b>僭礼者警以礼（2.5），多忧者宽其忧（2.6），能养者进以敬（2.7），能敬者进以色（2.8）。<b>答不同，是同一个道理的不同入口。</b></div></div>
+      <div class="pair"><div class="a"><b>合礼＝薄待父母</b>，礼越少越冷。</div><div class="b"><b>朱子说「其尊亲也至矣」。</b>合礼不是少给，是给到刚好；<b>刚好才是尊——多给的那部分，常常是给自己的面子。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-k">十　跨典互参</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">2.6</div><div class="v"><b>孟武伯问孝。子曰：「父母唯其疾之忧。」</b>——武伯是懿子之子。<b>祖孙两代问同一件事，答一个警、一个宽。</b>这一对最见「各按其人」。</div></div>
+      <div class="row"><div class="k k2">2.7</div><div class="v"><b>子游问孝：「今之孝者，是谓能养……不敬，何以别乎？」</b>——把「养」与「敬」分开。<b>本章「生事之以礼」的「礼」，正落在「敬」上。</b></div></div>
+      <div class="row"><div class="k k2">2.8</div><div class="v"><b>子夏问孝：「色难。」</b>——把礼收到脸色上。<b>礼到极细处，是一个人的神情。</b></div></div>
+      <div class="row"><div class="k k2">3.1</div><div class="v"><b>季氏八佾舞于庭</b>——僭礼之实例。<b>与本章「三家僭礼」同一时风。</b></div></div>
+      <div class="row"><div class="k k2">1.9</div><div class="v"><b>慎终追远，民德归厚。</b>——丧祭之礼与民德的关系。<b>本章「死葬祭」是家内的一半，1.9 是把它推到一国。</b></div></div>
+      <div class="row"><div class="k k2">4.18</div><div class="v"><b>事父母几谏，见志不从，又敬不违，劳而不怨。</b>——<b>「不违」在这里也是「不违礼」。</b>两处互证：不违不是不开口。</div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　车上的一句话</div>
+    <div class="figs single">
+      <div class="fig"><div class="ph">
+        <details class="prompt"><summary>图位：待供图（点击看提示词）</summary>
+        <p><b>竖幅 3:4，水墨淡彩，纸本。画面：</b>一辆牛车停在城外道上，天色将晚。车上二人——孔子侧身向御者说话，一手轻扶车轼；御者（樊迟）一手执缰、一手回身，头微侧，神色专注，尚未完全听明白。车外远处一道大夫门第的阙，门内隐约有人服丧、白幡半垂。画面上方大片留白，淡墨远山一线。<b>不用文字，不用印章，不画正脸特写。</b></p>
+        <p><b>提示词：</b>中国水墨淡彩，竖幅 3:4，纸本泛黄；傍晚城外土道上一辆牛车，车中长者侧身向驾车的年轻人说话，年轻人一手握缰绳一手回身听；远处一道大夫门第的阙，门内有白色丧幡隐约；近景野草、车辙；整体安静、克制，墨色浅绛，大量留白，无文字无印章。</p>
+        </details>
+      </div><div class="cap">车上的一句话：同一句话，在门内说不出口，在车上才说得下去。</div></div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　无违的两读</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 480" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 两个字，两种判据</text>
+<rect x="30" y="44" width="340" height="46" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="200" y="74" text-anchor="middle" font-size="15" fill="#2F2A24">「无违」违的是什么</text>
+<line x1="200" y1="90" x2="200" y2="108" stroke="#C6B8A2"/>
+<line x1="110" y1="108" x2="290" y2="108" stroke="#C6B8A2"/>
+<line x1="110" y1="108" x2="110" y2="126" stroke="#C6B8A2"/>
+<line x1="290" y1="108" x2="290" y2="126" stroke="#C6B8A2"/>
+<rect x="30" y="126" width="160" height="132" fill="#FCFAF6" stroke="#DCD5C8"/>
+<text x="110" y="154" text-anchor="middle" font-size="14" fill="#5C5347">不违亲意</text>
+<text x="110" y="180" text-anchor="middle" font-size="12" fill="#8A8074">判据：父亲</text>
+<text x="110" y="206" text-anchor="middle" font-size="12" fill="#5C5347">父说则做</text>
+<text x="110" y="232" text-anchor="middle" font-size="12" fill="#8A8074">方向：顺从</text>
+<rect x="210" y="126" width="160" height="132" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="290" y="154" text-anchor="middle" font-size="14" fill="#A2503B">不背于理</text>
+<text x="290" y="180" text-anchor="middle" font-size="12" fill="#8A8074">判据：礼</text>
+<text x="290" y="206" text-anchor="middle" font-size="12" fill="#5C5347">合礼则行</text>
+<text x="290" y="232" text-anchor="middle" font-size="12" fill="#8A8074">方向：守正</text>
+<line x1="150" y1="286" x2="250" y2="286" stroke="#A2503B"/>
+<polygon points="252,286 242,281 242,291" fill="#A2503B"/>
+<rect x="30" y="306" width="340" height="106" fill="#FFFDF6" stroke="#A2503B"/>
+<text x="200" y="332" text-anchor="middle" font-size="12.5" fill="#2F2A24">朱子：「恐其失指，</text>
+<text x="200" y="352" text-anchor="middle" font-size="12.5" fill="#2F2A24">而以从亲之令为孝。」</text>
+<text x="200" y="384" text-anchor="middle" font-size="12.5" fill="#A2503B">注家的断语，落在右边</text>
+<text x="200" y="446" text-anchor="middle" font-size="11.5" fill="#8A8074">一读把判据交给父亲，一读把判据交给礼</text>
+</svg>
+      <div class="figcap">左读把判据交给父亲，右读把判据交给礼；朱子的断语落在右边。</div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　礼＝理的节文</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 420" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 礼不是外加的规矩</text>
+<rect x="30" y="56" width="340" height="86" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="52" y="90" font-size="16" fill="#2F2A24">理</text>
+<text x="52" y="116" font-size="12" fill="#5C5347">这件事本来该怎样</text>
+<text x="352" y="90" text-anchor="end" font-size="11" fill="#8A8074">所以然 · 不可见</text>
+<rect x="30" y="158" width="340" height="86" fill="#FBF1EC" stroke="#DCD5C8"/>
+<text x="52" y="192" font-size="16" fill="#A2503B">节文</text>
+<text x="52" y="218" font-size="12" fill="#5C5347">切成可见的度数：几步、几次、几分、几时</text>
+<text x="352" y="192" text-anchor="end" font-size="11" fill="#8A8074">分寸 · 刻痕</text>
+<line x1="200" y1="142" x2="200" y2="156" stroke="#A2503B"/>
+<polygon points="200,156 195,148 205,148" fill="#A2503B"/>
+<rect x="30" y="260" width="340" height="86" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="52" y="294" font-size="16" fill="#2F2A24">仪节</text>
+<text x="52" y="320" font-size="12" fill="#5C5347">度数落成动作：跪、拜、哭、献</text>
+<text x="352" y="294" text-anchor="end" font-size="11" fill="#8A8074">可见 · 可学</text>
+<line x1="200" y1="244" x2="200" y2="258" stroke="#A2503B"/>
+<polygon points="200,258 195,250 205,250" fill="#A2503B"/>
+<text x="200" y="382" text-anchor="middle" font-size="12" fill="#4A5C55">「不背于理」与「不违礼」，是一件事的两面</text>
+</svg>
+      <div class="figcap">三层自上而下：理不可见，节文切成度数，仪节才看得见。</div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　孝的全程</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 340" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 孝的全程，一段不许空</text>
+<line x1="40" y1="150" x2="360" y2="150" stroke="#2F2A24"/>
+<circle cx="88" cy="150" r="13" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="88" y="155" text-anchor="middle" font-size="15" fill="#A2503B">生</text>
+<text x="88" y="124" text-anchor="middle" font-size="12.5" fill="#2F2A24">事之以礼</text>
+<circle cx="200" cy="150" r="13" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="200" y="155" text-anchor="middle" font-size="15" fill="#A2503B">死</text>
+<text x="200" y="124" text-anchor="middle" font-size="12.5" fill="#2F2A24">葬之以礼</text>
+<circle cx="312" cy="150" r="13" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="312" y="155" text-anchor="middle" font-size="15" fill="#A2503B">祭</text>
+<text x="312" y="124" text-anchor="middle" font-size="12.5" fill="#2F2A24">祭之以礼</text>
+<text x="88" y="192" text-anchor="middle" font-size="11.5" fill="#5C5347">养 · 敬 · 顺 · 谏</text>
+<text x="88" y="212" text-anchor="middle" font-size="11.5" fill="#A2503B">「不敬，何以别乎」</text>
+<text x="200" y="192" text-anchor="middle" font-size="11.5" fill="#5C5347">棺椁 · 衰麻 · 哭踊</text>
+<text x="200" y="212" text-anchor="middle" font-size="11.5" fill="#A2503B">厚要有度</text>
+<text x="312" y="192" text-anchor="middle" font-size="11.5" fill="#5C5347">时序 · 牲牢 · 斋戒</text>
+<text x="312" y="212" text-anchor="middle" font-size="11.5" fill="#A2503B">最容易被省</text>
+<text x="200" y="300" text-anchor="middle" font-size="12" fill="#4A5C55">一条礼贯到底：生时怎么做，死时怎么葬，葬后怎么祭</text>
+</svg>
+      <div class="figcap">一条礼贯穿生、死、祭三段；第三格最容易被省掉。</div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　「我对曰，无违」：一句话的严</div>
+    <p>注意孔子转述自己的答话：<b>「孟孙问孝于我，我对曰，无违。」</b>——一字不改，连「我对曰」这种句式都保留。</p>
+    <p>为什么不改？因为<b>改了就不是他当时说的话</b>。若他说「我告之以礼」，等于承认自己当时答得不完整；若他说「我意在不背于理」，等于替自己补一句没说的话。<b>他宁可让人看见自己只答了两个字。</b></p>
+    <div class="scene"><b>这一层很要紧：他不给自己的旧话涂改。</b>——<b>话既出口，就让它原样站着；要补，另起一段补。</b><b>——这是「信」在言语上的样子，也是本章最容易被跳过的一处。</b></div>
+
+    <div class="h2" id="sc-24">附论二　同篇四问孝：一个问题的四个答法</div>
+    <p>为政篇连着四章问孝（2.5–2.8），四个答法全不相同。有人因此说孔子「随口」。<b>把四章排在一起看，恰好相反：四答是四个入口。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k k2">2.5</div><div class="v"><b>懿子——警以礼。</b>他家里正僭礼，答「无违」，把「厚」拉回「度」。</div></div>
+      <div class="row"><div class="k k2">2.6</div><div class="v"><b>武伯——宽其忧。</b>「父母唯其疾之忧」，把孝从「事事操心」收成「一件真该忧的」。</div></div>
+      <div class="row"><div class="k k2">2.7</div><div class="v"><b>子游——进以敬。</b>「不敬，何以别乎」，把「养」抬高到「敬」。</div></div>
+      <div class="row"><div class="k k2">2.8</div><div class="v"><b>子夏——进以色。</b>「色难」，把「敬」收到眉目之间。</div></div>
+    </div>
+    <p><b>四答合起来，才是一条完整的次第：度→忧→敬→色。</b>由外而内，由粗而细。所以不是随口，是「因病与药」——<b>同一个道理，对不同的人，从不同的门进去。</b></p>
+
+    <div class="h2" id="sc-25">附论三　这一章能不能拿去跟父母争理</div>
+    <p>这一条要写在最后，因为它是本章最容易被误用的地方。</p>
+    <p>「无违＝不背于理」，很容易被读成一张许可证：<b>父母不合礼，我可以顶回去。</b>这个读法，把本章的方向整个掉了个头。</p>
+    <div class="scene"><b>本章讲的「不背于理」，主语是自己：我自己不离开礼。</b>——<b>不是「我拿礼去量父母」。</b><b>——孔子当时也没有当面指其父之非：他要纠正的正是别人的不合礼，用的方法却处处合礼。</b></div>
+    <p>所以这一章给的是「自己怎么做」：<b>不合礼的事，我不跟着做；不合礼的话，我不跟着说。</b>至于父母那一头，另有 4.18 的路径：<b>几谏（微谏）、见志不从（看到不听）、又敬不违（仍然不违礼）、劳而不怨（累而不怨）。</b></p>
+    <p><b>先说「不」，再说「谏」；先守自己，再劝对方。</b>次序一反，礼就成了兵器。<b>礼一旦当兵器用，谁用谁先违礼。</b></p>
+
+      </section>
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-20　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>

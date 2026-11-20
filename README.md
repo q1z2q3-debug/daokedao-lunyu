@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.8**，已刊 **23 件**（前言一篇 + 学而十六章 + 为政四章 + 专题三篇）
+- 当前版本 **v0.15.9**，已刊 **26 件**（前言一篇 + 学而十六章 + 为政六章 + 专题三篇）
 
 ---
 
@@ -57,6 +57,8 @@
 | 第十七课 | 诗三百，一言以蔽之 | 一句盖三百：不是诗里无邪，是读诗把人拉回正；原句咏马，孔子断章。 | [17](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/17.html) |
 | 第十八课 | 道之以政，齐之以刑 | 四器两层：政刑管手脚，德礼管脸面；免而无耻与有耻且格，分界在「耻」。 | [18](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/18.html) |
 | 第十九课 | 吾十有五而志于学 | 六阶六门：朱子注三次「无所事」——进德之序，是减动作之序；不惑知当然，知命知所以然。 | [19](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/19.html) |
+| 第二十课 | 孟懿子问孝：无违 | 无违不是听父亲的话，是不背于理；礼即理之节文，生事死葬祭一条礼贯到底。 | [20](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/20.html) |
+| 第二十一课 | 视其所以，观其所由，察其所安 | 知人三关：由迹入意入心；迹可借，意可编，安借不来；三关先照自己。 | [21](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/21.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第二十一课　看人看三层（为政 2.6）｜润泽说 道可道之论语</title>
+<meta name="description" content="为政 2.6 视其所以通释：知人三关，由迹入意入心；迹可借、意可编，唯「安」不可久伪；三关先照自己。">
+<link rel="canonical" href="https://q1z2q3-debug.github.io/daokedao-lunyu/ke/21.html">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style></head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 21 课 / 498</div>
+  </div>
+<div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">三层次第</a><a href="#sc-d">以的训读</a><a href="#sc-e">安字</a><a href="#sc-f">重言</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 三关</a><a href="#sc-21">义理二 三级</a><a href="#sc-22">义理三 断点</a><a href="#sc-23">附论一 自照</a><a href="#sc-24">附论二 知人</a><a href="#sc-25">附论三 边界</a></div>
+  </div>
+  <section class="leaf kid" id="kid">
+<div class="leaf-tag">少儿页</div>
+    <h1>看人看三层</h1>
+    <div class="h1-sub">为政 2.6　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子曰：</span>「视其所<ruby>以<rt>yǐ</rt></ruby>，观其所<ruby>由<rt>yóu</rt></ruby>，察其所<ruby>安<rt>ān</rt></ruby>。人焉<ruby>廋<rt>sōu</rt></ruby>哉？人焉廋哉？」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>视</span></div><div class="tzcap"><span>8 画</span><span>看</span></div></div>
+      <div class="tzitem"><div class="cell"><span>观</span></div><div class="tzcap"><span>6 画</span><span>看全、看久</span></div></div>
+      <div class="tzitem"><div class="cell"><span>察</span></div><div class="tzcap"><span>14 画</span><span>看到细处</span></div></div>
+      <div class="tzitem"><div class="cell"><span>廋</span></div><div class="tzcap"><span>14 画</span><span>藏</span></div></div>
+      <div class="tzitem"><div class="cell"><span>安</span></div><div class="tzcap"><span>6 画</span><span>待着舒服</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">视</div><div class="v"><b>就是看。</b>看眼前这件事：他做了什么，做了几回。<b>动作看得见，最不难。</b></div></div>
+      <div class="row"><div class="k">观</div><div class="v"><b>比「视」多看一层：看全、看久、看从哪儿来。</b>不是盯一眼，是连着看，看他一直怎么走。</div></div>
+      <div class="row"><div class="k">察</div><div class="v"><b>看到细处。</b>像拿灯照进缝里：他做完了，脸上松不松，心里落不落。<b>这一层最慢。</b></div></div>
+      <div class="row"><div class="k">廋</div><div class="v"><b>藏。</b>读 sōu，不是「瘦」。<b>「人焉廋哉」＝人往哪儿藏呢。</b>「焉」是「哪儿」。</div></div>
+      <div class="row"><div class="k">安</div><div class="v"><b>待着舒服、心甘情愿待的地方。</b>不是「安全」，是「我在这儿不难受」。<b>装得了一时，装不了太久。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>孔子给了三把尺子：先看他做了什么，再看他为什么做，最后看他做完心安不安。</b>（为政 2.6）</p>
+    <div class="scene"><b>三把尺子，一把比一把往里。</b>第一把量手，第二把量心口，第三把量心窝。</div>
+    <div class="scene"><b>量到底，人就没地方藏了。</b>——所以他问了两遍：往哪儿藏呢？往哪儿藏呢？</div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p>孔子说：看一个人，<b>先看他做的是什么事</b>；<b>再看他做这些事，是从哪儿来的</b>；<b>最后看他做完以后，心安在哪儿</b>。</p>
+    <p>这样看，人往哪儿藏？人往哪儿藏？</p>
+    <div class="scene"><b>注意他不是在教人「抓把柄」。</b>——他是在教人「看明白」：一件事，看得见；一颗心，要慢慢看才看得见。</div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene"><b>新学期，班里来了个转学生。</b></div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v">他每天最早到，把窗台的花浇一遍，把歪掉的桌椅摆正。——<b>这是第一层：看得见他做了什么。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v">后来才知道，他奶奶病了，他想让奶奶觉得他在新学校过得好。——<b>这是第二层：知道他为什么做。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v">有一天下大雨，没人来，他还是照做；做完站在窗边笑了一下，不是笑给谁看。——<b>这是第三层：他安在这儿。</b></div></div>
+    </div>
+    <div class="scene"><b>三件事，一件比一件难看见。</b>——<b>第一件，谁路过都看得见；第三件，得跟他待上一个学期，才看得见。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>为什么不先看「他心里想什么」？</b>——<b>心看不见，事看得见。</b>先看手，再看心；反过来，就成了猜。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>「为什么做」和「安不安」差在哪儿？</b>——<b>「为什么」是理由，理由讲得通，也可能是编的。</b>「安」是待得住：讲不通的理由能撑三天，待不住的地方撑不了三年。</div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>「人焉廋哉」为什么要说两遍？</b>——<b>说一遍像判断，说两遍像断定。</b>第一遍问「他做的事藏得住吗」，第二遍问「他的心藏得住吗」。</div></div>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>看人要看三步，不要看一步。</b>——<b>一次考好、一次帮忙，都只是第一步。</b>要说这个人怎么样，得再看他一直怎么做、做完松不松。</div>
+    <div class="scene"><b>别人夸你，不必把「夸」当成安的地方。</b>——<b>夸声一停，你就慌了；那说明你安在别人的嘴上，不在自己的事上。</b></div>
+    <div class="scene"><b>你也可以问问自己：哪件事，我做完了不累？</b>——<b>那件事，大概就是你安的地方。</b>它未必风光，可是它养你。</div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>这一章别拿来盘问孩子。</b>——「你到底为什么这么做？」问急了，孩子学会的是编理由，不是说实话。<b>它是看的法子，不是审的法子。</b></div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>看孩子「安」在哪儿。</b>——<b>他愿意反复做、做完不喊累的那件事，往往就是他的所安。</b>写画、拆装、照料一盆花、给狗梳毛，都是线索。<b>顺着它给条件，比按着成绩给压力更养人。</b></div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>评价一个人别只看一层。</b>——一次帮忙是迹，一次失误也是迹；<b>迹能借，也能演。</b>要评孩子，也评自己：看他一直怎么做，不看他这一次做得多漂亮。</div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>这一章最该先用在自己身上。</b>——<b>你自己安在哪儿？</b>若只在被夸、被比下去、被看见时才安，孩子很快学会同一套。<b>你安在手上的事里，他才敢安在自己的事里。</b></div></div>
+    </div>
+  </section>
+
+  <section class="leaf adult" id="adult">
+<div class="leaf-tag">成人页</div>
+    <h2 id="sc-lian" style="margin-top:0">零　连读：为政六章，立势、立教、立次第、立时、立度、立鉴</h2>
+    <p>为政篇前六章是一组。<b>2.1 立势</b>——为政以德，譬如北辰：讲姿势。<b>2.2 立教</b>——思无邪：讲入口。<b>2.3 立次第</b>——道之以政⋯⋯有耻且格：讲两层器。<b>2.4 立时</b>——吾十有五而志于学：讲耐心。<b>2.5 立度</b>——无违，生事死葬祭以礼：讲分寸。<b>2.6 立鉴</b>——视其所以、观其所由、察其所安：讲一双看人的眼。</p>
+    <p>为什么第六句忽然转到「看人」？因为为政这件事，落到实处就是<b>用人与被人用</b>。用谁、交谁、信谁，都是这一章管。<b>前五章给的是「度」，这一章给的是「辨度之眼」</b>——没有共同的度，看人就退成察言观色；有了度，看人才看得准。</p>
+    <p>还有一层：<b>2.5 讲「礼即理之节文」，把孝交给度数；2.6 讲「察其所安」，把识人交给安处。</b>一外一内，一给人做，一看人心。<b>两章合起来，才是「为政」的底：事有度，人有安。</b></p>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <p>本章只二十七字，却有三个动词、三个「所」、两个感叹。先把字收干净。</p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">视</div><div class="v"><b>看。</b>看眼前的迹：他做了什么，做了几回。<b>视是平视，不深，但最先有。</b>——朱子于「视」不另训，正因它是常语。</div></div>
+      <div class="row"><div class="k k2">观</div><div class="v"><b>周览、连着看。</b>朱子：「<b>观，比视为详矣。</b>」——不止看这一件，要看这一路：他做事，从哪儿来，往哪儿去。</div></div>
+      <div class="row"><div class="k k2">察</div><div class="v"><b>审到细处。</b>朱子：「<b>察，则又加详矣。</b>」——视、观尚在事上，察已入微：他做完，神色落不落，心里松不松。</div></div>
+      <div class="row"><div class="k k2">所以</div><div class="v"><b>「所＋以」，不是今语的因果连词。</b>朱子：「<b>以，为也。</b>」——所为之事。旧注另有「以，用也」一读（见第三节、存疑一）。</div></div>
+      <div class="row"><div class="k k2">所由</div><div class="v"><b>所从来。</b>朱子：「<b>由，从也。</b>」——这事是从什么念头、什么处境来的。注中又存一说：「或曰：由，行也，谓其行善与否也。」</div></div>
+      <div class="row"><div class="k k2">所安</div><div class="v"><b>所乐。</b>朱子：「<b>安，所乐也。</b>」——不是「安全」，是「甘于此、待得住」。<b>这一字是全章的钉子。</b></div></div>
+      <div class="row"><div class="k k2">焉　廋</div><div class="v"><b>焉，何处；廋，匿也，读 sōu。</b>「人焉廋哉」＝人往哪儿藏。<b>「廋」形近「瘦」，最易误读，一字之差，整句就散了。</b></div></div>
+      <div class="row"><div class="k k2">君子</div><div class="v">朱子以「为善者为君子，为恶者为小人」分「所以」，<b>又以「意所未善，则亦不得为君子」进一层</b>——可见本章的「君子」，是三层都过的人，不是做对一件事的人。</div></div>
+    </div>
+    <div class="h3">句读三层</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">其一</div><div class="v"><b>三句一意，三个动词各领一句。</b>「视其所以／观其所由／察其所安」——<b>次序不可倒。</b>倒了，就是先猜心、再找事证，成了罗织。</div></div>
+      <div class="row"><div class="k k2">其二</div><div class="v"><b>「人焉廋哉」重言，是叹，不是两问。</b>朱子：「<b>重言以深明之。</b>」——说一遍是判，说两遍是断。</div></div>
+      <div class="row"><div class="k k2">其三</div><div class="v"><b>「所以」二字最易被今语带偏。</b>现代汉语的「所以」是因果连词；此处是「所＋以」＝所做、所凭。<b>这一处读错，全章就成了「看结果」的浅话。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-c">二　三层次第：迹、意、心</div>
+    <p>三句不是三件事，是一件事的三层。<b>由外而内，一层比一层难看见，也一层比一层准。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">迹</div><div class="v"><b>视其所以——他做了什么。</b>可数、可比、可记。<b>这一层的毛病是「可演」：有人专做给人看的事。</b></div></div>
+      <div class="row"><div class="k">意</div><div class="v"><b>观其所由——他为什么做。</b>要看一贯，不看你问出来的那一句。<b>这一层的毛病是「可编」：理由讲得通，不等于理由是真的。</b></div></div>
+      <div class="row"><div class="k">心</div><div class="v"><b>察其所安——他做完安不安。</b>要看长期，看他在哪儿待得住。<b>这一层几乎不能伪造：装一时可以，装久了成本太高。</b></div></div>
+    </div>
+    <p class="lead"><b>迹可借，意可编，安借不来。</b>——这三句，是本章的骨头。</p>
+    <p>朱子把三层写成递进的「详」：<b>视→观，详一层；观→察，又详一层。</b>这不是修辞上的排比，是观察成本上的递增：<b>看一件要一分钟，看一路要一个月，看一处安处，要一年。</b></p>
+    <div class="h3">看错的三种典型</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">只看迹</div><div class="v"><b>以一次善行定人。</b>——捐款、让座、扶人，都可能是表演；也可能是真。<b>只看这一层，你分不出这两种。</b></div></div>
+      <div class="row"><div class="k k2">看到意</div><div class="v"><b>以动机定人。</b>——动机这一层比迹深，但仍可自欺：人给自己的理由，常常是编得最好的那一个。<b>「我是为他好」，这句话最难查。</b></div></div>
+      <div class="row"><div class="k k2">越过层</div><div class="v"><b>不看迹、不问由，直接断心。</b>——这叫「一眼看穿」，多半是把自己的投射当成别人的心。<b>本章的次序，正是防这一手。</b></div></div>
+    </div>
+    <p>所以三层的用处不是「一层比一层高级」，而是<b>一层拦一层</b>：迹拦空谈，意拦表演，安拦勉强。<b>三层都过，才算看过。</b></p>
+
+    <div class="h2" id="sc-d">三　「以」的训读：为，还是用</div>
+    <p>「视其所以」的「以」，古有两读，都不是望文生义：</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">一读</div><div class="v"><b>以，为也。</b>——「所以」＝所为。看他做的是什么事，是善是恶。朱子取此，并说「为善者为君子，为恶者为小人」。</div></div>
+      <div class="row"><div class="k k2">二读</div><div class="v"><b>以，用也。</b>——「所以」＝所用：用什么手段、凭什么人、借什么势。<b>看他拿什么去做这件事。</b></div></div>
+    </div>
+    <p>两读的差别，不在字面，在<b>第一层看什么</b>：一读看「事」，二读看「具」。<b>本课取「为」为主</b>，理由有二：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>与后两句成序。</b>「所为—所从—所乐」，是「事—意—心」，一层进一层，恰好接住朱子的「详」。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>与「君子／小人」之判相合。</b>朱子以善恶分「所以」，若读「用」，第一层就成了「手段」，善恶之判便无处安放。</div></div>
+    </div>
+    <p>但「用」这一读不必废：<b>看他用什么做成这件事，本身就是一条线索。</b>——用欺瞒做成的好事，仍是坏事；用笨办法做成的实事，仍是实事。<b>两读并看，第一层才看得厚。</b></p>
+
+    <div class="h2" id="sc-e">四　「安」为什么是钉子</div>
+    <p>全章最重的一个字，是「安」。朱子在这里下了一句极狠的话：</p>
+    <div class="scene"><b>「所由虽善，而心之所乐者不在于是，则亦伪耳，岂能久而不变哉？」</b></div>
+    <p>这句话里有两个判断，值得拆开：</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">其一</div><div class="v"><b>「伪」不是骂人的话，是结构判断。</b>——意善而心不安，行为就靠意志顶着；<b>顶着的事，成本高，撑不久。</b>朱子不是说这人坏，是说他这一套<b>不能久</b>。</div></div>
+      <div class="row"><div class="k k2">其二</div><div class="v"><b>「久」是这一层的量具。</b>——安不安，不靠自我报告，靠时间验：<b>三年后他还做不做，做完还松不松。</b>这就是「察」为什么最慢。</div></div>
+    </div>
+    <p>「安」一字在古注里有三义，其实相通：</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">安＝乐</div><div class="v"><b>甘于此。</b>朱子「所乐也」——做这件事，他心里是甜的，不是苦撑。</div></div>
+      <div class="row"><div class="k k2">安＝止</div><div class="v"><b>待得住。</b>像人回到自己的屋子：不必用力，也走不开。<b>所安，就是心的住处。</b></div></div>
+      <div class="row"><div class="k k2">安＝不勉强</div><div class="v"><b>不必每次说服自己。</b>——要天天劝自己「这是对的」，那就还没安；<b>安了的人，不劝也做。</b></div></div>
+    </div>
+    <p>所以本章的判据，最终落在一个很朴素的问题上：<b>这个人，长期待在哪件事里不难受？</b>——他待的地方，就是他的所安；他的所安，就是他的底。</p>
+    <div class="scene"><b>反过来看也成立：一个人装得再好，你只要问他「不做这件事，你会不会空」——答得出来的人，多半是真安。</b></div>
+
+    <div class="h2" id="sc-f">五　重言两次：「廋」的是什么</div>
+    <p>「人焉廋哉？人焉廋哉？」——同一句，说了两遍。朱子的解释只有六个字：「<b>重言以深明之。</b>」</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">一解</div><div class="v"><b>加强语气。</b>——说一遍是判断，说两遍是断然。<b>像人把话说完，又拍了一下桌子。</b>朱子此解最稳。</div></div>
+      <div class="row"><div class="k k2">二解</div><div class="v"><b>两句各有对象。</b>——第一遍问「迹藏得住吗」，第二遍问「心藏得住吗」。<b>此为读法，非注文，本课标为「可备一说」。</b></div></div>
+    </div>
+    <p>两解不冲突：<b>语气上的重，正好落在两层上。</b>——先是行为藏不住，再是安处藏不住；两次重言，把三层压成两句。<b>读起来像叹，是因为它确实无路可退。</b></p>
+    <p>还要辨一个字：<b>「廋」不是「瘦」。</b>廋，隐匿；瘦，肌少。两字形近音近，义却相反：一个是「藏起来」，一个是「露出来」。<b>把「廋」读成「瘦」，「人焉廋哉」就成了「人怎么这么瘦」，全章立散。</b></p>
+<br>
+    <div class="h2" id="sc-h">六　章旨</div>
+    <div class="scene"><b>一句：知人三关，由迹入意入心；迹可借、意可编，唯「安」不可久伪，故人无所遁。</b>——<b>一反：这不是「看人下菜碟」的权术。</b>它先要一个共同的度（礼），才谈得上察；且这三关，最先该用在自己身上。<b>——一辨：三关不是三次审讯，是先易后难的次序。</b>看错一层可以再看，不可越层定人。</div>
+
+    <div class="h2" id="sc-i">七　存疑六条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「以」训「为」抑或「用」。</b>朱子「以，为也」，旧注有「以，用也」一说。<b>本课主「为」，兼记「用」</b>：两读在第一层看「事」或看「具」，不影响后两层。</div></div>
+      <div class="q"><span>02</span><div><b>「由」训「从」抑或「行」。</b>朱子正文作「从也」，注中又存「或曰：由，行也」。<b>本课以「从」为主</b>；取「行」时，第二层与第一层略重，三层便不够分明。</div></div>
+      <div class="q"><span>03</span><div><b>「安」训「乐」抑或「止」。</b>朱子「所乐也」；古注亦有「止」义。<b>本课从「乐」，兼取「止」</b>——所乐处即所住处，两义本相通。</div></div>
+      <div class="q"><span>04</span><div><b>「视／观／察」三级，是实有深浅，还是修辞递进？</b>朱子明言「比视为详」「又加详」，<b>本课从其实有深浅</b>；然三字在先秦亦常混用，不宜句句坐实。</div></div>
+      <div class="q"><span>05</span><div><b>「人焉廋哉」重言，是加强语气，还是两句各有对象？</b>朱子只说「重言以深明之」。<b>本课取「加强」为主，兼记「迹／心」两对象之读</b>，标为可备一说。</div></div>
+      <div class="q"><span>06</span><div><b>本章是否专为「用人」而发？</b>《论语》此章无上下文，朱子只作「知人」通说。<b>本课不作「选官之术」解</b>，只作知人之常法；能不能用于自照，见附论一。</div></div>
+    </div>
+
+    <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a"><b>看人就是看他做没做好事。</b></div><div class="b"><b>好事只是第一层（迹）。</b>还要看意从哪儿来、心在哪儿安——<b>三层不全，看人只看了一半。</b></div></div>
+      <div class="pair"><div class="a"><b>「所以」就是「因此」</b>，这句话是说「因为」什么。</div><div class="b"><b>古语「所＋以」＝所做、所凭</b>，不是因果连词。<b>读成「因此」，全章就成了看结果。</b></div></div>
+      <div class="pair"><div class="a"><b>知人就是看穿别人</b>，抓他的短处。</div><div class="b"><b>三察看的是「他安在哪儿」，不是把柄。</b>看穿是把人变小，看清是把人看全——<b>一个为用，一个为懂。</b></div></div>
+      <div class="pair"><div class="a"><b>动机好就够了</b>，做没做到不重要。</div><div class="b"><b>迹是入口，意是第二层，心是第三层。</b>动机好而做不出，是空；做得好而意不善，是伪；<b>意善而心不安，是不久。</b></div></div>
+      <div class="pair"><div class="a"><b>这套法子可以拿来审人、抓人把柄。</b></div><div class="b"><b>先有「度」，才谈「察」。</b>无度之察，是窥私；<b>而且这三关，最先照的是自己</b>（附论一）。</div></div>
+      <div class="pair"><div class="a"><b>人心终究藏不住，所以一眼能看穿。</b></div><div class="b"><b>藏不住，不等于一眼看得穿。</b>「察」要时间、要反复：<b>看一件一分钟，看一路一个月，看一处安处一年。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-k">九　跨典互参</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">5.10</div><div class="v"><b>「始吾于人也，听其言而信其行；今吾于人也，听其言而观其行。」</b>——<b>言可饰，行可察。</b>本章的「视」，正是「观其行」的细目。</div></div>
+      <div class="row"><div class="k k2">1.7</div><div class="v"><b>「父在，观其志；父没，观其行。」</b>——同用一「观」字：<b>观志即观意，观行即观迹。</b>两章合看，可见孔子看人从来不止一层。</div></div>
+      <div class="row"><div class="k k2">1.16</div><div class="v"><b>「不患人之不己知，患不知人也。」</b>——<b>知人是己任，不是手段。</b>本章给方法，1.16 给担子。</div></div>
+      <div class="row"><div class="k k2">13.24</div><div class="v"><b>「乡人皆好之，未可也；乡人皆恶之，未可也。」</b>——众口也要「察」。<b>众人的好恶是第一层，善者好之、不善者恶之，才到第二层。</b></div></div>
+      <div class="row"><div class="k k2">15.5</div><div class="v"><b>「君子不以言举人，不以人废言。」</b>——<b>不因一句话举人，也不因一个人废一句话。</b>这就是「不越层定人」的另一种说法。</div></div>
+      <div class="row"><div class="k k2">老 33</div><div class="v"><b>「知人者智，自知者明。」</b>——<b>察人到极处，也只是智。</b>把这三关掉转过来照自己，才是明。<b>这是老子给本章补的一层。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　三把尺子</div>
+    <div class="figs single">
+      <div class="fig"><div class="ph">
+        <details class="prompt"><summary>图位：待供图（点击看提示词）</summary>
+        <p><b>竖幅 3:4，水墨淡彩，纸本。画面：</b>廊下，孔子侧立，目光落在庭中一个年轻人身上——年轻人正弯腰把一堆散乱的粟穗拢齐（看得见的事）。他身后稍远处，一位老者伸手指向门外来的路（来路）。年轻人的脸不朝向孔子，也不朝向老者，只是低头做，做完直腰，神色松（安）。<b>三个人物，三种视线，不必交汇。</b>上方留白，淡墨屋檐一角。</p>
+        <p><b>提示词：</b>中国水墨淡彩，竖幅 3:4，纸本泛黄；廊下长者侧立旁观，庭中年轻人低头拢齐散乱粟穗，身后老者抬手指向门外来路；人物不互相对视，视线各落一处；屋檐一角、地面粟粒、竹筐；安静克制，墨色浅绛，大量留白，无文字无印章。</p>
+        </details>
+      </div><div class="cap">三把尺子：看他的手，看他的来路，看他直起腰时的神色。</div></div>
+    </div>
+<br>
+    <div class="h2" id="sc-20">义理图一　三关：迹、意、心</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 380" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 由迹入意入心，三层</text><rect x="30" y="48" width="340" height="78" fill="#FFFDF6" stroke="#DCD5C8"/><text x="52" y="80" font-size="15" fill="#2F2A24">视其所以</text><text x="52" y="104" font-size="12" fill="#5C5347">他做了什么</text><text x="348" y="80" text-anchor="end" font-size="11.5" fill="#8A8074">迹 · 所为</text><line x1="200" y1="129" x2="200" y2="148" stroke="#A2503B"/><polygon points="200,150 195,143 205,143" fill="#A2503B"/><rect x="30" y="152" width="340" height="78" fill="#FFFDF6" stroke="#DCD5C8"/><text x="52" y="184" font-size="15" fill="#2F2A24">观其所由</text><text x="52" y="208" font-size="12" fill="#5C5347">他为什么这么做</text><text x="348" y="184" text-anchor="end" font-size="11.5" fill="#8A8074">意 · 所从来</text><line x1="200" y1="233" x2="200" y2="252" stroke="#A2503B"/><polygon points="200,254 195,247 205,247" fill="#A2503B"/><rect x="30" y="256" width="340" height="78" fill="#FBF1EC" stroke="#A2503B"/><text x="52" y="288" font-size="15" fill="#A2503B">察其所安</text><text x="52" y="312" font-size="12" fill="#5C5347">他做完，待在哪儿不难受</text><text x="348" y="288" text-anchor="end" font-size="11.5" fill="#8A8074">心 · 所乐</text><text x="200" y="356" text-anchor="middle" font-size="12" fill="#4A5C55">迹可借，意可编，安借不来</text></svg>
+
+      <div class="figcap">三层自上而下：迹可借，意可编，安借不来。</div>
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　视、观、察：一级比一级细</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 372" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 三字三级，一级比一级细</text><rect x="34" y="204" width="84" height="96" fill="#FFFDF6" stroke="#DCD5C8"/><text x="76" y="236" text-anchor="middle" font-size="19" fill="#2F2A24">视</text><text x="76" y="260" text-anchor="middle" font-size="11.5" fill="#5C5347">见其迹</text><text x="76" y="195" text-anchor="middle" font-size="10.5" fill="#8A8074">比视详</text><rect x="158" y="168" width="84" height="132" fill="#FFFDF6" stroke="#DCD5C8"/><text x="200" y="200" text-anchor="middle" font-size="19" fill="#2F2A24">观</text><text x="200" y="224" text-anchor="middle" font-size="11.5" fill="#5C5347">见其来路</text><text x="200" y="159" text-anchor="middle" font-size="10.5" fill="#8A8074">比观又详</text><rect x="282" y="132" width="84" height="168" fill="#FBF1EC" stroke="#A2503B"/><text x="324" y="164" text-anchor="middle" font-size="19" fill="#A2503B">察</text><text x="324" y="188" text-anchor="middle" font-size="11.5" fill="#5C5347">见其所安</text><text x="324" y="123" text-anchor="middle" font-size="10.5" fill="#A2503B">最详</text><line x1="34" y1="300" x2="366" y2="300" stroke="#DCD5C8"/><text x="200" y="326" text-anchor="middle" font-size="12" fill="#5C5347">视是看，观是周览，察是审到细处</text><text x="200" y="350" text-anchor="middle" font-size="11.5" fill="#8A8074">朱子：「观，比视为详矣」「察，则又加详矣」</text></svg>
+
+      <div class="figcap">朱子两级「加详」，说的是观察成本，也是观察深度。</div>
+    </div>
+
+    <div class="h2" id="sc-22">义理图三　伪，断在两处</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 断在两处，最后断在「安」</text><rect x="30" y="62" width="104" height="92" fill="#FFFDF6" stroke="#DCD5C8"/><text x="82" y="98" text-anchor="middle" font-size="14" fill="#2F2A24">所为</text><text x="82" y="122" text-anchor="middle" font-size="11.5" fill="#5C5347">善</text><rect x="148" y="62" width="104" height="92" fill="#FFFDF6" stroke="#DCD5C8"/><text x="200" y="98" text-anchor="middle" font-size="14" fill="#2F2A24">意</text><text x="200" y="122" text-anchor="middle" font-size="11.5" fill="#5C5347">善或不善</text><line x1="136" y1="108" x2="146" y2="108" stroke="#A2503B"/><circle cx="141" cy="108" r="3.4" fill="#A2503B"/><rect x="266" y="62" width="104" height="92" fill="#FBF1EC" stroke="#A2503B"/><text x="318" y="98" text-anchor="middle" font-size="14" fill="#A2503B">安</text><text x="318" y="122" text-anchor="middle" font-size="11.5" fill="#5C5347">乐或不安</text><line x1="254" y1="108" x2="264" y2="108" stroke="#A2503B"/><circle cx="259" cy="108" r="3.4" fill="#A2503B"/><text x="200" y="188" text-anchor="middle" font-size="12" fill="#5C5347">事虽善，意不善，不为君子</text><text x="200" y="212" text-anchor="middle" font-size="12" fill="#5C5347">意虽善，心不安，终不能久</text><text x="200" y="246" text-anchor="middle" font-size="13" fill="#4A5C55">两处断点，最后一处落在「安」上</text><text x="200" y="270" text-anchor="middle" font-size="10.5" fill="#8A8074">朱子：「所由虽善，而心之所乐者不在于是，则亦伪耳，岂能久而不变哉？」</text></svg>
+
+      <div class="figcap">两处断点：一处断在意不善，一处断在心不安——后者才是「不能久」。</div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　这三关，先照自己</div>
+    <p>本章读到这里，容易只剩一个用法：拿它去看别人。<b>但那只是「智」，不是「明」。</b></p>
+    <p>《道德经》三十三章说：<b>「知人者智，自知者明。」</b>——察人到极处，也只是聪明；把这三关掉转过来，照自己，才是明白。</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">视己</div><div class="v"><b>我今天做的事，是给谁看的？</b>——若每一件都要有人看见才算数，那我的「迹」是给别人造的。</div></div>
+      <div class="row"><div class="k k2">观己</div><div class="v"><b>我为什么做？</b>——我给的那个理由，是不是所有理由里最好听的那一个？<b>自欺的机制在自己身上最灵。</b></div></div>
+      <div class="row"><div class="k k2">察己</div><div class="v"><b>不做这件事，我空不空？</b>——空，说明我安在「做给人看」上；不空，说明我安在这件事本身。</div></div>
+    </div>
+    <p>这一路数，孔子早用过：<b>1.4 曾子三省</b>——「为人谋而不忠乎？与朋友交而不信乎？传不习乎？」<b>三问都是「所为」；而「忠、信、习」三个字，说的是做的时候安不安。</b>——省，不是审判自己，是把三把尺子先量自己一遍。</p>
+    <div class="scene"><b>能察人而不能自察的人，最后一定被自己的「所安」牵着走，而不自知。</b>——<b>他看别人看得准，看自己看得浅；浅的那一处，正是他跌倒的地方。</b></div>
+
+    <div class="h2" id="sc-24">附论二　为什么孔子把「知人」当成自己的担子</div>
+    <p>本章的口气，不是得意，是叹。<b>「人焉廋哉？人焉廋哉」——像一个人把话说到尽头，自己先沉了一下。</b></p>
+    <p>这与 1.16 是一对：<b>「不患人之不己知，患不知人也。」</b>——不怕别人不了解我，怕我不了解人。<b>前半句卸下的是「被看见」的焦虑，后半句担起的是「看见」的责任。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k k2">一</div><div class="v"><b>知人是责任，不是权力。</b>——用这三关去选人、用人，是它的用处；<b>但它的根，是「我该看懂人」，不是「我该管住人」。</b></div></div>
+      <div class="row"><div class="k k2">二</div><div class="v"><b>知人先于用人。</b>——不知人而用人，是把事交给一个自己没看清的人；<b>出了事，怪的不是他，是自己没看。</b></div></div>
+      <div class="row"><div class="k k2">三</div><div class="v"><b>知人也要知「知不尽」。</b>——三层看完，仍只是一层把握；<b>人还有变，安处也会移。</b>所以「察」不是一次判完，是长期看着。</div></div>
+    </div>
+    <p>《论语》里孔子评人极多：评子产「惠人也」、评子西「彼哉彼哉」、评管仲「如其仁」。<b>他的评语往往只落在「事」与「安」上，不给人下定论。</b>——这是本章的方法，在他自己身上用得最熟。</p>
+
+    <div class="h2" id="sc-25">附论三　这套法子不能拿去做「相面」</div>
+    <p>这一条要写在最后，因为它是本章最容易被用歪的地方。</p>
+    <p>「视其所以，观其所由，察其所安」，和后来的「观人术」有亲缘，但方向不同：</p>
+    <div class="rows">
+      <div class="row"><div class="k k2">孔子</div><div class="v"><b>看事、看来路、看安处。</b>——三样都在「他做过什么」上，可核、可复看。<b>结论是「这个人近来如何」，不是「这个人天生如何」。</b></div></div>
+      <div class="row"><div class="k k2">相面</div><div class="v"><b>看骨相、看气色、看命数。</b>——三样都在「他长成什么样」上，不可核、不可复看。<b>结论是「这个人注定如何」，一次定终身。</b></div></div>
+    </div>
+    <p>分别不在 technique，在<b>「可不可以复看」</b>：<b>本章的三层，都能拿新的事再验一遍；相面的结论，只能靠信。</b>——不可复看的判断，不该用来断人的前程。</p>
+    <p>所以用这一章，有三条界限：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>不拿它给人贴标签。</b>「他就是这种人」——这句话一说，三层就废了；<b>人还有下一步。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>不拿它越层定罪。</b>迹不清就问由，由不清就再察；<b>跳过一层下结论，是罗织，不是察。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>记得自己也在这三关里。</b>——你能察人，人也察你；<b>先把自家摆在被察的位置，话才说得轻。</b></div></div>
+    </div>
+    <p><b>本章给的是眼，不是刀。</b>眼用来看清，刀用来伤人；<b>同一句话，落在不同的人手里，一件成器，一件成凶。</b></p>
+
+      </section>
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十一课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-20　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>
