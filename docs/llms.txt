@@ -26,6 +26,7 @@
 - 第十九课｜吾十有五而志于学｜六阶六门：朱子注三次「无所事」——进德之序，是减动作之序；不惑知当然，知命知所以然。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/19.html
 - 第二十课｜孟懿子问孝，子曰：无违｜无违不是听父亲的话，是不背于理；礼即理之节文，生事死葬祭一条礼贯到底。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/20.html
 - 第二十一课｜父母唯其疾之忧｜知人三关：由迹入意入心；迹可借，意可编，安借不来；三关先照自己。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/21.html
+- 第二十二课｜今之孝者，是谓能养；不敬，何以别乎｜养是底线，敬是分界；敬＝尊敬而不敢忽忘；养可外包，敬不可外包。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/22.html
 
 ## 专题
 - 专题一｜《诗三百》与「思无邪」深读｜十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html
@@ -33,7 +34,7 @@
 - 专题三｜2.4 读法辨：这是不是回忆｜十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.14，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.15，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。

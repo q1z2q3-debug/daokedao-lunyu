@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第二十二课 不敬何以别乎（为政 2.7）</title>
+<meta name="description" content="《论语·为政》2.7 子游问孝：今之孝者，是谓能养；至于犬马，皆能有养；不敬，何以别乎。通释：养敬分界、不敢忽忘、两解考辨。">
+
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style><body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 22 课 / 498</div>
+  </div>
+<div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">两解</a><a href="#sc-d">敬</a><a href="#sc-e">分界</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 分界</a><a href="#sc-21">义理二 四阶</a><a href="#sc-22">附论一 能字</a><a href="#sc-23">附论二 现代</a><a href="#sc-24">附论三 边界</a></div>
+  </div>
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>不敬，何以别乎</h1>
+    <div class="h1-sub">为政 2.7　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子游问孝。子曰：</span>「今之孝者，是谓能<ruby>养<rt>yǎng</rt></ruby>。至于犬马，皆能有养；不<ruby>敬<rt>jìng</rt></ruby>，何以<ruby>别<rt>bié</rt></ruby>乎？」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>养</span></div><div class="tzcap"><span>10 画</span><span>给饭吃</span></div></div>
+      <div class="tzitem"><div class="cell"><span>敬</span></div><div class="tzcap"><span>12 画</span><span>不当他是畜</span></div></div>
+      <div class="tzitem"><div class="cell"><span>别</span></div><div class="tzcap"><span>7 画</span><span>分开</span></div></div>
+      <div class="tzitem"><div class="cell"><span>至</span></div><div class="tzcap"><span>6 画</span><span>连…都</span></div></div>
+      <div class="tzitem"><div class="cell"><span>犬</span></div><div class="tzcap"><span>4 画</span><span>狗</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">养</div><div class="v"><b>给饭吃、给地方住。</b>——古音读去声；<b>不是「教育」，是「供养」。</b></div></div>
+      <div class="row"><div class="k">敬</div><div class="v"><b>不轻慢、不敢忘。</b>——朱子说得极准：「尊敬而不敢忽忘之谓，非特恭谨而已也。」<b>不只是客气，是心里一直记着。</b></div></div>
+      <div class="row"><div class="k k2">别</div><div class="v"><b>分开、不一样。</b>——<b>「何以别乎」＝拿什么把他跟它们分开？</b></div></div>
+      <div class="row"><div class="k k2">至</div><div class="v"><b>「至于」＝连…都。</b>——<b>不是「说到」，是「就连」。</b>语气很重：连畜牲都做得到的事，人也只做这一件？</div></div>
+      <div class="row"><div class="k k2">犬马</div><div class="v"><b>狗和马，家里养的畜牲。</b>——<b>这个比方很刺人，孔子是故意刺。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>给饭吃，是养；把他当人看，是敬。只有养、没有敬，跟养狗养马，就没有分别。</b>（为政 2.7）</p>
+    <div class="scene"><b>孔子不是骂人，是划线。</b>——<b>「养」这条线，人和畜都过；「敬」这条线，只有人过。</b></div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p>子游来问孝。孔子说：<b>如今讲孝的人，只说「能养」——能把饭端上。可就连狗和马，也都有人养着。若没有敬，拿什么来分别？</b></p>
+    <p>八个字一顿，最后一句是问：<b>「何以别乎？」</b>——<b>不回答，让你自己答。</b></p>
+    <div class="scene"><b>为什么答得这么硬？</b>——<b>因为「能养」是人人都会的答案，也是人人都会的偷懒。</b>饭端上就尽了孝，这事太好办了。</div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>饭端到奶奶面前，眼睛还在手机上。</b>——<b>这是养。</b>饭是热的，人是冷的。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>把饭放下就走，说一句「趁热吃」。</b>——<b>这也是养。</b>事办了，人没到。</div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>坐下来陪她吃，问一句「今天腿还疼不疼」。</b>——<b>这一句，就是敬。</b>饭还是那碗饭，人不一样了。</div></div>
+    </div>
+    <div class="scene"><b>三个动作，差在哪儿？</b>——<b>不是差在饭，是差在「有没有把她当一个人看」。</b>——<b>当人看，就要问她的疼、听她的话、记得她的事。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>为什么拿狗和马比？太伤人了吧？</b>——<b>伤人的地方，正是要你醒的地方。</b>养狗也喂、也洗、也陪；<b>可你不会问狗「你今天心里难受吗」。</b>——<b>差别不在照顾多少，在有没有把他当「会难受的人」。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>敬是不是就是听话？</b>——<b>不是。</b>听话是顺从，敬是<b>不轻慢、不遗忘</b>。<b>父母说错了，你还可以「几谏」（4.18）；但你不可以当他是个麻烦。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>给了钱、请了人照顾，算不算孝？</b>——<b>算「养」，也尽了力；但只到这里，就停在「不饿」。</b>——<b>钱能办到的，止于养；只有你能给的，才是敬。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>养是底线，敬是分界。</b>——<b>底线守住，不算孝完；分界跨过，才算把人当人。</b></div>
+    <div class="scene"><b>敬，说到底就是「看见」。</b>——<b>看见他今天累了、看见他话少了、看见他想说又没说。</b>——<b>看见了，饭才不只是饭。</b></div>
+    <div class="scene"><b>别把亲人当任务。</b>——<b>任务是「做完」，亲人是「在场」。</b>做完可以走，在场得留一会儿。</div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>这一章对孩子不刻薄，对大人更刻薄。</b>——<b>它刺的不是孩子，是「把孝办成事务」的那套习惯。</b>讲给孩子听时，先说大人自己。</div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>「敬」别讲成「听话」。</b>——<b>敬是「不轻慢、不遗忘」，不是「不敢反驳」。</b>教成听话，孩子学会的是顺从；教成看见，孩子学会的是体谅。</div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>让孩子看见「看见」的样子。</b>——<b>你怎样问老人「今天怎么样」，孩子就学会怎样问你。</b>敬是传的，不是讲的。</div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>也别把「敬」变成考核。</b>——<b>天天要求孩子「孝顺给我看」，敬就成了表演。</b>表演的敬，比不敬更冷。</div></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>不敬，何以别乎</h1>
+    <div class="h1-sub">为政 2.7　甲篇·为政（第七章）　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子游问孝。子曰：</span>「今之孝者，是谓能养。至于犬马，皆能有养；不敬，何以别乎？」
+    </div>
+
+    <h2 id="sc-lian" style="margin-top:0">零　连读：为政七章，一条线</h2>
+    <p><b>2.1 立势</b>——为政以德；<b>2.2 立教</b>——思无邪；<b>2.3 立次第</b>——道之以政⋯⋯有耻且格；<b>2.4 立时</b>——吾十有五而志于学；<b>2.5 立度</b>——无违，生事死葬祭以礼；<b>2.6 立情</b>——唯其疾之忧；<b>2.7 立敬</b>——不敬，何以别乎。</p>
+    <p><b>四问孝，是一条越走越里的路。</b>2.5 讲「礼」——生事、死葬、祭，把孝放在度数上；<b>2.6 讲「心」</b>——父母唯其疾之忧，把孝收到一条命上；<b>2.7 讲「敬」</b>——把「心」再落到「待人」的分界上；<b>2.8 讲「色」</b>——敬之外见于容。<b>礼是外，心是里，敬是里之见于外，色是外之泄于里。四章一层一层，剥到最后只剩一张脸。</b></p>
+    <p><b>为什么要「敬」这一刀？</b>因为<b>前面三章都还可能是「做出来的」</b>：礼可以照做，忧可以说出口，<b>唯有敬，做不出来 ——它要么在心里，要么不在。</b>——<b>孔子这一刀，是拿「畜」做镜子：你怎样待狗，就怎样待亲？</b></p>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">子游</div><div class="v"><b>姓言，名偃，吴人。</b>孔门四科中与子夏同列「文学」，<b>长于礼</b>（《礼记·檀弓》多记其说礼之文）。<b>问孝而答以「敬」，正对其长处下药。</b></div></div>
+      <div class="row"><div class="k">养</div><div class="v"><b>去声，饮食供奉。</b>——<b>不是「教育」，不是「侍奉」，落在「给吃给住」这一层。</b></div></div>
+      <div class="row"><div class="k k2">是谓</div><div class="v"><b>「只说是」「不过说是」。</b>——<b>不是「就是」，是「只到这儿」。</b>这两个字里，已经带着批评。</div></div>
+      <div class="row"><div class="k k2">至于</div><div class="v"><b>「连⋯⋯都」。</b>——<b>不是「说到」，是「就连」。</b>——语气陡转：<b>连畜牲都办得到的事，人也只办这一件？</b></div></div>
+      <div class="row"><div class="k k2">敬</div><div class="v"><b>朱子：「尊敬而不敢忽忘之谓，非特恭谨而已也。」</b>——<b>这一句是本课的落点：敬不是客气，是「不敢忘」。</b></div></div>
+      <div class="row"><div class="k k2">别</div><div class="v"><b>彼列反，分别、分开。</b>——<b>「何以别乎」是反问，答案就在问里。</b></div></div>
+    </div>
+    <p><b>句读三句：</b></p>
+    <p><b>其一，「今之孝者，是谓能养」——「是谓」要读轻。</b>读成「孝就是能养」，这一句成了定义；读成「只说是能养」，它才是批评。<b>一字之轻，全章之重。</b></p>
+    <p><b>其二，「至于犬马，皆能有养」——「至于」要读重。</b>它不是承接，是逼进：<b>把「养」这件事推到畜牲身上，让你看见它的下限。</b></p>
+    <p><b>其三，「不敬，何以别乎」——反问不答。</b>——<b>孔子把答案留给听的人：你自己说，拿什么分别？</b></p>
+
+    <div class="h2" id="sc-c">二　两解：谁在养谁</div>
+    <p><b>「皆能有养」四字，汉宋两解，句法都通，轻重不同。</b></p>
+    <p><b>甲解（汉唐，包咸、邢昺）：犬马养人。</b>「犬以守御，马以代劳，皆养人者」——<b>狗看家、马代步，它们也在供养人。</b>此读下，句意是：连犬马都能供养人，<b>人若只供养而不敬，就更说不过去。</b></p>
+    <p><b>乙解（朱子）：人养犬马。</b>「犬马待人而食，亦若养然。言人畜犬马，皆能有以养之」——<b>人养狗养马，也是给吃给住；养亲而敬不至，则与养犬马何异。</b></p>
+    <div class="scene"><b>朱子为什么改？</b>——<b>因为乙解的刀更直：不是「你不如狗马」，是「你把亲人当狗马养」。</b>——<b>前者骂人，后者照人；照见的是自己的手。</b></div>
+    <p><b>朱子在《延平答问》里说得更透：</b>「犬马不能自食，待人而食者也，故蓄犬马者必有以养之，但不敬尔。<b>然则养其亲而敬有所不至，不几于以犬马视其亲乎？</b>」——<b>「以犬马视其亲」六字，是全章最狠的一句。</b></p>
+
+    <div class="h2" id="sc-d">三　敬是什么：不敢忽忘</div>
+    <p><b>朱子给的定义只有九个字：</b>「尊敬而不敢忽忘之谓」。——<b>三个动作，都不在手上，在心里：</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">尊</div><div class="v"><b>视为尊长，不视为负担。</b>——<b>同是一个人，你看他是「要照顾的麻烦」，还是「该敬的长辈」，手下的劲就不同。</b></div></div>
+      <div class="row"><div class="k">不忽</div><div class="v"><b>不轻慢、不当他不存在。</b>——<b>饭端上而眼在手机上，就是「忽」。</b>人到了，人没到。</div></div>
+      <div class="row"><div class="k">不忘</div><div class="v"><b>记着他的事。</b>——<b>记着他的药、他的忌口、他昨天说的那句话。</b>——<b>「不忘」是敬最实的一层：它要记忆，不要姿态。</b></div></div>
+    </div>
+    <p><b>反面三式，正好三字：忽、忘、畜。</b>——<b>忽是「看不见」，忘是「记不住」，畜是「当宠物养」。</b>——<b>三样都做到了「养」，一样都没做到「敬」。</b></p>
+    <p><b>「敬」还不是「顺从」。</b>——<b>4.18 说「事父母几谏」，见了不对要婉言相劝。</b>——<b>敬他，所以不轻慢他；敬他，所以也不哄骗他。</b>——<b>哄与顺，都是把人当小孩或当畜牲。</b></p>
+
+    <div class="h2" id="sc-e">四　养与敬的分界：可替代与不可替代</div>
+    <p><b>养可以外包。</b>——<b>钱、护工、机构、外卖，都能办到「给吃给住」。</b>——<b>这是养的性质：它是一件「事」，事可以托人。</b></p>
+    <p><b>敬不能外包。</b>——<b>没有人能替你「记得他的事」，也没有人能替你「看见他今天不好」。</b>——<b>敬是一件「在场」，在场只有本人能到。</b></p>
+    <div class="scene"><b>所以这一章不是否定养，是给养定坐标。</b>——<b>养是底线，敬是分界。</b>——<b>缺了养，敬无处可施；只有养，敬无从显形。</b></div>
+    <p><b>两句话，各问一层：</b>——<b>「吃了没」问的是养；「你今天怎么样」问的是敬。</b>——<b>前一句问胃，后一句问人。</b></p>
+
+    <div class="h2" id="sc-h">五　章旨</div>
+    <p><b>一句。</b>孝以养为始，以敬为别；<b>养而不敬，是以畜之礼待亲</b>——饭到了，人没到。</p>
+    <p><b>一反。</b>这不是否定养。<b>养是底线，缺养则敬无地可施</b>；它否定的只是「以养代孝」的那份省事。</p>
+    <p><b>一辨。</b>敬不是恭谨（那是礼数的壳），也不是顺从（4.18 许几谏）。<b>敬是「不敢忽忘」——要记忆，不要姿态。</b></p>
+    <div class="scene"><b>本章在《为政》里的位置，是「由心入分」。</b>——<b>2.6 讲「心怎么放」，2.7 讲「人怎么待」；前者是内，后者是内外之间那道门。</b>——<b>门一开，敬就漏了；门一关，养就成了全部。</b></div>
+
+    <div class="h2" id="sc-i">六　存疑五条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「皆能有养」主语是谁。</b>汉唐主「犬马养人」（包咸：犬以守御，马以代劳），宋主「人养犬马」（朱子）。<b>两读句法皆通，本课从朱子</b>，兼记汉唐，因朱子读法刀更直。</div></div>
+      <div class="q"><span>02</span><div><b>「今之孝者」是孔子时弊，还是泛论世人。</b>——<b>无实证可断</b>；本课作「当时风气」读，不坐实为某国某事。</div></div>
+      <div class="q"><span>03</span><div><b>「敬」是否即「礼」。</b>郑玄「礼主于敬」，礼以敬为本；<b>但本章的敬在「养之外」，不是仪节之内</b>——若读成礼数，则本章降为仪注。本课取朱子「不敢忽忘」义。</div></div>
+      <div class="q"><span>04</span><div><b>「能养」的「能」是能力，还是「能够做到」。</b>——<b>两读差别不大</b>；本课取「有这份能力」读，因下文正以犬马相较，比的是「做得到」。</div></div>
+      <div class="q"><span>05</span><div><b>此答是否因材施教。</b>子游长于礼，故以「敬」警其重仪节。<b>《檀弓》多记子游说礼，可作旁证</b>；然注家无明文，<b>标为旁参</b>。</div></div>
+    </div>
+
+    <div class="h2" id="sc-j">七　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a"><b>孝就是让父母吃好住好。</b></div><div class="b"><b>养是底线，敬是分界。</b>吃好住好只到「不饿」；<b>把人当人看，才跨过那条线。</b></div></div>
+      <div class="pair"><div class="a"><b>「至于犬马」是在骂人畜牲。</b></div><div class="b"><b>是划线，不是骂人。</b>——<b>连畜牲都做得到的事，若成了全部，人就只剩这一件。</b>孔子让你自己答「何以别」。</div></div>
+      <div class="pair"><div class="a"><b>敬就是听话、不顶嘴。</b></div><div class="b"><b>敬是「不敢忽忘」，不是「不敢反驳」。</b>4.18 许「几谏」——<b>敬他，才不肯哄他。</b></div></div>
+      <div class="pair"><div class="a"><b>请人照顾、送养老院，就是不孝。</b></div><div class="b"><b>外包的是养，外包不了的是敬。</b>——<b>护工能喂饭，不能替你记得他怕凉。</b></div></div>
+      <div class="pair"><div class="a"><b>给了钱就算尽了孝。</b></div><div class="b"><b>钱止于「不饿」。</b>——<b>它买得到照料，买不到「你今天怎么样」。</b></div></div>
+      <div class="pair"><div class="a"><b>敬就是礼数周到、话说得漂亮。</b></div><div class="b"><b>礼数是壳，忽忘才是病。</b>——<b>壳越厚，越容易盖住里面那个「忘了」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-k">八　跨典六条</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>《礼记·祭义》：「众之本教曰孝，其行曰养。养可能也，敬为难；敬可能也，安为难；安可能也，卒为难。」</b>——<b>本章只到前两阶；后两阶（安、卒）是这一课的门槛之外。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>《孟子·尽心上》：「食而弗爱，豕交之也；爱而不敬，兽畜之也。」</b>——<b>食、爱、敬三层，与本章同一刀法：只喂不爱是养猪，只爱不敬是养畜。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>《孝经·纪孝行》：「养则致其乐。」</b>——<b>「致其乐」三字，正是敬在养里的样子。</b></div></div>
+      <div class="row"><div class="k k2">四</div><div class="v"><b>《礼记·内则》：子事父母，「敬进甘脆而后退」。</b>——<b>「敬进」二字，是古人对「端饭」这个动作的规定：进的是食，带的是敬。</b></div></div>
+      <div class="row"><div class="k k2">五</div><div class="v"><b>《论语·为政》2.8：「色难。」</b>——<b>敬在内，色在外；本章立界，下章验色。</b></div></div>
+      <div class="row"><div class="k k2">六</div><div class="v"><b>《礼记·曲礼上》：「毋不敬。」</b>——<b>一部礼书，开篇三个字就是这一章的回声。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　捧食与未接的手</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一 · 待图</div>
+        <div class="ph">图位：竖幅 3:4 水墨。堂上老者端坐，一手按膝、一手未伸；阶下子捧食而进，身微俯，目在老者脸上；院角一犬伏地、厩中一马系桩。三处不成群，重心在「食在手上，看在脸上」。</div>
+        <div class="read"><b>读图三处：</b>——<b>食</b>：捧在手里，是「养」；<b>脸</b>：子看的是老者的脸，不是碗——这一眼就是「敬」；<b>犬与马</b>：一个伏、一个系，都有人喂——它们也在「养」里，却不在「敬」里。<b>三处合看：同一碗饭，喂谁、看谁，分出了人与畜。</b></div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　一条线，把人分出来</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 一条线，把人分出来</text><rect x="16" y="40" width="164" height="176" fill="#FFFDF6" stroke="#DCD5C8"/><text x="98" y="72" text-anchor="middle" font-size="17" fill="#2F2A24">养</text><text x="98" y="100" text-anchor="middle" font-size="11.5" fill="#5C5347">饮食供奉 · 给食给居</text><text x="98" y="126" text-anchor="middle" font-size="11.5" fill="#5C5347">人畜犬马，亦能有养</text><text x="98" y="158" text-anchor="middle" font-size="11.5" fill="#8A8074">可替代：钱能办到</text><text x="98" y="196" text-anchor="middle" font-size="10.5" fill="#8A8074">此层止于「不饿」</text><rect x="220" y="40" width="164" height="176" fill="#FBF1EC" stroke="#A2503B"/><text x="302" y="72" text-anchor="middle" font-size="17" fill="#A2503B">敬</text><text x="302" y="100" text-anchor="middle" font-size="11.5" fill="#5C5347">尊敬而不敢忽忘</text><text x="302" y="126" text-anchor="middle" font-size="11.5" fill="#5C5347">视为人，不视为畜</text><text x="302" y="158" text-anchor="middle" font-size="11.5" fill="#A2503B">不可替代：只有你能看见</text><text x="302" y="196" text-anchor="middle" font-size="10.5" fill="#8A8074">此层起于「被看见」</text><line x1="200" y1="30" x2="200" y2="226" stroke="#A2503B" stroke-dasharray="4 4"/><rect x="180" y="112" width="40" height="26" fill="#FBF1EC" stroke="#A2503B"/><text x="200" y="131" text-anchor="middle" font-size="14" fill="#A2503B">别</text><text x="200" y="256" text-anchor="middle" font-size="11.5" fill="#8A8074">不敬，则与养犬马者何异——朱子语</text></svg>
+
+    </div>
+
+    <div class="h2" id="sc-21">义理图二　孝的四阶</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 360" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 孝的四阶（《礼记·祭义》）</text><rect x="16" y="224" width="80" height="76" fill="#FFFDF6" stroke="#DCD5C8"/><text x="56" y="250" text-anchor="middle" font-size="15" fill="#2F2A24">养</text><text x="56" y="272" text-anchor="middle" font-size="10.5" fill="#5C5347">供养能也</text><rect x="108" y="192" width="80" height="108" fill="#FFFDF6" stroke="#DCD5C8"/><text x="148" y="218" text-anchor="middle" font-size="15" fill="#2F2A24">敬</text><text x="148" y="240" text-anchor="middle" font-size="10.5" fill="#5C5347">敬为难</text><rect x="200" y="160" width="80" height="140" fill="#FFFDF6" stroke="#DCD5C8"/><text x="240" y="186" text-anchor="middle" font-size="15" fill="#2F2A24">安</text><text x="240" y="208" text-anchor="middle" font-size="10.5" fill="#5C5347">安为难</text><rect x="292" y="128" width="80" height="172" fill="#FBF1EC" stroke="#A2503B"/><text x="332" y="154" text-anchor="middle" font-size="15" fill="#A2503B">卒</text><text x="332" y="176" text-anchor="middle" font-size="10.5" fill="#5C5347">卒为难</text><line x1="16" y1="300" x2="384" y2="300" stroke="#8A8074"/><text x="102" y="322" text-anchor="middle" font-size="11" fill="#A2503B">→</text><text x="194" y="322" text-anchor="middle" font-size="11" fill="#A2503B">→</text><text x="286" y="322" text-anchor="middle" font-size="11" fill="#A2503B">→</text><text x="200" y="348" text-anchor="middle" font-size="11" fill="#8A8074">本章只到第一、二阶：养能，敬难</text></svg>
+
+    </div>
+    <p>两图合看：<b>图一是「横切」——养与敬的一刀；图二是「纵升」——养、敬、安、卒四级。</b>——<b>横切告诉你「别在哪儿」，纵升告诉你「路有多长」。</b>本章只走完前两级，后两级要另开一课。</p>
+
+    <div class="h2" id="sc-22">附论一　「能养」的「能」字</div>
+    <p><b>「能养」两个字，重在「能」。</b>——<b>「能」是最低的能力线：做得到，不等于做得好。</b></p>
+    <p><b>「能养」之「能」，与「善养」之「善」，差一整层。</b>——<b>能养是「没让他饿着」，善养是「让他吃得愿意」。</b>——<b>孟子说曾子养曾晳，「养志」；曾元养曾子，「养口体」——同一个「养」字，两个层级。</b></p>
+    <div class="scene"><b>所以这一章的批评，不在「养得不好」，在「只到能养」。</b>——<b>把最低线当成了终点线，这才是孔子要问的。</b></div>
+
+    <div class="h2" id="sc-23">附论二　敬的现代形态</div>
+    <p><b>「不敢忽忘」在今天长什么样子？三样，都不花钱：</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>不夺其主。</b>——<b>他的事，让他自己定；定不了，也只替他备选项，不替他拍板。</b>——<b>替人做主，是最温柔的一种「畜」。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>不替其忆。</b>——<b>他的药、他的忌口、他念叨过的那件事，你记着。</b>——<b>记得，就是「不忘」；不忘，就是敬最实的那一层。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>不夺其时。</b>——<b>给他慢的权利：走路慢、说话慢、反应慢。</b>——<b>催，是把他当流程；等，是把他当人。</b></div></div>
+    </div>
+    <p><b>三样都不用钱，都要时间。</b>——<b>这就是「养可外包、敬不可外包」的实情。</b></p>
+
+    <div class="h2" id="sc-24">附论三　三条边界</div>
+    <p><b>这一章好讲，也最容易被讲成刀子。三条先划清：</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>不拿它责人。</b>——<b>「你这是养狗不是养妈」这句话，一出口，敬就没了。</b>——<b>本章是照自己的镜子，不是砍别人的刀。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>不把敬做成表演。</b>——<b>天天要求「孝顺给我看」，敬就成了仪式；仪式的敬，比不敬更冷。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>不废养而空谈敬。</b>——<b>饭没端上就讲「我心里敬他」，是自欺。</b>——<b>敬要有落处，落处就是那碗饭。</b></div></div>
+    </div>
+    <p><b>三条守住，这一章就只是两句话：饭要端到，人要看见。</b>——<b>端到是养，看见是敬；少一样，都不算完。</b></p>
+
+      </section>
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十二课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-20　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>
