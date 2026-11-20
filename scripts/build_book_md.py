@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""把各课母本 md 串成一本「学而篇（已刊）」母本。
+"""把各课母本 md 串成「已刊」母本（学而篇起，入为政篇）。
 
 用法：python3 scripts/build_book_md.py
-源：../润泽说-论语/前言-读论语之前.md、../润泽说-论语/单课/1.N-*.md
+源：../润泽说-论语/前言-读论语之前.md、../润泽说-论语/单课/[12].N-*.md
 产物：book/润泽说 道可道之论语·学而篇（已刊）.md
 约定：各课原 `# 标题` 降为 `## 标题`；每课前加一行课次索引（便于目录生成）。
 """
@@ -21,15 +21,15 @@ subtitle: 学而篇 · 通释读本（连载）
 author: 润泽
 base: 朱熹《论语集注》
 chapters: 498
-published: 前言 + 学而十六章 + 为政首章
-version: 0.15.1
-date: 2026-11-19
+published: 前言 + 学而十六章 + 为政二章
+version: 0.15.2
+date: 2026-11-20
 ---
 
-# 润泽说 道可道之论语 · 学而篇（已刊八件）
+# 润泽说 道可道之论语 · 学而篇（已刊）
 
 > 一章一课，一课两页：少儿页可念、成人页可考。
-> 本册为连载中的第一批：前言一篇、正文八课。全书依朱熹本四百九十八章，按篇推进。
+> 本册为连载中的第一批：前言一篇、学而十六章、为政二章。全书依朱熹本四百九十八章，按篇推进。
 
 """
 
@@ -63,7 +63,7 @@ def main():
         txt = open(pre, encoding="utf-8").read()
         parts.append(shift(txt).strip())
 
-    for path in sorted(glob.glob(os.path.join(SRC, "单课", "1.*.md"))):
+    for path in sorted(glob.glob(os.path.join(SRC, "单课", "[12].*.md"))):
         txt = open(path, encoding="utf-8").read()
         parts.append(shift(txt).strip())
 
