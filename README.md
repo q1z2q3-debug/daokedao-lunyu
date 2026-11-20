@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.18**，已刊 **27 件**（前言一篇 + 学而十六章 + 为政七章 + 专题三篇）
+- 当前版本 **v0.15.19**，已刊 **28 件**（前言一篇 + 学而十六章 + 为政七章 + 专题四篇）
 
 ---
 
@@ -63,6 +63,7 @@
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
+| 专题四 | 孝：从一字到一经 | 八章、七表、三图：19 字 14 章全录分章辨，注疏四层、四维四界、《孝经》三转写与五四三箭。 | [4](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/4.html) |
 
 ---
 
