@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>道之以政 · 论语第十八课｜润泽说 道可道</title>
+<meta name="description" content="《论语》为政篇第三章通释：子曰「道之以政，齐之以刑，民免而无耻；道之以德，齐之以礼，有耻且格」。四器两层：政刑管行为，德礼管羞耻；两层的后果成对（免而无耻／有耻且格），分界点在「耻」；「格」两训（至／正）朱子并存；层次不是取舍，政刑不废；《礼记·缁衣》「有格心／有遁心」可对读。三义理图、三附论、存疑五条。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBF7EC'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23A2503B' font-family='serif'%3E政%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 18 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-b1">四器两层</a><a href="#sc-b2">耻</a><a href="#sc-b3">格两训</a><a href="#sc-b4">层次不是取舍</a><a href="#sc-b5">三自检</a><a href="#sc-d">时代</a><a href="#sc-e">章旨</a><a href="#sc-f">存疑</a><a href="#sc-g">双卡</a><a href="#sc-h">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理图一 四器两层</a><a href="#sc-21">义理图二 耻的位置</a><a href="#sc-22">义理图三 格两训</a><a href="#sc-23">附论一 耻比罚</a><a href="#sc-24">附论二 格的歧义</a><a href="#sc-25">附论三 德治与人治</a></div>
+  </div>
+  <section class="leaf kid" id="kid">
+    <div class="leaf-tag">少儿页</div>
+    <h1>道之以政</h1>
+    <div class="h1-sub">为政 2.3　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子曰：</span>「<ruby>道<rt>dǎo</rt></ruby>之以<ruby>政<rt>zhèng</rt></ruby>，<ruby>齐<rt>qí</rt></ruby>之以<ruby>刑<rt>xíng</rt></ruby>，民<ruby>免<rt>miǎn</rt></ruby>而无<ruby>耻<rt>chǐ</rt></ruby>；道之以<ruby>德<rt>dé</rt></ruby>，齐之以<ruby>礼<rt>lǐ</rt></ruby>，有耻且<ruby>格<rt>gé</rt></ruby>。」
+    </div>
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>政</span></div><div class="tzcap"><span>9 画</span><span>规矩</span></div></div>
+      <div class="tzitem"><div class="cell"><span>刑</span></div><div class="tzcap"><span>6 画</span><span>罚</span></div></div>
+      <div class="tzitem"><div class="cell"><span>德</span></div><div class="tzcap"><span>15 画</span><span>做样子</span></div></div>
+      <div class="tzitem"><div class="cell"><span>礼</span></div><div class="tzcap"><span>5 画</span><span>有分寸</span></div></div>
+      <div class="tzitem"><div class="cell"><span>耻</span></div><div class="tzcap"><span>10 画</span><span>心里愧</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">政</div><div class="v"><b>规矩、条令：什么能做，什么不能做。</b>——<b>「政」和「正」是同一个根：把歪的摆正。</b></div></div>
+      <div class="row"><div class="k">刑</div><div class="v"><b>罚。</b>——<b>不听规矩的，罚一下。</b><b>——罚能让人停手，不能让人心里转过弯。</b></div></div>
+      <div class="row"><div class="k">德</div><div class="v"><b>德就是「得」：自己先做到了，别人看着，心里也会长出一点。</b>——<b>德不是讲道理，是做样子。</b></div></div>
+      <div class="row"><div class="k">礼</div><div class="v"><b>分寸：见面怎么称呼、吃饭谁先动筷、话说几分。</b>——<b>礼不是客套，是让一群人能齐着往前走的那套办法。</b></div></div>
+      <div class="row"><div class="k">耻</div><div class="v"><b>心里那点过不去。</b>——<b>不是怕被抓住，是自己知道这不对。</b><b>——这一章最要紧的字，就是它。</b></div></div>
+    </div>
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>管人有两条路：一条让人「不敢」，一条让人「不愿」。</b>（为政 2.3）</p>
+    <div class="scene"><b>孔子把两条路摆在一起，不选，只分先后。</b>——<b>先让人不敢，能管住手；先让人不愿，才管得住心。</b><b>——手管住了，心没管住，一出事就还是出事。</b></div>
+    <div class="h2" id="sc-3">共读</div>
+    <div class="rows">
+      <div class="row"><div class="k">两层</div><div class="v">「<b>道之以政，齐之以刑</b>」／「<b>道之以德，齐之以礼</b>」——<b>四个东西，两层用法。</b>——<b>政和刑是一层，德和礼是一层；先说下面那层，再说上面那层。</b></div></div>
+      <div class="row"><div class="k">不敢</div><div class="v"><b>靠规矩和罚，人是不敢犯错。</b>——<b>不敢，是因为怕；怕一松，手就又伸出去了。</b><b>——这就是「免而无耻」：躲过了，心里没觉得有什么不对。</b></div></div>
+      <div class="row"><div class="k">不愿</div><div class="v"><b>靠做样子和分寸，人是不愿犯错。</b>——<b>不愿，是因为心里过不去。</b><b>——这就是「有耻且格」：知道羞，还肯往好里走一步。</b></div></div>
+      <div class="row"><div class="k">为何</div><div class="v"><b>那还要不要罚？要。</b>——<b>孔子没说把刑废掉，他说的是：光靠刑，人只会躲，不会改。</b><b>——就像桌子：规矩是桌腿，羞耻是桌面；只有腿，摆不住东西。</b></div></div>
+      <div class="row"><div class="k">一句</div><div class="v"><b>两条路都能让人停下，只有一条能让人回头。</b></div></div>
+    </div>
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene"><b>场景一：</b>班里规定不许抄作业，谁抄就扣分。<b>——小宁不抄了，可心里想的是「别被抓到」。</b><b>——这叫「免而无耻」：手停了，心思没停。</b></div>
+    <div class="scene"><b>场景二：</b>老师没再提扣分，只是把一道题讲了两遍，说：「不会可以问，抄了，你自己也不知道哪儿不会。」<b>——小宁那天没抄，第二天来问。</b><b>——这叫「有耻且格」：他觉得那么做，对不起自己。</b></div>
+    <div class="scene"><b>反一面：</b>家里只立规矩，不问缘由，孩子会越来越会躲。<b>——躲得越熟，越不怕；越不怕，越没有羞。</b><b>——这不是孩子坏了，是那盏灯一直没点。</b></div>
+    <div class="scene"><b>再往深一层：</b>「格」这个字，古人给了两个讲法——一个是「到」（走到好地方），一个是「正」（把心里的歪扶正）。<b>——两个都对：先扶正了心，人才走得到。</b></div>
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="list">
+      <li>你最近一次「不敢做」某件事，是因为<b>怕被罚</b>，还是因为<b>自己觉得不该</b>？</li>
+      <li>有没有一条规矩，你守着它，却<b>心里并不认同</b>？想一想，你会怎么跟定这条规矩的人说。</li>
+      <li>如果要让一个人「不愿做坏事」，你会先做什么？</li>
+    </div>
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>被人管住，不算本事；自己不愿，才算长进。</b>——<b>这两件事，差着一个「耻」字。</b></div>
+    <div class="scene"><b>羞耻不是坏事，它是心里的一盏灯。</b>——<b>灯亮的时候，你会看见自己；看不见自己的人，才需要别人天天盯着。</b></div>
+    <div class="scene"><b>还有一层：犯错不可怕，怕的是「躲过了就算赢」。</b>——<b>躲一次，学一次怎么躲；改一次，长一分自己。</b></div>
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>别把这一章读成「不要立规矩」。</b>——<b>孔子不废政刑；他说的是，规矩之外还得有一样东西，让规矩进得了心。</b><b>——只有罚的家，孩子学会的是躲。</b></div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>「德」在家庭里最具体：你先做到。</b>——<b>你说不许吼人，你自己先不吼；你说要诚实，你自己先不找借口。</b><b>——孩子不看要求，看示范。</b></div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>「礼」在家里就是分寸。</b>——<b>进门打招呼、吃饭等人、说话不揭短。</b><b>——这些不是客套，是一家人能齐着往前走的办法。</b></div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>别用羞耻当武器。</b>——<b>「你怎么这么笨」点燃的不是耻，是怕；怕多了，孩子只会更会藏。</b><b>——真正的耻，是他自己看见「我本可以做得更好」。</b></div></div>
+      <div class="pair"><div class="k2">五</div><div class="v"><b>罚要罚得明白。</b>——<b>罚之前说清为什么，罚之后留一句「下次怎么做」。</b><b>——只罚不说，等于只给桌腿，不给桌面。</b></div></div>
+      <div class="pair"><div class="k2">六</div><div class="v"><b>融西：</b>管理学说 <b>compliance</b>（合规）与 <b>commitment</b>（认同），教育学讲 <b>internalization</b>（内化）。<b>——三个词说的是一件事：让人从「不敢」走到「不愿」。</b><b>——孔子一句话，把这条路画完了。</b></div></div>
+      <div class="pair"><div class="k2">七</div><div class="v"><b>孩子守规矩却满肚子气，是个信号。</b>——<b>说明规矩立住了，灯还没亮。</b><b>——这时别加压，找个安静的晚上，问他一句：这条规矩，你觉得是为什么？</b></div></div>
+    </div>
+  </section>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>道之以政</h1>
+    <div class="h1-sub">连读 · 字义句读 · 四器两层 · 耻 · 格两训 · 层次不是取舍 · 三自检 · 时代 · 章旨 · 存疑 · 双卡 · 跨典</div>
+    <div class="h2" id="sc-lian">零　连读：为政三章，一句立势，一句立教，一句立次第</div>
+    <p class="leadline">2.1 给了姿势：<b>你站得正，人自向</b>。2.2 给了工具：<b>要人向，得先动他的心，拿诗</b>。<b>——可还有一问没答：动心之后，靠什么把一群人长期带住？</b>2.3 答这一问：<b>两套器，一层管行为，一层管羞耻。</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">2.1<br>立势</div><div class="v"><b>为政以德，譬如北辰。</b>——<b>回答「凭什么」：凭你自己站得住。</b></div></div>
+      <div class="row"><div class="k k2">2.2<br>立教</div><div class="v"><b>诗三百，一言以蔽之。</b>——<b>回答「拿什么」：拿诗，先动其心。</b></div></div>
+      <div class="row"><div class="k k2">2.3<br>立序</div><div class="v"><b>道之以德，齐之以礼。</b>——<b>回答「用什么顺序」：先德礼，政刑补位。</b></div></div>
+      <div class="row"><div class="k k2">一句<br>过渡</div><div class="v"><b>前两章讲「怎么起」，这一章讲「怎么持」。</b><b>——起是一下子，持是长期；一时感人不难，难的是十年不散。</b></div></div>
+    </div>
+    <div class="scene"><b>注意这一章的分寸：孔子没有把政刑删掉。</b>——<b>「道之而不从者，有刑以一之也」（朱子）——刑是德礼之后的补位，不是对立面。</b><b>——所以这一章不是「儒家反法治」，是「法治之外还要有别的」。</b></div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">道</div><div class="v"><b>读 dǎo，引导、先之。</b>——<b>朱子：「道，犹引导，谓先之也。」</b><b>——不是「政令」的道；是你在前面走，让人跟着。</b></div></div>
+      <div class="row"><div class="k k2">政</div><div class="v"><b>法制禁令。</b>——<b>朱子：「政，谓法制禁令也。」</b><b>——「政」与「正」同根：把歪的摆正的条条框框。</b></div></div>
+      <div class="row"><div class="k k2">齐</div><div class="v"><b>齐一、统一。</b>——<b>朱子：「齐，所以一之也。」</b><b>——注意：两层都用「齐」；分别不在要不要统一，在用什么统一。</b></div></div>
+      <div class="row"><div class="k k2">刑</div><div class="v"><b>罚，用来「一」那些不听的。</b>——<b>朱子：「道之而不从者，有刑以一之也。」</b><b>——刑的位置在这里：补位，不是主力。</b></div></div>
+      <div class="row"><div class="k k2">免</div><div class="v"><b>苟免：侥幸躲过。</b>——<b>朱子：「苟免刑罚而无所羞愧。」</b><b>——「免」是外在的过关，不是内在的改过。</b></div></div>
+      <div class="row"><div class="k k2">耻</div><div class="v"><b>羞愧之心，本章的转轴。</b>——<b>朱子：「虽不敢为恶，而为恶之心未尝忘也。」</b><b>——不敢，是手被按住；耻，是心自己不肯。</b></div></div>
+      <div class="row"><div class="k k2">格</div><div class="v"><b>两训并存。</b>——一训「至」（朱子：「格，至也……有以至于善也」）；一训「正」（「一说，格，正也。书曰：格其非心」）。<b>——本课两存，详见下文。</b></div></div>
+      <div class="row"><div class="k k2">德<br>礼</div><div class="v"><b>德是躬行以率之；礼是制度品节。</b>——<b>朱子：「礼，谓制度品节也」；礼要齐的，是「浅深厚薄之不一者」。</b><b>——礼不是礼貌，是把参差的人排成队的那套尺度。</b></div></div>
+      <div class="row"><div class="k k2">句读</div><div class="v">「<b>道之以政／齐之以刑／民免而无耻</b>」｜「<b>道之以德／齐之以礼／有耻且格</b>」——<b>两组完全对称：手段两句，结果一句。</b><b>——对称是刻意的：孔子把两条路并排摆，让你自己看后果。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-b1">二　四器两层：四个东西，不是两类</div>
+    <p class="leadline"><b>政、刑、德、礼，不是「法治」与「德治」两军对垒。</b>——<b>它们是四个器，分两层用；两层的目标一样（把人齐起来），手段不一样（一个按手，一个点灯）。</b></p>
+    <div class="figs single" id="sc-20">
+      <div class="figsvg">
+      <svg viewBox="0 0 720 360" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 四个器，两层用；一层管手脚，一层管脸面</text>
+<text x="88" y="86" font-size="11" fill="#8A8074">第一层</text>
+<rect x="88" y="96" width="86" height="40" fill="#FFFDF6" stroke="#DCD5C8"/><text x="131" y="122" text-anchor="middle" font-size="14" fill="#5C5347">政</text>
+<rect x="180" y="96" width="86" height="40" fill="#FFFDF6" stroke="#DCD5C8"/><text x="223" y="122" text-anchor="middle" font-size="14" fill="#5C5347">刑</text>
+<text x="178" y="154" text-anchor="middle" font-size="9.5" fill="#8A8074">禁令 · 罚</text>
+<line x1="276" y1="124" x2="386" y2="124" stroke="#B5A897"/>
+<polygon points="392,124 384,120 384,128" fill="#B5A897"/>
+<rect x="396" y="96" width="216" height="44" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="504" y="118" text-anchor="middle" font-size="13" fill="#5C5347">免而无耻</text>
+<text x="504" y="134" text-anchor="middle" font-size="9.5" fill="#8A8074">躲过罚，心里没转向</text>
+<text x="88" y="196" font-size="11" fill="#A2503B">第二层</text>
+<rect x="88" y="206" width="86" height="40" fill="#FBF1EC" stroke="#A2503B"/><text x="131" y="232" text-anchor="middle" font-size="14" fill="#A2503B">德</text>
+<rect x="180" y="206" width="86" height="40" fill="#FBF1EC" stroke="#A2503B"/><text x="223" y="232" text-anchor="middle" font-size="14" fill="#A2503B">礼</text>
+<text x="178" y="264" text-anchor="middle" font-size="9.5" fill="#A2503B">示范 · 品节</text>
+<line x1="276" y1="234" x2="386" y2="234" stroke="#A2503B"/>
+<polygon points="392,234 384,230 384,238" fill="#A2503B"/>
+<rect x="396" y="206" width="216" height="44" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+<text x="504" y="228" text-anchor="middle" font-size="13" fill="#A2503B">有耻且格</text>
+<text x="504" y="244" text-anchor="middle" font-size="9.5" fill="#8A8074">怕对不起，还想往好里走</text>
+<line x1="60" y1="286" x2="660" y2="286" stroke="#DCD5C8"/>
+<text x="360" y="310" text-anchor="middle" font-size="11" fill="#2F2A24">两层都用「齐」：都要把人统一起来；分别不在要不要统一，在用什么统一。</text>
+<text x="360" y="332" text-anchor="middle" font-size="10.5" fill="#A2503B">层次，不是取舍：政刑不废，只是不能只靠。</text>
+</svg>
+      </div>
+      <div class="figcap">义理图一　四器两层：一层管手脚，一层管脸面（手写 SVG，示意）</div>
+    </div>
+    <p>这张图要看清三件事。<b>第一，两层都用「齐」</b>——「齐」是统一，不是宽松；德礼不是不要统一，是用另一种东西统一。<b>第二，结果是成对给的</b>：免而无耻／有耻且格，孔子把后果摆在后面，让人自己对照。<b>第三，刑在第二层之后</b>——朱子说「道之而不从者，有刑以一之也」，刑是跟进的手段，不是起点。</p>
+    <p>反过来读也成立：<b>只有刑，人会躲；只有德，人会散。</b>——躲是因为怕，散是因为没尺。所以这一章给的不是取舍，是次序：<b>先立德礼，再用政刑补那补不齐的地方。</b></p>
+
+    <div class="h2" id="sc-b2">三　耻：这一章真正的分界点</div>
+    <p>两组结果的差别，只在两个字：<b>「无耻」与「有耻」</b>。其余字眼几乎一样——都「齐」了，都「免」了（免于罚）。<b>差别不在行为，在行为之后心里有没有动静。</b></p>
+    <p>朱子把「免而无耻」讲得极准：<b>「虽不敢为恶，而为恶之心未尝忘也。」</b>——手停了，心没停；不是不想，是不敢。这一句如果读进去，就知道「免」不是成绩，是<b>还没被碰到</b>。</p>
+    <p>「耻」是什么？<b>不是怕被人看见，是自己看见自己。</b>怕被人看见，是羞耻的赝品：人一走，它就没了。真的耻，人不在场也在——<b>它是一盏灯，照的是自己。</b></p>
+    <div class="figs single" id="sc-21">
+      <div class="figsvg">
+      <svg viewBox="0 0 720 340" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 罚到哪一层为止，礼到哪一层为止</text>
+<rect x="76" y="62" width="300" height="50" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="96" y="84" font-size="13" fill="#2F2A24">行为</text>
+<text x="96" y="101" font-size="10" fill="#8A8074">做了什么</text>
+<rect x="76" y="136" width="300" height="50" fill="#FFFDF6" stroke="#C58A73"/>
+<text x="96" y="158" font-size="13" fill="#2F2A24">羞耻</text>
+<text x="96" y="175" font-size="10" fill="#8A8074">敢不敢做</text>
+<rect x="76" y="210" width="300" height="50" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="96" y="232" font-size="13" fill="#2F2A24">心</text>
+<text x="96" y="249" font-size="10" fill="#8A8074">想不想做</text>
+<line x1="392" y1="87" x2="470" y2="87" stroke="#B5A897"/>
+<polygon points="476,87 468,83 468,91" fill="#B5A897"/>
+<text x="486" y="84" font-size="10.5" fill="#5C5347">政刑：到此为止</text>
+<text x="486" y="100" font-size="9.5" fill="#8A8074">管住手，管不住脸</text>
+<line x1="392" y1="235" x2="470" y2="235" stroke="#A2503B"/>
+<polygon points="476,235 468,231 468,239" fill="#A2503B"/>
+<text x="486" y="232" font-size="10.5" fill="#A2503B">德礼：一路到心</text>
+<text x="486" y="248" font-size="9.5" fill="#8A8074">叫起羞耻，才谈得上「格」</text>
+
+
+<text x="486" y="164" font-size="10" fill="#A2503B">耻在这一层被点亮</text>
+<line x1="60" y1="296" x2="660" y2="296" stroke="#DCD5C8"/>
+<text x="360" y="320" text-anchor="middle" font-size="10.5" fill="#8A8074">「免而无耻」不是不怕罚，是心里那层没被点亮；灯亮了，才照见自己。</text>
+</svg>
+      </div>
+      <div class="figcap">义理图二　罚到哪一层为止，礼到哪一层为止（手写 SVG，示意）</div>
+    </div>
+    <p>所以「有耻且格」不是一句好话，是一套机制：<b>先叫起羞耻（灯亮），再让人往好里走（格）。</b>——灯不亮，走不动；灯亮了不引导，也走不远。</p>
+    <div class="h2" id="sc-b3">四　格两训：「到」还是「正」</div>
+    <p>「格」这个字，朱子给了两个讲法，两个都留着：</p>
+    <p><b>一训「至」</b>：格，至也；「有以至于善也」——民不但知耻，还真走到了善处。落脚在「到」。<b>一训「正」</b>：「一说，格，正也。书曰：『格其非心。』」——把心里那点不正的扶正。落脚在「心」。</p>
+    <p>两训为什么都通？<b>因为「到」与「正」本是一件事的两头</b>：心不正，到不了善处；到不了善处，心也没真正。朱子两存，不是犹豫，是这一句本来就有两个可用的面。</p>
+    <div class="figs single" id="sc-22">
+      <div class="figsvg">
+      <svg viewBox="0 0 720 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 一个「格」字，两条都通的路</text>
+<text x="360" y="112" text-anchor="middle" font-size="40" fill="#2F2A24">格</text>
+<line x1="300" y1="90" x2="200" y2="70" stroke="#B5A897"/><polygon points="194,68 202,66 200,74" fill="#B5A897"/>
+<line x1="420" y1="90" x2="520" y2="70" stroke="#A2503B"/><polygon points="526,68 518,66 520,74" fill="#A2503B"/>
+<text x="150" y="58" text-anchor="end" font-size="12" fill="#5C5347">一训「至」</text>
+<text x="150" y="76" text-anchor="end" font-size="10" fill="#8A8074">民至于善：落脚在「到」</text>
+<text x="556" y="58" font-size="12" fill="#A2503B">一训「正」</text>
+<text x="556" y="76" font-size="10" fill="#8A8074">正其非心：落脚在「心」</text>
+<text x="360" y="168" text-anchor="middle" font-size="10" fill="#8A8074">朱子两存，引《书》「格其非心」为证</text>
+<line x1="60" y1="206" x2="660" y2="206" stroke="#DCD5C8"/>
+<text x="360" y="232" text-anchor="middle" font-size="11" fill="#2F2A24">两训不互斥：心正了，人才到得了善处；到不了善处，心也没真正。</text>
+<text x="360" y="262" text-anchor="middle" font-size="10.5" fill="#A2503B">所以这一章的下限是「不敢」，上限是「不愿」——中间隔着的就是「耻」。</text>
+</svg>
+      </div>
+      <div class="figcap">义理图三　一个「格」字，两条都通的路（手写 SVG，示意）</div>
+    </div>
+    <p>这一训的分量在于：<b>它把这个字从「听话」拉到了「正心」</b>。若只训「至」，本章只讲到「民肯向善」；训「正」，就讲到「心里那点歪被扶过来了」。<b>本章的下限是「不敢」，上限是「不愿」，中间隔着的正是这一训。</b></p>
+
+    <div class="h2" id="sc-b4">五　层次不是取舍：政刑为什么不废</div>
+    <p>后人常把这一章读成「儒家反对法治」。<b>读原文，读不出这个意思。</b>孔子说的是「道之以政，齐之以刑，民免而无耻」——<b>他没说不要政刑，他说只靠政刑，人只会躲。</b></p>
+    <p>朱子的注更清楚：「道之而不从者，有刑以一之也。」<b>先导，不从才罚</b>——刑在流程里，不在对立面。次序是：德礼先立，政刑补位。</p>
+    <p>反过来也有一误：把「德治」当万能，制度不落地。<b>德是躬行以率之，礼是制度品节</b>——礼本身就是制度；没有制度承载的「德治」，只是口号。<b>孔子讲的德治，从来带着礼这套硬尺度。</b></p>
+    <p>所以这一章的准确说法是：<b>两层器，一个方向；先点灯，再按手；按手的时候，灯不许灭。</b></p>
+
+    <div class="h2" id="sc-b5">六　三病理与三自检</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">病理一</div><div class="v"><b>把德礼当口号，制度不落地。</b>——<b>表现：会上讲价值观，会上没有一条可执行的规矩。</b><b>代价：德治空转，人心看穿。</b></div></div>
+      <div class="row"><div class="k k2">病理二</div><div class="v"><b>把政刑当万能，只求不出事。</b>——<b>表现：事事有罚则，人人只求合规。</b><b>代价：组织合规而心散；一有机会，先躲。</b></div></div>
+      <div class="row"><div class="k k2">病理三</div><div class="v"><b>把「免而无耻」当骂民。</b>——<b>表现：一出问题就说「下面的人不行」。</b><b>代价：责任推下去，上一层怎么做的，看不见了。</b></div></div>
+      <div class="row"><div class="k k2">自检一</div><div class="v"><b>我这一层，是靠罚还是靠示范？</b>——<b>罚能立刻见效，示范见效慢；两样都要，但次序不能倒。</b></div></div>
+      <div class="row"><div class="k k2">自检二</div><div class="v"><b>我这里的人，是不敢犯错，还是不愿犯错？</b>——<b>前者问你罚得狠不狠，后者问你值不值得信。</b></div></div>
+      <div class="row"><div class="k k2">自检三</div><div class="v"><b>出了事，我先改制度，还是先骂人？</b>——<b>先骂人，省事；先改制度，才叫为政。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-d">七　时代：一个办过案的人说的话</div>
+    <p>鲁国那时政刑失序：三桓专权，陪臣执国命；<b>刑名成了强者的工具，礼成了弱者的空文。</b>在这种地方讲「道之以德」，不是天真，是见过罚不管用。</p>
+    <p>孔子自己做过官：中都宰、司空、大司寇，摄相事，堕三都而败，去鲁。<b>他管过刑名钱谷，知道罚怎么用、罚到哪里就失灵。</b>这一章不是书生空谈，是办过案的人回过头说的话——所以他才把「耻」放在那么重的位置。</p>
+
+    <div class="h2" id="sc-e">八　章旨</div>
+    <p><b>一句：</b>为政有两层器——一层管行为，一层管羞耻；能让人「不敢」的是政刑，能让人「不愿」的是德礼。</p>
+    <p><b>一反：</b>不是不要政刑，是不能只有政刑。</p>
+    <p><b>与 2.1、2.2 合看：</b>2.1 立姿势（不动而化），2.2 给入口（先动其心），2.3 定次第（先德礼，政刑补位）。<b>三章合起来，才是「为政」的起手式。</b></p>
+    <p><b>落点两动作：</b>① 把一条只会罚的规矩，改成一次示范；② 把一次处罚，改成一次说明——罚完告诉他下次怎么做。</p>
+
+    <div class="h2" id="sc-f">九　存疑五条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「格」是「至」还是「正」</b>　朱子两存，并引《书》「格其非心」。<b>本课并列，不取一废一</b>：两训各管一头，合起来才完整。</div></div>
+      <div class="q"><span>02</span><div><b>「道」是「导」还是「治理」</b>　朱子取「引导、先之」。<b>本课从之</b>；若读「治理」，全章重心就从「示范」偏到「施政」，与下句「德」不接。</div></div>
+      <div class="q"><span>03</span><div><b>「齐」是「齐一」还是「整齐」</b>　本课取「齐一」：统一标准。<b>若读「整齐」，易被读成「把百姓收拾整齐」，失之。</b></div></div>
+      <div class="q"><span>04</span><div><b>这一章是否专对「民」</b>　朱子注文作「民」，但孔子是对执政者说。<b>本课读作「上位者对下位者」</b>，不限国君；否则这一章与今天的我们无关。</div></div>
+      <div class="q"><span>05</span><div><b>「免」是否可读「勉」</b>　旧有异说，以「免」通「勉」，谓「勉而无耻」。<b>本课不取</b>：朱子「苟免」之训与「刑」相承，文脉更顺。</div></div>
+    </div>
+
+    <div class="h2" id="sc-g">十　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">儒家反对法治。</div><div class="b"><b>政刑不废，只是不能只靠。</b>朱子说得清楚：先导，不从才罚。<b>刑是补位，不是对立面。</b></div></div>
+      <div class="pair"><div class="a">德治就是讲道德。</div><div class="b"><b>德是躬行以率之，礼是制度品节。</b>没有制度承载的德治，是空转的口号。</div></div>
+      <div class="pair"><div class="a">「民免而无耻」是骂百姓。</div><div class="b"><b>这是描述机制，责任在上一层的做法。</b>人只躲不羞，先问是谁只给了罚。</div></div>
+      <div class="pair"><div class="a">「有耻且格」是人人成圣。</div><div class="b"><b>格是至、是正：到得善处、正其非心。</b>不是一步成圣，是一件一件做对。</div></div>
+      <div class="pair"><div class="a">礼就是礼貌客套。</div><div class="b"><b>礼是制度品节</b>，管的是「浅深厚薄之不一者」——把参差的人排成队的那套尺度。</div></div>
+      <div class="pair"><div class="a">这一章讲古代，与今天无关。</div><div class="b"><b>KPI 与耻、合规与认同，是同一件事的现代版。</b>换的是词，不是结构。</div></div>
+    </div>
+
+    <div class="h2" id="sc-h">十一　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《礼记》<br>缁衣</div><div class="v">「夫民，教之以德，齐之以礼，则民有格心；教之以政，齐之以刑，则民有遁心。」——<b>本章最早的同文异辞</b>：不是「无耻」，是「遁心」——跑掉。<b>比「无耻」更狠。</b></div></div>
+      <div class="row"><div class="k k2">《论语》<br>2.1</div><div class="v">「为政以德，譬如北辰。」——先立姿势：你自己站得住。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>2.2</div><div class="v">「诗三百，一言以蔽之。」——再给入口：先动其心。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>12.19</div><div class="v">「君子之德风，小人之德草。草上之风，必偃。」——德怎么起作用：不是推，是风过草偃。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>13.6</div><div class="v">「其身正，不令而行；其身不正，虽令不从。」——「不令而行」正是「有耻且格」的另一种说法。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>15.5</div><div class="v">「无为而治者，其舜也与？恭己正南面而已矣。」——儒家「无为」：不烦扰，不是不做事。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>8.2</div><div class="v">「恭而无礼则劳。」——礼是节文：没有分寸的恭敬，会把人累坏。</div></div>
+      <div class="row"><div class="k k2">《尚书》<br>冏命</div><div class="v">「格其非心。」——朱子训「格」为「正」所本。</div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　堂上：不设刑具的一场问政</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一　图位（待作者供图）</div>
+        <div class="ph">竖幅 3:4　待补</div>
+        <details class="prompt">
+          <summary>提示词（待生成）</summary>
+          <p>古淡水墨立轴，纸本米色 #FBF7EC 底，墨 #2F2A24，赭 #A2503B，青灰 #4A5C55。幅面取「子曰：道之以政，齐之以刑，民免而无耻；道之以德，齐之以礼，有耻且格」之义。堂上一张矮案，案上无刑具，只有一卷摊开的简和一盏矮灯；一位中年执政者侧身坐着，手按在简上，眼睛看着阶下。阶下立着一个捧券的人（法条）和一个捧豆的人（礼器），两人一左一右，谁也不说话。门外一人半身欲入又退，脚尖朝外。屋顶可见梁，梁上无饰。竖幅 3:4，构图安稳，重点在「案上什么都没有」——不设刑具。不画文字，不画刑具，不画锁链。右下角不生成任何水印。</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-23">附论一　为什么「耻」比「罚」管用</div>
+    <p>罚的逻辑是「外部成本」：做坏事，付代价。这个逻辑有一个死穴——<b>它只在被抓得到的时候成立</b>。所以罚会推着人去学「怎么不被抓」，而不是「怎么不做」。</p>
+    <p>耻的逻辑是「内部成本」：做了，自己过不去。<b>它不需要看守，因为看守在里面。</b>一个人独处时守着规矩，靠的只能是这一样。</p>
+    <p>更实际的一层：<b>罚有上限，耻没有。</b>罚到最重，就是让人不能做；耻可以让人在完全能做的时候，选择不做。<b>前者管住了手，后者管住了人。</b></p>
+    <p>所以孔子不是不喜欢罚，是知道罚到哪里就到底了。<b>罚到底的地方，正是德礼起头的地方。</b></p>
+
+    <div class="h2" id="sc-24">附论二　「格」的两千年歧义</div>
+    <p>「格」的麻烦在于它同时有两个方向：<b>向外到（至），向内正（正）。</b>汉唐注家多取「至」，宋人把它拉到心上。<b>这一拉不要紧，本章的重心就从「民肯向善」移到了「心被扶正」。</b></p>
+    <p>拉得对不对？<b>看文脉：上一句刚讲「耻」——耻是心里的动静</b>；紧接着的「格」若只讲「到善处」，就与「耻」接不上。所以取「正」，文脉更顺。</p>
+    <p>但「至」也不可废：<b>只讲正心，不讲到善处，容易变成只在心里打转</b>——心正不正，自己说了不算，要看做出来什么。两训并存，正好互相看着。</p>
+
+    <div class="h2" id="sc-25">附论三　德治会不会滑成人治</div>
+    <p>这是今天的读者最该问的一问。<b>「为政以德」「道之以德」，靠的是人，不是法——那不就是人治？</b></p>
+    <p>分别在一处：<b>本章的「德」后面紧跟着「礼」。</b>礼是制度品节，是可讲、可学、可查的尺度；德不是靠某个人的魅力，是靠一套能被共同遵守的节文落地的。<b>人治的特征是「看谁说了算」，德礼的特征是「看尺度在不在」。</b></p>
+    <p>所以孔子这一章的结构，恰恰是防人治的：<b>德立方向，礼定尺度，政刑补漏。</b>三者缺一，都会滑：缺礼，德就变成个人魅力；缺德，礼就变成空壳；缺政刑，礼就变成君子自觉、小人随意。</p>
+    <p><b>一句话：德治不是不要尺度，是让尺度有方向。</b></p>
+  </section>
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 18 课　v1.0　（2026-11-20）</div>
+  </footer>
+</div>
+</body>
+</html>

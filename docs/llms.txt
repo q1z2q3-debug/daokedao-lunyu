@@ -22,9 +22,10 @@
 - 第十五课｜不患人之不己知，患不知人也｜学而收篇：眼睛从「别人看我」转向「我看别人」；四条改道，三张知人的尺。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/15.html
 - 第十六课｜为政以德，譬如北辰｜为政开篇：政者正也，德者得也；居其所而不动，众星自向，事简而人归。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/16.html
 - 第十七课｜诗三百，一言以蔽之｜一句盖三百：不是诗里无邪，是读诗把人拉回正；原句咏马，孔子断章。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/17.html
+- 第十八课｜道之以政，齐之以刑｜四器两层：政刑管手脚，德礼管脸面；免而无耻与有耻且格，分界在「耻」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/18.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.3，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.4，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
