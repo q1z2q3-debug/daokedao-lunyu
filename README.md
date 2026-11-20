@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.10.0**，已刊 **12 件**（前言一篇 + 学而一至十一章）
+- 当前版本 **v0.15.5**，已刊 **21 件**（前言一篇 + 学而十六章 + 为政三章 + 专题二篇）
 
 ---
 
@@ -36,15 +36,28 @@
 
 | 课次 | 章句 | 一句主旨 | 阅读版 |
 |---|---|---|---|
-| 前言 | 读法 · 总纲 · 体例 | 先读它说什么，再谈它意味着什么 | [00-pre](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/00-pre.html) |
-| 第一课 | 学而时习之，不亦说乎 | 学是受，习是发；一阴一阳，才是这一句的全部 | [01](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/01.html) |
-| 第二课 | 其为人也孝弟，而好犯上者，鲜矣 | 本立而道生：孝弟是根，不是姿态 | [02](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/02.html) |
-| 第三课 | 巧言令色，鲜矣仁 | 饰在外，实在内；「鲜」不是零 | [03](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/03.html) |
-| 第四课 | 吾日三省吾身 | 「省」是查事，不是定罪 | [04](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/04.html) |
-| 第五课 | 道千乘之国，敬事而信，节用而爱人，使民以时 | 五事归两路：不欺与不竭 | [05](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/05.html) |
-| 第六课 | 弟子入则孝，出则弟，谨而信，泛爱众，而亲仁 | 先事后文，是次序，不是轻重 | [06](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/06.html) |
-| 第七课 | 父在，观其志；父没，观其行；三年无改于父之道 | 三个时间点看同一个人；无改不是守旧，是不忍遽改 | [07](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/07.html) |
-| 第八课 | 君子不重则不威，学则不固 | 重是壁，忠信是底：重→威→固是一条链 | [08](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/08.html) |
+| 前言 | 读法 · 总纲 · 体例 | 先读它说什么，再谈它意味着什么。 | [00-pre](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/00-pre.html) |
+| 第一课 | 学而时习之，不亦说乎 | 学是受，习是发；一阴一阳，才是这一句的全部。 | [01](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/01.html) |
+| 第二课 | 其为人也孝弟，而好犯上者，鲜矣 | 本立而道生：孝弟是根，不是姿态。 | [02](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/02.html) |
+| 第三课 | 巧言令色，鲜矣仁 | 饰在外，实在内；「鲜」不是零。 | [03](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/03.html) |
+| 第四课 | 吾日三省吾身 | 「省」是查事，不是定罪。 | [04](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/04.html) |
+| 第五课 | 道千乘之国，敬事而信，节用而爱人，使民以时 | 五事归两路：不欺与不竭。 | [05](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/05.html) |
+| 第六课 | 弟子入则孝，出则弟，谨而信，泛爱众，而亲仁 | 先事后文，是次序，不是轻重。 | [06](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/06.html) |
+| 第七课 | 父在，观其志；父没，观其行；三年无改于父之道 | 三个时间点看同一个人；无改不是守旧，是不忍遽改。 | [07](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/07.html) |
+| 第八课 | 君子不重则不威，学则不固 | 不重是病，学是药；无友不如己，是承认人人有一处胜我。 | [08](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/08.html) |
+| 第九课 | 慎终追远，民德归厚矣 | 两件收不到回音的事，把一个人、一家、一地的壁练厚。 | [09](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/09.html) |
+| 第十课 | 夫子至于是邦也，必闻其政 | 五德不是技巧，是可接近性；以得之，是德之得。 | [10](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/10.html) |
+| 第十一课 | 礼之用，和为贵 | 礼是界，和是容，节是度：无礼则混，无和则僵，无节则散。 | [11](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/11.html) |
+| 第十二课 | 信近于义，言可复也 | 三个「近」是三把尺：诺贴着义，恭贴着礼，托身贴着可亲。 | [12](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/12.html) |
+| 第十三课 | 君子食无求饱，居无求安 | 好学四条门：去欲、先行、后言、求正——四条都不在书上。 | [13](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/13.html) |
+| 第十四课 | 贫而无谄，富而无骄 | 守、化、益三级：不做只是及格，做出才算长进；切磋琢磨是减法。 | [14](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/14.html) |
+| 第十五课 | 不患人之不己知，患不知人也 | 学而收篇：眼睛从「别人看我」转向「我看别人」；四条改道，三张知人的尺。 | [15](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/15.html) |
+| 第十六课 | 为政以德，譬如北辰 | 为政开篇：政者正也，德者得也；居其所而不动，众星自向，事简而人归。 | [16](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/16.html) |
+| 第十七课 | 诗三百，一言以蔽之 | 一句盖三百：不是诗里无邪，是读诗把人拉回正；原句咏马，孔子断章。 | [17](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/17.html) |
+| 第十八课 | 道之以政，齐之以刑 | 四器两层：政刑管手脚，德礼管脸面；免而无耻与有耻且格，分界在「耻」。 | [18](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/18.html) |
+| 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
+| 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
+
 
 ---
 
@@ -54,8 +67,9 @@
 book/     母本（md，唯一内容源）
 docs/     站点（GitHub Pages，main:/docs）
   index.html     入口：卷首语、目录、体例、五步读法、同系列
-  book.html      卷首：封面、扉页、前言十节、六课目录
+  book.html      卷首：封面、扉页、前言十节、课目录
   ke/*.html      各课阅读版（单文件自包含，含内嵌 SVG 与典故图）
+  zt/*.html      专题阅读版（不按章次，一处读透）
 scripts/
   build_book_md.py   各课 md → 母本
   build_site.py      母本与阅读版 → docs 站点

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>孔子的道与德 · 孔老对照｜润泽说 道可道</title>
+<meta name="description" content="专题：把孔子的「道」与「德」，对着《道可道·道德经心法读本》所读的老子摆在一张桌上。德者得也，两家同源同训；孔子的道在事中、人能弘道，老子的道在事先、道法自然；孔子的德是起点（得于内、形于外、日积而成），老子的德是失道之后的第一级补位（上德不德）；五级滑落与四级台阶；八处正面对照；最硬的分歧在礼——立壁以护虚／壁厚而虚死；五条共底；三对原文一句一对；附论两家的「无为」同名而实不同（15.5 舜之无为）。存疑四条。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBF7EC'/%3E%3Ctext x='16' y='23' font-size='17' text-anchor='middle' fill='%23A2503B' font-family='serif'%3E德%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  p{margin:0 0 15px;text-align:justify;color:var(--ink);line-height:1.95}
+  p:last-of-type{margin-bottom:4px}
+  .figsvg svg{max-width:720px}
+  /* 专题：小屏用正确列名，替代原「俗见／正解」前缀 */
+  .cards.kzA .pair .a::before{content:"孔子　";color:var(--muted)}
+  .cards.kzA .pair .b::before{content:"老子　";color:var(--ochre-soft)}
+  .cards.kzB .pair .a::before{content:"俗读　";color:var(--muted)}
+  .cards.kzB .pair .b::before{content:"辨析　";color:var(--ochre-soft)}
+  @media (max-width:640px){
+    .cards.kzA .cardshd,.cards.kzB .cardshd{display:grid}
+  }
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>专题</b>　孔子的道与德 · 对着老子的那本读　第 1 篇 / 专题</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">本篇</span><a href="#sc-0">要辨什么</a><a href="#sc-1">德者得也</a><a href="#sc-2">孔子的道</a><a href="#sc-3">孔子的德</a><a href="#sc-4">老子的道</a><a href="#sc-5">老子的德</a><a href="#sc-6">八处对照</a><a href="#sc-7">礼</a><a href="#sc-8">共同的底</a><a href="#sc-9">一句一对</a><a href="#sc-10">一张桌上读</a><a href="#sc-11">存疑</a><a href="#sc-12">附论</a></div>
+  </div>
+
+      <div class="leaf adult">
+    <div class="leaf-tag">专题 · 孔老道德辨</div>
+    <h1>孔子的道与德</h1>
+    <div class="h1-sub">对着我们读的那本《道德经》｜不判高下，只把两个字在两套秩序里各站哪一格摆出来</div>
+    <div class="src"><span class="who">并置</span>「人能弘道，非道弘人。」（15.29）<br>「道法自然。」（25 章）</div>
+    <p style="margin-top:16px"><b>两句摆在一起，这篇的题目就出来了：道到底靠人，还是不靠人。</b>往下十三节，把这个问题拆到底。</p>
+<div class="h2" id="sc-0">一　这一篇要辨什么</div>
+    <p class="lead"><b>同一个「道」字，孔子多用在动词位，老子只用在本源位；同一个「德」字，孔子把它放在起点，老子把它放在第一级补位。</b></p>
+    <p>字是同一副，位置不同，分量就不同。所以这一篇不做「谁高谁低」的裁判，只做一件事：把两个字在两套秩序里各站哪一格，摆到同一张桌上看。</p>
+    <div class="scene"><b>先把一句话放在前面：说「孔子重德、老子轻德」，是把两个人在两套秩序里的位置，误当成了两种人生态度。</b>——<b>孔子重的是德之实，老子轻的是德之名。</b>——<b>两个人其实反对同一件东西：把德当成一笔可以收账的功。</b></div>
+    <p>这句话不是替老子辩护，也不是替孔子抬价。它有原文可核：老子第五十一章说「生而不有，为而不恃，长而不宰」，这是德的极处；孔子说「君子去仁，恶乎成名」（里仁 4.5），这是把名挂在仁之后。两个人都在防同一件事——<b>德一旦被人拿来结算，就不是德了</b>。</p>
+
+    <div class="h2" id="sc-1">二　先辨一个字：德者，得也</div>
+    <p>要辨两家的德，得先把「德」这个字本身说清。这一步两家完全同源，分歧全在后面。</p>
+    <p><b>我们的《道德经》字条里是这么写的：</b>「德」金文作「徝」，从彳、从直、从心——一个人行在路上，一只眼睛直视前方。<b>德的原始象，不是「守着一套规矩」，而是「在路上，眼睛看着正前方，一步一步走出来」。</b></p>
+    <p>先秦「德」「得」同源通用：<b>德者，得也。</b>不是外挂的规范，是内有所得、形之于外、日积而成。三层，一层都不能省：<b>内有所得</b>（不是背下来的，是吃进去的）；<b>形之于外</b>（藏不住，会从举止里漏出来）；<b>日积而成</b>（一次不算，得连着做）。</p>
+    <p>朱熹注「为政以德」时说：<b>「德之为言得也，得于心而不失之谓也。」</b>——最重的是「不失」两个字。得了又失，不算德。所以德不是一种资格，是一种连续性。</p>
+    <p>我们那本书里点过三种读错法，今天还在流传：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v">把德读成<b>好人好事</b>——<b>这是把结果当成了源头。</b>德是长出来的，不是攒出来的。</div></div>
+      <div class="row"><div class="k">二</div><div class="v">把德读成<b>功德福报</b>——<b>这是把德变成了一笔账。</b>一记账，德就成了交易。</div></div>
+      <div class="row"><div class="k">三</div><div class="v">把道与德<b>割开</b>——<b>德是道的行迹，道是德的所由。</b>割开，两边都空。</div></div>
+    </div>
+    <p>我们那本书里把这一条压成一句心法：<b>德不是守出来的，是走出来的。</b>这一句，孔子会同意；老子也会同意，只是老子会再加一句：走出来的痕迹，别拿它去换人一句谢。</p>
+
+    <div class="h2" id="sc-2">三　孔子的道：一条能走的路</div>
+    <p>孔子几乎不先讲「道是什么」。他总是先讲「这件事怎么走」。这不是他想不到本体那一层——子贡说得明白：「夫子之言性与天道，不可得而闻也」（先进 5.13）。他不是不知道，是不从那一层入手。</p>
+    <div class="rows">
+      <div class="row"><div class="k">本立</div><div class="v"><b>「君子务本，本立而道生。」</b>（学而 1.2）——<b>道是从根上长出来的。</b>不是先有一个宇宙论的道再落到人事，是先有本：孝弟、忠信、不巧言令色。<b>根扎住了，路自己出来。</b></div></div>
+      <div class="row"><div class="k">异路</div><div class="v"><b>「道不同，不相为谋。」</b>（卫灵公 15.40）——<b>这里的道是各人的路数：目标、方法、取舍的总和。</b><b>可以是复数，可以不同。</b>老子那里道是单数，不可分。</div></div>
+      <div class="row"><div class="k">弘道</div><div class="v"><b>「人能弘道，非道弘人。」</b>（卫灵公 15.29）——<b>这一句是全篇的支点。</b><b>道不自己发光，要人把它举起来、走宽。</b>人是主语，道是宾语。</div></div>
+      <div class="row"><div class="k">闻道</div><div class="v"><b>「朝闻道，夕死可矣。」</b>（里仁 4.8）——<b>道不是知识，是「通」。</b>通的那一瞬，一生就交代得过去了。<b>朱子注「事物当然之理」</b>——注意，是「当然」，不是「本然」。</div></div>
+      <div class="row"><div class="k">导之</div><div class="v"><b>「道之以政」</b>（为政 2.3）——<b>这个「道」读 dǎo，是「导」。</b>领着人往哪走，不是讲给人听。</div></div>
+      <div class="row"><div class="k">治之</div><div class="v"><b>「道千乘之国」</b>（学而 1.5）——<b>这个「道」是「治」。</b>把一个国家理顺，路才通。</div></div>
+      <div class="row"><div class="k">不闻</div><div class="v"><b>「夫子之言性与天道，不可得而闻也。」</b>（5.13）——<b>不是没有那一层，是不拿那一层当入口。</b>孔子讲的是人道：人能做的事。</div></div>
+      <div class="row"><div class="k">三义</div><div class="v"><b>路、导、言，三义在孔子笔下混着用。</b>（「夫子自道也」14.28 是「说」）<b>——混着用，说明他的道总连着「行」与「说」，不是纯名词。</b></div></div>
+    </div>
+    <div class="figs single">
+      <div class="figsvg"><svg viewBox="0 0 720 360" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 同一个「道」字，一个在事中，一个在事先</text>
+<text x="180" y="62" text-anchor="middle" font-size="12.5" fill="#A2503B">孔子：道在事中</text>
+<rect x="70" y="76" width="220" height="46" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="180" y="98" text-anchor="middle" font-size="11.5" fill="#2F2A24">学 · 政 · 礼 · 行</text>
+<text x="180" y="114" text-anchor="middle" font-size="9.5" fill="#8A8074">日用之间的那些具体事</text>
+<line x1="180" y1="128" x2="180" y2="198" stroke="#A2503B"/>
+<polygon points="180,199 176,190 184,190" fill="#A2503B"/>
+<polygon points="180,127 176,136 184,136" fill="#A2503B"/>
+
+<rect x="70" y="200" width="220" height="46" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="180" y="222" text-anchor="middle" font-size="11.5" fill="#2F2A24">道</text>
+<text x="180" y="238" text-anchor="middle" font-size="9.5" fill="#8A8074">可行之路：本立而道生</text>
+<text x="180" y="272" text-anchor="middle" font-size="10" fill="#5C5347">人能弘道，非道弘人</text>
+<text x="180" y="294" text-anchor="middle" font-size="9.5" fill="#8A8074">道靠人走出来，不自己显</text>
+<text x="540" y="62" text-anchor="middle" font-size="12.5" fill="#4A5C55">老子：道在事先</text>
+<rect x="430" y="76" width="220" height="46" fill="#F4F6F2" stroke="#7C8C7A"/>
+<text x="540" y="98" text-anchor="middle" font-size="11.5" fill="#2F2A24">道</text>
+<text x="540" y="114" text-anchor="middle" font-size="9.5" fill="#8A8074">未分化、未命名的本源</text>
+<line x1="540" y1="128" x2="540" y2="192" stroke="#7C8C7A"/>
+<polygon points="540,198 536,190 544,190" fill="#7C8C7A"/>
+<rect x="430" y="200" width="220" height="46" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="540" y="222" text-anchor="middle" font-size="11.5" fill="#2F2A24">德 · 仁 · 义 · 礼</text>
+<text x="540" y="238" text-anchor="middle" font-size="9.5" fill="#8A8074">道失落之后，一级一级补建</text>
+<text x="540" y="272" text-anchor="middle" font-size="10" fill="#5C5347">道法自然</text>
+<text x="540" y="294" text-anchor="middle" font-size="9.5" fill="#8A8074">道不靠人，人只须归</text>
+<line x1="360" y1="60" x2="360" y2="300" stroke="#DCD5C8" stroke-dasharray="4 6"/>
+<line x1="60" y1="322" x2="660" y2="322" stroke="#DCD5C8"/>
+<text x="360" y="346" text-anchor="middle" font-size="10.5" fill="#8A8074">孔子把「道」讲成动词（导、行、弘），老子把「道」讲成名词（未名的先在）。</text>
+</svg></div>
+      <div class="figcap">图一 · 两个「道」的位置：一个在事中，一个在事先。左栏四句为《论语》原文，「道」皆在动词位；右栏为《道德经》口径，道在物先，不待人。</div>
+    </div>
+    <p>所以孔子的道，是三个「可」：<b>可行之路、可弘之物、可说之事。</b>三个「可」都落在人事上。他讲道，讲到最后总是一句「你去做」。</p>
+
+    <div class="h2" id="sc-3">四　孔子的德：得于内，形于外</div>
+    <p>孔子的德，是这套秩序里的起点，不是补丁。他一开口就把德放在最高处，但放的方式很特别——他不说德「有多好」，他说德「怎么起作用」。</p>
+    <div class="rows">
+      <div class="row"><div class="k">北辰</div><div class="v"><b>「为政以德，譬如北辰，居其所而众星共之。」</b>（2.1）——<b>德的形态是「居其所」：不动，而众星自来。</b><b>不是德有引力，是德不移动，别人好定位。</b></div></div>
+      <div class="row"><div class="k">德风</div><div class="v"><b>「君子之德风，小人之德草。草上之风，必偃。」</b>（颜渊 12.19）——<b>德是风：风没有形状，草自己倒。</b><b>德的力量恰恰在「不直接作用于人」，它改的是空气。</b></div></div>
+      <div class="row"><div class="k">有邻</div><div class="v"><b>「德不孤，必有邻。」</b>（里仁 4.25）——<b>德会招来同类。</b>它不是独善，是一处能聚人的地方。</div></div>
+      <div class="row"><div class="k">好德</div><div class="v"><b>「吾未见好德如好色者也。」</b>（子罕 9.18）——<b>孔子承认「好德」难。</b>德不是懂了就有，得「好」——喜欢它。<b>这一条最像家常话，也最不留情。</b></div></div>
+      <div class="row"><div class="k">终食</div><div class="v"><b>「君子无终食之间违仁。」</b>（里仁 4.5）——<b>一顿饭的空档都不违。</b>德的连续性，就是朱子说的「得而不失」。</div></div>
+      <div class="row"><div class="k">成仁</div><div class="v"><b>「有杀身以成仁。」</b>（卫灵公 15.9）——<b>德到极处，是可以换命的。</b><b>注意：这里德不是「佑人」，是「立人」。</b>德是得，最极端的用法却是失——失命而得仁。</div></div>
+      <div class="row"><div class="k">无礼</div><div class="v"><b>「恭而无礼则劳，慎而无礼则葸，勇而无礼则乱，直而无礼则绞。」</b>（泰伯 8.2）——<b>德若无礼定形，会走形四种：累、缩、乱、尖。</b><b>这一条直通后面的「礼」。</b></div></div>
+    </div>
+    <p>把这七条并起来看，孔子讲德有三条硬规矩：<b>一，德要能被看见（北辰、风）；二，德要能连着做（终食）；三，德要有形状（礼）。</b>前两条与老子不冲突，第三条冲突就来了。</p>
+
+    <div class="h2" id="sc-4">五　我们读的那个老子：道是先在的取景</div>
+    <p>以下不是通行注本的读法，是我们那本《道德经》的读法。五条口径先摆出来，因为不先说清，后面的对照就会走形。</p>
+    <div class="list">
+      <li><b>断句常「无」，欲以观其妙；常「有」，欲以观其徼。</b>——不做「常无欲／常有欲」连读。全书一致。</li>
+      <li><b>无／有 是符号 A 与符号 B，是两副取景。</b>——不是两样实物，不是两种心态，不是有欲无欲。</li>
+      <li><b>「欲」取先秦本义：发心、志求、主动契入；「观」取鹳鸟静立久察之象；「徼」（jiào）是生机展开后自然亮起的轮廓分际。</b></li>
+      <li><b>杯喻：杯壁＝有，虚位＝无；「无为，就是为无」；功夫四步 建、损、守、听。</b></li>
+      <li><b>存疑不判：</b>第七十九章左契／右契、第八十章「重死而远徙」有无「不」字，均两存。</li>
+    </div>
+    <p>这五条一摆，老子的道就不是一个「东西」了，而是一个<b>位置</b>——「未分化」那个位置。所以第二十五章才说「有物混成，先天地生」，才说「道法自然」：<b>它在物之先，不待人。</b></p>
+    <p><b>再看「无」这个字。</b>甲骨文象人手持旄牛尾而舞，是「舞」的初文，后来借去表「没有」。我们那本书里有一句要紧的话：<b>「无」不是空房间，是一段还在流动的舞。</b>「无，名天地之始」——那是未被分化、未被命名的本源，<b>是先在的条件，不是后来的结果。</b></p>
+    <p>这一层定了，杯喻才落得下来：杯壁是造出来的，空腔不是造出来的，是被边界「放出来」的。<b>立壁不堵，留空不散；建以立器，损以去塞；守以护虚，听以任生。</b>四种偏差也在这里：纯为有（一直堆杯壁，越做越僵）、纯为无（幻想凭空变出没有容器的虚）、强为（每一拍都压死）、假不为（连框架都撤掉）。</p>
+
+    <div class="h2" id="sc-5">六　老子的德：走出来的痕迹，也是第一级补位</div>
+    <p>老子的德，字义上跟孔子一样：<b>道是那条路，德是走在这条路上所积下的东西</b>；<b>德是道的行迹，道是德的所由。</b>但老子多给了一层——他把德排进了次序里。</p>
+    <div class="rows">
+      <div class="row"><div class="k">五级</div><div class="v"><b>「失道而后德，失德而后仁，失仁而后义，失义而后礼。」</b>（38 章）——<b>道、德、仁、义、礼，五级滑落。</b><b>德是道失落之后的第一级补建。</b></div></div>
+      <div class="row"><div class="k">上德</div><div class="v"><b>「上德不德，是以有德；下德不失德，是以无德。」</b>（38 章）——<b>最高之德不自以为德。</b><b>德的自觉，就是它的分界线。</b></div></div>
+      <div class="row"><div class="k">台阶</div><div class="v"><b>「太上，下知有之；其次亲而誉之；其次畏之；其次侮之。」</b>（17 章）——<b>四级台阶。</b>我们那本书的原话：<b>道是无待自化；德与仁，是道失落之后人为补建的秩序。</b></div></div>
+      <div class="row"><div class="k">次等</div><div class="v"><b>「靠仁德博取赞誉，已经是次一等。」</b>——<b>一流的人做了事，人不知道是谁做的；二流的人做了事，人知道该谢谁。</b><b>差别不在事，在他是否需要那份谢。</b></div></div>
+      <div class="row"><div class="k">不有</div><div class="v"><b>「生而不有，为而不恃，长而不宰。」</b>（51 章）——<b>这是德的正确用法：做了，不占。</b>德在这里不是身份，是动作之后的余量。</div></div>
+      <div class="row"><div class="k">先失</div><div class="v"><b>「不是民不信，是上先不可信。」</b>（17 章读法）——<b>台阶往下走，责任永远在上一格。</b><b>这一句，孔子会点头。</b></div></div>
+    </div>
+    <div class="figs single">
+      <div class="figsvg"><svg viewBox="0 0 720 430" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="30" text-anchor="middle" font-size="14" fill="#8A8074" letter-spacing="2">示意 · 五级滑落：「德」站在第一级，而孔子把它放在起点</text>
+<rect x="126" y="64" width="192" height="48" fill="#F4F6F2" stroke="#7C8C7A"/>
+<text x="222" y="95" text-anchor="middle" font-size="17" fill="#2F2A24">道</text>
+<text x="338" y="93" font-size="11.5" fill="#5C5347">无待自化，不立其名</text>
+<line x1="222" y1="112" x2="222" y2="124" stroke="#B5A897"/>
+<polygon points="222,126 218,118 226,118" fill="#B5A897"/>
+<rect x="126" y="126" width="192" height="48" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="222" y="157" text-anchor="middle" font-size="17" fill="#2F2A24">德</text>
+<text x="338" y="155" font-size="11.5" fill="#5C5347">上德不德——第一级补位</text>
+<line x1="222" y1="174" x2="222" y2="186" stroke="#B5A897"/>
+<polygon points="222,188 218,180 226,180" fill="#B5A897"/>
+<rect x="126" y="188" width="192" height="48" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="222" y="219" text-anchor="middle" font-size="17" fill="#2F2A24">仁</text>
+<text x="338" y="217" font-size="11.5" fill="#5C5347">有以为之，而人不觉</text>
+<line x1="222" y1="236" x2="222" y2="248" stroke="#B5A897"/>
+<polygon points="222,250 218,242 226,242" fill="#B5A897"/>
+<rect x="126" y="250" width="192" height="48" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="222" y="281" text-anchor="middle" font-size="17" fill="#2F2A24">义</text>
+<text x="338" y="279" font-size="11.5" fill="#5C5347">有以为之，而人已知</text>
+<line x1="222" y1="298" x2="222" y2="310" stroke="#B5A897"/>
+<polygon points="222,312 218,304 226,304" fill="#B5A897"/>
+<rect x="126" y="312" width="192" height="48" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="222" y="343" text-anchor="middle" font-size="17" fill="#2F2A24">礼</text>
+<text x="338" y="341" font-size="11.5" fill="#5C5347">忠信之薄，乱之首</text>
+<line x1="96" y1="72" x2="96" y2="352" stroke="#A2503B" stroke-dasharray="3 5"/>
+<polygon points="96,358 92,350 100,350" fill="#A2503B"/>
+<text x="92" y="70" text-anchor="end" font-size="10.5" fill="#A2503B">滑落</text>
+<text x="706" y="156" font-size="11.5" fill="#A2503B" text-anchor="end">← 孔子之德：起点、内得、日积</text>
+<text x="360" y="404" text-anchor="middle" font-size="11.5" fill="#2F2A24">孔子说「德者得也」：得于内、形于外、日积而成——这是起点。</text>
+<text x="360" y="422" text-anchor="middle" font-size="11" fill="#8A8074">老子说「失道而后德」——这是补位。同一个字，两个位置，分量就不同。</text>
+</svg></div>
+      <div class="figcap">图二 · 五级滑落：道→德→仁→义→礼。老子把德放在第一级补位；孔子把同一个「德」放在起点。同一个字，两个位置。</div>
+    </div>
+    <p>所以老子不是把德说低了，是把德说「薄」了：<b>德一旦要人谢，就掉了级；德一旦知道自己有德，就不是上德。</b>他不否认德的实，他否认德的名。</p>
+
+    <div class="h2" id="sc-6">七　正面对照：八处</div>
+    <p>底下八行，一行一处。左边是孔子，右边是我们那本《道德经》的读法。不评高下，只看位置。</p>
+    <div class="rows">
+      <div class="row"><div class="k">道位</div><div class="v"><b>孔子：道在事中。</b>先有本，本立而道生。<br><b>老子：道在事先。</b>有物混成，先天地生。</div></div>
+      <div class="row"><div class="k">道用</div><div class="v"><b>孔子：人能弘道，非道弘人。</b>人是主语。<br><b>老子：道法自然。</b>道不给自己立法，人更不自立法。</div></div>
+      <div class="row"><div class="k">道言</div><div class="v"><b>孔子：道可以讲。</b>「夫子自道」；讲完让你去做。<br><b>老子：道可道，非常道。</b>讲出来的只是取景，不是道本身。</div></div>
+      <div class="row"><div class="k">德位</div><div class="v"><b>孔子：德是起点。</b>得于内、形于外、日积而成。<br><b>老子：德是第一级补位。</b>失道而后德。</div></div>
+      <div class="row"><div class="k">德忌</div><div class="v"><b>孔子：德怕走形。</b>无礼则劳、葸、乱、绞。<br><b>老子：德怕被誉。</b>上德不德；要人谢就掉级。</div></div>
+      <div class="row"><div class="k">礼位</div><div class="v"><b>孔子：礼是骨架。</b>齐之以礼；礼有本，不只是玉帛。<br><b>老子：礼是忠信之薄。</b>滑到底的一级，乱之首。</div></div>
+      <div class="row"><div class="k">力形</div><div class="v"><b>孔子：北辰居其所，众星共之。</b>不动而聚，但仍要被人看见。<br><b>老子：立壁不堵，留空不散。</b>连「被看见」都不必。</div></div>
+      <div class="row"><div class="k">终点</div><div class="v"><b>孔子：有耻且格。</b>心里有尺，自己站正。<br><b>老子：下知有之。</b>心里无债，不觉得欠谁。</div></div>
+    </div>
+
+    <div class="h2" id="sc-7">八　最硬的一处分歧：礼</div>
+    <p>八行里，前五行都还能商量，第六行不行。礼是两家最硬的一处。</p>
+    <p><b>孔子这一边，礼是德的定形器。</b>「恭而无礼则劳，慎而无礼则葸，勇而无礼则乱，直而无礼则绞」（8.2）——四种好品质，没有礼就各自坏掉。他又说「礼云礼云，玉帛云乎哉」（阳货 17.11）——礼不在器物上；林放问礼之本，他说「大哉问」（八佾 3.4）——礼是有根的。所以孔子的礼不是外壳，是骨架：让德有形、能交接、能传下去。</p>
+    <p><b>老子这一边，礼是「忠信之薄而乱之首」</b>（38 章）。注意他骂的时机：礼出现在忠信已经薄了之后。它不是根，是最后一道防线；一靠防线过日子，就离乱不远了。</p>
+    <p>两句话摆在一起，看似对着干。但往下追一层，会发现他们说的不是同一个位置上的礼：</p>
+    <div class="cards kzB">
+      <div class="cardshd"><span>常见的读法</span><span>我们的辨析</span></div>
+      <div class="pair"><div class="a">孔子要礼，老子不要礼，两家对立。</div><div class="b"><b>不是要不要，是放在哪。</b>孔子把礼放在<b>根上</b>——忠信还没薄的时候，就把它定成形；老子说的礼在<b>末上</b>——忠信薄了，拿它当砥柱。<b>一个是骨，一个是药。</b></div></div>
+      <div class="pair"><div class="a">老子反礼，所以反秩序。</div><div class="b"><b>他反的是「以礼为治」的那种秩序。</b>他自己的秩序在「道」这一级：无待自化。<b>反礼不等于反秩序，是不认这一级能当根。</b></div></div>
+      <div class="pair"><div class="a">孔子重礼，所以轻内在。</div><div class="b"><b>恰恰相反。</b>他说「礼之本」，说「玉帛云乎哉」，都是把礼往里拉。<b>他要的是：内在有得，外在有节。</b>两样缺一，都是半个人。</div></div>
+    </div>
+    <p class="lead"><b>这一步可以用杯喻收口：孔子是「立壁以护虚」，老子怕的是「壁厚而虚死」。</b></p>
+    <p>两家其实在做同一件事——<b>让「虚」留得住。</b>只是怕的东西不同：孔子怕虚散（人一没有分寸，德就散成四种毛病），老子怕虚死（规矩一厚，人就没有余地）。<b>一个怕散，一个怕死。</b>两句合起来，才是「立壁不堵，留空不散」。</p>
+
+    <div class="h2" id="sc-8">九　共同的底：五条</div>
+    <p>分歧说透了，底下的共同处才看得清。五条，条条有原文。</p>
+    <div class="rows">
+      <div class="row"><div class="k">不力</div><div class="v"><b>都不以力服人。</b>孔子说政刑之下「民免而无耻」（2.3）——罚只到皮；老子说「民不畏死，奈何以死惧之」（74 章）——罚到极处就失效。<b>两人都看见罚的天花板。</b></div></div>
+      <div class="row"><div class="k">不言</div><div class="v"><b>都重「不言之成」。</b>孔子「其身正，不令而行」（子路 13.6）；老子「处无为之事，行不言之教」（2 章）。<b>一个说不令，一个说不言，效验都在「人自己动了」。</b></div></div>
+      <div class="row"><div class="k">不动</div><div class="v"><b>都把「不动」当高位。</b>北辰居其所（2.1）／太上，下知有之（17 章）。<b>动得越少，位置越高。</b></div></div>
+      <div class="row"><div class="k">忌名</div><div class="v"><b>都警惕名与誉。</b>孔子「不患人之不己知」（学而 1.16）；老子「不欲盈」（15 章）、「上德不德」（38 章）。<b>一个怕人不认识自己，一个怕自己太认识自己。</b></div></div>
+      <div class="row"><div class="k">得也</div><div class="v"><b>都以「得」训德。</b>同源字义，同一条线：德不是外挂的规范，是内有所得。<b>两人反对的是同一件事：把德当规矩背。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-9">十　一句一对：三对</div>
+    <p>三对原文，一对一对看。第一对最紧。</p>
+    <div class="cards kzA">
+      <div class="cardshd"><span>孔子</span><span>老子（我们的读法）</span></div>
+      <div class="pair"><div class="a"><b>「人能弘道，非道弘人。」</b><br>（15.29）</div><div class="b"><b>「道法自然。」</b><br>（25 章）<br><b>一句说靠人，一句说不靠人。</b>这是全篇最紧的一对。孔子把人放在主语位；老子把道放在主语位，人只是载道之器。<b>两句都不是态度，是秩序里的位置。</b></div></div>
+      <div class="pair"><div class="a"><b>「为政以德，譬如北辰，居其所而众星共之。」</b><br>（2.1）</div><div class="b"><b>「太上，下知有之。」</b><br>（17 章）<br><b>两个「不动」，差在被不被看见。</b>北辰是要被看见的——众星共之；太上是不被感谢的——只知道有这么个人。<b>孔子的不动，靠示范；老子的不动，靠不施恩。</b></div></div>
+      <div class="pair"><div class="a"><b>「朝闻道，夕死可矣。」</b><br>（4.8）</div><div class="b"><b>「道可道，非常道。」</b><br>（1 章）<br><b>一个说闻得到，一个说说不得。</b>孔子把「通」放在一生里，通一次就够；老子把「道」放在言说之外，一说就偏。<b>不是矛盾：一个讲入口，一个讲边界。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-10">十一　怎么把两本放在一张桌上读</div>
+    <p>最后给一条能用的判准。不玄，就一句话：<b>看这件事是要立壁，还是要留空。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">立壁</div><div class="v"><b>要定形、要交接、要罚则的场合：团队、制度、教孩子守规矩、把事情交给别人做。</b><b>——这时读《论语》：先问「本立没有」，再问「礼齐没有」。</b></div></div>
+      <div class="row"><div class="k">留空</div><div class="v"><b>要生长、要别人自己长出来的场合：育人、创作、养病、带一个还没成形的人。</b><b>——这时读《道德经》：先问「我是不是填得太满」，再问「壁是不是太厚」。</b></div></div>
+      <div class="row"><div class="k">误用</div><div class="v"><b>只立壁：壁厚虚死</b>——人只剩服从，事只剩流程。<b>只留空：虚散无托</b>——人无所依，事无所成。<b>两种误用，今天都常见。</b></div></div>
+      <div class="row"><div class="k">手法</div><div class="v"><b>孔子给你立壁的手法：正名、定分、齐之以礼。</b><b>老子提醒你壁不是目的：不有、不恃、不宰。</b><b>合起来一句：立壁，是为了护住那点空。</b></div></div>
+    </div>
+    <p>所以我不建议把两本合成一本，也不建议选一本丢一本。读《论语》时问「这在我手上是什么事」；读《道德经》时问「我这里该收还是该放」。<b>问对了，两本会互相校正；问错了，两本会互相拆台。</b></p>
+
+    <div class="h2" id="sc-11">十二　存疑四条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>《论语》的「道」是否同一个概念</b>　全书「道」六十余见，义项至少五种：路、导、治、言、道义。<b>本课不强行统一为一个本体论概念，两存。</b>强统，会把「道千乘之国」读成形而上学，失之。</div></div>
+      <div class="q"><span>02</span><div><b>「德者，得也」是谁的话</b>　出郑玄、朱子一系注家，<b>非孔子自道</b>。<b>本课标为注家义</b>，但先秦德得同源是文字事实，可用。</div></div>
+      <div class="q"><span>03</span><div><b>38 章是否针对儒家</b>　有「直指儒门」的成说，也有「老子早于孔子」「文本层累」的反说。<b>我们两存，只作结构对照，不作史实判断。</b>对照有效，不必先定年代。</div></div>
+      <div class="q"><span>04</span><div><b>「礼者，忠信之薄」涵盖多少礼</b>　是全部礼，还是仅指「以礼为治」的那种礼？<b>本课取后说，两存</b>：若取前说，则孔子 8.2、17.11 的礼也在内，两家无从对谈。</div></div>
+    </div>
+
+    <div class="h2" id="sc-12">十三　附论</div>
+    <div class="h3">附论一　为什么不能说「孔子重德、老子轻德」</div>
+    <p>老子第五十一章「生而不有，为而不恃，长而不宰」，是德的极处用法——做了，不占，不恃，不宰。这不是轻德，这是把德做到不留痕迹。<b>他轻的是德之名，不是德之实。</b>孔子这一边，也防名：「君子去仁，恶乎成名」（4.5）——名要挂在仁后面，不能挂前面。<b>两个人防的是同一件事。</b></p>
+    <div class="h3">附论二　两家的「无为」各是什么</div>
+    <p>这里有一处常被忽略的原文：<b>孔子也说过「无为而治」。</b>《论语·卫灵公》15.5：「无为而治者，其舜也与？夫何为哉？恭己正南面而已矣。」——舜的「无为」，是「把自己摆正，不再额外施加」。</p>
+    <p>所以两家的无为，名字相同，前提不同：<b>孔子的无为，前提是德已成</b>——德到位了，就不必再动，一动就多；<b>老子的无为，前提是不预设</b>——不立标准，任其自化。一个「不必动」，一个「不该造」。<b>前者是成果，后者是方法。</b>把这两个混成一件事，是最常见的读错。</p>
+    <div class="h3">附论三　本篇的口径声明</div>
+    <p>老子一侧全部依《道可道·道德经心法读本》的五条口径（断句常无常有、无有为两副取景、欲观徼三字取先秦本义、杯喻与四步功夫、存疑不判）。孔子一侧依朱熹《论语集注》，兼采《礼记·缁衣》《尚书·冏命》互文。<b>凡两家原文相抵处，本课只作结构对照，不作谁对谁错的裁断</b>；凡注家义与原文有别处，标为注家义。</p>
+    <p>一句话收这一篇：<b>孔子把道交到人手上，老子把道放在人之外；孔子把德放在起点，老子把德放在第一级补位。位置不同，用的地方就不同——不是两个答案，是两把尺。</b></p>
+
+  <div class="footnote" style="margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.9">
+    引文凡标篇号者出《论语》，标章号者出《道德经》（王弼本）；「我们那本书」指《道可道·道德经心法读本》。老子一侧的读法为该书的既定口径，非通行注本。
+  </div>
+
+  </div>
+
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>专题 · 孔老道德辨　v1.0　（2026-11-20）</div>
+  </footer>
+</div>
+</body>
+</html>

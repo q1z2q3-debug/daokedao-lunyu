@@ -68,6 +68,14 @@ COURSES = [
      "四器两层：政刑管手脚，德礼管脸面；免而无耻与有耻且格，分界在「耻」。"),
 ]
 
+# 专题表：(路径, 源文件, 称, 题, 提要)
+TOPICS = [
+    ("zt/1", "论语·专题·无邪深读（阅读版）.html", "专题一", "《诗三百》与「思无邪」深读",
+     "十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。"),
+    ("zt/2", "论语·专题·孔子的道与德（阅读版）.html", "专题二", "孔子的道与德，对着老子读",
+     "十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。"),
+]
+
 SERIES = [
     ("道德经", "https://q1z2q3-debug.github.io/runze-daodejing/"),
     ("心经", "https://q1z2q3-debug.github.io/daokedao-xinjing/"),
@@ -184,7 +192,7 @@ def cover_block():
         seal="论",
         gatha_first=("学而时习之", "不亦说乎"),
         gatha_second=("人不知而不愠", "不亦君子乎"),
-        meta=["底本　朱熹《论语集注》", "体例　一章一课 · 两页双读", "已刊　前言 · 学而十六章 · 为政三章", "v" + VERSION + " · 二〇二六"],
+        meta=["底本　朱熹《论语集注》", "体例　一章一课 · 两页双读", "已刊　前言 · 学而十六章 · 为政三章 · 专题二篇", "v" + VERSION + " · 二〇二六"],
     )
 
 
@@ -196,7 +204,7 @@ def frontis_block():
             ("底本", "朱熹《论语集注》，参校何晏《集解》、刘宝楠《正义》"),
             ("体例", "一章一课；每课少儿页七块、成人页十三至十四节"),
             ("图", "典故图由作者供图；义理图手写 SVG，随课附文件"),
-            ("进度", "全书四百九十八章，已刊前言、学而十六章、为政三章"),
+            ("进度", "全书四百九十八章，已刊前言、学而十六章、为政三章；另出专题二篇"),
             ("版本", "v" + VERSION),
         ],
         seal="论",
@@ -215,6 +223,18 @@ def toc_items():
     return "".join(out)
 
 
+def topic_items():
+    out = []
+    for path, _f, no, verse, gist in TOPICS:
+        out.append(
+            '<div class="item"><div class="no">%s</div>'
+            '<div class="t">%s</div><div class="s">%s</div>'
+            '<div class="k"><a href="%s.html">进入阅读版 →</a></div></div>'
+            % (no, verse, gist, path)
+        )
+    return "".join(out)
+
+
 def build_index():
     body = """<div class="wrap">
 <div class="top"><div>润 泽 说 · 道 可 道 之 论 语</div><div><b>学而 · 为政</b>　连载 · v%s</div></div>
@@ -222,7 +242,7 @@ def build_index():
   <div class="series">润 泽 说 · 道 可 道</div>
   <h1 class="title">论语 · 通释</h1>
   <p class="sub">一章一课，一课两页；少儿页可念，成人页可考。底本朱熹《论语集注》。</p>
-  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>19</em> 件</span><span>版本 v%s</span></div>
+  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>21</em> 件</span><span>版本 v%s</span></div>
 </div>
 
 <h2>卷首语<small>为什么这样读</small></h2>
@@ -230,10 +250,14 @@ def build_index():
 <p>贯穿全书一条总纲：<b>一阴一阳之谓道</b>——学是受（阴、向内收），习是发（阳、向外放）。只学不习，是替别人保管知识；只习不学，是自己摸黑走路。</p>
 <p>所以每一课都问一句：这章说的是<b>哪件事、哪个字</b>？说不出，就退入存疑，不写成定论。</p>
 
-<h2>已刊十九件<small>前言 · 学而十六章 · 为政三章</small></h2>
+<h2>已刊二十一课<small>前言 · 学而十六章 · 为政三章</small></h2>
 <p class="lead">按课次顺序；每件都有少儿页与成人页，另附义理图。</p>
 <div class="list">%s</div>
 <a class="btn" href="book.html">从卷首读起（封面 · 扉页 · 前言）</a>
+
+<h2>专题<small>不释经，只深读一处</small></h2>
+<p class="lead">专题不按章次走：一处读透，向下几层。</p>
+<div class="list">%s</div>
 
 <h2>体例<small>一页两读</small></h2>
 <div class="rows">
@@ -259,7 +283,7 @@ def build_index():
 <div class="foot">
   <div>润泽说 道可道之论语 · 通释　v%s　（2026-11-20）</div>
   <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
-  <div>全书四百九十八章，按篇连载；本书为连载第一批十八件。许可：CC BY-NC-SA 4.0</div>
+  <div>全书四百九十八章，按篇连载；本书为连载第一批（十九课＋专题二篇）。许可：CC BY-NC-SA 4.0</div>
   <div><a href="https://github.com/q1z2q3-debug/daokedao-lunyu">GitHub 仓库</a><a href="book.html">卷首</a><a href="sitemap.xml">站点地图</a></div>
 </div>
 </div>
@@ -273,6 +297,7 @@ def build_index():
         VERSION,
         VERSION,
         toc_items(),
+        topic_items(),
         "".join('<a href="%s">%s<small>通释读本</small></a>' % (u, n) for n, u in SERIES),
         VERSION,
         VERSION,
@@ -349,6 +374,26 @@ def build_courses():
     print("已注入返回条并拷贝 %d 篇" % n)
 
 
+def build_topics():
+    outdir = os.path.join(DOCS, "zt")
+    os.makedirs(outdir, exist_ok=True)
+    n = 0
+    for path, fname, *_ in TOPICS:
+        src = os.path.join(SRC, fname)
+        if not os.path.exists(src):
+            print("[warn] 缺文件：", fname)
+            continue
+        html = open(src, encoding="utf-8").read()
+        m = re.search(r"<body[^>]*>", html)
+        if m:
+            html = html[:m.end()] + "\n" + NAV + html[m.end():]
+        out = os.path.join(DOCS, path + ".html")
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        open(out, "w", encoding="utf-8").write(html)
+        n += 1
+    print("已注入返回条并拷贝专题 %d 篇" % n)
+
+
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <rect width="64" height="64" rx="10" fill="#994433"/>
 <text x="32" y="45" font-size="40" text-anchor="middle" fill="#F7F4EE"
@@ -357,7 +402,7 @@ font-family="'Noto Serif SC','Songti SC',serif">论</text></svg>"""
 
 def build_meta():
     open(os.path.join(DOCS, "favicon.svg"), "w", encoding="utf-8").write(FAVICON)
-    urls = ["", "book.html"] + ["ke/%s.html" % c[0] for c in COURSES]
+    urls = ["", "book.html"] + ["ke/%s.html" % c[0] for c in COURSES] + ["%s.html" % z[0] for z in TOPICS]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for u in urls:
         sm += "<url><loc>%s/%s</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq></url>\n" % (SITE, u)
@@ -377,6 +422,9 @@ def build_meta():
 """
     for slug, _f, no, verse, gist in COURSES:
         llms += "- %s｜%s｜%s：%s/%s/ke/%s.html\n" % (no, verse, gist, SITE, "", slug)
+    llms += "\n## 专题\n"
+    for path, _f, no, verse, gist in TOPICS:
+        llms += "- %s｜%s｜%s：%s/%s.html\n" % (no, verse, gist, SITE, path)
     llms += """
 ## 引用
 润泽《润泽说 道可道之论语 · 通释》v%s，%s/
@@ -393,6 +441,7 @@ def main():
     build_index()
     build_book()
     build_courses()
+    build_topics()
     build_meta()
     print("站点已生成：" , DOCS)
 

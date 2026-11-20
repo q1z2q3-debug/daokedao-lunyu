@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>无邪 · 论语专题深读｜润泽说 道可道</title>
+<meta name="description" content="《论语》为政 2.2「诗三百，一言以蔽之，曰：思无邪」专题深读：邪本义地名、古注训斜；《鲁颂·駉》原句咏马，毛传「思，辞也」；孔子断章把方位词搬进心性；三百篇里刺诗淫诗怨诗俱全，故朱子不取内容说而取读法说，善者感发、恶者惩创、其用归于情性之正；并辨汉儒美刺、宋儒禁欲、明清经义、今日三观四重误读。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBF7EC'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23A2503B' font-family='serif'%3E邪%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　专题一 / 2.2</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">专题</span><a href="#s1">字</a><a href="#s2">沿线</a><a href="#s3">句</a><a href="#s4">心</a><a href="#s5">篇</a><a href="#s6">三读</a><a href="#s7">诗教</a></div>
+    <div class="toc-t"><span class="lbl">辨</span><a href="#s8">四重误读</a><a href="#s9">正与政</a><a href="#s10">今用</a><a href="#s11">存疑</a><a href="#s12">跨典</a><a href="#s13">附论</a></div>
+  </div>
+  <section class="leaf adult" id="adult">
+    <div class="leaf-tag">专题深读</div>
+    <h1>无邪</h1>
+    <div class="h1-sub">为政 2.2　底本：朱熹《论语集注》</div>
+    <div class="src"><span class="who">子曰：</span>「<ruby>诗<rt>shī</rt></ruby>三百，一言以<ruby>蔽<rt>bì</rt></ruby>之，曰：思无<ruby>邪<rt>xié</rt></ruby>。」</div>
+
+    <p class="lead">这三个字被误读了两千年，误在一个字上：<b>把「邪」听成了「邪恶」，于是「无邪」成了一句道德判决</b>——书要干净，心要干净，读的时候先查自己。可它原本说的是另一个意思：<b>不斜</b>。方位词一变成道德词，整章就从一个读法问题，变成了一场审查。</p>
+    <p>这篇要把三个字拆到底：先说「邪」是什么字，再说它落在哪一句里、那句诗本来在说什么，然后看孔子从里面取走了什么、舍掉了什么，最后说朱子为什么不能按字面讲，以及这四重误读各是怎么长出来的。<b>拆完会发现：这一章不是诗的封号，是诗的用法说明。</b></p>
+
+    <div class="h2" id="s1">一　字：一个地名，怎么变成了道德判词</div>
+    <p>「邪」的本义，和「坏」没有关系。《说文解字》：「邪，琅邪郡也。从邑，牙声。」——从「邑」，是个地名；琅邪在今山东东南，秦置郡，汉因之。同一个字，后来写作「琅玡」「琅琊」，地名一直活到今天。<b>本义是地名，这是第一层。</b></p>
+    <p>第二层是「斜」。古注以「斜」训「邪」，也写作「衺」——不正、偏出。<b>斜是方位，不是品行。</b>一条路偏一点，叫邪；一个人心偏一点，也叫邪，但那是从路借过去的。这层意思在先秦最通行，也正是《诗》里那个用法。</p>
+    <p>第三层是「偏、不正」，由斜引申：斜了就会岔，岔了就会离。<b>但注意，它形容的是「位置偏了」，不是「本质坏了」</b>——偏了可以回来，坏了只能扔掉。这一层已经把「邪」从几何搬到了人事，可还没到道德审判。</p>
+    <p>第四层才是「邪恶」，是后起的。佛教东来，「邪见」「邪命」「八邪」一类译语把「邪」占满；理学再把它接到「邪念」「邪僻」上。<b>到这一步，「邪」才有了今天读者耳朵里那个分量</b>——不只是偏，是当诛。</p>
+    <p>四层意思不是并列的，是<b>一层一层加重、一层一层离开原句</b>。孔子取的是第二层；朱子讲的是第二层怎么落到人身上；后世读的人，多半从第四层进来，一进门就听错了。</p>
+    <div class="figs single">
+      <div class="figsvg">
+        <svg viewBox="0 0 720 470" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="22" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 一个「邪」字，四层意思，只有第二层被孔子取走</text>
+<text x="120" y="96" text-anchor="middle" font-size="46" fill="#2F2A24">邪</text>
+<text x="120" y="120" text-anchor="middle" font-size="10" fill="#8A8074" letter-spacing="1">从邑 · 牙声</text>
+<line x1="66" y1="136" x2="174" y2="136" stroke="#DCD5C8"/>
+<text x="120" y="158" text-anchor="middle" font-size="11" fill="#5C5347">《说文》：邪，琅邪郡也。</text>
+<text x="120" y="178" text-anchor="middle" font-size="11" fill="#5C5347">本义是地名，不是坏字。</text>
+<rect x="252" y="64" width="396" height="52" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="272" y="86" font-size="13" fill="#5C5347">一　地名</text>
+<text x="272" y="104" font-size="10" fill="#8A8074">琅邪。今山东一带的古郡名，字还在，义已退到角落。</text>
+<rect x="252" y="128" width="396" height="52" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+<text x="272" y="150" font-size="13" fill="#A2503B">二　斜行</text>
+<text x="272" y="168" font-size="10" fill="#8A8074">古注：「邪，斜也。」《駉》「思无邪」原是夸马——跑起来不偏。</text>
+<text x="636" y="150" text-anchor="end" font-size="10.5" fill="#A2503B">← 孔子取这一层</text>
+<rect x="252" y="192" width="396" height="52" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="272" y="214" font-size="13" fill="#5C5347">三　偏、不正</text>
+<text x="272" y="232" font-size="10" fill="#8A8074">由「斜」引申：方位上的偏一点，路就岔出去。</text>
+<rect x="252" y="256" width="396" height="52" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="272" y="278" font-size="13" fill="#8A8074">四　邪恶</text>
+<text x="272" y="296" font-size="10" fill="#8A8074">汉以后道德语汇占满此字；读《诗》最易误入这一层。</text>
+<line x1="200" y1="88" x2="252" y2="88" stroke="#B5A897"/>
+<line x1="200" y1="152" x2="252" y2="152" stroke="#A2503B"/>
+<line x1="200" y1="216" x2="252" y2="216" stroke="#B5A897"/>
+<line x1="200" y1="280" x2="252" y2="280" stroke="#B5A897"/>
+<line x1="60" y1="352" x2="660" y2="352" stroke="#DCD5C8"/>
+<text x="360" y="382" text-anchor="middle" font-size="13" fill="#2F2A24">训「斜」，不训「恶」：偏了能回正，坏了只能扔掉。</text>
+<text x="360" y="406" text-anchor="middle" font-size="11" fill="#8A8074">所以「思无邪」是一句用法说明，不是一张判决书——它说的是诗能把你扶到哪儿。</text>
+<text x="360" y="430" text-anchor="middle" font-size="11" fill="#A2503B">「正」从「止」从「一」：回到那个一，才叫正。</text>
+        </svg>
+      </div>
+      <div class="figcap">图一　「邪」的四层义与孔子的取法（手写 SVG，示意）</div>
+    </div>
+
+    <div class="h2" id="s2">二　沿线：四代人各取一段，读法越走越窄</div>
+    <p><b>先秦</b>：邪作斜、衺，形容马行与路向。《诗·鲁颂·駉》四章末句都用「思无X」收，说的全是马。<b>那时这个字没有道德重量</b>，只有方向。</p>
+    <p><b>汉</b>：毛亨作《故训传》，于《駉》注「思，辞也」——语助词。<b>这个注释极重要，它保住了原句的语法</b>。同时汉儒立「美刺」说：诗有美有刺，写淫是为了刺淫。这一步的动机是护书（把三百篇都读成正的），代价是把明白的话读成了暗语。</p>
+    <p><b>宋</b>：朱子注这一章，说「蔽，犹盖也」「诗三百十一篇，言三百者，举大数也」，引程子「思无邪者，诚也」，又引范氏「知要则能守约」。<b>他不再争论诗里有没有邪，只问诗能起什么用</b>——读法说成立。</p>
+    <p><b>明清</b>：这一章进了科举经义，成了标准答案。「思无邪」被写成一句结论，考生背它、抄它，不再追问它原本在说什么。<b>字义的重量保住了，句子的问题死了。</b></p>
+    <p><b>今日</b>：最常见的读法是「三观」——这本书正不正、这个人正不正。读法从「诗能把我扶到哪儿」退成「这本书配不配读」，<b>方向从向内变成了向外</b>。</p>
+    <div class="figs single">
+      <div class="figsvg">
+      <svg viewBox="0 0 720 320" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 一个字被四代人各取一段：义项漂移，读法也随之收紧</text>
+<line x1="70" y1="128" x2="650" y2="128" stroke="#DCD5C8"/>
+<circle cx="92" cy="128" r="6" fill="#A2503B"/>
+<text x="92" y="104" text-anchor="middle" font-size="12.5" fill="#A2503B">先秦</text>
+<text x="92" y="158" text-anchor="middle" font-size="12" fill="#2F2A24">邪＝斜</text>
+<text x="92" y="180" text-anchor="middle" font-size="10" fill="#8A8074">《駉》咏马：跑起来不偏</text>
+<circle cx="252" cy="128" r="6" fill="#5C5347"/>
+<text x="252" y="104" text-anchor="middle" font-size="12.5" fill="#5C5347">汉</text>
+<text x="252" y="158" text-anchor="middle" font-size="12" fill="#2F2A24">美刺说</text>
+<text x="252" y="180" text-anchor="middle" font-size="10" fill="#8A8074">淫诗必须读成刺诗</text>
+<circle cx="412" cy="128" r="6" fill="#5C5347"/>
+<text x="412" y="104" text-anchor="middle" font-size="12.5" fill="#5C5347">宋</text>
+<text x="412" y="158" text-anchor="middle" font-size="12" fill="#2F2A24">诚也</text>
+<text x="412" y="180" text-anchor="middle" font-size="10" fill="#8A8074">无邪＝不假、不绕</text>
+<circle cx="572" cy="128" r="6" fill="#8A8074"/>
+<text x="572" y="104" text-anchor="middle" font-size="12.5" fill="#8A8074">今</text>
+<text x="572" y="158" text-anchor="middle" font-size="12" fill="#2F2A24">三观</text>
+<text x="572" y="180" text-anchor="middle" font-size="10" fill="#8A8074">这本书正不正</text>
+<line x1="60" y1="212" x2="660" y2="212" stroke="#DCD5C8"/>
+<text x="360" y="238" text-anchor="middle" font-size="11" fill="#2F2A24">同一条轴上，字义越走越重，读法越走越窄。</text>
+<text x="360" y="260" text-anchor="middle" font-size="10.5" fill="#8A8074">先秦说的是马的姿势，汉以后说的是人的品行，今天说的是书的立场。</text>
+<text x="360" y="286" text-anchor="middle" font-size="11" fill="#A2503B">回到第一段，这四句才都读得通。</text>
+</svg>
+      </div>
+      <div class="figcap">图二　义项漂移与读法收紧（手写 SVG，示意）</div>
+    </div>
+    <p>这张轴值得多看一会儿：<b>同一条线上，字义一层层加重，读法一层层变窄</b>。先秦问「马偏不偏」，宋人问「心诚不诚」，今天问「书正不正」。问题从「怎么读」变成「配不配读」，中间隔着的就是那三层加重。</p>
+
+    <div class="h2" id="s3">三　句：这句诗本来在说马</div>
+    <p>「思无邪」不是《论语》的原话，是孔子从《诗·鲁颂·駉》里摘来的一句。《駉》四章，末句各用「思无X」收：</p>
+    <div class="quote">一章：「思无疆，思马斯臧。」<br>二章：「思无期，思马斯才。」<br>三章：「思无斁，思马斯作。」<br>四章：「思无邪，思马斯徂。」</div>
+    <p>四句并列，说的全是马：跑得远、跑得久、跑得不厌、跑得不偏。「臧」是善，「才」是材，「作」是起，「徂」是往。<b>四句都在夸马，没有一句在谈人心。</b></p>
+    <p>「思」是什么？毛传注得干脆：「思，辞也。」——语助词，无实义。这是最稳的读法：<b>「思无邪」＝「无邪」，那个「思」只是起句的衬字</b>，和「思马斯徂」的「思」一样。若把「思」坐实为「心之所思」，四句就都得重讲：「心无边际」「心不厌倦」——勉强能通，可原文在颂马，不在颂心。</p>
+    <p>孔子取哪一句？取末章末句，且<b>只取前半</b>：留下「思无邪」，舍掉「思马斯徂」。<b>舍掉马，留下不偏——这是全章最要紧的一个动作。</b>马的对象被舍了，不偏的意思被留了；再用「一言以蔽之」把它盖到三百篇上，于是夸马的一句，成了读诗的一条准。</p>
+    <p>这叫断章。春秋盟会宴享，赋诗是外交语言：主人赋《采菽》，不一定说「我想你」，只取「采菽」这个礼数；客人赋《桑扈》，也不一定说「我是福」，只取那一点好话。<b>断章是取一个可用的面，不是冒充全篇的意思</b>——孔子用《駉》这一句，取的正是「不偏」这个面；他没有说《駉》在讲人心，他说的是：「诗三百，一言以蔽之，曰：思无邪。」<b>「蔽之」二字已经把话说清了：这是我拿它盖，不是它本来就在盖。</b></p>
+
+    <div class="h2" id="s4">四　心：程子把语助读成心，读得对不对</div>
+    <p>程子说：「思无邪者，诚也。」<b>这一句是分水岭</b>。它把「思」从语助读成「心之所思」——你心里想什么，想得不假、不绕，就是无邪。</p>
+    <p><b>收益很大</b>：方位词一进心性，「不偏」就有了内在的含义。诗教不再只是「读点好东西」，而是「把心里那点偏扶回来」——这正是朱子要的落点。</p>
+    <p><b>代价也不小</b>：一旦「思」坐实为「思想」，「无邪」就容易被读成「思想纯正」，再往前一步，就成了「思想审查」。<b>程子说的是「诚」，后人读成了「纯」</b>——诚是不假，纯是没杂；不假可以带着杂，纯则要先清干净。这一字之差，把一条路走成了两截。</p>
+    <p>朱子为什么仍取这一路？因为他要回答的问题不是「诗里有什么」，而是「诗把人变成什么」。<b>要让诗对人起作用，就必须让「无邪」落到读的人身上</b>——这是他的取舍，也标明了这条读法的边界：它可以讲功用，不能用来鉴定内容。</p>
+
+    <div class="h2" id="s5">五　篇：三百篇里明明有邪</div>
+    <p>朱子说「诗三百十一篇」：今本三百五篇，另有六篇笙诗有声无辞，合三百十一。「言三百者，举大数也。」<b>数目先摆清，后面的话才站得住。</b></p>
+    <p>这三百十一篇里有什么？<b>有刺</b>：《伐檀》《硕鼠》骂在位者；<b>有怨</b>：《氓》《谷风》写弃妇的恨；<b>有私情</b>：《桑中》《溱洧》写约会，写得毫不遮掩；<b>有颂</b>：《清庙》《駉》祭祖夸马。<b>说这部书「每一篇都正」，是不看书的说法。</b></p>
+    <p>于是「内容说」只剩一条路：把写私情的篇目读成「刺淫」——诗人写淫，是为了骂淫。这条路能走通，但代价是<b>把明白的话读成暗语</b>：读者必须先信这个解释，才读得懂诗；先信了，诗也就只剩一个用途——替解释做证。</p>
+    <p>朱子没有走这条路。他承认那些篇目是什么，然后把「无邪」从内容移到功用：「善者可以感发人之善心，恶者可以惩创人之逸志，其用归于使人得其情性之正而已。」<b>书里可以有邪，读法可以把它变成药。</b></p>
+    <div class="figs single">
+      <div class="figsvg">
+      <svg viewBox="0 0 720 330" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 三百篇是一筐，四个字是一顶盖</text>
+<text x="360" y="52" text-anchor="middle" font-size="10.5" fill="#8A8074">刺的、怨的、写私情的、祭祖的，全在这一筐里</text>
+<rect x="204" y="150" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="268" y="150" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="332" y="150" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="396" y="150" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="460" y="150" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="204" y="186" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="268" y="186" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="332" y="186" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="396" y="186" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="460" y="186" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="204" y="222" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="268" y="222" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="332" y="222" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="396" y="222" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="460" y="222" width="56" height="28" fill="#F6F1E3" stroke="#DCD5C8"/>
+<rect x="186" y="102" width="360" height="34" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.6"/>
+<text x="366" y="125" text-anchor="middle" font-size="14" fill="#A2503B" letter-spacing="3">思　无　邪</text>
+<line x1="186" y1="146" x2="546" y2="146" stroke="#A2503B" stroke-dasharray="3 4"/>
+<text x="360" y="276" text-anchor="middle" font-size="11" fill="#2F2A24">三百篇是「博」，一句是「约」：盖子不是把篇章变少，是一眼看见这一筐是什么。</text>
+<text x="360" y="300" text-anchor="middle" font-size="10.5" fill="#8A8074">准星给你，路还得自己走；一顶盖，盖不出三百篇的读法。</text>
+</svg>
+      </div>
+      <div class="figcap">图三　「一言以蔽之」：盖子盖的是这一筐是什么（手写 SVG，示意）</div>
+    </div>
+    <p>「蔽」是盖，不是删、不是压。朱子说「蔽，犹盖也」——<b>一顶盖盖在一筐东西上，筐里的东西一件没少，只是你一眼知道这筐是什么</b>。所以「一言以蔽之」之后，三百篇还要一篇一篇读；准星给了，路还得自己走。</p>
+
+    <div class="h2" id="s6">六　三读：同一个词，三个不同的问题</div>
+    <p><b>内容说</b>：「诗中所思，本来就正。」问的是「书里有什么」。它与文本不合：《桑中》《溱洧》摆在那里。这一说不是没人讲过，是讲不通。</p>
+    <p><b>读法说</b>：「读之使人归于正。」问的是「书把人变成什么」。朱子取此，本课也从这一读。<b>它是唯一能让「三百篇里有邪」与「思无邪」同时成立的读法。</b></p>
+    <p><b>编者说</b>：「孔子删过诗，留下的都可正。」问的是「书是谁编的」。此说见于《史记·孔子世家》「取可施于礼义」，朱子不尽从；即便删过，现存诗里那些刺诗、淫诗也还在。<b>本课列为存疑，不作家法。</b></p>
+    <div class="figs single">
+      <div class="figsvg">
+      <svg viewBox="0 0 720 330" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 三个「无邪」，问的不是同一个问题</text>
+<rect x="68" y="56" width="188" height="130" fill="#FFFDF6" stroke="#DCD5C8" stroke-width="1"/>
+<text x="162" y="86" text-anchor="middle" font-size="13" fill="#5C5347">内容说</text>
+<text x="162" y="114" text-anchor="middle" font-size="10.5" fill="#8A8074">诗中所思皆正</text>
+<text x="162" y="140" text-anchor="middle" font-size="10.5" fill="#5C5347">问：书里有什么</text>
+<text x="162" y="168" text-anchor="middle" font-size="11" fill="#5C5347">与文本不合</text>
+<rect x="272" y="56" width="188" height="130" fill="#FBF1EC" stroke="#A2503B" stroke-width="1.8"/>
+<text x="366" y="86" text-anchor="middle" font-size="13" fill="#A2503B">读法说</text>
+<text x="366" y="114" text-anchor="middle" font-size="10.5" fill="#8A8074">读之使人归于正</text>
+<text x="366" y="140" text-anchor="middle" font-size="10.5" fill="#5C5347">问：书把人变成什么</text>
+<text x="366" y="168" text-anchor="middle" font-size="11" fill="#A2503B">朱子取此</text>
+<rect x="476" y="56" width="188" height="130" fill="#FFFDF6" stroke="#DCD5C8" stroke-width="1"/>
+<text x="570" y="86" text-anchor="middle" font-size="13" fill="#5C5347">编者说</text>
+<text x="570" y="114" text-anchor="middle" font-size="10.5" fill="#8A8074">孔子删诗所存皆正</text>
+<text x="570" y="140" text-anchor="middle" font-size="10.5" fill="#5C5347">问：书是谁编的</text>
+<text x="570" y="168" text-anchor="middle" font-size="11" fill="#5C5347">存疑</text>
+<line x1="60" y1="212" x2="660" y2="212" stroke="#DCD5C8"/>
+<text x="360" y="238" text-anchor="middle" font-size="11" fill="#2F2A24">孔子那句「蔽之」，问的是「诗有什么用」——不是「诗里有什么」。</text>
+<text x="360" y="262" text-anchor="middle" font-size="10.5" fill="#8A8074">内容说把用途问题答成了成分问题；编者说把诗的话转给了编书的人。</text>
+<text x="360" y="290" text-anchor="middle" font-size="11" fill="#A2503B">读法说是唯一能让「三百篇里有邪」和「思无邪」同时成立的读法。</text>
+</svg>
+      </div>
+      <div class="figcap">图四　三种读法各问什么（手写 SVG，示意）</div>
+    </div>
+    <p>三说的分别，说到底是三个问题：书里有什么／书把人变成什么／书是谁编的。<b>孔子那句「蔽之」，问的是「诗有什么用」</b>——所以拿成分问题去答它，答得再漂亮也是答错了题。</p>
+
+    <div class="h2" id="s7">七　诗教：三个动词，一条不能倒着走的次序</div>
+    <p>朱子这一段注只有一句，却排出了三步：<b>善者感发人之善心</b>——读到好的，心里那点好东西被叫起来；<b>恶者惩创人之逸志</b>——读到坏的，心里那点散漫被扎一下；<b>其用归于使人得其情性之正</b>——最后把情绪送回它该在的位置。</p>
+    <p>三步里，「得」字最要紧。「得」不是「压住」，也不是「管住」——<b>压住是把情绪按下去，得是把情绪放对地方</b>。一个人读诗读到不哭了，不一定是正；读到能哭、哭完能做事的，才是正。</p>
+    <p>次序也不能倒。先感发，再惩创，最后才定型——<b>倒过来做，先讲道理再要求动情，多半两头落空</b>：道理没进心，情也没被叫起来，只剩一堆正确的结论。</p>
+    <div class="figs single">
+      <div class="figsvg">
+      <svg viewBox="0 0 720 360" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 朱子的三个动词，是一条不能倒着走的次序</text>
+<rect x="108" y="58" width="440" height="64" fill="#FFFDF6" stroke="#C58A73"/>
+<text x="328" y="83" text-anchor="middle" font-size="13" fill="#2F2A24">一 · 感发</text>
+<text x="328" y="102" text-anchor="middle" font-size="11" fill="#5C5347">善者感发人之善心</text>
+<text x="328" y="116" text-anchor="middle" font-size="10" fill="#8A8074">读到好书，心里那点好东西被叫起来</text>
+<line x1="328" y1="122" x2="328" y2="146" stroke="#B5A897"/>
+<polygon points="328,146 324,140 332,140" fill="#B5A897"/>
+<rect x="108" y="146" width="440" height="64" fill="#FFFDF6" stroke="#C58A73"/>
+<text x="328" y="171" text-anchor="middle" font-size="13" fill="#2F2A24">二 · 惩创</text>
+<text x="328" y="190" text-anchor="middle" font-size="11" fill="#5C5347">恶者惩创人之逸志</text>
+<text x="328" y="204" text-anchor="middle" font-size="10" fill="#8A8074">读到坏处，心里那点散漫被扎一下</text>
+<line x1="328" y1="210" x2="328" y2="234" stroke="#B5A897"/>
+<polygon points="328,234 324,228 332,228" fill="#B5A897"/>
+<rect x="108" y="234" width="440" height="64" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="328" y="259" text-anchor="middle" font-size="13" fill="#2F2A24">三 · 归于正</text>
+<text x="328" y="278" text-anchor="middle" font-size="11" fill="#5C5347">使人得其情性之正</text>
+<text x="328" y="292" text-anchor="middle" font-size="10" fill="#8A8074">不是压住，是让情绪回到它该在的位置</text>
+<text x="574" y="102" font-size="10.5" fill="#8A8074">先动情</text>
+<text x="574" y="190" font-size="10.5" fill="#8A8074">再扎一下</text>
+<text x="574" y="278" font-size="10.5" fill="#A2503B">最后才定型</text>
+<line x1="60" y1="322" x2="660" y2="322" stroke="#DCD5C8"/>
+<text x="360" y="345" text-anchor="middle" font-size="11" fill="#8A8074">倒过来做——先讲道理再要求动情——多半两头落空。</text>
+</svg>
+      </div>
+      <div class="figcap">图五　感发 · 惩创 · 归于正（手写 SVG，示意）</div>
+    </div>
+    <p>这一层与全书礼乐之序相贯：8.8「兴于诗，立于礼，成于乐」——诗是入口（把人叫起来），礼是骨架（让人站得住），乐是完成（让人合得起来）。<b>本章只说诗，因为这一章管的是「入门」那一段</b>；进门之后还有骨架和完成，那是后话。</p>
+
+    <div class="h2" id="s8">八　四重误读，各是怎么长出来的</div>
+    <p><b>其一，汉儒的「淫诗必为刺诗」</b>。动机是护书：不让圣人之经里有不干净的东西。代价是把诗读成谜语——<b>解释成了读诗的前提，诗就不再能自己说话</b>。这一重误读最善，也最伤：它保住了书，杀掉了读。</p>
+    <p><b>其二，宋儒的「无邪即无欲」</b>。程子原话是「诚也」，讲的是不假；后世把它读成「无欲」，于是读诗成了自省训练：读到动情处先问自己是不是起了邪念。<b>这一重误读把「归」做成了「禁」</b>——朱子本人其实不这么读，他承认那些篇目写的是什么。</p>
+    <p><b>其三，明清的「标准答案」</b>。这一章进了经义，成了考点。「思无邪」被写成一句正确的结论，考生背它，不再追问它原本在说什么。<b>字保住了，问题死了</b>：一个句子一旦只剩答案，就再也生不出新读法。</p>
+    <p><b>其四，今日的「三观审查」</b>。读书先问立场：这本书正不正、这个人配不配读。<b>方向整个翻了过来</b>：原来问「诗能把我扶到哪儿」，现在问「这本书配不配进我的书架」。同一句话，一个向内，一个向外；一个管自己，一个管别人。</p>
+    <p>四重误读有个共同点：<b>都把「无邪」当成对书的鉴定，而不是对读法的说明</b>。只要守住这一条，四种误读就都站不住。</p>
+
+    <div class="h2" id="s9">九　正与政：为政篇头两章，其实是一件事</div>
+    <p>「正」从「止」从「一」：<b>脚走到一处、停下来，才叫正</b>。「政」从「正」从「攴」：把不正的扶正，就是政。</p>
+    <p>2.1「为政以德」讲的是<b>立场</b>：你站得正，人自向。2.2「思无邪」讲的是<b>心之所向</b>：读诗把心里那点偏扶回来。<b>两章共用「正」这一个字，一头一尾，说的是同一件事</b>——先把自己摆正，再把人扶正。</p>
+    <p>所以「为政」篇不是从制度讲起，是从「正」讲起；也不是从「管人」讲起，是从「正己、正心」讲起。<b>头两章立的是地基，后面二十二章才是房子。</b></p>
+
+    <div class="h2" id="s10">十　今用：三条尺，都朝内</div>
+    <p><b>读法尺</b>：读完一段文字，你更想做事，还是更想比较？往比较那边偏，就是邪；回来一点，就是正。<b>这条尺不查书，只查读完之后你想干什么。</b></p>
+    <p><b>写作尺</b>：写的时候，是在替读者把话扶正，还是在替自己出气？<b>出气的话写得再漂亮，也是把读者往偏里带</b>——这就是「邪」在写作里的样子，与题材无关。</p>
+    <p><b>教子尺</b>：不查孩子读什么，查他读完想做什么。一本「干净」的书读得他更爱比较，不如一本「不干净」的书读得他想动手做点事。<b>诗的干净，不在它只写好事，在它让人看完坏事之后，更想做点好事。</b></p>
+
+    <div class="h2" id="s11">十一　存疑五条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>三百之数</b>　今本三百五篇，加六篇笙诗，合三百十一。朱子说「举大数」。<b>本课从之，不作精确统计。</b></div></div>
+      <div class="q"><span>02</span><div><b>「思」是语助还是实义</b>　毛传「思，辞也」最合原句；程朱读为「心之所思」，是义理化的一步。<b>本课两读并列：讲原句用毛传，讲义理用程朱，标明这一步是读进去，不是原本如此。</b></div></div>
+      <div class="q"><span>03</span><div><b>孔子是否删诗</b>　《史记·孔子世家》有「去其重，取可施于礼义」之说，朱子不尽从。<b>本课不取删说为定论</b>——现存刺诗、淫诗俱在，这一点比删不删更要紧。</div></div>
+      <div class="q"><span>04</span><div><b>「邪」是否有「徐」义</b>　旧训有一说，以「邪」通「徐」，谓马行舒缓。<b>此说见于诸家训释，本课未考定</b>，只取「斜、不偏」一路，不并入正文。</div></div>
+      <div class="q"><span>05</span><div><b>断章是否正当</b>　春秋赋诗断章是常态，孔子教诗也在此传统中。<b>本课取「借用而自觉」</b>：知道原义而取其一，是本事；不知道原义而用其一，是轻薄。分别只在知不知道。</div></div>
+    </div>
+
+    <div class="h2" id="s12">十二　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">《论语》<br>8.8</div><div class="v">「兴于诗，立于礼，成于乐。」——本章只管入口那一段；骨架与完成在后。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>13.5</div><div class="v">「诵诗三百，授之以政，不达；使于四方，不能专对；虽多，亦奚以为？」——读得多而不合用，等于白读；这一条是「无邪」的用法面。</div></div>
+      <div class="row"><div class="k k2">《论语》<br>17.9</div><div class="v">「诗可以兴，可以观，可以群，可以怨。」——诗的四种用处，正好补「一言以蔽之」的骨架。</div></div>
+      <div class="row"><div class="k k2">《诗经》<br>鲁颂<br>駉</div><div class="v">「思无邪，思马斯徂。」——原句咏马：跑起来不偏。</div></div>
+      <div class="row"><div class="k k2">《礼记》<br>经解</div><div class="v">「温柔敦厚，《诗》教也……《诗》之失愚。」——只读诗而不以礼立，会流于痴；可与「立于礼」对读。</div></div>
+      <div class="row"><div class="k k2">《史记》<br>孔子<br>世家</div><div class="v">「取可施于礼义。」——删诗说所本，存疑，不作定论。</div></div>
+      <div class="row"><div class="k k2">《文心》<br>雕龙</div><div class="v">「诗者，持也，持人情性。」——刘勰这一定义，几乎是「思无邪」的另一种说法。</div></div>
+      <div class="row"><div class="k k2">《孟子》<br>万章上</div><div class="v">「不以文害辞，不以辞害志，以意逆志，是为得之。」——读诗之法：别抠字面，要逆求其志。</div></div>
+    </div>
+
+    <div class="h2" id="s13">附论一　三百篇里的「邪」怎么办</div>
+    <p>这是本章最难的一问，也是朱子注里最诚实的一句。<b>他不否认，也不删，只改问法</b>：不问「这诗正不正」，问「这诗把人变成什么」。</p>
+    <p>改问法之后，坏诗不必被解释成好诗。<b>《桑中》就是写约会，《溱洧》就是写嬉游；承认它们写的是什么，才谈得上「惩创」</b>——你不知道那是坏处，它怎么扎你？反过来，若先把它读成「刺淫」，读者看见的是一句道德标语，扎不到人。</p>
+    <p>这一条对今天也有用：<b>把「不干净」的书一律删去、一律解释成「其实是批判」，等于让人失去免疫力</b>。第一次见到，就被带走。见过、扎过，才立得住。</p>
+
+    <div class="h2">附论二　断章两千年：借来的话，怎么才不算偷</div>
+    <p>断章不是孔子的发明，是春秋的日常。《左传》里赋诗应对，取一句、舍一句，是外交礼节；<b>取的是这一句能办成的事，不是这一句的全部意思</b>。</p>
+    <p>所以断章有一条底线：<b>知道自己舍了什么</b>。孔子舍了「思马斯徂」，他知道那是马；后人取「无邪」，多半不知道那是马——不知道而用，就是偷。</p>
+    <p>今天引一句经典，同样：知道原义而借其一，是本事；不知道原义而拿它撑自己的话，是轻薄。<b>分别只在知不知道，四个字。</b></p>
+
+    <div class="h2">附论三　为什么诗在礼之前</div>
+    <p>8.8 的次序是诗、礼、乐。<b>诗在最前，因为诗管的是「叫起来」</b>：一个人心里那点好东西，得先被叫起来，才谈得上站住、合起来。礼管骨架，乐管完成——<b>没有先叫起来的那一下，骨架立的是空壳，完成合的是空响</b>。</p>
+    <p>这也是本章把它放在「为政」第二的原因：<b>政要人向，先得动他的心</b>；规矩已经有了，人不肯动，规矩就是纸。孔子在两千五百年前就把这一层说清了：先动情，再正心，最后才谈得上守约。</p>
+  </section>
+  <footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>专题一　v1.0　（2026-11-20）</div>
+  </footer>
+</div>
+</body>
+</html>

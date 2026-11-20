@@ -24,8 +24,12 @@
 - 第十七课｜诗三百，一言以蔽之｜一句盖三百：不是诗里无邪，是读诗把人拉回正；原句咏马，孔子断章。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/17.html
 - 第十八课｜道之以政，齐之以刑｜四器两层：政刑管手脚，德礼管脸面；免而无耻与有耻且格，分界在「耻」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/18.html
 
+## 专题
+- 专题一｜《诗三百》与「思无邪」深读｜十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html
+- 专题二｜孔子的道与德，对着老子读｜十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html
+
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.4，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.5，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
