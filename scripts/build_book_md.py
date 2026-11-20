@@ -22,7 +22,7 @@ author: 润泽
 base: 朱熹《论语集注》
 chapters: 498
 published: 前言 + 学而十六章 + 为政二章
-version: 0.15.2
+version: 0.15.3
 date: 2026-11-20
 ---
 

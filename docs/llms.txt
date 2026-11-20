@@ -24,7 +24,7 @@
 - 第十七课｜诗三百，一言以蔽之｜一句盖三百：不是诗里无邪，是读诗把人拉回正；原句咏马，孔子断章。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/17.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.2，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.3，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
