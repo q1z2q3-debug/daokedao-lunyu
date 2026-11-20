@@ -23,7 +23,7 @@
 - 第十六课｜为政以德，譬如北辰｜为政开篇：政者正也，德者得也；居其所而不动，众星自向，事简而人归。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/16.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.0，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.1，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
