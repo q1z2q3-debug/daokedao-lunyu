@@ -295,6 +295,31 @@
     .toc{display:none}
   }
   .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* ---- 统一：存疑与双卡（与为政篇现行体例一致） ---- */
+.doubt{margin-top:8px}
+.doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2,#5C5347)}
+.doubt .q:last-child{border-bottom:0}
+.doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft,#A2503B);padding-top:3px}
+.cards{display:block;border:1px solid var(--line,#DCD5C8);background:#FFFDF6;margin-top:12px}
+.cards .hd,.cards .rowline{display:none}
+.cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line,#DCD5C8)}
+.cardshd span{padding:9px 12px}
+.cardshd span:first-child{color:var(--muted,#8A8074);border-right:1px solid var(--line,#DCD5C8)}
+.cardshd span:last-child{color:var(--ochre,#A2503B)}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+.pair:last-of-type{border-bottom:0}
+.pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line,#DCD5C8)}
+.pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink,#2F2A24)}
+@media(max-width:640px){
+.cardshd{display:none}
+.cards{display:block}
+.pair{grid-template-columns:1fr}
+.pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+.pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+.pair .b{padding:8px 12px 12px;font-size:14.5px}
+.pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft,#A2503B)}
+}
 </style></head>
 <body>
 <div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
@@ -544,19 +569,14 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
     </div>
 
     <div class="h2" id="sc-g">十四　双卡对照</div>
-    <div class="rows wide">
-      <div class="row"><div class="k k2">俗见</div><div class="v">和为贵＝凡事别伤和气，能忍就忍。</div></div>
-      <div class="row"><div class="k k2">正解</div><div class="v"><b>和是「不同者能共处」，忍是「不同者被按住」。</b>有子后半句正是防忍。</div></div>
-      <div class="row"><div class="k k2">俗见</div><div class="v">礼是繁文缛节，越少越好。</div></div>
-      <div class="row"><div class="k k2">正解</div><div class="v"><b>礼省的是「每件事都要现场争」的成本。</b>该省的是「排场」，不是「分寸」。</div></div>
-      <div class="row"><div class="k k2">俗见</div><div class="v">「知和而和」是提倡以和为贵。</div></div>
-      <div class="row"><div class="k k2">正解</div><div class="v"><b>是批评。</b>四字是病名：只知求和、把节撤了。</div></div>
-      <div class="row"><div class="k k2">俗见</div><div class="v">和＝一致，意见不同就是不和。</div></div>
-      <div class="row"><div class="k k2">正解</div><div class="v"><b>13.23 说反了：「和而不同」。</b>和的前提恰恰是「不同」——同了，才不需要「和」。</div></div>
-      <div class="row"><div class="k k2">俗见</div><div class="v">这是讲社交技巧的一章。</div></div>
-      <div class="row"><div class="k k2">正解</div><div class="v"><b>是讲制度与关系结构的一章</b>：界、容、度三者如何配。</div></div>
-      <div class="row"><div class="k k2">俗见</div><div class="v">礼和和是对立的（讲礼就伤和气）。</div></div>
-      <div class="row"><div class="k k2">正解</div><div class="v"><b>礼正是和的容器。</b>没有容器，和气存不住——班级值日表一撤，和气三天就散。</div></div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">和为贵＝凡事别伤和气，能忍就忍。</div><div class="b"><b>和是「不同者能共处」，忍是「不同者被按住」。</b>有子后半句正是防忍。</div></div>
+      <div class="pair"><div class="a">礼是繁文缛节，越少越好。</div><div class="b"><b>礼省的是「每件事都要现场争」的成本。</b>该省的是「排场」，不是「分寸」。</div></div>
+      <div class="pair"><div class="a">「知和而和」是提倡以和为贵。</div><div class="b"><b>是批评。</b>四字是病名：只知求和、把节撤了。</div></div>
+      <div class="pair"><div class="a">和＝一致，意见不同就是不和。</div><div class="b"><b>13.23 说反了：「和而不同」。</b>和的前提恰恰是「不同」——同了，才不需要「和」。</div></div>
+      <div class="pair"><div class="a">这是讲社交技巧的一章。</div><div class="b"><b>是讲制度与关系结构的一章</b>：界、容、度三者如何配。</div></div>
+      <div class="pair"><div class="a">礼和和是对立的（讲礼就伤和气）。</div><div class="b"><b>礼正是和的容器。</b>没有容器，和气存不住——班级值日表一撤，和气三天就散。</div></div>
     </div>
 
     <div class="h2" id="sc-h">十五　跨典互参</div>

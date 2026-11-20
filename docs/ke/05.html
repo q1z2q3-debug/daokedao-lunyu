@@ -292,6 +292,31 @@
     .leaf.adult{break-before:page}
     .toc{display:none}
   }
+
+/* ---- 统一：存疑与双卡（与为政篇现行体例一致） ---- */
+.doubt{margin-top:8px}
+.doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2,#5C5347)}
+.doubt .q:last-child{border-bottom:0}
+.doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft,#A2503B);padding-top:3px}
+.cards{display:block;border:1px solid var(--line,#DCD5C8);background:#FFFDF6;margin-top:12px}
+.cards .hd,.cards .rowline{display:none}
+.cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line,#DCD5C8)}
+.cardshd span{padding:9px 12px}
+.cardshd span:first-child{color:var(--muted,#8A8074);border-right:1px solid var(--line,#DCD5C8)}
+.cardshd span:last-child{color:var(--ochre,#A2503B)}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+.pair:last-of-type{border-bottom:0}
+.pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line,#DCD5C8)}
+.pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink,#2F2A24)}
+@media(max-width:640px){
+.cardshd{display:none}
+.cards{display:block}
+.pair{grid-template-columns:1fr}
+.pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+.pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+.pair .b{padding:8px 12px 12px;font-size:14.5px}
+.pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft,#A2503B)}
+}
 </style>
 </head>
 <body>
@@ -486,11 +511,11 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
     </div>
 
     <div class="h2" id="sc-16">十　存疑</div>
-    <ol class="list">
-      <li>「千乘之国」是实指某国，还是举成数？——春秋兵力记载不一，千乘之称亦随国力升降。<b>存疑：不作实指，取「大而难治」之意。</b></li>
-      <li>「道」读 dǎo 还是 dào？——朱子训「治」，今多读 dǎo；作「导」义时亦读 dǎo。<b>音随义，不必执一。</b></li>
-      <li>五事够不够治国？——朱子自谓大概；后儒补以教、刑、赋。此章不作制度设计，<b>只立「最低不可犯」</b>，不足处当以他章他书补之，不以此章为全。</li>
-    </ol>
+    <div class="doubt">
+      <div class="q"><span>01</span><div>「千乘之国」是实指某国，还是举成数？——春秋兵力记载不一，千乘之称亦随国力升降。<b>存疑：不作实指，取「大而难治」之意。</b></div></div>
+      <div class="q"><span>02</span><div>「道」读 dǎo 还是 dào？——朱子训「治」，今多读 dǎo；作「导」义时亦读 dǎo。<b>音随义，不必执一。</b></div></div>
+      <div class="q"><span>03</span><div>五事够不够治国？——朱子自谓大概；后儒补以教、刑、赋。此章不作制度设计，<b>只立「最低不可犯」</b>，不足处当以他章他书补之，不以此章为全。</div></div>
+    </div>
 
     <div class="h2" id="sc-17">十一　双卡对照</div>
     <div class="cards">

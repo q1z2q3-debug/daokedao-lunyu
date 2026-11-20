@@ -288,6 +288,31 @@
     .leaf.adult{break-before:page}
     .toc{display:none}
   }
+
+/* ---- 统一：存疑与双卡（与为政篇现行体例一致） ---- */
+.doubt{margin-top:8px}
+.doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2,#5C5347)}
+.doubt .q:last-child{border-bottom:0}
+.doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft,#A2503B);padding-top:3px}
+.cards{display:block;border:1px solid var(--line,#DCD5C8);background:#FFFDF6;margin-top:12px}
+.cards .hd,.cards .rowline{display:none}
+.cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line,#DCD5C8)}
+.cardshd span{padding:9px 12px}
+.cardshd span:first-child{color:var(--muted,#8A8074);border-right:1px solid var(--line,#DCD5C8)}
+.cardshd span:last-child{color:var(--ochre,#A2503B)}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+.pair:last-of-type{border-bottom:0}
+.pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line,#DCD5C8)}
+.pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink,#2F2A24)}
+@media(max-width:640px){
+.cardshd{display:none}
+.cards{display:block}
+.pair{grid-template-columns:1fr}
+.pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+.pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+.pair .b{padding:8px 12px 12px;font-size:14.5px}
+.pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft,#A2503B)}
+}
 </style>
 </head>
 <body>
@@ -443,12 +468,12 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
     </div>
 
     <div class="h2" id="sc-16">九　存疑</div>
-    <ol class="list">
-      <li>孝弟是否必然导出不犯上？有子说「鲜矣」，是概然；历史上孝子亦反者。</li>
-      <li>上位不义时，孝弟是否仍不许犯？可与《孟子》「诛一夫」对看：所敬者位，所守者义。</li>
-      <li>「本立道生」是否过于乐观？结构性不公，非一人之本可转；本立只是「不更坏」的起点。</li>
-      <li>既然只是「大概」（与），这一章还能当「本」用吗？——能。正因为是「大概」，它才是<b>本</b>而不是<b>法</b>：法要确定，本只需方向；法可考核，本只能守。</li>
-    </ol>
+    <div class="doubt">
+      <div class="q"><span>01</span><div>孝弟是否必然导出不犯上？有子说「鲜矣」，是概然；历史上孝子亦反者。</div></div>
+      <div class="q"><span>02</span><div>上位不义时，孝弟是否仍不许犯？可与《孟子》「诛一夫」对看：所敬者位，所守者义。</div></div>
+      <div class="q"><span>03</span><div>「本立道生」是否过于乐观？结构性不公，非一人之本可转；本立只是「不更坏」的起点。</div></div>
+      <div class="q"><span>04</span><div>既然只是「大概」（与），这一章还能当「本」用吗？——能。正因为是「大概」，它才是<b>本</b>而不是<b>法</b>：法要确定，本只需方向；法可考核，本只能守。</div></div>
+    </div>
 
     <div class="h2" id="sc-17">十　双卡对照</div>
     <div class="cards">

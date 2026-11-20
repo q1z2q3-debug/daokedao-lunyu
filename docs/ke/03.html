@@ -292,6 +292,31 @@
     .leaf.adult{break-before:page}
     .toc{display:none}
   }
+
+/* ---- 统一：存疑与双卡（与为政篇现行体例一致） ---- */
+.doubt{margin-top:8px}
+.doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2,#5C5347)}
+.doubt .q:last-child{border-bottom:0}
+.doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft,#A2503B);padding-top:3px}
+.cards{display:block;border:1px solid var(--line,#DCD5C8);background:#FFFDF6;margin-top:12px}
+.cards .hd,.cards .rowline{display:none}
+.cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line,#DCD5C8)}
+.cardshd span{padding:9px 12px}
+.cardshd span:first-child{color:var(--muted,#8A8074);border-right:1px solid var(--line,#DCD5C8)}
+.cardshd span:last-child{color:var(--ochre,#A2503B)}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+.pair:last-of-type{border-bottom:0}
+.pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line,#DCD5C8)}
+.pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink,#2F2A24)}
+@media(max-width:640px){
+.cardshd{display:none}
+.cards{display:block}
+.pair{grid-template-columns:1fr}
+.pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+.pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+.pair .b{padding:8px 12px 12px;font-size:14.5px}
+.pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft,#A2503B)}
+}
 </style>
 </head>
 <body>
@@ -509,12 +534,12 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
     </div>
 
     <div class="h2" id="sc-17">十一　存疑</div>
-    <ol class="list">
-      <li>一切礼貌都是饰吗？——礼有文有质：<b>文为达质，饰为代质。</b>有敬的仪节不是饰；无敬的仪节才是。此界须自己守，不能靠条文。</li>
-      <li>「鲜矣仁」是否过苛？——孔子说「鲜」不说「无」，已经留了余地；且改法不在禁言，在复本（1.2 的「复守其母」）。</li>
-      <li>职业需要「巧言」（外交、销售、教学讲解）怎么办？——分界有两条：「是否以悦人代事实」，以及「说完之后是否兑现」。两条都过，则技巧无罪。</li>
-      <li>AI 时代的新情形：模型<b>无本心而极善辞令</b>——「巧言」第一次可以不需要人来做。此时判词要落到用者身上：<b>谁在借它悦人，谁就是巧言者。</b></li>
-    </ol>
+    <div class="doubt">
+      <div class="q"><span>01</span><div>一切礼貌都是饰吗？——礼有文有质：<b>文为达质，饰为代质。</b>有敬的仪节不是饰；无敬的仪节才是。此界须自己守，不能靠条文。</div></div>
+      <div class="q"><span>02</span><div>「鲜矣仁」是否过苛？——孔子说「鲜」不说「无」，已经留了余地；且改法不在禁言，在复本（1.2 的「复守其母」）。</div></div>
+      <div class="q"><span>03</span><div>职业需要「巧言」（外交、销售、教学讲解）怎么办？——分界有两条：「是否以悦人代事实」，以及「说完之后是否兑现」。两条都过，则技巧无罪。</div></div>
+      <div class="q"><span>04</span><div>AI 时代的新情形：模型<b>无本心而极善辞令</b>——「巧言」第一次可以不需要人来做。此时判词要落到用者身上：<b>谁在借它悦人，谁就是巧言者。</b></div></div>
+    </div>
 
     <div class="h2" id="sc-18">十二　双卡对照</div>
     <div class="cards">

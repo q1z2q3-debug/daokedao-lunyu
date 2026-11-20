@@ -101,7 +101,7 @@
   p.lead{font-size:17px;line-height:2}
 
   /* 田字格 */
-  .tzg{display:grid;grid-template-columns:repeat(4,86px);gap:14px;margin:14px 0 6px;justify-content:start}
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:14px;margin:14px 0 6px;justify-content:start}
   .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
   .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
   .tzcap span{white-space:nowrap}
@@ -222,7 +222,8 @@
     .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
     .cards .hd{padding:8px 10px;letter-spacing:.1em}
     .src{font-size:19px;line-height:2.1}
-    .tzg{grid-template-columns:repeat(4,1fr);gap:12px}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:6px}
+     .cell span{font-size:25px}
     .cell span{font-size:36px}
     .leaf-tag{left:18px}
   }
@@ -232,6 +233,31 @@
     .leaf{box-shadow:none;break-inside:avoid}
     .fig{border-style:solid}
   }
+
+/* ---- 统一：存疑与双卡（与为政篇现行体例一致） ---- */
+.doubt{margin-top:8px}
+.doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2,#5C5347)}
+.doubt .q:last-child{border-bottom:0}
+.doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft,#A2503B);padding-top:3px}
+.cards{display:block;border:1px solid var(--line,#DCD5C8);background:#FFFDF6;margin-top:12px}
+.cards .hd,.cards .rowline{display:none}
+.cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line,#DCD5C8)}
+.cardshd span{padding:9px 12px}
+.cardshd span:first-child{color:var(--muted,#8A8074);border-right:1px solid var(--line,#DCD5C8)}
+.cardshd span:last-child{color:var(--ochre,#A2503B)}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+.pair:last-of-type{border-bottom:0}
+.pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line,#DCD5C8)}
+.pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink,#2F2A24)}
+@media(max-width:640px){
+.cardshd{display:none}
+.cards{display:block}
+.pair{grid-template-columns:1fr}
+.pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+.pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+.pair .b{padding:8px 12px 12px;font-size:14.5px}
+.pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft,#A2503B)}
+}
 </style>
 </head>
 <body>
@@ -261,11 +287,12 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
 
     <div class="h2">字义小课堂</div>
 
-    <div class="tzg" aria-label="四个关键字">
+    <div class="tzg" aria-label="五个关键字">
       <div class="tzitem"><div class="cell"><span>学</span></div><div class="tzcap"><span>8 画</span><span>效法</span></div></div>
       <div class="tzitem"><div class="cell"><span>习</span></div><div class="tzcap"><span>3 画</span><span>反复练</span></div></div>
       <div class="tzitem"><div class="cell"><span>说</span></div><div class="tzcap"><span>10 画</span><span>同「悦」</span></div></div>
       <div class="tzitem"><div class="cell"><span>愠</span></div><div class="tzcap"><span>12 画</span><span>心里不快</span></div></div>
+      <div class="tzitem"><div class="cell"><span>时</span></div><div class="tzcap"><span>7 画</span><span>放进日子里</span></div></div>
     </div>
 
     <div class="rows">
@@ -274,6 +301,13 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
       <div class="row"><div class="k">时</div><div class="v"><b>时时、按时、适时。</b>不是「有空才练」，是把它放进日子里，按着节拍来；该练的时候练，不硬塞，也不丢下。</div></div>
       <div class="row"><div class="k">说</div><div class="v"><b>同「悦」，心里高兴。</b>不是别人夸你，是你自己知道「我会了」。</div></div>
       <div class="row"><div class="k">愠</div><div class="v"><b>心里藏着不痛快。</b>别人没看见你的好，你不把它憋成一团气。</div></div>
+    </div>
+
+    <div class="h2">一句话讲清</div>
+    <p class="lead"><b>学了就练，练到心里亮；同路的人来了，一起走；没人懂你，也不恼。</b></p>
+    <div class="scene">
+      <b>三句话，各管一头。</b>学与习，是自己的事——练得出来；朋来，是别人的事——来了就一起；人不知，是别人的眼光——不归你管。<br>
+      <b>三句都用「不亦……乎」，是问句，不是命令。</b>孔子没有说「你必须欢喜」，他问：这样过，你不觉得欢喜吗？
     </div>
 
     <div class="h2">共读</div>
@@ -285,6 +319,13 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
     <div class="scene">
       刚学跳绳，绳子总绊脚。天天练几下，忽然有一天连着跳了十个——那一下心里的高兴，就是「说」。<br>
       同学来家里，一起拼同一副拼图，谁也不会嫌谁慢——那就是「乐」。
+    </div>
+
+    <div class="h2">三个小问题</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「习」为什么非要「时」？</b>　练一次不算，隔很久再练也不算。时是放进日子里：天天碰一碰，该练的时候练，不硬塞，也不丢下。</div></div>
+      <div class="q"><span>02</span><div><b>自己练用「悦」，朋友来用「乐」，为什么换字？</b>　悦在心里——你自己知道「我会了」；乐在外面——有人同行。一个是灯，一个是火。</div></div>
+      <div class="q"><span>03</span><div><b>「人不知而不愠」是不是装不在乎？</b>　不是装。愠是心里憋着一团气；不愠是知道自己长在哪儿，不必靠别人点头。</div></div>
     </div>
 
     <div class="h2">成长小启示</div>
@@ -356,13 +397,10 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
 
     <div class="h2">七　双卡对照</div>
     <div class="cards">
-      <div class="hd plain">俗见</div><div class="hd">正解</div>
-      <div class="rowline"></div>
-      <div class="a">学＝把知识装进脑子</div><div class="b">学是效法，习是反复，两者相续才成</div>
-      <div class="rowline"></div>
-      <div class="a">快乐要靠别人夸</div><div class="b">悦从练熟自生；乐从同道相与来；不愠是不被评价牵着走</div>
-      <div class="rowline"></div>
-      <div class="a">别人不懂我，就该委屈</div><div class="b">不知不是否定，君子不把自我寄在别人的眼光上</div>
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">学＝把知识装进脑子</div><div class="b">学是效法，习是反复，两者相续才成</div></div>
+      <div class="pair"><div class="a">快乐要靠别人夸</div><div class="b">悦从练熟自生；乐从同道相与来；不愠是不被评价牵着走</div></div>
+      <div class="pair"><div class="a">别人不懂我，就该委屈</div><div class="b">不知不是否定，君子不把自我寄在别人的眼光上</div></div>
     </div>
 
     <div class="figs single">

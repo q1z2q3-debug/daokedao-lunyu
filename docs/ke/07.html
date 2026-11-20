@@ -292,6 +292,31 @@
     .leaf.adult{break-before:page}
     .toc{display:none}
   }
+
+/* ---- 统一：存疑与双卡（与为政篇现行体例一致） ---- */
+.doubt{margin-top:8px}
+.doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2,#5C5347)}
+.doubt .q:last-child{border-bottom:0}
+.doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft,#A2503B);padding-top:3px}
+.cards{display:block;border:1px solid var(--line,#DCD5C8);background:#FFFDF6;margin-top:12px}
+.cards .hd,.cards .rowline{display:none}
+.cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line,#DCD5C8)}
+.cardshd span{padding:9px 12px}
+.cardshd span:first-child{color:var(--muted,#8A8074);border-right:1px solid var(--line,#DCD5C8)}
+.cardshd span:last-child{color:var(--ochre,#A2503B)}
+.pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+.pair:last-of-type{border-bottom:0}
+.pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line,#DCD5C8)}
+.pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink,#2F2A24)}
+@media(max-width:640px){
+.cardshd{display:none}
+.cards{display:block}
+.pair{grid-template-columns:1fr}
+.pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+.pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+.pair .b{padding:8px 12px 12px;font-size:14.5px}
+.pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft,#A2503B)}
+}
 </style>
 </head>
 <body>
@@ -574,12 +599,12 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
     </div>
 
     <div class="h2" id="sc-16">十三　存疑</div>
-    <ol class="list">
-      <li>「三年」是三十六个月，还是「久之义」？——<b>丧制取实数，此章取「久之义」，两存不裁。</b></li>
-      <li>「父之道」是政令、家法，还是志向？——三解并存，本读本取「父所行之善道」，见附论二。</li>
-      <li>本章只言父，母何在？——宗法语境以父为主；<b>今日读当并及母，另见附论四。</b></li>
-      <li>父之道不善，是否仍三年不改？——<b>朱子两说并存</b>：是则终身，非则三年后改；但若贻害他人，则不可守。此为读本所加的一条边界，非原文所有。</li>
-    </ol>
+    <div class="doubt">
+      <div class="q"><span>01</span><div>「三年」是三十六个月，还是「久之义」？——<b>丧制取实数，此章取「久之义」，两存不裁。</b></div></div>
+      <div class="q"><span>02</span><div>「父之道」是政令、家法，还是志向？——三解并存，本读本取「父所行之善道」，见附论二。</div></div>
+      <div class="q"><span>03</span><div>本章只言父，母何在？——宗法语境以父为主；<b>今日读当并及母，另见附论四。</b></div></div>
+      <div class="q"><span>04</span><div>父之道不善，是否仍三年不改？——<b>朱子两说并存</b>：是则终身，非则三年后改；但若贻害他人，则不可守。此为读本所加的一条边界，非原文所有。</div></div>
+    </div>
 
     <div class="h2" id="sc-17">十四　双卡对照</div>
     <div class="cards">
