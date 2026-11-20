@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>吾十有五而志于学 · 论语第十九课｜润泽说 道可道</title>
+<meta name="description" content="《论语》为政篇第四章通释：子曰「吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩」。六阶六门的骨架是朱子注三次「无所事」——进德之序是减动作之序；不惑知「当然」，知天命知「所以然」；耳顺是「声入心通、不必忍」，非「听得进意见」；从心不逾矩取消的是「守」而非规矩；孔子卒年七十三，七十之后只三年。三义理图、三附论、存疑七条。底本朱熹《论语集注》。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBF7EC'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23A2503B' font-family='serif'%3E十%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:720px}
+</style></head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 19 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">六阶三次无所事</a><a href="#sc-d">知的两层</a><a href="#sc-e">耳顺辨</a><a href="#sc-f">从心不逾矩</a><a href="#sc-g">时代</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理图一 六阶六门</a><a href="#sc-21">义理图二 知的两层</a><a href="#sc-22">义理图三 立壁到虚成</a><a href="#sc-23">附论一 减</a><a href="#sc-24">附论二 生知</a><a href="#sc-25">附论三 时间表</a></div>
+  </div>
+  <section class="leaf kid" id="kid">
+<div class="leaf-tag">少儿页</div>
+    <h1>吾十有五而志于学</h1>
+    <div class="h1-sub">为政 2.4　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子曰：</span>「吾十有<ruby>五<rt>wǔ</rt></ruby>而<ruby>志<rt>zhì</rt></ruby>于<ruby>学<rt>xué</rt></ruby>，三十而<ruby>立<rt>lì</rt></ruby>，四十而不<ruby>惑<rt>huò</rt></ruby>，五十而知<ruby>天命<rt>tiān mìng</rt></ruby>，六十而<ruby>耳顺<rt>ěr shùn</rt></ruby>，七十而<ruby>从<rt>zòng</rt></ruby>心所欲，不<ruby>逾矩<rt>yú jǔ</rt></ruby>。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>志</span></div><div class="tzcap"><span>7 画</span><span>心朝那走</span></div></div>
+      <div class="tzitem"><div class="cell"><span>立</span></div><div class="tzcap"><span>5 画</span><span>站得住</span></div></div>
+      <div class="tzitem"><div class="cell"><span>惑</span></div><div class="tzcap"><span>12 画</span><span>心里打鼓</span></div></div>
+      <div class="tzitem"><div class="cell"><span>命</span></div><div class="tzcap"><span>8 画</span><span>天定的理</span></div></div>
+      <div class="tzitem"><div class="cell"><span>矩</span></div><div class="tzcap"><span>9 画</span><span>划方的尺</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">志</div><div class="v"><b>「心之所之」——心一直朝那边走。</b>——<b>不是喊一句「我要努力」，是年年都往那个方向去。</b></div></div>
+      <div class="row"><div class="k">立</div><div class="v"><b>站得住。</b>——<b>风吹来不摇，别人说什么也不改。</b><b>——孔子说自己「立于礼」：站在规矩上，才站得稳。</b></div></div>
+      <div class="row"><div class="k">惑</div><div class="v"><b>心里打鼓：这样对不对？</b>——<b>不惑，就是这面鼓不响了。</b></div></div>
+      <div class="row"><div class="k">命</div><div class="v"><b>天命不是算命，是「这件事为什么本来该这样」。</b>——<b>知道了它，就不只是知道怎么做，还知道为什么。</b></div></div>
+      <div class="row"><div class="k">矩</div><div class="v"><b>木匠划方用的尺。</b>——<b>规矩不是拿来捆人的，是拿来比着做的。</b><b>——七十岁的人，尺在心里，不必再拿出来。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>六个数目，是六道门；每过一道，就少一份吃力。</b>（为政 2.4）</p>
+    <div class="scene"><b>孔子不是说自己多厉害，是说：这几件事，我一样一样不必再用力了。</b>——<b>三十岁不必再提醒自己站住；四十岁不必再拿规矩比；七十岁连「守」都不必了。</b><b>——长进的样子，常常是「松了」，不是「多了」。</b></div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <div class="rows">
+      <div class="row"><div class="k">十五</div><div class="v"><b>十五岁，心定在「学」上。</b>——<b>古时候这个年纪进大学，学的是怎么成人，不只是认字。</b><b>——这一阶最费劲：得天天想着它。</b></div></div>
+      <div class="row"><div class="k">三十</div><div class="v"><b>站住了。</b>——<b>该做什么、不该做什么，不用别人再教。</b><b>——朱子说这时「不必再靠志」：志已经变成了习惯。</b></div></div>
+      <div class="row"><div class="k">四十</div><div class="v"><b>不疑惑了。</b>——<b>碰到事，知道该怎么办，不再来回摇摆。</b><b>——这一阶「不必再守」：因为看明白了，守就多余。</b></div></div>
+      <div class="row"><div class="k">五十</div><div class="v"><b>知道天命。</b>——<b>不只懂「该怎么办」，还懂「为什么本该这样」。</b><b>——像从会开车，到懂这台车为什么这么跑。</b></div></div>
+      <div class="row"><div class="k">六十</div><div class="v"><b>耳顺：什么话进耳朵，心里都不顶。</b>——<b>不是忍着不说，是真的不必忍。</b></div></div>
+            <div class="row"><div class="k">七十</div><div class="v"><b>想怎么做，就怎么做，还不越出规矩。</b>——<b>不是规矩没了，是规矩已经长在心里，不必再拿出来对。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="scene"><b>学骑车，有四个时候。</b></div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>大人扶着后座，你一直想着「别倒」。</b>——<b>这是「志」：全靠念头撑着。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>能自己骑一小段了，可一拐弯就慌。</b>——<b>这是「立」：直着行，还不会转。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>拐弯也不慌了，看见石头知道绕。</b>——<b>这是「不惑」：车听你的了。</b></div></div>
+      <div class="row"><div class="k">四</div><div class="v"><b>你一边骑一边聊天，路还是走对了。</b>——<b>这是「从心」：手不必再想，路自己在你身上。</b></div></div>
+    </div>
+    <div class="scene"><b>这四步没有一步是「多学了一个动作」。</b>——<b>每一步都是「少了一个紧张」。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="list">
+      <li>你最近在学的这件事，现在是第几步：要人扶、能直着走、能拐弯、还是能边做边聊？</li>
+      <li>有没有一件事，你已经做得很熟，却还是每次都要「提醒自己」？想想是哪一个动作还没松下来。</li>
+      <li>「耳顺」不是忍着不说话。你上一次真的听进一句不中听的话，是什么时候？</li>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>别急着问「我几岁该到哪一阶」。</b>——<b>先问：我这一阶，还卡在哪个动作上。</b><b>——卡在「要人提醒」，就是还没立；卡在「总要拿规矩比」，就是还没到七十。</b></div>
+    <div class="scene"><b>年岁是刻度，不是成绩单。</b>——<b>三十没立住、四十还疑惑，不是废了，是这一道门还没过。</b><b>——门在那儿，早晚过得去；过了，就少一份吃力。</b></div>
+    <div class="scene"><b>真正学会一样东西，标志是它不再占你的心。</b>——<b>你还得天天想着它，说明它还在你手里，没长到你身上。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">一</div><div class="v"><b>这一章不是「几岁该干什么」的时间表。</b>——<b>孔子说的是六道门，不是六个考期。</b><b>——拿它去催孩子「你都十二了怎么还不懂事」，是把它读成了压力表。</b></div></div>
+      <div class="pair"><div class="k2">二</div><div class="v"><b>孩子学东西，看得见的是「会了」，看不见的是「松了」。</b>——<b>刚会的时候最紧，一动就慌；熟了才松，松了才算真会。</b><b>——所以别在孩子「刚会」的时候加码，那正是他最紧的时候。</b></div></div>
+      <div class="pair"><div class="k2">三</div><div class="v"><b>「三十而立」的立在礼上，不在钱上。</b>——<b>一个三十岁的人站得住，是知道什么话不该说、什么事不该做。</b><b>——这个「立」，家里从小教得了，不必等到三十岁。</b></div></div>
+      <div class="pair"><div class="k2">四</div><div class="v"><b>「耳顺」在家里最有用，也最容易被误读。</b>——<b>它不是让孩子「忍着听」，是我们自己先做到「不必忍」。</b><b>——你先能听进孩子一句不中听的话，他才学得会这件事。</b></div></div>
+    </div>
+  </section>
+
+  <section class="leaf adult" id="adult">
+<div class="leaf-tag">成人页</div>
+    <h2 id="sc-lian" style="margin-top:0">零　连读：为政四章，一句立势，一句立教，一句立次第，一句立时</h2>
+    <p>为政篇前四章，是一组。<b>2.1 立势</b>——为政以德，譬如北辰，居其所而众星共之：讲的是姿势，不动而化。<b>2.2 立教</b>——诗三百，一言以蔽之，曰思无邪：讲的是入口，先动其心。<b>2.3 立次第</b>——道之以政⋯⋯有耻且格：讲的是两层器，先德礼，政刑补位。<b>2.4 立时</b>——吾十有五而志于学⋯⋯：讲的是时间，进德有阶。</p>
+    <p>三章讲「怎么做」，这一章讲「要多久」。四章连起来，才是一套完整的为政观：<b>有姿势，有入口，有次第，也有耐心。</b></p>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <p>六个数目、六个动词、一件东西。先把字收干净，再谈意思。</p>
+    <div class="rows">
+      <div class="row"><div class="k">志</div><div class="v"><b>心之所之。</b>朱子：「心之所之谓之志。」——<b>不是「立志」那一天的热血，是心长期朝一个方向走。</b>朱子又说「念念在此而为之不厌」：念在它上面，做起来不厌。</div></div>
+      <div class="row"><div class="k">学</div><div class="v"><b>此指大学之道。</b>朱子：「古者十五而入大学。此所谓学，即大学之道也。」——<b>不是识字，是成人那一套：格物、致知、诚意、正心。</b></div></div>
+      <div class="row"><div class="k">立</div><div class="v"><b>有以自立而守之固。</b>朱子：「有以自立，则守之固而无所事志矣。」——<b>孔子自言「立于礼」（8.8），可互证：立在礼上，不是立在位上。</b></div></div>
+      <div class="row"><div class="k">不惑</div><div class="v"><b>于事物之所当然，皆无所疑。</b>朱子：「知之明而无所事守矣。」——<b>「当然」二字要紧：是「该这样」，不是「一切皆明」。</b></div></div>
+      <div class="row"><div class="k">天命</div><div class="v"><b>天道之流行而赋于物者，乃事物所以当然之故。</b>——<b>不是命数，是「之所以如此」的那个道理。</b></div></div>
+      <div class="row"><div class="k">耳顺</div><div class="v"><b>声入心通，无所违逆。</b>朱子：「知之之至，不思而得也。」——<b>不是耳朵软，是心里不顶。</b></div></div>
+      <div class="row"><div class="k">从心</div><div class="v"><b>从，读 zòng，随也。</b>朱子「如字」，取「随」。——<b>随其心之所欲，不是压其心之所欲。</b></div></div>
+      <div class="row"><div class="k">矩</div><div class="v"><b>法度之器，所以为方者。</b>——<b>木匠的曲尺，不是绳子。</b><b>尺是「比着做」的工具，不是「捆起来」的索。</b></div></div>
+    </div>
+    <div class="h3">句读三层</div>
+    <div class="rows">
+      <div class="row"><div class="k">其一</div><div class="v"><b>六个数目不是六个年龄，是六道门。</b>年龄只是刻在门框上的字；门是「过不去就进不了下一段」的那一道。</div></div>
+      <div class="row"><div class="k">其二</div><div class="v"><b>六阶不是六件并列的境界，是一条单线。</b>志→立→不惑→知命→耳顺→从心。前者是后者的地基，不可越级。<b>越级的「耳顺」只是没脾气，越级的「从心」只是任性。</b></div></div>
+      <div class="row"><div class="k">其三</div><div class="v"><b>这一章的主语是「吾」。</b>孔子自述，不是下命令。<b>自述的价值在于可对照，不在于可考核。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-c">二　六阶的骨架：三次「无所事」</div>
+    <p>多数讲法把这一章讲成「六次升级」：十五学到什么、三十加到什么、四十又加上什么。这样讲，六阶就成了六堆东西，越堆越高。<b>朱子的注不是这样写的。</b>六段注文里，有三处明说「无所事」：</p>
+    <div class="rows">
+      <div class="row"><div class="k">三十</div><div class="v">「有以自立，则守之固而<b>无所事志</b>矣。」——<b>不必再靠「志」撑着了。</b>志已经变成骨头。</div></div>
+      <div class="row"><div class="k">四十</div><div class="v">「于事物之所当然，皆无所疑，则知之明而<b>无所事守</b>矣。」——<b>不必再靠「守」挡着了。</b>看明白了，守就多余。</div></div>
+      <div class="row"><div class="k">七十</div><div class="v">「随其心之所欲，而自不过于法度，又<b>无所事乎守之</b>也。」——<b>连「守」这个动作也取消了。</b></div></div>
+    </div>
+    <p class="lead"><b>三次「无所事」，说的都是「不必再做某个动作」。</b></p>
+    <p>这就是注文给出的骨架：<b>进德之序，不是往身上加东西的次序，是往身上减动作的次序。</b>十五岁最费劲——要靠志撑着；三十岁省掉「撑」，靠立；四十岁省掉「守」，靠明；七十岁连「守」也不用了，靠「矩已在心」。</p>
+    <p>减不是松懈。<b>减掉的是「外力」，长出的是「内力」。</b>一个写字的人，从「一笔一笔想着怎么写」到「随手就是那个样子」，中间没有多学一个字，只是把「想」这个动作省掉了。</p>
+
+    <div class="h2" id="sc-d">三　知的两层：「当然」与「所以然」</div>
+    <p>「四十而不惑」与「五十而知天命」，常被读成重复：不惑不就是什么都懂了吗，还知什么命？<b>朱子把这两阶分在「知」的两层，一层不多，一层不少。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">不惑</div><div class="v"><b>知「当然」：</b>这件事该这样，无疑。<b>——范围有限，只到「该怎么办」。</b></div></div>
+      <div class="row"><div class="k">知命</div><div class="v"><b>知「所以然」：</b>这件事为什么该这样，其故在天。<b>——从「事」进到「事之所以为事」。</b></div></div>
+    </div>
+    <p>分层的意义在于：<b>不惑不是终点，是门槛。</b>知道了「该这样」，还算不上知道「天地为什么让它这样」。朱子说得更狠：「知此则知极其精，而不惑又不足言矣」——知道了所以然，先前那个「不惑」就不值一提了。</p>
+    <p>顺序也不可倒：<b>先无疑，才谈得了其故；先知其故，才听什么都通。</b>把「知天命」提前，多半得到一种宿命论的口吻：凡事一句「都是命」，看着像通达，其实是跳过了「当然」这一层。</p>
+
+    <div class="h2" id="sc-e">四　耳顺辨：不是听得进话，是不必忍</div>
+    <p>今人对「耳顺」最流行的一句解释是：<b>听得进不同意见。</b>这句话听着很好，但它把「耳顺」降成了修养态度，甚至降成了世故——我不同意你，但我忍着。</p>
+    <p>朱子注的是：「<b>声入心通，无所违逆，知之之至，不思而得也。</b>」——声音进来，心里就通了；没有一处顶着的；这是知的极处，不必思虑而自得。</p>
+    <p class="lead"><b>分别在哪：听得进意见，是「我忍着」；声入心通，是「不必忍」。</b></p>
+    <p>前者还在用力，后者已经不必用力。这就是为什么「耳顺」排在「知天命」之后：<b>先知道其故，才可能听到什么都通。</b>不知其故而强作「耳顺」，那不叫顺，那叫钝——听什么都点头，和听什么都懂，是两件相反的事。</p>
+    <p>这一辨的用处很实在：<b>「耳顺」不是练脾气，是长见识。</b>脾气练得再好，遇到真不懂的事，心里还是会顶；见识到了，那股顶劲自己就没了。</p>
+
+    <div class="h2" id="sc-f">五　从心不逾矩：取消的是「守」，不是规矩</div>
+    <p>「从心所欲，不逾矩」最容易被读成一句便宜话：想干什么就干什么，反正我不会犯规矩。<b>照这个读法，七十岁成了一个豁免权。</b></p>
+    <p>朱子的注把它扭回来了：「随其心之所欲，而自不过于法度，<b>又无所事乎守之也</b>。」——顺着心走，自然不越出法度；<b>不必再拿法度来对。</b></p>
+    <div class="scene"><b>规矩没有消失，消失的是「对规矩」这个动作。</b>——<b>尺还在，只是不必再拿在手上比；它已经长成你的手。</b></div>
+    <p>可与 4.6「君子无终食之间违仁」对读：<b>一个是「不间断」，一个是「不必守」</b>，说的是同一件事的两面。间断，是因为还要提醒；不必守，是因为已经不必提醒。</p>
+    <p>这一阶的分量，全在「取消」二字上。<b>它不是获得了自由，是失去了紧张。</b>而失去紧张的前提，是前面五阶真的走过——没有三十的立、四十的明，七十的「从心」不过是放纵换了个好听的名字。</p>
+
+    <div class="h2" id="sc-g">六　时代：十五入大学，卒年七十三</div>
+    <p>两件旧制度与一件事实，得先摆出来，否则这一章会被读飘。</p>
+    <div class="rows">
+      <div class="row"><div class="k">小学</div><div class="v"><b>古者八岁入小学</b>：洒扫、应对、进退、礼乐射御书数。<b>——十五岁之前，学的是「事」。</b></div></div>
+      <div class="row"><div class="k">大学</div><div class="v"><b>十五入大学</b>：穷理、正心、修己、治人。<b>——孔子「志于学」的起点，正好是「从做事转到成人」的那一年。</b></div></div>
+      <div class="row"><div class="k">卒年</div><div class="v"><b>孔子卒于鲁哀公十六年，七十三岁。</b>「七十而从心」之后只有三年。<b>——这一阶不是终点上的加冕，是最后一小段路。</b></div></div>
+    </div>
+    <p>第三件尤其要紧。<b>「七十而从心」若被读成「七十以后成圣」，就把这一章推到了人够不着的地方；而它实际只是说：走到第七十岁，最后一样东西也松了，然后三年，人就走了。</b>这才是自述的分量——不是荣耀，是交代。</p>
+
+    <div class="h2" id="sc-h">七　章旨</div>
+    <p class="lead"><b>一句：圣人自述学历，六阶六门；每一阶的标志不是「又得了什么」，是「不必再做什么」。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一反</div><div class="v"><b>这不是成功学时间表。</b>三十不立、四十仍惑的人，不是废了——<b>孔子给的是路标，不是考期。</b></div></div>
+      <div class="row"><div class="k">二反</div><div class="v"><b>也不是「圣人天生如此，与我无关」。</b>程子说这是「使学者有所持循」：写出来，是给走路的人照着走的。</div></div>
+      <div class="row"><div class="k">落点</div><div class="v"><b>把「我今年该到哪一阶」换成「我这一阶还卡在哪个动作上」；把「守」找出一次，看看能不能换成「明」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-i">八　存疑七条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>六阶是否实指年岁</b>　一说孔子自述年谱，一说「假年以喻进德之序」。<b>本课两存，读「序」不读「谱」</b>：若读谱，则三十、四十诸阶须一一考实，反失其旨。</div></div>
+      <div class="q"><span>02</span><div><b>「立」是立于何</b>　三说：立于道、立于礼（8.8「立于礼」）、立于位（仕）。<b>本课从「立于礼」，兼取朱子「有以自立」</b>；「立于位」与全章言学不类。</div></div>
+      <div class="q"><span>03</span><div><b>「耳顺」三说</b>　声入心通（朱子）／闻其言而知其微旨／耳闻而顺之。<b>本课从朱子</b>，并辨今人「听得进意见」之误读。</div></div>
+      <div class="q"><span>04</span><div><b>「不惑」与「知天命」是否重复</b>　朱子分「当然」与「所以然」。<b>本课从之</b>；若不分层，两阶必有一阶是赘。</div></div>
+      <div class="q"><span>05</span><div><b>「从」的读音</b>　一读 zòng（随），一读 cóng（由）。朱子「如字」，<b>本课取「随」</b>；读「由」，则「从心」成了「由着心」，与「不逾矩」相冲。</div></div>
+            <div class="q"><span>06</span><div><b>是否圣境、人人可达</b>　程子谓孔子生知，此特自述体验以示学者。<b>本课两存</b>：既不作「生知」的护教语，也不把六阶读成人人必达的保证。</div></div>
+      <div class="q"><span>07</span><div><b>「耳」字是否衍文</b>　有校本疑「六十而耳顺」之「耳」为衍字，当作「六十而顺」。<b>本课不取</b>：诸本皆有「耳」，且朱子「声入心通」之训正承此字；删字则训无所附。</div></div>
+    </div>
+
+    <div class="h2" id="sc-j">九　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a">这是孔子年谱。</div><div class="b"><b>年岁是刻度，六阶是六道门。</b>朱子重的是「序」，不是「谱」。</div></div>
+      <div class="pair"><div class="a">三十就该立，立就是买房立业。</div><div class="b"><b>立是「守之固」，立在礼上。</b>知道什么话不该说、什么事不该做，才叫立。</div></div>
+      <div class="pair"><div class="a">不惑就是什么都懂。</div><div class="b"><b>不惑是「于当然无所疑」，范围有限。</b>它上面还有一层「所以然」。</div></div>
+      <div class="pair"><div class="a">耳顺是脾气好、听得进话。</div><div class="b"><b>声入心通，是不必忍，不是忍着。</b>练脾气不够，得长见识。</div></div>
+      <div class="pair"><div class="a">从心所欲＝想干什么干什么。</div><div class="b"><b>矩已内化，所以不必守。</b>取消的是「守」这个动作，不是规矩。</div></div>
+      <div class="pair"><div class="a">这是圣人履历，与我无关。</div><div class="b"><b>程子说这是「使学者有所持循」。</b>路标是给走路的人看的。</div></div>
+    </div>
+
+    <div class="h2" id="sc-k">十　跨典互参</div>
+    <div class="rows wide">
+      <div class="row"><div class="k">《论语》<br>8.8</div><div class="v"><b>「立于礼，成于乐。」</b>——孔子自言「立」的所在。<b>本章「三十而立」的注脚，最好用这一句。</b></div></div>
+      <div class="row"><div class="k">《论语》<br>1.1</div><div class="v"><b>「学而时习之。」</b>——学之始。本章「志于学」是这条线的第一段。</div></div>
+      <div class="row"><div class="k">《论语》<br>4.5</div><div class="v"><b>「君子无终食之间违仁。」</b>——不间断。与「从心不逾矩」互为表里。</div></div>
+      <div class="row"><div class="k">《论语》<br>9.23</div><div class="v"><b>「后生可畏，焉知来者之不如今也。」</b>——年岁不是资本。<b>与本章合看：六阶是门，不是资历。</b></div></div>
+      <div class="row"><div class="k">《论语》<br>15.5</div><div class="v"><b>「恭己正南面而已矣。」</b>——成德之效，落到「无为而治」。</div></div>
+      <div class="row"><div class="k">《大学》</div><div class="v"><b>「格物、致知、诚意、正心。」</b>——朱子以「大学之道」解「学」，此四目即其内容。</div></div>
+      <div class="row"><div class="k">《学记》</div><div class="v"><b>「七年视论学取友，谓之小成；九年知类通达，强立而不反，谓之大成。」</b>——另一套年限，可对读：古人本有「几年一进」的说法。</div></div>
+      <div class="row"><div class="k">《孟子》<br>公孙丑上</div><div class="v"><b>「四十不动心。」</b>——孟子自述另一条时间线。<b>两说并置可知：年岁是各人自己的刻度。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　一个人的六个侧影</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一　图位（待作者供图）</div>
+        <div class="ph">竖幅 3:4　待补</div>
+        <details class="prompt">
+          <summary>提示词（待生成）</summary>
+          <p>古淡水墨立轴，纸本米色 #FBF7EC 底，墨 #2F2A24，赭 #A2503B，青灰 #4A5C55。幅面取「吾十有五而志于学⋯⋯七十而从心所欲，不逾矩」之义。同一人六个侧影，自左至右一字排开，年岁递长：十五执简而立、三十倚柱（身旁一具礼器）、四十对灯、五十仰观星、六十侧耳、七十空手而立，衣纹由紧渐松，最后一人两手空空、袖口自然垂落。六人之间不画连线，只留等距的空。地面一条极淡的横线。竖幅 3:4，构图横向铺开、留白在下。不画文字，不画年岁数字，不画圣人光环。右下角不生成任何水印。</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　六阶六门：三次「无所事」</div>
+    <div class="figs single">
+      <div class="figsvg"><svg viewBox="0 0 720 380" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="28" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 六阶六门：三处「无所事」，是三段做减法的地方</text>
+<line x1="44" y1="214" x2="660" y2="214" stroke="#DCD5C8"/>
+<text x="62" y="180" text-anchor="middle" font-size="15" fill="#2F2A24">十五</text>
+<circle cx="62" cy="214" r="6" fill="none" stroke="#A2503B"/>
+<text x="62" y="248" text-anchor="middle" font-size="16" fill="#2F2A24">志于学</text>
+<text x="62" y="270" text-anchor="middle" font-size="10.5" fill="#8A8074">念念在此</text>
+<text x="178" y="180" text-anchor="middle" font-size="15" fill="#2F2A24">三十</text>
+<circle cx="178" cy="214" r="7" fill="#A2503B"/>
+<text x="178" y="248" text-anchor="middle" font-size="16" fill="#2F2A24">而立</text>
+<text x="178" y="270" text-anchor="middle" font-size="10.5" fill="#A2503B">守之固</text>
+<text x="294" y="180" text-anchor="middle" font-size="15" fill="#2F2A24">四十</text>
+<circle cx="294" cy="214" r="7" fill="#A2503B"/>
+<text x="294" y="248" text-anchor="middle" font-size="16" fill="#2F2A24">不惑</text>
+<text x="294" y="270" text-anchor="middle" font-size="10.5" fill="#A2503B">无所事守</text>
+<text x="410" y="180" text-anchor="middle" font-size="15" fill="#2F2A24">五十</text>
+<circle cx="410" cy="214" r="6" fill="none" stroke="#A2503B"/>
+<text x="410" y="248" text-anchor="middle" font-size="16" fill="#2F2A24">知天命</text>
+<text x="410" y="270" text-anchor="middle" font-size="10.5" fill="#8A8074">知极其精</text>
+<text x="526" y="180" text-anchor="middle" font-size="15" fill="#2F2A24">六十</text>
+<circle cx="526" cy="214" r="6" fill="none" stroke="#A2503B"/>
+<text x="526" y="248" text-anchor="middle" font-size="16" fill="#2F2A24">耳顺</text>
+<text x="526" y="270" text-anchor="middle" font-size="10.5" fill="#8A8074">不思而得</text>
+<text x="642" y="180" text-anchor="middle" font-size="15" fill="#2F2A24">七十</text>
+<circle cx="642" cy="214" r="7" fill="#A2503B"/>
+<text x="642" y="248" text-anchor="middle" font-size="16" fill="#2F2A24">从心</text>
+<text x="642" y="270" text-anchor="middle" font-size="10.5" fill="#A2503B">无所事守之</text>
+<text x="62" y="152" font-size="10" fill="#8A8074">空心＝这一阶还要用力</text>
+<text x="660" y="152" text-anchor="end" font-size="10" fill="#A2503B">赭色＝这一阶「不必再做」</text>
+<text x="360" y="330" text-anchor="middle" font-size="11.5" fill="#2F2A24">三十「无所事志」　·　四十「无所事守」　·　七十「无所事乎守之」——朱子注里三次说「不必再做」。</text>
+<text x="360" y="352" text-anchor="middle" font-size="10.5" fill="#8A8074">进德之序，不是往身上加东西的次序，是往身上减动作的次序。</text>
+</svg></div>
+    </div>
+    <div class="figcap">义理图一 · 横轴是年岁，六点六门。赭色三点（三十、四十、七十）正是朱子注里三次「无所事」的位置——减动作的地方。</div>
+
+    <div class="h2" id="sc-21">义理图二　知的两层</div>
+    <div class="figs single">
+      <div class="figsvg"><svg viewBox="0 0 720 280" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="26" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 「不惑」与「知天命」不是重复，是知的两层</text>
+<text x="62" y="70" font-size="12" fill="#A2503B">四十　不惑</text>
+<text x="386" y="70" font-size="12" fill="#A2503B">五十　知天命</text>
+<rect x="62" y="80" width="274" height="90" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="199" y="116" text-anchor="middle" font-size="18" fill="#2F2A24">事之当然</text>
+<text x="199" y="142" text-anchor="middle" font-size="11.5" fill="#8A8074">这件事该这样，无疑</text>
+<rect x="386" y="80" width="274" height="90" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="523" y="116" text-anchor="middle" font-size="18" fill="#2F2A24">所以然之故</text>
+<text x="523" y="142" text-anchor="middle" font-size="11.5" fill="#8A8074">这件事为什么该这样</text>
+<line x1="342" y1="125" x2="376" y2="125" stroke="#DCD5C8"/>
+<polygon points="382,125 372,121 372,129" fill="#A2503B"/>
+<text x="360" y="206" text-anchor="middle" font-size="12" fill="#2F2A24">不惑是门槛，不是终点：知道了「该这样」，还算不上知道「天地为什么让它这样」。</text>
+<text x="360" y="228" text-anchor="middle" font-size="10.5" fill="#8A8074">朱子：知此则知极其精，而不惑又不足言矣。</text>
+<text x="360" y="256" text-anchor="middle" font-size="10.5" fill="#8A8074">顺序不可倒：先无疑，才谈得了其故；先知其故，才听什么都通。</text>
+</svg></div>
+    </div>
+    <div class="figcap">义理图二 · 「不惑」知当然，「知天命」知所以然；中间只隔一句「再问一层」，却不是同一层。</div>
+
+    <div class="h2" id="sc-22">义理图三　立壁到虚成</div>
+    <div class="figs single">
+      <div class="figsvg"><svg viewBox="0 0 720 360" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="360" y="28" text-anchor="middle" font-size="13" fill="#8A8074" letter-spacing="2">示意 · 三十是立壁，七十是壁不必立而虚自成</text>
+<ellipse cx="210" cy="146" rx="50" ry="9" fill="none" stroke="#A2503B" stroke-width="2"/>
+<path d="M160,146 L160,266 Q210,290 260,266 L260,146" fill="none" stroke="#A2503B" stroke-width="2"/>
+<text x="210" y="198" text-anchor="middle" font-size="11" fill="#8A8074">虚</text>
+<ellipse cx="520" cy="146" rx="50" ry="9" fill="none" stroke="#C6B8A2" stroke-width="2" stroke-dasharray="5 5"/>
+<path d="M470,146 L470,266 Q520,290 570,266 L570,146" fill="none" stroke="#C6B8A2" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="210" y="130" text-anchor="middle" font-size="14" fill="#2F2A24">三十　而立</text>
+<text x="520" y="130" text-anchor="middle" font-size="14" fill="#2F2A24">七十　从心</text>
+<rect x="96" y="190" width="34" height="34" fill="#FFFDF6" stroke="#A2503B"/>
+<text x="113" y="212" text-anchor="middle" font-size="13" fill="#2F2A24">矩</text>
+<line x1="132" y1="207" x2="152" y2="207" stroke="#DCD5C8"/>
+<polygon points="158,207 148,203 148,211" fill="#A2503B"/>
+<text x="210" y="316" text-anchor="middle" font-size="10.5" fill="#8A8074">矩拿在手上，贴着壁比</text>
+<rect x="503" y="202" width="34" height="34" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="520" y="214" text-anchor="middle" font-size="13" fill="#2F2A24">矩</text>
+<text x="520" y="316" text-anchor="middle" font-size="10.5" fill="#8A8074">矩已在内，不必再比</text>
+<line x1="300" y1="228" x2="450" y2="228" stroke="#DCD5C8"/>
+<polygon points="456,228 446,224 446,232" fill="#A2503B"/>
+<text x="376" y="218" text-anchor="middle" font-size="11" fill="#A2503B">守　→　不守</text>
+<text x="360" y="346" text-anchor="middle" font-size="10.5" fill="#8A8074">取消的是「守」这个动作，不是规矩本身：矩还在，只是不必拿在手上。</text>
+</svg></div>
+    </div>
+    <div class="figcap">义理图三 · 三十是立壁，矩在手上贴着壁比；七十是壁不必守，矩已在虚中。取消的是动作，不是规矩。</div>
+
+    <div class="h2" id="sc-23">附论一　为什么这一章通篇在写「减」</div>
+    <p>孔子自述，最容易写成「我如何如何」；这一章却几乎不写所得，只写所省。<b>不是他吝于说所得，是所得本身没法写。</b>「明白了」是什么样子？写不出。「不必再守了」写得出来——它是一个动作的消失，有形状。</p>
+    <p>这也是六阶能被后人记住的原因：<b>它把「长进」这种说不清的事，换成了六次可感的「松手」。</b>十五岁攥着，三十岁放下一点，四十岁再放一点，七十岁放完。攥着的样子人人有，放下的样子人人看得见。</p>
+
+    <div class="h2" id="sc-24">附论二　「生知」与「学而至」：一场千年的争论</div>
+    <p>程子说孔子是生而知之，「此特以己之体验，自其得于中者言之，使学者有所持循耳」。<b>这一句把两边都照顾到了：既保住了圣人的高度，又保住了这一章的用处。</b></p>
+    <p>争论的另一边是：若孔子生知，则六阶只是他的自述，与我无关；若不是生知，则六阶是人人的路，可三十不立的人怎么办？<b>两难之处在于，我们把「这一章有没有用」绑在了「孔子是不是生知」上。</b></p>
+    <p>其实不必绑。路标的作用不取决于立路标的人走得多快，只取决于它指的方向对不对。<b>孔子是生知还是学至，是经学问题；这一章能不能照着走，是读法问题。</b>两件事分开，争论就不伤人了。</p>
+
+    <div class="h2" id="sc-25">附论三　这一章能不能当时间表用</div>
+    <p>不能，但可以当尺子用。分别在这：<b>时间表是「到点必须完成」，尺子是「量一量现在卡在哪」。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">当表</div><div class="v">三十岁没立住就慌，四十岁还疑惑就羞——<b>结果是拿圣人的自述给自己判刑。</b></div></div>
+      <div class="row"><div class="k">当尺</div><div class="v">问一句：我现在是「要靠提醒」，还是「不必提醒」？<b>——卡在哪个动作上，比到了哪一岁有用得多。</b></div></div>
+    </div>
+    <p>一句话收这一课：<b>孔子把一生量成六段，不是为了给后人排考期，是为了让人知道——每过一道门，身上就轻一点。</b>轻到七十岁，连「轻」这件事都不必再想了。</p>
+  </section>
+
+<footer>
+    <div>润泽说 · 道可道之论语　｜　底本：朱熹《论语集注》</div>
+    <div>第 19 课　v1.0　（2026-11-20）</div>
+  </footer></div>
+</body>
+</html>

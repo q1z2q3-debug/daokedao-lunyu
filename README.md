@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.5**，已刊 **21 件**（前言一篇 + 学而十六章 + 为政三章 + 专题二篇）
+- 当前版本 **v0.15.6**，已刊 **22 件**（前言一篇 + 学而十六章 + 为政四章 + 专题二篇）
 
 ---
 
@@ -55,9 +55,9 @@
 | 第十六课 | 为政以德，譬如北辰 | 为政开篇：政者正也，德者得也；居其所而不动，众星自向，事简而人归。 | [16](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/16.html) |
 | 第十七课 | 诗三百，一言以蔽之 | 一句盖三百：不是诗里无邪，是读诗把人拉回正；原句咏马，孔子断章。 | [17](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/17.html) |
 | 第十八课 | 道之以政，齐之以刑 | 四器两层：政刑管手脚，德礼管脸面；免而无耻与有耻且格，分界在「耻」。 | [18](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/18.html) |
+| 第十九课 | 吾十有五而志于学 | 六阶六门：朱子注三次「无所事」——进德之序，是减动作之序；不惑知当然，知命知所以然。 | [19](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/19.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
-
 
 ---
 
