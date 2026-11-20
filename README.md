@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.17**，已刊 **27 件**（前言一篇 + 学而十六章 + 为政七章 + 专题三篇）
+- 当前版本 **v0.15.18**，已刊 **27 件**（前言一篇 + 学而十六章 + 为政七章 + 专题三篇）
 
 ---
 
