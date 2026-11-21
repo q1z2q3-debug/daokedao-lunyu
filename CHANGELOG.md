@@ -1,4 +1,5 @@
 ## 0.15.20 — 2026-11-21
+- 补：zt4 三图导出为独立 SVG 直链（`docs/fig/zt4-xiao-gou-xing.svg`、`zt4-xiao-zhang-fenbu.svg`、`zt4-si-wei-si-jie.svg`）。
 - 补：zt5 两图导出为独立 SVG 直链（`docs/fig/zt5-yao-yu-fan.svg`、`docs/fig/zt5-san-qi.svg`），供引用与二次排版。
 - 专题五入站：《孝与道：药与饭——以「道可道」重读孝》（十章、六表、两张手写 SVG，约九千字）。
 - 立题：不新造孝论，只拿作者自有的四件工具重读《论语》孝章——指月三境、第十八章药与饭、空杯（敬＝留空）、通道（继＝使通）、涌现之场（家不是房子）、第十七章四级台阶。
