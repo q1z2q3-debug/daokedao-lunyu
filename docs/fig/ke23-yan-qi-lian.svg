@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ke23 图一 颜气链：心→气→色→容 -->
+<svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 颜气链：心→气→色→容</text>
+<rect x="14" y="52" width="86" height="104" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="57.0" y="80" text-anchor="middle" font-size="16" fill="#2F2A24">心</text>
+<line x1="28" y1="90" x2="86" y2="90" stroke="#DCD5C8"/>
+<text x="57.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">敬·不敢忽忘</text>
+<text x="57.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">只有自己</text>
+<text x="57.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">知道</text>
+<text x="104.0" y="108.0" font-size="12" fill="#A2503B" text-anchor="middle">→</text>
+<rect x="109" y="52" width="86" height="104" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="152.0" y="80" text-anchor="middle" font-size="16" fill="#2F2A24">气</text>
+<line x1="123" y1="90" x2="181" y2="90" stroke="#DCD5C8"/>
+<text x="152.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">和／戾</text>
+<text x="152.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">半见：语气</text>
+<text x="152.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">节奏</text>
+<text x="199.0" y="108.0" font-size="12" fill="#A2503B" text-anchor="middle">→</text>
+<rect x="204" y="52" width="86" height="104" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="247.0" y="80" text-anchor="middle" font-size="16" fill="#A2503B">色</text>
+<line x1="218" y1="90" x2="276" y2="90" stroke="#DCD5C8"/>
+<text x="247.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">颜气</text>
+<text x="247.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">全见：眉间</text>
+<text x="247.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">那一点</text>
+<text x="294.0" y="108.0" font-size="12" fill="#A2503B" text-anchor="middle">→</text>
+<rect x="299" y="52" width="86" height="104" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="342.0" y="80" text-anchor="middle" font-size="16" fill="#A2503B">容</text>
+<line x1="313" y1="90" x2="371" y2="90" stroke="#DCD5C8"/>
+<text x="342.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">婉容</text>
+<text x="342.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">被对方</text>
+<text x="342.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">收下</text>
+<line x1="16" y1="182" x2="384" y2="182" stroke="#8A8074"/>
+<text x="16" y="197" font-size="10.5" fill="#8A8074">不可见</text>
+<text x="384" y="197" text-anchor="end" font-size="10.5" fill="#A2503B">全可见 · 被收下</text>
+<text x="200" y="175" text-anchor="middle" font-size="10.5" fill="#5C5347">越往后，越藏不住</text>
+<text x="200" y="224" text-anchor="middle" font-size="10" fill="#2F2A24">《说文》「色，颜气也」　段注「心达于气，气达于眉间」</text>
+<text x="200" y="244" text-anchor="middle" font-size="10" fill="#8A8074">《礼记·祭义》：深爱→和气→愉色→婉容（倒读即操作）</text>
+</svg>

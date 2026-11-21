@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第二十三课 色难（为政 2.8）</title>
+<meta name="description" content="《论语·为政》2.8 子夏问孝：色难。有事弟子服其劳；有酒食先生馔，曾是以为孝乎。通释：色的字源（颜气）、两读考辨、敬的可见性、家里的天气。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 23 课 / 498</div>
+  </div>
+<div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">两读</a><a href="#sc-d">三句结构</a><a href="#sc-e">可见性</a><a href="#sc-f">家的天气</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 颜气</a><a href="#sc-21">义理二 三句</a><a href="#sc-22">附论一 颜气</a><a href="#sc-23">附论二 情感劳动</a><a href="#sc-24">附论三 边界</a><a href="#sc-25">附论四 子夏</a></div>
+  </div>
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>色　难</h1>
+    <div class="h1-sub">为政 2.8　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子夏问孝。子曰：</span>「<ruby>色<rt>sè</rt></ruby>难。有事，弟子服其劳；有酒食，先生<ruby>馔<rt>zhuàn</rt></ruby>，<ruby>曾<rt>zēng</rt></ruby>是以为孝乎？」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>色</span></div><div class="tzcap"><span>6 画</span><span>脸上的气</span></div></div>
+      <div class="tzitem"><div class="cell"><span>难</span></div><div class="tzcap"><span>10 画</span><span>不容易</span></div></div>
+      <div class="tzitem"><div class="cell"><span>馔</span></div><div class="tzcap"><span>15 画</span><span>饭食</span></div></div>
+      <div class="tzitem"><div class="cell"><span>曾</span></div><div class="tzcap"><span>12 画</span><span>难道</span></div></div>
+      <div class="tzitem"><div class="cell"><span>服</span></div><div class="tzcap"><span>8 画</span><span>代他做</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">色</div><div class="v"><b>不是「颜色」，是「脸色」。</b>——《说文》说：「色，颜气也。」<b>心里有什么气，脸上就有什么色。</b>——所以「色」这个字，本来就是从心里长到脸上的东西。</div></div>
+      <div class="row"><div class="k">难</div><div class="v"><b>不容易做到。</b>——孔子先说一个「难」字，是老实：<b>一天好脸色不难，天天好脸色难。</b></div></div>
+      <div class="row"><div class="k">馔</div><div class="v"><b>饭食；这里作动词，给吃。</b>——<b>「先生馔」＝让长辈先吃、吃好。</b></div></div>
+      <div class="row"><div class="k k2">曾</div><div class="v"><b>读 zēng，是「难道」「竟」。</b>——<b>「曾是以为孝乎」＝难道这也算孝吗？</b>——这是一句反问，不是夸奖。</div></div>
+      <div class="row"><div class="k">服</div><div class="v"><b>做、承担。</b>——<b>「服其劳」＝把他的活接过来干。</b>——<b>这是手的事，不是脸的事。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>替父母干活、给父母饭吃，都不算难；难的是——你脸上那口气，是不是和气的。</b>（为政 2.8）</p>
+    <div class="scene"><b>孔子把三件事摆在一起：脸、干活、吃饭。</b>——<b>前一件最难，后两件最容易；可人常常只做后两件，就把自己算作孝了。</b></div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p>子夏来问孝。孔子只答两个字：<b>「色难。」</b>——<b>脸，最难。</b></p>
+    <p>然后他把两件容易的说出来：<b>家里有事，年轻人抢着干；有酒有饭，先让长辈吃。</b>——<b>这两件事，谁都做得到，雇个人也做得到。</b></p>
+    <p>最后一句是反问：<b>「曾是以为孝乎？」——难道这样就算孝了吗？</b>——<b>他没有说不算，他让你自己想。</b></p>
+    <div class="scene"><b>为什么先讲「难」，再讲两件「容易」？</b>——<b>因为人最容易拿「容易的」去顶「难的」。</b>——<b>活干了、饭端了，脸却一直阴着；这一章就是问你：那算不算？</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>放学回家，书包一扔，脸一沉，一句话不说。</b>——<b>妈妈问「怎么了」，你说「没事」。</b>——<b>事是没事，气已经进了屋。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>奶奶让你帮着拿个东西，你拿了，可脸是绷着的。</b>——<b>东西到了，人没到。</b>——<b>她要的不是那个东西，是你拿东西时的那个样子。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>同样一件事，你抬头笑了一下，说「好，我这就去」。</b>——<b>事情一样，家里不一样了。</b></div></div>
+    </div>
+    <div class="scene"><b>三个动作，差在哪儿？</b>——<b>差在脸上那口气。</b>——<b>手做的事，一天就做完；脸说的话，一整天都在说。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>「色难」是让我装笑脸吗？</b>——<b>不是装，是和。</b>——<b>装出来的笑，撑不过一顿饭；和气的脸，是从心里出来的。</b>——孔子先说「难」，就是知道装不了。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>我心情不好，也不能让家里知道吗？</b>——<b>可以说，不要砸。</b>——<b>「我今天很累，想安静一会儿」，这是说；一句话不说、摔门进屋，这是砸。</b>——<b>砸出去的气，最后都落在最亲的人身上。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>干了活、给了饭，还不算孝？</b>——<b>算一半。</b>——<b>手到了，脸没到，只到一半。</b>——<b>孔子不是不要你干活，是告诉你：干活不是全部。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>进门三秒，换一张脸。</b>——<b>门外的事留在门外；进门那一声「我回来了」，是全家的天气。</b></div>
+    <div class="scene"><b>难的不是笑，是「不把坏气带进屋」。</b>——<b>你今天忍住的那句话，就是给家人的一份礼。</b></div>
+    <div class="scene"><b>孝，很多时候不在大事上，在脸上。</b>——<b>大事一辈子几回，脸色一天几十回。</b>——<b>几十回加起来，就是一个人在家里过的日子。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">勘俗</div><div class="v"><b>勘俗见。</b>——<b>不要把「色难」讲成「孩子要给父母好脸色」的规矩。</b>——<b>它先说一个「难」字，是先承认人做不到常和；拿它去要求孩子，正好把它变成新的压力。</b>讲的时候，先说大人自己的脸。</div></div>
+      <div class="pair"><div class="k2">对照</div><div class="v"><b>现代对照。</b>——今天的「色」，常常不在脸上，在语气里：<b>微信回一个「嗯」，电话里那声叹气，视频里那张没睡醒的脸。</b>——<b>器变了，气没变。</b></div></div>
+      <div class="pair"><div class="k2">主线</div><div class="v"><b>常变主线。</b>——孝的器物一直在变：<b>灶前、病床边、转账、护工、视频通话（相）；「色」不变（常）。</b>——<b>换了地方，还是那张脸在说话。</b></div></div>
+      <div class="pair"><div class="k2">教学</div><div class="v"><b>教与学二分。</b>——<b>色是施：大人先给这个家定天气。</b>——<b>孩子学的不是道理，是你进门时那张脸。</b>——<b>你天天阴着脸，讲一百遍「要孝顺」也没用。</b></div></div>
+      <div class="pair"><div class="k2">时代</div><div class="v"><b>时代落点。</b>——外包时代，饭能外包、护工能外包、陪诊能外包，<b>唯独「进门那一眼」外包不了。</b>——<b>还有一条：别把「好脸色」做成考核。</b>——一考核，脸就成了表演；<b>表演的和气，比冷脸更伤人。</b></div></div>
+      <div class="pair"><div class="k2">融西</div><div class="v"><b>融西对照。</b>——社会学把「照护里的脸色」叫<b>情感劳动</b>（emotional labor，Hochschild）：<b>空乘要笑、护士要稳，笑和稳都是要花力气的活。</b>——<b>所以它不该由一个人无限供应。</b>照护研究也讲<b>face-work</b>（面子的经营）：<b>人在一起，彼此都在替对方留面子。</b>——<b>路不同：他们从「劳动值多少」入手，我们从「气从哪儿来」入手；落点相同——脸是要用力气的，用力气的人要被看见。</b></div></div>
+      <div class="pair"><div class="k2">一件</div><div class="v"><b>可做一件。</b>——<b>全家定一条「进门的规矩」：进门先出声，说一句「我回来了」；谁今天气不好，可以说「我今天不太好，先让我静十分钟」。</b>——<b>不砸门、不摔包、不阴着脸进屋。</b>——<b>这条规矩，大人先守。</b></div></div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>色　难</h1>
+    <div class="h1-sub">为政 2.8　甲篇·为政（第八章）　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子夏问孝。子曰：</span>「色难。有事，弟子服其劳；有酒食，先生馔，曾是以为孝乎？」
+    </div>
+
+    <h2 id="sc-lian" style="margin-top:0">零　连读：四问孝，一路剥到脸上</h2>
+    <p><b>2.5 立礼</b>——无违，生事死葬祭以礼；<b>2.6 立心</b>——唯其疾之忧；<b>2.7 立敬</b>——养之外要有敬，不敬无以别；<b>2.8 立色</b>——敬之外要有色，色难。</p>
+    <p><b>四章是一条越剥越里的路，也是一条越剥越外的路。</b>——礼在最外，是度数、是做法；心在最里，是一条命、一场病；敬在里外之间，是把人当人；<b>色又回到最外，是脸上那口气。</b>——<b>外→里→里外之间→外：绕了一圈，落在同一处，只是这一圈把「外」换了个性质。</b>前两章的外是「事」，这一章的外是「气」。</p>
+    <p><b>为什么最后落在脸上？</b>——<b>因为礼可以照做，忧可以说出口，敬可以自认，唯有脸，藏不住。</b>——<b>敬在心里，谁也不知道；脸色一出来，全知道。</b>——孔子把最后一问交给脸，是因为<b>脸是唯一一件不能自己给自己打分的事。</b></p>
+    <div class="scene"><b>这一章也是四问里最不给退路的一章。</b>——<b>前三章都还能「做给我看」，这一章连做都做不了。</b>——<b>脸不能预约，不能排练，不能补拍。</b></div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">子夏</div><div class="v"><b>姓卜，名商，字子夏，温人。</b>孔门四科与子游同列「文学」，<b>长于典籍、精于条理</b>（《礼记·檀弓》《曾子问》多记其问）。<b>问孝而答以「色」，正对着「文胜而质薄」处下针。</b>——<b>2.7 对子游（长于礼）答「敬」，2.8 对子夏（长于文）答「色」：两问都避开了问者的长处。</b></div></div>
+      <div class="row"><div class="k">色</div><div class="v"><b>《说文》：「色，颜气也。」</b>——<b>不是颜色，是脸色；不是皮肤，是气。</b>——<b>段玉裁注：「颜者，两眉之间也。心达于气，气达于眉间，是之谓色。」</b>——<b>这一句把「色」的来历说尽了：心里的东西，先成气，再上眉间。</b></div></div>
+      <div class="row"><div class="k">难</div><div class="v"><b>不容易。</b>——<b>孔子不先说「当如何」，先说「难」。</b>——<b>这两个字是全章的诚实：他把标准立在「做不到的地方」。</b></div></div>
+      <div class="row"><div class="k k2">弟子</div><div class="v"><b>旧注多指家中少者（子弟），与下文「先生」相对。</b>——<b>不是「学生」，是「为人弟、为人子者」。</b>（一说指门人，于文义亦通，见存疑二。）</div></div>
+      <div class="row"><div class="k k2">先生</div><div class="v"><b>先于己而生者：父兄、长辈。</b>——<b>与「弟子」是一对时间词：谁先来，谁后到。</b>——<b>孝的秩序，先立在一个「先后」上。</b></div></div>
+      <div class="row"><div class="k">馔</div><div class="v"><b>饭食；此处作动词，「使之食」。</b>——<b>郑注：「馔，饮食也。」</b>——<b>「先生馔」＝先让长辈吃。</b></div></div>
+      <div class="row"><div class="k k2">曾</div><div class="v"><b>读 zēng，副词，「乃」「竟」。</b>——<b>「曾是以为孝乎」＝难道竟把这当作孝吗？</b>——<b>反问，不是肯定。</b>（一读 céng「曾经」，于句法不合，见存疑四。）</div></div>
+    </div>
+    <p><b>句读三层，一层一转：</b></p>
+    <p><b>其一，「色难」单独成句。</b>——两个字，先立一个标准，不解释。<b>后面两句都是陪衬，都是「还不够」。</b></p>
+    <p><b>其二，「有事，弟子服其劳；有酒食，先生馔」——两件都是「事」，不是「心」。</b>——<b>「服其劳」是手，「馔」是口；两件都办得到，也都能雇人办。</b></p>
+    <p><b>其三，「曾是以为孝乎」——「曾」字一读，全章就翻过来了。</b>——读作「曾经」，这一句成了追述；读作「竟、乃」，它才是反问。<b>一字之读，定一章之向。</b></p>
+
+    <div class="h2" id="sc-c">二　两读：难在谁的脸上</div>
+    <p><b>「色难」的主体，历来两读，句法都通。</b></p>
+    <p><b>甲读：亲之色难承顺。</b>包咸：「谓承顺父母颜色乃为难也。」朱子从之。<b>意思是：父母的脸不好读——他今天不高兴，是病了、是累了、还是怨你了？读准最难。</b></p>
+    <p><b>乙读：子之色难持。</b>——<b>事亲而能常和颜悦色，最难。</b>——<b>意思是：你的脸难管——一天和气容易，天天和气难。</b></p>
+    <div class="scene"><b>两读不是谁对谁错，是问的两件事。</b>——<b>甲读问「你会不会读他」，乙读问「你管不管得住自己」。</b>——<b>一个向外看，一个向内看；合起来才是完整的「色」。因为脸是双向的：你在读他，他也在读你。</b></div>
+    <p><b>本课以甲读为主，乙读并存，理由有三：</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>与下文相承。</b>下文「服劳」「馔食」都是「做事、给食」，即 2.7 的「养」层；<b>孔子把这两件摆出来说「还不够」，缺的那一件，正是「读他的脸、顺他的意」。</b>甲读接得上。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>与 2.7 成对称。</b>——<b>2.7：养之外要有敬；2.8：敬之外要有色。</b>——<b>敬是不可见的里，色是可见的表；表不副里，里就等于没有。</b>——甲读讲的正是这个「表」。</div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>与「难」字相合。</b>——<b>承顺颜色之所以难，因为它要求「察」：察言、察色、察那份没说出口的意。</b>——<b>这比「管住自己的脸」更费心力，也更合孔子对子夏「文胜」的警。</b></div></div>
+    </div>
+    <p><b>但乙读不可废。</b>——<b>因为「难在谁的脸上」这个问题，今天已经反过来了：不是子女难读父母的脸，是父母在看子女的脸。</b>——<b>这一层，见第五节。</b></p>
+
+    <div class="h2" id="sc-d">三　三句的结构：为什么把「事」与「食」摆出来</div>
+    <p><b>这一章只有三句，结构却极工：一个标准（色难）、两个反例（服劳、馔食）、一句反问（曾是以为孝乎）。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">标</div><div class="v"><b>色难。</b>——<b>把标准立在「最难」处，而不是「最低」处。</b>——<b>这是孔子的习惯：他不给人一条能轻松达标的线。</b></div></div>
+      <div class="row"><div class="k">反</div><div class="v"><b>服其劳、先生馔。</b>——<b>两件都是「可外包」的事。</b>——<b>它们不是错，是不全；不是不该做，是做了也只到「事」的层面。</b></div></div>
+      <div class="row"><div class="k">问</div><div class="v"><b>曾是以为孝乎。</b>——<b>反问不答，留给你。</b>——<b>孔子的问法一贯如此：他不下判词，他让你自己判。</b></div></div>
+    </div>
+    <p><b>为什么偏偏挑这两件？</b>——<b>因为这两件是「孝」最容易冒充的地方。</b>——<b>干完活、端上饭，人最容易在心里结账：「我今天孝了。」</b>——<b>这一章就是把这笔账掀开：你结的是事的账，不是人的账。</b></p>
+    <p><b>还要看清一层：这两件本身有高下。</b>——「服其劳」是出力，「先生馔」是让食。<b>前者是「我替你」，后者是「你先吃」。</b>——<b>后者已经有了「位置」的意思：把他放在前头。</b>——<b>所以孔子并非把两件拉平；他是由「出力」推到「让位」，再问：让了位，够不够？还不够——还差一张脸。</b></p>
+    <div class="scene"><b>用一句话收这一节：事可以做完，脸做不完。</b>——<b>事有终点，脸没有终点；孝的难，难在没有终点。</b></div>
+
+    <div class="h2" id="sc-e">四　可见性：敬为什么必须落到脸上</div>
+    <p><b>2.7 说敬，2.8 说色。两章合看，得一条原理：心里的敬，必须落到对方能感知的地方，否则对方收到的仍只是「养」。</b></p>
+    <p><b>这条原理有个朴素的根据：父母看不见你的心，只看得见你的脸。</b>——<b>《说文》把「色」训作「颜气」，正是这个道理：气从心里出来，到眉间才成「色」；没到眉间，它就还在里面，别人收不到。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">心</div><div class="v"><b>敬。</b>——<b>不敢忽忘。</b>——<b>只有你自己知道。</b>——<b>它可能很真，也可能只是自我的安慰。</b></div></div>
+      <div class="row"><div class="k">气</div><div class="v"><b>和气／戾气。</b>——<b>心里的东西在这里变成可感的东西：语气、节奏、呼吸。</b>——<b>这一层已经半可见。</b></div></div>
+      <div class="row"><div class="k">色</div><div class="v"><b>颜气。</b>——<b>眉间的那一点，全可见。</b>——<b>对方收到的，就是这一层。</b></div></div>
+    </div>
+    <p><b>三者是一条链，不是三件事：心→气→色。</b>——<b>所以「色」不能单独修：只修脸，是表演；只修心，对方收不到。</b>——<b>能修的是中间那一环：让心里的敬，先变成气，再上脸。</b></p>
+    <div class="scene"><b>由此得本课第一个判断：色不是「表情管理」，是「敬的最后一公里」。</b>——<b>配送不到，货就等于没发。</b></div>
+    <p><b>也要说清：这不是要人「永远微笑」。</b>——<b>《礼记·祭义》说得细：「孝子之有深爱者，必有和气；有和气者，必有愉色；有愉色者，必有婉容。」</b>——<b>注意这个次序：深爱→和气→愉色→婉容。</b>——<b>它是一条因果链，不是一个表情标准；先有爱，才有和气，装不出来。</b>——<b>所以孔子说「难」：难的是一整条链，不是最后那一格。</b></p>
+
+    <div class="h2" id="sc-f">五　反向：家里的天气由谁定</div>
+    <p><b>这一章有一个今天才显出来的反面。</b>——<b>原意是「子女读父母的脸」，今天的常见情形是「父母看子女的脸」。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>孩子放学回来脸一沉，全家安静。</b>——<b>谁都不敢问，怕碰着。</b>——<b>一张脸，定了这个家一晚上的天气。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>老人吃饭时先看儿女的脸色，再动筷子。</b>——<b>想说的话咽回去，想吃的菜不敢夹。</b>——<b>这是「畏」，不是「敬」。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>一家人都在小心翼翼地「照顾情绪」，没人说真话。</b>——<b>表面和气，里头结冰。</b></div></div>
+    </div>
+    <p><b>三种情形，是同一件事：家里的天气，被交给了最不安的那个人。</b>——<b>这不是孝，也不是爱；这是把「色」当成了权力。</b></p>
+    <p><b>所以 2.8 有两个方向，缺一不可：</b>——<b>向上，子女要管住自己的脸（乙读）；向下，长辈不该被要求去读晚辈的脸（甲读的错位）。</b>——<b>合起来是一条：家里的天气，该由最有能力的人来定，而不是由最会闹的人来定。</b></p>
+    <div class="scene"><b>这一条与专题五的「四级温度」接得上：</b>——<b>「下知有之」是父母只知道有你这个孩子，不觉你在用力；「畏之」是父母怕你的脸色。</b>——<b>2.8 正好是这两级之间的那道门：你进门那张脸，决定这个家今天在哪一级。</b></div>
+
+    <div class="h2" id="sc-h">六　章旨</div>
+    <p><b>一句。</b>孝到「事」与「食」还只是半程；<b>难的是那张脸——把心里的敬送到对方眉间。</b></p>
+    <p><b>一反。</b>这不是否定服劳与馔食。<b>手到了是底，脸到了才算人到了</b>；它否定的只是「干完活就算孝完」的那份自满。</p>
+    <p><b>一辨。</b>色不是「表情管理」，也不是「永远微笑」。<b>《祭义》的次序是深爱→和气→愉色→婉容：先有里，才有表。</b>——<b>只修表，就是表演；只修里，对方收不到。</b></p>
+    <div class="scene"><b>本章在《为政》里的位置，是「由分入微」。</b>——<b>2.7 划了一条线（养／敬），2.8 把这条线落到一张脸上（敬／色）。</b>——<b>线是给人看的，脸是给人受的；孝最后要落在「受」这一头。</b></div>
+
+    <div class="h2" id="sc-i">七　存疑五条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「色难」的主体。</b>甲：亲之色难承顺（包咸、朱子）；乙：子之色难持。<b>两读句法皆通，本课以甲为主、乙并存</b>，因甲与下文「服劳」「馔食」相承，且与 2.7「养／敬」成对称。</div></div>
+      <div class="q"><span>02</span><div><b>「弟子」「先生」所指。</b>一说家中少者与长者（子弟／父兄），一说门人与师长。<b>本课从「家中少长」读</b>，因此章在四问孝之列，语境在家；门人一读亦通，标为旁参。</div></div>
+      <div class="q"><span>03</span><div><b>「馔」是名词还是动词。</b>郑注「馔，饮食也」，作名词；句法上「先生馔」可读「使长者食」。<b>两读所指同，本课作动词用</b>，取其「先让」之义更显。</div></div>
+      <div class="q"><span>04</span><div><b>「曾」的读法与义。</b>读 zēng（乃、竟），全章为反问；读 céng（曾经），则成追述，与「以为孝乎」语气不合。<b>本课从 zēng</b>，古今注家多同。</div></div>
+      <div class="q"><span>05</span><div><b>此答是否因材施教。</b>子夏长于文学，故以「色」警其「文胜而质薄」；《檀弓》《曾子问》多记其问礼，可作旁证。<b>然注家无明文，标为旁参，不作定论。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a"><b>「色难」就是要求孩子对父母笑脸相迎。</b></div><div class="b"><b>它先承认「难」，不是拿来考核的。</b>——<b>《祭义》的次序是深爱→和气→愉色→婉容；先有里，才有表。</b>把它做成规矩，正好把它变成表演。</div></div>
+      <div class="pair"><div class="a"><b>活干了、饭端了，孝就尽到了。</b></div><div class="b"><b>手到了，脸没到，只到一半。</b>——<b>「曾是以为孝乎」问的就是这一半。</b>事可外包，脸不可外包。</div></div>
+      <div class="pair"><div class="a"><b>心情不好是自己的事，家人应当体谅。</b></div><div class="b"><b>可以说，不要砸。</b>——<b>「我今天很累，让我静一会儿」是交代；摔门进屋是砸。</b>——<b>体谅不是义务，交代才是本分。</b></div></div>
+      <div class="pair"><div class="a"><b>「色」是子女的事，与长辈无关。</b></div><div class="b"><b>脸是双向的。</b>——<b>子女要管住自己的脸，长辈也不该让全家去读自己的脸。</b>——<b>家里的天气，该由最有能力的人定，不该由最会闹的人定。</b></div></div>
+      <div class="pair"><div class="a"><b>和颜悦色就是顺从，不能顶嘴。</b></div><div class="b"><b>色与谏不冲突。</b>——<b>4.18 许「几谏」：话可以说，脸不可以冷。</b>——<b>难就难在这里：忠言而不冷脸。</b></div></div>
+      <div class="pair"><div class="a"><b>只要心里敬，脸色差一点无所谓。</b></div><div class="b"><b>心里敬，对方收不到，等于没送到。</b>——<b>《说文》：「色，颜气也」——气不到眉间，就还在你身上。</b>——<b>敬的最后一公里，是脸。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-k">九　跨典六条</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>《礼记·祭义》：「孝子之有深爱者，必有和气；有和气者，必有愉色；有愉色者，必有婉容。」</b>——<b>四层是一条因果链，不是四条规定。</b>——<b>本课「颜气链」即由此出：爱→气→色→容。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>《礼记·曲礼上》：「视于无形，听于无声。」</b>——<b>承顺颜色之极：他没说，你已经听见。</b>——<b>这是甲读的延长线，也正是它「难」的地方。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>《论语·里仁》4.18：「又敬不违，劳而不怨。」</b>——<b>「不怨」是色的里子：脸上不显，心里不积。</b>——<b>积怨的脸，早晚要露。</b></div></div>
+      <div class="row"><div class="k k2">四</div><div class="v"><b>《孝经·纪孝行》：「养则致其乐。」</b>——<b>「乐」是养的标准，也是色的结果：他乐，说明你这张脸送到了。</b></div></div>
+      <div class="row"><div class="k k2">五</div><div class="v"><b>《孟子·尽心上》：「爱而不敬，兽畜之也。」</b>——<b>爱、敬、色三层：爱是心里的，敬是分寸上的，色是脸上的。</b>——<b>孟子点破了前两层，孔子补上了第三层。</b></div></div>
+      <div class="row"><div class="k k2">六</div><div class="v"><b>《大戴礼记·曾子事父母》：「夫养之内，不悦于色，非孝也。」</b>（此语流传甚广，然今本文字有异，姑标旁参。）——<b>意思与本章同：养之内若无悦色，仍不算孝。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-19">图一　端饭的手与低下的眼</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一 · 待图</div>
+        <div class="ph">图位：竖幅 3:4 水墨。灶间或堂下，少年双手捧碗递上，身微俯、目略垂；长者坐于案后，一手扶案、一手来接，抬眼看他。两人之间只有一只碗，碗上热气很淡。室中无第三人，光从门缝斜入，落在两人中间那道空隙上。</div>
+        <div class="read"><b>读图三处：</b>——<b>手</b>：双手捧，是「服其劳」；<b>眼</b>：少年目垂，未必是敬，也可能是心虚；长者抬眼，是在读他的脸——<b>这一眼就是「色难」的现场</b>；<b>空隙</b>：光落在两人之间，不在碗上——<b>说明这一章的难处，不在那只碗，在碗上那一段距离。</b></div>
+      </div>
+    </div>
+
+    <div class="h2" id="sc-20">义理图一　颜气链：心→气→色→容</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 颜气链：心→气→色→容</text>
+<rect x="14" y="52" width="86" height="104" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="57.0" y="80" text-anchor="middle" font-size="16" fill="#2F2A24">心</text>
+<line x1="28" y1="90" x2="86" y2="90" stroke="#DCD5C8"/>
+<text x="57.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">敬·不敢忽忘</text>
+<text x="57.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">只有自己</text>
+<text x="57.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">知道</text>
+<text x="104.0" y="108.0" font-size="12" fill="#A2503B" text-anchor="middle">→</text>
+<rect x="109" y="52" width="86" height="104" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="152.0" y="80" text-anchor="middle" font-size="16" fill="#2F2A24">气</text>
+<line x1="123" y1="90" x2="181" y2="90" stroke="#DCD5C8"/>
+<text x="152.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">和／戾</text>
+<text x="152.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">半见：语气</text>
+<text x="152.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">节奏</text>
+<text x="199.0" y="108.0" font-size="12" fill="#A2503B" text-anchor="middle">→</text>
+<rect x="204" y="52" width="86" height="104" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="247.0" y="80" text-anchor="middle" font-size="16" fill="#A2503B">色</text>
+<line x1="218" y1="90" x2="276" y2="90" stroke="#DCD5C8"/>
+<text x="247.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">颜气</text>
+<text x="247.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">全见：眉间</text>
+<text x="247.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">那一点</text>
+<text x="294.0" y="108.0" font-size="12" fill="#A2503B" text-anchor="middle">→</text>
+<rect x="299" y="52" width="86" height="104" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="342.0" y="80" text-anchor="middle" font-size="16" fill="#A2503B">容</text>
+<line x1="313" y1="90" x2="371" y2="90" stroke="#DCD5C8"/>
+<text x="342.0" y="110" text-anchor="middle" font-size="10" fill="#5C5347">婉容</text>
+<text x="342.0" y="130" text-anchor="middle" font-size="10" fill="#8A8074">被对方</text>
+<text x="342.0" y="145" text-anchor="middle" font-size="10" fill="#8A8074">收下</text>
+<line x1="16" y1="182" x2="384" y2="182" stroke="#8A8074"/>
+<text x="16" y="197" font-size="10.5" fill="#8A8074">不可见</text>
+<text x="384" y="197" text-anchor="end" font-size="10.5" fill="#A2503B">全可见 · 被收下</text>
+<text x="200" y="175" text-anchor="middle" font-size="10.5" fill="#5C5347">越往后，越藏不住</text>
+<text x="200" y="224" text-anchor="middle" font-size="10" fill="#2F2A24">《说文》「色，颜气也」　段注「心达于气，气达于眉间」</text>
+<text x="200" y="244" text-anchor="middle" font-size="10" fill="#8A8074">《礼记·祭义》：深爱→和气→愉色→婉容（倒读即操作）</text>
+</svg>
+    </div>
+    <p>此图据《说文》「色，颜气也」与段注「心达于气，气达于眉间」，再合《礼记·祭义》四层次序而成。<b>四个格，一条链：越是往后，越可见。</b>——<b>「心」只有自己知道，「气」半可见，「色」全可见，「容」被对方收下。</b>——<b>所以敬要送到，必须走完这条链；停在第一格，等于没发。</b></p>
+
+    <div class="h2" id="sc-21">义理图二　三句：一个标准，两个反例，一句反问</div>
+    <div class="figs single">
+      <svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 一个标准，两个反例，一句反问</text>
+<rect x="16" y="38" width="368" height="72" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="32" y="63" font-size="15" fill="#A2503B">色难</text>
+<text x="358" y="63" text-anchor="end" font-size="10" fill="#8A8074">立标</text>
+<text x="32" y="84" font-size="10" fill="#5C5347">标准立在「最难」处：把心里的敬送到对方眉间</text>
+<text x="32" y="102" font-size="10" fill="#8A8074">难在整条链，不在最后那一格</text>
+<text x="16" y="128" font-size="10" fill="#8A8074">两个反例——都到「事」，都不到「人」</text>
+<rect x="16" y="138" width="176" height="62" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="30" y="162" font-size="13.5" fill="#2F2A24">服其劳</text>
+<text x="30" y="182" font-size="10" fill="#5C5347">手 · 替他做</text>
+<text x="30" y="196" font-size="10" fill="#8A8074">可外包：雇得到</text>
+<rect x="208" y="138" width="176" height="62" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="222" y="162" font-size="13.5" fill="#2F2A24">先生馔</text>
+<text x="222" y="182" font-size="10" fill="#5C5347">口 · 先让他吃</text>
+<text x="222" y="196" font-size="10" fill="#8A8074">可外包：办得到</text>
+<text x="200" y="222" text-anchor="middle" font-size="10.5" fill="#A2503B">↓ 只做到这两件，够不够？</text>
+<rect x="16" y="232" width="368" height="44" fill="none" stroke="#A2503B" stroke-dasharray="4 4"/>
+<text x="200" y="258" text-anchor="middle" font-size="13.5" fill="#A2503B">「曾是以为孝乎？」</text>
+<text x="200" y="292" text-anchor="middle" font-size="10" fill="#8A8074">反问不答：孔子把判词留给你</text>
+</svg>
+    </div>
+    <p>两图合看：<b>图一是「链」——讲色从哪里来、到哪里去；图二是「章」——讲孔子怎样把标准、反例、反问排成一句。</b>——<b>链告诉你「难在哪儿」，章告诉你「为什么难也要做」。</b>——<b>合起来是一句话：气要到眉间，事才算完。</b></p>
+
+    <div class="h2" id="sc-22">附论一　「颜气」：一个字的生理学</div>
+    <p><b>「色」这个字，古人造得很实。</b>《说文》：「色，颜气也。从人从卪。」——<b>颜，是两眉之间；气，是呼吸与情绪之间的那点东西。</b>——<b>段注说得更细：「颜者，两眉之间也。心达于气，气达于眉间，是之谓色。」</b></p>
+    <p><b>这句话把三件事连起来了：心、气、眉间。</b>——<b>心里一动，气先变；气一变，眉间先露。</b>——<b>这就是为什么人可以说谎，却很难一直说谎：话是嘴的事，色是眉间的事。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>「气」先于「色」。</b>——<b>你还没想好怎么说话，脸已经先表态了。</b>——<b>所以「管住脸」这件事，从「管住气」开始：先让呼吸慢下来。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>「色」是可读的。</b>——<b>父母读子女的脸，读了几十年，几乎不会错。</b>——<b>你以为藏住了，他早看见了。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>「容」是色留下来的余温。</b>——<b>婉容不是笑，是那张脸走了以后，屋里还剩下的那点暖气。</b>——<b>这才是对方真正收下的东西。</b></div></div>
+    </div>
+    <p><b>所以「色难」的难，不在技巧，在源头：</b>——<b>气不顺，色不会和；心不敬，气不会顺。</b>——<b>三步倒推：想有婉容，先有愉色；想有愉色，先有和气；想有和气，先有深爱。</b>——<b>《祭义》那段话，倒着读才是操作手册。</b></p>
+    <div class="scene"><b>一句话收：色是心里的事漏到脸上。</b>——<b>要它不漏，得先让心里那件事是真的。</b></div>
+
+    <div class="h2" id="sc-23">附论二　情感劳动：脸也是要费力气的</div>
+    <p><b>「和颜悦色」听着轻，做起来重。</b>——<b>社会学把这个叫「情感劳动」（emotional labor）：为了让对方感到安稳，人要在脸上做一份工。</b>——<b>空乘要笑，护士要稳，服务员要忍——都是要花力气的活，只是不计工钱。</b></p>
+    <p><b>照护里的情感劳动最重，因为它没有下班。</b>——<b>护工有班次，子女没有；病人可以发脾气，照护者不可以。</b>——<b>这就是为什么「色难」在长照里会变成「色更难」：不是不想和，是没有力气和。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>先承认它是劳动。</b>——<b>「我一直在笑」不是理所应当，是一件耗人的事。</b>——<b>承认了，才谈得上分担。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>再给它排班。</b>——<b>一个人不可能全天和颜；要有人替手，要有地方放下脸。</b>——<b>专题五说「不殆」：他不被拖垮，你也不被拖垮。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>最后别向病人要。</b>——<b>不要把「你要对我笑」变成对病人的要求。</b>——<b>他已经在受病，不能再受一张脸的债。</b></div></div>
+    </div>
+    <p><b>这一层，是本课对 2.8 的补正：</b>——<b>孔子说「色难」，是说它难；没有说它该由一个人独自难到底。</b>——<b>「难」字本身，就允许人说「我做不到」。</b>——<b>把「色难」读成「你必须做到」，是把一句诚实的话读成了一道鞭子。</b></p>
+    <div class="scene"><b>一句话收：脸是要费力气的；费力气的活，要有人换手。</b></div>
+
+    <div class="h2" id="sc-24">附论三　三条边界</div>
+    <p><b>这一章好讲，也最容易被讲成「你要对父母笑」的规训。三条先划清：</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k">一</div><div class="v"><b>不拿它责人。</b>——<b>「你这是什么脸色」这句话一出口，这一章就变成了刀。</b>——<b>它是照自己的镜子，不是照别人的灯。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>不把色做成表演。</b>——<b>脸上带笑、心里记账，对方一定读得出来。</b>——<b>表演的和气，比冷脸更冷：冷脸是没到，假笑是骗到。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>不因色废事。</b>——<b>脸再好，饭没端上、药没买回，也是空谈。</b>——<b>色是最后一公里，不是全程。</b></div></div>
+    </div>
+    <p><b>三条守住，这一章就只是两句话：手要到，脸也要到。</b>——<b>手到是事，脸到是人；少一样，都只到一半。</b></p>
+
+    <div class="h2" id="sc-25">附论四　子夏：为什么对他讲「色」</div>
+    <p><b>四问孝，四个学生，四种答法，没有一句重复。</b>——<b>2.5 对孟懿子答「无违」，讲礼；2.6 对孟武伯答「唯其疾之忧」，讲心；2.7 对子游答「敬」，讲分界；2.8 对子夏答「色」，讲脸上那口气。</b></p>
+    <p><b>四个人，四种病：</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k k2">孟懿子</div><div class="v"><b>鲁国三家之一，有权有势。</b>——<b>他的病是「以势待亲」：容易把孝做成排场。</b>——<b>故答「无违」：回到礼的度数上。</b></div></div>
+      <div class="row"><div class="k k2">孟武伯</div><div class="v"><b>懿子之子，年少而躁。</b>——<b>他的病是「以忧代孝」：把担心做成表演。</b>——<b>故答「唯其疾之忧」：把忧收到一条命上。</b></div></div>
+      <div class="row"><div class="k k2">子游</div><div class="v"><b>长于礼，重仪节。</b>——<b>他的病是「以礼代敬」：礼数周到，人不在。</b>——<b>故答「敬」：不敢忽忘。</b></div></div>
+      <div class="row"><div class="k k2">子夏</div><div class="v"><b>长于文，重条理。</b>——<b>他的病是「以文代质」：说得清、做得齐，气不和。</b>——<b>故答「色」：把话说不到的地方，交给脸。</b></div></div>
+    </div>
+    <p><b>这不是附会，是《论语》的常态：孔子的答，从来对着人，不对着题。</b>——<b>同一个「孝」字，四个答案，因为四个人缺的不是同一样东西。</b>——<b>这也正是读《论语》最要紧的一条：先看他在对谁说，再看他说了什么。</b></p>
+    <div class="scene"><b>一句话收：问的是同一个字，答的是四种缺。</b>——<b>读这一章，先问自己缺哪一样：礼、心、敬，还是色？</b></div>
+
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十三课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-22　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>

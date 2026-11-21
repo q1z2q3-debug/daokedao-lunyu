@@ -27,6 +27,7 @@
 - 第二十课｜孟懿子问孝，子曰：无违｜无违不是听父亲的话，是不背于理；礼即理之节文，生事死葬祭一条礼贯到底。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/20.html
 - 第二十一课｜父母唯其疾之忧｜知人三关：由迹入意入心；迹可借，意可编，安借不来；三关先照自己。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/21.html
 - 第二十二课｜今之孝者，是谓能养；不敬，何以别乎｜养是底线，敬是分界；敬＝尊敬而不敢忽忘；养可外包，敬不可外包。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/22.html
+- 第二十三课｜色难。有事弟子服其劳；有酒食先生馔｜色是颜气：心→气→色→容一条链；敬不可见，色可见；难在谁的脸上；家里的天气该由谁定。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/23.html
 
 ## 专题
 - 专题一｜《诗三百》与「思无邪」深读｜十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html
@@ -36,7 +37,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.20，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.21，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
