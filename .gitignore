@@ -3,3 +3,6 @@ docs/_shots/
 __pycache__/
 *.pyc
 .DS_Store
+dist/*.html
+dist/*.json
+dist/fig-png/
