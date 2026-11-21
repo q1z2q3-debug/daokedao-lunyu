@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>孝与道：药与饭——以「道可道」重读孝｜润泽说 道可道</title>
+<meta name="description" content="《论语》孝道与《道德经》互参：以「指月三境」读孝的三层（执指守条目、顺指会心、忘指见月），以第十八章「六亲不和，有孝慈」判孝为药而非饭，以空杯模型解「敬＝留空」，以通道模型解「继＝使通」，以「家是涌现出来的无之场」解 4.18／13.18，以第十七章「太上，下知有之」分孝之四级，以柔弱、不折腾、知止立照护之度，末出「三问法」（病或常、药或饭、空或堆）为学以致用。底本朱熹《论语集注》。《道可道》一侧引原文自《道德经心法读本》第十八、十九章。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBF7EC'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23A2503B' font-family='serif'%3E道%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#FBF7EC; --paper2:#FFFDF6; --ink:#2F2A24; --ink2:#5C5347; --muted:#8A8074;
+    --line:#DED2B9; --ochre:#A2503B; --ochre-soft:#C58A73; --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.85;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);z-index:0}
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+  .mast{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+  .leaf{margin-top:26px;padding:30px 30px 34px;background:var(--paper2);border:1px solid var(--line)}
+  .leaf-tag{font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  h1{font-size:31px;line-height:1.35;margin:6px 0 8px;letter-spacing:.04em}
+  .sub{font-size:12.5px;color:var(--muted);letter-spacing:.08em}
+  .abs{margin:18px 0 4px;padding:14px 16px;background:#F6F1E3;border:1px solid var(--line);font-size:14px;line-height:1.95;color:var(--ink2)}
+  .abs b{color:var(--ink)}
+  .kw{font-size:12.5px;color:var(--muted);margin-top:8px}
+  .toc{margin:16px 0 4px;border:1px solid var(--line);background:var(--paper2);padding:14px 16px;font-size:13px}
+  .toc-t{line-height:2;color:var(--ink2)}
+  .toc .lbl{font-family:var(--sans);font-size:11.5px;color:var(--ochre);letter-spacing:.14em;margin-right:8px}
+  .toc a{color:var(--ink2);text-decoration:none;margin-right:12px;border-bottom:1px dotted var(--line);white-space:nowrap}
+  h2{font-size:19px;margin:34px 0 10px;letter-spacing:.02em}
+  h3{font-size:15.5px;margin:22px 0 6px;color:var(--ochre);font-weight:400;letter-spacing:.04em}
+  p{font-size:16.5px;margin:10px 0;text-align:justify}
+  p b{color:var(--ink);font-weight:600}
+  .src{margin:14px 0;padding:12px 16px;border-left:2px solid var(--line);background:#FCF9F0;font-size:15.5px;color:var(--ink2)}
+  .quote{margin:12px 0;padding:12px 16px;border-left:2px solid var(--ochre);background:#FBF1EC;font-size:15px;color:var(--ink2)}
+  .quote .t{font-family:var(--sans);font-size:11.5px;letter-spacing:.12em;color:var(--ochre);display:block;margin-bottom:4px}
+  .rows{background:#F8F3E6;border:1px solid var(--line);padding:14px 16px;margin:14px 0}
+  .row{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:7px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .k{font-size:12.5px;color:var(--ochre);padding-top:3px;letter-spacing:.02em}
+  .v{font-size:15px;color:var(--ink2);line-height:1.9}
+  .v b{color:var(--ink)}
+  .doubt{margin:10px 0}
+  .doubt .q{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed #E7DCC6;font-size:15px;color:var(--ink2)}
+  .doubt .q span{font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+  .figs{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0}
+  .fig{padding:12px 14px 10px;border:1px solid var(--line);background:#FFFDF6}
+  .figcap{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--ochre);margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;background:#FFFDF6;table-layout:fixed}
+  th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;line-height:1.7;word-break:break-word;overflow-wrap:anywhere}
+  th{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--ochre);font-weight:400;background:#F8F3E6}
+  td b{font-weight:600}
+  .t14 td:first-child,.t14 th:first-child{white-space:nowrap}
+  .fn{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:20px;line-height:1.9}
+  .fn b{color:var(--ink2)}
+  .sec-hr{border:0;border-top:1px solid var(--line);margin:30px 0 0}
+  .foot{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;color:var(--muted)}
+  @media(max-width:640px){
+    .wrap{padding:18px 14px 40px} .leaf{padding:20px 16px 24px}
+    h1{font-size:24px} p{font-size:16px} .row{grid-template-columns:38px 1fr;gap:8px}
+    table{font-size:12.5px} th,td{padding:6px 7px}
+    .series{font-size:13.5px} .crumb{font-size:12.5px} .leaf-tag{font-size:12px}
+    .figcap{font-size:12px} .k{font-size:12.5px} .fn{font-size:13px} .kw{font-size:13px} .toc{font-size:13.5px}
+  }
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>专题五</b>　孝与道：药与饭　｜　底本 朱熹《论语集注》＋《道德经心法读本》　｜　v0.15.20</div>
+  </div>
+
+  <div class="leaf">
+    <div class="leaf-tag">专题深读 · 互参体</div>
+    <h1>孝与道：药与饭</h1>
+    <div class="sub">以「道可道」重读孝　｜　十章、两图、六表　｜　不作比附，只作贯通</div>
+
+    <div class="abs"><b>提要</b>　本文不下「孝道哲学」的新判，只做一件事：把《论语》的孝章，放进《道可道·道德经心法读本》已经立好的四件工具里重读一遍——<b>指月三境</b>（执指／顺指／忘指）、<b>药与饭</b>（第十八章「六亲不和，有孝慈」）、<b>空杯与通道</b>（空是容、空是通）、<b>涌现之场</b>（家不是房子）。所得四条：<b>一，孔子四答不定义，正是「道可道，非常道」的实践——他始终举着指头，不许人把指头当月亮；</b><b>二，2.7「今之孝者，是谓能养」与第十八章是同一个诊断，一个在家庭内、一个在文明史，都在说「标举起，自然退」；</b><b>三，敬可重述为「留空而不夺」，继可重述为「使通而不塞」，四维由此成为一器四壁，缺一即漏；</b><b>四，孝的最高形态不是被称赞的孝，而是「太上，下知有之」——父母只知道有你这个孩子，不觉你在用力。</b>末章出「三问法」，供日用。</div>
+    <div class="kw">关键词：孝　道可道　指月三境　药与饭　空杯　通道　涌现　下知有之</div>
+
+    <div class="toc">
+      <div class="toc-t"><span class="lbl">立题</span><a href="#s1">一 两把尺子</a><a href="#s2">二 指月三境与孝之三读</a></div>
+      <div class="toc-t"><span class="lbl">病理</span><a href="#s3">三 六亲不和，有孝慈</a><a href="#s4">四 把药当饭的四种形态</a></div>
+      <div class="toc-t"><span class="lbl">器与场</span><a href="#s5">五 空杯：敬是留空</a><a href="#s6">六 通道：继是使通</a><a href="#s7">七 涌现：家不是房子</a></div>
+      <div class="toc-t"><span class="lbl">境与用</span><a href="#s8">八 下知有之</a><a href="#s9">九 照护之度</a><a href="#s10">十 三问法与结语</a></div>
+    </div>
+
+    <h2 id="s1">一　两把尺子：孔子量「怎么做」，老子问「为什么需要」</h2>
+
+    <p>把《论语》与《道德经》并置来读孝，最容易犯的错，是拿一把尺子去量另一把尺子的活。<b>常见的两种错法：一是「老子更高明」——既然「六亲不和，有孝慈」，孝便只是补救，不必认真；二是「孔子更切实」——老子只会说风凉话，孔门才有做法。</b>两说都成立一半，也都在同一处失手：<b>它们都假定两位在回答同一个问题。</b></p>
+    <p>本文的立题只有一句：<b>他们不在回答同一个问题，而在同一条路上各管一段。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">孔子</div><div class="v"><b>问的是「怎么做」。</b>——四问孝（2.5–2.8），四次作答，全是做法：合礼、忧疾、敬、色。<b>他不问「孝从何而来」，只问「此刻这一步怎么落」。</b>用《道可道》的话说：<b>他在「有」这一边工作，看的是「徼」——显化的分际、可操作的边界。</b></div></div>
+      <div class="row"><div class="k">老子</div><div class="v"><b>问的是「为什么需要」。</b>——第十八章四句，都是「先有缺口，后有药」：大道废才有仁义，六亲不和才有孝慈。<b>他不问「怎么孝」，只问「孝为什么被抬出来」。</b>用同话说：<b>他在「无」这一边工作，看的是「妙」——缺口如何生成名号。</b></div></div>
+      <div class="row"><div class="k">合看</div><div class="v"><b>一个诊断学，一个治疗学。</b>——<b>诊断不给方，方不辨病；两者相合，才成一件事。</b>——<b>所以本文不是拿老子去评孔子，也不是拿孔子去证老子；是把孝先放到「无」这一边看清病，再放回「有」这一边落方。</b></div></div>
+    </div>
+    <p>这个次序有讲究：<b>先看清「这是病还是常」，再决定「用哪张方」。</b>——顺序颠倒，就会出现两种常见病：<b>对无需用药的地方用药（把日常相处做成照护工程），对已病之处不肯用药（明知不和，仍说「我们家没事」）。</b>——前者是越位，后者是断裂，正是专题四所立四界里的两界。</p>
+
+    <h3>1.1 为什么可以互参，而不是比附</h3>
+    <p>互参与比附，界限在三处，本文自守：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>不比字面。</b>——不说「《论语》某句等于《道德经》某句」。<b>凡两书用词相同而所指不同者（如「礼」「无为」「自然」），本文不并置。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>只借框架，不借结论。</b>——<b>《道可道》立的是「观法」（怎么看），不是「判词」（看什么）。</b>本文借它的观法读孝，得出的结论仍须回到《论语》章句去验；验不过，弃之。</div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>标明谁在说话。</b>——<b>引《道可道》原文处，一律标章；本文的引申处，一律标「引申」。</b>——<b>混说最省事，也最害人。</b></div></div>
+    </div>
+    <p>还有一条：<b>不把《道德经》读成「反孝」。</b>——这一点郭店简本已经替我们校正过一半：<b>通行本「绝仁弃义，民复孝慈」，《道可道》指出这一句的落点是「孝慈不是被提倡出来的，是被撤掉标尺之后自己回来的」，并明列三误，其中第一误就是「读成老子反仁义、反孝、反忠」——「他反的是把药当饭；不反药」。</b>（《道德经心法读本》第十九章）</p>
+
+    <hr class="sec-hr">
+    <h2 id="s2">二　指月三境与孝之三读</h2>
+
+    <p>《道可道》开卷第一章给了三境，其言曰：</p>
+    <div class="quote"><span class="t">《道可道·第一章》读经三重境界</span><b>第一层｜师生听课 · 执指求学</b>——我们认真学习这套符号，记住路标长什么样子。<b>「执指，不是错；执指不放，才错过月亮。」</b><br><b>第二层｜知己谈心 · 顺指会心</b>——不再死抠字句对错，<b>顺着它望向同一个方向</b>。<br><b>第三层｜同境合一 · 忘指见月</b>——<b>「忘指，不是丢掉指引；是指引完成了它的使命，不必再握在手里。」</b>——<b>初读执字，再读会心，终读入境。</b></div>
+    <p>把这三境横过来读《论语》的孝章，会看见一件不寻常的事：<b>孔子四次答孝，四次都停在「指」上，一次也不肯给「月」。</b></p>
+    <table>
+      <tr><th style="width:18%">境</th><th style="width:30%">孝在这一境的样子</th><th style="width:28%">章证</th><th>孔子的位置</th></tr>
+      <tr><td><b>执指</b></td><td>把孝当条目：给多少、做几件、礼数齐不齐</td><td>2.8「有事，弟子服其劳；有酒食，先生馔」</td><td><b>承认它是地基</b>，但随即反问「曾是以为孝乎」</td></tr>
+      <tr><td><b>顺指</b></td><td>不在条目，在有没有把他当人</td><td>2.7「不敬，何以别乎」；2.8「色难」</td><td><b>把指头转向脸与心</b>，仍不给定义</td></tr>
+      <tr><td><b>忘指</b></td><td>孝不成其为「孝」，只是相处</td><td>17.21「女安，则为之」</td><td><b>把判决交回对方</b>，自己退开</td></tr>
+    </table>
+
+    <h3>2.1 第一境：条目不是错，执条目不放才是错</h3>
+    <p>2.8 的子夏之问，孔子先摆出条目：<b>「有事，弟子服其劳；有酒食，先生馔。」</b>——出力、给食，这两件是「孝」在礼数上最硬的两条。<b>然后一句「曾是以为孝乎」，把条目按住不动。</b>——<b>注意他不是否定条目，是否定「以条目为全部」。</b></p>
+    <p>这与「执指，不是错；执指不放，才错过月亮」是同一步。<b>——孝的第一层永远是做：给他吃、替他跑、把礼数补齐。</b>——<b>这一层做不好，谈敬是空话（专题四 5.1 已说「缺养则敬无着落」）；但这一层做满了，也只是「执指」。</b></p>
+
+    <h3>2.2 第二境：会心处，指头转向脸</h3>
+    <p>2.7 是《论语》里唯一一次把「孝」与「畜」放在同一个动作上比对：<b>养，人可以对牲畜做，也可以对父母做；敬，牲畜受不起。</b>——<b>敬是什么？朱子答得好：「尊敬而不敢忽忘之谓，非特恭谨而已也。」</b>——<b>「不敢忽忘」四字，正是「顺指会心」的写照：不再抠「该给多少」，而是心里有没有这个人。</b></p>
+    <p>2.8 补一层「色」：<b>心里的敬，必须落到可被对方感知的地方。</b>——<b>「父母看不见你的心，只看得见你的脸。」</b>（专题四 4.5）——<b>指头转到这里，才从「做几件」变成「怎么在一处」。</b></p>
+
+    <h3>2.3 第三境：「女安，则为之」——他把指头放下了</h3>
+    <p>17.21 宰我问三年之丧，孔子不问礼、不问制，只问一句：<b>「于女安乎？」</b>——宰我说「安」，孔子说<b>「女安，则为之」</b>。</p>
+    <p>这一句在整部《论语》里都罕见：<b>他不裁决，他把判决交回给对方。</b>——随后那句「予之不仁也」，是事后的评断，不是事中的命令。<b>——用三境的话说：他举了三年的指头（「子生三年，然后免于父母之怀」），然后放手，让宰我自己去看那个月亮。</b></p>
+    <p>本文的判：<b>「忘指见月」在孝里的形态，不是「不讲孝」，是「不再以孝为名相处」。</b>——<b>到了这一境，「孝」这个字反倒不必出现；出现了，多半是在提醒自己（见下章）。</b></p>
+
+    <h3>2.4 由此得一条读法：可道之孝，非常孝</h3>
+    <p>《道可道》第一章的第一句是「道可道，非常道」——<b>能被说出来的，都不是那个恒常的。</b>把这句话放到孝上，就得到本文最重要的一条读法：<b>凡《论语》里说得出的孝（养、敬、顺、继、色、无违、三年无改），都是「可道」的孝；而真正的孝，在不可道处。</b></p>
+    <p><b>这不是玄谈，有文本硬证：孔子四次答孝，四次不给定义。</b>——<b>若孝可以一句话说尽，他没有理由不说。</b>——<b>他给的全是做法，因为做法是可教的，而「孝」本身不是可教的对象，是可养成的处境。</b></p>
+    <p>这也解释了专题四的一个悬案：<b>为什么《论语》没有「孝」的定义章？</b>——<b>答案可能不是「佚失」，是「不宜」。</b>——<b>定义一落，边界就起，全整的东西就碎了（《道可道》第一章语）。孝一旦被定义成一个德目，就立刻从「相处」变成「达标」——那正是下一章要说的「药」。</b></p>
+
+    <hr class="sec-hr">
+    <h2 id="s3">三　六亲不和，有孝慈：孔子给方，老子给病</h2>
+
+    <div class="src"><b>《道德经》第十八章</b>　大道废，有仁义；慧智出，有大伪；六亲不和，有孝慈；国家昏乱，有忠臣。</div>
+    <p>《道可道》对这一章的判断，本文全盘接受，且认为它是读孝最关键的一把钥匙：</p>
+    <div class="quote"><span class="t">《道可道·第十八章》</span><b>「孝慈是医治不和的药，不是本来无病的常态。」</b><br><b>「当你需要反复提醒自己『我该孝』的时候，那份自然已经在退了。」</b><br><b>「药有用，但药不是健康。理想的常态，是无需用药而自然安康。」</b><br>——并明列一误：<b>「他反的是把药当饭；不反药。」</b></div>
+    <p>现在把这个判断放回《论语》，会看见一个惊人的重合：<b>孔子在 2.7 说的那句话，与第十八章是同一个诊断。</b></p>
+    <div class="figs">
+      <div class="fig"><svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif"><text x="16" y="22" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 药与饭：先有缺口，后有药</text><text x="24" y="50" font-size="10" fill="#8A8074">缺口（无）</text><text x="176" y="50" font-size="10" fill="#8A8074">药（有）</text><rect x="24" y="60" width="118" height="34" fill="#FFFDF6" stroke="#DCD5C8"/><text x="34" y="82" font-size="11" fill="#2F2A24">大道废</text><path d="M148 77 L170 77" stroke="#A2503B"/><path d="M164 72 L170 77 L164 82" fill="none" stroke="#A2503B"/><rect x="176" y="60" width="200" height="34" fill="#FBF1EC" stroke="#DCD5C8"/><text x="186" y="82" font-size="11" fill="#A2503B">有仁义</text><rect x="24" y="102" width="118" height="34" fill="#FFFDF6" stroke="#DCD5C8"/><text x="34" y="124" font-size="11" fill="#2F2A24">慧智出</text><path d="M148 119 L170 119" stroke="#A2503B"/><path d="M164 114 L170 119 L164 124" fill="none" stroke="#A2503B"/><rect x="176" y="102" width="200" height="34" fill="#FBF1EC" stroke="#DCD5C8"/><text x="186" y="124" font-size="11" fill="#A2503B">有大伪</text><rect x="24" y="144" width="118" height="34" fill="#F6F1E3" stroke="#A2503B"/><text x="34" y="166" font-size="11" fill="#2F2A24">六亲不和</text><path d="M148 161 L170 161" stroke="#A2503B"/><path d="M164 156 L170 161 L164 166" fill="none" stroke="#A2503B"/><rect x="176" y="144" width="200" height="34" fill="#FBF1EC" stroke="#A2503B"/><text x="186" y="166" font-size="11" fill="#A2503B">有孝慈</text><rect x="24" y="186" width="118" height="34" fill="#FFFDF6" stroke="#DCD5C8"/><text x="34" y="208" font-size="11" fill="#2F2A24">国家昏乱</text><path d="M148 203 L170 203" stroke="#A2503B"/><path d="M164 198 L170 203 L164 208" fill="none" stroke="#A2503B"/><rect x="176" y="186" width="200" height="34" fill="#FBF1EC" stroke="#DCD5C8"/><text x="186" y="208" font-size="11" fill="#A2503B">有忠臣</text><line x1="16" y1="236" x2="384" y2="236" stroke="#DCD5C8"/><text x="200" y="256" font-size="10.5" fill="#5C5347" text-anchor="middle">药有用，但药不是健康——反的是把药当饭，不反药</text><text x="200" y="276" font-size="9.5" fill="#8A8074" text-anchor="middle">次序不可倒置：不是孝慈造成不和，是不和才需要孝慈</text><text x="200" y="292" font-size="9.5" fill="#8A8074" text-anchor="middle">（据《道可道·第十八章》重绘示意）</text></svg>
+      <div class="figcap">图一 · 药与饭（第十八章次序）</div></div>
+    </div>
+
+    <h3>3.1 同一句诊断：2.7 与第十八章</h3>
+    <p>2.7 的话是：「<b>今之孝者，是谓能养。</b>」——<b>「今之孝者」四字，说的正是「标举」：当下的人把「能养」标举为孝。</b>——<b>而孔子立刻指出：这个标举本身，就是孝在退的证据。</b>——因为「养」这个动作，犬马也能受；<b>一旦「养」成了孝的标准，孝就已经从关系降为动作。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">老子</div><div class="v"><b>六亲不和，有孝慈。</b>——<b>在文明史尺度上说：孝被抬出来，是因为亲缘的秩序已经松了。</b></div></div>
+      <div class="row"><div class="k">孔子</div><div class="v"><b>今之孝者，是谓能养。</b>——<b>在家庭内的尺度上说：孝被缩成一个动作，是因为相处已经退了。</b></div></div>
+      <div class="row"><div class="k">同构</div><div class="v"><b>两句话是同一件事的两个尺度：名号越亮，缺口越大。</b>——<b>一个说「为什么会有孝慈这个词」，一个说「为什么这个词被用坏了」。</b>——<b>前者是病理，后者是病理在具体家庭里的显影。</b></div></div>
+    </div>
+    <p>得出本文第一个判断：<b>读孝而不读第十八章，会把孝读成「应当更努力去做的事」；读了第十八章，才知道先要问「此处需不需要用药」。</b></p>
+
+    <h3>3.2 孔子给方：四维就是方</h3>
+    <p>既已承认孝是药，就要认药有配方。专题四所立四维，正是四味：</p>
+    <div class="rows">
+      <div class="row"><div class="k">养</div><div class="v"><b>治「不给」。</b>——缺食、缺药、缺人照看。<b>此味最急，也最易被当作全方。</b></div></div>
+      <div class="row"><div class="k">敬</div><div class="v"><b>治「不当人」。</b>——把亲当任务、当病人、当麻烦。<b>此味最要，也最难：它治的不是缺，是「过」。</b></div></div>
+      <div class="row"><div class="k">顺</div><div class="v"><b>治「夺其主」。</b>——以「为你好」代其决定。<b>此味有反作用：顺过了头，就成纵（4.18 之谏所以必有）。</b></div></div>
+      <div class="row"><div class="k">继</div><div class="v"><b>治「断」。</b>——人亡之后，家业、家风、记忆无所承接。<b>此味最晚，也最长。</b></div></div>
+    </div>
+    <p>必须说清一层：<b>这四味，每一味都是「对治」——治一个具体的缺口。</b>——<b>所以四维的正确用法，不是「四样都做满」，是「先辨缺哪一样」。</b>——<b>缺养的，先给饭；缺敬的，先闭嘴；缺顺的，先交还决定；缺继的，先把他的事接过来。</b>——<b>四样一起上，就是「把药当饭」。</b></p>
+
+    <h3>3.3 「药还得吃」：不宜从第十八章推出虚无</h3>
+    <p>《道可道》在第十九章明说过这一点，本文照引不改：</p>
+    <div class="quote"><span class="t">《道可道·第十九章》</span><b>「孝慈不是被提倡出来的，是被撤掉标尺之后自己回来的。」</b>——<b>并明列一误：读成「所以不必做仁义孝慈」；「秩序已坏的时候，药还得吃。这一章教人看清局面，不教人撤手。」</b></div>
+    <p>这句话是本文的分水岭。<b>凡读第十八章而得出「那我就不必孝了」的，都是把「看清病」当成了「免于治」。</b>——<b>老子给的是病历，不是免罪符。</b></p>
+    <p>反过来说，<b>凡读《论语》而得出「孝就是拼命做」的，都是把「方」当成了「饭」。</b>——<b>两条路在这一处合上：看清，然后照方抓药；不看清，抓的都是补药。</b></p>
+<hr class="sec-hr">
+    <h2 id="s4">四　把药当饭的四种形态</h2>
+
+    <p>第十八章的五条避坑，《道可道》已经列过。本文只做一件事：<b>把「把药当饭」这四种形态，一一落到孝的具体处境里，让人能认出来。</b></p>
+
+    <h3>4.1 其一：绩效化——把「养」的量做成标准</h3>
+    <p><b>形态：</b>每月给多少钱、请几个护工、住什么病房、体检做几项。<b>一切可计量，一切可比较。</b></p>
+    <p><b>病理：</b>2.7 的「今之孝者，是谓能养」，说的正是这一形态的祖本。<b>孔子不是说「养」不重要（专题四 5.1 明言养是底），是说「养」一旦成了标准，孝就降为动作。</b>——<b>可计量的东西最容易被标举，因为它可以比较；一比较，缺口就显形；缺口一显形，名号就更亮。这是第十八章的循环。</b></p>
+    <p><b>判：</b>绩效化不是「做得太多」，是「用错了尺」。——<b>它把「对治」当成了「考核」。</b>——落到四界，它是「表演」界：做完之后，对方有没有真的受用，不在账上。</p>
+
+    <h3>4.2 其二：道德标举——「孝」成了名号</h3>
+    <p><b>形态：</b>「我们家的孩子都孝顺」「你这样是不孝」「百善孝为先」。<b>句子里的「孝」不是描述，是评断，甚至是威慢。</b></p>
+    <p><b>病理：</b>《道可道》有一句话，本文照抄：「<b>名号是被缺口造出来的。缺口越大，名号越亮。</b>」——<b>一个家庭反复强调「我们很和睦」，多半是裂缝已经需要遮；反复强调「我很孝」，同理。</b></p>
+    <p><b>判：</b>道德标举的害处不在「说了错话」，在<b>它把「看见缺口」换成了「遮盖缺口」</b>。——而《道可道》明说：「<b>把『不标举』做成『假装没有』。缺口在而不认，只会更大；看见缺口，才是这一章的用处。</b>」</p>
+    <p>所以正确的用法恰恰相反：<b>不是拿「孝」去压人，是拿「孝」去照见裂缝——照见之后，承认它，再照方抓药。</b></p>
+
+    <h3>4.3 其三：结构替代——以孝代政、以孝代沟通</h3>
+    <p><b>形态：</b>「家里我都管好了，这就是尽责」；「我孝顺父母，所以我在外面怎么做都行」；政策层面则把「孝」当作社会成本的替代品（养儿防老、家庭养老）。</p>
+    <p><b>病理：</b>2.21 孔子引《书》「孝乎惟孝，友于兄弟，施于有政」，说的是<b>「孝友之行延及于政」</b>，不是「孝即政治」（专题四 4.10 已辨）。<b>把「延及」读成「替代」，就是结构替代。</b>——<b>它的现代形态是：用家庭的孝，抵偿公共照护的缺位。</b></p>
+    <p><b>判：</b>这是「把药当饭」里最隐的一种：<b>它不是个人失误，是结构性的错位。</b>——<b>药能顶一阵，顶不了制度。</b>——落到四界，它是「不及」的集体版：<b>不是不肯，是力所不及而制度不补。</b></p>
+
+    <h3>4.4 其四：反向虚无——「既然是药，就不必吃」</h3>
+    <p><b>形态：</b>「孝是宗法社会的产物」「六亲不和才有孝慈，那说明孝本身就是病的症状」「所以不必讲孝」。</p>
+    <p><b>病理：</b>这是把「因果」读反，再把「读反」当成结论。<b>——不是孝慈造成不和，是不和才需要孝慈。</b>——《道可道》明列此误：「读成『所以不必做仁义孝慈』。秩序已坏的时候，药还得吃。」</p>
+    <p><b>判：</b>反向虚无看着最「通透」，实则最省力：<b>它用一句诊断，免掉了全部工夫。</b>——<b>这也是「执指不放」的另一种：抓住了「药」这个判断，把判断当月亮。</b></p>
+
+    <h3>4.5 四形态的共同处</h3>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v">都把「对治」当「常态」——<b>药被当成了饭。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v">都在「有」这一边打转——<b>只看得见可数的动作，看不见那个「无」的场。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v">都跳过了同一道问——<b>「此处是病，还是常？」</b>——追问一落，四形态立刻现形。</div></div>
+    </div>
+    <p>这道问，是本文末章「三问法」的第一问。<b>先有这一问，孝才可能不被做成工程。</b></p>
+
+    <hr class="sec-hr">
+    <h2 id="s5">五　空杯：敬是留空</h2>
+
+    <p>《道可道》的「三才五蕴太极空杯」，本文引其骨架，不引其全部：</p>
+    <div class="quote"><span class="t">《道可道·金刚经通释》附录二</span><b>「空杯」不是「没有杯」，也不是「杯中无物」，而是杯不自有、物不留驻、用来即应。</b>——杯不自有→诸法无自性；物不留驻→三心不可得；用来即应→而生其心。<b>杯空故能盛，心空故能应。</b></div>
+    <p>这里有一个必须守住的界限：<b>这个模型的「器」不是人。</b>——<b>把父母当杯子，是最坏的一种比附（人不是容器，不能「盛」）。</b>——<b>模型说的是「关系」：关系是器，两个人在器中；器之所以有用，在于它不把对方填死。</b></p>
+
+    <h3>5.1 敬＝留空：三不夺的模型表达</h3>
+    <p>专题四把敬拆成三条检验：不夺其主、不替其忆、不夺其时（5.2）。用空杯的话说，这三条是同一句话：<b>不要把杯子填满。</b></p>
+    <table>
+      <tr><th style="width:20%">检验</th><th style="width:38%">填满的样子（越位）</th><th>留空的样子（敬）</th></tr>
+      <tr><td><b>不夺其主</b></td><td>「你别管了，我都安排好了」——决定全代做</td><td>把选项摆出来，让他选，包括选「不治」</td></tr>
+      <tr><td><b>不替其忆</b></td><td>替他抹掉不愿提的事，或替他美化</td><td>他的过去由他保管；你只在场，不改写</td></tr>
+      <tr><td><b>不夺其时</b></td><td>按你的班表翻他的身子、排他的探视</td><td>他的节律优先；你的效率让路</td></tr>
+    </table>
+    <p>由此得一句，可以当口诀：<b>养是往杯里放东西，敬是不把杯子填满。</b>——<b>放东西是必要的；填满不是。</b>——<b>2.7 的「别」由此得一解：畜养是「填」，敬是「留」。人受得起填，也受得起留；牲畜受得起填，受不起留（它没有「自己」可留）。</b></p>
+
+    <h3>5.2 空不是不管：无壁不成杯</h3>
+    <p>「留空」最容易被读成「放手不管」。这是错的，理由在模型本身：<b>杯空故能盛——但前提是有壁。</b>——<b>没有壁，空只是一片散；有了壁，空才成器。</b></p>
+    <p>在孝里，<b>壁就是四维</b>：养给底，敬顺继给壁。<b>——留空，是在壁内留；不是把壁拆了。</b>——<b>拆壁的「放手」，不是敬，是断裂（四界之四）。</b></p>
+    <p>这条界限，现代照护里最常被跨过：<b>一端是「全包」（填满，越位），一端是「全放」（拆壁，断裂）。</b>——<b>两端都省力，中间那一寸最难：有壁而不填满。</b></p>
+
+    <h3>5.3 一句反证：他若不肯被「盛」</h3>
+    <p>空杯还有一个常被忽略的面向：<b>「物不留驻」——东西放进杯子，终究要取出。</b>——<b>在孝里，这是「他会走」。</b>——<b>照护者最难接受的，不是「我做得不够」，是「我做什么都留不住他」。</b></p>
+    <p>《道可道》说「物不留驻→三心不可得」。放到病榻前：<b>你留不住他的疼，留不住他的记忆，最后留不住他本人。</b>——<b>这不是失败，是器的性质：杯不自有，物不留驻。</b>——<b>能做的只是「用来即应」：他在的时候，应他。</b></p>
+    <p>这也正是专题四 5.5 的结论：<b>「不能及」不是失败，是结构；敬是对「我不能替你」的承认。</b>——<b>两处说法不同，指向同一处。</b></p>
+
+    <div class="figs">
+      <div class="fig"><svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif"><text x="16" y="22" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 三器：留空 · 使通 · 有度</text><text x="80" y="48" font-size="10.5" fill="#5C5347" text-anchor="middle">杯（敬）</text><path d="M46 66 L46 150 M114 66 L114 150" stroke="#A2503B"/><path d="M46 150 L114 150" stroke="#A2503B" stroke-width="4"/><line x1="46" y1="112" x2="114" y2="112" stroke="#DCD5C8" stroke-dasharray="3 4"/><text x="80" y="104" font-size="12" fill="#8A8074" text-anchor="middle">空</text><text x="80" y="172" font-size="9.5" fill="#5C5347" text-anchor="middle">底＝养；两壁＝敬</text><text x="80" y="188" font-size="9.5" fill="#8A8074" text-anchor="middle">留空则能盛</text><text x="210" y="48" font-size="10.5" fill="#5C5347" text-anchor="middle">管（继）</text><rect x="160" y="96" width="100" height="34" fill="#FFFDF6" stroke="#A2503B"/><path d="M162 113 L256 113" stroke="#A2503B"/><path d="M248 108 L256 113 L248 118" fill="none" stroke="#A2503B"/><text x="210" y="172" font-size="9.5" fill="#5C5347" text-anchor="middle">壁分五瓣，缺一即漏</text><text x="210" y="188" font-size="9.5" fill="#8A8074" text-anchor="middle">水要过，不留</text><text x="330" y="48" font-size="10.5" fill="#5C5347" text-anchor="middle">闸（顺）</text><rect x="300" y="66" width="60" height="84" fill="#FFFDF6" stroke="#A2503B"/><rect x="300" y="102" width="32" height="8" fill="#A2503B"/><path d="M330 116 L330 144" stroke="#8A8074"/><path d="M325 138 L330 144 L335 138" fill="none" stroke="#8A8074"/><text x="330" y="172" font-size="9.5" fill="#5C5347" text-anchor="middle">可开可关，不是拆墙</text><text x="330" y="188" font-size="9.5" fill="#8A8074" text-anchor="middle">有度则久</text><line x1="16" y1="210" x2="384" y2="210" stroke="#DCD5C8"/><text x="200" y="232" font-size="10.5" fill="#5C5347" text-anchor="middle">敬＝留空而不夺；继＝使通而不塞；顺＝有度而不拆</text><text x="200" y="252" font-size="9.5" fill="#8A8074" text-anchor="middle">养为器底（色），三者为其壁；缺一即漏</text><text x="200" y="276" font-size="9.5" fill="#8A8074" text-anchor="middle">（据空杯·通道模型重绘为示意，非原图）</text></svg>
+      <div class="figcap">图二 · 三器：敬留空、继使通、顺有度（本文引申示意）</div></div>
+    </div>
+
+    <hr class="sec-hr">
+    <h2 id="s6">六　通道：继是使通</h2>
+
+    <p>空杯之后，还有一件器：<b>通道。</b>——<b>五蕴为管壁，横放；缺一瓣即漏，水便流不成。</b>——<b>它与杯只差一个字：杯的空是「容」，管的空是「通」。</b></p>
+
+    <h3>6.1 从「守」到「通」：19.18 的重读</h3>
+    <p>19.18 曾子称孟庄子之孝：「<b>其不改父之臣与父之政，是难能也。</b>」——历来读作「守」：守住父亲的人与事。<b>本文换一个读法：这不是守，是「不改水道」。</b></p>
+    <p>因为「守」的判据在<b>你</b>（我有没有动）；「通」的判据在<b>水</b>（下一代还愿不愿意从这条管里过）。<b>——守而不通，管里就积了死水；水一停，管就不再是管，只是几块壁。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">守而不通</div><div class="v"><b>把父亲的规矩供起来</b>：不许任何新水进来，谁提改就骂谁不孝。<b>——管壁还在，但已无水；这是「塞」，不是「继」。</b></div></div>
+      <div class="row"><div class="k">通而不守</div><div class="v"><b>什么都不接</b>：父亲的人散了、事丢了、话也不提了，各自过。<b>——水是流了，但没走这条管；这是「漏」，也不是「继」。</b></div></div>
+      <div class="row"><div class="k">继</div><div class="v"><b>壁在，水过</b>：人与事不换（1.11「三年无改」是暂不转弯），但水要往前走——<b>他的手艺传下去、他的债还清、他的名字有人叫、他的教训有人记。</b></div></div>
+    </div>
+    <p>由此得本文第三个判断：<b>继的判据不是「守不守」，是「通不通」。</b>——<b>专四 5.4 说「继的代价是压住自己」，此处补一句：压住自己不是目的，让水过去才是。</b></p>
+
+    <h3>6.2 四维成一器：缺一即漏</h3>
+    <p>把四维放回器上看，结构就清楚了（这是本文的引申，非模型原命题）：</p>
+    <table>
+      <tr><th style="width:16%">维</th><th style="width:20%">在器上的位置</th><th style="width:32%">缺了会怎样</th><th>四界对应</th></tr>
+      <tr><td><b>养</b></td><td>器底（色）</td><td>无底则不成器：饿着谈敬是空话</td><td>不及</td></tr>
+      <tr><td><b>敬</b></td><td>壁之一（留空）</td><td>填满则不能盛：照护变成接管</td><td>越位</td></tr>
+      <tr><td><b>顺</b></td><td>闸（有度）</td><td>闸全开则纵，全关则塞</td><td>越位／不及</td></tr>
+      <tr><td><b>继</b></td><td>管（使通）</td><td>壁在而水停，管不再是管</td><td>断裂</td></tr>
+    </table>
+    <p>「缺一即漏」四字，是模型的硬处，也正好是四界的结构表达。<b>——四界不是四种道德失误，是四种「器不成器」。</b></p>
+
+    <hr class="sec-hr">
+    <h2 id="s7">七　涌现：家不是房子</h2>
+
+    <p>《道可道》第一章论「相生与涌现」，有一节专说家，本文全引其判断：</p>
+    <div class="quote"><span class="t">《道可道·第一章》</span><b>「家：不是房子，是涌现出来的无之场。」</b>——房子、家具、食物、血缘个体全是「有」，是可触的徼；<b>而当「持续的照料、接纳、牵挂、记忆、归属、情感流转、共同承担形成稳定循环」，一个场才稳定显化——这就是「家」。</b><br>「<b>房子换了，人还在，家可以延续；房子还在，流转的场散了，家就空了。</b>」</div>
+    <p>这段判断，用到孝上，立刻显出专题四没说到的一层。<b>——专题四说孝有四维（动作），这里说孝所对的是一件「场」（关系本身）。</b>——<b>动作是「有」，场是「无」；动作可数，场只能感。</b></p>
+
+    <h3>7.1 孝的对象是场，不是房子</h3>
+    <p>由此可解三件旧事：</p>
+    <div class="rows">
+      <div class="row"><div class="k">4.18</div><div class="v"><b>「几谏……又敬不违，劳而不怨」——这是「场内之争」的规范。</b>——<b>可以不同意，不改写场；可以反复说，不击穿场；可以操心，不把怨积成裂缝。</b>——<b>因为场一旦破，谁对谁错都不重要了。</b></div></div>
+      <div class="row"><div class="k">13.18</div><div class="v"><b>「父为子隐，子为父隐」——这是「场的边界」。</b>——<b>不是包庇（专题四 7.2 判「甲、乙可立，丙不可」），是不让外部执法直接击穿那个场。</b>——<b>场要靠信任维持；信任一破，家就只剩房子。</b></div></div>
+      <div class="row"><div class="k">11.5</div><div class="v"><b>「人不间于其父母昆弟之言」——这是「场的健康指标」。</b>——<b>「间」是挑拨、离间；无间，就是场里没有可被挑开的缝。</b>——<b>这正是「场」这一层最硬的验证：不看房子，看缝。</b></div></div>
+    </div>
+    <p>三章合看，可得一条：<b>孝的成败，不在「住了多久」「给了多少」，在「那个场还在不在流转」。</b></p>
+
+    <h3>7.2 三种「房子还在，场已散」</h3>
+    <p>现代最典型的三种，都在《论语》里有对应：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>同住而场散</b>：一间屋、一张桌、各自一部手机。<b>——4.18 的反面：不谏（无话）、不敬（无礼）、积怨（有账）。</b>——<b>房子最满，场最空。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>异地而场续</b>：一年见两次，但药名记得、寿辰不错、视频常开、他的老友你都叫得出名字。<b>——4.19「游必有方」、4.21「父母之年不可不知」的现代形态。</b>——<b>房子不在，场在。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>机构照护而场续</b>：入住养老院、住院，人交给了制度，但「谁来看他、谁记得他怕什么、谁替他说话」这三件还在。<b>——敬之三检在机构里最难，也最需要。</b>——<b>制度能管身，管不了场；场要靠人续。</b></div></div>
+    </div>
+    <p>这三个判断，可以直接用作日用的检查：<b>不问「我做得够不够」，先问「场还在不在流」。</b></p>
+
+    <h3>7.3 「有不是堆」：孝不是把爱堆起来</h3>
+    <p>《道可道》有一句判断，本文认为可以一字不改地移来评孝：「<b>无不是空，有不是堆。</b>」</p>
+    <p><b>孝的「有」不是堆</b>：不是把礼物堆满、把探视排满、把话讲满、把「我为你做的事」列成单子。<b>——堆起来的是物，不是场。</b>——<b>孝的「无」是那个场</b>：他在你眼里还算个人，你在他眼里还算个孩子，两个人之间还有话说、还有事可一起做。</p>
+    <p>由此得本文第四个判断：<b>孝的加法（多做）到某一点之后，必须转成减法（少拿）。</b>——<b>「为道日损」在孝里的落点，就是 5.1 的三不夺。</b>——<b>不减，则堆；堆满，则场塞。</b></p>
+<hr class="sec-hr">
+    <h2 id="s8">八　太上，下知有之：孝的四级温度</h2>
+
+    <div class="src"><b>《道德经》第十七章</b>　太上，下知有之；其次，亲而誉之；其次，畏之；其次，侮之。</div>
+    <p>《道可道》对这一章的定位是：「把这套内在功夫落到人我之间，四级台阶是离道远近的次序。」——<b>本文把这条台阶横过来，铺在父母与子女之间。</b></p>
+
+    <h3>8.1 四级台阶的孝版</h3>
+    <table>
+      <tr><th style="width:16%">级</th><th style="width:30%">原义</th><th style="width:30%">孝的形态</th><th>章证</th></tr>
+      <tr><td><b>太上</b></td><td>下知有之：只知有他，不觉其功</td><td><b>父母只知道「有你这个孩子」，不觉你在「孝」</b></td><td>11.5「人不间于其父母昆弟之言」</td></tr>
+      <tr><td><b>其次</b></td><td>亲而誉之：亲近而称誉</td><td><b>父母称赞你孝，宗族乡党称你孝</b></td><td>13.20「宗族称孝焉」</td></tr>
+      <tr><td><b>其次</b></td><td>畏之：怕他</td><td><b>怕你的脸色、怕你的账本、怕你不管他</b></td><td>2.8「色难」的反面</td></tr>
+      <tr><td><b>其次</b></td><td>侮之：轻慢</td><td><b>冷、讽、断：谁也不提，各过各的</b></td><td>四界之「断裂」</td></tr>
+    </table>
+    <p>此表有三处值得停：</p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>「下知有之」不是「不知有之」。</b>——<b>太上不是「父母不知道你在孝」，是「父母知道有你在，但不觉你在用力」。</b>——<b>误作「不知」，就成了「做得毫无痕迹」的技术要求；原义是「他在，就够了」。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>「亲而誉之」是次一等，不是最高等。</b>——<b>被称赞，说明有可称之事；有可称之事，说明缺口曾被补上（第十八章）。</b>——<b>这不是坏事，但它已经是「药」的层面。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>「畏之」在今天的常见形态，不是打骂，是「脸色」。</b>——<b>2.8 说「色难」，历来解作「承顺父母之色」；此处反向用：父母也在承顺子女之色。</b>——<b>一个家里，谁看谁的脸色，谁就在「畏」这一级。</b></div></div>
+    </div>
+
+    <h3>8.2 为什么最高一级反而不被称道</h3>
+    <p>答案在第十八章：<b>名号是被缺口造出来的。</b>——<b>凡是需要被称道的孝，都是补过缺口的孝。</b>——<b>而真正的常态，无可称之处，只有可感之在。</b></p>
+    <p>11.5 正是这一级：<b>「人不间于其父母昆弟之言。」</b>——<b>没有可被称的功，只有「挑不开的缝」。</b>——<b>这与「下知有之」是一件事：父母知道有你这个孩子，别人挑不出你家的缝。</b></p>
+    <p>13.20 是次一级：<b>「宗族称孝焉，乡党称弟焉。」</b>——<b>「称」字一出，就从「有之」掉到「誉之」。</b>——<b>《论语》把这两级并置，不是无意：一个在「无间」，一个在「有称」。</b></p>
+
+    <h3>8.3 三条操作：不宣言、不记账、不留痕</h3>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>不宣言。</b>——不说「我在尽孝」「我为这个家付出多少」。<b>——一宣言，孝就成了名号。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>不记账。</b>——<b>4.21 记「父母之年」，记的是时间，不是功劳。</b>——<b>两本账要分清：年龄要记（敬），恩情不必记（记了就成债）。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>不留痕。</b>——不要求被看见。<b>——但有一条例外，须说清：</b><b>对父母不表演，对同伴要分担。</b>——<b>照顾者的辛劳必须被家人看见、被分摊；这不是向父母邀功，是不让一个人独自撑着。</b>（见 9.3「不殆」）</div></div>
+    </div>
+
+    <hr class="sec-hr">
+    <h2 id="s9">九　照护之度：柔、不折腾、知止</h2>
+
+    <p>前三章讲「是什么」，此章讲「用多少力」。<b>《道可道》在这一层给了三条，都短，都可当天用。</b></p>
+
+    <h3>9.1 柔弱胜刚强：胜在「还能弯」</h3>
+    <p>《道可道》解第三十六章，有一句判断极准：<b>「胜的不是力量，是『还能弯』这件事。」</b></p>
+    <p>移到照护上：<b>硬的做法——一次把话说死、把钱一次给尽、把决定一次做绝、把关系一次摊牌——都是「直」；直者易折。</b>——<b>柔的做法——留余地、可退可进、话不说满、事不做绝——是「弯」；弯者能久。</b></p>
+    <p><b>长照是长跑，不是决战。</b>——<b>决战求胜，长跑求「还在」。这也是「劳而不怨」的力学解释：怨多生于「用力过猛而回收太少」，柔者用力缓，故能久。</b></p>
+
+    <h3>9.2 治大国若烹小鲜：不折腾</h3>
+    <p>《道可道》解第六十章，把「鲜」训为「新鱼」，落到一句白话：<b>别揭锅盖，别翻搅。</b></p>
+    <p>老人的四样东西最像小鲜：<b>作息、老友、老习惯、老口味。</b>——<b>每翻一次（改一次作息、断一次老友、废一个习惯、换一种口味），就碎一次；翻得越勤，碎得越快。</b>——<b>而子女最常见的「孝」，恰恰是翻搅：把一切都按「更科学」的方式重排一遍。</b></p>
+    <p><b>判：照护技术的第一条不是「加」，是「不减」。</b>——<b>能不减他的习惯，就不必加你的方案。</b>——这与 5.1 的「少拿」是同一件事的两面：拿掉他的旧，等于拿掉他的自己。</p>
+
+    <h3>9.3 知止不殆：止是脚趾</h3>
+    <p>《道可道》解第四十四章，字义解得细：<b>「足是脚，止是脚趾」——知足是知道脚站住，知止是知道脚趾该停。</b>——<b>「知止不殆，可以长久。」</b></p>
+    <p>四界，正好是四种「不知止」：</p>
+    <div class="rows">
+      <div class="row"><div class="k">不及</div><div class="v"><b>该走没走</b>——脚停得太早：明知他需要，迟迟不动。</div></div>
+      <div class="row"><div class="k">越位</div><div class="v"><b>该停没停</b>——脚一直往前：替他决定、替他记、替他排满。</div></div>
+      <div class="row"><div class="k">表演</div><div class="v"><b>停在别人眼里</b>——脚是给看客走的。</div></div>
+      <div class="row"><div class="k">断裂</div><div class="v"><b>彻底不走</b>——脚收了，关系也收了。</div></div>
+    </div>
+    <p>于是本文给「度」下一条定义：<b>孝的度，不是「尽力」，是「不殆」。</b>——<b>不殆有两头：他不被压垮（不被接管、不被翻搅），你不被拖垮（不被耗尽、不被独自撑着）。</b>——<b>两头都保，才叫长久；只保一头，另一头迟早断。</b></p>
+
+    <hr class="sec-hr">
+    <h2 id="s10">十　三问法与结语</h2>
+
+    <h3>10.1 三问法：把上面的道理压成日用</h3>
+    <p>遇到任何一件具体的孝事（要不要接来同住、要不要插管、要不要卖房、要不要瞒病情），先问三句，再动手：</p>
+    <table>
+      <tr><th style="width:14%">问</th><th style="width:26%">问什么</th><th style="width:30%">怎么答</th><th>答错会怎样</th></tr>
+      <tr><td><b>一问</b></td><td><b>此处是病，还是常？</b></td><td>亲缘还自然相守，是常；已经隔阂丛生，是病</td><td>常处用药→做成工程；病处不用药→假装没有</td></tr>
+      <tr><td><b>二问</b></td><td><b>这是药，还是饭？</b></td><td>药是对治缺口，须有方、有量、有停；饭是日常相处，不记账</td><td>把药当饭→标举、表演、绩效化</td></tr>
+      <tr><td><b>三问</b></td><td><b>这是空，还是堆？</b></td><td>留空则盛（不夺其主、不替其忆、不夺其时）；堆满则塞</td><td>堆满→越位；拆壁→断裂</td></tr>
+    </table>
+    <p>三问的顺序不可颠倒：<b>先辨病，再定药，末校量。</b>——<b>颠倒过来，就成了「先想做事，再找理由」——那是所有「为你好」的起点。</b></p>
+    <p>三问之后，才落到专题四的四维：<b>缺养先给饭，缺敬先闭嘴，缺顺先交还决定，缺继先把他的事接过来。</b>——<b>一次只治一样，治一样停一停。这是「药有量」的意思。</b></p>
+
+    <h3>10.2 结语：方与病</h3>
+    <p>《道可道》有一句，可以作本专题的收束：<b>「孝慈者，亲之药也；忠臣者，国之药也。」</b>——<b>紧接着一句是：药有用，但药不是健康。</b></p>
+    <p>于是两家各归其位：<b>孔子给方，方极精——养、敬、顺、继，每一味都有章、有界、有停；老子给病，病极准——六亲不和，才有孝慈，名号越亮，缺口越大。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">只读方</div><div class="v"><b>会把孝做成工程</b>：四味齐上，越做越满，满则不能盛。</div></div>
+      <div class="row"><div class="k">只读病</div><div class="v"><b>会把孝读成虚无</b>：既然有病，何须用药；于是撤手，缺口更大。</div></div>
+      <div class="row"><div class="k">方病合看</div><div class="v"><b>先看清，再照方；照方而不执方。</b>——<b>「执指，不是错；执指不放，才错过月亮。」</b>——<b>四维是指，不是月。</b></div></div>
+    </div>
+    <div class="quote"><span class="t">一句话</span><b>孝的最高形态，是不需要被称作「孝」的那段相处。</b>——<b>父母只知道有你这个孩子，不觉你在用力；你不觉得自己在尽孝，只觉得自己在过日子。</b>——<b>到这一步，药停了，人还在。</b></div>
+
+    <hr class="sec-hr">
+    <h2 id="s11">附　本专题所据《道可道》诸条一览</h2>
+    <table>
+      <tr><th style="width:18%">出处</th><th style="width:42%">原话（摘）</th><th>本文用处</th></tr>
+      <tr><td>第一章 · 读经三重境界</td><td>「执指，不是错；执指不放，才错过月亮」「忘指，不是丢掉指引；是指引完成了它的使命」</td><td>二章：孝之三读</td></tr>
+      <tr><td>第一章 · 相生与涌现</td><td>「家：不是房子，是涌现出来的无之场」「房子还在，流转的场散了，家就空了」</td><td>七章：孝的对象是场</td></tr>
+      <tr><td>第十七章 · 四级台阶</td><td>「太上，下知有之；其次，亲而誉之」</td><td>八章：孝的四级温度</td></tr>
+      <tr><td>第十八章 · 六亲不和</td><td>「孝慈是医治不和的药，不是本来无病的常态」「名号是被缺口造出来的」</td><td>三章：病理；四章：四形态</td></tr>
+      <tr><td>第十九章 · 绝仁弃义</td><td>「孝慈不是被提倡出来的，是被撤掉标尺之后自己回来的」「他反的是把药当饭；不反药」</td><td>三章：药还得吃</td></tr>
+      <tr><td>第三十六章 · 柔弱胜刚强</td><td>「胜的不是力量，是『还能弯』这件事」</td><td>九章：照护之力</td></tr>
+      <tr><td>第四十四章 · 知足知止</td><td>「足是脚，止是脚趾」</td><td>九章：四界即四不知止</td></tr>
+      <tr><td>第六十章 · 治大国</td><td>「鲜是新鱼」——别揭锅盖，别翻搅</td><td>九章：不折腾</td></tr>
+      <tr><td>金刚经通释 · 附录二</td><td>「杯不自有、物不留驻、用来即应」「杯空故能盛」</td><td>五章：敬＝留空</td></tr>
+      <tr><td>通道模型（设计稿）</td><td>五蕴为管壁，横放；缺一瓣即漏；杯的空是容，管的空是通</td><td>六章：继＝使通</td></tr>
+    </table>
+    <p style="font-size:13px;color:#8A8074">说明：右栏「用处」为本文引申；左栏原文摘句以《道可道·道德经心法读本》与《金刚经通释》附录二为准，不作改写。凡本文自出之判断，均标「本文」。</p>
+
+    <div class="foot">
+      <span>润泽说 · 道可道之论语 · 专题五</span>
+      <span>底本 朱熹《论语集注》＋《道德经心法读本》</span>
+      <span>v0.15.20</span>
+      <span>十章 · 两图 · 六表 · 三问法</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
