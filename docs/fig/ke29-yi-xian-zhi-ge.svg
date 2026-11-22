@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280" role="img" aria-label="一线之隔：同一种亲厚，一边向公成周，一边向私成比" style="max-width:520px">
+<defs><marker id="a29b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+<text x="200" y="40" text-anchor="middle" font-size="11" fill="#3A342B">同一种亲厚</text>
+<circle cx="200" cy="66" r="6" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.3"/>
+<line x1="200" y1="74" x2="200" y2="238" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="206" y="150" font-size="8.5" fill="#A8763E">毫厘</text>
+<path d="M194 72 L86 158" stroke="#A8763E" stroke-width="1.3" marker-end="url(#a29b)"/>
+<path d="M206 72 L314 158" stroke="#8A8074" stroke-width="1.3" marker-end="url(#a29b)"/>
+<circle cx="78" cy="182" r="16" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.3"/>
+<text x="78" y="186" text-anchor="middle" font-size="12" fill="#8C5E2A">公</text>
+<circle cx="322" cy="182" r="16" fill="#fff" stroke="#8A8074" stroke-width="1.2"/>
+<text x="322" y="186" text-anchor="middle" font-size="12" fill="#5F564A">私</text>
+<text x="78" y="218" text-anchor="middle" font-size="10" fill="#8C5E2A">周 · 普遍</text>
+<text x="322" y="218" text-anchor="middle" font-size="10" fill="#8A8074">比 · 偏党</text>
+<text x="200" y="262" text-anchor="middle" font-size="11" fill="#5F564A">差在公私，不在热度</text>
+</svg>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第二十九课 周而不比（为政 2.14）</title>
+<meta name="description" content="《论语·为政》2.14 子曰君子周而不比，小人比而不周。朱子「周，普遍也；比，偏党也，皆与人亲厚之意，但周公而比私耳」。一课两页：少儿页可念，成人页可考。底本朱熹《论语集注》。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 29 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">一辨</a><a href="#sc-d">周非无限</a><a href="#sc-e">比为何不周</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 两个圆</a><a href="#sc-21">义理二 一线之隔</a><a href="#sc-22">附论一 周字</a><a href="#sc-23">附论二 差等</a><a href="#sc-24">附论三 边界</a><a href="#sc-25">附论四 圈子半径</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>周而不比</h1>
+    <div class="h1-sub">为政 2.14　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「君子周而不比，小人比而不周。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>周</span></div><div class="tzcap"><span>8 画</span><span>一圈都到</span></div></div>
+      <div class="tzitem"><div class="cell"><span>比</span></div><div class="tzcap"><span>4 画</span><span>结成小圈</span></div></div>
+      <div class="tzitem"><div class="cell"><span>偏</span></div><div class="tzcap"><span>11 画</span><span>偏向一边</span></div></div>
+      <div class="tzitem"><div class="cell"><span>党</span></div><div class="tzcap"><span>10 画</span><span>只护自己人</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">周</div><div class="v"><b>一圈都到。</b>——<b>像太阳照院子，谁站在光里都照着，不挑人。</b></div></div>
+      <div class="row"><div class="k">比</div><div class="v"><b>结成小圈。</b>——<b>几个人凑得紧，护着彼此；圈子外的人，就照不到了。</b></div></div>
+      <div class="row"><div class="k">偏</div><div class="v"><b>偏向一边。</b>——<b>同样一件事，对圈里人一个样，对圈外人另一个样。</b></div></div>
+      <div class="row"><div class="k">党</div><div class="v"><b>只护自己人。</b>——<b>不讲对错，只看「是不是我们这边的」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>对人好，也有两种好法：一种照一圈，一种只照亮一小堆。</b>——<b>（为政 2.14）</b></div>
+    <p>孔子说：君子对人，是「周」——一圈都照顾到；不「比」——不拉小圈子。小人正好相反：<b>只跟自己那一小堆人亲，圈子外的人就不管了。</b></p>
+    <p><b>一句话：都一样热心，差别在圆心。</b>——<b>圆心是事，照得宽；圆心是我，照得窄。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，什么叫「周」。</b>——<b>一圈都到，不落下谁。</b>——<b>发作业本，从第一排发到最后一排；不是只给坐得近的几个人。</b></p>
+    <p><b>第二层，什么叫「比」。</b>——<b>几个人抱成一团，好得只给圈里。</b>——<b>圈里的事帮到底，圈外的事装作看不见。</b>——<b>不是不热情，是热情有门。</b></p>
+    <p><b>第三层，为什么孔子把这两样放在一起比。</b>——<b>因为从外头看，两个人都挺热心。</b>——<b>差别藏在里头：一个以事为心，一个以我为心。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>周是照一圈，比是照一堆。</b>——<b>灯一样亮，照的地方不一样。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　分糖。</b>——<b>周的人：一人一颗，自己那颗也是随便拿的。</b>——<b>比的人：先给最好的朋友抓一把，剩下的再分。</b></p>
+    <p><b>二　小组作业。</b>——<b>周的人：谁会什么就用谁，不会的也带着做。</b>——<b>比的人：只跟熟的一队，别人问就说「我们组满了」。</b></p>
+    <p><b>三　新同学来了。</b>——<b>周的人：往旁边挪一挪，说「坐这儿」。</b>——<b>比的人：看了一眼，继续跟旁边的人小声说话。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>你的好，有没有门槛。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　「周」是不是谁都不得罪？</b>——<b>不是。</b>——<b>周的人该说「这样不对」的时候会说；只是说完，不把人划到圈外去。</b></p>
+    <p><b>二　那是不是要跟每个人都一样亲？</b>——<b>不是。</b>——<b>亲疏有别是人之常情；周说的是「公事上不偏心」，不是「心里没有远近」。</b></p>
+    <p><b>三　怎么知道自己在「比」？</b>——<b>听你说话里有没有「我们几个」和「他们」。</b>——<b>有「他们」的时候，多半已经划了圈。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>对一个人好，不算难；对一圈人公道，才难。</b>——<b>公道是练出来的。</b></div>
+    <div class="scene"><b>朋友可以很近，规矩要对所有人一样。</b>——<b>近的是情，一样的是尺。</b></div>
+    <div class="scene"><b>别用「我们」去挡人，用「这事该怎么办」去接人。</b>——<b>把话从人身上，挪到事上。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>问「你们班分东西，是怎么分的？」</b>——<b>听他讲规则，不听他讲谁跟谁好。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>分碗筷、分水果，让他按「人头」分，不按「喜好」分。</b>——<b>一人一份，是家里的周。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「跟谁玩」当成大事，把「怎么对别人」当成小事。</b>——<b>圈子是结果，尺子是原因。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>每回他和朋友闹别扭，先问一句「这事要是换成别人，你还这么判吗」。</b>——<b>一句换位，就把尺子递给他了。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>群、圈、分组把人切得很细，越切越容易只看见自己那一块。</b>——<b>能看见整间教室的人，越来越少。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>生态里只护一个物种，整个系统会塌；公共事务里只护一派，事情办不成。</b>——<b>同一条理。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个「谁都愿意找他」的人，不是「只跟自己人好」的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>周而不比</h1>
+    <div class="h1-sub">为政 2.14　乙篇·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「君子周而不比，小人比而不周。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：对事讲次序，对人有半径</div>
+  <p><b>上一章说「先行其言」——一个人怎么做事。</b>——<b>这一章说「周而不比」——一个人怎么待人。</b>——<b>先对事，再对人；事上站得住，人才谈得上怎么处。</b></p>
+  <p><b>三章连起来，是一个君子立起来的三根柱子：</b>——<b>2.12 体要备（不器），2.13 行要先（先行），2.14 交要周（不比）。</b>——<b>体、行、交，缺一根就站不直。</b></p>
+  <p><b>放在整部《论语》里看，这一章也不是孤句。</b>——<b>15.22 说「群而不党」，4.3 说「能好人，能恶人」，13.24 说「乡人之善者好之，其不善者恶之」——都在讲同一件事的两面。</b></p>
+  <div class="scene"><b>这一章在全篇的位置，是「学的交」。</b>——<b>学到最后，不是学成一个人独善，是学成一个别人敢托付的人。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">周</div><div class="v"><b>普遍、周遍。</b>——<b>朱子：「周，普遍也。」</b>——<b>一圈都到，不遗漏谁。</b></div></div>
+    <div class="row"><div class="k">比</div><div class="v"><b>偏党、阿党（读 bì）。</b>——<b>朱子：「比，偏党也。」</b>——<b>几个人结成一小圈，只护圈里。</b></div></div>
+    <div class="row"><div class="k">而</div><div class="v"><b>转折。</b>——<b>「周而不比」：做到了周，却不落到比里去。</b></div></div>
+    <div class="row"><div class="k">小人</div><div class="v"><b>德薄者，不是位卑者。</b>——<b>这一章说的是心的格局，不是身份高低。</b></div></div>
+  </div>
+  <p><b>句读没有疑难，难在「周」与「比」的分界。</b>——<b>两个字都不是坏字：一个说「到得全」，一个说「靠得近」。</b>——<b>分开看都好，合到一个人身上，就有个公与私。</b></p>
+
+  <div class="h2" id="sc-c">二　一辨：两个词，都是「亲厚」</div>
+  <p><b>朱子这一条注，最要紧的是四个字：</b>「皆与人亲厚之意。」——<b>周是亲厚，比也是亲厚。</b>——<b>差别不在热度，在圆心。</b></p>
+  <p><b>他又说：「但周公而比私耳。」</b>——<b>一个以公为心，一个以私为心。</b>——<b>所以这一章不是「好人 vs 坏人」，是「同一种热，两个方向」。</b></p>
+  <p><b>再往下，他把距离说得很小：</b>「究其所以分，则在公私之际，毫厘之差耳。」——<b>差别只在毫厘：多想着「这件事该怎么办」，就是周；多想着「我们几个怎么办」，就是比。</b></p>
+  <p><b>朱子还补了一句「引人入彀」的话：</b>「圣人于周比、和同、骄泰之属，常对举而互言之，欲学者察乎两间，而审其取舍之几也。」——<b>《论语》里这类对举很多：周与比、和与同、泰与骄。</b>——<b>孔子把它们并排放着，是要人看清中间那条线，在起念的那一刻做出取舍。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>不比谁更热心，只看热心围着谁转。</b></div>
+
+  <div class="h2" id="sc-d">三　「周」的半径，不是无限大</div>
+  <p><b>「普遍」容易被读成「一视同仁、人人一样亲」。</b>——<b>这不是孔子的意思。</b>——<b>儒家的爱有次序：「亲亲而仁民，仁民而爱物。」</b>——<b>先亲，再民，再物；同一份心，由近及远铺开。</b></p>
+  <p><b>所以「周」是「不遗漏」，不是「一样厚」。</b>——<b>对父母自然更亲，对孩子自然更软；这不叫比，这叫人之常情。</b></p>
+  <p><b>「比」的病，不在有远近，在「以远近定是非」。</b>——<b>同一件事，圈里人做是「没办法」，圈外人做是「人品问题」——这就从亲厚跌成了偏党。</b></p>
+  <p><b>与墨家一比，界限更清楚。</b>——<b>墨家「兼相爱，交相利」，爱无差等；儒家说「无差等」等于「无父」。</b>——<b>儒家要的，是有差等的周：心里有远近，尺子上没远近。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>情可以有厚薄，尺不能有两把。</b></div>
+
+  <div class="h2" id="sc-e">四　「比」为什么反而不周</div>
+  <p><b>按说，几个人抱得紧，总比各顾各的暖。</b>——<b>为什么孔子把「比」判给小人？</b></p>
+  <p><b>其一，圈子有界。</b>——<b>圈内越密，圈外越冷；圈子靠「我们」立起来，也就靠「他们」划出去。</b>——<b>亲一批人的代价，是凉另一批人。</b></p>
+  <p><b>其二，圈子靠共同的敌人黏合。</b>——<b>没有外敌，圈子就散；所以圈子会不自觉地养出「敌情」。</b>——<b>这种团结，是负的团结。</b></p>
+  <p><b>其三，进了圈子就不自由。</b>——<b>要不断证明「我是我们这边的」：表态、站队、附和。</b>——<b>周到这个地步，人已经被圈子用着走了。</b></p>
+  <p><b>所以「比而不周」的「不周」不是道德评语，是事实：</b>——<b>圈子里的人，照不到圈子外；他要照得远，圈子就不认他。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>抱得越紧，看得越近。</b></div>
+
+  <div class="h2" id="sc-f">五　反向：三种假周，两种不算比</div>
+  <p><b>先说三种假「周」。</b></p>
+  <p><b>一，和事佬。</b>——<b>谁都不得罪，什么都不表态；看着人人有份，其实谁也没照顾到。</b>——<b>这不是周，是怕。</b></p>
+  <p><b>二，广撒网的人脉。</b>——<b>见谁都热，见谁都加微信；热度均匀，深度为零。</b>——<b>周是照到，不是撒到。</b></p>
+  <p><b>三，以「我不站队」为名的躲。</b>——<b>该说公道话的时候退到一边，把不表态当成公平。</b>——<b>周有立场，只是不划圈。</b></p>
+  <p><b>再说两种不算「比」的。</b></p>
+  <p><b>一，家人之间的偏心。</b>——<b>父母对孩子总有更软的那一个，这是私域里的常情；只要公事上不因此改尺，就不算比。</b></p>
+  <p><b>二，几个真朋友。</b>——<b>朋友可以有深交，可以只跟两三人说心里话；只要不因这份近而伤别人的公道，就不算比。</b></p>
+  <p><b>界线只有一条：</b>——<b>这份亲，有没有让公事上的尺子弯了。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>私心里可以有远近，公事上不能有两把尺。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>君子待人周遍，不结私党；小人结私党，故不能周遍。两者都是亲厚，分别只在公私。</p>
+  <p><b>一反。</b>这不是「好人坏人」的标签，是「毫厘之差」：多一点「事该怎么办」，就是周；多一点「我们几个怎么办」，就是比。</p>
+  <p><b>一辨。</b>「周」是普遍而非齐平：情有厚薄，尺无两把。有差等的周，才是儒家的周；抹平差等的「兼爱」，不是本章的周。</p>
+  <div class="scene"><b>本章在《为政》的位置，是「学的交」。</b>——<b>体备、行先、交周，一个人才算学成；学成不是独善，是可托付。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「周而不比」是否即「团结不结党」。</b>这是现代政治语汇的挪用。<b>本章是伦理判断，不是政治学命题</b>；但「以事聚」与「以人聚」之分，确可通。</div></div>
+    <div class="q"><span>02</span><div><b>「比」的音与训。</b>本章读 bì，训「偏党」。<b>古书有「比周」连读（《管子》「群徒比周」）</b>，义同。<b>本课取单字「偏党」</b>。</div></div>
+    <div class="q"><span>03</span><div><b>「周」是否等于平等无差。</b><b>本课取「差等之周」</b>：普遍是不遗漏，不是一样厚；若读成齐平，便与墨家兼爱混同。</div></div>
+    <div class="q"><span>04</span><div><b>与 15.22「群而不党」是否重复。</b><b>本课判为互补</b>：群是「合于公」，党是「合于私」；周讲照得全，群讲聚得正。</div></div>
+    <div class="q"><span>05</span><div><b>「小人」指德还是指位。</b><b>本课取「德薄者」</b>：本章论心的格局，与位无关；若指位卑，则全章变成阶级评语，与孔子他处论「小人」不合。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>「周」就是跟谁都好。</b></div><div class="b"><b>周是一圈都到，不是一样厚。</b>——<b>情可厚薄，尺要一样。</b></div></div>
+    <div class="pair"><div class="a"><b>「比」就是有几个真朋友。</b></div><div class="b"><b>私域有近人，不算比。</b>——<b>比之病，在以私害公。</b></div></div>
+    <div class="pair"><div class="a"><b>不站队、不表态，就是周。</b></div><div class="b"><b>周有立场，只是不划圈。</b>——<b>该说公道话时退开，是怕不是周。</b></div></div>
+    <div class="pair"><div class="a"><b>周的人没脾气。</b></div><div class="b"><b>「唯仁者能好人，能恶人。」</b>——<b>能恶，才配说能好。</b></div></div>
+    <div class="pair"><div class="a"><b>圈里互相帮忙是美德。</b></div><div class="b"><b>帮忙一旦以圈划线，就是党。</b>——<b>帮的是事，不是帮的是「我们」。</b></div></div>
+    <div class="pair"><div class="a"><b>现代职场讲 team，就是周。</b></div><div class="b"><b>团队以事聚，圈子以人聚。</b>——<b>事散了，团队散；人散了，圈子就翻脸。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》15.22「君子矜而不争，群而不党」。</b>——<b>群是合于公，党是合于私；一句说聚得正，一句说照得全。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》13.24「乡人之善者好之，其不善者恶之」。</b>——<b>周不是人人称好：好人说好、坏人说坏，才叫周；都说好，恰是乡愿。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》4.3「唯仁者能好人，能恶人」。</b>——<b>能恶人的人，才真能好人；不敢恶，好也只是讨好。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《易·比》六三「比之匪人」。</b>——<b>所亲非其人，其伤可知；亲错了对象，比就成了害。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《礼记·表记》「君子之接如水，小人之接如醴；君子淡以成，小人甘以坏」。</b>——<b>水淡而能久，醴甜而易坏；周与比，正是淡与甜的分别。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《庄子·山木》「君子之交淡若水，小人之交甘若醴；君子淡以亲，小人甘以绝」。</b>——<b>同源而异流：儒者说「成」，庄生说「亲」，落点不同，所见相同。</b></div></div>
+  </div>
+  <div class="h2" id="sc-19">图一　一勺一勺地分</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 手上有勺，席上有人</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。堂中设席，五六人围坐，各人面前一只空碗；一名长者执长柄勺，从首位一勺一勺分过去，不分亲疏；同一画面右下角或廊下，另有两三人凑近低声说话，背对席上。要让人一眼看出：一边是「人人有份」，一边是「只跟身边人说」。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>手中的勺与每只碗</b>：一勺一勺分过去，谁都落不下——这是「周」；<b>分的人不看亲疏</b>：眼睛看碗，不看脸——这是「公」；<b>廊下那两三人</b>：背对着席，凑得近——不是坏人，只是照不到别处——这是「比」。</div>
+
+  <div class="h2" id="sc-20">义理图一　两个圆</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 280" width="100%" role="img" aria-label="两个圆：周以事为心照一圈，比以我为心只照一小堆" style="max-width:520px">
+<defs><marker id="a29a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+<text x="110" y="42" text-anchor="middle" font-size="14" fill="#3A342B">周</text>
+<text x="110" y="58" text-anchor="middle" font-size="9" fill="#8A8074">普遍 · 一圈都到</text>
+<circle cx="110" cy="132" r="74" fill="none" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="110" cy="132" r="50" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.3"/>
+<circle cx="110" cy="132" r="3" fill="#A8763E"/>
+<text x="110" y="136" text-anchor="middle" font-size="9.5" fill="#8C5E2A">事</text>
+<circle cx="110.0" cy="58.0" r="3.2" fill="#A8763E"/>
+<circle cx="162.3" cy="79.7" r="3.2" fill="#A8763E"/>
+<circle cx="184.0" cy="132.0" r="3.2" fill="#A8763E"/>
+<circle cx="162.3" cy="184.3" r="3.2" fill="#A8763E"/>
+<circle cx="110.0" cy="206.0" r="3.2" fill="#A8763E"/>
+<circle cx="57.7" cy="184.3" r="3.2" fill="#A8763E"/>
+<circle cx="36.0" cy="132.0" r="3.2" fill="#A8763E"/>
+<circle cx="57.7" cy="79.7" r="3.2" fill="#A8763E"/>
+<text x="290" y="42" text-anchor="middle" font-size="14" fill="#3A342B">比</text>
+<text x="290" y="58" text-anchor="middle" font-size="9" fill="#8A8074">偏党 · 只照一小堆</text>
+<circle cx="290" cy="132" r="74" fill="none" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="290" cy="132" r="50" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="290" cy="132" r="3" fill="#8A8074"/>
+<text x="290" y="136" text-anchor="middle" font-size="9.5" fill="#5F564A">我</text>
+<circle cx="312.9" cy="61.6" r="4" fill="#A2503B" opacity=".85"/>
+<circle cx="333.5" cy="72.1" r="4" fill="#A2503B" opacity=".85"/>
+<circle cx="349.9" cy="88.5" r="4" fill="#A2503B" opacity=".85"/>
+<text x="200" y="204" text-anchor="middle" font-size="10" fill="#8A8074">同一个热度，圆心不同</text>
+<text x="200" y="240" text-anchor="middle" font-size="11" fill="#5F564A">周以事为心，照得宽；比以我为心，照得窄</text>
+</svg>
+  </div>
+  <p>两个圆的半径一样，热度也一样：<b>左圆以「事」为心，八个点均匀落在圈上；右圆以「我」为心，三个点挤在一处，其余地方空着。</b>——<b>「周」不是更热，是圆心在外；「比」不是更冷，是圆心在内。</b></p>
+
+  <div class="h2" id="sc-21">义理图二　一线之隔</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 280" width="100%" role="img" aria-label="一线之隔：同一种亲厚，一边向公成周，一边向私成比" style="max-width:520px">
+<defs><marker id="a29b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+<text x="200" y="40" text-anchor="middle" font-size="11" fill="#3A342B">同一种亲厚</text>
+<circle cx="200" cy="66" r="6" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.3"/>
+<line x1="200" y1="74" x2="200" y2="238" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="206" y="150" font-size="8.5" fill="#A8763E">毫厘</text>
+<path d="M194 72 L86 158" stroke="#A8763E" stroke-width="1.3" marker-end="url(#a29b)"/>
+<path d="M206 72 L314 158" stroke="#8A8074" stroke-width="1.3" marker-end="url(#a29b)"/>
+<circle cx="78" cy="182" r="16" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.3"/>
+<text x="78" y="186" text-anchor="middle" font-size="12" fill="#8C5E2A">公</text>
+<circle cx="322" cy="182" r="16" fill="#fff" stroke="#8A8074" stroke-width="1.2"/>
+<text x="322" y="186" text-anchor="middle" font-size="12" fill="#5F564A">私</text>
+<text x="78" y="218" text-anchor="middle" font-size="10" fill="#8C5E2A">周 · 普遍</text>
+<text x="322" y="218" text-anchor="middle" font-size="10" fill="#8A8074">比 · 偏党</text>
+<text x="200" y="262" text-anchor="middle" font-size="11" fill="#5F564A">差在公私，不在热度</text>
+</svg>
+  </div>
+  <p>两图合看：<b>图一说圆心，图二说分寸。</b>——<b>同一种亲厚，往公那边多走一分是周，往私那边多走一分是比；朱子说「毫厘之差」，就是这条虚线。</b>——<b>这不是两类人，是每天几十次的小选择。</b></p>
+
+  <div class="h2" id="sc-22">附论一　「周」这个字，从密到遍</div>
+  <p><b>《说文》：「周，密也。从用、口。」</b>——<b>「周」的本义，是密、是周到，不是「一圈」。</b></p>
+  <p><b>从「密」走到「遍」，中间只隔一步。</b>——<b>把事情做密了，就是不漏；把人不漏了，就是周遍。</b>——<b>同一个字，先指「做得细」，再指「照得全」。</b></p>
+  <p><b>这一层意思，今天还活着：</b>——<b>「周到」是说照顾得细，「周济」是说分给缺的人。</b>——<b>细与全，本来是一件事的两头。</b></p>
+  <p><b>所以「周」不是一句态度，是一门手艺：</b>——<b>要做到不漏，得先知道有几个人、各要什么、谁容易被忘。</b>——<b>漏掉的那个，往往就是不在圈里的那个。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>周是细功夫，不是热心肠。</b></div>
+
+  <div class="h2" id="sc-23">附论二　毫厘之差，是每天几十次的小选择</div>
+  <p><b>朱子说「审其取舍之几」，「几」是苗头：念头刚起的那一瞬。</b>——<b>周与比，不在大事上分，在苗头上分。</b></p>
+  <p><b>心理学里有一个对应的现象：人天然偏向「自己人」。</b>——<b>同一件事，内群体做的叫「情有可原」，外群体做的叫「本性难移」；这叫内群体偏好（in-group bias），实验反复验证过。</b></p>
+  <p><b>它不是恶，是省力：</b>——<b>大脑用「是不是我们的人」当捷径，比逐事判断快得多。</b>——<b>省力的代价，是尺子悄悄弯了。</b></p>
+  <p><b>本章给的办法很笨，也最有效：</b>——<b>每次要判断一个人之前，先问一句「换成别人，我还这么判吗」。</b>——<b>一句换位，就把弯了的尺子掰直。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>公道不是天生的，是每次多问一句换来的。</b></div>
+
+  <div class="h2" id="sc-24">附论三　三条边界</div>
+  <p><b>这一章最容易被用成两种极端，三条先划清：</b></p>
+  <p><b>一，周不是人人一样对待。</b>——<b>父母、孩子、同事、路人，本来就不该一样；周说的是「同一把尺」，不是「同一份心」。</b></p>
+  <p><b>二，比不是有朋友。</b>——<b>谁都有几个说得来的人；比的病，是让这份近去改公事上的尺。</b></p>
+  <p><b>三，不表态不是周。</b>——<b>该说「这样不对」的时候不说，是把公道让给了声音大的一方；这不是周，是躲。</b></p>
+  <p><b>三条守住，这一章就落成一句可操作的话：</b>——<b>心里可以有远近，嘴上要有一把尺，手上要有一份到每个人的份。</b></p>
+
+  <div class="h2" id="sc-25">附论四　圈子与半径</div>
+  <p><b>小圈子为什么会烂？</b>——<b>因为它是一个闭环：圈里人只听见圈里人的话，越听越觉得对；不同意见进不来，进来了也被当成「他们那边的」。</b></p>
+  <p><b>这不是道德问题，是结构问题。</b>——<b>任何一群人，只要信息只在圈内流，判断就会一起偏；人越多，偏得越有底气。</b></p>
+  <p><b>解法不在「换圈子」，在「换半径」。</b>——<b>把半径从「谁跟我近」挪到「谁在这件事上」：事在谁身上，就听谁的；话对不对，只看事，不看人。</b></p>
+  <p><b>半径一换，圈子还在，只是不再是墙。</b>——<b>朋友照做，尺子照直；这是本章能落到今天的地方。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>把「我们」换成「这件事」，圈子就散了墙，留了人。</b></div>
+
+  </section>
+
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十九课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-22　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>

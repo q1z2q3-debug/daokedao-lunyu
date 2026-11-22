@@ -31,6 +31,7 @@
 - 第二十四课｜吾与回言终日，不违，如愚；退而省其私，亦足以发｜不违三辨（不懂／不必问／不敢问）；省其私两读（燕居独处／与二三子说绎）；测点从当场挪到退后；判在发，不判在懂。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/24.html
 - 第二十五课｜视其所以，观其所由，察其所安；人焉廋哉｜三看分三层：视其事、观其路、察其落点；可见度递减，耐久度递增；人焉廋哉，是断语不是问句。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/25.html
 - 第二十六课｜温故而知新，可以为师矣｜温是寻绎，不是复习；新从旧里长出来，不是加料；「可以」是资格句：够格不在读了多少，在所学的活不活。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/26.html
+- 第二十九课｜君子周而不比，小人比而不周｜周与比都训「亲厚」，差在公私毫厘：周以事为心，照得宽；比以我为心，照得窄。周有差等而非齐平，情可厚薄，尺不能有两把。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/29.html
 - 第二十八课｜子贡问君子。子曰：先行其言，而后从之｜先行其言是倒装：行之于未言之前，言之于既行之后。本章管次序，不管守信；范氏说子贡之患在行之艰。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/28.html
 - 第二十七课｜君子不器｜器者各适其用而不能相通；成德者体无不具，故用无不周。先成器，再不器：一才一艺要有，只是不止于此。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/27.html
 
@@ -42,7 +43,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.31，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.32，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
