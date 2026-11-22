@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第二十六课 为师（为政 2.11）</title>
+<meta name="description" content="《论语·为政》2.11 温故而知新，可以为师矣。朱子「温，寻绎也」；故者旧所闻，新者所得于今。一课两页：少儿页可念，成人页可考。底本朱熹《论语集注》。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十五章　第 26 课 / 498</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">寻绎</a><a href="#sc-d">新从旧出</a><a href="#sc-e">为师门槛</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 回火</a><a href="#sc-21">义理二 四格</a><a href="#sc-22">附论一 温字</a><a href="#sc-23">附论二 记忆</a><a href="#sc-24">附论三 边界</a><a href="#sc-25">附论四 可以</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>为　师</h1>
+    <div class="h1-sub">为政 2.11　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「温故而知新，可以为师矣。」</div>
+
+  <div class="h2" id="sc-1">字义小课堂</div>
+  <div class="tzg" aria-label="五个关键字">
+    <div class="tzitem"><div class="cell"><span>温</span></div><div class="tzcap"><span>12 画</span><span>回火</span></div></div>
+    <div class="tzitem"><div class="cell"><span>故</span></div><div class="tzcap"><span>9 画</span><span>旧的</span></div></div>
+    <div class="tzitem"><div class="cell"><span>知</span></div><div class="tzcap"><span>8 画</span><span>真懂</span></div></div>
+    <div class="tzitem"><div class="cell"><span>新</span></div><div class="tzcap"><span>13 画</span><span>新解</span></div></div>
+    <div class="tzitem"><div class="cell"><span>师</span></div><div class="tzcap"><span>6 画</span><span>能教人</span></div></div>
+  </div>
+  <div class="rows">
+    <div class="row"><div class="k">温</div><div class="v"><b>把旧的再烧一遍。</b>——<b>朱子说「温，寻绎也」，不是再念一遍，是顺着旧的往回找。</b>——<b>像饭凉了回锅，火不大，但是热的。</b></div></div>
+    <div class="row"><div class="k">故</div><div class="v"><b>已经学过的。</b>——<b>朱子说「故者，旧所闻」——听过的、读过的、老师讲过的。</b>——<b>故不是旧的废话，是旧的底子。</b></div></div>
+    <div class="row"><div class="k">知</div><div class="v"><b>真懂，不是听过。</b>——<b>能用自己的话说出来，能举出别的例子，这才叫知。</b>——<b>「知道」两个字，今天太轻了。</b></div></div>
+    <div class="row"><div class="k">新</div><div class="v"><b>从旧里长出来的新。</b>——<b>朱子说「新者，所得于今」——不是又买了一本新书，是今天从旧的里面看出了新的一层。</b>——<b>新解、新例、新问，都算。</b></div></div>
+    <div class="row"><div class="k">师</div><div class="v"><b>能教人的人。</b>——<b>「可以为师」＝够格当老师了。</b>——<b>够格不在年头，在你能不能把旧的讲活、把问题接住。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-2">一句话讲清</div>
+  <div class="scene"><b>旧书回火，能烧出新的一层，你就够格教人了。</b>（为政 2.11）</div>
+  <p>孔子说了两层，其实是一件事：<b>温故</b>——把学过的重新寻一遍；<b>知新</b>——从这一遍里，真看出过去没看出的东西。<b>两样都在，才可以为师。</b>——<b>只有旧，是复读机；只有新，是信息流。</b></p>
+
+  <div class="h2" id="sc-3">共读</div>
+  <p><b>第一层，什么叫「温」。</b>——<b>不是把书再读一遍，是带着问题回去找。</b>——<b>第一遍读，你只看见字；第二遍读，你看见句子怎么搭起来；第三遍读，你看见他为什么这么写。</b>——<b>同一段话，三遍看见三样东西，这才叫温。</b></p>
+  <p><b>第二层，新从哪里来。</b>——<b>新不是凭空来的，是从旧的缝里长出来的。</b>——<b>你觉得别扭的地方、前后打架的地方、老师讲不通的地方——那些缝，就是新的入口。</b></p>
+  <p><b>第三层，为什么温故知新就能当老师。</b>——<b>因为当老师要的不是「我知道得多」，是「我能把你知道的讲活」。</b>——<b>能把旧讲出新的一层，说明这知识在你身上是活的；活的，才教得动别人。</b></p>
+  <div class="scene"><b>一句话说透：</b>——<b>师不是仓库，是火种。</b>——<b>仓库只存旧的，火种能把旧的重新点着。</b></div>
+
+  <div class="h2" id="sc-4">生活里的一天</div>
+  <p><b>一　错题本。</b>——<b>同一道题错两次，第三次才真会。</b>——<b>第一次是记答案，第二次是找错在哪，第三次是知道这一类题都怎么想。</b>——<b>这就是温故知新，三遍不是重复，是三层。</b></p>
+  <p><b>二　拆旧的玩具。</b>——<b>玩了三年的小车，今天拆开，才知道齿轮怎么咬。</b>——<b>玩具还是那个玩具，你看见的东西不一样了。</b></p>
+  <p><b>三　给同学讲题。</b>——<b>自己会，不一定会讲；讲一遍，才发现自己哪块是虚的。</b>——<b>讲不清的地方，就是还要回去温的地方。</b></p>
+  <div class="scene"><b>三个场景说的是同一件事：</b>——<b>旧的东西不旧，看的人换了层，它就新了。</b></div>
+
+  <div class="h2" id="sc-5">三个小问题</div>
+  <p><b>一　为什么读了那么多遍，还是不会？</b>——<b>因为每一遍都在做同一件事：认字。</b>——<b>温不是遍数，是每次都换一个问题回去。</b></p>
+  <p><b>二　「新」一定要是没人说过的新吗？</b>——<b>不必。</b>——<b>对你来说是新的、你想通了的，就是新。</b>——<b>别人说过，不等于你懂过。</b></p>
+  <p><b>三　什么样的人能当老师？</b>——<b>不是分数最高的，是能把一道题讲出三种问法的人。</b>——<b>他知道你会卡在哪，因为他自己卡过。</b></p>
+
+  <div class="h2" id="sc-6">成长小启示</div>
+  <div class="scene"><b>先学会回头，再学会往前。</b>——<b>不回头的人，往前也是原地；回头的人，每一步都算数。</b></div>
+  <div class="scene"><b>把「我读过了」改成「我读出了什么」。</b>——<b>读过是经历，读出是本事。</b></div>
+  <div class="scene"><b>能讲给别人听，才算真会。</b>——<b>讲不清，不是嘴笨，是那处还没通。</b></div>
+
+  <div class="h2" id="sc-7">家长栏</div>
+  <div class="rows">
+    <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>问「这一页你上次读，看出了什么？这次又看出了什么？」</b>——<b>不问他记住没有，问他看见没有。</b></div></div>
+    <div class="row"><div class="k">用</div><div class="v"><b>家教场景：</b>——<b>复习别只做卷子，让他把这一章讲给你听。</b>——<b>讲得磕巴的地方，就是他没通的地方，比错题本准。</b></div></div>
+    <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「温故」做成抄写十遍，「知新」做成刷十套新卷。</b>——<b>一个是手在动，一个是题在换，脑子都没动。</b></div></div>
+    <div class="row"><div class="k">教</div><div class="v"><b>教与学：</b>——<b>「温」要有间隔：今天、三天后、一周后各回一次。</b>——<b>每次回，换一个问题：字义、结构、他为什么这么说。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>信息流只给新的，不给旧的；孩子不缺新，缺回火。</b>——<b>收藏夹越满，脑袋越空——收藏是「以后学」，不是「学了」。</b></div></div>
+    <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>数学的错题重做、语文的旧文重读、科学的旧实验重做，都是同一条。</b>——<b>重做不是补课，是升级。</b></div></div>
+    <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>别问「学了多少新的」，问「旧的里，你今天看懂了哪一层」。</b></div></div>
+  </div>
+
+  </section>
+
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>为　师</h1>
+    <div class="h1-sub">为政 2.11　乙篇·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「温故而知新，可以为师矣。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：这是「习」的第二次以后</div>
+  <p><b>学而篇第一句是「学而时习之，不亦说乎」。</b>——<b>「习」是雏鸟试翅，一遍一遍地扑；「温」是火边回烤，一次一次地热。</b>——<b>两个字说的其实是同一个动作：把学过的东西再拿回来，让它从「在书上」变成「在我身上」。</b></p>
+  <p><b>2.10 是向外看人：视、观、察，三层。</b>——<b>2.11 是向内看自己的学：旧的还热不热，新的长没长出来。</b>——<b>看人难，看自己的学更难：因为「读过」最容易冒充「懂了」。</b></p>
+  <p><b>朱子在这一章末尾引了一句重话：</b>「若夫记问之学，则无得于心而所知有限，故《学记》讥其不足以为人师。」——<b>记问之学，就是背下来应付提问的那一套。</b>——<b>朱子用它反证本章：能当老师的，不是记得多，是「所学在我」。</b></p>
+  <div class="scene"><b>这一章在《为政》里的位置，是「由学入教」。</b>——<b>2.10 学会了看人，2.11 学会了看自己的学；看明白了，才谈得上教人。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">温</div><div class="v"><b>寻绎。</b>——朱子：「温，寻绎也。」<b>不是重读，是顺着旧文往回找：找它的来路、它的接缝、它没说尽的那一处。</b>——旧注另有读作「燖温」之温者（熟食再热），义亦相通：<b>都是「回火」。</b></div></div>
+    <div class="row"><div class="k">故</div><div class="v"><b>旧所闻。</b>——朱子：「故者，旧所闻。」<b>听过的、读过的、学过的。</b>——<b>它不指「旧事」，指「旧学」。</b></div></div>
+    <div class="row"><div class="k k2">知新</div><div class="v"><b>所得于今。</b>——朱子：「新者，所得于今。」<b>「知」不是「听说」，是「得」：今天真从旧的里拿到了一样东西。</b></div></div>
+    <div class="row"><div class="k">师</div><div class="v"><b>人师，不是经师。</b>——<b>经师讲字句，人师讲活法；本章的「师」，是能把所学化成可教之人的那种。</b>——朱子：「所学在我，而其应不穷，故可以为人师。」</div></div>
+    <div class="row"><div class="k k2">可以</div><div class="v"><b>够格、可堪。</b>——<b>不是「允许」，是「够得上」。</b>——<b>「可以」二字是资格句：说的是本事到了，不是说身份有了。</b></div></div>
+  </div>
+  <p><b>朱子注四句（本章的骨）：</b></p>
+  <p><b>其一，「温，寻绎也。」</b>——<b>一个「绎」字最要紧：绎是抽丝，把缠着的线一根根抽出来。</b>——<b>故不是一团，是一束线；温就是把这束线重新理开。</b></p>
+  <p><b>其二，「故者，旧所闻；新者，所得于今。」</b>——<b>两句对举，一头是过去，一头是今天；中间那个动作是「温」。</b></p>
+  <p><b>其三，「学能时习旧闻，而每有新得，则所学在我，而其应不穷。」</b>——<b>「在我」二字是根：知识长在自己身上，不在笔记本上。</b>——<b>「其应不穷」是果：别人怎么问，你都答得下去，因为你是从根上懂的。</b></p>
+  <p><b>其四，引《学记》「记问之学，不足以为人师」以反证。</b>——<b>记问是「存」在嘴上，温故知新是「长」在身上。</b></p>
+  <p><b>句读三停：</b></p>
+  <p><b>其一，「温故」与「知新」是两件事，不是一件事的两种说法。</b>——<b>温故是动作，知新是结果；先有动作，后有结果。</b>——<b>今人常把「温故知新」连读成一个成语，动作和结果就糊成一片了。</b></p>
+  <p><b>其二，「而」字是条件，不是并列。</b>——<b>「温故而知新」＝温故，并且因此知新。</b>——<b>温了却无所新得，不算；新得不是从故里来的，也不算。</b></p>
+  <p><b>其三，「可以为师矣」是一句判断，不是一句许诺。</b>——<b>孔子不下命令，只报一个事实：这样的人，够格了。</b></p>
+
+  <div class="h2" id="sc-c">二　「温」是寻绎，不是复习</div>
+  <p><b>复习与寻绎，差在「谁在动」。</b>——<b>复习是书在动：字从眼前再过一遍，眼熟，心不动。</b>——<b>寻绎是人在动：带着一个问题回去，把旧文拆开，看它怎么搭的。</b></p>
+  <p><b>眼熟是最危险的信号。</b>——<b>一页书读三遍，你会觉得「我都知道」，可一合上书就讲不出来。</b>——<b>那种「知道」，是认得出，不是想得起；是再认，不是提取。</b>——<b>朱子要的「寻绎」，是提取之后还能重构。</b></p>
+  <p><b>寻绎要找的三样东西：</b></p>
+  <p><b>一找缝。</b>——<b>读着别扭的地方，多半是你没通的地方，也可能是作者用力最深的地方。</b>——<b>2.10「人焉廋哉」重言两次，为什么要两次？这一处就是缝。</b></p>
+  <p><b>二换问。</b>——<b>同一段，第一遍问「他说什么」，第二遍问「他怎么搭的」，第三遍问「他为什么非这么说」。</b>——<b>问题一换，旧文就变了。</b></p>
+  <p><b>三连线。</b>——<b>把这一段和别处连起来：2.9「退而省其私」、2.10「察其所安」，都在讲「看不见的那一层」。</b>——<b>连上了，才算真懂这一处的位置。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>复习是把书再走一遍，寻绎是把自己再问一遍。</b>——<b>走十遍不如问三遍。</b></div>
+
+  <div class="h2" id="sc-d">三　「新」从旧里生</div>
+  <p><b>「新」不是新买一本，是新看见一层。</b>——<b>朱子说「每有新得」——「每」字最要紧：不是一次大悟，是一层一层地得。</b></p>
+  <p><b>新的三条来路：</b></p>
+  <p><b>一，同中见异。</b>——<b>同样一句「不亦说乎」，1.1 是学之乐，2.11 是教之乐；同一句，位置不同，味不同。</b></p>
+  <p><b>二，异中见同。</b>——<b>2.9 的「省其私」、2.10 的「察其所安」、2.11 的「温故」，三处都在说：真的那层，得等、得往里看。</b>——<b>看出来了，这三章就成了一章。</b></p>
+  <p><b>三，旧义今证。</b>——<b>古人的话，拿到今天的事上验一遍：信息流为什么越刷越空？因为只给新，不给回火。</b>——<b>这一验，旧话就活了。</b></p>
+  <p><b>反过来，「新」也有假的：</b>——<b>换了个说法的旧话，不算新；听着新鲜但从旧里接不上的，是断线的新。</b>——<b>朱子的标准是「所得」：拿到手了没有。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>新不是加料，是长出来的。</b>——<b>旧是根，问是水；浇对了，才发新芽。</b></div>
+
+  <div class="h2" id="sc-e">四　「可以为师」的门槛</div>
+  <p><b>师不是「知道得多」。</b>——<b>《学记》说「记问之学，不足以为人师」——背得多、答得快，只够当活字典。</b>——<b>字典不教人，字典只被人查。</b></p>
+  <p><b>三条门槛，都在这章里：</b></p>
+  <p><b>一，讲得清旧。</b>——<b>能把旧的说得像刚想出来的，说明它在你身上是活的。</b>——<b>讲不清，是那处还隔着。</b></p>
+  <p><b>二，接得住问。</b>——<b>朱子说「其应不穷」：学生怎么问，你都答得下去，因为你不是背的，是从根上懂的。</b>——<b>接不住，说明你只记住了这一题的答案。</b></p>
+  <p><b>三，给得出新。</b>——<b>每一次讲，都能讲出新的一层；不是重复上次的话。</b>——<b>这才叫「温故而知新」在身上转起来了。</b></p>
+  <p><b>《学记》另有一句，可作注脚：</b>「学然后知不足，教然后知困……故曰教学相长也。」——<b>教不是往外掏，是把自己逼回书里。</b>——<b>教一遍，温一遍；温一遍，长一层。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>够格当老师，不是因为你走到了前面，是因为你能把来路讲清楚。</b></div>
+
+  <div class="h2" id="sc-f">五　反向：两条腿，断一条就走不动</div>
+  <p><b>今天的病，常常是两条腿断得不一样。</b></p>
+  <p><b>一，只新不故。</b>——<b>每天刷新的观点、新的课、新的名词，旧的从不回看。</b>——<b>结果：什么都知道一点，什么都讲不下去；新的一来，旧的就冲掉了。</b>——<b>这是信息流，不是学。</b></p>
+  <p><b>二，只故不新。</b>——<b>同一本书读十年，每次读出的都一样；笔记抄得工整，从没有一句自己的话。</b>——<b>结果：熟，但是死；能背，不能答。</b>——<b>这是复读机，也不是学。</b></p>
+  <p><b>三，收藏＝学会。</b>——<b>点了收藏，心里就踏实了；其实只是把「以后学」存进了仓库。</b>——<b>仓库越满，身上越空。</b>——<b>温故的第一步，是把收藏夹里的东西真读一遍。</b></p>
+  <p><b>所以这一章今天读，不是劝人博学，是一句提醒：</b>——<b>你的旧，回火了吗？你的新，有根吗？</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>新是叶子，故是根；只长叶不扎根，风一吹就没了。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>温故是寻绎旧闻，知新是今有所得；旧能回火，新能从旧里长出来，所学才真在自己身上，才够格教人。</p>
+  <p><b>一反。</b>这不是「多读书就能当老师」的资历论。朱子引《学记》点破：记问之学，不足为师——<b>师的门槛不在读了多少，在所学的活不活。</b></p>
+  <p><b>一辨。</b>「温故知新」不是一句成语的两半，是两个动作加一个结果：<b>温故是动作，知新是结果，「而」字是条件。</b>——温了无新得，不算；新得不从故来，也不算。</p>
+  <div class="scene"><b>本章在《为政》里的位置，是「由学入教」。</b>——<b>2.10 看人三层，2.11 看学两层；看明白了自己，才谈得上教别人。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「温」训「寻绎」，还是读作「燖温」。</b>朱子：「温，寻绎也。」旧注有读如「燖温」之温者，谓熟食再热。<b>本课以「寻绎」为主，兼记「燖温」</b>：两义相通，都是「回火」。</div></div>
+    <div class="q"><span>02</span><div><b>「故」指旧所闻，还是旧事。</b>朱子明言「旧所闻」，指学过的。<b>本课从「旧学」</b>；若作「旧事」，则本章偏向「以史为鉴」，与「为师」之旨不合。</div></div>
+    <div class="q"><span>03</span><div><b>「新」指新得，还是新解。</b>朱子「所得于今」，重心在「得」。<b>本课取「新得」</b>：新解、新例、新问，皆得；单纯的新见闻，不算。</div></div>
+    <div class="q"><span>04</span><div><b>「为师」是教人，还是自师。</b>旧注多作教人。<b>本课以「教人」为主，兼取「自师」</b>：能把自己讲明白，也是师——两义不冲突，一内一外。</div></div>
+    <div class="q"><span>05</span><div><b>本章与 1.1「学而时习」是否同义。</b>「时习」重在按时反复，「温故」重在寻绎出新。<b>本课判为「同一动作的两个深度」</b>：习是扑翅，温是回火。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>温故就是多复习几遍。</b></div><div class="b"><b>复习是把书再走一遍，温故是带着问题回去拆。</b>——<b>朱子说「寻绎」：抽丝、找缝、换问、连线。</b></div></div>
+    <div class="pair"><div class="a"><b>知新就是多学新东西。</b></div><div class="b"><b>新是从旧里长出来的。</b>——<b>「所得于今」：今天从旧的里拿到一样东西，才叫知新。</b></div></div>
+    <div class="pair"><div class="a"><b>书读得多，就能当老师。</b></div><div class="b"><b>《学记》：「记问之学，不足以为人师。」</b>——<b>够格不在读了多少，在讲得清、接得住、给得出。</b></div></div>
+    <div class="pair"><div class="a"><b>「温故知新」是一个成语，说的是同一件事。</b></div><div class="b"><b>两个动作，一个结果。</b>——<b>温故是动作，知新是结果，「而」字是条件：温了无新得，不算。</b></div></div>
+    <div class="pair"><div class="a"><b>收藏了，就等于学了。</b></div><div class="b"><b>收藏是把「以后学」存进仓库。</b>——<b>仓库越满，身上越空；温的第一步，是把收藏夹真读一遍。</b></div></div>
+    <div class="pair"><div class="a"><b>当老师靠年头和资历。</b></div><div class="b"><b>「可以」是资格句，不是身份句。</b>——<b>说的是本事到了，不是位置有了；本事不到，年头再长也只是记问。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》1.1「学而时习之，不亦说乎」。</b>——<b>习是扑翅，温是回火；同一动作的两个深度。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》2.15「学而不思则罔，思而不学则殆」。</b>——<b>温故是学，知新是思；只学不思则罔，正是「只故不新」的病。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《礼记·学记》「记问之学，不足以为人师」。</b>——<b>朱子引以反证；记问是存在嘴上，温故是长在身上。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《礼记·学记》「学然后知不足，教然后知困……故曰教学相长也」。</b>——<b>教是把自己逼回书里：教一遍，温一遍，长一层。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>苏轼《送安惇秀才失解西归》「旧书不厌百回读，熟读深思子自知」。</b>——<b>「熟读」是温，「深思」是寻绎，「自知」是所得于今。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《孟子·尽心下》「尽信书，则不如无书」。</b>——<b>与本章互看：温故不是照抄，是寻绎到能疑处；能疑，才生新。</b></div></div>
+  </div>
+  <div class="h2" id="sc-19">图一　回火：旧简不动，批字是今天加的</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 火不大，但旧简是热的</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。夜案上一卷展开的旧简，墨字已旧、边角起毛；一人侧坐，执细笔在简的天地头加小字朱批；案角一盏矮灯，焰小而不高，光只罩住简的中段；简旁另放一片新削的木牍，尚未写字；窗外夜色压进来。要画的不是「读书」，是「回火」。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>旧简</b>：字是旧的，边角起毛，说明读过不止一遍——这是「故」；<b>朱批</b>：今天才写上去的小字，写在旧字的缝里，不另起一纸——这是「新」，新从旧里长，不长在旧之外；<b>灯焰</b>：不高，只罩住中段——火不大，才叫「温」；火太大，就是重写，不是回火。</div>
+
+  <div class="h2" id="sc-20">义理图一　回火：一圈比一圈高</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 300" width="100%" role="img" aria-label="回火示意：故经温而寻绎出新，新回注故，一圈比一圈高" style="max-width:520px">
+    <defs><marker id="a26a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker>
+    <marker id="a26b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#A8763E"/></marker></defs>
+    <path d="M118 140 Q200 78 282 140" fill="none" stroke="#8A8074" stroke-width="1.6" marker-end="url(#a26a)"/>
+    <path d="M282 164 Q200 226 118 164" fill="none" stroke="#8A8074" stroke-width="1.6" marker-end="url(#a26a)"/>
+    <text x="200" y="94" text-anchor="middle" font-size="10.5" fill="#5F564A">寻绎：从旧里找缝、换问、连线</text>
+    <text x="200" y="212" text-anchor="middle" font-size="10.5" fill="#5F564A">回注：新解改写旧的读法</text>
+    <circle cx="92" cy="152" r="26" fill="#FCF8EF" stroke="#C9BEAE" stroke-width="1.2"/>
+    <text x="92" y="151" text-anchor="middle" font-size="15" fill="#3A342B">故</text>
+    <text x="92" y="167" text-anchor="middle" font-size="8.5" fill="#8A8074">旧所闻</text>
+    <circle cx="308" cy="152" r="26" fill="#FCF8EF" stroke="#C9BEAE" stroke-width="1.2"/>
+    <text x="308" y="151" text-anchor="middle" font-size="15" fill="#3A342B">新</text>
+    <text x="308" y="167" text-anchor="middle" font-size="8.5" fill="#8A8074">所得于今</text>
+    <circle cx="200" cy="152" r="40" fill="#fff" stroke="#A8763E" stroke-width="1.6"/>
+    <text x="200" y="150" text-anchor="middle" font-size="16" fill="#8C5E2A">温</text>
+    <text x="200" y="169" text-anchor="middle" font-size="9" fill="#8C5E2A">寻绎 · 回火</text>
+    <path d="M58 100 Q84 64 126 52" fill="none" stroke="#A8763E" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#a26b)"/>
+    <text x="44" y="118" text-anchor="start" font-size="9" fill="#A8763E">上一圈</text>
+    <text x="200" y="272" text-anchor="middle" font-size="11" fill="#5F564A">温故不是回头看，是把旧的火重新点着</text>
+  </svg>
+  </div>
+  <p>此图把「温故—知新」画成一个闭环，不是一个来回。<b>左「故」、右「新」，中间「温」是那个动手的地方：寻绎，从旧里找出线头。</b>——<b>上弧是寻绎，下弧是回注：新的解，回头改写旧的读法。</b>——<b>最要紧的是外面那圈虚线：每转一圈，回到的「故」已经不是原来那个「故」了。</b></p>
+
+  <div class="h2" id="sc-21">义理图二　四格：旧不旧，新不新</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 300" width="100%" role="img" aria-label="四格：以故新为横轴、以记解为纵轴，旧能解出新者落在师这一格" style="max-width:520px">
+    <defs><marker id="a26c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+    <rect x="58" y="66" width="130" height="74" fill="#FCF8EF" stroke="#E2D8C8" stroke-width="1"/>
+    <rect x="212" y="66" width="130" height="74" fill="#fff" stroke="#E9E1D4" stroke-width="1"/>
+    <rect x="58" y="160" width="130" height="74" fill="#fff" stroke="#E9E1D4" stroke-width="1"/>
+    <rect x="212" y="160" width="130" height="74" fill="#fff" stroke="#E9E1D4" stroke-width="1"/>
+    <text x="123" y="98" text-anchor="middle" font-size="13" fill="#8C5E2A">温故知新</text>
+    <text x="123" y="118" text-anchor="middle" font-size="11.5" fill="#8C5E2A">＝ 师</text>
+    <text x="123" y="132" text-anchor="middle" font-size="8.5" fill="#A8763E">旧的回火，新的有根</text>
+    <text x="277" y="102" text-anchor="middle" font-size="12.5" fill="#5F564A">以新证旧</text>
+    <text x="277" y="122" text-anchor="middle" font-size="9" fill="#8A8074">今事验古义</text>
+    <text x="123" y="196" text-anchor="middle" font-size="12.5" fill="#5F564A">复读机</text>
+    <text x="123" y="216" text-anchor="middle" font-size="9" fill="#8A8074">熟而不解</text>
+    <text x="277" y="196" text-anchor="middle" font-size="12.5" fill="#5F564A">信息流</text>
+    <text x="277" y="216" text-anchor="middle" font-size="9" fill="#8A8074">新而无根</text>
+    <path d="M200 58 L200 248" stroke="#8A8074" stroke-width="1.2" fill="none" marker-end="url(#a26c)"/>
+    <path d="M48 152 L352 152" stroke="#8A8074" stroke-width="1.2" fill="none" marker-end="url(#a26c)"/>
+    <text x="190" y="50" text-anchor="end" font-size="10" fill="#8A8074">解</text>
+    <text x="190" y="266" text-anchor="end" font-size="10" fill="#8A8074">记</text>
+    <text x="42" y="157" text-anchor="start" font-size="10" fill="#8A8074">故</text>
+    <text x="356" y="157" text-anchor="end" font-size="10" fill="#8A8074">新</text>
+    <text x="200" y="290" text-anchor="middle" font-size="10.5" fill="#5F564A">只记不解，两头都是死格</text>
+  </svg>
+  </div>
+  <p>两图合看：<b>图一说的是「怎么转」，图二说的是「转到哪儿」。</b>——<b>横轴从「故」到「新」，纵轴从「记」到「解」：只记不解，两头都是死格；旧能解出新，才落在「师」这一格。</b>——<b>合起来一句：回火要动手，动手要出解。</b></p>
+
+  <div class="h2" id="sc-22">附论一　「温」这个字，本来是水，后来是火</div>
+  <p><b>《说文》：「温，水。出犍为涪，南入黔水。」</b>——<b>「温」的本义是一条水名，与「温暖」无关；它是借字。</b>——<b>借的是哪个字？旧注有读「温」为「燖温」之温者：熟食放凉了，再上火，叫燖。</b></p>
+  <p><b>这一借，把「温习」的意思定死了：</b>——<b>不是「再看一遍」，是「再热一遍」。</b>——<b>饭要热了才吃得下，书要热了才进得去；凉着吞，是吞不下去的。</b></p>
+  <p><b>所以「温」自带三个条件：</b>——<b>一，火不能大（大就是重写）；二，要盖一会儿（不是一翻就过）；三，要连着来（凉一次热一次，反复）。</b>——<b>这三条，正好对上「寻绎」：慢慢来、待得住、反复回。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>温故的「温」，是火字旁的心，不是眼睛的勤。</b></div>
+
+  <div class="h2" id="sc-23">附论二　两种记忆：认得出，和想得起</div>
+  <p><b>心理学上有个区分，与这一章可以对看：</b>——<b>「认得出」（再认）与「想得起」（提取）。</b>——<b>再认很省力：选项摆在眼前，一眼就挑得出来；提取很费力：合上书，从空里把话捞出来。</b></p>
+  <p><b>为什么「读了很多遍还是不会」？</b>——<b>因为反复读练的是再认，考试和讲课要的是提取。</b>——<b>读的时候一路顺，是因为字都在眼前；一合书就空，是因为从没练过捞。</b></p>
+  <p><b>温故要练的，是提取：</b>——<b>合上书，先自己讲一遍；讲断了，再翻回去看断在哪。</b>——<b>这个「断」，就是朱子说的「缝」；找到缝，才算寻绎。</b></p>
+  <p><b>还有一条，叫间隔：</b>——<b>今天一次、三天后一次、一周后一次，比一天读十遍管用。</b>——<b>因为每一次回来，都得重新捞一遍；捞一次，长一层。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>读，是让字在眼前；温，是让字从心里出来。</b></div>
+
+  <div class="h2" id="sc-24">附论三　三条边界</div>
+  <p><b>这一章好用，也最容易被用偏。三条先划清：</b></p>
+  <p><b>一，温故不是守旧。</b>——<b>旧的要回火，不是要供起来。</b>——<b>回火的判据是「有没有新得」；三年读同一本而一无所新，那不是温，是守。</b></p>
+  <p><b>二，知新不是追新。</b>——<b>新的要从旧里长，长不出来的新，是断线的热闹。</b>——<b>今天的新词、新课、新观点，多数与你已有的根接不上；接不上，学得越多越散。</b></p>
+  <p><b>三，为师不是好为人师。</b>——<b>《孟子·离娄上》：「人之患在好为人师。」</b>——<b>「可以」是够格，不是想教；够格的人往往不急着教，不够格的人最爱指路。</b></p>
+  <p><b>三条守住，这一章就只是一句话：</b>——<b>把旧的烧热，烧出新的，才谈得上教人；三样缺一，都不算。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「可以」两个字的分量</div>
+  <p><b>「可以为师矣」——这四个字里，「可以」最轻，也最重。</b>——<b>轻，是因为它只是一个资格判断，不带命令；重，是因为它把「师」的门槛从年头挪到了本事。</b></p>
+  <p><b>换成今天的话：</b>——<b>不是「你教了十年，所以你是老师」，是「你能把旧的讲出新的一层，所以你够格」。</b>——<b>年头可以混，本事混不了：一开口，学生就知道你是活的还是背的。</b></p>
+  <p><b>朱子把这条门槛说得更狠：</b>「记问之学，不足以为人师。」——<b>记问是「存」；温故知新是「长」。存的东西会旧，长的东西会新。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>师不是站在前面的人，是能把来路讲清楚的人。</b>——<b>来路讲清了，前面才有人跟。</b></div>
+
+  </section>
+
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十六课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-22　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>
+
