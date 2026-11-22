@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第二十八课 先行（为政 2.13）</title>
+<meta name="description" content="《论语·为政》2.13 子贡问君子，子曰先行其言而后从之。朱子「行之于未言之前，言之于既行之后」；范氏「子贡之患，非言之艰而行之艰」。一课两页：少儿页可念，成人页可考。底本朱熹《论语集注》。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 28 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">倒装</a><a href="#sc-d">后从</a><a href="#sc-e">对子贡说</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 行前言后</a><a href="#sc-21">义理二 三序</a><a href="#sc-22">附论一 从字</a><a href="#sc-23">附论二 说出来的目标</a><a href="#sc-24">附论三 边界</a><a href="#sc-25">附论四 因材施教</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>先　行</h1>
+    <div class="h1-sub">为政 2.13　底本：朱熹《论语集注》</div>
+    <div class="src">子贡问君子。子曰：「先行其言，而后从之。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>先</span></div><div class="tzcap"><span>6 画</span><span>在……之前</span></div></div>
+      <div class="tzitem"><div class="cell"><span>行</span></div><div class="tzcap"><span>6 画</span><span>做出来</span></div></div>
+      <div class="tzitem"><div class="cell"><span>言</span></div><div class="tzcap"><span>7 画</span><span>说出口</span></div></div>
+      <div class="tzitem"><div class="cell"><span>从</span></div><div class="tzcap"><span>4 画</span><span>跟上来</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">先</div><div class="v"><b>在……之前。</b>——<b>「先行其言」，是先于你的话去做：话还没出口，事已经做了。</b></div></div>
+      <div class="row"><div class="k">行</div><div class="v"><b>做出来，不只是想。</b>——<b>手上有动作，事上有结果，才叫行。</b></div></div>
+      <div class="row"><div class="k">言</div><div class="v"><b>说出口的话。</b>——<b>包括承诺、解释、表态，也包括给自己立的规矩。</b></div></div>
+      <div class="row"><div class="k">从</div><div class="v"><b>跟上来。</b>——<b>「而后从之」：话跟在做之后，不是做跟在说之后。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>先做，再说；说了的话，要跟着做过的事走。</b>——<b>（为政 2.13）</b></div>
+    <p>子贡问「什么样的人算君子」。孔子没讲大道理，只给了他一句最实用的：<b>你要说的那件事，先做出来；做完了，话再跟上来。</b></p>
+    <p><b>一句话：顺序反过来，话就虚了。</b>——<b>先说的，是愿望；先做的，才是本事。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，什么叫「先行其言」。</b>——<b>不是「说了就去做」，是「做了才说」。</b>——<b>想学游泳，先下水扑腾几回，再跟人说「我在学」；不是先发个朋友圈，再等明天。</b></p>
+    <p><b>第二层，为什么话要「后从」。</b>——<b>因为话只有跟在做后面，才站得住。</b>——<b>做完再说，说的是实的；没做就说，说的是空的；说完了不做，连空的那句也塌了。</b></p>
+    <p><b>第三层，为什么孔子对子贡说这句。</b>——<b>子贡最能说。</b>——<b>对最能说的人，提醒他「先做」；对最不会说的人，可能要提醒他「该说了」。</b>——<b>同一句话，看是谁在听。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>话是脚印，不是路。</b>——<b>先走路，再留脚印。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　说了「我明天开始跑步」。</b>——<b>说完心里就轻了，好像已经跑过。</b>——<b>第二天没跑，第三天也不好意思提。</b></p>
+    <p><b>二　作业还没写，先在群里说「这题我会」。</b>——<b>会的是那道题的样子，真写起来卡在第二步。</b>——<b>话抢在了手前面。</b></p>
+    <p><b>三　做完了才说。</b>——<b>手工课上一件东西做好了，才拿给同学看：「这是我做的。」</b>——<b>这句话最轻，也最重。</b></p>
+    <div class="scene"><b>三个场景说的是同一件事：</b>——<b>话在前，人向后缩；话在后，人往前走。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　「先行」是不是什么都不说？</b>——<b>不是。</b>——<b>是「先做，再说」；不是「不说」——做完不说，别人也无从知道。</b></p>
+    <p><b>二　那我说了之后做不到，怎么办？</b>——<b>承认，然后补做。</b>——<b>「后从」不是不许失约，是不许把失约当成习惯。</b></p>
+    <p><b>三　怎么练？</b>——<b>把「我要……」改成「我刚……」。</b>——<b>说已经做的那一步，不说还没做的那十步。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>先做一件小事，再说一句大话。</b>——<b>小事先落地，大话才有人信。</b></div>
+    <div class="scene"><b>别把「说」当成「做」的一半。</b>——<b>说出来只是零；做完才是那个一。</b></div>
+    <div class="scene"><b>答应别人的事，先做七分再说。</b>——<b>留三分，是给自己留兑现的余地。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>问「你昨天说要做的，做了几分？」</b>——<b>不问他为什么没做，问他做到哪一步。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让他先动手，再汇报：碗洗完再说「洗完了」，不是「我去洗」。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>孩子一说大话就骂，一沉默就催。</b>——<b>说与做的次序，是要教的，不是骂出来的。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>每件事只报「已做的」，不报「将做的」；报将做的，只报下一步。</b>——<b>下一步具体，才做得动。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>立目标、发宣言最容易，成本几乎为零。</b>——<b>话越便宜，做越值钱。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>科学的先做实验再写结论，工程先做样机再开发布会，都是同一条。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>把「我说了」换成「我做了」；一年下来，话会变少，人会变厚。</b></div></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>先　行</h1>
+    <div class="h1-sub">为政 2.13　乙篇·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子贡问君子。子曰：「先行其言，而后从之。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：不器的人，不靠嘴</div>
+  <p><b>上一章说「君子不器」——人不被一样用途限住。</b>——<b>这一章接着问：这样一个人在世上怎么行事？孔子答得极实：先做，再说。</b></p>
+  <p><b>两章连起来，是一个人的两面：</b>——<b>向内，体要备（不器）；向外，行要先（先行）。</b>——<b>体不备，行是乱的；行不先，言是空的。</b></p>
+  <p><b>《为政》这一段的脉络也清楚：</b>——<b>2.10 看人，2.11 为师，2.12 不器，2.13 先行——从「怎么看」，落到「怎么做」。</b></p>
+  <div class="scene"><b>这一章在全篇的位置，是「学的落地」。</b>——<b>学到最后，不看你会讲多少，看你先做了哪一步。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">先</div><div class="v"><b>在……之前。</b>——<b>「先行其言」的「先」，先的是「言」这个动作：话还没说，行已经在前面了。</b></div></div>
+    <div class="row"><div class="k">行</div><div class="v"><b>做出来。</b>——<b>不是想、不是说、不是计划，是事上有痕迹。</b></div></div>
+    <div class="row"><div class="k">言</div><div class="v"><b>要说的话。</b>——<b>包括许诺、表态、解释，也包括给自己的宣告。</b></div></div>
+    <div class="row"><div class="k">从</div><div class="v"><b>跟随。</b>——<b>「而后从之」：言跟在行后面。从的主语是言，不是人。</b></div></div>
+  </div>
+  <p><b>句读一辨，是本章的分水岭：</b>「先行其言」不是「先实行自己说过的话」，是<b>「先于其言而行」</b>——在说话之前，先把事做了。前一种读法讲的是「守信」，后一种讲的是「次序」。朱子取后一种，且说得明白。</p>
+
+  <div class="h2" id="sc-c">二　朱子的两句注，把次序钉死了</div>
+  <p><b>朱子：「先行其言者，行之于未言之前；而后从之者，言之于既行之后。」</b>——<b>两句各有一个时间词：未言之前、既行之后。</b>——<b>本章讲的是时间，不是态度。</b></p>
+  <p><b>「行之于未言之前」，是把行放在言的前面。</b>——<b>不是做了不说，是「做」这件事发生在「说」之前。</b></p>
+  <p><b>「言之于既行之后」，是把言放在行的后面。</b>——<b>说的时候，事已经在那儿了；话不是许愿，是记录与说明。</b></p>
+  <p><b>所以两读之别要看清：</b></p>
+  <p><b>读法一（守信读）：</b>先把自己说的话实行了——重心在「不食言」。<b>这当然也对，但不是本章的重心。</b></p>
+  <p><b>读法二（次序读）：先做，后说——重心在「话不许跑在手前面」。</b>——<b>朱子取此。两读可以并存，次序读更贴原文句法：「先」直接管的是「言」。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>本章管的不是「守不守信」，是「谁先谁后」。</b></div>
+
+  <div class="h2" id="sc-d">三　为什么话要「后从」</div>
+  <p><b>因为话有三种用法，只有一种站得住。</b></p>
+  <p><b>其一，话在前——是愿望。</b>——<b>「我要开始……」说出口的一刻，心里已经得了一次满足；真做的动力，反而被提前支取了。</b></p>
+  <p><b>其二，话与行同时——是直播。</b>——<b>边做边说，热闹，但常常做着做着就只剩说。</b></p>
+  <p><b>其三，话在后——是记录。</b>——<b>事做成了，话只是给它一个名字、一个交代。</b>——<b>这种话最轻，也最经得起追问。</b></p>
+  <p><b>「而后从之」还有一层：话跟上来之后，要一直跟着。</b>——<b>不是说完就了，是往后的每一次，话都要对得上那件已做的事。</b>——<b>言从行，是一辈子的从，不是一次的从。</b></p>
+  <p><b>旧注大意「疾夫言过其行」——所恶的正是言跑到行前面去。</b>——<b>言过其行，不是话说错了，是次序倒了。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>话是脚印，得踩在走过的路上。</b></div>
+
+  <div class="h2" id="sc-e">四　为什么这句话是对子贡说的</div>
+  <p><b>《论语》里问「君子」的人不少，孔子每次答的都不一样。</b>——<b>对子贡，他答这一句。</b></p>
+  <p><b>子贡是什么人？</b>——<b>孔门四科，言语一科是他与宰我；《史记·仲尼弟子列传》说他「利口巧辞」，孔子「常黜其辩」。</b>——<b>最能说的人，最容易被自己的话带着走。</b></p>
+  <p><b>朱子引范氏一句话，点得很准：</b>「子贡之患，非言之艰而行之艰，故告之以此。」——<b>他不是不会说，是难在做；所以孔子不教他怎么说，教他先做。</b></p>
+  <p><b>这就是因材施教的分量：</b>——<b>同一句「先行其言」，对沉默的人可能是「该说了」，对利口的人才是「先做」。</b>——<b>话本身不变，落点因人而异。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>孔子给的常不是道理，是对症的一味药。</b></div>
+
+  <div class="h2" id="sc-f">五　反向：三种「言在前」</div>
+  <p><b>一，先说后做——立旗。</b>——<b>目标喊得越响，做的力气越小；旗子插在山顶，人还在山脚。</b></p>
+  <p><b>二，只说不做——空转。</b>——<b>话说得越来越熟，事一件没动；久了，连自己也信了。</b></p>
+  <p><b>三，说给别人听——借光。</b>——<b>把「我认识谁」「我要做什么」挂在嘴上，用话去借本来要靠事才能挣的东西。</b></p>
+  <p><b>另有一端，也要辨清：做了不说。</b>——<b>这不算错，但本章并不倡「不说」。</b>——<b>「后从」是要求话跟上来，不是要求话消失。</b>——<b>该说而不说，别人无从接你的手。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>言在前，人往后缩；言在后，人往前走。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>君子行事，先做后说：行在未言之前，言在既行之后；话跟事走，不抢在事前面。</p>
+  <p><b>一反。</b>这不是「少说话」的劝诫，也不是「守信」的复述。<b>它管的是次序：行先，言后；言一旦出口，就要一直跟着行。</b></p>
+  <p><b>一辨。</b>「先行其言」有两读：一读「先实行自己所说」（守信），一读「先于其言而行」（次序）。<b>朱子取次序读，本课从之；两读并存，次序读更贴句法。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「学的落地」。</b>——<b>2.12 讲体要备，2.13 讲行要先；体备而行先，一个君子才立得住。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「先行其言」是倒装，还是「先实行其言」。</b>朱子明言「行之于未言之前」，取倒装（次序）读。<b>本课从朱子</b>；「守信」读可并存，但非本章重心。</div></div>
+    <div class="q"><span>02</span><div><b>「从」训「跟随」，还是训「顺」。</b>旧注有训「顺」者（言顺行）。<b>本课取「跟随」</b>：言从行后，如影随形。</div></div>
+    <div class="q"><span>03</span><div><b>此句是否专为子贡而发。</b>范氏以为因子贡能言难行而发。<b>本课取「因材施教」说</b>，但认为其理可通用：凡言易行者，皆可受此句。</div></div>
+    <div class="q"><span>04</span><div><b>与「讷于言而敏于行」是否同义。</b>《里仁》重在「少说多做」的气质；本章重在「先后次序」。<b>本课判为「同向而不同层」</b>：一为性格修养，一为行事次第。</div></div>
+    <div class="q"><span>05</span><div><b>「其言」指「将要说的事」，还是「已经说出的话」。</b>从「未言之前」看，指将言之事。<b>本课取「将言之事」</b>；若指已言，则本章退为守信说。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>「先行其言」就是说到做到。</b></div><div class="b"><b>说到做到是守信，本章讲次序。</b>——<b>朱子：行之于未言之前，言之于既行之后。</b></div></div>
+    <div class="pair"><div class="a"><b>这是叫人少说话。</b></div><div class="b"><b>不是少说，是后说。</b>——<b>「后从」要求话跟上来；该说不说，别人接不上手。</b></div></div>
+    <div class="pair"><div class="a"><b>先说出来，才有动力去做。</b></div><div class="b"><b>说出来的目标，常被提前兑现成满足感。</b>——<b>先做最小一步，再宣布。</b></div></div>
+    <div class="pair"><div class="a"><b>我没做成，就不该说。</b></div><div class="b"><b>「后从」不是不许失约，是不许把失约当习惯。</b>——<b>失约就承认，再补做。</b></div></div>
+    <div class="pair"><div class="a"><b>君子只管做，不必解释。</b></div><div class="b"><b>做完了要说清，别人才知道发生了什么。</b>——<b>言是行的记录，不是行的替代。</b></div></div>
+    <div class="pair"><div class="a"><b>这是对所有人的同一句话。</b></div><div class="b"><b>孔子对子贡说这句，因他最会说话。</b>——<b>同一句话，落点因人而异。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》1.14「敏于事而慎于言」。</b>——<b>事上要快，嘴上要慢：与本章同一方向，一个说气质，一个说次序。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语·里仁》「君子欲讷于言而敏于行」。</b>——<b>讷是钝，敏是快；口钝手快，正是「先行」的日常形态。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语·宪问》「君子耻其言而过其行」。</b>——<b>「过」是超出：言超出所行，是耻。与「言过其行」的旧注同一声口。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《礼记·缁衣》「言从而行之，则言不可饰也；行从而言之，则行不可饰也」。</b>——<b>两句话把本章的两半都讲了：言要跟着行，行也要经得起被说。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《史记·仲尼弟子列传》子贡「利口巧辞」。</b>——<b>本章的语境在史书里有了落点：最能说的人，最需要这一句。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《论语》1.3「巧言令色，鲜矣仁」。</b>——<b>巧言者仁薄，正与「先行」相反：力气花在嘴上，手上就轻了。</b></div></div>
+  </div>
+  <div class="h2" id="sc-19">图一　话在手上，不在嘴上</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 手上还有木屑，话才刚开头</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。工坊矮案，一件器物刚成形（木器或陶坯），还未上漆；一名匠人手上沾着木屑，正用布擦手；旁边一名少年执简或空手，侧身向他，嘴微张，正在问「这是怎么做的」；匠人还没答，眼睛还在那件器物上。要画的不是「讲道理」，是「话排在事后面」。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>刚成形的器物</b>：事已经在那儿了，还没上漆，还带着做的痕迹——这是「行」，行在未言之前；<b>沾着木屑的手</b>：手上有活，嘴上还没有话——这是「先行其言」；<b>少年张着的嘴</b>：问在事后，答也在事后；问答都是记录的形状，不是许诺的形状——这是「而后从之」。</div>
+
+  <div class="h2" id="sc-20">义理图一　行在前，言在后</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 280" width="100%" role="img" aria-label="行前言后：上行行→言，下行言→行（虚）" style="max-width:520px">
+    <defs><marker id="a28a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+    <text x="30" y="98" text-anchor="start" font-size="10" fill="#A8763E">正</text>
+    <rect x="56" y="68" width="80" height="48" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.4"/>
+    <text x="96" y="99" text-anchor="middle" font-size="15" fill="#3A342B">行</text>
+    <path d="M140 92 L186 92" stroke="#8A8074" stroke-width="1.4" marker-end="url(#a28a)"/>
+    <rect x="190" y="68" width="80" height="48" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+    <text x="230" y="99" text-anchor="middle" font-size="15" fill="#3A342B">言</text>
+    <text x="200" y="134" text-anchor="middle" font-size="9.5" fill="#8A8074">言之于既行之后</text>
+    <text x="30" y="202" text-anchor="start" font-size="10" fill="#8A8074">反</text>
+    <rect x="56" y="172" width="80" height="48" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="96" y="203" text-anchor="middle" font-size="15" fill="#5F564A">言</text>
+    <path d="M140 196 L186 196" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#a28a)"/>
+    <rect x="190" y="172" width="80" height="48" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="230" y="203" text-anchor="middle" font-size="15" fill="#8A8074">行</text>
+    <line x1="196" y1="178" x2="264" y2="214" stroke="#A2503B" stroke-width="1" opacity=".6"/>
+    <text x="200" y="238" text-anchor="middle" font-size="9.5" fill="#8A8074">言在前，行就虚了</text>
+    <text x="200" y="264" text-anchor="middle" font-size="11" fill="#5F564A">先做出来，话才跟得上</text>
+  </svg>
+
+  </div>
+  <p>此图只画两条次序：<b>上面一条是本章的次序，下面一条是反过来的次序。</b>——<b>同样两个字，位置一换，分量就不同：行在前，言是记录；言在前，行就虚了。</b>——<b>朱子两个时间词——「未言之前」「既行之后」——就是这两条横线的上下。</b></p>
+
+  <div class="h2" id="sc-21">义理图二　三种次序</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 280" width="100%" role="img" aria-label="三种次序：先言后行（虚）、言行同时（半）、先行后言（实）" style="max-width:520px">
+    <defs><marker id="a28b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+    <text x="26" y="60" font-size="9" fill="#8A8074">一</text>
+    <rect x="52" y="40" width="46" height="32" fill="#fff" stroke="#C9BEAE" stroke-width="1"/>
+    <text x="75" y="62" text-anchor="middle" font-size="12" fill="#3A342B">言</text>
+    <path d="M102 56 L132 56" stroke="#8A8074" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#a28b)"/>
+    <rect x="136" y="40" width="46" height="32" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="159" y="62" text-anchor="middle" font-size="12" fill="#8A8074">行</text>
+    <text x="196" y="62" font-size="9.5" fill="#8A8074">先言后行 · 虚</text>
+    <text x="26" y="126" font-size="9" fill="#8A8074">二</text>
+    <rect x="52" y="106" width="46" height="32" fill="#fff" stroke="#C9BEAE" stroke-width="1"/>
+    <text x="75" y="128" text-anchor="middle" font-size="12" fill="#3A342B">言</text>
+    <rect x="104" y="106" width="46" height="32" fill="#FCF8EF" stroke="#C9BEAE" stroke-width="1"/>
+    <text x="127" y="128" text-anchor="middle" font-size="12" fill="#3A342B">行</text>
+    <text x="196" y="128" font-size="9.5" fill="#8A8074">言行同时 · 半</text>
+    <text x="26" y="196" font-size="9" fill="#8A8074">三</text>
+    <rect x="52" y="176" width="46" height="32" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.4"/>
+    <text x="75" y="198" text-anchor="middle" font-size="12" fill="#3A342B">行</text>
+    <path d="M102 192 L132 192" stroke="#A8763E" stroke-width="1.4" marker-end="url(#a28b)"/>
+    <rect x="136" y="176" width="46" height="32" fill="#fff" stroke="#A8763E" stroke-width="1.4"/>
+    <text x="159" y="198" text-anchor="middle" font-size="12" fill="#3A342B">言</text>
+    <text x="196" y="198" font-size="9.5" fill="#8C5E2A">先行后言 · 实</text>
+    <text x="200" y="248" text-anchor="middle" font-size="11" fill="#5F564A">次序不同，同一句话的分量就不同</text>
+  </svg>
+
+  </div>
+  <p>两图合看：<b>图一辨真假，图二辨程度。</b>——<b>先言后行是虚的，言行同时是半的，先行后言才是实的。</b>——<b>三种次序，说的可能是同一句话；话一样，分量不一样。</b></p>
+
+  <div class="h2" id="sc-22">附论一　「从」这个字，是两个人一前一后</div>
+  <p><b>「从」的字形，是两个人：一个在前，一个跟着。</b>——<b>前头那个走哪儿，后头那个跟哪儿；不是并肩，是相随。</b></p>
+  <p><b>「而后从之」用的正是这个形：行在前头走，言在后头跟。</b>——<b>跟得上的，叫从；跟不上的，叫失；跑到前头去的，就叫「过」——言过其行。</b></p>
+  <p><b>这一层意思，今人常丢。</b>——<b>我们习惯把「说」和「做」看成两件平行的事，各干各的；本章却把它们排成一队：事在前，话在后，一前一后，不许插队。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>言是行的随从，不是行的先锋。</b></div>
+
+  <div class="h2" id="sc-23">附论二　说出来的目标，为什么反而更难达成</div>
+  <p><b>心理学有个说法，可与本章互证：把目标公开说出来，行动力常反而下降。</b>——<b>原因是：说出来时，别人的赞许先到，心里先尝到一次「成了」的滋味；真要动手的那股劲，被提前支取了。</b></p>
+  <p><b>这个现象有实验支持，也有个名字，叫「社会现实」效应（social reality）。</b>——<b>话一出口，它在大脑里就有点像已经发生。</b></p>
+  <p><b>对策很朴素，正合本章：</b>——<b>先做最小的一步，再宣布。</b>——<b>做完一步再说的目标，自带证据；还没做就说的目标，只有愿望。</b></p>
+  <p><b>这不是要人秘而不宣，是要人排序。</b>——<b>该说的照说，只是把「做」放在「说」前面十分钟、一天、一个月。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>先给世界看一步，再给世界听一句。</b></div>
+
+  <div class="h2" id="sc-24">附论三　三条边界</div>
+  <p><b>这一章最容易被用成两种极端，三条先划清：</b></p>
+  <p><b>一，先行不是不说。</b>——<b>「后从」要求话跟上来；做完不说，别人接不上手，事也传不下去。</b></p>
+  <p><b>二，后从不是事后邀功。</b>——<b>话跟上来，是为了交代，不是为了夸；说的是「做了什么、怎么做的」，不是「我多不容易」。</b></p>
+  <p><b>三，慎言不是不表态。</b>——<b>该定的事要定，该担的责要担；「先行」管的是次序，不是让人缩着不说话。</b></p>
+  <p><b>三条守住，这一章就只是一句话：</b>——<b>说在做的后面，说在做的旁边，不说在做的上面。</b></p>
+
+  <div class="h2" id="sc-25">附论四　一句话的针对性</div>
+  <p><b>《论语》里问「君子」的，不止子贡一人。</b>——<b>问的人不同，答的也不同：有的答「不器」，有的答「先行其言」，有的答「修己以敬」。</b></p>
+  <p><b>这不是孔子前后不一，是他看病下药。</b>——<b>子贡最能说，所以给他一句「先做」；换一个木讷的人来问，孔子大概会催他「该说了」。</b></p>
+  <p><b>读《论语》最忌的一件事，就是把对症的话当成通用的律。</b>——<b>一句话有它的病人；病人不同，方子要换。</b>——<b>但药性是可以通用的：本章的药性，就是「次序」。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>孔门无标准答案，只有对准了的人的答案。</b></div>
+
+  </section>
+
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十八课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-22　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>
+
