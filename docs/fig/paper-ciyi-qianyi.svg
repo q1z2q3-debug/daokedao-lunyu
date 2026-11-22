@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="词义迁移：君子由君之子到有德者，小人由庶民到德薄者" style="max-width:560px">
+<defs><marker id="pa" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+<text x="14" y="42" font-size="9.5" fill="#8C5E2A">君子</text>
+<rect x="14" y="52" width="92" height="34" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="60" y="74" text-anchor="middle" font-size="12" fill="#3A342B">君之子</text>
+<text x="60" y="96" text-anchor="middle" font-size="8" fill="#8A8074">血缘的贵</text>
+<rect x="142" y="52" width="92" height="34" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="188" y="74" text-anchor="middle" font-size="12" fill="#3A342B">有位者</text>
+<text x="188" y="96" text-anchor="middle" font-size="8" fill="#8A8074">西周—春秋</text>
+<rect x="270" y="52" width="92" height="34" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.2"/>
+<text x="316" y="74" text-anchor="middle" font-size="12" fill="#3A342B">有德者</text>
+<text x="316" y="96" text-anchor="middle" font-size="8" fill="#8A8074">孔子</text>
+<path d="M108 69 L138 69" stroke="#8A8074" stroke-width="1.2" marker-end="url(#pa)"/>
+<path d="M236 69 L266 69" stroke="#8A8074" stroke-width="1.2" marker-end="url(#pa)"/>
+<path d="M316 90 C316 118 316 120 316 132" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="272" y="134" width="112" height="26" fill="#FAF7F1" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="328" y="151" text-anchor="middle" font-size="8.4" fill="#8A8074">位义残留（12.19 等）</text>
+<text x="14" y="196" font-size="9.5" fill="#5F564A">小人</text>
+<rect x="82" y="176" width="92" height="34" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="128" y="198" text-anchor="middle" font-size="12" fill="#3A342B">庶民</text>
+<text x="128" y="220" text-anchor="middle" font-size="8" fill="#8A8074">身份</text>
+<path d="M176 193 L216 193" stroke="#8A8074" stroke-width="1.2" marker-end="url(#pa)"/>
+<rect x="220" y="176" width="92" height="34" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.2"/>
+<text x="266" y="198" text-anchor="middle" font-size="12" fill="#3A342B">德薄者</text>
+<text x="266" y="220" text-anchor="middle" font-size="8" fill="#8C5E2A">孔子</text>
+<text x="200" y="256" text-anchor="middle" font-size="9.5" fill="#3A342B">孔子把重心从「门第」挪到「心之所向」</text>
+<text x="200" y="276" text-anchor="middle" font-size="8.6" fill="#8A8074">旧义未废，只成残影；新义为主，落点在取向</text>
+</svg>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>君子与小人：孔子语汇的定义与判准 · 润泽说 道可道之论语·论文</title>
+<meta name="description" content="以《论语》2.14 为起点的语料考察：君子 108 见、小人 24 见、同章共见 18 条；由「位」至「德」的词义迁移；孔子的判准收敛为义利一纲，故君子小人是判词而非户籍。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+.wrap.paper{max-width:820px;margin:0 auto;padding:44px 30px 64px}
+.ptitle{font-size:30px;line-height:1.55;letter-spacing:.04em;margin:0 0 10px;font-weight:600}
+.psub{font-size:14.5px;color:#7A7368;letter-spacing:.02em;line-height:1.9}
+.byline{font-size:12.5px;color:#8A8074;margin:20px 0 4px;letter-spacing:.02em}
+.abs{background:#FAF7F1;border-left:3px solid #A8763E;padding:18px 22px;margin:28px 0 12px}
+.abs .lbl{font-size:12px;letter-spacing:.2em;color:#A8763E;display:block;margin-bottom:8px}
+.abs p{font-size:14px;line-height:2;margin:0;text-indent:0;color:#3B352F}
+.kw{font-size:12.5px;color:#7A7368;line-height:1.9}
+h2.psec{font-size:19px;margin:38px 0 12px;padding-bottom:9px;border-bottom:1px solid #E4DCCD;letter-spacing:.03em}
+h3.pss{font-size:15px;margin:24px 0 8px;color:#8C5E2A;letter-spacing:.02em}
+.pp{font-size:15px;line-height:2.1;margin:0 0 11px;text-indent:2em;color:#2B2620}
+.pp.ni{text-indent:0}
+table.tbl{width:100%;border-collapse:collapse;font-size:12.8px;line-height:1.75;margin:16px 0 6px}
+table.tbl th{background:#FAF7F1;text-align:left;padding:7px 9px;border-bottom:1.5px solid #D9CEBB;font-weight:600;color:#3A342B}
+table.tbl td{padding:6px 9px;border-bottom:1px solid #EDE5D8;vertical-align:top}
+.tcap{font-size:11.8px;color:#7A7368;margin:6px 0 22px;line-height:1.8}
+.fn{font-size:12px;color:#7A7368;line-height:1.95;margin:10px 0 0}
+.pfig{text-align:center;margin:22px 0 6px}
+.refs{font-size:12.8px;line-height:2;color:#3B352F}
+.refs li{margin-bottom:6px}
+.pfoot{margin-top:44px;padding-top:16px;border-top:1px solid #E4DCCD;font-size:11.5px;color:#8A8074;line-height:1.9;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap paper">
+  <div class="ptitle">君子与小人：孔子语汇的定义与判准</div>
+  <div class="psub">——以《论语》2.14「周而不比」为起点的语料考察</div>
+  <div class="byline">乔忠（字润泽）　｜　润泽说 · 道可道之论语　｜　二〇二六年十一月</div>
+
+  <div class="abs">
+    <span class="lbl">摘　要</span>
+    <p>《论语》2.14 以「君子周而不比，小人比而不周」对举立论，历代注家训「周」为普遍、训「比」为偏党，训诂既毕，遂少有人追问：孔子说「君子」「小人」时，所指究竟为何？本文以《论语》二十篇为封闭语料，逐章条检索两词，得君子 108 见、小人 24 见、同章共见 18 条（君子 22 词次、小人 19 词次），并据语境对「小人」逐条归类。结论有三：其一，孔子之前两词皆身份词（君之子、庶民），孔子以德义重定其重心，位义未废而成残影；其二，「小人」二十四见中德义二十条、身份／被治义三条、谦称零条，德义为主；其三，十八处对举可收敛为六类判准，总纲为义与利，其余五类皆其一端。故孔子所谓君子小人，是取向的判词，不是身份的户籍；其定义可自检、可改易，此正是 2.14 落在《为政》的用意。</p>
+  </div>
+  <div class="kw">关键词：君子　小人　《论语》为政　周而不比　义利之辨　词义迁移</div>
+
+  <h2 class="psec" id="p1">一　导论：一句对举里被跳过的定义问题</h2>
+  <p class="pp">《论语·为政》2.14：「子曰：君子周而不比，小人比而不周。」朱熹注：「周，普遍也。比，偏党也。皆与人亲厚之意，但周公而比私耳。」又曰：「究其所以分，则在公私之际，毫厘之差耳。」注到这里，训诂的事已经做完：两个字的义界划清了，一句的结构讲明了。但一个更基本的问题仍悬着——<b>孔子口中的「君子」「小人」，究竟指谁？</b></p>
+  <p class="pp">这个问题并非多余。若「君子」仍是「君之子」的旧义，此句便成了「贵族比庶民厚道」，与孔子一生所行不合；若「小人」只是「庶民」的旧称，此句便成了阶层评语，与《论语》他处论「小人」的语境不合。可见 2.14 的可解，依赖于两词在孔子口中已经换了重心。</p>
+  <p class="pp">既有研究大体三条路径。一是词源学路径：考「君子」初义为「君之子」，引申为贵族男子与统治者；「小人」为庶民、位卑者之通称（参据一、二）。二是思想史路径：主张孔子是实现「由位至德」转化的关键人物，以德诠释君子，以小人反衬（参据三）。三是政治哲学路径：主张君子起初是政治概念，即便成为人格概念，也首先是政治人格（参据四）。三说各有据，但留下三个缺口：<b>其一，缺少以文本内部计数为底、再作语境判读的混合考察；其二，对「小人」身份义究竟几条，诸家口径不一（多者四、少者二）；其三，对「十八处对举能否收敛为一条判准」，少有正面回答。</b></p>
+  <p class="pp">本文即补此三缺。主张三条：一，两词的改造是「重心迁移」而非「一刀两断」——位义未废，退为残影；二，「小人」以德义为主，身份义仅三处，且其判读须逐条交代；三，十八处对举收敛为六类，共一总纲，故君子小人可定义为「取向」，不可定义为「身份」。</p>
+
+  <h2 class="psec" id="p2">二　语料、口径与方法</h2>
+  <h3 class="pss">（一）语料</h3>
+  <p class="pp">以《论语》二十篇为封闭语料，逐章条检索「君子」「小人」二词，记录见数、分篇分布、同章共见。底本用京都大学人文科学研究所电子文本，与朱熹《论语集注》、杨伯峻《论语译注》互校。凡《礼记》《孔子家语》等后出材料，不作孔子语使用，仅作参照；《诗》《书》《易》只作「前史」对照，不入统计。<b>此一界限须先声明：本文讨论的是「孔子语汇」，不是「先秦君子观念史」。</b></p>
+  <h3 class="pss">（二）计数口径与差额</h3>
+  <p class="pp">本文统计：君子 108 见，小人 24 见，比例约 4.5 : 1；两词同章共见 18 条，其中君子 22 词次、小人 19 词次（4.11 一条内两见，17.21 一条内三见，故词次多于条目）。通行统计：杨伯峻计 107／24，赵纪彬计 106／24，另有 108／24 之说。<b>差额一至二见，出在异文与断句</b>——如某处「君子」是否连读、某处是否作「君」；于比例与分布判断无损。本文用 108／24，并在附录三交代复算口径。</p>
+  <h3 class="pss">（三）三条判读规则</h3>
+  <p class="pp">计数不等于意义。本文立三规则：<b>规则一，见数只判「重心」，不判「定义」</b>——某义项见数多，只说明它是常用义，不足以证其为唯一义。<b>规则二，同章共见不等于对举</b>——须看两词是否真在对比、是否同属一个论域；如 12.19 虽两词共见，实为「德风德草」的比喻，属治人与被治之喻，判读须另作处理。<b>规则三，凡判读带争议者，单列存疑，不并入统计结论</b>——17.23 即属此类，详见第五节。</p>
+
+  <h2 class="psec" id="p3">三　前史：两个身份词的家底</h2>
+  <h3 class="pss">（一）君子：从「君之子」到「有位者」</h3>
+  <p class="pp">甲骨文中未见「君子」。该词最早见于西周文献：《尚书》中的「君子」，指有一定政治地位的人（参据二）；《易》卦爻辞中的「君子」，多指贵族、有国者；《诗》中的「君子」，或指贵族男子，或指丈夫（如「未见君子」）。</p>
+  <p class="pp">字义上亦可讲通。《说文》释「君」为「尊」，「子」为男子之称，合而为「尊贵之男子」——这是「君之子」的引申：由血缘的贵，转为地位的贵。<b>故孔子之前，「君子」主要是身份词：说一个人是什么出身、居什么位，不是说他心里存着什么。</b></p>
+  <h3 class="pss">（二）小人：庶民与位卑者</h3>
+  <p class="pp">「小人」与「君子」相对，本指庶民、位卑者，亦非德性判断。《尚书》「小人」多指在野之民；《诗》「小人」与「君子」对举处，多是「在上」与「在下」之别。此义在《论语》中仍有残留，但已不占主位，详见第五节。</p>
+  <div class="pfig"><svg viewBox="0 0 400 300" width="100%" role="img" aria-label="词义迁移：君子由君之子到有德者，小人由庶民到德薄者" style="max-width:560px">
+<defs><marker id="pa" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+<text x="14" y="42" font-size="9.5" fill="#8C5E2A">君子</text>
+<rect x="14" y="52" width="92" height="34" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="60" y="74" text-anchor="middle" font-size="12" fill="#3A342B">君之子</text>
+<text x="60" y="96" text-anchor="middle" font-size="8" fill="#8A8074">血缘的贵</text>
+<rect x="142" y="52" width="92" height="34" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="188" y="74" text-anchor="middle" font-size="12" fill="#3A342B">有位者</text>
+<text x="188" y="96" text-anchor="middle" font-size="8" fill="#8A8074">西周—春秋</text>
+<rect x="270" y="52" width="92" height="34" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.2"/>
+<text x="316" y="74" text-anchor="middle" font-size="12" fill="#3A342B">有德者</text>
+<text x="316" y="96" text-anchor="middle" font-size="8" fill="#8A8074">孔子</text>
+<path d="M108 69 L138 69" stroke="#8A8074" stroke-width="1.2" marker-end="url(#pa)"/>
+<path d="M236 69 L266 69" stroke="#8A8074" stroke-width="1.2" marker-end="url(#pa)"/>
+<path d="M316 90 C316 118 316 120 316 132" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="272" y="134" width="112" height="26" fill="#FAF7F1" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="328" y="151" text-anchor="middle" font-size="8.4" fill="#8A8074">位义残留（12.19 等）</text>
+<text x="14" y="196" font-size="9.5" fill="#5F564A">小人</text>
+<rect x="82" y="176" width="92" height="34" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="128" y="198" text-anchor="middle" font-size="12" fill="#3A342B">庶民</text>
+<text x="128" y="220" text-anchor="middle" font-size="8" fill="#8A8074">身份</text>
+<path d="M176 193 L216 193" stroke="#8A8074" stroke-width="1.2" marker-end="url(#pa)"/>
+<rect x="220" y="176" width="92" height="34" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.2"/>
+<text x="266" y="198" text-anchor="middle" font-size="12" fill="#3A342B">德薄者</text>
+<text x="266" y="220" text-anchor="middle" font-size="8" fill="#8C5E2A">孔子</text>
+<text x="200" y="256" text-anchor="middle" font-size="9.5" fill="#3A342B">孔子把重心从「门第」挪到「心之所向」</text>
+<text x="200" y="276" text-anchor="middle" font-size="8.6" fill="#8A8074">旧义未废，只成残影；新义为主，落点在取向</text>
+</svg></div>
+  <div class="tcap">图一　两词的词义迁移：上路为「君子」由血缘而位而德，下路为「小人」由身份而德；虚线示位义残留（12.19 等）。示意，非比例图。</div>
+  <p class="pp ni"><b>由上可见：</b>「君子」「小人」在孔子之前是一对「位置词」——一个在上，一个在下。此义若不明白，2.14 必读反：那句会变成「在上的人厚道，在下的人偏私」，而这既非孔子所见，也与全书他处不合。</p>
+
+  <h2 class="psec" id="p4">四　孔子的改造：以德定义，位义退居</h2>
+  <p class="pp">改造的第一条证据，是「君子」与「仁」被绑死。《论语》4.5：「君子去仁，恶乎成名？」——把仁拿去，君子就失去成立的理由。<b>身份不需要仁来成立，人格才需要。</b>此一句，等于给「君子」换了地基。</p>
+  <p class="pp">第二条证据，是「义」被立为君子的最高标准。17.21：「君子义以为上。君子有勇而无义为乱，小人有勇而无义为盗。」——连勇这样的美德，也须由义来管。<b>德性人格有内在的等级，身份人格没有。</b></p>
+  <p class="pp">第三条证据，是「君子」与「器」被分开。2.12「君子不器」——人可以被训练成一件器具，也可以不被。此语与 2.14 相邻，正当合观：<b>位可以给，德要自己养；器可以成，人不必着于器。</b></p>
+  <p class="pp">第四条证据，是数量的分布。全书 108 见「君子」，明确指「在上位者」的用法约五六条：12.19「君子之德风」（治人者）、8.2「君子笃于亲，则民兴于仁」（有位者）、13.25「及其使人也，器之」（用人者）、20.3「君子正其衣冠」（居位者之容）。<b>占不到百分之六。</b>其余绝大多数，都在说德、说学、说行、说交。</p>
+  <p class="pp ni"><b>故准确的判断是「位移而未废」：</b>孔子仍以「君子」称居位者，但凡说「君子如何」，多数在说德；位义成了语境里的残影，德义成了词的中心。此与三家参据大体相合：王学典谓孔子「将君子从贵族阶层的专属称谓，转化为具有普遍意义的道德理想人格」；《光明日报》2017 年一文径题「身份标志向道德内涵的延伸」；专题论文《孔子与「君子」观念的转化》以「由位至德」为纲，以孔子为关键人物。<b>三家角度不同，结论相近，本文取之，但不取其「完全断裂」的表述。</b></p>
+
+  <h2 class="psec" id="p5">五　小人：三义并存，德义为主</h2>
+  <h3 class="pss">（一）三义的分野</h3>
+  <p class="pp">「小人」全书 24 词次，按条目计 23 条。逐条判读，可分三类：<b>德义</b>（心量小、只认利、只求人）、<b>身份／被治义</b>（庶民、在下者、仆役）、<b>谦称</b>（自称）。归类结果如下表。</p>
+  <table class="tbl">
+    <tr><th style="width:26%">用法</th><th style="width:12%">条目</th><th>代表章句与判读要点</th></tr>
+    <tr><td>德义</td><td>20</td><td>4.16「小人喻于利」／13.23「小人同而不和」／14.23「小人下达」／15.21「小人求诸人」／15.34「不可大受，而可小知」／19.8「小人之过也必文」——皆就心量、取向立说，与位无关。</td></tr>
+    <tr><td>身份／被治</td><td>3</td><td>12.19「小人之德草」（与「君子之德风」对，指被治之民）／17.3「小人学道则易使也」（子游语，指在下者）／17.23「唯女子与小人为难养也」（家内仆役与庶民）。</td></tr>
+    <tr><td>谦称</td><td>0</td><td>孔子自称「吾少也贱」（9.6），不用「小人」自贬；「小人」始终是被评判的位置，非自称。</td></tr>
+  </table>
+  <div class="tcap">表一　「小人」24 词次的用法归类（条目 23，4.11 一条两见；判读口径见附录二）</div>
+  <p class="pp">前人统计有「四次指平民」之说，本稿计三条，差额在 13.4「小人哉，樊须也」是否算志量小。<b>本稿判为德义</b>——孔子讥其志在稼圃、不识大人之事，是讥其量，非判其位；若计此条，则为四，与前人合。<b>此类判读依赖语境，故本文只报区间与逐条依据，不报「定数」。</b></p>
+  <h3 class="pss">（二）德义二十条：一个「量」字</h3>
+  <p class="pp">德义诸条的共通处，是都可归到「量」：<b>所喻者小（利）、所怀者小（土与惠）、所求者小（人）、所知者小（小道）、所文者小（过）。</b>4.16 以「义／利」标其价值取向，13.23 以「和／同」标其待人方式，14.23 以「上达／下达」标其成长方向，15.21 以「求己／求人」标其责任归属。四者看似并列，实为一事之四面。</p>
+  <h3 class="pss">（三）身份义三条：逐条交代</h3>
+  <p class="pp"><b>12.19</b>：「君子之德风，小人之德草；草上之风必偃。」此章是季康子问政之对，君子的位置是「在上而化民者」，小人的位置是「在下而受化者」。<b>此处两词皆位义，不是德义</b>；若强作德义读，则「德草」无所指。此条正是「位义未废」的实证。</p>
+  <p class="pp"><b>17.3</b>：子游引孔子语「君子学道则爱人，小人学道则易使也」。此「小人」指在下之民，言其可教化、可使令。<b>其义在「位」，其用却在「教」</b>——这提示位义与德义在孔子口中并非截然两截，而是同一词的两层。</p>
+  <p class="pp"><b>17.23</b>：「唯女子与小人为难养也！近之则不系，远之则怨。」此句历来聚讼。<b>一读为对女性与仆役的整体判语，一读为家内相处之难的语境感叹。</b>本文取后读：其论域是「近之／远之」的相处分寸，非普遍人性论断；且「小人」在此与「女子」并列，皆就家内关系言，非就德性言。<b>故本文以此条为「身份义残留」之证，不作德性判准，亦不据以作任何性别论断。</b></p>
+  <h3 class="pss">（四）与「君子」改造的对称</h3>
+  <p class="pp">合观两词：君子由「位」上升为「德」，小人由「位」内收为「心」。<b>一个往上抽，一个往内收，方向相反，理路相同：都把「人是什么」改问成「人朝哪儿走」。</b>此即本文所谓「重心迁移」。</p>
+
+  <h2 class="psec" id="p6">六　判准的收敛：十八对举与六类结构</h2>
+  <h3 class="pss">（一）分布</h3>
+  <p class="pp">十八处同章共见，分布十篇：为政一、里仁二、雍也一、述而一、颜渊二、子路三、宪问二、卫灵公三、季氏一、阳货二。<b>最密者卫灵公（君子十四见）与子路、阳货（小人之词最盛）。</b>此非偶然：晚期篇章对「人怎么站」追问更紧。</p>
+  <div class="pfig"><svg viewBox="0 0 400 406" width="100%" role="img" aria-label="《论语》二十篇君子小人出现分布：君子108见、小人24见、同章共见18条" style="max-width:560px">
+<rect x="8" y="10" width="10" height="10" fill="#A8763E"/><text x="23" y="19" font-size="9.5" fill="#3A342B">君子 108 见</text>
+<rect x="112" y="10" width="10" height="10" fill="#8A8074"/><text x="127" y="19" font-size="9.5" fill="#3A342B">小人 24 见</text>
+<text x="212" y="19" font-size="9.5" fill="#8C5E2A">同章共见 18 条</text>
+<line x1="50" y1="30" x2="50" y2="384" stroke="#C9BEAE" stroke-width="1"/>
+<text x="8" y="51.0" font-size="9" fill="#5F564A">学而</text>
+<rect x="52" y="44.0" width="36.8" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="92.8" y="48.6" font-size="8.6" fill="#8C5E2A">4</text>
+<text x="8" y="67.5" font-size="9" fill="#5F564A">为政</text>
+<rect x="52" y="60.5" width="27.6" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="83.6" y="65.1" font-size="8.6" fill="#8C5E2A">3</text>
+<rect x="52" y="68.0" width="8.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="64.0" y="72.0" font-size="8.6" fill="#5F564A">1</text>
+<text x="8" y="84.0" font-size="9" fill="#5F564A">八佾</text>
+<rect x="52" y="77.0" width="27.6" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="83.6" y="81.6" font-size="8.6" fill="#8C5E2A">3</text>
+<text x="8" y="100.5" font-size="9" fill="#5F564A">里仁</text>
+<rect x="52" y="93.5" width="64.4" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="120.4" y="98.1" font-size="8.6" fill="#8C5E2A">7</text>
+<rect x="52" y="101.0" width="24.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="80.0" y="105.0" font-size="8.6" fill="#5F564A">3</text>
+<text x="8" y="117.0" font-size="9" fill="#5F564A">公冶</text>
+<rect x="52" y="110.0" width="27.6" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="83.6" y="114.6" font-size="8.6" fill="#8C5E2A">3</text>
+<text x="8" y="133.5" font-size="9" fill="#5F564A">雍也</text>
+<rect x="52" y="126.5" width="46.0" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="102.0" y="131.1" font-size="8.6" fill="#8C5E2A">5</text>
+<rect x="52" y="134.0" width="8.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="64.0" y="138.0" font-size="8.6" fill="#5F564A">1</text>
+<text x="8" y="150.0" font-size="9" fill="#5F564A">述而</text>
+<rect x="52" y="143.0" width="46.0" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="102.0" y="147.6" font-size="8.6" fill="#8C5E2A">5</text>
+<rect x="52" y="150.5" width="8.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="64.0" y="154.5" font-size="8.6" fill="#5F564A">1</text>
+<text x="8" y="166.5" font-size="9" fill="#5F564A">泰伯</text>
+<rect x="52" y="159.5" width="36.8" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="92.8" y="164.1" font-size="8.6" fill="#8C5E2A">4</text>
+<text x="8" y="183.0" font-size="9" fill="#5F564A">子罕</text>
+<rect x="52" y="176.0" width="18.4" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="74.4" y="180.6" font-size="8.6" fill="#8C5E2A">2</text>
+<text x="8" y="199.5" font-size="9" fill="#5F564A">乡党</text>
+<rect x="52" y="192.5" width="9.2" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="65.2" y="197.1" font-size="8.6" fill="#8C5E2A">1</text>
+<text x="8" y="216.0" font-size="9" fill="#5F564A">先进</text>
+<rect x="52" y="209.0" width="27.6" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="83.6" y="213.6" font-size="8.6" fill="#8C5E2A">3</text>
+<text x="8" y="232.5" font-size="9" fill="#5F564A">颜渊</text>
+<rect x="52" y="225.5" width="92.0" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="148.0" y="230.1" font-size="8.6" fill="#8C5E2A">10</text>
+<rect x="52" y="233.0" width="16.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="72.0" y="237.0" font-size="8.6" fill="#5F564A">2</text>
+<text x="8" y="249.0" font-size="9" fill="#5F564A">子路</text>
+<rect x="52" y="242.0" width="55.2" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="111.2" y="246.6" font-size="8.6" fill="#8C5E2A">6</text>
+<rect x="52" y="249.5" width="40.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="96.0" y="253.5" font-size="8.6" fill="#5F564A">5</text>
+<text x="8" y="265.5" font-size="9" fill="#5F564A">宪问</text>
+<rect x="52" y="258.5" width="64.4" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="120.4" y="263.1" font-size="8.6" fill="#8C5E2A">7</text>
+<rect x="52" y="266.0" width="16.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="72.0" y="270.0" font-size="8.6" fill="#5F564A">2</text>
+<text x="8" y="282.0" font-size="9" fill="#5F564A">灵公</text>
+<rect x="52" y="275.0" width="128.8" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="184.8" y="279.6" font-size="8.6" fill="#8C5E2A">14</text>
+<rect x="52" y="282.5" width="24.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="80.0" y="286.5" font-size="8.6" fill="#5F564A">3</text>
+<text x="8" y="298.5" font-size="9" fill="#5F564A">季氏</text>
+<rect x="52" y="291.5" width="64.4" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="120.4" y="296.1" font-size="8.6" fill="#8C5E2A">7</text>
+<rect x="52" y="299.0" width="8.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="64.0" y="303.0" font-size="8.6" fill="#5F564A">1</text>
+<text x="8" y="315.0" font-size="9" fill="#5F564A">阳货</text>
+<rect x="52" y="308.0" width="73.6" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="129.6" y="312.6" font-size="8.6" fill="#8C5E2A">8</text>
+<rect x="52" y="315.5" width="32.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="88.0" y="319.5" font-size="8.6" fill="#5F564A">4</text>
+<text x="8" y="331.5" font-size="9" fill="#5F564A">微子</text>
+<rect x="52" y="324.5" width="18.4" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="74.4" y="329.1" font-size="8.6" fill="#8C5E2A">2</text>
+<text x="8" y="348.0" font-size="9" fill="#5F564A">子张</text>
+<rect x="52" y="341.0" width="92.0" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="148.0" y="345.6" font-size="8.6" fill="#8C5E2A">10</text>
+<rect x="52" y="348.5" width="8.0" height="3.6" fill="#8A8074" opacity=".85"/>
+<text x="64.0" y="352.5" font-size="8.6" fill="#5F564A">1</text>
+<text x="8" y="364.5" font-size="9" fill="#5F564A">尧曰</text>
+<rect x="52" y="357.5" width="36.8" height="4.6" fill="#A8763E" opacity=".9"/>
+<text x="92.8" y="362.1" font-size="8.6" fill="#8C5E2A">4</text>
+<text x="200" y="400" text-anchor="middle" font-size="9" fill="#5F564A">灵公一篇君子最密（十四见），子路、阳货两篇小人之词最盛</text>
+</svg></div>
+  <div class="tcap">图二　《论语》二十篇「君子」「小人」出现分布（君子 108 见、小人 24 见、同章共见 18 条）</div>
+  <h3 class="pss">（二）六类判准</h3>
+  <table class="tbl">
+    <tr><th style="width:16%">类别</th><th style="width:34%">君子</th><th style="width:34%">小人</th><th>出处</th></tr>
+    <tr><td>价值取向</td><td>喻于义</td><td>喻于利</td><td>4.16</td></tr>
+    <tr><td>所怀所守</td><td>怀德·怀刑</td><td>怀土·怀惠</td><td>4.11</td></tr>
+    <tr><td>待人半径</td><td>周</td><td>比</td><td>2.14</td></tr>
+    <tr><td>成长方向</td><td>上达</td><td>下达</td><td>14.23</td></tr>
+    <tr><td>责任归属</td><td>求诸己</td><td>求诸人</td><td>15.21</td></tr>
+    <tr><td>心理状态</td><td>坦荡荡</td><td>长戚戚</td><td>7.37</td></tr>
+  </table>
+  <div class="tcap">表二　六类判准与代表章句（其余十二条见附录一）</div>
+  <div class="pfig"><svg viewBox="0 0 400 320" width="100%" role="img" aria-label="六类判准：十八条对举句归为六类，君子与小人各占一端" style="max-width:560px">
+<text x="81" y="24" text-anchor="middle" font-size="10" fill="#8C5E2A">君子</text>
+<text x="319" y="24" text-anchor="middle" font-size="10" fill="#5F564A">小人</text>
+<text x="200" y="24" text-anchor="middle" font-size="8.5" fill="#A8763E">一条判准，两端</text>
+<line x1="200" y1="34" x2="200" y2="252" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 4"/>
+<rect x="12" y="48" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="64" text-anchor="middle" font-size="9.5" fill="#3A342B">喻于义</text>
+<rect x="250" y="48" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="64" text-anchor="middle" font-size="9.5" fill="#5F564A">喻于利</text>
+<text x="200" y="62" text-anchor="middle" font-size="8.6" fill="#8A8074">4.16</text>
+<rect x="12" y="82" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="98" text-anchor="middle" font-size="9.5" fill="#3A342B">怀德·怀刑</text>
+<rect x="250" y="82" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="98" text-anchor="middle" font-size="9.5" fill="#5F564A">怀土·怀惠</text>
+<text x="200" y="96" text-anchor="middle" font-size="8.6" fill="#8A8074">4.11</text>
+<rect x="12" y="116" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="132" text-anchor="middle" font-size="9.5" fill="#3A342B">周</text>
+<rect x="250" y="116" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="132" text-anchor="middle" font-size="9.5" fill="#5F564A">比</text>
+<text x="200" y="130" text-anchor="middle" font-size="8.6" fill="#8A8074">2.14</text>
+<rect x="12" y="150" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="166" text-anchor="middle" font-size="9.5" fill="#3A342B">上达</text>
+<rect x="250" y="150" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="166" text-anchor="middle" font-size="9.5" fill="#5F564A">下达</text>
+<text x="200" y="164" text-anchor="middle" font-size="8.6" fill="#8A8074">14.23</text>
+<rect x="12" y="184" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="200" text-anchor="middle" font-size="9.5" fill="#3A342B">求诸己</text>
+<rect x="250" y="184" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="200" text-anchor="middle" font-size="9.5" fill="#5F564A">求诸人</text>
+<text x="200" y="198" text-anchor="middle" font-size="8.6" fill="#8A8074">15.21</text>
+<rect x="12" y="218" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="234" text-anchor="middle" font-size="9.5" fill="#3A342B">坦荡荡</text>
+<rect x="250" y="218" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="234" text-anchor="middle" font-size="9.5" fill="#5F564A">长戚戚</text>
+<text x="200" y="232" text-anchor="middle" font-size="8.6" fill="#8A8074">7.37</text>
+<text x="81" y="270" text-anchor="middle" font-size="8" fill="#8A8074">义利之辨为总纲</text>
+<text x="319" y="270" text-anchor="middle" font-size="8" fill="#8A8074">其余五类皆其一端</text>
+<text x="200" y="296" text-anchor="middle" font-size="9" fill="#3A342B">六类同构：不是两群人，是两个方向</text>
+</svg></div>
+  <div class="tcap">图三　六类判准矩阵：义利为总纲，其余五类皆其一端</div>
+  <h3 class="pss">（三）收敛与总纲</h3>
+  <p class="pp">十八条对举，没有一条是「两群人各做各的」，全部是「同一件事的两个方向」。<b>此与 2.14 朱子「皆与人亲厚之意」同一结构：不是分类，是定向。</b>六类之中，义／利为总纲，其余五类皆其一端：喻于义，则怀德、怀刑、周、上达、求己、坦荡；喻于利，则怀土、怀惠、比、下达、求人、戚戚。</p>
+  <p class="pp ni"><b>故可下一判语：</b>「君子／小人」在孔子口中是判词，不是户籍。判词可改，户籍不可改。</p>
+
+  <h2 class="psec" id="p7">七　讨论：三种可能的反方与回应</h2>
+  <h3 class="pss">（一）「君子首先是政治人格」说</h3>
+  <p class="pp">反方主张：君子起初是政治概念，即便成为人格概念，也首先是政治人格；故孔子之「君子」仍以「能治人」为底色（参据五）。<b>回应：</b>本文承认其半——位义残留约五六条，且 13.25「及其使人也，器之」、12.19「君子之德风」皆在治人语境。但若以政治人格为纲，则 4.5「君子去仁，恶乎成名」无所解：仁非官职，是德。且 108 见中治人语境不足百分之六，<b>「首要」二字无从据量。</b>本文取「德义为主、位义残留」的折中判读。</p>
+  <h3 class="pss">（二）「君子小人即阶层二分」说</h3>
+  <p class="pp">反方主张：两词本是贵族与庶民之别，孔子的改造只是把阶层差别道德化，骨子里仍是等级。<b>回应：</b>此说于「前史」成立，于「孔子语汇」不成立。理由有二：<b>其一，改造后的判定不依出身</b>——6.13「女为君子儒，无为小人儒」，子夏出身孔门，孔子仍以「小人儒」相戒；可见儒者亦可为小人，与阶层无关。<b>其二，改造后的判定可改易</b>——14.6「君子而不仁者有矣夫」，明言君子可以有失；15.2「君子固穷，小人穷斯滥矣」，明言穷境方见分。若为阶层，何以言「有矣夫」？</p>
+  <h3 class="pss">（三）「计数不可据」说</h3>
+  <p class="pp">反方主张：异文与断句致见数不一，统计无意义。<b>回应：</b>本文只用计数断「重心」，不用计数断「定义」（规则一）；且差额仅一至二见，不足以翻转 108 : 24 的比例与「德义二十、身份三」的分类。<b>计数在此是辅助证据，不是主证；主证仍是逐条语境判读。</b></p>
+  <h3 class="pss">（四）本文立场</h3>
+  <p class="pp">三种反方各有见，然皆未触本文核心：<b>孔子给出的不是身份判决，是可自检、可改易的取向判准。</b>此一立场有两处文本支撑：一是 2.14 朱子「毫厘之差」——差在起念之几；二是 15.21「君子求诸己」——判准向内，故可自改。若判准在外（出身、地位），则「求诸己」无意义。</p>
+
+  <h2 class="psec" id="p8">八　结论与余论</h2>
+  <p class="pp">回到 2.14。本文的结论可压缩为三句：<b>一，君子小人是孔子改造过的词，旧义为位，新义为德；旧义未废，退为残影。</b><b>二，「小人」以德义为主（二十条），身份义仅三处，判读须逐条交代。</b><b>三，十八处对举收敛为六类，总纲为义利；故两词是取向的判词，不是身份的户籍。</b></p>
+  <p class="pp">由此，2.14 可重述为一句定义：<b>君子，是以义为圆心、把半径放到事上的人；小人，是以利为圆心、把半径缩到自己人身上的人。</b>周与比，只是这条定义在「待人」这一面上的样子。此定义有两利：可自检——不必问「我算不算君子」，只问「这件事我的圆心在哪」；可改易——圆心今日偏了，今日便能挪。</p>
+  <p class="pp ni"><b>余论一则。</b>本文有一未尽处：弟子转述的层次未及分层。子夏言「小人之过也必文」（19.8），其关切在「文」；有子言「君子务本」（1.2），其关切在「本」。同一词在不同弟子口中，重心微移。<b>此一题，留待另文。</b></p>
+
+  <h2 class="psec" id="a1">附录一　十八条对举句（按篇次）</h2>
+  <table class="tbl">
+    <tr><th style="width:8%">序</th><th style="width:12%">章次</th><th>原文</th></tr>
+<tr><td style="width:8%">1</td><td style="width:12%">2.14</td><td>子曰：「君子周而不比，小人比而不周。」</td></tr>
+<tr><td style="width:8%">2</td><td style="width:12%">4.11</td><td>子曰：「君子怀德，小人怀土；君子怀刑，小人怀惠。」</td></tr>
+<tr><td style="width:8%">3</td><td style="width:12%">4.16</td><td>子曰：「君子喻于义，小人喻于利。」</td></tr>
+<tr><td style="width:8%">4</td><td style="width:12%">6.13</td><td>子谓子夏曰：「女为君子儒！无为小人儒！」</td></tr>
+<tr><td style="width:8%">5</td><td style="width:12%">7.37</td><td>子曰：「君子坦荡荡，小人长戚戚。」</td></tr>
+<tr><td style="width:8%">6</td><td style="width:12%">12.16</td><td>子曰：「君子成人之美，不成人之恶；小人反是。」</td></tr>
+<tr><td style="width:8%">7</td><td style="width:12%">12.19</td><td>季康子问政于孔子曰：「如杀无道，以就有道，何如？」孔子对曰：「子为政，焉用杀？子欲善，而民善矣！君子之德风；小人之德草；草上之风必偃。」</td></tr>
+<tr><td style="width:8%">8</td><td style="width:12%">13.23</td><td>子曰：「君子和而不同；小人同而不和。」</td></tr>
+<tr><td style="width:8%">9</td><td style="width:12%">13.25</td><td>子曰：「君子易事而难说也：说之不以道，不说也；及其使人也，器之。小人难事而易说也；说之虽不以道，说也；及其使人也，求备焉。」</td></tr>
+<tr><td style="width:8%">10</td><td style="width:12%">13.26</td><td>子曰：「君子泰而不骄；小人骄而不泰。」</td></tr>
+<tr><td style="width:8%">11</td><td style="width:12%">14.6</td><td>子曰：「君子而不仁者有矣夫？未有小人而仁者也！」</td></tr>
+<tr><td style="width:8%">12</td><td style="width:12%">14.23</td><td>子曰：「君子上达；小人下达。」</td></tr>
+<tr><td style="width:8%">13</td><td style="width:12%">15.2</td><td>在陈绝粮。从者病，莫能兴。子路愠见曰：「君子亦有穷乎？」子曰：「君子固穷；小人穷斯滥矣。」</td></tr>
+<tr><td style="width:8%">14</td><td style="width:12%">15.21</td><td>子曰：「君子求诸己；小人求诸人。」</td></tr>
+<tr><td style="width:8%">15</td><td style="width:12%">15.34</td><td>子曰：「君子不可小知，而可大受也；小人不可大受，而可小知也。」</td></tr>
+<tr><td style="width:8%">16</td><td style="width:12%">16.8</td><td>孔子曰：「君子有三畏：畏天命，畏大人，畏圣人之言。小人不知天命而不畏也，狎大人，侮圣人之言。」</td></tr>
+<tr><td style="width:8%">17</td><td style="width:12%">17.3</td><td>子之武城，闻弦歌之声，夫子莞尔而笑曰：「割鸡焉用牛刀？」子游对曰：「昔者，偃也闻诸夫子曰：‘君子学道则爱人；小人学道则易使也。’」子曰：「二三子！偃之言是也；前言戏之耳！」</td></tr>
+<tr><td style="width:8%">18</td><td style="width:12%">17.21</td><td>子路曰：「君子尚勇乎？」子曰：「君子义以为上。君子有勇而无义为乱，小人有勇而无义为盗。」</td></tr>
+  </table>
+  <div class="tcap">据京都大学人文所电子文本，异文按通行本校正（「季康子」「小人穷斯滥矣」）。</div>
+
+  <h2 class="psec" id="a2">附录二　「小人」二十四词次清单与归类（二十三条）</h2>
+  <table class="tbl">
+    <tr><th style="width:7%">序</th><th style="width:11%">章次</th><th>原文</th><th style="width:15%">归类</th></tr>
+<tr><td style="width:7%">1</td><td style="width:11%">2.14</td><td>子曰：「君子周而不比，小人比而不周。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">2</td><td style="width:11%">4.11</td><td>子曰：「君子怀德，小人怀土；君子怀刑，小人怀惠。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">3</td><td style="width:11%">4.16</td><td>子曰：「君子喻于义，小人喻于利。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">4</td><td style="width:11%">6.13</td><td>子谓子夏曰：「女为君子儒！无为小人儒！」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">5</td><td style="width:11%">7.37</td><td>子曰：「君子坦荡荡，小人长戚戚。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">6</td><td style="width:11%">12.16</td><td>子曰：「君子成人之美，不成人之恶；小人反是。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">7</td><td style="width:11%">12.19</td><td>季康子问政于孔子曰：「如杀无道，以就有道，何如？」孔子对曰：「子为政，焉用杀？子欲善，而民善矣！君子之德风；小人之德草；草上之风必偃。」</td><td style="width:15%;color:#8C5E2A">身份／被治</td></tr>
+<tr><td style="width:7%">8</td><td style="width:11%">13.4</td><td>樊迟请学稼，子曰：「吾不如老农。」请学为圃，曰：「吾不如老圃。」樊迟出，子曰：「小人哉，樊须也！上好礼，则民莫敢不敬；上好义，则民莫敢不服；上好信，则民莫敢不用情。夫如是，则四方之民，襁负其子而至矣；焉用稼！」</td><td style="width:15%;color:#8C5E2A">德义<br><span style="color:#8A8074;font-size:11.5px">本文判德义（讥其量），前人或有计为身份义者</span></td></tr>
+<tr><td style="width:7%">9</td><td style="width:11%">13.20</td><td>子贡问曰：「何如斯可谓之士矣？」子曰：「行己有耻；使于四方，不辱君命；可谓士矣。」曰：「敢问其次？」曰：「宗族称孝焉，乡党称弟焉。」曰：「敢问其次？」曰：「言必信，行必果；硁硁然，小人哉！抑亦可以为次矣。」曰：「今之从政者何如？」子曰：「噫！斗筲之人，何足算也！」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">10</td><td style="width:11%">13.23</td><td>子曰：「君子和而不同；小人同而不和。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">11</td><td style="width:11%">13.25</td><td>子曰：「君子易事而难说也：说之不以道，不说也；及其使人也，器之。小人难事而易说也；说之虽不以道，说也；及其使人也，求备焉。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">12</td><td style="width:11%">13.26</td><td>子曰：「君子泰而不骄；小人骄而不泰。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">13</td><td style="width:11%">14.6</td><td>子曰：「君子而不仁者有矣夫？未有小人而仁者也！」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">14</td><td style="width:11%">14.23</td><td>子曰：「君子上达；小人下达。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">15</td><td style="width:11%">15.2</td><td>在陈绝粮。从者病，莫能兴。子路愠见曰：「君子亦有穷乎？」子曰：「君子固穷；小人穷斯滥矣。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">16</td><td style="width:11%">15.21</td><td>子曰：「君子求诸己；小人求诸人。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">17</td><td style="width:11%">15.34</td><td>子曰：「君子不可小知，而可大受也；小人不可大受，而可小知也。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">18</td><td style="width:11%">16.8</td><td>孔子曰：「君子有三畏：畏天命，畏大人，畏圣人之言。小人不知天命而不畏也，狎大人，侮圣人之言。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">19</td><td style="width:11%">17.3</td><td>子之武城，闻弦歌之声，夫子莞尔而笑曰：「割鸡焉用牛刀？」子游对曰：「昔者，偃也闻诸夫子曰：‘君子学道则爱人；小人学道则易使也。’」子曰：「二三子！偃之言是也；前言戏之耳！」</td><td style="width:15%;color:#8C5E2A">身份／被治</td></tr>
+<tr><td style="width:7%">20</td><td style="width:11%">17.10</td><td>子曰：「色厉而内荏，譬诸小人，其犹穿窬之盗也与！」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">21</td><td style="width:11%">17.21</td><td>子路曰：「君子尚勇乎？」子曰：「君子义以为上。君子有勇而无义为乱，小人有勇而无义为盗。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+<tr><td style="width:7%">22</td><td style="width:11%">17.23</td><td>子曰：「唯女子与小人为难养也！近之则不系，远之则怨。」</td><td style="width:15%;color:#8C5E2A">身份／被治</td></tr>
+<tr><td style="width:7%">23</td><td style="width:11%">19.8</td><td>子夏曰：「小人之过也必文。」</td><td style="width:15%;color:#8C5E2A">德义</td></tr>
+  </table>
+  <div class="tcap">合计：德义二十条、身份／被治三条、谦称零条；4.11 一条两见，故条目二十三、词次二十四。</div>
+
+  <h2 class="psec" id="a3">附录三　复算口径与限制</h2>
+  <p class="pp">一、<b>切分</b>：以篇题行为界切二十篇，按『n』章条号切条，统计「君子」「小人」子串见数；同章共见分别按条目与词次记录。<b>二、底本</b>：京都大学人文科学研究所电子文本（BIG5 转 UTF-8）。<b>三、异文</b>：电子本作「李康子」（应「季康子」）、「小人斯滥矣」（通行作「小人穷斯滥矣」），引用时校正，统计不改。<b>四、数据文件</b>：逐篇见数、十八条对举、二十三条小人句，存 `研究/stats-论语君子小人.json`，可复算。<b>五、限制</b>：单一底本，未与定州汉简等出土本逐条对校；《孟子》《荀子》等「后史」不入统计；弟子转述未分层。</p>
+
+  <h2 class="psec" id="ref">参据</h2>
+  <ol class="refs">
+    <li>朱熹《论语集注》，为政 2.14 注（「周，普遍也。比，偏党也……公私之际，毫厘之差耳」）。</li>
+    <li>《先秦「君子」：身份标志向道德内涵的延伸》，《光明日报》2017 年 10 月 23 日（甲骨未见「君子」；《尚书》首见指有政治地位者；《易》二十处指贵族）。</li>
+    <li>王学典《中华文化中的君子》，全国哲学社会科学工作办公室 2025 年 9 月 24 日（孔子将君子由贵族专属称谓转化为普遍道德理想人格）。</li>
+    <li>《孔子与「君子」观念的转化》（专题论文，存目）：初始义「君之子」，后引申为贵族男子与统治者，孔子为「由位至德」关键。</li>
+    <li>《「君子」人格的政治哲学意涵及其时代转换》，《光明日报》2023 年 7 月 24 日（君子初为政治概念，人格亦首先为政治人格）。</li>
+    <li>杨伯峻《论语译注》统计（君子 107、小人 24）；赵纪彬统计（君子 106、小人 24），转引自四川大学古籍整理研究所《「君子」、「小人」和「新人」的培养》。</li>
+    <li>京都大学人文科学研究所《论语》电子文本（本文底本）。</li>
+  </ol>
+
+  <div class="pfoot">
+    <span>润泽说 · 道可道之论语　｜　论文一　君子与小人</span>
+    <span>底本：朱熹《论语集注》　｜　2026-11-22　｜　许可 CC BY-NC-SA 4.0</span>
+  </div>
+</div>
+</body>
+</html>
