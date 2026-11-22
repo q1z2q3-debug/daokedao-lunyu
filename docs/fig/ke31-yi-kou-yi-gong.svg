@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="250" viewBox="0 0 460 250" role="img" aria-label="叩两端与攻一端对照">
+<defs><marker id="ar" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5C5347"/></marker></defs>
+<line x1="230" y1="18" x2="230" y2="228" stroke="#DED2B9" stroke-dasharray="3 4"/>
+<text x="24" y="30" ,"Songti SC",serif font-size="15" font-weight="600" fill="#A2503B">叩其两端而竭　9.8</text>
+<line x1="62" y1="96" x2="168" y2="96" stroke="#8A8074" stroke-width="1"/>
+<circle cx="62" cy="96" r="5" fill="#4A5C55"/><circle cx="168" cy="96" r="5" fill="#4A5C55"/>
+<text x="62" y="80" text-anchor="middle" ,"Songti SC",serif font-size="12" fill="#8A8074">一端</text>
+<text x="168" y="80" text-anchor="middle" ,"Songti SC",serif font-size="12" fill="#8A8074">一端</text>
+<circle cx="115" cy="148" r="21" fill="#FFFDF6" stroke="#4A5C55"/>
+<text x="115" y="155" text-anchor="middle" ,"STKaiti",serif font-size="19" fill="#2F2A24">叩</text>
+<line x1="98" y1="134" x2="72" y2="106" stroke="#5C5347" marker-end="url(#ar)" marker-start="url(#ar)"/>
+<line x1="132" y1="134" x2="158" y2="106" stroke="#5C5347" marker-end="url(#ar)" marker-start="url(#ar)"/>
+<text x="115" y="190" text-anchor="middle" ,"Songti SC",serif font-size="12.5" fill="#5C5347">问尽两头，线自明</text>
+<text x="115" y="212" text-anchor="middle" ,"Songti SC",serif font-size="11" fill="#8A8074">空空如也 → 竭焉</text>
+<text x="252" y="30" ,"Songti SC",serif font-size="15" font-weight="600" fill="#A2503B">攻乎异端　2.16</text>
+<line x1="322" y1="52" x2="322" y2="216" stroke="#4A5C55" stroke-width="2.5"/>
+<text x="312" y="66" text-anchor="end" ,"Songti SC",serif font-size="11" fill="#8A8074">正学·干</text>
+<line x1="322" y1="150" x2="388" y2="196" stroke="#5C5347" marker-end="url(#ar)"/>
+<circle cx="392" cy="198" r="5" fill="#A2503B"/>
+<text x="392" y="220" text-anchor="middle" ,"Songti SC",serif font-size="12" fill="#A2503B">异端（另一端）</text>
+<text x="352" y="170" ,"Songti SC",serif font-size="11" fill="#8A8074">专治</text>
+<text x="322" y="238" text-anchor="middle" ,"Songti SC",serif font-size="11" fill="#8A8074">只朝一头钻，干自断</text>
+</svg>
