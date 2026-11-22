@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第二十四课 如愚（为政 2.9）</title>
+<meta name="description" content="《论语·为政》2.9 吾与回言终日，不违，如愚。退而省其私，亦足以发，回也不愚。通释：不违三辨、省其私的两读与两测点、发的两义、如愚为何是被误判的样子。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F7F3EA'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23A2503B' font-family='serif'%3E愚%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 24 课 / 498</div>
+  </div>
+<div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">两读</a><a href="#sc-d">三句结构</a><a href="#sc-e">不违三辨</a><a href="#sc-f">当场与退后</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 在场退后</a><a href="#sc-21">义理二 三句</a><a href="#sc-22">附论一 默识</a><a href="#sc-23">附论二 参与分</a><a href="#sc-24">附论三 边界</a><a href="#sc-25">附论四 三测点</a></div>
+  </div>
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>如　愚</h1>
+    <div class="h1-sub">为政 2.9　底本：朱熹《论语集注》</div>
+    <div class="src">
+      <span class="who">子曰：</span>「吾与<ruby>回<rt>huí</rt></ruby>言终日，不<ruby>违<rt>wéi</rt></ruby>，如愚。退而<ruby>省<rt>xǐng</rt></ruby>其私，亦足以发，回也不愚。」
+    </div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>违</span></div><div class="tzcap"><span>7 画</span><span>顶回去</span></div></div>
+      <div class="tzitem"><div class="cell"><span>愚</span></div><div class="tzcap"><span>13 画</span><span>看起来笨</span></div></div>
+      <div class="tzitem"><div class="cell"><span>省</span></div><div class="tzcap"><span>9 画</span><span>仔细看</span></div></div>
+      <div class="tzitem"><div class="cell"><span>私</span></div><div class="tzcap"><span>7 画</span><span>自己的时候</span></div></div>
+      <div class="tzitem"><div class="cell"><span>发</span></div><div class="tzcap"><span>5 画</span><span>长出来</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">违</div><div class="v"><b>反着来、顶回去。</b>——<b>「不违」＝你说什么，他都点头，不顶嘴、不反问。</b>——<b>所以看上去，像没主意。</b></div></div>
+      <div class="row"><div class="k">愚</div><div class="v"><b>笨、呆。</b>——<b>「如愚」的「如」是「好像」。</b>——<b>像笨，不等于笨。</b>——孔子用的是「如」，这一个字，给后面的翻转留了门。</div></div>
+      <div class="row"><div class="k k2">省</div><div class="v"><b>读 xǐng，是「看」：细看、察。</b>——<b>「省其私」＝去看他不在人前的时候。</b>——不是省钱的「省」。</div></div>
+      <div class="row"><div class="k">私</div><div class="v"><b>自己的、人后的。</b>——<b>在老师面前是「公」，退下来是「私」。</b>——<b>一个人真正的样子，多半在「私」里。</b></div></div>
+      <div class="row"><div class="k">发</div><div class="v"><b>长出来、显出来。</b>——<b>像种子发芽的「发」。</b>——<b>「足以发」＝他学的东西，真能长出来、用出来。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <p class="lead"><b>听讲一整天，他一声不吭，像个没听懂的；下课以后看他怎么做，才知道他全懂了。</b>（为政 2.9）</p>
+    <div class="scene"><b>孔子先说了「像」，后说了「不是」。</b>——<b>「如愚」是别人眼里的他，「不愚」是孔子看出来的他。</b>——<b>差的不是脑子，是看的时机。</b></div>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>颜回是孔子最喜欢的学生。</b>——<b>孔子跟他讲了一整天，他一句反问都没有，只是点头。</b>——<b>孔子心里犯疑：这孩子，是听不懂，还是不敢说？</b></p>
+    <p><b>于是孔子换了个时候看。</b>——<b>不看他当着我的样子，看他退下去以后的样子：一个人待着时做什么，和同门说话时说什么。</b></p>
+    <p><b>看完，孔子说：也不愚。</b>——<b>「也」字很轻，像把先前那句话收回去了一半。</b>——<b>他没有道歉，他只是改了判。</b></p>
+    <div class="scene"><b>这一章教的是「怎么看人」。</b>——<b>当面问不出来，就退一步看；看一个人最放松的时候，才看得见他真的信什么。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>上课时老师问「懂了吗」，全班都点头。</b>——<b>下课做题，有人第一题就卡住。</b>——<b>点头是当场的，会做是退后的。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>你听了一节特别好的课，当场什么也说不出来。</b>——<b>晚上写作业，忽然想起那句话，手就顺了。</b>——<b>懂，有时候要晚一点才到。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>小组讨论，谁声音大谁就像懂了。</b>——<b>最后交上来的东西，常常是那个一直没说话的人做的。</b></div></div>
+    </div>
+    <div class="scene"><b>三个场面，说的是一件事：</b>——<b>热闹的地方看得见态度，看不见本事；本事要等散了场才露。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>我不问，是不是就没听懂？</b>——<b>不一定。</b>——<b>有三种不问：真不懂、懂了不必问、不敢问。</b>——<b>前一种是笨，后两种都不是。</b>——分不清的时候，回家做一遍就知道了。</div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>懂了为什么不说？</b>——<b>有时说了反而变浅。</b>——<b>刚懂的时候，话是热的，说出来像在证明自己懂了。</b>——<b>等它沉一沉，再说，才是自己的话。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>别人说我笨，我怎么办？</b>——<b>让他看你会做什么，不必让他看你说了什么。</b>——<b>「如愚」只是他看着像；你做的事，会替你把话说完。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>别急着证明自己懂了。</b>——<b>抢着说「我懂了」，是给别人听的；真正弄懂，是给自己用的。</b></div>
+    <div class="scene"><b>给自己留一段「没人问」的时间。</b>——<b>关掉提示，不查答案，自己从头做一遍。</b>——<b>那一段里长出来的东西，才是你的。</b></div>
+    <div class="scene"><b>也别把安静的人当成空的。</b>——<b>班里最不说话的那个，可能正在心里排一整幅图。</b>——<b>给人家一点时间，也给自己一点时间。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="parent">
+      <div class="pair"><div class="k2">勘俗</div><div class="v"><b>勘俗见。</b>——<b>别把「不违」讲成「听话」，也别把「如愚」讲成「笨」。</b>——<b>这一章赞的不是顺从，是「受而能发」：听得进去，也用得出来。</b>讲的时候，先问孩子「你后来用上了吗」，别问「你当时怎么不说」。</div></div>
+      <div class="pair"><div class="k2">对照</div><div class="v"><b>现代对照。</b>——<b>今天的「不违」，常常发生在没有声音的地方：</b>群里只回「收到」，课上不举手，视频里一直关着麦。<b>沉默的形状变了，判人的难没变。</b></div></div>
+      <div class="pair"><div class="k2">主线</div><div class="v"><b>常变主线。</b>——学的器物一直在变：<b>竹简、讲堂、黑板、屏幕、AI 问答（相）；「退而省其私」不变（常）。</b>——<b>换了地方，还是要看人散了以后做什么。</b></div></div>
+      <div class="pair"><div class="k2">教学</div><div class="v"><b>教与学二分。</b>——<b>大人看得见的是发言、是分数；看不见的是他一个人时怎么用。</b>——<b>孔子给的办法很朴素：换一个时候看，别在考场上判人。</b></div></div>
+      <div class="pair"><div class="k2">时代</div><div class="v"><b>时代落点。</b>——<b>答案变便宜了：问一句就有。</b>——<b>于是「当场答得快」越来越不值钱，「退后用得对」越来越值钱。</b>——<b>还有一条：别把「参与分」当成学会的证据。</b></div></div>
+      <div class="pair"><div class="k2">融西</div><div class="v"><b>融西对照。</b>——<b>课堂研究有个「等待时间」（wait time）：老师提问后多等三秒，学生的回答会长、会深。</b>——<b>三秒，就是给「如愚」的人一个机会。</b>教育学也批「银行式教育」（banking）：<b>把知识当存款，存进去、取出来，不生成。</b>——<b>路不同：他们从「课堂怎么教」入手，我们从「人怎么长」入手；落点相同——学要长出来，才算学。</b></div></div>
+      <div class="pair"><div class="k2">一件</div><div class="v"><b>可做一件。</b>——<b>家里定一条「隔一天再问」：</b>今天学的，不当天考；<b>第二天让他用自己的话讲一遍，或者做给你看。</b>——<b>当天考的是记性，隔天考的是学问。</b></div></div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>如　愚</h1>
+    <div class="h1-sub">为政 2.9　甲篇·为政（第八章）　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「吾与回言终日，不违，如愚。退而省其私，亦足以发，回也不愚。」</div>
+
+    <h2 id="sc-lian" style="margin-top:0">零　连读：从「亲」转到「学」，从「色」转到「无声」</h2>
+    <p><b>2.5–2.8 四问孝，章章在「家」；2.9 忽然一转，转到「学」。</b>——<b>不是离题：为政要先正家，再正人；正人先要知人。</b>——<b>而这一章，正是孔子把自己的「知人法」当场示范了一遍。</b></p>
+    <p><b>与上一章是一条暗线接住的。</b>——<b>2.8 说「色」：敬要落到对方能看见的地方。2.9 说「不违」：有一件东西，偏偏不在当场显。</b>——<b>两章合看，是孔子对「可见性」的两次处理：该显的，必须送到眉间；不该显的，正好藏在当场。</b></p>
+    <p><b>为什么「学」不必当场显？</b>——<b>因为当场显出来的，多半是反应，不是学问。</b>——<b>反应快，是嘴和神经的事；学问成，是隔了一夜、用了一遍之后还在的东西。</b>——<b>孔子在这里做的，是把测点从「当场」挪到「退后」。</b></p>
+    <div class="scene"><b>这一章也是一篇「观察笔记」。</b>——<b>先记一个看不懂的现象（不违如愚），再改一个看法，再下一个判（回也不愚）。</b>——<b>三段话，正是一个人被误判、又被看回来的全过程。</b></div>
+
+    <div class="h2" id="sc-b">一　字义与句读</div>
+    <div class="rows">
+      <div class="row"><div class="k k2">回</div><div class="v"><b>颜回，字子渊，鲁人。</b>——《史记·仲尼弟子列传》：「少孔子三十岁。」<b>孔门四科，德行居首</b>（11.3：颜渊、闵子骞、冉伯牛、仲弓）。<b>后世称「复圣」，其人在《论语》里问得极少，却问得极重：</b>12.1 问仁，15.11 问为邦。<b>——他不问则已，一问就是纲领。</b></div></div>
+      <div class="row"><div class="k">违</div><div class="v"><b>孔安国：「不违者，无所怪问。」</b>——<b>朱子：「不违者，意不相背，有听受而无问难也。」</b>——<b>两注合起来：心上不别扭，嘴上不问难。</b>——<b>「违」不是造反，是「顶一句」；「不违」不是哑，是「不顶」。</b></div></div>
+      <div class="row"><div class="k">愚</div><div class="v"><b>《说文》：「愚，戆也。」</b>——<b>戆，直而痴。</b>——<b>「如愚」的「如」，是全章第一个眼：它是别人看出来的样子，不是他的实相。</b>——<b>一个字，先把判词悬起来。</b></div></div>
+      <div class="row"><div class="k k2">终日</div><div class="v"><b>句读两读。</b>——<b>甲：</b>「吾与回言终日」＝跟他讲了一整天（朱子句读）。<b>乙：</b>「吾与回言，终日不违」＝每说一句他都不顶，一整天如此。<b>本课从前读</b>，两读所指不异：<b>时间长，且始终无问难。</b></div></div>
+      <div class="row"><div class="k">省</div><div class="v"><b>读 xǐng，察也、视也。</b>——<b>不是「简省」的 shěng。</b>——<b>「省其私」＝察看他不在我面前时的那一面。</b>——<b>这是孔子惯用的动词：2.10 的「察其所安」，同一个「看」。</b></div></div>
+      <div class="row"><div class="k">私</div><div class="v"><b>人后、独处、非同门共见之时。</b>——<b>朱子：「私，谓燕居独处，非进见请问之时。」</b>——<b>孔安国则作「退与二三子说绎」（见下节）。</b>——<b>一个是「一个人」，一个是「几个人」；合起来，才是他退下来以后的整个生活。</b></div></div>
+      <div class="row"><div class="k">发</div><div class="v"><b>朱子：「发，谓发明所言之理。」</b>——<b>「发明」不是发明创造，是把藏着的意思发出来。</b>——<b>一说作「发用」：把所学的用出来。</b>——<b>两义相通：理发得出来，才用得出来。</b></div></div>
+      <div class="row"><div class="k">也</div><div class="v"><b>句中语气词，表判断而带一点回旋。</b>——<b>「回也不愚」——回呀，不愚。</b>——<b>不是「回不愚」的硬判，是先前的疑到此为止。</b></div></div>
+    </div>
+    <p><b>句读三层，一层一转：</b></p>
+    <p><b>其一，「吾与回言终日，不违，如愚」——一个现象，三个动作：我讲、他不顶、他像笨。</b>——<b>注意这三件事是连着的：讲得久，才显出不顶；一直不顶，才显得像笨。</b>——<b>「如愚」不是第一眼的印象，是看了一天之后的印象。</b></p>
+    <p><b>其二，「退而省其私」——一个动作，把时间挪开了。</b>——<b>「退」是散场，「省」是另看，「私」是无人处。</b>——<b>三个字读完，孔子已经从「看表现」转到「看日用」。</b></p>
+    <p><b>其三，「亦足以发，回也不愚」——一个判，落在「发」字上。</b>——<b>判他不是靠「他懂了」，是靠「他用得出」。</b>——<b>「亦」字更妙：也只是够发而已——不夸，不贬，正好。</b></p>
+
+    <div class="h2" id="sc-c">二　两读：谁在省，省的是什么</div>
+    <p><b>「退而省其私」一句，主语与「私」字都有两读，句法皆通。</b></p>
+    <p><b>甲读（孔安国、皇侃、朱子）：孔子省。</b>——<b>孔注：「察其退还，与二三子说绎道义，发明大体，知其不愚。」</b>——<b>朱注：「及退省其私，则见其日用动静语默之间，皆足以发明夫子之道。」</b>——<b>都是孔子退一步去看他。</b></p>
+    <p><b>乙读：颜回自省。</b>——<b>「退而自省其私」：散了学，自己回头看自己。</b>——<b>此读晚出，句法亦通，且与「省」的内向义合。</b>——<b>但「亦足以发」的语气，是旁观的赞，不是自评；本课仍以甲读为主。</b></p>
+    <div class="scene"><b>两读不是谁对谁错，是问的两件事。</b>——<b>甲读问「老师怎么看见学生」，乙读问「学生怎么看见自己」。</b>——<b>一个是知人法，一个是自省法；合起来才完整：看人要看退后，看己也要看退后。</b></div>
+    <p><b>而「私」的两读，恰好给了两个测点：</b></p>
+    <div class="rows">
+      <div class="row"><div class="k k2">独处</div><div class="v"><b>朱子：燕居独处之所为。</b>——<b>一个人时做什么：读什么、想什么、闲下来往哪儿去。</b>——<b>这是最藏不住的测点，因为没有观众。</b></div></div>
+      <div class="row"><div class="k k2">对人</div><div class="v"><b>孔安国：退与二三子说绎道义。</b>——<b>和同门私下讲论时，他讲得出什么。</b>——<b>这是第二个测点：没有老师在场，他还讲不讲得清。</b></div></div>
+    </div>
+    <p><b>本课取两读并存、两测点合用，理由有三：</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>两注不冲突。</b>「燕居」与「与二三子说绎」是两种场合，不是两个主张。<b>孔注早出，朱注更细；合起来，正好是一个人退下来以后的全部生活。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>与「发」字相合。</b>——<b>「发」有两个方向：对自己（想通了），对别人（讲得出）。</b>——<b>独处见他自发的功夫，对人见他发明的能力。</b>——<b>两面都有，才叫「足以发」。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>与 2.10 相接。</b>——<b>下一章「视其所以，观其所由，察其所安」，正是这套看人法的提纲。</b>——<b>2.9 是示范，2.10 是条例；两章连读，才见孔子「知人」的完整路数。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-d">三　三句的结构：一段观察，三次改口</div>
+    <p><b>这一章只有三句，却是一段完整的观察过程：现象、改法、判词。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">象</div><div class="v"><b>言终日，不违，如愚。</b>——<b>先老实记下自己看到的：一天不顶一句，像个笨的。</b>——<b>孔子不掩饰自己的疑惑：他当时真这么想。</b></div></div>
+      <div class="row"><div class="k">法</div><div class="v"><b>退而省其私。</b>——<b>不辩，换法。</b>——<b>当面看不清，就到背后去看；这一点，比任何评语都重要。</b></div></div>
+      <div class="row"><div class="k">判</div><div class="v"><b>亦足以发，回也不愚。</b>——<b>判在「发」上，不判在「懂」上。</b>——<b>能发，才叫不愚；不能发而只是懂，仍可能是「如愚」。</b></div></div>
+    </div>
+    <p><b>为什么这段结构值得单独立一节？</b>——<b>因为它示范的不是结论，是方法。</b>——<b>多数人下判，只用第一句：看他当场顶不顶、答得快不快。</b>——<b>孔子用了三句：先记现象，再换测点，最后才下判。</b></p>
+    <p><b>还要看清一层：这个判是「改口」，不是「翻案」。</b>——<b>「回也不愚」的「也」，是回旋：先前那个「如愚」并不算错——他当着人的样子，确实像。</b>——<b>错的是拿那一面当全部。</b>——<b>孔子认了自己的看漏，也只认这一层。</b></p>
+    <div class="scene"><b>用一句话收这一节：先看清，再换法，最后才说人。</b>——<b>三句里，最贵的不是判词，是中间那一句「退而省」。</b></div>
+
+    <div class="h2" id="sc-e">四　「不违」三辨：三种沉默，三种人</div>
+    <p><b>「不违」这两个字，最容易被读成「顺从」。一顺，这一章就变成了劝人别顶嘴。</b>——<b>先把三种沉默分开：</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>不懂而不问。</b>——<b>听不懂，又不敢露，于是点头。</b>——<b>这是真「如愚」：不是装笨，是没跟上。</b>——<b>判别：退后也发不出来。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>懂了而不必问。</b>——<b>朱子所谓「明睿所照，即始而见终」：话头一起，结局已见，无隙可问。</b>——<b>这是颜回：不违是「无问处」，不是「不敢问」。</b>——<b>判别：退后发得出，且发得比原话远。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>懂而不问，因为不敢。</b>——<b>怕问错、怕显笨、怕得罪。</b>——<b>这是「畏」，不是「敬」。</b>——<b>判别：退后能照做，但从不越过一步。</b></div></div>
+    </div>
+    <p><b>三种沉默，当场的脸是一样的：都没有表情、都不顶嘴。</b>——<b>所以当场判不了人。</b>——<b>这正是孔子要「退而省」的原因：不是他多疑，是这一层的信号本来就是零。</b></p>
+    <div class="scene"><b>与 2.8 接一句：不违也是一种「色」。</b>——<b>一张没有波动的脸，读不出敬、读不出懂、也读不出怕。</b>——<b>2.8 说「该显的必须显到眉间」，2.9 说「有一种东西，本来就不在眉间」。</b>——<b>两章合起来，才是完整的可见性：不是所有真东西都该显，但显不出的那一部分，要用别的方法去看见。</b></div>
+
+    <div class="h2" id="sc-f">五　反向：一个只奖励「当场」的时代</div>
+    <p><b>这一章有一个今天才显出来的反面。</b>——<b>孔子当年是「看不清学生」，今天是「系统只看得清一种学生」。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>课堂有「参与分」。</b>——<b>发言次数计入成绩：举手多的加分，安静的被判「不投入」。</b>——<b>奖的是反应，不是学问。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>会议要「表态」。</b>——<b>谁先说话谁像有主张；想清楚的人，往往等别人说完才开口，于是被记成「没想法」。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>问答变便宜了。</b>——<b>问一句就有答案，于是「当场答得漂亮」显得聪明，「回去做对」显得平常。</b>——<b>可答案越便宜，退后的功夫越贵。</b></div></div>
+    </div>
+    <p><b>三种情形，是同一件事：把「当场可见的反应」当成了「人的全部」。</b>——<b>这不是孔子的错，是评价工具的偷懒：反应好测，日用难测。</b></p>
+    <p><b>所以 2.9 有两个方向，缺一不可：</b>——<b>向上，给安静的人留出「退后」的机会（老师等三秒、家长隔一天再问）；向下，别把「不爱发言」当成「没学好」的证据。</b>——<b>合起来是一条：评价要落在人散了以后，不落在人聚着的时候。</b></p>
+    <div class="scene"><b>这一条与专题五的「四级温度」也接得上：</b>——<b>「下知有之」是只知道有这个人、不觉他在用力；「畏之」是他怕你。</b>——<b>被误判成「如愚」的人，多半落在「下知有之」那一级——不是不被爱，是不被看见。</b></div>
+
+    <div class="h2" id="sc-h">六　章旨</div>
+    <p><b>一句。</b>当面不顶一句，看着像笨；退后看他一个人怎么用，才知他不笨。<b>判人的时机，比判人的标准更要紧。</b></p>
+    <p><b>一反。</b>这不是赞「顺从」。<b>赞的是「受而能发」：听得进去，也用得出来。</b>——<b>只受不发，仍近于愚；只发不受，是无根。</b></p>
+    <p><b>一辨。</b>「如愚」的「如」字，是全章的良心：<b>它承认自己看漏了，也承认看漏不算错——错的是拿一面当全部。</b></p>
+    <div class="scene"><b>本章在《为政》里的位置，是「由内及人」。</b>——<b>2.5–2.8 讲怎么对待亲，2.9 讲怎么看见人，2.10 讲怎么看清一个人（视、观、察）。</b>——<b>先学会待亲，再学会识人；识人之后，才谈得上为政。</b></div>
+
+    <div class="h2" id="sc-i">七　存疑五条</div>
+    <div class="doubt">
+      <div class="q"><span>01</span><div><b>「终日」的句读。</b>甲：「吾与回言终日」＝言竟日（朱子）；乙：「吾与回言，终日不违」。<b>两读所指不异，本课从前读</b>，唯乙读更能点出「始终无一问难」。</div></div>
+      <div class="q"><span>02</span><div><b>「省其私」的主语。</b>甲：孔子察其退后（孔安国、皇侃、朱子）；乙：颜回自省其私（晚出）。<b>本课从甲</b>，因「亦足以发」是旁观之赞，非自评之词。</div></div>
+      <div class="q"><span>03</span><div><b>「私」的所指。</b>朱子作「燕居独处」；孔安国作「退与二三子说绎道义」。<b>本课两存并用</b>：独处与对人，是两个测点，非两说相攻。</div></div>
+      <div class="q"><span>04</span><div><b>「发」的义。</b>朱子「发明所言之理」（把道理发出来）；一说「发用」（把所学用出来）。<b>本课兼取</b>：理发得出，才用得成，两面是一事。</div></div>
+      <div class="q"><span>05</span><div><b>与 11.4 的张力。</b>11.4：「回也非助我者也，于吾言无所不说。」<b>既赞其不违，又惜其不违</b>——非矛盾，是两种价值：<b>受教之完（本章）与助师之缺（11.4）。</b>一人两面，两章各记一面。</div></div>
+    </div>
+
+    <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+    <div class="cards">
+      <div class="cardshd"><span>俗见</span><span>正解</span></div>
+      <div class="pair"><div class="a"><b>「不违」就是听话、没主见。</b></div><div class="b"><b>不违是「无问难」，不是「无判断」。</b>——<b>颜回问得少而重：12.1 问仁，15.11 问为邦。</b>——<b>他的主见在后面，不在当场。</b></div></div>
+      <div class="pair"><div class="a"><b>「如愚」就是真笨，孔子也看错了。</b></div><div class="b"><b>「如」是「好像」，孔子没看错，是只看到一面。</b>——<b>他随后自己改了判：「回也不愚。」</b>——<b>肯改判的老师，才配谈「知人」。</b></div></div>
+      <div class="pair"><div class="a"><b>「省其私」是老师暗中监视学生。</b></div><div class="b"><b>省是「看行为」，不是「查心事」。</b>——<b>看的是燕居何为、与人何言，不是翻他的念头。</b>——<b>这一条边界，今天做家长、做管理，同样要守。</b></div></div>
+      <div class="pair"><div class="a"><b>课堂上不问，就是没学。</b></div><div class="b"><b>不问有三种：不懂、不必问、不敢问。</b>——<b>拿「问不问」当唯一指标，奖的是胆子，不是学问。</b>——<b>要看退后发不发得出。</b></div></div>
+      <div class="pair"><div class="a"><b>孔子最赞颜回，可见他要人全盘接受。</b></div><div class="b"><b>他赞的是「受而能发」。</b>——<b>11.4 明说「非助我者也」，是遗憾不是夸奖。</b>——<b>全盘接受若无生成，在孔子眼里也是缺的。</b></div></div>
+      <div class="pair"><div class="a"><b>懂了就该马上说出来。</b></div><div class="b"><b>说得出是「发明」，做得出是「默识」，两条都要。</b>——<b>刚懂就说，常是为了证明；沉一沉再说，才是自己的话。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-k">九　跨典六条</div>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>《周易·系辞上》：「默而成之，不言而信，存乎德行。」</b>——<b>本条最合：不靠言说而成，不靠表白而信，落在德行上。</b>——<b>「不违」是默，「足以发」是成。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>《道德经》四十五章：「大直若屈，大巧若拙，大辩若讷。」</b>——<b>「若拙」「若讷」正是「如愚」的旁证：最像不会的，往往最会。</b>——<b>老子讲的是形，孔子记的是事。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>《礼记·学记》：「善待问者如撞钟，叩之以小者则小鸣，叩之以大者则大鸣，待其从容，然后尽其声。」</b>——<b>不叩不鸣，非钟之罪。</b>——<b>「待其从容」四字，就是孔子「退而省」的耐心：好学生要等，好老师肯等。</b></div></div>
+      <div class="row"><div class="k k2">四</div><div class="v"><b>《论语·先进》11.4：「回也非助我者也，于吾言无所不说。」</b>——<b>「说」读悦：没有不喜欢的。</b>——<b>这是「不违」的代价：师生之间少了撞击。</b>——<b>本章赞其成，此章惜其不助；两面合看，才是完整的颜回。</b></div></div>
+      <div class="row"><div class="k k2">五</div><div class="v"><b>《史记·仲尼弟子列传》：「颜回者，鲁人也，字子渊。少孔子三十岁。」</b>——<b>又记「回年二十九，发尽白，蚤死」。</b>——<b>孔子哭之恸（《先进》11.10；11.9 又记「天丧予」）。</b>——<b>本章那一句「回也不愚」，是他还在的时候说的。</b></div></div>
+      <div class="row"><div class="k k2">六</div><div class="v"><b>《论语》12.1「颜渊问仁」、15.11「颜渊问为邦」。</b>——<b>两问都是纲领：一问修身之要，一问治国之制。</b>——<b>可见「不违」不是不问，是「不问小事」。</b>——<b>这一条，破「颜回从不质疑」的俗见。</b></div></div>
+    </div>
+    <div class="h2" id="sc-19">图一　散学之后，一席之光</div>
+    <div class="figs single">
+      <div class="fig">
+        <div class="cap">图一 · 待图</div>
+        <div class="ph">图位：竖幅 3:4 水墨。讲席已散，廊下无人。庭中一席摊着竹简，少年独坐，一手按简、一手执笔，不看别处；另一角二三子围坐低声，一人以指划简，少年抬眼应一句，又低头。西斜的光只落在独坐那一席上，别处是暗的。全图不画讲者，只留空着的讲席与一卷未收的简。</div>
+      </div>
+    </div>
+    <div class="read"><b>读图三处：</b>——<b>空席</b>：讲的人不在场，这一章的事正发生在「他不在」的时候；<b>一席之光</b>：光只照一个人，说明这一段无人旁观的工夫才是被看见的；<b>抬眼又低头</b>：他能对答（对人），也能自守（独处）——两个测点，一张脸上都有。</div>
+
+    <div class="h2" id="sc-20">义理图一　在场与退后：测点挪一步</div>
+    <div class="figs single">
+<svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 在场与退后：测点挪一步</text>
+<rect x="16" y="44" width="176" height="118" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="30" y="66" font-size="10.5" fill="#5C5347">在场 · 言终日</text>
+<line x1="30" y1="74" x2="178" y2="74" stroke="#DCD5C8"/>
+<text x="30" y="96" font-size="13.5" fill="#2F2A24">不违</text>
+<text x="30" y="116" font-size="10" fill="#5C5347">问难：无</text>
+<text x="30" y="132" font-size="10" fill="#5C5347">所见他：如愚</text>
+<text x="30" y="152" font-size="10.5" fill="#A2503B">信号＝零</text>
+<rect x="208" y="44" width="176" height="118" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="222" y="66" font-size="10.5" fill="#5C5347">退后 · 省其私</text>
+<line x1="222" y1="74" x2="370" y2="74" stroke="#DCD5C8"/>
+<text x="222" y="96" font-size="13.5" fill="#A2503B">足以发</text>
+<text x="222" y="116" font-size="10" fill="#5C5347">独处：燕居何为</text>
+<text x="222" y="132" font-size="10" fill="#5C5347">对人：与二三子说绎</text>
+<text x="222" y="152" font-size="10.5" fill="#A2503B">所见他：不愚</text>
+<text x="200" y="102" font-size="15" fill="#A2503B" text-anchor="middle">→</text>
+<text x="200" y="176" font-size="9.5" fill="#8A8074" text-anchor="middle">同一个人的同一件事，只换了个时候看</text>
+<line x1="16" y1="192" x2="384" y2="192" stroke="#8A8074"/>
+<text x="200" y="210" font-size="10.5" fill="#5C5347" text-anchor="middle">当场收得到「反应」，退后才收得到「学问」</text>
+<text x="200" y="232" font-size="10.5" fill="#A2503B" text-anchor="middle">「亦足以发，回也不愚」——判在发，不判在懂</text>
+<text x="200" y="254" font-size="9" fill="#8A8074" text-anchor="middle">朱子：私，谓燕居独处　｜　孔安国：退与二三子说绎道义</text>
+<text x="200" y="274" font-size="9" fill="#8A8074" text-anchor="middle">两读并存：一个人的生活，两面才全</text>
+</svg>
+    </div>
+    <p>此图把 2.9 拆成两个时刻。<b>在场一句，退后一句。</b>——<b>在场那一格，孔子能收到的信号只有「他不顶嘴」；退后那一格，他才收到「他用得出」。</b>——<b>同一个人的同一件事，只因为换了个时候看，判词就反过来了。</b></p>
+
+    <div class="h2" id="sc-21">义理图二　三句：记现象，换测点，下判词</div>
+    <div class="figs single">
+<svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 三句：记现象，换测点，下判词</text>
+<rect x="16" y="38" width="368" height="64" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="32" y="62" font-size="14" fill="#2F2A24">象 · 言终日，不违，如愚</text>
+<text x="32" y="82" font-size="10" fill="#5C5347">我看了一天，只看出一件事：他不顶嘴</text>
+<text x="32" y="96" font-size="10" fill="#8A8074">于是老实记下：如愚</text>
+<text x="200" y="116" font-size="15" fill="#A2503B" text-anchor="middle">↓</text>
+<rect x="16" y="122" width="368" height="64" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="32" y="146" font-size="14" fill="#2F2A24">法 · 退而省其私</text>
+<text x="32" y="166" font-size="10" fill="#5C5347">不当面判，到背后看</text>
+<text x="32" y="180" font-size="10" fill="#8A8074">两个测点：燕居独处 ／ 与二三子说绎</text>
+<text x="200" y="200" font-size="15" fill="#A2503B" text-anchor="middle">↓</text>
+<rect x="16" y="206" width="368" height="56" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="32" y="228" font-size="14" fill="#A2503B">判 · 亦足以发，回也不愚</text>
+<text x="32" y="248" font-size="10" fill="#5C5347">判在「发」：用得出，才算懂</text>
+<text x="200" y="284" font-size="10" fill="#8A8074" text-anchor="middle">三句里最贵的，是中间那句：先改法，再改判</text>
+</svg>
+    </div>
+    <p>两图合看：<b>图一是「时机」——测点从当场挪到退后；图二是「次序」——先记现象、再换法、最后才判。</b>——<b>时机告诉你「什么时候看」，次序告诉你「怎么看」。</b>——<b>合起来是一句话：不急着判，才判得准。</b></p>
+
+    <div class="h2" id="sc-22">附论一　「默识」：听懂的时候，人是静的</div>
+    <p><b>朱子形容颜回，用了八个字：「默识心融，触处洞然。」</b>——<b>默识，是不出声地记；心融，是心里化开了；触处洞然，是碰到哪儿都通。</b>——<b>这三句说的都是「静」，可每一句都在讲「通」。</b></p>
+    <p><b>静不等于空。</b>——<b>心理学里有两个现象可以旁证：</b>一是<b>「生成效应」</b>——自己生成一遍的内容，比听来的记得牢；二是<b>「延迟判断」</b>——把结论压一压，判断反而更稳。<b>听懂的那一刻，往往没有话；话是后来才长出来的。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>没有话，可能是因为在生成。</b>——<b>脑子里正在把别人的话，改写成自己的话。</b>——<b>这时候开口，说的多半还是别人的句子。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>说得快，可能只是接得快。</b>——<b>接话是社交能力，化开是认知能力；两者常常不成正比。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>静，需要被允许。</b>——<b>一个总被打断的人，学不会「默识」：他的句子永远长不到第二句。</b></div></div>
+    </div>
+    <p><b>所以「如愚」有一半是环境造成的。</b>——<b>不是他像笨，是他没有那段静的时间；而静的时间，从来不是自己一个人能争来的。</b></p>
+    <div class="scene"><b>一句话收：静不是空白，是正在化开。</b>——<b>给一个人安静，就是给他的理解留出落地的时间。</b></div>
+
+    <div class="h2" id="sc-23">附论二　「参与分」：评价工具的偷懒</div>
+    <p><b>孔子遇到的难，今天变成了制度。</b>——<b>课堂有参与分，会议有发言率，群里有响应速度。</b>——<b>这三样都好测，于是就成了「看得见的学」。</b></p>
+    <p><b>教育学把这类做法叫「银行式教育」（banking concept of education，Freire）：</b>把知识当存款，老师存、学生取，取出来核对一遍就算学会。<b>它的问题不在存，在于「不生成」。</b>——<b>生成要时间，而时间不进考核表。</b></p>
+    <div class="rows">
+      <div class="row"><div class="k">一</div><div class="v"><b>「等待时间」是最便宜的改良。</b>——<b>研究显示：教师提问后多等三秒，回答的长度与深度都会上升。</b>——<b>三秒不增成本，只增耐心。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>别把「安静」与「不懂」划等号。</b>——<b>把发言次数当唯一证据，评出来的是性格，不是学问。</b>——<b>要补一个测点：隔天做一遍。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>制度要给人「退后」的位置。</b>——<b>作业、复盘、周记、第二天回看——这些都是「省其私」的现代形态。</b>——<b>没有这个位置，退后的功夫就无处生长。</b></div></div>
+    </div>
+    <p><b>这一层，是本课对 2.9 的补正：</b>——<b>孔子只说了「退而省」，没说制度该怎么给这个「退」留位置。</b>——<b>他一个人可以换时候看，一个班、一个公司却不容易：那就要把「隔天」写进流程。</b></p>
+    <div class="scene"><b>一句话收：好评价，要落在人散了以后。</b>——<b>当场打分，打的多是反应；隔天再看，才看得到学问。</b></div>
+
+    <div class="h2" id="sc-24">附论三　三条边界</div>
+    <p><b>这一章好讲，也最容易被讲成「你要听话、别顶嘴」。三条先划清：</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k">一</div><div class="v"><b>不违，不等于不问。</b>——<b>该问的要问：颜回问仁、问为邦，一问就是纲领。</b>——<b>不违是「不问小事」，不是「不问要事」。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>不违，不等于无我。</b>——<b>他的「我」不在当场，在退后：能发，才证明有自己。</b>——<b>只会点头、从不生成的人，不是不违，是空。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>「省」不等于「窥」。</b>——<b>看行为，不看心事；看日用，不看隐私。</b>——<b>一旦越界，观察就变成了监控，学生学到的只是「怎么被看见」。</b></div></div>
+    </div>
+    <p><b>三条守住，这一章就只是三句话：</b>——<b>当场看不全，退后再看；看行为，不看心；判在「发」，不判在「顶」。</b></p>
+
+    <div class="h2" id="sc-25">附论四　三个测点：从 2.9 到 2.10</div>
+    <p><b>「省其私」不是一句感慨，是一套可操作的看法。</b>——<b>把它拆开，有三个测点：</b></p>
+    <div class="rows wide">
+      <div class="row"><div class="k">一</div><div class="v"><b>独处——燕居何为。</b>——<b>没人看着的时候，他做什么。</b>——<b>这是最硬的一项：没有观众，就没有表演。</b></div></div>
+      <div class="row"><div class="k">二</div><div class="v"><b>对人——与二三子说绎。</b>——<b>不在老师面前时，他讲得出什么、讲得清什么。</b>——<b>能讲清，说明化开了；只会复述，说明还在门口。</b></div></div>
+      <div class="row"><div class="k">三</div><div class="v"><b>常事——日用动静语默。</b>——<b>朱子的原话：一举一动、一说话一沉默，都在里面。</b>——<b>这是最不起眼、也最不会骗人的一项。</b></div></div>
+    </div>
+    <p><b>三个测点合起来，正是下一章的提纲。</b>——<b>2.10：「视其所以，观其所由，察其所安。」</b>——<b>「视」看当下所做，「观」看所由之路，「察」看所安之处；一层比一层深，一层比一层慢。</b></p>
+    <div class="scene"><b>一句话收：识人不是一眼，是三眼，且要隔开时间看。</b>——<b>2.9 给了示范，2.10 给了条例；下一课接着讲这三眼。</b></div>
+
+  </section>
+
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十四课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-22　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>

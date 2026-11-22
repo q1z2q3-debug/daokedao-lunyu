@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ke24 图二 三句：记现象·换测点·下判词 -->
+<svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 三句：记现象，换测点，下判词</text>
+<rect x="16" y="38" width="368" height="64" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="32" y="62" font-size="14" fill="#2F2A24">象 · 言终日，不违，如愚</text>
+<text x="32" y="82" font-size="10" fill="#5C5347">我看了一天，只看出一件事：他不顶嘴</text>
+<text x="32" y="96" font-size="10" fill="#8A8074">于是老实记下：如愚</text>
+<text x="200" y="116" font-size="15" fill="#A2503B" text-anchor="middle">↓</text>
+<rect x="16" y="122" width="368" height="64" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="32" y="146" font-size="14" fill="#2F2A24">法 · 退而省其私</text>
+<text x="32" y="166" font-size="10" fill="#5C5347">不当面判，到背后看</text>
+<text x="32" y="180" font-size="10" fill="#8A8074">两个测点：燕居独处 ／ 与二三子说绎</text>
+<text x="200" y="200" font-size="15" fill="#A2503B" text-anchor="middle">↓</text>
+<rect x="16" y="206" width="368" height="56" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="32" y="228" font-size="14" fill="#A2503B">判 · 亦足以发，回也不愚</text>
+<text x="32" y="248" font-size="10" fill="#5C5347">判在「发」：用得出，才算懂</text>
+<text x="200" y="284" font-size="10" fill="#8A8074" text-anchor="middle">三句里最贵的，是中间那句：先改法，再改判</text>
+</svg>
