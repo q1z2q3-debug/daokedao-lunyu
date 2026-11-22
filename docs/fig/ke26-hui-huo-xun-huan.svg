@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="回火示意：故经温而寻绎出新，新回注故，一圈比一圈高" style="max-width:520px;display:block;margin:0 auto">
-    <defs><marker id="a26a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker>
-    <marker id="a26b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#A8763E"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280" role="img" aria-label="回火示意：故经温而寻绎出新，新回注故，一圈比一圈高" style="max-width:520px">
+    <defs><marker id="a26a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
     <path d="M118 140 Q200 78 282 140" fill="none" stroke="#8A8074" stroke-width="1.6" marker-end="url(#a26a)"/>
     <path d="M282 164 Q200 226 118 164" fill="none" stroke="#8A8074" stroke-width="1.6" marker-end="url(#a26a)"/>
     <text x="200" y="94" text-anchor="middle" font-size="10.5" fill="#5F564A">寻绎：从旧里找缝、换问、连线</text>
@@ -15,7 +14,5 @@
     <circle cx="200" cy="152" r="40" fill="#fff" stroke="#A8763E" stroke-width="1.6"/>
     <text x="200" y="150" text-anchor="middle" font-size="16" fill="#8C5E2A">温</text>
     <text x="200" y="169" text-anchor="middle" font-size="9" fill="#8C5E2A">寻绎 · 回火</text>
-    <path d="M58 100 Q84 64 126 52" fill="none" stroke="#A8763E" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#a26b)"/>
-    <text x="44" y="118" text-anchor="start" font-size="9" fill="#A8763E">上一圈</text>
-    <text x="200" y="272" text-anchor="middle" font-size="11" fill="#5F564A">温故不是回头看，是把旧的火重新点着</text>
+    <text x="200" y="252" text-anchor="middle" font-size="11" fill="#5F564A">温故不是回头看，是把旧的火重新点着</text>
   </svg>
