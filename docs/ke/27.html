@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第二十七课 不器（为政 2.12）</title>
+<meta name="description" content="《论语·为政》2.12 君子不器。朱子「器者，各适其用而不能相通；成德之士，体无不具，故用无不周」；包咸「器者，各周其用，至于君子，无所不施」。一课两页：少儿页可念，成人页可考。底本朱熹《论语集注》。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 27 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">器是什么</a><a href="#sc-d">不是不成器</a><a href="#sc-e">用无不周</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 杯与管</a><a href="#sc-21">义理二 一贯与六艺</a><a href="#sc-22">附论一 器字</a><a href="#sc-23">附论二 专与通</a><a href="#sc-24">附论三 边界</a><a href="#sc-25">附论四 器与道</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>不　器</h1>
+    <div class="h1-sub">为政 2.12　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「君子不器。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="三个关键字">
+      <div class="tzitem"><div class="cell"><span>君</span></div><div class="tzcap"><span>7 画</span><span>成德的人</span></div></div>
+      <div class="tzitem"><div class="cell"><span>子</span></div><div class="tzcap"><span>3 画</span><span>尊称</span></div></div>
+      <div class="tzitem"><div class="cell"><span>器</span></div><div class="tzcap"><span>16 画</span><span>只能干一样</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k k2">君子</div><div class="v"><b>成德的人，不是官位高的人。</b>——<b>「君」是尊称，「子」也是尊称，合起来指那种把德性立在身上的人。</b></div></div>
+      <div class="row"><div class="k">器</div><div class="v"><b>碗、刀、斗这些家伙什。</b>——<b>朱子说「器者，各适其用而不能相通」：碗只能盛饭，刀只能切物，各有各的用处，也各有各的边。</b></div></div>
+      <div class="row"><div class="k k2">不器</div><div class="v"><b>不让自己被一样用处限死。</b>——<b>不是不学手艺，是学了手艺，心不被手艺关住。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>东西有定用，人有活心。</b>——<b>「君子不器」：不是要你什么都会，是别让只会一样，成了你的边。（为政 2.12）</b></div>
+    <p>孔子只说了四个字，其实说了两件事：<b>东西被造成什么样，就只干那一样</b>；<b>人不是东西，不能被这样定死。</b></p>
+    <p><b>一句话：器是「一用」，君子是「周用」。</b>——<b>一与周之间，差的不是会不会，是通不通。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，什么叫「器」。</b>——<b>碗、刀、斗、漏斗——每样只有一个用处，换个场合就用不上。</b>——<b>碗装不了水磨的面，刀切不了空气；这不是它不好，是它被造成那样。</b></p>
+    <p><b>第二层，为什么人不能把自己做成器。</b>——<b>因为你活着要遇到的事，不会按你的专长来。</b>——<b>会修车，家里水管漏了你还是得想办法；会背书，别人换个说法问，你就答不上。</b>——<b>人要是只留一个用处，别的场面就都没你的位置。</b></p>
+    <p><b>第三层，不器不是不成器。</b>——<b>「成器」是要把一样学到手；「不器」是不被那一样关住。</b>——<b>两件事不打架：先把一样学透，再让这一样带出别的。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>手艺是碗，人是手。</b>——<b>碗可以换，手不能变成碗。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　只会修一种车。</b>——<b>师傅手艺很好，可车型一换、电路一变，就束手了。</b>——<b>不是手笨，是这十年只练了那一种。</b></p>
+    <p><b>二　只会背答案。</b>——<b>题目一改数字，就答不出来。</b>——<b>记住的是答案的形状，不是那道题怎么想。</b></p>
+    <p><b>三　只会当「点名的班长」。</b>——<b>当班长时很能干，一换成组织活动，就不知从哪儿下手。</b>——<b>能干的是那一件事，不是「办事」这件事。</b></p>
+    <div class="scene"><b>三个场景说的是同一件事：</b>——<b>会的是一样，遇到的是另一样；中间那一步，就是「通」。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　「不器」是不是什么都学一点？</b>——<b>不是。</b>——<b>什么都会一点，也是一种器：一只浅盘子，什么都装一点，什么都装不住。</b></p>
+    <p><b>二　有一门绝活，算不算器？</b>——<b>不算。</b>——<b>绝活是本事；只要你能拿这门绝活去对付别的事，它就关不住你。</b></p>
+    <p><b>三　怎么知道自己被「器」住了？</b>——<b>看遇到没学过的事，第一反应是「这我不会」，还是「这跟我会的哪儿像」。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>先把一样学透，再让这一样带出别的。</b>——<b>透了的，才带得动；半透的，带出来的都是半样。</b></div>
+    <div class="scene"><b>会一样，是本事；只会一样，是边。</b>——<b>本事长在身上，边画在四周；边画得太早，人就长不大了。</b></div>
+    <div class="scene"><b>遇到没学过的，先问「这跟我会的哪儿像」。</b>——<b>这一问，就把一件新事接进了旧本事里。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>问他一个没学过的小事，看他先说「我不会」，还是先找「哪儿像」。</b>——<b>这一句，比分数看得准。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让他换角色做事：平时只管收碗，今天让他安排一顿饭。</b>——<b>换过的，才知道自己只会一样。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把一门专长当成孩子的全部，别的都不许碰。</b>——<b>专长越长越尖，孩子的世界就越窄。</b></div></div>
+      <div class="row"><div class="k">教</div><div class="v"><b>教与学：</b>——<b>一专带多能：学琴的，让他讲讲琴里的道理，能不能用到别处。</b>——<b>讲得出「通」，才算学到家。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>一门手艺守一辈子的时代过去了；能被一句话说清的岗位，最容易被替换。</b>——<b>孩子要练的，是「换个场景还能用」的那部分。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>数学的建模、语文的读法、科学的实验设计，底下是同一套「先看结构、再动手」。</b>——<b>看出来了，就不必每科都从零学。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>别问「你将来干什么」，先问「你会的这一样，还能干什么」。</b></div></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>不　器</h1>
+    <div class="h1-sub">为政 2.12　乙篇·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「君子不器。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：四个字，是「学」落到「用」的那一横</div>
+  <p><b>上一课说「可以为师」，朱子给的理由是「所学在我，而其应不穷」。</b>——<b>「其应不穷」四个字，就是这一课的伏笔：别人怎么问，你都答得下去——这就是不器。</b></p>
+  <p><b>反过来看：一个只学过一种答法的人，应付得了一问，应付不了第二问。</b>——<b>他不是不诚，是被「一用」限住了。</b></p>
+  <p><b>再看前两课：2.10 是向外看人，2.11 是向内看学，2.12 是把学落到用上。</b>——<b>三步走完，一个「可以为人师」的人才立得住：看得清人，热得了旧，还应得了变。</b></p>
+  <div class="scene"><b>这一章在全篇的位置，是「学的用」。</b>——<b>学而篇讲「学」怎么开始，为政篇讲「学」怎么用；用到极处，就是不被任何一用限住。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k k2">君子</div><div class="v"><b>成德之士。</b>——朱子：「成德之士。」<b>不是有位者，是有德者。</b>——<b>这一章是把标准立在人身上，不是立在官位上。</b></div></div>
+    <div class="row"><div class="k">器</div><div class="v"><b>各适其用而不能相通。</b>——朱子：「器者，各适其用而不能相通。」<b>「适」是恰好够用，「不能相通」是换个用处就不行。</b>——<b>器不是坏东西，是「定用」的东西。</b></div></div>
+    <div class="row"><div class="k k2">不器</div><div class="v"><b>不为定用所限。</b>——<b>「不」是否定「被当作器」，不是否定「有本事」。</b>——<b>四个字是主谓句：君子（主语）不器（谓语）——不是「君子，不器」两个判断并列。</b></div></div>
+  </div>
+  <p><b>朱子注两句（本章的骨）：</b></p>
+  <p><b>其一，「器者，各适其用而不能相通。」</b>——<b>一句里两个词最要紧：「适」与「相通」。</b>——<b>适是够用，相通是能挪用；器只做到前者。</b></p>
+  <p><b>其二，「成德之士，体无不具，故用无不周，非特为一才一艺而已。」</b>——<b>「体无不具」是因，「用无不周」是果。</b>——<b>朱子把话说死了：不器的底子，是「体」备，不是「艺」多。</b></p>
+  <p><b>《集解》引包咸，可与朱子对读：</b>「器者，各周其用；至于君子，无所不施。」——<b>包咸说「各周其用」，朱子说「不能相通」：一个说它够用，一个说它不够挪。</b>——<b>两注不打架：器之「周」，周于一事；君子之「周」，周于万事。</b></p>
+  <p><b>句读一辨：</b>「君子不器」不是「君子不是器具」这种比喻句，是<b>「君子不使自己成为一件器具」</b>。「不器」是动词性的：不为器、不成定用之器。</p>
+
+  <div class="h2" id="sc-c">二　器是什么：一个「适」，一个「限」</div>
+  <p><b>器有两面：一面是够用，一面是限死。</b>——<b>碗盛饭，够用得很；可它盛不了气，也切不了菜。</b></p>
+  <p><b>「适其用」是器的长处。</b>——<b>造一把好刀，就是把「切」这件事做到极致；专，才有锋利。</b>——<b>所以孔子不是说器不好，是说人不能只停在「适」。</b></p>
+  <p><b>「不能相通」是器的短处。</b>——<b>换一个场面，它立刻失效；不是它退步了，是它本来就只有那一面。</b></p>
+  <p><b>两者合起来，就是器的定义：</b>——<b>用一件事上够用，换一件事上不通。</b>——<b>这个定义，正好可以拿来量人：你的本事，是只能用在一处，还是能挪到别处？</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>器之病，不在不利，在不通。</b></div>
+
+  <div class="h2" id="sc-d">三　「不器」不是「不成器」</div>
+  <p><b>最容易读错的一处，是把「不器」读成「不必有专长」。</b>——<b>恰恰相反：不器的前提，是先成器。</b></p>
+  <p><b>朱子说得清楚：</b>「非特为一才一艺而已」——<b>「非特」是「不止于」，不是「不要」。</b>——<b>一才一艺要有，只是不止于此。</b></p>
+  <p><b>孔子自己就是一例。</b>——<b>《子罕》9.6：太宰问子贡「夫子圣者与？何其多能也」，孔子听说后答：「吾少也贱，故多能鄙事。君子多乎哉？不多也。」</b>——<b>多能是真的，不以多能为贵也是真的。</b>——<b>他会的很多，可他不拿「会得多」当自己的招牌。</b></p>
+  <p><b>所以次序是：先成器，再不器。</b>——<b>先成器，是把手艺练到能吃饭；再不器，是不让这碗饭变成唯一的路。</b>——<b>次序一倒，就成了空谈：什么都没学透，先说「我不器」。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>成器是功夫，不器是分寸。</b>——<b>功夫不到，谈分寸是空的。</b></div>
+
+  <div class="h2" id="sc-e">四　「用无不周」是怎么来的</div>
+  <p><b>朱子的因果链只有两步：体无不具 → 用无不周。</b>——<b>先有「体」，后有「用」；不是先有许多本事，再拼成一个通人。</b></p>
+  <p><b>「体」是什么？</b>——<b>是那些「学一样、通一片」的根：怎么看结构、怎么找因果、怎么辨真伪、怎么待人。</b>——<b>根立住了，换个场面，长的还是这棵树。</b></p>
+  <p><b>「用无不周」不是「什么都会」。</b>——<b>是「遇到没学过的，也能接得住」。</b>——<b>接得住有三招：一找相似（这跟我会的哪儿像）；二找结构（它由哪几件事组成）；三找边界（我这次能用到哪一步）。</b></p>
+  <p><b>对为政的人，这一条最实在。</b>——<b>管一县之事，农、工、商、学、讼，样样要懂一点；只懂一样，别的就都交给别人定。</b>——<b>交给别人定，权就空了。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>通，不是知道得多，是接得住没学过的。</b></div>
+
+  <div class="h2" id="sc-f">五　反向：三种「器」，一种「假不器」</div>
+  <p><b>一，只做一把刀。</b>——<b>把手艺练到极处，然后一辈子只接这一种活。</b>——<b>刀越磨越利，人越用越窄；行业一变，刀还在，活没了。</b></p>
+  <p><b>二，做一只浅盘。</b>——<b>什么都学一点，什么都装一点，什么都装不住。</b>——<b>这也是器，只是口径大、深度浅；看着不像器，其实限得更死。</b></p>
+  <p><b>三，做一把万能钥匙。</b>——<b>什么锁都想开，什么锁都开不好。</b>——<b>「不器」被读成「不必精」，就成了不学的借口。</b></p>
+  <p><b>假不器最像不器。</b>——<b>它的说法是「我不受限」；它的实际是「我没有一样立得住」。</b>——<b>分辨只看一处：真不器的人，先有一件拿得出手的事。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>刀要利，手要活；只利不活是器，只活不利是空。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>器各有定用、不能相通；成德的人体备而用周，不把自己做成只供一用的器具——所以先成器，再不器。</p>
+  <p><b>一反。</b>这不是「反对专业」的口号。朱子明说「非特为一才一艺」：一才一艺要有，只是不止于此。<b>反的是「以专业为人之全部」。</b></p>
+  <p><b>一辨。</b>「不器」与「不成器」只差一字，方向相反：<b>成器是把一样学透，不器是不被这一样关住；先成后不，次序不可倒。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「学的用」。</b>——<b>2.10 看人、2.11 为师、2.12 不器，三步走完，一个能应变的人才立住。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「器」指才艺，还是指官职。</b>朱子指「一才一艺」；旧说亦有以「器」为「器使」（量才授职）者。<b>本课取才艺之限</b>；作「官职」读，则本章偏向「不为官位所限」，与「成德」之旨亦通。</div></div>
+    <div class="q"><span>02</span><div><b>「不器」是否反对专业分工。</b>不是。<b>本课判为「反以专业为人之全部」</b>：专长要精，心不可被专长关住。</div></div>
+    <div class="q"><span>03</span><div><b>包咸「无所不施」与朱子「用无不周」是否同旨。</b>同旨而详略不同：包咸说果，朱子说因（体无不具）。<b>本课从朱子</b>，以「体」为根。</div></div>
+    <div class="q"><span>04</span><div><b>与《易》「形而下者谓之器」是不是同一个「器」。</b>不是。本章之器取「定用受限」义；《系辞》之器取「有形之具体」义。<b>两义可通而不相等</b>，混读易生枝节。</div></div>
+    <div class="q"><span>05</span><div><b>此章是否专对为政者说。</b>《为政》篇语境偏于政事；朱子则以「成德之士」立说，范围更宽。<b>本课兼取</b>：为政要通，为学也要通。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>「不器」就是不必有专长。</b></div><div class="b"><b>恰好相反：不器的前提是先成器。</b>——<b>朱子「非特为一才一艺」：要有，只是不止于此。</b></div></div>
+    <div class="pair"><div class="a"><b>「不器」就是什么都会一点。</b></div><div class="b"><b>什么都会一点，是浅盘，也是器。</b>——<b>不器是「接得住没学过的」，不是「每样都碰过」。</b></div></div>
+    <div class="pair"><div class="a"><b>专精一门，就是器。</b></div><div class="b"><b>专精是「成器」，不是「被器住」。</b>——<b>判据在：这门专长能不能带出别的。</b></div></div>
+    <div class="pair"><div class="a"><b>器是坏东西，越不像器越好。</b></div><div class="b"><b>器之病不在不利，在不通。</b>——<b>锋利与通达都要：先利，再通。</b></div></div>
+    <div class="pair"><div class="a"><b>「不器」是天赋，有的人天生就通。</b></div><div class="b"><b>朱子说「体无不具」：体是养出来的。</b>——<b>通是练出来的，不是生出来的。</b></div></div>
+    <div class="pair"><div class="a"><b>当管理者只要会用人，不必懂业务。</b></div><div class="b"><b>只懂一样，别的就都交给别人定；权就空了。</b>——<b>为政之通，是懂到能判断，不是懂到能替代。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《礼记·学记》「大德不官，大道不器，大信不约，大时不齐」。</b>——<b>四句同一句法：至大的，不被小的规格限住。</b>——<b>「大道不器」正可作本章的注脚。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《易·系辞上》「形而上者谓之道，形而下者谓之器」。</b>——<b>与本章互看：一个是本体论的分界，一个是「定用」的比喻；同名而异指，不可混读。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》9.6「吾少也贱，故多能鄙事。君子多乎哉？不多也」。</b>——<b>多能而不以多能为贵：这正是「不器」在人身上的样子。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》13.25「及其使人也，器之」。</b>——<b>待己不器，待人器之：用人按才器，是务实；待己不设限，是立志。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》15.10「工欲善其事，必先利其器」。</b>——<b>工具要利，这是「成器」那一半；人不能被工具化，这是「不器」那一半。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《孟子·离娄下》「大人者，言不必信，行不必果，惟义所在」。</b>——<b>不为「必信必果」的定式所限，也是一种不器：守的是义，不是格式。</b></div></div>
+  </div>
+  <div class="h2" id="sc-19">图一　手里空着，才拿得起任何一件</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 器具各有其位，人立于其间而不执一物</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。工坊或书斋一角，墙上木架挂着、案上摆着几件形制不同的器具：一只陶碗、一只量斗、一把短刀、一支尺；一名中年男子立于其间，双手垂着，不执一物，眼睛看向门外；门外一线亮光，看不清是什么事。要画的不是「会得多」，是「不被一件占住」。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>架上的器具</b>：碗、斗、刀、尺，各有各的用法，各有各的边——这是「器」，各适其用而不能相通；<b>垂着的手</b>：他一样也没拿，不是不会拿，是不先把自己交给某一件——这是「不器」；<b>门外的光</b>：下一刻要用哪件，由门外那件事定，不由他的习惯定——这是「用无不周」。</div>
+
+  <div class="h2" id="sc-20">义理图一　杯与管</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 280" width="100%" role="img" aria-label="杯与管：杯有底盛一用，管两端皆通" style="max-width:520px">
+    <path d="M96 112 L152 112 L140 196 L108 196 Z" fill="#FCF8EF" stroke="#C9BEAE" stroke-width="1.2"/>
+    <line x1="100" y1="128" x2="148" y2="128" stroke="#D8CBB4" stroke-width="1"/>
+    <text x="124" y="94" text-anchor="middle" font-size="11" fill="#8C5E2A">器</text>
+    <text x="124" y="168" text-anchor="middle" font-size="13" fill="#3A342B">一用</text>
+    <text x="124" y="216" text-anchor="middle" font-size="9" fill="#8A8074">有底有壁，盛一样</text>
+    <ellipse cx="280" cy="112" rx="30" ry="9" fill="none" stroke="#A8763E" stroke-width="1.2"/>
+    <ellipse cx="280" cy="196" rx="30" ry="9" fill="none" stroke="#A8763E" stroke-width="1.2"/>
+    <line x1="250" y1="112" x2="250" y2="196" stroke="#A8763E" stroke-width="1.2"/>
+    <line x1="310" y1="112" x2="310" y2="196" stroke="#A8763E" stroke-width="1.2"/>
+    <defs><marker id="a27a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#A8763E"/></marker></defs>
+    <path d="M280 92 L280 216" stroke="#A8763E" stroke-width="1" stroke-dasharray="3 4" marker-end="url(#a27a)"/>
+    <text x="280" y="94" text-anchor="middle" font-size="11" fill="#8C5E2A">不器</text>
+    <text x="280" y="150" text-anchor="middle" font-size="12" fill="#3A342B">通</text>
+    <text x="280" y="216" text-anchor="middle" font-size="9" fill="#8A8074">两端皆通，用周</text>
+    <text x="200" y="248" text-anchor="middle" font-size="11" fill="#5F564A">杯有底，管无底：可器而不着于器</text>
+  </svg>
+
+  </div>
+  <p>此图只用两个形：<b>杯有底，盛得住一样；管无底，通得过各样。</b>——<b>杯不是不好，是它的好在「一用」；管不是高明，是它的高明在「两端皆通」。</b>——<b>「君子不器」，取的是管那个「通」，不废杯那个「用」——所以本系列的老话是：可器而不着于器。</b></p>
+
+  <div class="h2" id="sc-21">义理图二　一贯与六艺</div>
+  <div class="figs single">
+<svg viewBox="0 0 400 280" width="100%" role="img" aria-label="一贯与六艺：中心一贯，外围礼乐射御书数六器" style="max-width:520px">
+    <text x="200" y="36" text-anchor="middle" font-size="10" fill="#8A8074">非特为一才一艺</text>
+    <line x1="200" y1="146" x2="200" y2="68" stroke="#D8CBB4" stroke-width="1"/>
+    <line x1="200" y1="146" x2="287" y2="107" stroke="#D8CBB4" stroke-width="1"/>
+    <line x1="200" y1="146" x2="287" y2="185" stroke="#D8CBB4" stroke-width="1"/>
+    <line x1="200" y1="146" x2="200" y2="224" stroke="#D8CBB4" stroke-width="1"/>
+    <line x1="200" y1="146" x2="113" y2="185" stroke="#D8CBB4" stroke-width="1"/>
+    <line x1="200" y1="146" x2="113" y2="107" stroke="#D8CBB4" stroke-width="1"/>
+    <circle cx="200" cy="146" r="30" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.6"/>
+    <text x="200" y="143" text-anchor="middle" font-size="13" fill="#8C5E2A">一贯</text>
+    <text x="200" y="160" text-anchor="middle" font-size="8" fill="#A8763E">体无不具</text>
+    <circle cx="200" cy="68" r="16" fill="#fff" stroke="#C9BEAE" stroke-width="1"/><text x="200" y="74" text-anchor="middle" font-size="11" fill="#3A342B">礼</text>
+    <circle cx="287" cy="107" r="16" fill="#fff" stroke="#C9BEAE" stroke-width="1"/><text x="287" y="113" text-anchor="middle" font-size="11" fill="#3A342B">乐</text>
+    <circle cx="287" cy="185" r="16" fill="#fff" stroke="#C9BEAE" stroke-width="1"/><text x="287" y="191" text-anchor="middle" font-size="11" fill="#3A342B">射</text>
+    <circle cx="200" cy="224" r="16" fill="#fff" stroke="#C9BEAE" stroke-width="1"/><text x="200" y="230" text-anchor="middle" font-size="11" fill="#3A342B">御</text>
+    <circle cx="113" cy="185" r="16" fill="#fff" stroke="#C9BEAE" stroke-width="1"/><text x="113" y="191" text-anchor="middle" font-size="11" fill="#3A342B">书</text>
+    <circle cx="113" cy="107" r="16" fill="#fff" stroke="#C9BEAE" stroke-width="1"/><text x="113" y="113" text-anchor="middle" font-size="11" fill="#3A342B">数</text>
+    <text x="200" y="262" text-anchor="middle" font-size="11" fill="#5F564A">六样各是一器，中间那根线才叫不器</text>
+  </svg>
+
+  </div>
+  <p>两图合看：<b>图一说「形」，图二说「聚」。</b>——<b>礼、乐、射、御、书、数，六样各是一器；中间那个「一贯」，才是把六样串起来的那根线。</b>——<b>朱子说「非特为一才一艺」：不是不要这六样，是不能只有这六样而中间空着。</b></p>
+
+  <div class="h2" id="sc-22">附论一　「器」这个字，是四张口守着一只皿</div>
+  <p><b>《说文》：「器，皿也。象器之口，犬所以守之。」</b>——<b>字形是四只「口」围着一只「犬」：众口共守一皿。</b></p>
+  <p><b>这个字形本身就带着本章的意思：</b>——<b>「器」是「多口共一皿」——它的统一，靠的是外面那圈守着；离了那圈，四张口各自散着。</b></p>
+  <p><b>人正好相反。</b>——<b>人的统一，不靠外面的圈，靠里面那根线；线一断，学得再多也是散的。</b>——<b>所以朱子讲「体无不具」：先有那根线，再谈装多少。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>器靠外守，人靠内贯。</b></div>
+
+  <div class="h2" id="sc-23">附论二　专与通：一竖一横</div>
+  <p><b>今天讲人才，常说「T 型」：一竖是专长，一横是通识。</b>——<b>这个比方，与本章可以对看：竖是「成器」，横是「不器」。</b></p>
+  <p><b>竖不能省。</b>——<b>没有那一竖，横就是一层薄油，浮在哪儿都行，哪儿都不落。</b>——<b>孔子「多能鄙事」而「不多也」，先有多能，才谈不多。</b></p>
+  <p><b>横也不能省。</b>——<b>只有一竖，就是一把刀：越磨越利，越用越窄。</b>——<b>行业一变，刀还在，活没了。</b></p>
+  <p><b>横是怎么长出来的？</b>——<b>不是多学几门课，是把一门课里的「怎么想」抽出来，用到别处。</b>——<b>抽得出方法，横才长；只记得内容，横长不出来。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>先有一竖立得住，再让这一竖长出横。</b></div>
+
+  <div class="h2" id="sc-24">附论三　三条边界</div>
+  <p><b>这一章最容易被借去当懒的借口。三条先划清：</b></p>
+  <p><b>一，不器不是不专。</b>——<b>「非特为一才一艺」是有了一才一艺之后的话。</b>——<b>一样都没学透，说「我不器」，是空话。</b></p>
+  <p><b>二，不器不是万能。</b>——<b>「用无不周」是接得住，不是样样精。</b>——<b>真要精的活，还得交给专精的人；不器的人做的是判断与连接。</b></p>
+  <p><b>三，不器不是不守职分。</b>——<b>在其位，要守其器：做医生的，先把医术练到能治病。</b>——<b>「不器」说的是心不被职位关住，不是职上的事可以不做。</b></p>
+  <p><b>三条守住，这一章就只是一句话：</b>——<b>先把手艺练成，再把手艺放开；练不成而放开，是空；练成了不放开，是窄。</b></p>
+
+  <div class="h2" id="sc-25">附论四　器与道：不器不是离器</div>
+  <p><b>《易》说「形而下者谓之器」，那是本体论的分界；本章说「君子不器」，是「定用」的比喻。</b>——<b>两个「器」同名异指，混读就会把本章读成「轻视具体事务」。</b></p>
+  <p><b>朱子的讲法最稳：</b>「体无不具，故用无不周。」——<b>「体」不是空的道理，是那些在事上磨出来的判断力。</b>——<b>所以不器的人，恰恰是最肯做事的人：他做的每一件事，都在养那根线。</b></p>
+  <p><b>本系列的老话，可以收在这里：</b>——<b>可器而不着于器。</b>——<b>「可器」是不逃事，「不着」是不被事定死；两句合起来，才是「不器」的全幅。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>不器不是不做事，是做完事，人还在事之上。</b></div>
+
+  </section>
+
+  <div class="foot">
+    <div class="foot-l">润泽说 · 道可道之论语　｜　第二十七课</div>
+    <div class="foot-r">底本：朱熹《论语集注》　｜　2026-11-22　｜　<a href="https://q1z2q3-debug.github.io/daokedao-lunyu">站点</a></div>
+  </div>
+</div>
+</body>
+</html>
+
