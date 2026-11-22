@@ -39,6 +39,7 @@
 
 ## 专题
 - 论文一｜君子与小人：孔子语汇的定义与判准｜以 2.14 为起点：君子 108 见／小人 24 见／同章共见 18 条；由位至德的词义迁移；小人三义（德义 20／身份 3／谦称 0）；判准收敛为义利一纲。三图、四表、三附录。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/6.html
+- 论文二｜叩两端与攻一端：「攻乎异端」在《论语》义理系统中的位置｜以《论语》封闭语料为据：异 11／端 3（义理 2）／统 0／归 11（义理 3）／攻 4；由 9.8「叩其两端」反照 2.16「攻一端」，判准在「归」不在名单；两图、三附录。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/7.html
 - 专题一｜《诗三百》与「思无邪」深读｜十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html
 - 专题二｜孔子的道与德，对着老子读｜十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html
 - 专题三｜2.4 读法辨：这是不是回忆｜十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html
@@ -46,7 +47,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.15.37，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.15.38，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
