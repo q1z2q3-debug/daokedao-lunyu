@@ -22,7 +22,7 @@ author: 润泽
 base: 朱熹《论语集注》
 chapters: 498
 published: 前言 + 学而十六章 + 为政四章
-version: 0.15.25
+version: 0.15.26
 date: 2026-11-20
 ---
 
@@ -63,7 +63,11 @@ def main():
         txt = open(pre, encoding="utf-8").read()
         parts.append(shift(txt).strip())
 
-    for path in sorted(glob.glob(os.path.join(SRC, "单课", "[12].*.md"))):
+    def _k(path):
+        m = re.match(r"(\d+)\.(\d+)-", os.path.basename(path))
+        return (int(m.group(1)), int(m.group(2))) if m else (99, 99)
+
+    for path in sorted(glob.glob(os.path.join(SRC, "单课", "[12].*.md")), key=_k):
         txt = open(path, encoding="utf-8").read()
         parts.append(shift(txt).strip())
 
