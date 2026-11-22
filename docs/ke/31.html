@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十一课 攻乎异端（为政 2.16）</title>
+<meta name="description" content="《论语·为政》2.16 子曰攻乎异端，斯害也已。何晏「攻，治也」；朱子「攻，专治也……专治而欲精之，为害甚矣」。一课两页：少儿页可念，成人页可考。底本朱熹《论语集注》。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 31 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">攻字二训</a><a href="#sc-d">异端的所指</a><a href="#sc-e">三读三害</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 主干与枝</a><a href="#sc-21">义理二 三读三害</a><a href="#sc-22">附论一 攻字</a><a href="#sc-23">附论二 已字</a><a href="#sc-24">附论三 端字与统</a><a href="#sc-25">附论四 学要有统</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>攻乎异端</h1>
+    <div class="h1-sub">为政 2.16　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「攻乎异端，斯害也已。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>攻</span></div><div class="tzcap"><span>7 画</span><span>一个劲往里钻</span></div></div>
+      <div class="tzitem"><div class="cell"><span>端</span></div><div class="tzcap"><span>14 画</span><span>线的一头</span></div></div>
+      <div class="tzitem"><div class="cell"><span>异</span></div><div class="tzcap"><span>6 画</span><span>跟这边不一样</span></div></div>
+      <div class="tzitem"><div class="cell"><span>已</span></div><div class="tzcap"><span>3 画</span><span>停下来了</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">攻</div><div class="v"><b>一个劲往里钻。</b>——<b>像钻木头，只朝一个眼钻下去，别的都不管了。</b></div></div>
+      <div class="row"><div class="k">端</div><div class="v"><b>线的一头。</b>——<b>一条线两个头；站在这一头，那一头就叫「异端」。</b></div></div>
+      <div class="row"><div class="k">异</div><div class="v"><b>跟这边不一样。</b>——<b>不一样，不等于坏；只是不在同一头。</b></div></div>
+      <div class="row"><div class="k">已</div><div class="v"><b>停下。</b>——<b>孔子说：这么钻下去，害就停不下来了。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>只钻一个牛角尖，越钻越出不来。</b>——<b>（为政 2.16）</b></div>
+    <p>孔子说：<b>一头扎进「另一头」里去钻，害就来了。</b>——<b>不是说另一头不能看，是说你不能只钻它，把正路丢了。</b></p>
+    <p><b>一句话：看，可以；钻进去不出来，不行。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，什么叫「端」。</b>——<b>一条路有两个头。你从这头出发，那头的东西，就是「异端」。</b>——<b>「异」只是「不同」，不是「坏」。</b></p>
+    <p><b>第二层，什么叫「攻」。</b>——<b>拿钻头只朝一个点钻，别的都不看。</b>——<b>专，是好事；专到丢了正路，就成了病。</b></p>
+    <p><b>第三层，害在哪儿。</b>——<b>害不在那本书，在你把自己钻丢了。</b>——<b>钻得越深，越回不来；回不来，就只剩那一头。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>路可以岔开看，脚不能只踩一条岔路。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　同学喜欢别的动画。</b>——<b>不必说「那很幼稚」；可以先听他说说哪里好看，再回来说自己喜欢的。</b></p>
+    <p><b>二　一道题有两种解法。</b>——<b>自己的会了，也看看别人的；看完仍用自己的，但知道还有一条路。</b></p>
+    <p><b>三　网上一种说法很热闹。</b>——<b>先问「有没有证据」，再问「有没有反面」；两句都问过，再决定信不信。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>你可以不同意，但不必把人推到对面去。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　那异端的东西是不是都不能看？</b>——<b>不是。</b>——<b>能看，看完要回得来；回不来才叫「攻」。</b></p>
+    <p><b>二　孔子是不是让人只信一种说法？</b>——<b>不是。</b>——<b>他自己「多闻阙疑」：听得多，拿不准的先空着，不硬断。</b></p>
+    <p><b>三　怎么知道自己钻进去了？</b>——<b>问一句「我原来的那条路，还在不在」。</b>——<b>还在，是看；不在了，是钻。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>可以有立场，不必有敌人。</b>——<b>立场是「我信这个」，敌人是「你是坏的」。</b></div>
+    <div class="scene"><b>不同意的时候，先说清对方在说什么。</b>——<b>说不清，就是还没看懂。</b></div>
+    <div class="scene"><b>走远之前，先记住回家的路。</b>——<b>学问也一样：先有主干，再长枝叶。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>问「他说的是什么意思」，别先问「他说的对不对」。</b>——<b>先懂，再判。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>家里有两种做法（先洗碗还是先擦桌），让他把两种都说完，再定一个。</b>——<b>定一个，也留着另一个。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「跟我们不一样」当成「不好」，孩子学得快，也学得狠。</b>——<b>标签贴一次，心就关一扇门。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>遇到争议，让他替对方说三句；说得出，才准反驳。</b>——<b>三句之后，多半就不想吵了。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>算法把人分进不同屋子，越看越觉得自己这边是全部。</b>——<b>能走出屋子看一眼的，越来越少。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>生态里只留一个物种，系统会塌；学问里只留一端，判断会僵。</b>——<b>同一条理。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个「有主心骨、也听得进」的人，不是「只信自己人」的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>攻乎异端</h1>
+    <div class="h1-sub">为政 2.16　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「攻乎异端，斯害也已。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：学要有端</div>
+  <p><b>上一章说「学而不思则罔」——学要转得起来。</b>——<b>这一章说「攻乎异端」——转，要有个端。</b>——<b>前者管「动不动」，后者管「朝哪儿动」。</b></p>
+  <p><b>再往下一章，是 2.17「知之为知之，不知为不知」。</b>——<b>那是在划界：知道自己知道什么、不知道什么。</b>——<b>三章连起来，是一个学的「边界」：先有端（2.16），再有界（2.17），边界之内才谈得上「思」（2.15）。</b></p>
+  <p><b>这一章常被读成「排斥异学」的口号。</b>——<b>但《为政》全篇讲的是「怎么学、怎么立」；把它读成禁书令，与上下文不合。</b>——<b>本课取：这是论学之章，不是论政之章。</b></p>
+  <div class="scene"><b>这一章在《为政》里的位置，是「学的边界」。</b>——<b>前有学思，后有知之为知之；中间这一句，说的是「别在没有主干的地方扎根」。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">攻</div><div class="v"><b>治也（《集解》）；击也（《说文》）。</b>——<b>朱子取「专治」：一门心思治它、想把它弄精。</b>——<b>训诂详见附论一。</b></div></div>
+    <div class="row"><div class="k k2">异端</div><div class="v"><b>另一端，非圣人之道的另一头。</b>——<b>何晏：「善道有统，故殊涂而同归，异端不同归也。」</b>——<b>「异」是不一样，不是坏。</b></div></div>
+    <div class="row"><div class="k">已</div><div class="v"><b>止也（朱子）；或为语辞（王引之）。</b>——<b>作「止」，则「斯害也已」＝害就停不下来。</b>——<b>作语辞，则只是一声叹。</b></div></div>
+    <div class="row"><div class="k">斯</div><div class="v"><b>则也，就。</b>——<b>不是「这」，是承接上文的「就」。</b></div></div>
+  </div>
+  <p><b>句读无难，难在两个词的分界。</b>——<b>「攻」是治还是击，「已」是止还是语辞——两处各两读，合成四种句意。</b></p>
+  <p><b>但四种句意共享一个前提：</b>——<b>学必有一个「端」。</b>——<b>没有端，就无从说「异」；有了端，才谈得上「异端」。</b>——<b>这一句的分歧不在前提，在「对另一端该怎么办」。</b></p>
+
+  <div class="h2" id="sc-c">二　「攻」的两训：治，还是击</div>
+  <p><b>第一训是「治」。</b>——<b>何晏《集解》：「攻，治也。」</b>——<b>如「攻木」「攻金」之攻：加工、钻研、弄精。</b>——<b>照这一训，「攻乎异端」＝花力气去治异端之学。</b></p>
+  <p><b>第二训是「击」。</b>——<b>《说文》：「攻，击也。」</b>——<b>照这一训，「攻乎异端」＝对异端之言加以攻击。</b></p>
+  <p><b>朱子选了第一训，而且加重了两个字：</b>「专治」。——<b>他的注是：「异端，非圣人之道，而别为一端……专治而欲精之，为害甚矣！」</b>——<b>要害在「专治而欲精之」六个字：不是碰了它，是一门心思把它弄精。</b></p>
+  <p><b>两训的分野，其实在「谁受害」。</b>——<b>作「击」，被害的是对方；作「治」，被害的是自己。</b>——<b>朱子取「治」，正因本章在论学：学里最深的害，从来是自己走丢，不是别人被骂。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>「攻」若作击，伤在人；作治，伤在己。孔子这里说的是己。</b></div>
+
+  <div class="h2" id="sc-d">三　「异端」的所指，变过三次</div>
+  <p><b>「异端」不是一个固定的名单。</b>——<b>它在两千年里换过三次所指，每次换，都跟着当时的「正学」走。</b></p>
+  <p><b>第一次，战国：指杨墨。</b>——<b>《孟子·滕文公下》说「杨墨之道不息，孔子之道不著」；孟子距杨墨，正是「攻乎异端」最早的实指。</b>——<b>此时「端」是仁义，「异端」是无父无君之说。</b></p>
+  <p><b>第二次，唐宋：指佛老。</b>——<b>韩愈《原道》以「距杨墨」自任，而所距已换成佛老；宋儒辟佛，同一句式，所指已易。</b>——<b>此时「端」是纲常名教。</b></p>
+  <p><b>第三次，晚清以降：指西学。</b>——<b>「中学为体，西学为用」之争里，「异端」一词又被借去指新学。</b>——<b>此时「端」是经史，所指再易。</b></p>
+  <p><b>三次迁移给出一条教训：</b>——<b>「异端」的名单，永远由「当时的正统」来定；而正统会变，名单就会变。</b>——<b>所以读这一章，先问自己：我现在的「端」是什么？谁替我定的？</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>怕的不是有异端，是把「跟我不同」直接当成「异端」。</b></div>
+
+  <div class="h2" id="sc-e">四　三读，三害</div>
+  <p><b>把两处两读合起来，本章有三种讲法，各有一害。</b></p>
+  <p><b>其一，专治：</b>把异端之学当作终身事业，一门深入。——<b>害在「离统」：愈精愈偏，最后回不到主干，所学无所归。</b>——<b>这是朱子的读法，也是本课主训。</b></p>
+  <p><b>其二，攻伐：</b>以言语击人，以声势排异。——<b>害在「伤」：伤了对方，也伤了自己——辩到最后，只剩立场，没有学问。</b></p>
+  <p><b>其三，放任：</b>什么都收，什么也不辨，把「不设端」当成开明。——<b>害在「罔」：杂而无统，与 2.15 之「罔」同一病。</b></p>
+  <p><b>三害其实是一害的两头。</b>——<b>专治与放任，都是「无统」：一个偏到枝上去了，一个根本没长干。</b>——<b>攻伐则是无统之后的暴躁：因为没有可依的标准，只好靠声量。</b></p>
+  <p><b>本课的立场，落在一句话上：有统而容异。</b>——<b>先立一端（有自己的主干与判准），再容其余端（看得进、说得清、回得来）。</b>——<b>「容」不是「信」，是「看得懂它在说什么」。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>有主干的人才容得下枝；没有主干的人，只能用吵架代替判断。</b></div>
+
+  <div class="h2" id="sc-f">五　反向：三种「辟异端」的病，两种不算「攻」</div>
+  <p><b>先说三种借「辟异端」之名生的病。</b></p>
+  <p><b>一，贴标签。</b>——<b>不问内容，先归类：凡是某派、某地、某圈的话，一律不听。</b>——<b>这不是辟异端，是省事。</b></p>
+  <p><b>二，封闭。</b>——<b>把「不看」当成「守住」；越守越窄，最后连自己的端也说不清。</b>——<b>真正的正统，经得起对照。</b></p>
+  <p><b>三，以攻为学。</b>——<b>读书只为找错，写作只为反驳；十年下来，能拆不能建。</b>——<b>这也是「攻」，攻的是别人，废的是自己。</b></p>
+  <p><b>再说两种不算「攻」的。</b></p>
+  <p><b>一，比较研究。</b>——<b>把两家摆在一起看，看其同、看其异、看其所以异；看得清，仍归自家主干。</b>——<b>这是「观」，不是「治」。</b></p>
+  <p><b>二，护教式的论辩。</b>——<b>为自己所信辩护，摆证据、讲道理，辩完仍承认对方有可采处。</b>——<b>这是「争」，不是「攻」。</b></p>
+  <p><b>界线只有一条：</b>——<b>做完之后，你的主干还在不在，你的判断有没有变得更准。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>能回得来，叫看；回不来，叫钻；只会骂，叫攻。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>学必有一端；一端之外皆异端。专治异端而欲精之，则离统愈远，其害不止。</p>
+  <p><b>一反。</b>这不是禁书令，是论学之章：所戒在「专治而精之」，不在「闻见」。孔子自己多闻阙疑，正不主闭目。</p>
+  <p><b>一辨。</b>「异端」的名单随正统而变：战国指杨墨，唐宋指佛老，晚清指西学。名单会变，故不可把「与我不同」直接当作「异端」。</p>
+  <div class="scene"><b>本章在《为政》的位置，是「学的边界」。</b>——<b>2.15 管思之转不转，2.16 管端之立不立，2.17 管知之界清不清；三章合看，学才算有骨头。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「攻」训「治」还是「击」。</b><b>本课主训取「治·专治」（朱子）</b>：本章论学，所戒在「专治而欲精之」。《说文》「攻，击也」一路亦通，但「击」是把力气用在别人身上，与全篇论「己之学」不合，故列为别读。</div></div>
+    <div class="q"><span>02</span><div><b>「已」训「止」还是语辞。</b><b>本课取「止」</b>：与「斯害」相承——害不止，故曰「斯害也已」。<b>王引之《经传释词》以「已」为语终之辞</b>，读作一声叹，亦通；两存，主训取「止」。</div></div>
+    <div class="q"><span>03</span><div><b>「异端」是否有一张固定名单。</b><b>本课判为「无固定名单」</b>：战国指杨墨，唐宋指佛老，晚清指西学，名单随正统而变。若把它固化为某一家，则本章立刻变成党同伐异的工具，与孔子「多闻」「择善」之风不合。</div></div>
+    <div class="q"><span>04</span><div><b>此章是否主张禁绝异学。</b><b>本课判「否」</b>：所戒是「专治」，不是「闻见」。19.4 子夏言「小道」有「可观」，只戒「致远恐泥」，正与此章同一分寸。</div></div>
+    <div class="q"><span>05</span><div><b>与 2.15 是否重复。</b><b>本课判为互补</b>：2.15 管「思之转不转」，2.16 管「端之立不立」。转而无端，则思愈精愈偏；端而不转，则守愈久而僵。两章如车之两轮，非同一语。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>异端就是邪说，见之即毁。</b></div><div class="b"><b>异端只是「另一端」，不是「邪端」。</b>——<b>所戒在专治，不戒在闻见。</b></div></div>
+    <div class="pair"><div class="a"><b>孔子主张一言堂，只许一种说法。</b></div><div class="b"><b>孔子「多闻阙疑」「择其善者而从之」。</b>——<b>他禁的是「钻进去不出来」，不是「听」。</b></div></div>
+    <div class="pair"><div class="a"><b>「攻」是攻击，所以可以骂异见。</b></div><div class="b"><b>作「击」，伤在人；作「治」，伤在己。</b>——<b>本章论学，说的是己。</b></div></div>
+    <div class="pair"><div class="a"><b>不碰异端之书，才叫守正。</b></div><div class="b"><b>不看而妄断，正是「罔」。</b>——<b>看过、看懂、回得来，才叫守。</b></div></div>
+    <div class="pair"><div class="a"><b>「已」就是「已经」，这句在说「害已经成了」。</b></div><div class="b"><b>「已」是「止」，也可作语辞。</b>——<b>作止，是「害止不住」；作辞，是一声叹。</b></div></div>
+    <div class="pair"><div class="a"><b>异端是别人的事，与我无关。</b></div><div class="b"><b>自己学无统绪，就是自己的异端。</b>——<b>先问「我的端在哪儿」，再问别人。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》19.4 子夏「虽小道，必有可观者焉；致远恐泥，是以君子不为也」。</b>——<b>小道可观，正是「异端」可看的一面；「恐泥」正是「专治」之害。两章分寸相同。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》2.17「知之为知之，不知为不知，是知也」。</b>——<b>端立之后要划界：知道自己知道什么，才不会被「另一端」牵着走。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》15.29「众恶之，必察焉；众好之，必察焉」。</b>——<b>众人说坏的，要查；说好的，也要查。此即「不贴标签」的古训。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《孟子·滕文公下》「杨墨之道不息，孔子之道不著」。</b>——<b>「异端」最早的实指：杨墨。孟子距之，是战国语境下的护统。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>韩愈《原道》以「距杨墨」自任，而所距已是佛老。</b>——<b>同一句式，所指已换；可见「异端」之名随正统而迁。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《左传·襄公三十一年》子产不毁乡校：「其所善者，吾则行之；其所恶者，吾则改之。」</b>——<b>不毁异见，反以为师；此与「攻乎异端」之戒，正是同一副心肠。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　案上一册，窗外一册</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 专治与旁观</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。学舍内一案，案心摊着一册装订异样的书，一人俯身其上，指按行间，身子前倾几乎压住书页；案角另有一叠常见的简册，被推到一边，绳结散着。窗外廊下，一人捧简缓行而过，未入门。两人不同框对视。要让人一眼看出：一个已被案上那册占住，一个仍走在路上。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>案心那册异样的书</b>：不是坏书，是「另一端」的书，问题在它占住了整个案心——此即「专治」；<b>被推到案角的简册</b>：主干还在，只是散了绳、离了手——此即「离统」；<b>窗外捧简而过的人</b>：看得见，走得过，不停下——此即「可观而不可泥」。</div>
+
+  <div class="h2" id="sc-20">义理图一　主干与旁枝</div>
+  <div class="figs single">
+<svg viewBox="0 0 440 290" width="100%" role="img" aria-label="主干与旁枝：正学有统为主干，异端为旁枝，专治旁枝者越走越远" style="max-width:520px">
+<defs><marker id="a31a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+<text x="220" y="26" text-anchor="middle" font-size="11" fill="#3A342B">正学有统，异端为枝</text>
+<path d="M210 48 L210 244" stroke="#A8763E" stroke-width="2.2" fill="none"/>
+<circle cx="210" cy="48" r="3.2" fill="#A8763E"/>
+<circle cx="210" cy="244" r="3.2" fill="#A8763E"/>
+<text x="222" y="66" font-size="10" fill="#8C5E2A">正学 · 有统</text>
+<text x="222" y="238" font-size="9" fill="#8A8074">一以贯之</text>
+<path d="M210 118 C248 128, 276 144, 306 164" stroke="#8A8074" stroke-width="1.3" fill="none" marker-end="url(#a31a)"/>
+<path d="M210 176 C172 190, 144 206, 116 228" stroke="#8A8074" stroke-width="1.3" fill="none" marker-end="url(#a31a)"/>
+<circle cx="312" cy="168" r="3.4" fill="#A2503B"/>
+<text x="326" y="164" font-size="10" fill="#A2503B">异端</text>
+<text x="326" y="178" font-size="8.5" fill="#8A8074">可观，不可专</text>
+<circle cx="110" cy="232" r="3.4" fill="#A2503B"/>
+<text x="76" y="252" font-size="10" fill="#A2503B">异端</text>
+<text x="322" y="200" font-size="8.5" fill="#6E665A">专治者离干最远</text>
+<text x="220" y="278" text-anchor="middle" font-size="10.5" fill="#5F564A">枝可观，不可专治：专治则离干愈远，无所归</text>
+</svg>
+  </div>
+  <p>一根主干，两条旁枝：<b>主干是「正学·有统」，旁枝是「异端·另一端」。</b>——<b>枝上结果，可观；但枝不承重，专治者把身子全压在枝上，枝断则人坠。</b>——<b>枝端离干愈远，回干的路愈长：回得来，才谈得上「看」；回不来，只剩「钻」。</b></p>
+
+  <div class="h2" id="sc-21">义理图二　三读三害</div>
+  <div class="figs single">
+<svg viewBox="0 0 460 270" width="100%" role="img" aria-label="三种读法三样害：专治、攻伐、放任，正解在有统而容异" style="max-width:520px">
+<text x="230" y="26" text-anchor="middle" font-size="11" fill="#3A342B">一句三读，三样害</text>
+<rect x="28" y="46" width="108" height="132" fill="#FFFDF6" stroke="#DED2B9" stroke-width="1"/>
+<text x="82" y="70" text-anchor="middle" font-size="12.5" fill="#8C5E2A">专 治</text>
+<text x="82" y="88" text-anchor="middle" font-size="9" fill="#8A8074">攻，治也</text>
+<text x="82" y="116" text-anchor="middle" font-size="9.5" fill="#5C5347">专治一端</text>
+<text x="82" y="132" text-anchor="middle" font-size="9.5" fill="#5C5347">而力求其精</text>
+<text x="82" y="160" text-anchor="middle" font-size="9" fill="#A2503B">离统，愈精愈偏</text>
+<rect x="176" y="46" width="108" height="132" fill="#FFFDF6" stroke="#DED2B9" stroke-width="1"/>
+<text x="230" y="70" text-anchor="middle" font-size="12.5" fill="#8C5E2A">攻 伐</text>
+<text x="230" y="88" text-anchor="middle" font-size="9" fill="#8A8074">攻，击也</text>
+<text x="230" y="116" text-anchor="middle" font-size="9.5" fill="#5C5347">以言击人</text>
+<text x="230" y="132" text-anchor="middle" font-size="9.5" fill="#5C5347">以势排异</text>
+<text x="230" y="160" text-anchor="middle" font-size="9" fill="#A2503B">伤异己，亦伤己</text>
+<rect x="324" y="46" width="108" height="132" fill="#FFFDF6" stroke="#DED2B9" stroke-width="1"/>
+<text x="378" y="70" text-anchor="middle" font-size="12.5" fill="#8C5E2A">放 任</text>
+<text x="378" y="88" text-anchor="middle" font-size="9" fill="#8A8074">不辨一端</text>
+<text x="378" y="116" text-anchor="middle" font-size="9.5" fill="#5C5347">什么都收</text>
+<text x="378" y="132" text-anchor="middle" font-size="9.5" fill="#5C5347">无所归宿</text>
+<text x="378" y="160" text-anchor="middle" font-size="9" fill="#A2503B">杂而无统，成罔</text>
+<rect x="28" y="196" width="404" height="46" fill="#F6F1E3" stroke="#C58A73" stroke-width="1"/>
+<text x="230" y="216" text-anchor="middle" font-size="10.5" fill="#2F2A24">正解：有统而容异</text>
+<text x="230" y="232" text-anchor="middle" font-size="9" fill="#6E665A">先立其一端，再观其余端；观而不专，专而不离</text>
+</svg>
+  </div>
+  <p>三栏并列，各是一读，各有一害：<b>专治则离统，攻伐则伤人伤己，放任则杂而无统。</b>——<b>底栏是本课所取：有统而容异——先立一端，再观其余端；观而不专，专而不离。</b></p>
+
+  <div class="h2" id="sc-22">附论一　「攻」的字义与两个比喻</div>
+  <p><b>「攻」从「工」得声，本义是「击」。——《说文》：「攻，击也。」</b>——<b>但古书里「攻」早就兼作「治」：攻木、攻金、攻玉，都是加工琢磨。</b>——<b>一字两用，不是谁对谁错，是取义的角度不同。</b></p>
+  <p><b>两个比喻能把这层说清。</b>——<b>作「击」：如两军对垒，比的是谁打得准、谁站得住。</b>——<b>作「治」：如匠人攻玉，比的是谁磨得细、谁不伤料。</b>——<b>孔子此句，取的是后一个比喻：他关心的是「这块料被磨成什么」，不是「谁把谁打退」。</b></p>
+  <p><b>朱子加「专」字，是加了关键的一刀。</b>——<b>「治」本身不坏，坏在「专治而欲精之」：把全部力气投在一端，主干就不要了。</b>——<b>所以这一章的戒，是「比例之戒」，不是「对象之戒」。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「已」的两读与一句的语气</div>
+  <p><b>「已」在古书里两用：一作「止」，一作语终之辞。</b>——<b>朱子取「止」：「已，止也。」</b>——<b>王引之《经传释词》则说「已」可作语辞，无实义。</b></p>
+  <p><b>两读带来的语气差别很大。</b>——<b>作「止」：</b>「斯害也已」＝这害就一直停不下来——是一句判词，语气沉。<b>作语辞：</b>「斯害也已」＝这害啊——是一声叹，语气缓。</p>
+  <p><b>本课取「止」，理由有二。</b>——<b>其一，「斯」是「就」，与「已」相承：一「就」一「止」，正成因果。</b>——<b>其二，孔子的判词多是「断言＋后果」的结构，如 2.15「则罔」「则殆」；此处亦然。</b>——<b>但语辞读亦不可废：它提醒我们，这一句里也有叹息。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「端」字与「统」</div>
+  <p><b>「端」，本义是「直」，引申为「头」「绪」。</b>——<b>一线有两头，故曰两端；一事有两说，故曰异端。</b>——<b>没有「头」，就无从谈「异」——所以这一章的第一件事，是先有端。</b></p>
+  <p><b>何晏注里有个要紧的字：统。</b>——<b>「善道有统，故殊涂而同归，异端不同归也。」</b>——<b>统是「可以串起来的那根线」：殊涂（不同路）不要紧，同归（归到一处）才要紧。</b></p>
+  <p><b>「异端」的判准，因此不在「内容」，在「归处」。</b>——<b>同归者，虽殊涂亦正；不同归者，虽精巧亦异。</b>——<b>这也解释了朱子为何要加「专」：偶尔涉猎，归处未失；专治而精，归处就断了。</b></p>
+
+  <div class="h2" id="sc-25">附论四　怎样才算「有统」：三条可用的判准</div>
+  <p><b>「有统」听起来玄，其实可验。</b>——<b>本课给三条判准，用于自查，也用于看人。</b></p>
+  <p><b>其一，能不能用自己的话说清主干。</b>——<b>三分钟讲明白你信什么、为什么信；讲不清，说明端还没立。</b></p>
+  <p><b>其二，能不能说出另一端的长处。</b>——<b>说得出一两点真长处，说明你看懂了；只会说它坏，说明你还没进去过。</b></p>
+  <p><b>其三，能不能回来。</b>——<b>读完、辩完、看完，回到自己的主干上，判断比先前更准——回得来，就是有统；回不来，读得再多也是离统。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>端不是一道墙，是一根线：线在，枝可以长；线断，枝长得再旺，也不是你的树。</b></div>
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 31 课　为政 2.16</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.37　二〇二六年十一月</div>
+  </footer>
+</div>
+</body>
+</html>
