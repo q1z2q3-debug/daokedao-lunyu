@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<circle cx="200" cy="152" r="100" fill="#FFFDF6" stroke="#DCD5C8"/>
+<circle cx="200" cy="152" r="66" fill="#FBF1EC" stroke="#C58C79"/>
+<circle cx="200" cy="152" r="34" fill="#F7E2DA" stroke="#A2503B"/>
+<text x="200" y="70" font-size="14" fill="#2F2A24" text-anchor="middle">视 · 以</text>
+<text x="200" y="236" font-size="10.5" fill="#5C5347" text-anchor="middle">所为：他做什么</text>
+<text x="200" y="104" font-size="14" fill="#5C5347" text-anchor="middle">观 · 由</text>
+<text x="200" y="200" font-size="10.5" fill="#5C5347" text-anchor="middle">所从来：为什么做</text>
+<text x="200" y="147" font-size="12.5" fill="#A2503B" text-anchor="middle">察 · 安</text>
+<text x="200" y="166" font-size="9" fill="#8A8074" text-anchor="middle">所乐</text>
+<text x="200" y="278" font-size="13.5" fill="#A2503B" text-anchor="middle">人焉廋哉？人焉廋哉？</text>
+<text x="200" y="292" font-size="9.5" fill="#8A8074" text-anchor="middle">三问之后，无处可藏</text>
+</svg>
