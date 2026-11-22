@@ -304,6 +304,23 @@
   .figsvg svg{max-width:470px}
 
 @media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
 </style>
 </head>
 <body>
@@ -321,7 +338,7 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
   <div class="toc">
     <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
     <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">罔：昏而无得</a><a href="#sc-d">殆：危而不安</a><a href="#sc-e">相须非并列</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
-    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 两轮</a><a href="#sc-21">义理二 三路</a><a href="#sc-22">附论一 罔字</a><a href="#sc-23">附论二 殆字</a><a href="#sc-24">附论三 孔子之学</a><a href="#sc-25">附论四 何时停思</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 两轮</a><a href="#sc-21">义理二 三路</a><a href="#sc-26">义理三 四字一链</a><a href="#sc-22">附论一 罔字</a><a href="#sc-23">附论二 殆字</a><a href="#sc-24">附论三 孔子之学</a><a href="#sc-25">附论四 何时停思</a><a href="#sc-27">附论五 用例表</a></div>
   </div>
 
   <section class="page">
@@ -571,11 +588,53 @@ display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
   <p><b>本课给三条可用的界线。</b>——<b>其一，想不出证据时，停思去学：一个问题想了许久，举不出一条根据，就是「殆」的前兆。</b>——<b>其二，学不进心时，停学去思：合上书说不出大意，就是「罔」的前兆。</b>——<b>其三，两者都卡住时，去做：行是学与思的汇合处，《中庸》五步以「笃行」收尾，正是为此。</b></p>
   <p><b>朱子论读书，有一句可与本章互训：</b>「循序而渐进，熟读而精思。」——<b>「循序」是学，「精思」是思；先把次序走稳，再在每一处上想深。</b>——<b>急躁的人两样都缺：既不循序，也不精思。</b></p>
   <div class="scene"><b>一句话收：</b>——<b>学思不是两个功课，是一件事的两半：一半在手上，一半在心上。</b></div>
+
+  <div class="h2" id="sc-26">义理图三　四字一链</div>
+  <div class="figs single">
+<svg viewBox="0 0 720 260" width="100%" role="img" aria-label="四字一链：学为受、思为发，共系一心；学而不思成罔，思而不学成殆" style="max-width:720px">
+<defs><marker id="a30c" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#8A8074"/></marker></defs>
+<circle cx="100" cy="80" r="40" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.4"/>
+<text x="100" y="76" text-anchor="middle" font-size="21" fill="#8C5E2A">学</text>
+<text x="100" y="98" text-anchor="middle" font-size="13.5" fill="#6E665A">受 · 纳外</text>
+<circle cx="360" cy="80" r="34" fill="none" stroke="#A2503B" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="360" y="86" text-anchor="middle" font-size="19" fill="#A2503B">心</text>
+<circle cx="620" cy="80" r="40" fill="#FCF8EF" stroke="#A2503B" stroke-width="1.4"/>
+<text x="620" y="76" text-anchor="middle" font-size="21" fill="#A2503B">思</text>
+<text x="620" y="98" text-anchor="middle" font-size="13.5" fill="#6E665A">发 · 内绎</text>
+<path d="M144 80 L320 80" stroke="#8A8074" stroke-width="1.3" fill="none" marker-end="url(#a30c)"/>
+<path d="M398 80 L572 80" stroke="#8A8074" stroke-width="1.3" fill="none" marker-end="url(#a30c)"/>
+<text x="232" y="66" text-anchor="middle" font-size="13.5" fill="#8A8074">学以立其体</text>
+<text x="488" y="66" text-anchor="middle" font-size="13.5" fill="#8A8074">思以致其用</text>
+<path d="M220 118 L240 162" stroke="#8A8074" stroke-width="1.2" fill="none" marker-end="url(#a30c)"/>
+<path d="M500 118 L480 162" stroke="#8A8074" stroke-width="1.2" fill="none" marker-end="url(#a30c)"/>
+<text x="192" y="146" text-anchor="middle" font-size="13" fill="#8A8074">学而不思</text>
+<text x="528" y="146" text-anchor="middle" font-size="13" fill="#8A8074">思而不学</text>
+<circle cx="240" cy="202" r="36" fill="#EFE9DC" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="240" y="198" text-anchor="middle" font-size="20" fill="#5F564A">罔</text>
+<text x="240" y="218" text-anchor="middle" font-size="13" fill="#6E665A">昏 · 无得</text>
+<circle cx="480" cy="202" r="36" fill="#F5E6DF" stroke="#C58A73" stroke-width="1.2"/>
+<text x="480" y="198" text-anchor="middle" font-size="20" fill="#A2503B">殆</text>
+<text x="480" y="218" text-anchor="middle" font-size="13" fill="#A2503B">危 · 不安</text>
+<text x="360" y="254" text-anchor="middle" font-size="14" fill="#6E665A">病不在学，亦不在思，在「只有一样」</text>
+</svg>
+  </div>
+  <p>四字在一张图上各就各位：<b>学在左（受），思在右（发），心在中间，两病在下。</b>——<b>罔是学的独行，殆是思的独行；两病都不在「学」与「思」本身，而在「只有一样」。</b></p>
+
+  <div class="h2" id="sc-27">附论五　四字用例总表</div>
+  <p><b>空口说义，不如把用例摆出来。</b>——<b>下表依京都大学人文科学研究所电子本《论语》统计：学六十六见、思二十五见、罔三见、殆四见。</b>——<b>罔、殆少，全列；学、思多，举要。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><div class="z">学</div><div class="n">66 见</div></div><div class="u">1.1 学而时习之<br>1.6 行有余力，则以学文<br>2.15 学而不思则罔<br>5.28 不如丘之好学也<br>16.13 不学礼，无以立<br>19.6 博学而笃志　<i>（余不备举）</i></div></div>
+    <div class="t4r"><div class="zh"><div class="z">思</div><div class="n">25 见</div></div><div class="u">2.15 学而不思则罔、思而不学则殆<br>4.17 见贤思齐焉<br>9.31 未之思也，夫何远之有<br>15.31 以思，无益，不如学也<br>19.6 切问而近思　<i>（余不备举）</i></div></div>
+    <div class="t4r"><div class="zh"><div class="z">罔</div><div class="n">3 见</div></div><div class="u">2.15 学而不思则罔　<i>昏而无得</i><br>6.19 罔之生也幸而免　<i>诬罔：不直而活</i><br>6.26 可欺也，不可罔也　<i>欺罔：不可被蒙</i></div></div>
+    <div class="t4r"><div class="zh"><div class="z">殆</div><div class="n">4 见</div></div><div class="u">2.15 思而不学则殆　<i>危而不安</i><br>2.18 多见阙殆　<i>疑也，阙疑之殆</i><br>15.11 郑声淫，佞人殆　<i>危也</i><br>18.5 今之从政者殆而　<i>危也</i></div></div>
+  </div>
+  <p><b>这张表给出三个可以复算的事实。</b>——<b>其一，罔三见而三义：昏、诬、欺；一字的三个落点，正好是「被罩住」的三种情形。</b>——<b>其二，殆四见而两用：危三、疑一；2.15 之「殆」与 2.18 之「阙殆」相邻而不同义，最易混。</b>——<b>其三，学六十六见、思二十五见，相差近三倍——孔子说「思」，多半是在说「学里的思」，不是在说「离开学的思」。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>数字不是用来炫耀的，是用来校正的：看见「思」只有「学」的三分之一，就明白 2.15 的重心在学。</b></div>
   </section>
 
   <footer>
     <div class="foot-l">润泽说 · 道可道之论语　第 30 课　为政 2.15</div>
-    <div class="foot-r">底本：朱熹《论语集注》　v0.15.35　二〇二六年十一月</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.36　二〇二六年十一月</div>
   </footer>
 </div>
 </body>
