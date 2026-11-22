@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320" role="img" aria-label="六类判准：十八条对举句归为六类，君子与小人各占一端" style="max-width:560px">
+<text x="81" y="24" text-anchor="middle" font-size="10" fill="#8C5E2A">君子</text>
+<text x="319" y="24" text-anchor="middle" font-size="10" fill="#5F564A">小人</text>
+<text x="200" y="24" text-anchor="middle" font-size="8.5" fill="#A8763E">一条判准，两端</text>
+<line x1="200" y1="34" x2="200" y2="252" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 4"/>
+<rect x="12" y="48" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="64" text-anchor="middle" font-size="9.5" fill="#3A342B">喻于义</text>
+<rect x="250" y="48" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="64" text-anchor="middle" font-size="9.5" fill="#5F564A">喻于利</text>
+<text x="200" y="62" text-anchor="middle" font-size="8.6" fill="#8A8074">4.16</text>
+<rect x="12" y="82" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="98" text-anchor="middle" font-size="9.5" fill="#3A342B">怀德·怀刑</text>
+<rect x="250" y="82" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="98" text-anchor="middle" font-size="9.5" fill="#5F564A">怀土·怀惠</text>
+<text x="200" y="96" text-anchor="middle" font-size="8.6" fill="#8A8074">4.11</text>
+<rect x="12" y="116" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="132" text-anchor="middle" font-size="9.5" fill="#3A342B">周</text>
+<rect x="250" y="116" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="132" text-anchor="middle" font-size="9.5" fill="#5F564A">比</text>
+<text x="200" y="130" text-anchor="middle" font-size="8.6" fill="#8A8074">2.14</text>
+<rect x="12" y="150" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="166" text-anchor="middle" font-size="9.5" fill="#3A342B">上达</text>
+<rect x="250" y="150" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="166" text-anchor="middle" font-size="9.5" fill="#5F564A">下达</text>
+<text x="200" y="164" text-anchor="middle" font-size="8.6" fill="#8A8074">14.23</text>
+<rect x="12" y="184" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="200" text-anchor="middle" font-size="9.5" fill="#3A342B">求诸己</text>
+<rect x="250" y="184" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="200" text-anchor="middle" font-size="9.5" fill="#5F564A">求诸人</text>
+<text x="200" y="198" text-anchor="middle" font-size="8.6" fill="#8A8074">15.21</text>
+<rect x="12" y="218" width="138" height="24" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.1"/>
+<text x="81" y="234" text-anchor="middle" font-size="9.5" fill="#3A342B">坦荡荡</text>
+<rect x="250" y="218" width="138" height="24" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="319" y="234" text-anchor="middle" font-size="9.5" fill="#5F564A">长戚戚</text>
+<text x="200" y="232" text-anchor="middle" font-size="8.6" fill="#8A8074">7.37</text>
+<text x="81" y="270" text-anchor="middle" font-size="8" fill="#8A8074">义利之辨为总纲</text>
+<text x="319" y="270" text-anchor="middle" font-size="8" fill="#8A8074">其余五类皆其一端</text>
+<text x="200" y="296" text-anchor="middle" font-size="9" fill="#3A342B">六类同构：不是两群人，是两个方向</text>
+</svg>
