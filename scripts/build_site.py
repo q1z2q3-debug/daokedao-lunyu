@@ -302,7 +302,7 @@ def build_index():
   <div class="series">润 泽 说 · 道 可 道</div>
   <h1 class="title">论语 · 通释</h1>
   <p class="sub">一章一课，一课两页；少儿页可念，成人页可考。底本朱熹《论语集注》。</p>
-  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>50</em> 件</span><span>版本 v%s</span></div>
+  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>54</em> 件</span><span>版本 v%s</span></div>
 </div>
 
 <h2>卷首语<small>为什么这样读</small></h2>
