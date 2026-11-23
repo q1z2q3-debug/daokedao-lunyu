@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第四十二课 人而不仁如礼何（八佾 3.3）</title>
+<meta name="description" content="《论语·八佾》3.3 子曰人而不仁，如礼何？人而不仁，如乐何？一课两页：少儿页讲仁是礼乐的根、无仁则礼乐空转；成人页论「如……何」句式、礼乐与仁的先后、「而」字两读，驳礼乐自足论、诚意论、功能论，附仁礼乐如礼何玉帛钟鼓六类字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　八佾第三 · 二十六章　第 42 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">专题一 句式</a><a href="#sc-d">专题二 仁先礼后</a><a href="#sc-e">专题三 而字</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 仁为附丽</a><a href="#sc-21">义理二 失效两面</a><a href="#sc-22">附论一 仁</a><a href="#sc-23">附论二 礼</a><a href="#sc-24">附论三 乐</a><a href="#sc-25">附论四 如礼何</a><a href="#sc-26">附论五 玉帛钟鼓</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>人而不仁如礼何</h1>
+    <div class="h1-sub">八佾 3.3　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「人而不仁，如礼何？人而不仁，如乐何？」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>仁</span></div><div class="tzcap"><span>4 画</span><span>爱人的心</span></div></div>
+      <div class="tzitem"><div class="cell"><span>礼</span></div><div class="tzcap"><span>5 画</span><span>礼节、仪式</span></div></div>
+      <div class="tzitem"><div class="cell"><span>乐</span></div><div class="tzcap"><span>5 画</span><span>音乐，读 yuè</span></div></div>
+      <div class="tzitem"><div class="cell"><span>何</span></div><div class="tzcap"><span>7 画</span><span>怎么办、怎么用</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">仁</div><div class="v"><b>爱人的心。</b>——<b>心里想着别人，愿意对人好；这是礼乐的根。</b></div></div>
+      <div class="row"><div class="k">礼</div><div class="v"><b>礼节、仪式。</b>——<b>见面的规矩、祭祀的礼数，都是礼。</b></div></div>
+      <div class="row"><div class="k">乐</div><div class="v"><b>音乐。</b>——<b>此处读 yuè，奏乐的乐；不是快乐的 lè。</b></div></div>
+      <div class="row"><div class="k">何</div><div class="v"><b>怎么办。</b>——<b>「如礼何」就是礼拿他怎么办，礼对他还有什么用。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>人要是没有仁心，礼对他没什么用，乐对他也没什么用。</b>——<b>（八佾 3.3）</b></div>
+    <p>孔子说：<b>一个人若没有仁心，礼在他身上能怎么样呢？乐在他身上又能怎么样呢？</b></p>
+    <p><b>一句话：心里没有人，排场再齐也是空的。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，先认人。</b>——<b>礼乐都是人用的；人在里头，礼乐才有意义。</b>——<b>离开了人，礼只是一套动作，乐只是一串声响。</b></p>
+    <p><b>第二层，再看空转。</b>——<b>礼数照做，心里没有人，就是空转——像空盒子晃出响声，里面什么也没有。</b></p>
+    <p><b>第三层，合起来看。</b>——<b>先有仁心，再学礼乐；仁是根，礼乐是枝叶。</b>——<b>根扎住了，枝叶才长得起来。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>先修自己的心，再学外面的规矩。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　家里来客，礼貌周到，却心不在焉。</b>——<b>礼貌在，心意不在；客人能觉出来。</b></p>
+    <p><b>二　过节行礼，跟着做动作，不懂为什么。</b>——<b>动作在，内容不在；做过就算了，留不下什么。</b></p>
+    <p><b>三　参加活动，演奏整齐，心里麻木。</b>——<b>声响在，感动不在；乐响完了，人还是空的。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>形式照做，内里没有人，就是空转。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　「如礼何」是不是说不懂礼？</b>——<b>不是。</b>——<b>是说礼在他身上落不住；病在心里没有人，不在知识不够。</b></p>
+    <p><b>二　乐在这里读什么？</b>——<b>读 yuè，音乐。</b>——<b>和礼对举，一个行礼，一个奏乐。</b></p>
+    <p><b>三　没有仁，礼乐能不能照做？</b>——<b>形式可以照做，意义不在。</b>——<b>玉帛钟鼓照行，只是空转。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>心里想着人，礼数才不是空架子。</b></div>
+    <div class="scene"><b>先修自己的心，再学外面的规矩。</b></div>
+    <div class="scene"><b>场面做得再齐，内里没有人，不算有礼。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把本章讲成「仁心是礼乐的根」，不要讲成「礼乐不必学」或「礼乐只是规矩」。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>日常场景：</b>——<b>看孩子行礼、待客、演奏时是跟着做动作，还是心里有人；就事论事，不贴标签。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「无仁则空转」听成「只要有心，礼数可以废」。</b>——<b>心与文不相离，无文之心容易流为肆意。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>问孩子「这件事你是怎么做的」「做的时候心里想着谁」——把动作和心意分开再合起来看。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>场面、流程、仪式都容易补齐；本章提醒：流程背后的人，才是礼乐的根据。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>礼乐与仁的体文关系，可参《礼记》礼之本一类古训；形式与内核之分，亦通于审美与工艺。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个心里有人、礼数有根的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>人而不仁如礼何</h1>
+    <div class="h1-sub">八佾 3.3　上论·八佾　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「人而不仁，如礼何？人而不仁，如乐何？」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「僭越」到「空转」</div>
+  <p><b>3.1「八佾舞于庭，是可忍也，孰不可忍也」、3.2「三家者以雍彻」讲僭越——位不对而用其礼。</b>——<b>本章讲空转——位虽在而人不在。</b>——<b>合看是同一诊断的两面：礼的失效，既可因越分而用，也可因无人而空。</b></p>
+  <p><b>前两章批的是「用错了地方」，本章问的是「立错了根据」。</b>——<b>季氏三家越天子之份，是位与礼错配；本章所叹，是礼与人错配：仪式全套照旧，内里那个人却不在。</b></p>
+  <p><b>《八佾》开篇三章，两章批权臣之僭，一章回到礼乐本身。</b>——<b>礼不是摆出来的排场，乐不是奏出来的声响；内里无人，外面全套照旧，正是本章所叹。</b></p>
+  <div class="scene"><b>本章在《八佾》里的位置，是礼乐根据的反照。</b>——<b>僭越是礼用错了人，空转是人撑不起礼；一表一里，合看才是孔子对当时礼乐的完整诊断。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">人</div><div class="v"><b>行礼奏乐的主体，这个人。</b>——<b>礼乐不能自行，必待人而后行。</b></div></div>
+    <div class="row"><div class="k">而</div><div class="v"><b>连词。</b>——<b>转折与假设两读相须：「作为一个人，却不仁」，亦即「人若不仁」。</b></div></div>
+    <div class="row"><div class="k">仁</div><div class="v"><b>爱人之心；使礼乐有内容的内核。</b>——<b>无仁，礼乐无所附丽。</b></div></div>
+    <div class="row"><div class="k k2">如礼何</div><div class="v"><b>「奈……何」句式的变体。</b>——<b>礼拿他怎么办，礼对他还有什么用；重在主体缺位则制度失效，不是「人不懂礼」。</b></div></div>
+    <div class="row"><div class="k">乐</div><div class="v"><b>音乐，与礼对举。</b>——<b>此处读 yuè，不读 lè。</b></div></div>
+    <div class="row"><div class="k">何</div><div class="v"><b>疑问代词，与「如」成「如何」之式。</b>——<b>「如……何」＝「奈……何」，宾语提前。</b></div></div>
+  </div>
+  <p><b>句读是两句排比。</b>——<b>「人而不仁，如礼何？」「人而不仁，如乐何？」各为独立问句，同属一个「子曰」语段。</b>——<b>如礼何＝奈礼何＝礼其奈此人何。</b></p>
+  <p><b>读法上一处要紧：本章的病在主体缺位，不在知识欠缺。</b>——<b>不仁之人未必不懂礼的条文；孔子所叹，是礼在他身上落不住——条文记得再多，内里没有那个人。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　「如……何」句式的义理重量</div>
+  <p><b>「如……何」是「奈……何」的变体，本章重在「主体缺位则制度失效」。</b>——<b>孔子不是说不仁的人不懂礼节条文；是说：没有仁作根据，礼这套制度在他身上落不住——玉帛照摆，钟鼓照鸣，意义却不在。</b></p>
+  <p><b>反问还是感叹？两句皆问句。</b>——<b>底本第二句脱问号，据通行本补。语气是反问：答案已在问句里——如之何，无如之何。礼对不仁之人，无可奈何。</b></p>
+  <p><b>「如……何」在全书另见 4.13「不能以礼让为国，如礼何」。</b>——<b>彼章就治国说：礼离了根据，国政上落不住；本章就其人说：礼在人身上落不住。两处句式同一重量。</b></p>
+  <p><b>须辨一层：此句不是「如之奈何」的折中感叹。</b>——<b>它把制度与主体的关系挑明：制度是文，主体是体；体不立，文自行空转。</b></p>
+
+  <div class="h2" id="sc-d">三　专题二　礼乐与仁的先后</div>
+  <p><b>礼是形式，乐也是形式；仁是使形式有内容的东西。</b>——<b>朱子大意：仁者，礼之体；礼乐，仁之文。无仁则礼乐空转。</b></p>
+  <p><b>先后之辨有两路。</b>——<b>仁先礼后：内心有仁，礼乐才有根；礼成于仁：礼乐之文又养护仁心。</b>——<b>本章立「仁为本」；12.1「克己复礼为仁」则说礼以成仁：两条路相足，非矛盾。</b></p>
+  <p><b>体文相须：仁是体，礼乐是文。</b>——<b>无体之文是空文，无文之体是孤体；孔子不曾要人弃礼乐，只是把礼乐的根据指回仁。</b></p>
+  <p><b>反方须立三家，见第五节：礼乐自足论、诚意论、功能论。</b></p>
+
+  <div class="h2" id="sc-e">四　专题三　「人而不仁」的「而」字</div>
+  <p><b>「而」可作转折（却），可作假设（若）。本章两读相须。</b>——<b>既说「人却不仁」，也说「人若不仁」。</b></p>
+  <p><b>同一句式又见两处。</b>——<b>8.10「人而不仁，疾之已甚，乱也」；2.22「人而无信，不知其可也」。</b>——<b>「而」字把「人」与「不仁」对起来：人本当有仁，不仁是对人的偏离。</b></p>
+  <p><b>若单取转折，句意偏于责备；若单取假设，句意偏于推论。</b>——<b>本章两读相须：先断人本当有仁，再推无仁之后果；责备与推论同在一句里。</b></p>
+
+  <div class="h2" id="sc-f">五　反向：三种反方</div>
+  <p><b>三种反方，都在把本章推过头或架空本章。</b></p>
+  <p><b>一，礼乐自足论：礼节制度自成一套，照章运行即可，不必问内里。</b>——<b>本章判：制度离了主体便空转；条文越齐，空转越像样子。</b></p>
+  <p><b>二，诚意论：只要心里诚，礼可以废。</b>——<b>本章判：仁不能脱离礼乐之文而独存；无文之心，容易流为肆意与自恃。</b></p>
+  <p><b>三，功能论：礼乐只是治理工具，有用即用，无用则去。</b>——<b>本章判：礼乐所载是仁；工具论把内核剥掉，剩下的只是场面。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>自足论把人架空，诚意论把文剥掉，功能论把仁换成用；三说都落不到本章的「附丽之所」。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>人若无仁，礼奈他何，乐奈他何；礼乐以仁为附丽之所，无仁则空转。</p>
+  <p><b>一反。</b>这不是教人去背礼节条文，也不是废礼乐；是把礼乐的根据指回仁。</p>
+  <p><b>一辨。</b>「如礼何」不是「不懂礼」，是「礼在他身上落不住」；病在主体缺位，不在知识欠缺。</p>
+  <p><b>一证。</b>五个数：<b>「仁」全书一百一十一见（含篇题「里仁」一字，正文一百一十），本章两见；「礼」七十六见，本章一见；「乐」四十八见（音乐之乐与喜乐之乐两读混算），本章一见；「如礼何」两见，「如乐何」一见；「玉帛」「钟鼓」各一见，在阳货篇。</b>——<b>详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《八佾》的位置，是礼乐根据的反照。</b>——<b>位不对则僭，人不在则空；知道礼立在什么上面，才算读懂礼乐。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>异文：底本引号错位。</b><b>底本作「子曰：「人而不仁，如禮何？」人而不仁，如樂何？」」</b>——第一句问号之后提前收引号，第二句「人而不仁」落在引号外，末句脱问号。本课从通行本，两句各为独立问句，同属一个「子曰」语段；底本原形态录存备考，不隐去问题。</div></div>
+    <div class="q"><span>02</span><div><b>「而」字转折还是假设。</b><b>本课取两读相须</b>：「人却不仁」见转折，「人若不仁」见假设；句意重在人本当有仁，不仁是偏离。单取一路，文意皆欠圆。</div></div>
+    <div class="q"><span>03</span><div><b>两句是反问还是感叹。</b><b>本课取反问</b>：两句皆问句，答案已在问中——礼与乐对不仁之人，无可奈何。若读成感叹，「如……何」的句式重量落空。</div></div>
+    <div class="q"><span>04</span><div><b>仁先礼后，还是礼成于仁。</b><b>本章取仁为本</b>；12.1「克己复礼为仁」说礼以成仁。两说相足：仁是礼乐之体，礼乐是仁之文；体文相须，不立先后之执。</div></div>
+    <div class="q"><span>05</span><div><b>本章与阳货篇「礼云礼云」章是否重复。</b><b>本课判互补</b>：本章自主体（仁）立论，彼章自器物（玉帛钟鼓）立论；同一诊断的两端，非同一语。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>本章是说不仁的人不懂礼节。</b></div><div class="b"><b>病在主体缺位：礼在他身上落不住，不是知识欠缺。</b></div></div>
+    <div class="pair"><div class="a"><b>礼乐照仪式做齐，就算有礼。</b></div><div class="b"><b>无仁则礼乐空转；玉帛钟鼓照行，意义不在。</b></div></div>
+    <div class="pair"><div class="a"><b>只要心诚，礼可以废。</b></div><div class="b"><b>仁不能离文而独存；无文之心易流为肆意。</b></div></div>
+    <div class="pair"><div class="a"><b>礼乐是治理百姓的工具。</b></div><div class="b"><b>礼乐所载是仁；工具论把内核剥掉，只剩场面。</b></div></div>
+    <div class="pair"><div class="a"><b>仁在心，跟乐不乐没关系。</b></div><div class="b"><b>乐与礼对举，同为仁之文；无仁，乐亦空转。</b></div></div>
+    <div class="pair"><div class="a"><b>本章与「玉帛钟鼓」章说重了。</b></div><div class="b"><b>本章自主体立，彼章自器物立；同一诊断两端。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》4.13「能以礼让为国乎，何有！不能以礼让为国，如礼何！」</b>——<b>「如礼何」全书另一见；彼章就治国说，本章就其人说。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》阳货篇「礼云礼云！玉帛云乎哉！乐云乐云！钟鼓云乎哉！」</b>——<b>礼乐不等于器物；与本章同一诊断两端：本章问内里有没有人，彼章问排场算不算礼。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》12.1「克己复礼为仁。」</b>——<b>礼以成仁；与本章「仁为本」相足，体文相须。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》8.8「兴于诗，立于礼，成于乐。」</b>——<b>礼乐之节次；诗以兴之，礼以立之，乐以成之。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》3.4「礼，与其奢也，宁俭；丧，与其易也，宁戚。」</b>——<b>礼之本在内容不在排场；与本章「无仁则礼空转」同一脉络。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《论语》8.10「人而不仁，疾之已甚，乱也。」</b>——<b>同一句式；仁之缺位，轻则礼空转，甚则致乱。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　空转的庙堂</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 礼乐之文与缺位之人</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。庙堂之上，礼器陈设于案，钟鼓悬于架；行礼之人立于其间，面目模糊、身形空廓，像一件穿在人身上的礼服。案上玉帛整齐，架上钟鼓无声；窗外一人怀仁而入，光从门口斜进来，照在空廓的身影上。要让人一眼看出：仪式全套都在，内里那个人却不在。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>陈设于案的玉帛、悬于架的钟鼓</b>：礼乐之文俱全；<b>面目模糊、身形空廓的人</b>：主体缺位，礼在他身上落不住；<b>门口怀光而入的人</b>：仁是礼乐的附丽之所，有人而后礼乐立。</div>
+
+  <div class="h2" id="sc-20">义理图一　仁为附丽之所</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="仁为附丽之所：仁为体，礼乐为文，仁在则礼乐有所附，仁去则礼乐空转">
+    <rect x="40" y="92" width="110" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="95" y="118" text-anchor="middle" font-size="14" fill="#2F2A24">礼</text>
+    <text x="95" y="136" text-anchor="middle" font-size="10.5" fill="#8A8074">文 · 形式</text>
+    <circle cx="220" cy="120" r="34" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="220" y="126" text-anchor="middle" font-size="17" font-weight="600" fill="#A2503B">仁</text>
+    <rect x="290" y="92" width="110" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="345" y="118" text-anchor="middle" font-size="14" fill="#2F2A24">乐</text>
+    <text x="345" y="136" text-anchor="middle" font-size="10.5" fill="#8A8074">文 · 形式</text>
+    <path d="M186 120 L152 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M152 120 l6 -3 M152 120 l6 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M254 120 L288 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M288 120 l-6 -3 M288 120 l-6 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <text x="220" y="196" text-anchor="middle" font-size="12" fill="#2F2A24">仁在，则礼乐有所附；仁去，则礼乐空转</text>
+    <text x="220" y="220" text-anchor="middle" font-size="10.5" fill="#5C5347">仁者礼之体，礼乐者仁之文</text>
+  </svg><div class="figcap">图一　仁为附丽之所</div></div>
+
+  <div class="h2" id="sc-21">义理图二　礼之失效两面</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="礼之失效两面：僭越是位不对而用，空转是人不在而文存，二者皆礼之失效">
+    <rect x="40" y="56" width="150" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="115" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">僭越：位不对而用</text>
+    <text x="115" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">3.1 八佾舞庭 · 3.2 以雍彻</text>
+    <rect x="250" y="56" width="150" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="325" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">空转：人不在而文存</text>
+    <text x="325" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">3.3 人而不仁</text>
+    <path d="M115 116 L182 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M182 158 l-6 -2 M182 158 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M325 116 L258 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M258 158 l6 -2 M258 158 l3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="150" y="160" width="140" height="50" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#4A5C55">礼之失效</text>
+    <text x="220" y="232" text-anchor="middle" font-size="10.5" fill="#5C5347">位不对，或人不在；同一诊断的两面</text>
+  </svg><div class="figcap">图二　礼之失效两面</div></div>
+
+  <div class="h2" id="sc-22">附论一　「仁」一百一十一见（含篇题），本章两见</div>
+  <p><b>底本全书 grep「仁」，凡一百一十一见；其中篇题「里仁第四」占一字，正文一百一十见。本章两见（「人而不仁」两句各一）。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">仁</span><span class="n">1.3</span></div><div class="u"><b>巧言令色，鲜矣仁</b><i>——仁之反面：鲜少。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">仁</span><span class="n">3.3</span></div><div class="u"><b>人而不仁</b><i>——本章两见；仁为礼乐之根据。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">仁</span><span class="n">4.1 / 4.2</span></div><div class="u"><b>里仁为美 / 仁者安仁</b><i>——里与仁处，安仁利仁。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">仁</span><span class="n">12.1</span></div><div class="u"><b>克己复礼为仁</b><i>——礼以成仁，一章五见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">仁</span><span class="n">15.9</span></div><div class="u"><b>志士仁人</b><i>——志士不害人以成仁。</i></div></div>
+  </div>
+  <p><b>「仁」在全书是礼乐与言行的内核；本章把仁直接安在礼乐之下：无仁，礼乐无所附丽。</b>——<b>12.1「克己复礼为仁」、12.2「出门如见大宾，使民如承大祭」，皆以礼文节仁心。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「礼」七十六见，本章一见</div>
+  <p><b>底本全书 grep「禮」，凡七十六见；本章一见（「如礼何」）。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">礼</span><span class="n">1.12</span></div><div class="u"><b>礼之用，和为贵</b><i>——礼以和为用，一章两见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">礼</span><span class="n">3.3</span></div><div class="u"><b>如礼何</b><i>——本章一见；礼须有仁为体。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">礼</span><span class="n">3.4</span></div><div class="u"><b>与其奢也，宁俭</b><i>——礼之本在内容不在排场。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">礼</span><span class="n">11.1</span></div><div class="u"><b>先进于礼乐</b><i>——野人君子，礼乐先后之辨。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">礼</span><span class="n">12.1</span></div><div class="u"><b>克己复礼</b><i>——一章六见；礼以成仁。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">礼</span><span class="n">16.2</span></div><div class="u"><b>礼乐征伐自天子出</b><i>——礼乐之权，一章两见。</i></div></div>
+  </div>
+  <p><b>七十六见中，论礼之本、礼之节次者居其大半；13.3「礼乐不兴」承「名不正、事不成」而来。</b>——<b>本章则从「根据」一处立论：礼若无仁为体，其文虽存，其义已去。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「乐」四十八见（两读混算），本章一见</div>
+  <p><b>底本全书 grep「樂」，凡四十八见；本章一见（「如乐何」）。</b></p>
+  <p><span class="note2">须辨一层：「乐」字两读——音乐之乐（yuè）与喜乐之乐（lè），底本混算未分；下表分举。</span></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">乐</span><span class="n">1.1</span></div><div class="u"><b>不亦乐乎</b><i>——喜乐之乐 lè。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">乐</span><span class="n">3.3</span></div><div class="u"><b>如乐何</b><i>——本章一见；音乐之乐 yuè，与礼对举。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">乐</span><span class="n">3.23</span></div><div class="u"><b>子语鲁大师乐</b><i>——音乐之乐 yuè，一章两见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">乐</span><span class="n">8.8</span></div><div class="u"><b>成于乐</b><i>——音乐之乐 yuè；立于礼，成于乐。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">乐</span><span class="n">6.23</span></div><div class="u"><b>知者乐水，仁者乐山</b><i>——喜乐之乐 lè，一章三见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">乐</span><span class="n">16.5</span></div><div class="u"><b>益者三乐</b><i>——两读混举，一章十一见。</i></div></div>
+  </div>
+  <p><b>四十八见中，乐多与礼连文：礼以立节，乐以成性。</b>——<b>本章无仁，乐亦空转，与礼同病。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「如礼何」两见，「如乐何」一见</div>
+  <p><b>底本全书 grep「如禮何」，凡两见；grep「如樂何」，凡一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">如礼何</span><span class="n">3.3</span></div><div class="u"><b>人而不仁，如礼何</b><i>——本章；就其人说。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">如礼何</span><span class="n">4.13</span></div><div class="u"><b>不能以礼让为国，如礼何</b><i>——就治国说；礼离了根据，国政上落不住。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">如乐何</span><span class="n">3.3</span></div><div class="u"><b>人而不仁，如乐何</b><i>——全书仅此一见；与上句排比成文。</i></div></div>
+  </div>
+  <p><b>「如……何」＝「奈……何」，宾语提前。两处「如礼何」，一就其人，一就治国：礼离了根据，在人身上、在国政上都落不住。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「玉帛」「钟鼓」各一见（阳货篇）</div>
+  <p><b>底本全书 grep「玉帛」，凡一见；grep「鍾鼓」，凡一见。两见同在阳货篇：「礼云礼云！玉帛云乎哉！乐云乐云！钟鼓云乎哉！」</b></p>
+  <p><span class="note2">字形小注：底本作「鍾鼓」，简体规范作「钟鼓」；全书「鍾」一字、「鐘」零字，正文不作「鐘鼓」。</span></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">玉帛</span><span class="n">阳货篇</span></div><div class="u"><b>玉帛云乎哉</b><i>——全书仅一见；礼不等于玉帛。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">钟鼓</span><span class="n">阳货篇</span></div><div class="u"><b>钟鼓云乎哉</b><i>——全书仅一见；乐不等于钟鼓。</i></div></div>
+  </div>
+  <p><b>彼章自器物立论：礼乐不等于玉帛钟鼓。本章自主体立论：礼乐须有仁作内核。</b>——<b>两章合看：上一问「排场算不算礼」，本章问「内里有没有人」；器物是礼乐之文，仁是礼乐之体，文体相须而后礼乐立。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 42 课　八佾 3.3</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.47　二〇二六年十一月</div>
+  </footer>
+
+
+</div>
+</body>
+</html>

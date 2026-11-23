@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="250" role="img" aria-label="仁为附丽之所：仁为体，礼乐为文，仁在则礼乐有所附，仁去则礼乐空转">
+    <rect x="40" y="92" width="110" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="95" y="118" text-anchor="middle" font-size="14" fill="#2F2A24">礼</text>
+    <text x="95" y="136" text-anchor="middle" font-size="10.5" fill="#8A8074">文 · 形式</text>
+    <circle cx="220" cy="120" r="34" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="220" y="126" text-anchor="middle" font-size="17" font-weight="600" fill="#A2503B">仁</text>
+    <rect x="290" y="92" width="110" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="345" y="118" text-anchor="middle" font-size="14" fill="#2F2A24">乐</text>
+    <text x="345" y="136" text-anchor="middle" font-size="10.5" fill="#8A8074">文 · 形式</text>
+    <path d="M186 120 L152 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M152 120 l6 -3 M152 120 l6 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M254 120 L288 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M288 120 l-6 -3 M288 120 l-6 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <text x="220" y="196" text-anchor="middle" font-size="12" fill="#2F2A24">仁在，则礼乐有所附；仁去，则礼乐空转</text>
+    <text x="220" y="220" text-anchor="middle" font-size="10.5" fill="#5C5347">仁者礼之体，礼乐者仁之文</text>
+  </svg>

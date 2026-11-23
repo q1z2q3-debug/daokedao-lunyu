@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" width="440" height="260" role="img" aria-label="等差标尺：士二佾四人、大夫四佾十六人、诸侯六佾三十六人、天子八佾六十四人，季氏大夫之身直贯最上一格，僭两级">
+    <line x1="60" y1="220" x2="400" y2="220" stroke="#DED2B9" stroke-width="1.5"/>
+    <rect x="80" y="180" width="60" height="40" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="205" text-anchor="middle" font-size="12" fill="#2F2A24">士二</text>
+    <text x="110" y="236" text-anchor="middle" font-size="10" fill="#8A8074">四人</text>
+    <rect x="170" y="130" width="60" height="90" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="200" y="180" text-anchor="middle" font-size="12" fill="#2F2A24">大夫四</text>
+    <text x="200" y="236" text-anchor="middle" font-size="10" fill="#8A8074">十六人</text>
+    <rect x="260" y="80" width="60" height="140" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="290" y="150" text-anchor="middle" font-size="12" fill="#2F2A24">诸侯六</text>
+    <text x="290" y="236" text-anchor="middle" font-size="10" fill="#8A8074">三十六人</text>
+    <rect x="350" y="30" width="60" height="190" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="380" y="110" text-anchor="middle" font-size="12" fill="#A2503B">天子八</text>
+    <text x="380" y="236" text-anchor="middle" font-size="10" fill="#8A8074">六十四人</text>
+    <path d="M200 130 L380 40" stroke="#A2503B" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <path d="M380 40 l-7 -1 M380 40 l-3 -6" stroke="#A2503B" stroke-width="1.6" fill="none"/>
+    <text x="290" y="58" text-anchor="middle" font-size="11" fill="#A2503B">季氏（大夫）僭两级</text>
+    <text x="220" y="254" text-anchor="middle" font-size="10.5" fill="#5C5347">佾数等差：可数、可比、可核</text>
+  </svg>

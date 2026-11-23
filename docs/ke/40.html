@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第四十课 八佾舞于庭（八佾 3.1）</title>
+<meta name="description" content="《论语·八佾》3.1 孔子谓季氏八佾舞于庭，是可忍也，孰不可忍也。一课两页：少儿页讲等级分寸与不该越的界；成人页论佾数等差、忍字两读、礼为可数可比可核的公共尺度，附佾忍舞庭季氏五字字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　八佾第三·〇章　第 40 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">专题一 佾数等差</a><a href="#sc-d">专题二 忍字两读</a><a href="#sc-e">专题三 公共尺度</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 等差标尺</a><a href="#sc-21">义理二 尺度私有化</a><a href="#sc-22">附论一 佾二见</a><a href="#sc-23">附论二 忍三见</a><a href="#sc-24">附论三 舞四见</a><a href="#sc-25">附论四 庭三见</a><a href="#sc-26">附论五 季氏三见</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>八佾舞于庭</h1>
+    <div class="h1-sub">八佾 3.1　底本：朱熹《论语集注》</div>
+    <div class="src">孔子谓季氏：「八佾舞于庭，是可忍也，孰不可忍也？」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>佾</span></div><div class="tzcap"><span>8 画</span><span>乐舞的行列</span></div></div>
+      <div class="tzitem"><div class="cell"><span>忍</span></div><div class="tzcap"><span>7 画</span><span>容忍、宽纵</span></div></div>
+      <div class="tzitem"><div class="cell"><span>舞</span></div><div class="tzcap"><span>14 画</span><span>乐舞表演</span></div></div>
+      <div class="tzitem"><div class="cell"><span>庭</span></div><div class="tzcap"><span>9 画</span><span>庭院、厅堂前</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">佾</div><div class="v"><b>乐舞的行列。</b>——<b>一佾是一列舞队；八佾就是八列八行，共六十四人。</b></div></div>
+      <div class="row"><div class="k">忍</div><div class="v"><b>容忍、宽纵。</b>——<b>「是可忍」：这样的事都能容忍；另一读「忍心」，说见成人页。</b></div></div>
+      <div class="row"><div class="k">舞</div><div class="v"><b>乐舞。</b>——<b>古时典礼上的歌舞行列，按等级排定人数。</b></div></div>
+      <div class="row"><div class="k">庭</div><div class="v"><b>庭院。</b>——<b>「舞于庭」：在家庙或宅邸的庭院里起舞。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>大夫家里摆了天子规格的乐舞行列；这样的事都能容忍，还有什么事不能容忍？</b>——<b>（八佾 3.1）</b></div>
+    <p>孔子谈到季氏这一家：<b>用了天子才能用的八佾乐舞，在庭院里起舞。</b>——<b>孔子反问：这样的事若还能容忍，还有什么事不能容忍？</b></p>
+    <p><b>一句话：规矩分了等级，越过自己那一级，就是越界。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，先看等级。</b>——<b>古时乐舞有定数：天子八列，诸侯六列，大夫四列，士二列。</b>——<b>人数不是热闹多少，是身份的刻度。</b></p>
+    <p><b>第二层，再看越界。</b>——<b>季氏是大夫，按制该用四列；如今用了八列，越过两级，直用到天子的规格。</b>——<b>越的不是几个人，是自己的位置。</b></p>
+    <p><b>第三层，最后看反问。</b>——<b>「是可忍也，孰不可忍」：此而可宽，何事可宽。</b>——<b>孔子不是心疼一场舞，是担心规矩的尺子被人私自动了。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>刻度在那里，谁也不能私自上调。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　排队守次序。</b>——<b>轮到自己再上前；替人占位、插队，就是越过自己的位置。</b></p>
+    <p><b>二　借用别人的东西先问。</b>——<b>同学的文具、家里的物件，不经同意不动手；名分先清，再取用。</b></p>
+    <p><b>三　活动分工守职责。</b>——<b>小组里谁做什么事先说好；抢着做别人那份，或丢下自己那份，都是越分。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>守住自己的刻度，不私自上调。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　八佾到底多少人？</b>——<b>八列八行，共六十四人；每佾人数如其佾数。</b></p>
+    <p><b>二　季氏为什么不能用八佾？</b>——<b>他是大夫，按制四佾十六人；用八佾是越过诸侯、直上天子一级。</b></p>
+    <p><b>三　「孰不可忍」是忍不住发火吗？</b>——<b>本章说的是容忍、宽纵：这样的事若都可放过，就没有什么不可放过了。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>规矩的刻度，是给大家共用的。</b>——<b>谁私自改刻度，守规矩的人就吃亏。</b></div>
+    <div class="scene"><b>越一级已是越界，越两级更不是小事。</b></div>
+    <div class="scene"><b>看见越界不出声，就是把规矩让出去。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把本章讲成「守分际、护公共规矩」，不要讲成「仇大家族、不许讲排场」。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>日常场景：</b>——<b>看孩子在群体中是否争抢位次、冒领分工；就事论事，先问清分际再评对错。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「是可忍」听成鼓励记仇发火；本章戒的是姑息宽纵，不是教孩子争胜斗气。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>和孩子一起列一张「家里的刻度」清单：谁用什么、谁坐哪里；刻度说得出、查得着，分际才落得了地。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>现代分工里，越界抢位与模糊职责都常见；本章两头提醒：不越分，也不装看不见。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>等级与等差可参古礼；度量衡、刻度与标准一类概念，恰可与本章「可数、可比、可核」相照。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个守得住自己刻度、也看得见公共刻度的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>八佾舞于庭</h1>
+    <div class="h1-sub">八佾 3.1　上论·八佾　底本：朱熹《论语集注》</div>
+    <div class="src">孔子谓季氏：「八佾舞于庭，是可忍也，孰不可忍也？」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「礼之损益」到「礼之尺度」</div>
+  <p><b>2.23 论礼之损益：「殷因于夏礼……虽百世，可知也」——礼有因有革，其理可知。</b>——<b>2.24 论祭之资格、义之当为——分定则不谄，断立则不怯。</b></p>
+  <p><b>《八佾》开篇这一章，把「分」从个人修身推到公共秩序。</b>——<b>大夫之家用了天子的乐舞行列，孔子脱口而出一句反问。</b></p>
+  <p><b>《八佾》全篇二十六章，大半讥当时僭越、辨礼之本末。</b>——<b>本章是全篇第一案：先僭「数」——佾数的等差；第二章「三家者以雍彻」再僭「乐」——天子之诗用于家庙。两案一组，本章重在「数」与「忍」。</b></p>
+  <p><b>2.23 说礼有损益，而等差不可乱；本章正是等差被私自上调的一处实景。</b>——<b>礼是可数、可比、可核的公共尺度；尺度一旦私有化，秩序即失效。</b></p>
+  <div class="scene"><b>本章在《八佾》里的位置，是全篇僭礼之辨的第一案。</b>——<b>先立等差之尺，再辨忍与不忍；数正，礼才正。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">谓</div><div class="v"><b>评论、谈到。</b>——<b>「谓季氏」：就季氏这件事发议论。</b></div></div>
+    <div class="row"><div class="k k2">季氏</div><div class="v"><b>鲁国季孙氏一族。</b>——<b>本章不指实某一人；其人其时，说见存疑 01。</b></div></div>
+    <div class="row"><div class="k">佾</div><div class="v"><b>乐舞的行列。</b>——<b>一佾一列舞队；依朱子注每佾人数如其佾数，八佾八列八行共六十四人。</b></div></div>
+    <div class="row"><div class="k">庭</div><div class="v"><b>庭院。</b>——<b>此指大夫家庙或宅邸的庭院。</b></div></div>
+    <div class="row"><div class="k">忍</div><div class="v"><b>容忍、宽纵；一读「忍心」。</b>——<b>两读各有成立条件，说见专题二。</b></div></div>
+    <div class="row"><div class="k">孰</div><div class="v"><b>谁、什么。</b>——<b>「孰不可忍」：还有什么事不可以容忍。</b></div></div>
+  </div>
+  <p><b>句读是「事＋反诘」两停。</b>——<b>先摆出「八佾舞于庭」这件事，再以「是可忍也，孰不可忍也」反问收束。</b>——<b>「是」指代这件事，「孰」泛问其余一切事；上下两句递推：此而可忍，何事不可忍。</b></p>
+  <p><b>读法上一处要紧：「八佾舞于庭」是所举之事，「是可忍也，孰不可忍也」才是所下之断。</b>——<b>注家语（容忍、忍心诸说）与孔子原话须分清。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　佾数与等差：八、六、四、二</div>
+  <p><b>本章先把「数」摆清楚。</b></p>
+  <p><b>古制以佾数为乐舞等差：天子八佾，诸侯六佾，大夫四佾，士二佾。</b>——<b>《左传·隐公五年》有「天子用八」之文可参；余级汉儒所记，本课统称古制，不另指卷次。</b></p>
+  <p><b>按「每佾人数如其佾数」说：八佾八行八列，六十四人；六佾六行六列，三十六人；四佾四行四列，十六人；二佾二行二列，四人。</b>——<b>人数随等级递减，不是排场丰俭，是资格标识。</b></p>
+  <p><b>季氏为鲁大夫，依制当用四佾（十六人）；如今用八佾（六十四人），越过诸侯一级（六佾），直上天子一级，僭两级。</b>——<b>本章所讥，不在舞跳得好不好，不在庭大不大，在佾数越了两级。</b></p>
+  <p><b>这里要辨一层：等差之「数」本身就是礼。</b>——<b>礼不是一堆不可问的规矩，它落到可点数、可比较、可核对的位置上；人数、器用、乐舞各依等级，人人可核。</b>——<b>尺度可核，秩序才立得住。</b></p>
+  <p><b>反方须立：乐舞热闹一点，是门面光彩，何至于动这么大的气？</b>——<b>本课判：门面光彩的前提是分际清楚；分际一乱，光彩就成了越界的凭证。</b></p>
+
+  <div class="h2" id="sc-d">三　专题二　「忍」的两读：容忍，还是忍心</div>
+  <p><b>「忍」字本章两见，历来有两读，各自成立的条件不同，指向也不同。</b></p>
+  <p><b>甲读，训「容忍」：这种事都能容忍，还有什么事不能容忍？</b>——<b>批评的是旁观者、宽纵者：见僭越而袖手、而姑息，便是把秩序一寸一寸让出去。</b>——<b>此读与孔安国、朱子一路相近：「忍，容忍也」；句法「是……孰……」是退一步逼问，先假定此事可忍，再推出其余诸事皆无可不忍。</b></p>
+  <p><b>乙读，训「忍心」：这种事他都忍心做得出来，还有什么事做不出来？</b>——<b>斥责的是当事人：季氏狠心僭此，则无不可为。</b>——<b>此读须在「是可忍」下补出主语「他」，古文省略稍多，而义亦通。</b></p>
+  <p><b>本课取舍：主取甲读「容忍」。</b>——<b>理由有三：一，「是可忍也」承接「舞于庭」之事，指事之可不可纵，不直指其人之心；二，「孰不可忍」泛问「何事」，与「容忍」相配，问的是还有什么事该宽；若训忍心，下句当问「何人」，句法不侔；三，孔子「谓季氏」，开口评其事之不可纵，重心在立一公界，不在唾骂私人。</b>——<b>乙读存备考，两读指向之异（宽纵者／当事人）见存疑 02。</b></p>
+  <p><b>再看全书：「忍」凡三见，本章两见；另一见在卫灵公篇「小不忍，则乱大谋」，是忍耐之忍，与本章容忍之忍义近而用别。</b>——<b>本章是「忍」字全书唯一一次用于僭礼评价，值得点出。</b></p>
+
+  <div class="h2" id="sc-e">四　专题三　礼是公共尺度：可数、可比、可核</div>
+  <p><b>本章义理落点，不在「多几个人跳舞」，而在尺度被私自上调。</b></p>
+  <p><b>礼为什么要定人数、定器用、定乐舞？</b>——<b>因为秩序需要一把公共的尺：什么等级用什么，写得明、点得出、查得着。</b>——<b>天子、诸侯、大夫、士，各有其数；人人照尺立位，僭与不僭，一望可核。</b></p>
+  <p><b>季氏把大夫的尺换成了天子的尺。</b>——<b>这一换，坏的不是一场舞，是尺本身：原本可比可核的尺度，落进一家一姓的私意里；此后人人可按自家意思上调，公共尺度失效，秩序随之失效。</b>——<b>16.2「天下有道，则礼乐征伐自天子出；天下无道，则礼乐征伐自诸侯出……自大夫出」，说的正是这把尺一路下移；本章「八佾舞于庭」，就是「自大夫出」的实景。</b></p>
+  <p><b>反方三条，须一一立住再驳。</b></p>
+  <p><b>一，形式主义说：人数、排场无关紧要，心诚即可。</b>——<b>本课判：心诚须落在礼上，无分际之诚无从着落。</b></p>
+  <p><b>二，效能说：排场即权威，声势足才能镇人。</b>——<b>本课判：权威以公度为凭，私上调的排场只撑一时，反成僭越之实。</b></p>
+  <p><b>三，人情说：家祭从厚，门户体面，人情可恕。</b>——<b>本课判：家祭从厚亦有其分，厚于其分即私，人情不能替尺度。</b></p>
+
+  <div class="h2" id="sc-f">五　反向：两种误读，一种假托</div>
+  <p><b>两种误读，都在把本章推过头。</b></p>
+  <p><b>一，把本章读成「排场之争」。</b>——<b>以为孔子计较跳舞的人数、院子的大小。</b>——<b>正解：所争在等差与尺度，不在排场丰俭；人数是尺度的刻度，不是审美对象。</b></p>
+  <p><b>二，把本章读成「仇大夫」。</b>——<b>以为孔子敌视某一姓、某一家。</b>——<b>正解：所讥在僭越本身，不在季氏之族；换任何一家、任何一人越两级，本章同一断语。</b>——<b>3.6「季氏旅于泰山」，讥的也是僭，不是仇。</b></p>
+  <p><b>一种假托，借本章护短。</b></p>
+  <p><b>借「成大事不拘小节」之说，把越分用礼说成必要的场面安排。</b>——<b>本课判：小节之不拘，是做事之变通；尺度之私上调，是秩序之瓦解，二者不可混。</b>——<b>真变通在礼之内行权，假变通在礼之外扩界。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>本章护的是尺，不是舞；戒的是僭，不是富。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>大夫之家用天子八佾之舞，此而可容忍，其余何事不可容忍；礼之等差不可乱，尺度不可私有化。</p>
+  <p><b>一反。</b>这不是计较排场大小，也不是敌视某一姓；所立者是公共尺度：可数、可比、可核，僭两级即僭礼。</p>
+  <p><b>一辨。</b>「忍」主训容忍（宽纵者之当戒），忍心一读并存；「佾」是乐舞行列，八佾六十四人是通行说；季氏不指实某一人，存疑备考。</p>
+  <p><b>一证。</b>六个数：<b>「佾」全书二见，本章一见；「八佾」词形全书二见，本章一见；「忍」三见，本章两见；「舞」四见，本章一见；「庭」三见，本章一见；「季氏」三见，本章一见。</b>——<b>详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《八佾》的位置，是僭礼之辨的第一案。</b>——<b>等差先明，忍不忍的判断才有着落。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>季氏指谁。</b>旧说或指季平子（季孙意如），或指季桓子（季孙斯）；传世记载与出土材料所据不一。<b>本章正文只作「季氏」，不硬安人名</b>；其人其时，另看鲁史。</div></div>
+    <div class="q"><span>02</span><div><b>「忍」训容忍还是忍心。</b>两读各有成立条件：容忍读，戒旁观宽纵；忍心读，斥当事人狠为。<b>本课主取容忍</b>，理由见专题二；忍心读并存不废。</div></div>
+    <div class="q"><span>03</span><div><b>佾数等级是否即西周定制。</b>八、六、四、二之等差，见汉儒所记古制；本书内证未详述其制。<b>本课统称古制</b>，不指《春秋》《左传》具体卷次；「天子用八」一语可参《左传·隐公五年》。</div></div>
+    <div class="q"><span>04</span><div><b>一佾几人。</b>朱子注兼存两说：一谓每佾人数如其佾数，则八佾六十四、六佾三十六、四佾十六、二佾四；一谓每佾皆八人，则六佾四十八、四佾三十二。<b>本课正文从前说</b>，后说并存备考。</div></div>
+    <div class="q"><span>05</span><div><b>本章与 3.2 是否同一事之先后。</b>两案皆讥三家僭越：本章僭数（佾数），3.2 僭乐（雍彻）；所指场合不同，是否一时一事，本章无内证。<b>两存。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>多几个人跳舞，不算大事。</b></div><div class="b"><b>僭的不是人数，是尺度；礼之等差乱一处，全尺失效。</b></div></div>
+    <div class="pair"><div class="a"><b>排场大，显得有权威。</b></div><div class="b"><b>权威以公度为凭；私上调的排场只撑一时，反成僭越之实。</b></div></div>
+    <div class="pair"><div class="a"><b>自家宗庙从厚，人情可恕。</b></div><div class="b"><b>家祭从厚亦有其分；厚于其分即私，人情不能替尺度。</b></div></div>
+    <div class="pair"><div class="a"><b>忍一忍，算了。</b></div><div class="b"><b>容忍一路：此而可忍，何事不可忍；姑息是把秩序让出去。</b></div></div>
+    <div class="pair"><div class="a"><b>孔子是在挑大夫的错。</b></div><div class="b"><b>所讥在僭越本身，不在某一姓；越两级即僭礼，换一家同一断语。</b></div></div>
+    <div class="pair"><div class="a"><b>礼就是摆排场。</b></div><div class="b"><b>礼之本在分与敬，不在丰侈；3.4「与其奢也，宁俭」可参。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》3.2「三家者以雍彻。子曰：『相维辟公，天子穆穆』，奚取于三家之堂？」</b>——<b>同组僭礼两案：本章僭「数」（佾数），此章僭「乐」（天子之诗用于家庙）；合看可见《八佾》开篇所讥之专。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》3.6「季氏旅于泰山。子谓冉有曰：『女弗能救与？』……」</b>——<b>「季氏」第二处见讥；旅为祭名，以大夫而祭泰山，亦是越分。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》15.27「小不忍，则乱大谋。」</b>——<b>「忍」字另一见；彼为忍耐之忍，本章为容忍之忍，义近而用别。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》16.2「天下有道，则礼乐征伐自天子出；天下无道，则礼乐征伐自诸侯出……自大夫出，五世希不失矣。」</b>——<b>礼之尺度一路下移；本章八佾在庭，正是「自大夫出」的实景。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》3.4「林放问礼之本。子曰：大哉问！礼，与其奢也，宁俭；丧，与其易也，宁戚。」</b>——<b>礼之本在分与敬，不在丰侈；本章所讥之奢，正与「宁俭」相背。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《左传·隐公五年》「天子用八，诸侯用六，大夫四，士二。」</b>——<b>佾数等差的古制出处；余级之说汉儒所记，本课引以参证，不另指卷次。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　庭舞与标尺</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 僭两级</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：横卷 4:3 水墨。大夫庭院中，八列舞者列阵而舞，行列齐整、人数众多；堂上一人凭栏而视，神色凝重，手指庭中行列。庭侧立一座标尺，刻度自下而上题「士二、大夫四、诸侯六、天子八」。要让人一眼看出：庭中舞阵压到了最上一格，标尺被越过两级。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>庭中八列舞阵</b>：八佾六十四人，僭两级；<b>凭栏而视的人</b>：孔子论其事，公界在目；<b>侧边标尺</b>：礼之等差，可数、可比、可核。</div>
+
+  <div class="h2" id="sc-20">义理图一　等差标尺：八、六、四、二</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" role="img" aria-label="等差标尺：士二佾四人、大夫四佾十六人、诸侯六佾三十六人、天子八佾六十四人，季氏大夫之身直贯最上一格，僭两级">
+    <line x1="60" y1="220" x2="400" y2="220" stroke="#DED2B9" stroke-width="1.5"/>
+    <rect x="80" y="180" width="60" height="40" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="205" text-anchor="middle" font-size="12" fill="#2F2A24">士二</text>
+    <text x="110" y="236" text-anchor="middle" font-size="10" fill="#8A8074">四人</text>
+    <rect x="170" y="130" width="60" height="90" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="200" y="180" text-anchor="middle" font-size="12" fill="#2F2A24">大夫四</text>
+    <text x="200" y="236" text-anchor="middle" font-size="10" fill="#8A8074">十六人</text>
+    <rect x="260" y="80" width="60" height="140" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="290" y="150" text-anchor="middle" font-size="12" fill="#2F2A24">诸侯六</text>
+    <text x="290" y="236" text-anchor="middle" font-size="10" fill="#8A8074">三十六人</text>
+    <rect x="350" y="30" width="60" height="190" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="380" y="110" text-anchor="middle" font-size="12" fill="#A2503B">天子八</text>
+    <text x="380" y="236" text-anchor="middle" font-size="10" fill="#8A8074">六十四人</text>
+    <path d="M200 130 L380 40" stroke="#A2503B" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <path d="M380 40 l-7 -1 M380 40 l-3 -6" stroke="#A2503B" stroke-width="1.6" fill="none"/>
+    <text x="290" y="58" text-anchor="middle" font-size="11" fill="#A2503B">季氏（大夫）僭两级</text>
+    <text x="220" y="254" text-anchor="middle" font-size="10.5" fill="#5C5347">佾数等差：可数、可比、可核</text>
+  </svg><div class="figcap">图一　等差标尺：八、六、四、二</div></div>
+
+  <div class="h2" id="sc-21">义理图二　尺度私有化路径</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 270" role="img" aria-label="尺度私有化路径：礼为公度，到大夫私上调佾数，到尺度私有化，到秩序失效；下方三条反方形式主义、效能说、人情说皆不能替公度">
+    <rect x="20" y="40" width="86" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="63" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">礼为公度</text>
+    <text x="63" y="82" text-anchor="middle" font-size="10" fill="#8A8074">可比可核</text>
+    <path d="M108 69 L128 69" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M128 69 l-6 -2 M128 69 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="130" y="40" width="86" height="58" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="173" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">私上调佾数</text>
+    <text x="173" y="82" text-anchor="middle" font-size="10" fill="#8A8074">大夫之身</text>
+    <path d="M218 69 L238 69" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M238 69 l-6 -2 M238 69 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="40" width="86" height="58" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="283" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">尺度私有化</text>
+    <text x="283" y="82" text-anchor="middle" font-size="10" fill="#8A8074">落入私意</text>
+    <path d="M328 69 L348 69" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M348 69 l-6 -2 M348 69 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="350" y="40" width="72" height="58" fill="#FFFDF6" stroke="#2F2A24"/>
+    <text x="386" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">秩序失效</text>
+    <text x="386" y="82" text-anchor="middle" font-size="10" fill="#8A8074">尺不可核</text>
+    <line x1="40" y1="140" x2="400" y2="140" stroke="#DED2B9" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="220" y="130" text-anchor="middle" font-size="10.5" fill="#8A8074">反方三条，皆不能替公度</text>
+    <rect x="30" y="160" width="110" height="54" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="85" y="184" text-anchor="middle" font-size="11" fill="#5C5347">形式主义</text>
+    <text x="85" y="202" text-anchor="middle" font-size="10" fill="#8A8074">人数无关紧要</text>
+    <rect x="165" y="160" width="110" height="54" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="220" y="184" text-anchor="middle" font-size="11" fill="#5C5347">效能说</text>
+    <text x="220" y="202" text-anchor="middle" font-size="10" fill="#8A8074">排场即权威</text>
+    <rect x="300" y="160" width="110" height="54" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="355" y="184" text-anchor="middle" font-size="11" fill="#5C5347">人情说</text>
+    <text x="355" y="202" text-anchor="middle" font-size="10" fill="#8A8074">家祭从厚</text>
+    <path d="M85 216 L85 234" stroke="#C58A73" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M220 216 L220 234" stroke="#C58A73" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M355 216 L355 234" stroke="#C58A73" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <text x="220" y="252" text-anchor="middle" font-size="10.5" fill="#5C5347">心诚须落在礼上，人情不能替尺度</text>
+  </svg><div class="figcap">图二　尺度私有化路径</div></div>
+
+  <div class="h2" id="sc-22">附论一　「佾」二见，「八佾」词形二见</div>
+  <p><b>底本全书 grep「佾」，凡二见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">佾</span><span class="n">篇名</span></div><div class="u"><b>八佾第三</b><i>——篇名行，非正文用例。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">佾</span><span class="n">3.1</span></div><div class="u"><b>八佾舞于庭</b><i>——本章一见；乐舞行列。</i></div></div>
+  </div>
+  <p><b>须分两种口径：字频「佾」二见；词形「八佾」亦二见（篇名行、本章正文各一）。</b>——<b>二者口径不同，不可混算。</b>——<b>八佾篇第二十四章为「仪封人请见」，与「佾」无关，切勿误系。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「忍」三见，本章两见</div>
+  <p><b>底本全书 grep「忍」，凡三见；本章两见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">忍</span><span class="n">3.1</span></div><div class="u"><b>是可忍也 / 孰不可忍也</b><i>——本章两见；容忍之忍，用于僭礼评价。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">忍</span><span class="n">15.27</span></div><div class="u"><b>小不忍，则乱大谋</b><i>——忍耐之忍，用于谋事之戒。</i></div></div>
+  </div>
+  <p><b>三见分两类：本章为容忍、宽纵之忍；彼处为忍耐之忍，义近而用别。</b>——<b>「是可忍」「孰不可忍」两词形各仅此一见，全书他篇无复。</b>——<b>本章是「忍」字唯一一次用于讥僭礼。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「舞」四见，本章一见</div>
+  <p><b>底本全书 grep「舞」，凡四见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">舞</span><span class="n">3.1</span></div><div class="u"><b>八佾舞于庭</b><i>——本章一见；庭院乐舞，与佾数相连成文。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">舞</span><span class="n">先进</span></div><div class="u"><b>风乎舞雩</b><i>——侍坐章；舞雩，求雨之坛，地名。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">舞</span><span class="n">颜渊</span></div><div class="u"><b>舞雩之下</b><i>——樊迟从游；地名。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">舞</span><span class="n">卫灵公</span></div><div class="u"><b>乐则韶舞</b><i>——颜渊问为邦；乐舞名。</i></div></div>
+  </div>
+  <p><b>四见中，「舞雩」两处为地名，「韶舞」为乐舞名；唯本章之舞是庭院之乐舞。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「庭」三见，本章一见</div>
+  <p><b>底本全书 grep「庭」，凡三见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">庭</span><span class="n">3.1</span></div><div class="u"><b>舞于庭</b><i>——本章一见；庭院之舞。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">庭</span><span class="n">季氏13</span></div><div class="u"><b>鲤趋而过庭</b><i>——一章两见；庭中受父教，与本章同字而异事。</i></div></div>
+  </div>
+  <p><b>「过庭」指庭中受教，与本章庭院之舞同字而异事；两章一为家礼之教，一为僭礼之讥。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「季氏」三见，本章一见</div>
+  <p><b>底本全书 grep「季氏」，凡三见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">氏</span><span class="n">3.1</span></div><div class="u"><b>孔子谓季氏</b><i>——本章一见；开篇论僭。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">氏</span><span class="n">3.6</span></div><div class="u"><b>季氏旅于泰山</b><i>——第二处见讥；越分祭名。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">氏</span><span class="n">雍也9</span></div><div class="u"><b>季氏使闵子骞为费宰</b><i>——第三处；季氏辟之，使为费宰。</i></div></div>
+  </div>
+  <p><b>三处季氏是否同一人，旧说有分歧；本课正文不指实人名（存疑 01）。</b>——<b>另：底本部分篇章「季」或作「李」之异写，数证依「季氏」词形计，不与「李氏」混。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 40 课　八佾 3.1</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.47　二〇二六年十一月</div>
+  </footer>
+
+
+</div>
+</body>
+</html>

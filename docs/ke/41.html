@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第四十一课 三家者以雍彻（八佾 3.2）</title>
+<meta name="description" content="《论语·八佾》3.2 三家者以雍彻，子曰相维辟公天子穆穆，奚取于三家之堂。一课两页：少儿页讲场合与位置；成人页论撤祭之乐、诗的场景与在场者，僭礼两案（僭数与僭位），附雍彻辟穆堂奚三家家字字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　八佾第三·〇章　第 41 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">专题一 雍彻之乐</a><a href="#sc-d">专题二 诗的场景</a><a href="#sc-e">专题三 僭乐即僭位</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 僭礼两案</a><a href="#sc-21">义理二 场景错位</a><a href="#sc-22">附论一 雍六见</a><a href="#sc-23">附论二 彻三见</a><a href="#sc-24">附论三 辟十见</a><a href="#sc-25">附论四 穆二见堂五见</a><a href="#sc-26">附论五 奚十一见三家两见</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>三家者以雍彻</h1>
+    <div class="h1-sub">八佾 3.2　底本：朱熹《论语集注》</div>
+    <div class="src">三家者以雍彻。子曰：「相维辟公，天子穆穆，奚取于三家之堂？」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>雍</span></div><div class="tzcap"><span>13 画</span><span>天子祭祖唱的诗</span></div></div>
+      <div class="tzitem"><div class="cell"><span>彻</span></div><div class="tzcap"><span>7 画</span><span>祭完撤下祭品</span></div></div>
+      <div class="tzitem"><div class="cell"><span>辟</span></div><div class="tzcap"><span>13 画</span><span>诸侯、君长</span></div></div>
+      <div class="tzitem"><div class="cell"><span>穆</span></div><div class="tzcap"><span>16 画</span><span>庄重盛美的样子</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">雍</div><div class="v"><b>一首诗的名字。</b>——<b>《雍》是天子宗庙祭完撤祭品时唱的乐歌。</b></div></div>
+      <div class="row"><div class="k">彻</div><div class="v"><b>撤下、收去。</b>——<b>「彻」通「撤」；祭礼完毕，把祭品礼器撤下来。</b></div></div>
+      <div class="row"><div class="k">辟</div><div class="v"><b>君长、诸侯。</b>——<b>「辟公」就是助祭的诸侯；这里的辟，不要写成偏僻的「僻」。</b></div></div>
+      <div class="row"><div class="k">穆</div><div class="v"><b>庄重盛美。</b>——<b>「穆穆」是天子仪容庄敬盛美的样子；不要写错成「繆」。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>三家大夫在家庙撤祭，也唱天子祭祖的歌；孔子反问：诗里写的是诸侯助祭、天子主祭，在你们家堂上去，哪一点用得上？</b>——<b>（八佾 3.2）</b></div>
+    <p>孔子说：<b>三家大夫撤祭的时候，用了天子撤祭才唱的《雍》。</b>——<b>他引诗两句反问：诗里是诸侯来助祭、天子穆穆主祭；这样的场景，在三家的堂上，取它哪一点？</b></p>
+    <p><b>一句话：什么场合，用什么乐；场合对不上，排场再大也不对。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，先知道什么是「雍彻」。</b>——<b>祭礼做完，撤下祭品礼器，是彻；撤的时候唱什么歌，有等级。</b>——<b>《雍》是天子宗庙撤祭唱的歌。</b></p>
+    <p><b>第二层，再看诗里有谁。</b>——<b>「相维辟公」：诸侯来助祭；「天子穆穆」：天子主祭，仪容庄盛。</b>——<b>这首诗写的，是天子诸侯在一起的场面。</b></p>
+    <p><b>第三层，对一对位置。</b>——<b>三家是大夫；他们堂上主祭的是大夫，帮忙的是家臣。</b>——<b>诗里的人，堂上一个也对不上，所以孔子问：这诗在你们堂上去，取什么？</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>乐是同一套乐，场合与位置对不上，就不能用。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　场合不对的称呼。</b>——<b>班里集会，席位是按身份和安排排的；坐到不属于自己的位置上，哪怕坐得端正，也是越位。</b></p>
+    <p><b>二　借来的仪式。</b>——<b>颁奖台、主席台是特定场合用的；把它搬回自家客厅当普通座位，仪式的意思就变了。</b></p>
+    <p><b>三　大家都这样就对吗。</b>——<b>几件事别人都跟着做，不代表就该做；俗成不是道理，还要看分际对不对。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>场合有场合的位置，位置不能借，也不能抢。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　唱歌这件事本身有错吗？</b>——<b>曲调没有错；错在场合与身份。</b>——<b>同一首歌，放在该放的场合是礼，放错了场合是僭。</b></p>
+    <p><b>二　心诚还不够吗？</b>——<b>诚要落在礼的分上。</b>——<b>心里再敬，越过了自己的位置，仍然不算合礼。</b></p>
+    <p><b>三　「三家」是谁？</b>——<b>通行说法是鲁国三桓：仲孙、叔孙、季孙三家大夫。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>不属于自己的场合与位置，不去借、不去占。</b></div>
+    <div class="scene"><b>礼乐随身份场景而定，不是看排场大不大。</b></div>
+    <div class="scene"><b>大家都做的事，也要先问一句：该不该我做。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把本章讲成「场合与位置有分际」，不要讲成「音乐有阶级、不许唱好歌」。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>日常场景：</b>——<b>看孩子在群体中是否占用不属于自己的位置、借用不属于自己的仪式；就事论事，不贴标签。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「从众」当成理据：别人都这样，所以我也可以。</b>——<b>俗成不是标准，分际才是。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>问孩子「这件事在什么场合」「你在其中是什么位置」——把场合与身份分开再合起来看。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>仪式与头衔常被借用、升格；本章提醒：场合有其本分，借用的排场不等于资格。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>古礼之乐与等级场景，可参《礼记》《周礼》相关篇目；诗的场景与人物，可参《诗经·周颂·雝》。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个守场合、知位置的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>三家者以雍彻</h1>
+    <div class="h1-sub">八佾 3.2　上论·八佾　底本：朱熹《论语集注》</div>
+    <div class="src">三家者以雍彻。子曰：「相维辟公，天子穆穆，奚取于三家之堂？」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「僭数」到「僭位」</div>
+  <p><b>3.1 孔子谓季氏：「八佾舞于庭，是可忍也，孰不可忍也？」</b>——<b>季氏用天子之舞，僭的是佾之人数，是可数之量。</b></p>
+  <p><b>本章接在其后，再出一案：三家者以雍彻。</b>——<b>三家大夫在家庙撤祭，也唱天子宗庙撤祭所歌的《雍》。</b>——<b>僭的不是数量，是场景之位：诗里写的是谁在场、谁主祭，这一场景里没有大夫的位置。</b></p>
+  <p><b>《八佾》开篇两章，合看是「僭礼」两案：3.1 僭数，本章僭位。</b>——<b>数可点，位不可混；乐不是一段孤立的曲调，乐连着礼的场景与身份。</b></p>
+  <p><b>孔子引《雍》诗两句反问，不是嫌乐声不好，是指出场景对不上。</b>——<b>诗中无三家之位，于三家之堂何所取。</b></p>
+  <div class="scene"><b>本章在《八佾》里的位置，是僭礼的第二案：僭乐即僭场景。</b>——<b>3.1 怒其数，本章诘其位；数乱在多少，位乱在归属。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">三家</div><div class="v"><b>鲁之三桓，通说指仲孙、叔孙、季孙三家大夫。</b>——<b>说见存疑 02。</b></div></div>
+    <div class="row"><div class="k">雍</div><div class="v"><b>《诗经·周颂·雝》（雍）之诗，天子宗庙撤祭所歌。</b></div></div>
+    <div class="row"><div class="k">彻</div><div class="v"><b>通「撤」，祭毕撤去祭品、撤俎。</b>——<b>底本作「徹」，简体作「彻」。</b></div></div>
+    <div class="row"><div class="k">相</div><div class="v"><b>助祭。</b>——<b>「相维辟公」：辟公前来助祭。</b></div></div>
+    <div class="row"><div class="k">维</div><div class="v"><b>语气词，无实义。</b></div></div>
+    <div class="row"><div class="k">辟公</div><div class="v"><b>诸侯。辟，君也；公，诸侯之称。</b>——<b>「辟」训君，勿误作「僻」。</b></div></div>
+    <div class="row"><div class="k">穆穆</div><div class="v"><b>天子仪容庄盛敬美之貌。</b>——<b>「穆」勿误作「繆」。</b></div></div>
+    <div class="row"><div class="k">奚</div><div class="v"><b>何，什么。「奚取于」＝于其中取什么。</b></div></div>
+    <div class="row"><div class="k">堂</div><div class="v"><b>家庙之堂。</b></div></div>
+  </div>
+  <p><b>句读是两停。</b>——<b>上停「三家者以雍彻」，摆出所行之事；下停「子曰：『相维辟公，天子穆穆』，奚取于三家之堂？」引诗反问，下断语。</b></p>
+  <p><b>读法上一处要紧：「奚取于」不是批评乐声，是追问场景。</b>——<b>诗里写诸侯助祭、天子主祭；三家之堂上，主祭的是大夫，助祭的是家臣——诗中的在场者一个也对不上，故曰无所取。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　「雍彻」：撤祭之乐与天子之礼</div>
+  <p><b>本章先辨这桩乐事的本分。</b></p>
+  <p><b>古人祭毕，撤去祭品与礼器，谓之彻（撤）。</b>——<b>撤祭之时，依等级歌相应的乐：《雍》是《周颂·雝》，《毛诗序》谓「雝，禘大祖也」，《周礼·大司乐》「及彻，帅学士而歌彻」——天子宗庙撤祭，歌《雍》以彻。</b></p>
+  <p><b>三家为鲁大夫，家庙撤祭本有家臣之乐；以《雍》彻，是把天子宗庙的乐歌搬到自家堂上。</b></p>
+  <p><b>马融《集解》大意：《雍》，《周颂·雝》篇名，天子祭毕彻而去，歌《雍》以彻。朱子《集注》：「雍，《周颂·雝》之篇。彻，祭毕而彻俎也。」</b>——<b>注家语与孔子原话须分清：「三家者以雍彻」是孔子所举之事，「奚取于三家之堂」才是孔子所断。</b></p>
+  <p><b>这里要辨一层：本章所戒的不是用乐本身，是越等级而用乐。</b>——<b>乐有乐的本分，礼有礼的场景；撤祭之乐随祭者之位而定，位不同，乐不同。</b></p>
+  <p><b>反方须立：音乐只是声音，曲调何分天子大夫？</b>——<b>本课判：在孔子的礼中，乐不是纯声音。乐是礼的一部分，连着谁在场、谁主祭；曲调可同，场景不可移。</b></p>
+
+  <div class="h2" id="sc-d">三　专题二　诗的场景：谁在场，谁主祭</div>
+  <p><b>孔子不直斥「僭」，而是引《雍》诗两句反问：「相维辟公，天子穆穆。」</b></p>
+  <p><b>《雝》全诗写禘祭太祖之盛：「有来雝雝，至止肃肃。相维辟公，天子穆穆。」</b>——<b>相，助也；辟公，诸侯；穆穆，天子仪容之盛美。诗中场景是：诸侯辟公前来助祭，天子穆穆然主祭于上。</b></p>
+  <p><b>《礼记·曲礼下》「天子穆穆，诸侯皇皇，大夫济济，士跄跄」——穆穆本是天子仪容之文。</b>——<b>诗以穆穆状天子，正见这一场景所属。</b></p>
+  <p><b>孔子的质问落在「奚取于三家之堂」：诗里有谁？有助祭的诸侯，有主祭的天子。</b>——<b>三家之堂上有谁？有大夫，有家臣。诗中的在场者，堂上一个也对不上；诗中既无大夫之位，这诗于三家之堂，取它哪一点？</b></p>
+  <p><b>故本章的核心不是音量、曲调、排场，是场景与在场者。</b>——<b>礼乐的正当性来自「谁在场、谁主祭」，而非曲调本身。同一套乐，放在天子宗庙是礼，搬到大夫家庙是僭；不是乐变了，是位变了。</b></p>
+
+  <div class="h2" id="sc-e">四　专题三　僭乐即僭场景：与 3.1 合观</div>
+  <p><b>3.1 季氏八佾舞于庭，僭的是佾数：八佾为天子之舞，季氏用之，可数其人数。</b></p>
+  <p><b>本章三家以雍彻，僭的是场景：《雍》诗所写诸侯助祭、天子主祭之场，三家堂上并无此场。</b></p>
+  <p><b>两案合观，僭礼有两种形态：一僭数（可数之量），一僭位（场景之位）。</b>——<b>数乱在多少，位乱在归属。3.1 问「是可忍也，孰不可忍也」，本章问「奚取于三家之堂」：一怒其数，一诘其位。</b></p>
+  <p><b>这里要辨一层：本章不是 3.1 的重复课。</b>——<b>3.1 重在舞之人数，本章重在诗之场景与在场者。读本章须盯住「相维辟公，天子穆穆」两句：孔子把诗的场景摆出来，让三家自己对——对不上，便无所取。</b></p>
+
+  <div class="h2" id="sc-f">五　反向：三种误读</div>
+  <p><b>三种误读，都在把本章的「礼」推过头或推干净。</b></p>
+  <p><b>一，乐无阶级论。</b>——<b>以为音乐只是音乐，曲调无分天子大夫，谁唱都一样。</b>——<b>正解：在孔子的礼中，乐是礼的一部分；乐随场景与身份而定，场景一移，乐即成僭。所争不在声音，在归属。</b></p>
+  <p><b>二，诚意论。</b>——<b>以为心诚则礼成，用什么乐是形式末节，心到了就不算僭。</b>——<b>正解：诚要落在礼的分上。3.12「祭如在，祭神如神在」是尽礼之诚；越分而用乐，心思不在敬，在僭。心再诚，分乱了仍是僭。</b></p>
+  <p><b>三，从众论。</b>——<b>以为三家皆然，俗成已久，不必独责三家。</b>——<b>正解：俗成不是理据。众人皆僭，僭仍是僭；本章所断在礼之当否，不在众寡。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>本章戒在越分用乐：乐可同，位不可移。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>三家大夫家庙撤祭，歌天子撤祭之《雍》；孔子引诗反问：诗中诸侯助祭、天子主祭，这场景于三家之堂，取它哪一点？</p>
+  <p><b>一反。</b>这不是论乐声好坏，也不是排抑大夫；所戒在越分用乐，僭在场景之位。</p>
+  <p><b>一辨。</b>「彻」是撤去祭品，不是税法之彻；「辟公」之辟训君，与通「避」之辟、便辟之辟义别；「穆穆」是天子仪容，勿误作「繆」。</p>
+  <p><b>一证。</b>七个数：<b>「雍」全书六见，本章一见；「徹（彻）」三见，本章一见；「辟」十见，本章一见；「穆」二见，皆本章；「堂」五见，本章一见；「奚」十一见，本章一见；「三家」两见，皆本章。</b>——<b>「天子穆穆」「相维辟公」「辟公」全书各一见，皆本章。详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《八佾》的位置，是僭礼的第二案。</b>——<b>僭数之外又僭位；礼定其分，谁在场、谁主祭，乐便属谁。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>《雍》是否确为天子撤祭所歌。</b>《周礼·大司乐》「及彻，帅学士而歌彻」、《毛诗序》「雝，禘大祖也」可相互证；具体以《雍》为撤祭之歌，定自汉魏注说（马融、郑玄、朱子），《论语》经文内证仅此所引两句。<b>本课从注说，两存。</b></div></div>
+    <div class="q"><span>02</span><div><b>三家指哪三家。</b>通说鲁三桓：仲孙、叔孙、季孙；旧说或有歧解。<b>本课从通说，行文标注「通说」。</b></div></div>
+    <div class="q"><span>03</span><div><b>「彻」字两义。</b>本章通「撤」，撤去祭品；12.9「盍彻乎」「如之何其彻也」之「彻」为税法，什一而税曰彻。形近字「徹／撤」，归简作「彻」，两义不可混。</div></div>
+    <div class="q"><span>04</span><div><b>「辟公」之辟训君（诸侯），与通「避」之辟（辟世、辟人）、便辟之辟、「师也辟」之辟义别；「僻」为另一字，形近易淆。</b>读旧本须先辨上下文。</div></div>
+    <div class="q"><span>05</span><div><b>本章与 3.1 是否重复。</b><b>本课判互补</b>：3.1 僭数（八佾之量），本章僭位（场景之位）；一在多少，一在归属。重复一路并存不废。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>音乐只是声音，谁唱都一样。</b></div><div class="b"><b>乐是礼的一部分，连着场景与身份；场景一移，乐即成僭。</b></div></div>
+    <div class="pair"><div class="a"><b>心诚则礼成，用什么乐是末节。</b></div><div class="b"><b>诚要落在礼的分上；越分用乐，心再诚仍是僭。</b></div></div>
+    <div class="pair"><div class="a"><b>三家皆然，俗成已久，不必独责。</b></div><div class="b"><b>俗成不是理据；众人皆僭，僭仍是僭。</b></div></div>
+    <div class="pair"><div class="a"><b>本章是嫌《雍》乐声不好。</b></div><div class="b"><b>所争不在曲调，在场景；诗中无三家之位，故无所取。</b></div></div>
+    <div class="pair"><div class="a"><b>本章与上一章是重复骂人。</b></div><div class="b"><b>3.1 僭数，本章僭位；一在人数多少，一在场景归属。</b></div></div>
+    <div class="pair"><div class="a"><b>大夫用天子之乐，排场大而已。</b></div><div class="b"><b>僭的是主祭与在场者之位；排场是末，归属是本。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》3.1「八佾舞于庭，是可忍也，孰不可忍也？」</b>——<b>同篇首章僭数；本章僭位，两案合观为「僭礼」两案。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《诗经·周颂·雝》「有来雝雝，至止肃肃。相维辟公，天子穆穆。」</b>——<b>全诗禘祭太祖，诸侯助祭、天子主祭；本章直引其中两句。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《礼记·曲礼下》「天子穆穆，诸侯皇皇，大夫济济，士跄跄。」</b>——<b>穆穆本是天子仪容之文；诗以穆穆状天子，正见场景所属。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》3.12「祭如在，祭神如神在。吾不与祭，如不祭。」</b>——<b>祭之诚敬在礼之在场；本章从资格与场景立限。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》16.3「禄之去公室五世矣，政逮于大夫四世矣，故夫三桓之子孙微矣。」</b>——<b>三桓执鲁政之源流；三家即此公族。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《论语》11.15「由也升堂矣，未入于室也。」</b>——<b>堂室之喻；本章「堂」指家庙之堂，与升堂入室可互参。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　同堂异场</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 僭礼两案之场景对照</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：横卷 4:3 水墨。画面分左右对照：左侧天子宗庙，殿宇肃庄，天子穆穆主祭于上，辟公诸侯分立助祭，钟磬雍雍；右侧三家家庙之堂，三族大夫立于主位，撤祭之时亦奏天子之乐，堂上助祭之位空着无人。两堂之间一道界石，题「位」字。要让人一眼看出：乐是同一套乐，场景与在场者对不上。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>天子主祭与辟公助祭</b>：《雍》诗的场景；<b>三家大夫立于主位</b>：僭位；<b>空着的助祭之位</b>：诗里没有三家的位置，奚取于三家之堂。</div>
+
+  <div class="h2" id="sc-20">义理图一　僭礼两案：数与位</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="僭礼两案：3.1 僭数为可数之量，3.2 僭位为场景之位，汇合于礼定其分">
+    <rect x="40" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">3.1 僭数</text>
+    <text x="110" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">八佾之量 · 可数</text>
+    <rect x="260" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="330" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">3.2 僭位</text>
+    <text x="330" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">场景之位 · 在场者</text>
+    <path d="M110 116 L176 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M176 158 l-6 -2 M176 158 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M330 116 L264 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M264 158 l6 -2 M264 158 l3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="130" y="160" width="180" height="50" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="182" text-anchor="middle" font-size="13.5" font-weight="600" fill="#4A5C55">礼定其分</text>
+    <text x="220" y="200" text-anchor="middle" font-size="10.5" fill="#5C5347">谁在场，谁主祭</text>
+  </svg><div class="figcap">图一　僭礼两案：数与位</div></div>
+
+  <div class="h2" id="sc-21">义理图二　场景错位：诗中无三家之位</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="场景错位：雍诗场景为天子主祭辟公助祭，三家堂为大夫主祭，诗中无三家之位">
+    <rect x="24" y="60" width="160" height="76" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="104" y="86" text-anchor="middle" font-size="13" fill="#2F2A24">《雍》诗场景</text>
+    <text x="104" y="108" text-anchor="middle" font-size="10.5" fill="#8A8074">天子主祭</text>
+    <text x="104" y="124" text-anchor="middle" font-size="10.5" fill="#8A8074">辟公助祭</text>
+    <line x1="220" y1="60" x2="220" y2="136" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <rect x="256" y="60" width="160" height="76" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="336" y="86" text-anchor="middle" font-size="13" fill="#2F2A24">三家之堂</text>
+    <text x="336" y="108" text-anchor="middle" font-size="10.5" fill="#8A8074">大夫主祭</text>
+    <text x="336" y="124" text-anchor="middle" font-size="10.5" fill="#8A8074">家臣相从</text>
+    <path d="M186 98 L254 98" stroke="#A2503B" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <path d="M254 98 l-7 -3 M254 98 l-7 3" stroke="#A2503B" stroke-width="1.6" fill="none"/>
+    <text x="220" y="180" text-anchor="middle" font-size="12" fill="#A2503B">诗中无三家之位</text>
+    <text x="220" y="212" text-anchor="middle" font-size="10.5" fill="#5C5347">奚取于三家之堂？</text>
+  </svg><div class="figcap">图二　场景错位：诗中无三家之位</div></div>
+
+  <div class="h2" id="sc-22">附论一　「雍」六见，本章一见</div>
+  <p><b>底本全书 grep「雍」，凡六见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">雍</span><span class="n">3.2</span></div><div class="u"><b>以雍彻</b><i>——本章一见；诗名《雍》，天子撤祭所歌。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">雍</span><span class="n">5.5</span></div><div class="u"><b>雍也仁而不佞</b><i>——人名冉雍（仲弓）。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">雍</span><span class="n">6 篇名</span></div><div class="u"><b>雍也第六</b><i>——篇名，以冉雍名篇。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">雍</span><span class="n">6.1 / 6.2</span></div><div class="u"><b>雍也可使南面 / 雍之言然</b><i>——两见，皆指冉雍。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">雍</span><span class="n">12.2</span></div><div class="u"><b>雍虽不敏</b><i>——仲弓问仁，冉雍自谓。</i></div></div>
+  </div>
+  <p><b>后五见皆指冉雍（仲弓）其人；唯本章「雍」为诗名。</b>——<b>故「雍彻」之雍，不可与人名冉雍相混。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「徹（彻）」三见，本章一见</div>
+  <p><b>底本全书 grep「徹」，凡三见；本章一见。（本课正文依简体作「彻」。）</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">彻</span><span class="n">3.2</span></div><div class="u"><b>雍彻</b><i>——撤去祭品，通「撤」。本章一见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">彻</span><span class="n">12.9</span></div><div class="u"><b>盍彻乎 / 如之何其彻也</b><i>——一章两见；税法，什一而税曰彻。</i></div></div>
+  </div>
+  <p><b>同一字两义：撤祭之彻，是动作；税法之彻，是制度。</b>——<b>本章取前者。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「辟」十见，本章一见</div>
+  <p><b>底本全书 grep「辟」，凡十见；本章一见。十见分四类义项。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">辟</span><span class="n">3.2</span></div><div class="u"><b>辟公</b><i>——君／诸侯。一见，本章所取义。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">辟</span><span class="n">11.18</span></div><div class="u"><b>师也辟</b><i>——偏激、偏颇。一见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">辟</span><span class="n">14.37</span></div><div class="u"><b>辟世 / 辟地 / 辟色 / 辟言</b><i>——通「避」，一章四见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">辟</span><span class="n">18.5 / 18.6</span></div><div class="u"><b>趋而辟之 / 辟人 / 辟世</b><i>——通「避」，三见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">辟</span><span class="n">16.4</span></div><div class="u"><b>友便辟</b><i>——便辟，逢迎之态。一见。</i></div></div>
+  </div>
+  <p><b>本章「辟公」之辟，唯取「君」义；与避、便辟、偏激诸义别。</b>——<b>「僻」为另一字，勿混。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「穆」二见、「堂」五见</div>
+  <p><b>底本全书 grep「穆」，凡二见；皆本章「天子穆穆」叠用。「穆穆」全书仅此一见。</b></p>
+  <p><b>底本全书 grep「堂」，凡五见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">堂</span><span class="n">3.2</span></div><div class="u"><b>三家之堂</b><i>——本章一见；三家家庙之堂。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">堂</span><span class="n">10.3</span></div><div class="u"><b>摄齐升堂</b><i>——君召摈相，趋进之礼。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">堂</span><span class="n">11.15</span></div><div class="u"><b>由也升堂矣</b><i>——堂室之喻，入室未也。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">堂</span><span class="n">19.16</span></div><div class="u"><b>堂堂乎张也</b><i>——叠字形容，一章两见。</i></div></div>
+  </div>
+  <p><b>「堂」在全书或指庙堂阶上之堂，或为叠字形容；本章「三家之堂」即三家家庙之堂。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「奚」十一见、「三家」两见</div>
+  <p><b>底本全书 grep「奚」，凡十一见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">2.21</span></div><div class="u"><b>子奚不为政 / 奚其为为政</b><i>——一章两见；疑问词，何。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">3.2</span></div><div class="u"><b>奚取于三家之堂</b><i>——本章一见；于其中取什么。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">7.19 / 11.15</span></div><div class="u"><b>女奚不曰 / 奚为于丘之门</b><i>——各一见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">13.3 / 13.5</span></div><div class="u"><b>奚先 / 奚其正 / 亦奚以为</b><i>——三见；问政与诵诗之用。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">14.19 / 14.38</span></div><div class="u"><b>奚而不丧 / 奚其丧 / 奚自</b><i>——三见。</i></div></div>
+  </div>
+  <p><b>「奚」全书皆疑问词：何、什么、怎么。本章「奚取于」即「于其中取什么」。</b></p>
+  <p><b>底本全书 grep「三家」，凡两见；皆本章：「三家者以雍彻」「三家之堂」。</b>——<b>「天子穆穆」「相维辟公」「辟公」全书各一见，皆本章。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 41 课　八佾 3.2</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.47　二〇二六年十一月</div>
+  </footer>
+
+
+</div>
+</body>
+</html>

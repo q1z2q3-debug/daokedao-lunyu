@@ -1,0 +1,504 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""生成 GitHub Pages 站点（docs/）。
+
+来源：../润泽说-论语 下的各课阅读版 HTML（单文件自包含）。
+产出：
+  docs/index.html      入口页（书封、卷首语、目录、体例、五步读法、系列内链）
+  docs/book.html       卷首（封面、扉页、前言全文、目录）
+  docs/ke/*.html       各课阅读版（注入返回条）
+  docs/favicon.svg     robots.txt  sitemap.xml  llms.txt
+用法：python3 scripts/build_site.py
+"""
+import glob
+import os
+import re
+import shutil
+import subprocess
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SRC = os.path.join(os.path.dirname(ROOT), "润泽说-论语")
+DOCS = os.path.join(ROOT, "docs")
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import daokedao_book as kit  # noqa: E402
+
+SITE = "https://q1z2q3-debug.github.io/daokedao-lunyu"
+VERSION = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
+
+# 课次表：(文件名中的数字或 pre, 页名, 课次, 章句, 主旨)
+COURSES = [
+    ("00-pre", "论语·前言·读论语之前（阅读版）.html", "前言", "读法 · 总纲 · 体例",
+     "先读它说什么，再谈它意味着什么。"),
+    ("01", "论语·第一课·学而时习（阅读版）.html", "第一课", "学而时习之，不亦说乎",
+     "学是受，习是发；一阴一阳，才是这一句的全部。"),
+    ("02", "论语·第二课·其为人也孝弟（阅读版）.html", "第二课", "其为人也孝弟，而好犯上者，鲜矣",
+     "本立而道生：孝弟是根，不是姿态。"),
+    ("03", "论语·第三课·巧言令色（阅读版）.html", "第三课", "巧言令色，鲜矣仁",
+     "饰在外，实在内；「鲜」不是零。"),
+    ("04", "论语·第四课·吾日三省（阅读版）.html", "第四课", "吾日三省吾身",
+     "「省」是查事，不是定罪。"),
+    ("05", "论语·第五课·道千乘之国（阅读版）.html", "第五课", "道千乘之国，敬事而信，节用而爱人，使民以时",
+     "五事归两路：不欺与不竭。"),
+    ("06", "论语·第六课·弟子入则孝（阅读版）.html", "第六课", "弟子入则孝，出则弟，谨而信，泛爱众，而亲仁",
+     "先事后文，是次序，不是轻重。"),
+    ("07", "论语·第七课·父在观其志（阅读版）.html", "第七课", "父在，观其志；父没，观其行；三年无改于父之道",
+     "三个时间点看同一个人；无改不是守旧，是不忍遽改。"),
+    ("08", "论语·第八课·君子不重则不威（阅读版）.html", "第八课", "君子不重则不威，学则不固",
+     "不重是病，学是药；无友不如己，是承认人人有一处胜我。"),
+    ("09", "论语·第九课·慎终追远（阅读版）.html", "第九课", "慎终追远，民德归厚矣",
+     "两件收不到回音的事，把一个人、一家、一地的壁练厚。"),
+    ("10", "论语·第十课·夫子至于是邦也（阅读版）.html", "第十课", "夫子至于是邦也，必闻其政",
+     "五德不是技巧，是可接近性；以得之，是德之得。"),
+    ("11", "论语·第十一课·礼之用和为贵（阅读版）.html", "第十一课", "礼之用，和为贵",
+     "礼是界，和是容，节是度：无礼则混，无和则僵，无节则散。"),
+    ("12", "论语·第十二课·信近于义（阅读版）.html", "第十二课", "信近于义，言可复也",
+     "三个「近」是三把尺：诺贴着义，恭贴着礼，托身贴着可亲。"),
+    ("13", "论语·第十三课·君子食无求饱（阅读版）.html", "第十三课", "君子食无求饱，居无求安",
+     "好学四条门：去欲、先行、后言、求正——四条都不在书上。"),
+    ("14", "论语·第十四课·贫而无谄富而无骄（阅读版）.html", "第十四课", "贫而无谄，富而无骄",
+     "守、化、益三级：不做只是及格，做出才算长进；切磋琢磨是减法。"),
+    ("15", "论语·第十五课·不患人之不己知（阅读版）.html", "第十五课", "不患人之不己知，患不知人也",
+     "学而收篇：眼睛从「别人看我」转向「我看别人」；四条改道，三张知人的尺。"),
+    ("16", "论语·第十六课·为政以德（阅读版）.html", "第十六课", "为政以德，譬如北辰",
+     "为政开篇：政者正也，德者得也；居其所而不动，众星自向，事简而人归。"),
+    ("17", "论语·第十七课·思无邪（阅读版）.html", "第十七课", "诗三百，一言以蔽之",
+     "一句盖三百：不是诗里无邪，是读诗把人拉回正；原句咏马，孔子断章。"),
+    ("18", "论语·第十八课·道之以政（阅读版）.html", "第十八课", "道之以政，齐之以刑",
+     "四器两层：政刑管手脚，德礼管脸面；免而无耻与有耻且格，分界在「耻」。"),
+    ("19", "论语·第十九课·吾十有五而志于学（阅读版）.html", "第十九课", "吾十有五而志于学",
+     "六阶六门：朱子注三次「无所事」——进德之序，是减动作之序；不惑知当然，知命知所以然。"),
+    ("20", "论语·第二十课·孟懿子问孝（阅读版）.html", "第二十课", "孟懿子问孝，子曰：无违",
+     "无违不是听父亲的话，是不背于理；礼即理之节文，生事死葬祭一条礼贯到底。"),
+    ("21", "论语·第二十一课·唯其疾之忧（阅读版）.html", "第二十一课", "父母唯其疾之忧",
+     "父母之心唯恐子病，子以父母之心为心：孝落在「不使父母悬心」处；两读并存（父母忧子为主、子忧父母兼存）；2.5 以礼定度，2.6 以情收心。"),
+    ("22", "论语·第二十二课·不敬何以别乎（阅读版）.html", "第二十二课", "今之孝者，是谓能养；不敬，何以别乎",
+     "养是底线，敬是分界；敬＝尊敬而不敢忽忘；养可外包，敬不可外包。"),
+    ("23", "论语·第二十三课·色难（阅读版）.html", "第二十三课", "色难。有事弟子服其劳；有酒食先生馔",
+     "色是颜气：心→气→色→容一条链；敬不可见，色可见；难在谁的脸上；家里的天气该由谁定。"),
+    ("24", "论语·第二十四课·如愚（为政2.9）（阅读版）.html", "第二十四课", "吾与回言终日，不违，如愚；退而省其私，亦足以发",
+     "不违三辨（不懂／不必问／不敢问）；省其私两读（燕居独处／与二三子说绎）；测点从当场挪到退后；判在发，不判在懂。"),
+    ("25", "论语·第二十五课·知人（为政2.10）（阅读版）.html", "第二十五课", "视其所以，观其所由，察其所安；人焉廋哉",
+     "三看分三层：视其事、观其路、察其落点；可见度递减，耐久度递增；人焉廋哉，是断语不是问句。"),
+    ("26", "论语·第二十六课·为师（为政2.11）（阅读版）.html", "第二十六课", "温故而知新，可以为师矣",
+     "温是寻绎，不是复习；新从旧里长出来，不是加料；「可以」是资格句：够格不在读了多少，在所学的活不活。"),
+    ("29", "论语·第二十九课·周而不比（为政2.14）（阅读版）.html", "第二十九课", "君子周而不比，小人比而不周",
+     "周与比都训「亲厚」，差在公私毫厘：周以事为心，照得宽；比以我为心，照得窄。周有差等而非齐平。附补论七节：君子小人语料统计（108／24、同章共见18条）、由位至德、判准收敛为义利一条。"),
+    ("28", "论语·第二十八课·先行（为政2.13）（阅读版）.html", "第二十八课", "子贡问君子。子曰：先行其言，而后从之",
+     "先行其言是倒装：行之于未言之前，言之于既行之后。本章管次序，不管守信；范氏说子贡之患在行之艰。"),
+    ("27", "论语·第二十七课·不器（为政2.12）（阅读版）.html", "第二十七课", "君子不器",
+     "器者各适其用而不能相通；成德者体无不具，故用无不周。先成器，再不器：一才一艺要有，只是不止于此。"),
+    ("30", "论语·第三十课·学而不思则罔（为政2.15）（阅读版）.html", "第三十课", "学而不思则罔，思而不学则殆",
+     "罔是昏而无得（不求诸心），殆是危而不安（不习其事）；包咸「疲」、朱子「危」两存。学思是相须不是配比：学供其料，思成其用。四附论：罔字义链、殆之两读、孔子之学四路、何时停思。"),
+    ("31", "论语·第三十一课·攻乎异端（为政2.16）（阅读版）.html", "第三十一课", "攻乎异端，斯害也已",
+     "攻二训（治／击），朱子取「专治而欲精之，为害甚矣」；异端所指三迁（杨墨／佛老／西学）；三读三害（离统／伤人／成罔），立场「有统而容异」。已并入论文二三个数：端两见（9.8／2.16）、统零见、归三见（1.9／12.1／20.1），增义理图三「一叩一攻」与附论五；再增附论六「端与线」，回灌论文三「局部与系统」：以端代全则偏、以全灭端则空、判准是回位率。"),
+    ("32", "论语·第三十二课·知之为知之（为政2.17）（阅读版）.html", "第三十二课", "知之为知之，不知为不知",
+     "一章六「知」，末字读智。子路好勇，朱子谓其「强其所不知以为知」，故孔子以「知」之界告之。三层：认识（知有所止）、伦理（不自欺）、教学（不知为起点）。四格图与三关图；附论五条：诲五见、女十九见、是知三见、不知二十八见、知与智。"),
+    ("33", "论语·第三十三课·子张学干禄（为政2.18）（阅读版）.html", "第三十三课", "多闻阙疑，慎言其余",
+     "子张问禄，孔子答以闻、见、阙、慎。三层骨架（朱子：学之博、择之精、守之约），三对（闻—言、见—行、阙—慎），以「其余」为分寸。「禄在其中」是结果论非目的论（与 15.32 同调）。图一待图位＋六句骨架图＋换位图；附论五条：干四见、阙五见、殆四见、尤悔各三、在其中。"),
+    ("34", "论语·第三十四课·举直错诸枉（为政2.19）（阅读版）.html", "第三十四课", "举直错诸枉，则民服",
+     "哀公问民服，孔子答以位置次序而非道德：举直、错诸枉，则枉者亦直（与 12.22「能使枉者直」互证）。附论以数字立证：枉 7、错 4、措 1、直 22、举 14、服 18。"),
+    ("35", "论语·第三十五课·临之以庄（为政2.20）（阅读版）.html", "第三十五课", "临之以庄则敬",
+     "临、庄、孝慈、举善教不能，四事一纲：在上者以身作则，民自劝。底本「勤」两处形讹，正文从通行本作「劝」，异文入存疑。数证：敬 22、忠 18、庄 6、慈 1、善 42、勤 3。"),
+    ("36", "论语·第三十六课·书云孝乎（为政2.21）（阅读版）.html", "第三十六课", "孝乎惟孝，友于兄弟",
+     "或谓孔子不为政，孔子引《书》答：孝于亲、友于兄弟、施于有政，是亦为政。重心在断句（「孝乎！惟孝」甲读）与文化政治的定义之争，非遁词。数证：孝 19、政 43、奚 11、施 6、书 5、友 27。"),
+    ("37", "论语·第三十七课·人而无信（为政2.22）（阅读版）.html", "第三十七课", "人而无信，不知其可也",
+     "信非道德装饰，是可行性的接口：大车无輗、小车无軏则动不了。三误读（权宜、私德、条文）与三条正解。数证：信 38、行 82、可 156、车 8、輗 1、軏 1。"),
+    ("38", "论语·第三十八课·十世可知（为政2.23）（阅读版）.html", "第三十八课", "十世可知也",
+     "所与者「因＋损益」的推演方法，不是预言术：礼相因而损益，继周者虽百世可知。一世三十年／父子相继两说入存疑；「其或继周者」不假定姬姓永续。数证：因 5、世 15、继 3、礼 76、百 17、殷 7。"),
+    ("39", "论语·第三十九课·非其鬼而祭之（为政2.24）（阅读版）.html", "第三十九课", "非其鬼而祭之，谄也",
+     "两截一理，落在「分」与「断」：谄在越分，无勇在当为不为；知义→行义→勇站得住，义勇相须。数证：鬼 5、祭 14、谄 3、义 24、勇 16。为政篇二十四章至此完篇。"),
+]
+
+# 专题表：(路径, 源文件, 称, 题, 提要)
+TOPICS = [
+    ("zt/6", "研究/论文·君子与小人（孔子语汇的定义与判准）.html", "论文一", "君子与小人：孔子语汇的定义与判准",
+     "以 2.14 为起点：君子 108 见／小人 24 见／同章共见 18 条；由位至德的词义迁移；小人三义（德义 20／身份 3／谦称 0）；判准收敛为义利一纲。三图、四表、三附录。"),
+    ("zt/7", "研究/论文·叩两端与攻一端（攻乎异端义理考）.html", "论文二", "叩两端与攻一端：「攻乎异端」在《论语》义理系统中的位置",
+     "以《论语》封闭语料为据：异 11／端 3（义理 2）／统 0／归 11（义理 3）／攻 4；由 9.8「叩其两端」反照 2.16「攻一端」，判准在「归」不在名单；两图、三附录。"),
+    ("zt/8", "研究/论文·学之一端与教之多端（因材施教与攻乎异端）.html", "论文三", "学之一端与教之多端：「攻乎异端」的学、教两面，兼论因材施教的义理根据",
+     "2.15—2.16—2.17 为学教三连章，「诲」字正在 2.17；11.22 孔子自陈「进退」之法；问孝四、问政五、问仁六，同归殊涂。补「局部与系统」一节：以端代全则偏，以全灭端则空，判准是回位率。三图、三附录。"),
+    ("zt/1", "论语·专题·无邪深读（阅读版）.html", "专题一", "《诗三百》与「思无邪」深读",
+     "十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。"),
+    ("zt/2", "论语·专题·孔子的道与德（阅读版）.html", "专题二", "孔子的道与德，对着老子读",
+     "十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。"),
+    ("zt/3", "论语·专题·这是不是回忆（阅读版）.html", "专题三", "2.4 读法辨：这是不是回忆",
+     "十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。"),
+    ("zt/4", "论语·专题·孝道通释与辨析（阅读版）.html", "专题四", "孝：从一字到一经",
+     "八章、七表、三图：19 字 14 章全录分章辨，注疏四层、四维四界、《孝经》三转写与五四三箭。"),
+    ("zt/5", "论语·专题·孝与道（道可道重读·阅读版）.html", "专题五", "孝与道：药与饭——以「道可道」重读孝",
+     "十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。"),
+]
+
+SERIES = [
+    ("道德经", "https://q1z2q3-debug.github.io/runze-daodejing/"),
+    ("心经", "https://q1z2q3-debug.github.io/daokedao-xinjing/"),
+    ("金刚经", "https://q1z2q3-debug.github.io/daokedao-jingang/"),
+    ("坛经", "https://q1z2q3-debug.github.io/daokedao-tanjing/"),
+    ("阴符经", "https://q1z2q3-debug.github.io/daokedao-yinfujing/"),
+    ("易传", "https://q1z2q3-debug.github.io/daokedao-yijing/"),
+    ("庄子", "https://q1z2q3-debug.github.io/daokedao-zhuangzi/"),
+    ("千字文", "https://q1z2q3-debug.github.io/daokedao-qianziwen/"),
+    ("三字经", "https://q1z2q3-debug.github.io/daokedao-sanzijing/"),
+    ("甲骨文", "https://q1z2q3-debug.github.io/daokedao-jiaguwen/"),
+]
+
+CSS = """
+:root{--paper:#F7F4EE;--paper2:#FCFAF6;--ink:#25211D;--ink2:#3B352F;
+  --ochre:#994433;--brown:#7C6D5C;--line:#DCD5C8}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#F7F4EE;color:#25211D;
+  font-family:"Noto Serif SC","Songti SC","Source Han Serif SC",serif;
+  font-size:17px;line-height:1.95;letter-spacing:.01em}
+a{color:#994433;text-decoration:none;border-bottom:1px solid rgba(153,68,51,.28)}
+a:hover{border-bottom-color:#994433}
+.wrap{max-width:780px;margin:0 auto;padding:38px 22px 72px}
+.top{display:flex;justify-content:space-between;align-items:baseline;
+  border-bottom:1px solid #DCD5C8;padding-bottom:10px;margin-bottom:34px;
+  font-size:12.5px;letter-spacing:.18em;color:#7C6D5C;
+  font-family:"Noto Sans SC","PingFang SC",sans-serif}
+.top b{color:#994433;font-weight:500}
+.hd{padding:6px 0 10px}
+.series{font-size:12px;letter-spacing:.42em;color:#994433;margin-bottom:14px}
+h1.title{font-size:40px;line-height:1.4;margin:0 0 10px;font-weight:600;letter-spacing:.1em}
+.sub{font-size:15px;color:#7C6D5C;margin:0 0 18px;letter-spacing:.06em}
+.stat{font-size:12.5px;color:#7C6D5C;font-family:"Noto Sans SC",sans-serif}
+.stat span{display:inline-block;margin-right:16px}
+.stat em{font-style:normal;color:#994433}
+h2{font-size:23px;margin:46px 0 8px;letter-spacing:.14em;font-weight:600}
+h2.ch{font-size:27px;letter-spacing:.16em;margin:44px 0 12px}
+h2 small{font-size:12px;color:#7C6D5C;letter-spacing:.1em;margin-left:10px;font-weight:400}
+.lead{font-size:13.5px;color:#7C6D5C;margin:0 0 16px;letter-spacing:.03em}
+p{margin:0 0 1.05em;text-align:justify}
+.list{border-top:1px solid #DCD5C8}
+.item{padding:18px 0 16px;border-bottom:1px solid #E7E0D4}
+.item .no{font-size:11.5px;letter-spacing:.22em;color:#994433;
+  font-family:"Noto Sans SC",sans-serif;margin-bottom:5px}
+.item .t{font-size:19px;letter-spacing:.03em;margin:0 0 4px}
+.item .s{font-size:13px;color:#5C5348;margin:0 0 6px}
+.item .k{font-size:12.5px;color:#7C6D5C}
+.item .k a{font-size:12.5px}
+.rows{border-top:1px solid #DCD5C8;margin-top:6px}
+.row{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:13px 0;
+  border-bottom:1px solid #E7E0D4}
+.row .kk{font-size:12.5px;color:#994433;letter-spacing:.12em;
+  font-family:"Noto Sans SC",sans-serif;line-height:1.85}
+.row .vv{font-size:15px}
+.five{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px}
+.five div{border:1px solid #DCD5C8;background:#FCFAF6;padding:12px 10px;text-align:center}
+.five i{display:block;font-style:normal;font-size:20px;color:#994433;margin-bottom:4px}
+.five small{font-size:11.5px;color:#7C6D5C;line-height:1.6;display:block}
+.foot{margin-top:54px;padding-top:16px;border-top:1px solid #DCD5C8;
+  font-size:12px;color:#7C6D5C;line-height:2}
+.foot a{margin-right:12px}
+.series-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:1px;margin-top:8px;border-top:1px solid #DCD5C8;border-left:1px solid #E7E0D4}
+.series-grid a{display:block;padding:11px 12px;font-size:14px;border:0;
+  border-right:1px solid #E7E0D4;border-bottom:1px solid #E7E0D4;background:#FCFAF6}
+.series-grid a small{display:block;font-size:11px;color:#8E8071;letter-spacing:.08em;margin-top:2px}
+.btn{display:inline-block;border:1px solid #994433;color:#994433;padding:6px 16px;
+  font-size:13px;letter-spacing:.12em;margin-top:6px}
+@media (max-width:640px){
+  .wrap{padding:26px 16px 56px}
+  h1.title{font-size:28px;letter-spacing:.06em}
+  .row{grid-template-columns:1fr;gap:4px}
+  .five{grid-template-columns:1fr 1fr}
+  .top{font-size:11.5px;letter-spacing:.1em}
+}
+""" + kit.COVER_CSS + "@media (max-width:640px){" + kit.COVER_MQ + "}"
+
+
+def shell(title, desc, body, canonical=""):
+    can = '<link rel="canonical" href="%s">' % canonical if canonical else ""
+    return """<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>%s</title>
+<meta name="description" content="%s">
+<meta name="author" content="润泽">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="book">
+<meta property="og:title" content="%s">
+<meta property="og:description" content="%s">
+<meta property="og:site_name" content="润泽说 道可道">
+<meta property="og:image" content="https://q1z2q3-debug.github.io/daokedao-lunyu/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://q1z2q3-debug.github.io/daokedao-lunyu/og.png">
+%s<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>%s</style>
+</head>
+<body>
+%s
+</body>
+</html>
+""" % (title, desc, title, desc, can, CSS, body)
+
+
+def cover_block():
+    return kit.cover(
+        title="论语",
+        tag="学 而 篇 · 连 载",
+        seal="论",
+        gatha_first=("学而时习之", "不亦说乎"),
+        gatha_second=("人不知而不愠", "不亦君子乎"),
+        meta=["底本　朱熹《论语集注》", "体例　一章一课 · 两页双读", "已刊　前言 · 学而十六章 · 为政二十四章 · 专题五篇 · 论文三篇", "v" + VERSION + " · 二〇二六"],
+    )
+
+
+def frontis_block():
+    return kit.frontis(
+        title="润泽说 道可道之论语",
+        sub="论语 · 通释读本（连载）",
+        lines=[
+            ("底本", "朱熹《论语集注》，参校何晏《集解》、刘宝楠《正义》"),
+            ("体例", "一章一课；每课少儿页七块、成人页十三至十四节"),
+            ("图", "典故图由作者供图；义理图手写 SVG，随课附文件"),
+            ("进度", "全书四百九十八章，已刊前言、学而十六章、为政二十四章；另出专题五篇、论文三篇"),
+            ("版本", "v" + VERSION),
+        ],
+        seal="论",
+    )
+
+
+def toc_items():
+    out = []
+    for slug, fname, no, verse, gist in COURSES:
+        out.append(
+            '<div class="item"><div class="no">%s</div>'
+            '<div class="t">%s</div><div class="s">%s</div>'
+            '<div class="k"><a href="ke/%s.html">进入阅读版 →</a></div></div>'
+            % (no, verse, gist, slug)
+        )
+    return "".join(out)
+
+
+def topic_items():
+    out = []
+    for path, _f, no, verse, gist in TOPICS:
+        out.append(
+            '<div class="item"><div class="no">%s</div>'
+            '<div class="t">%s</div><div class="s">%s</div>'
+            '<div class="k"><a href="%s.html">进入阅读版 →</a></div></div>'
+            % (no, verse, gist, path)
+        )
+    return "".join(out)
+
+
+def build_index():
+    body = """<div class="wrap">
+<div class="top"><div>润 泽 说 · 道 可 道 之 论 语</div><div><b>学而 · 为政</b>　连载 · v%s</div></div>
+<div class="hd">
+  <div class="series">润 泽 说 · 道 可 道</div>
+  <h1 class="title">论语 · 通释</h1>
+  <p class="sub">一章一课，一课两页；少儿页可念，成人页可考。底本朱熹《论语集注》。</p>
+  <div class="stat"><span>全书 <em>498</em> 章</span><span>已刊 <em>47</em> 件</span><span>版本 v%s</span></div>
+</div>
+
+<h2>卷首语<small>为什么这样读</small></h2>
+<p>注了两千年的书，最容易被注遮住。这一部先做一件事：<b>把原文摆回它自己的时代，让它说自己的话；义理另开一节，标清是谁的引申。</b></p>
+<p>贯穿全书一条总纲：<b>一阴一阳之谓道</b>——学是受（阴、向内收），习是发（阳、向外放）。只学不习，是替别人保管知识；只习不学，是自己摸黑走路。</p>
+<p>所以每一课都问一句：这章说的是<b>哪件事、哪个字</b>？说不出，就退入存疑，不写成定论。</p>
+
+<h2>已刊四十一课<small>前言 · 学而十六章 · 为政二十四章</small></h2>
+<p class="lead">按课次顺序；每件都有少儿页与成人页，另附义理图。</p>
+<div class="list">%s</div>
+<a class="btn" href="book.html">从卷首读起（封面 · 扉页 · 前言）</a>
+
+<h2>专题<small>不释经，只深读一处</small></h2>
+<p class="lead">专题不按章次走：一处读透，向下几层。</p>
+<div class="list">%s</div>
+
+<h2>体例<small>一页两读</small></h2>
+<div class="rows">
+  <div class="row"><div class="kk">少儿页</div><div class="vv">字义小课堂、一句话讲清、共读、生活里的一天、三个小问题、成长小启示、家长栏（勘俗见、现代对照、常变主线、教与学二分、时代落点、融西、可做一件）。句子短，画面具体。</div></div>
+  <div class="row"><div class="kk">成人页</div><div class="vv">连读、字义句读、时代背景、章旨、朱子注、分寸、反面、张力、脉络、跨典、存疑、双卡、阴阳五蕴；后附典故图与读图、义理图、附论。每节先一句断语，再出证据。</div></div>
+  <div class="row"><div class="kk">图</div><div class="vv">典故图由作者供图，助手只写提示词、不擅自生图；义理图手写 SVG，页面内嵌为唯一源，导出独立文件随仓库留存。</div></div>
+  <div class="row"><div class="kk">存疑</div><div class="vv">被否定的解读不销毁：撤出正文，另存并标「存疑」，不写成定论。</div></div>
+</div>
+
+<h2>五步读法<small>前三步求真，后两步求活</small></h2>
+<div class="five">
+  <div><i>校</i><small>校字<br>底本 · 异文 · 音读</small></div>
+  <div><i>境</i><small>还境<br>制度 · 称谓 · 场景</small></div>
+  <div><i>义</i><small>立义<br>须超出时代</small></div>
+  <div><i>疑</i><small>存疑<br>说不清就写出来</small></div>
+  <div><i>用</i><small>致用<br>在自己的世代做</small></div>
+</div>
+
+<h2>同系列<small>润泽说 · 道可道</small></h2>
+<p class="lead">同一位作者、同一套义理（三才五蕴、阴阳和合）、同一种体例。</p>
+<div class="series-grid">%s</div>
+
+<div class="foot">
+  <div>润泽说 道可道之论语 · 通释　v%s　（2026-11-20）</div>
+  <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
+  <div>全书四百九十八章，按篇连载；本书为连载第一批（四十一课＋专题五篇＋论文三篇）。许可：CC BY-NC-SA 4.0</div>
+  <div><a href="https://github.com/q1z2q3-debug/daokedao-lunyu">GitHub 仓库</a><a href="book.html">卷首</a><a href="sitemap.xml">站点地图</a></div>
+</div>
+</div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"润泽说 道可道之论语 · 通释",
+"author":{"@type":"Person","name":"润泽"},"inLanguage":"zh-CN","bookEdition":"v%s",
+"description":"《论语》通释读本，一章一课，少儿页与成人页双读；底本朱熹《论语集注》。全书四百九十八章，按篇连载。",
+"publisher":{"@type":"Organization","name":"润泽说 道可道"},
+"hasPart":[%s]}
+</script>""" % (
+        VERSION,
+        VERSION,
+        toc_items(),
+        topic_items(),
+        "".join('<a href="%s">%s<small>通释读本</small></a>' % (u, n) for n, u in SERIES),
+        VERSION,
+        VERSION,
+        ",".join('{"@type":"Chapter","name":"%s","url":"%s/ke/%s.html"}' % (no, SITE, slug) for slug, _f, no, _v, _g in COURSES),
+    )
+    open(os.path.join(DOCS, "index.html"), "w", encoding="utf-8").write(
+        shell(
+            "润泽说 道可道之论语 · 通释｜《论语》通释读本（连载）",
+            "《论语》通释：一章一课，少儿页可念、成人页可考。已刊前言、学而十六章、为政二十四章，另出专题五篇、论文三篇，底本朱熹《论语集注》，义理图手写、存疑另立。",
+            body,
+            SITE + "/",
+        )
+    )
+
+
+def build_book():
+    pre_md = os.path.join(SRC, "前言-读论语之前.md")
+    txt = open(pre_md, encoding="utf-8").read()
+    frag = subprocess.run(["pandoc", "-f", "markdown", "-t", "html5", "--no-highlight"],
+                          input=txt.encode("utf-8"), stdout=subprocess.PIPE, check=True).stdout.decode()
+    frag = frag.replace("<h1", "<h2 class=\"ch\"", 1)
+    frag = frag.replace("</h1>", "</h2>", 1)
+
+    body = """<div class="wrap">
+<div class="top"><div><a href="index.html" style="border:0">← 目录</a></div><div>润 泽 说 · 道 可 道 之 论 语</div></div>
+%s
+%s
+<div class="wrap" style="padding-top:0">
+<h2 style="font-size:26px;letter-spacing:.16em;margin:44px 0 10px">读法、总纲与体例</h2>
+<p class="lead">前言十节，全文如下；正文六课见目录，各附义理图。</p>
+%s
+<h2 style="font-size:26px;letter-spacing:.16em;margin:44px 0 10px">六课目录</h2>
+<div class="list">%s</div>
+<div class="foot">
+  <div>润泽说 道可道之论语 · 通释　卷首　v%s　（2026-11-20）</div>
+  <div>底本：朱熹《论语集注》　参校：何晏《集解》、刘宝楠《正义》</div>
+</div>
+</div>
+</div>""" % (cover_block(), frontis_block(), frag, toc_items(), VERSION)
+
+    open(os.path.join(DOCS, "book.html"), "w", encoding="utf-8").write(
+        shell(
+            "卷首：封面 · 扉页 · 前言｜润泽说 道可道之论语",
+            "《论语》通释读本卷首：封面、扉页与前言十节（为什么从原文读起、一条总纲、君子不器、时的三层、认知之圆、朋来互享、五步读法、融西、体例、后续之路）。",
+            body,
+            SITE + "/book.html",
+        )
+    )
+
+
+NAV = """<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+"""
+
+
+def build_courses():
+    outdir = os.path.join(DOCS, "ke")
+    os.makedirs(outdir, exist_ok=True)
+    n = 0
+    for slug, fname, *_ in COURSES:
+        src = os.path.join(SRC, fname)
+        if not os.path.exists(src):
+            print("[warn] 缺文件：", fname)
+            continue
+        html = open(src, encoding="utf-8").read()
+        m = re.search(r"<body[^>]*>", html)
+        if m:
+            html = html[:m.end()] + "\n" + NAV + html[m.end():]
+        open(os.path.join(outdir, slug + ".html"), "w", encoding="utf-8").write(html)
+        n += 1
+    print("已注入返回条并拷贝 %d 篇" % n)
+
+
+def build_topics():
+    outdir = os.path.join(DOCS, "zt")
+    os.makedirs(outdir, exist_ok=True)
+    n = 0
+    for path, fname, *_ in TOPICS:
+        src = os.path.join(SRC, fname)
+        if not os.path.exists(src):
+            print("[warn] 缺文件：", fname)
+            continue
+        html = open(src, encoding="utf-8").read()
+        m = re.search(r"<body[^>]*>", html)
+        if m:
+            html = html[:m.end()] + "\n" + NAV + html[m.end():]
+        out = os.path.join(DOCS, path + ".html")
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        open(out, "w", encoding="utf-8").write(html)
+        n += 1
+    print("已注入返回条并拷贝专题 %d 篇" % n)
+
+
+FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" rx="10" fill="#994433"/>
+<text x="32" y="45" font-size="40" text-anchor="middle" fill="#F7F4EE"
+font-family="'Noto Serif SC','Songti SC',serif">论</text></svg>"""
+
+
+def build_meta():
+    open(os.path.join(DOCS, "favicon.svg"), "w", encoding="utf-8").write(FAVICON)
+    urls = ["", "book.html"] + ["ke/%s.html" % c[0] for c in COURSES] + ["%s.html" % z[0] for z in TOPICS]
+    sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    for u in urls:
+        sm += "<url><loc>%s/%s</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq></url>\n" % (SITE, u)
+    sm += "</urlset>\n"
+    open(os.path.join(DOCS, "sitemap.xml"), "w", encoding="utf-8").write(sm)
+
+    open(os.path.join(DOCS, "robots.txt"), "w", encoding="utf-8").write(
+        "User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\n"
+        "Sitemap: %s/sitemap.xml\n" % SITE)
+
+    llms = """# 润泽说 道可道之论语 · 通释
+
+> 《论语》通释读本，连载中。底本朱熹《论语集注》，全书四百九十八章，一章一课。
+> 每课两页：少儿页（可念、可见）与成人页（可考、可查）。义理图手写 SVG；被否定的解读撤出正文另立「存疑」。
+
+## 已刊
+"""
+    for slug, _f, no, verse, gist in COURSES:
+        llms += "- %s｜%s｜%s：%s/%s/ke/%s.html\n" % (no, verse, gist, SITE, "", slug)
+    llms += "\n## 专题\n"
+    for path, _f, no, verse, gist in TOPICS:
+        llms += "- %s｜%s｜%s：%s/%s.html\n" % (no, verse, gist, SITE, path)
+    llms += """
+## 引用
+润泽《润泽说 道可道之论语 · 通释》v%s，%s/
+
+## 义理口径
+一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
+不新造名相；凡解读须指回原文的哪个字、哪一句；指不回者入「存疑」。
+""" % (VERSION, SITE)
+    open(os.path.join(DOCS, "llms.txt"), "w", encoding="utf-8").write(llms)
+
+
+def main():
+    os.makedirs(DOCS, exist_ok=True)
+    build_index()
+    build_book()
+    build_courses()
+    build_topics()
+    build_meta()
+    print("站点已生成：" , DOCS)
+
+
+if __name__ == "__main__":
+    main()

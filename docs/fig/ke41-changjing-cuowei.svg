@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="250" role="img" aria-label="场景错位：雍诗场景为天子主祭辟公助祭，三家堂为大夫主祭，诗中无三家之位">
+    <rect x="24" y="60" width="160" height="76" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="104" y="86" text-anchor="middle" font-size="13" fill="#2F2A24">《雍》诗场景</text>
+    <text x="104" y="108" text-anchor="middle" font-size="10.5" fill="#8A8074">天子主祭</text>
+    <text x="104" y="124" text-anchor="middle" font-size="10.5" fill="#8A8074">辟公助祭</text>
+    <line x1="220" y1="60" x2="220" y2="136" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <rect x="256" y="60" width="160" height="76" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="336" y="86" text-anchor="middle" font-size="13" fill="#2F2A24">三家之堂</text>
+    <text x="336" y="108" text-anchor="middle" font-size="10.5" fill="#8A8074">大夫主祭</text>
+    <text x="336" y="124" text-anchor="middle" font-size="10.5" fill="#8A8074">家臣相从</text>
+    <path d="M186 98 L254 98" stroke="#A2503B" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <path d="M254 98 l-7 -3 M254 98 l-7 3" stroke="#A2503B" stroke-width="1.6" fill="none"/>
+    <text x="220" y="180" text-anchor="middle" font-size="12" fill="#A2503B">诗中无三家之位</text>
+    <text x="220" y="212" text-anchor="middle" font-size="10.5" fill="#5C5347">奚取于三家之堂？</text>
+  </svg>

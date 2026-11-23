@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 270" width="440" height="270" role="img" aria-label="尺度私有化路径：礼为公度，到大夫私上调佾数，到尺度私有化，到秩序失效；下方三条反方形式主义、效能说、人情说皆不能替公度">
+    <rect x="20" y="40" width="86" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="63" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">礼为公度</text>
+    <text x="63" y="82" text-anchor="middle" font-size="10" fill="#8A8074">可比可核</text>
+    <path d="M108 69 L128 69" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M128 69 l-6 -2 M128 69 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="130" y="40" width="86" height="58" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="173" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">私上调佾数</text>
+    <text x="173" y="82" text-anchor="middle" font-size="10" fill="#8A8074">大夫之身</text>
+    <path d="M218 69 L238 69" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M238 69 l-6 -2 M238 69 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="40" width="86" height="58" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="283" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">尺度私有化</text>
+    <text x="283" y="82" text-anchor="middle" font-size="10" fill="#8A8074">落入私意</text>
+    <path d="M328 69 L348 69" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M348 69 l-6 -2 M348 69 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="350" y="40" width="72" height="58" fill="#FFFDF6" stroke="#2F2A24"/>
+    <text x="386" y="64" text-anchor="middle" font-size="11.5" fill="#2F2A24">秩序失效</text>
+    <text x="386" y="82" text-anchor="middle" font-size="10" fill="#8A8074">尺不可核</text>
+    <line x1="40" y1="140" x2="400" y2="140" stroke="#DED2B9" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="220" y="130" text-anchor="middle" font-size="10.5" fill="#8A8074">反方三条，皆不能替公度</text>
+    <rect x="30" y="160" width="110" height="54" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="85" y="184" text-anchor="middle" font-size="11" fill="#5C5347">形式主义</text>
+    <text x="85" y="202" text-anchor="middle" font-size="10" fill="#8A8074">人数无关紧要</text>
+    <rect x="165" y="160" width="110" height="54" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="220" y="184" text-anchor="middle" font-size="11" fill="#5C5347">效能说</text>
+    <text x="220" y="202" text-anchor="middle" font-size="10" fill="#8A8074">排场即权威</text>
+    <rect x="300" y="160" width="110" height="54" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="355" y="184" text-anchor="middle" font-size="11" fill="#5C5347">人情说</text>
+    <text x="355" y="202" text-anchor="middle" font-size="10" fill="#8A8074">家祭从厚</text>
+    <path d="M85 216 L85 234" stroke="#C58A73" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M220 216 L220 234" stroke="#C58A73" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M355 216 L355 234" stroke="#C58A73" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <text x="220" y="252" text-anchor="middle" font-size="10.5" fill="#5C5347">心诚须落在礼上，人情不能替尺度</text>
+  </svg>
