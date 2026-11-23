@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第四十二课 人而不仁如礼何（八佾 3.3）</title>
+<meta name="description" content="《论语·八佾》3.3 子曰人而不仁，如礼何？人而不仁，如乐何？一课两页：少儿页讲仁是礼乐的根、无仁则礼乐空转；成人页论「如……何」句式、礼乐与仁的先后、「而」字两读，驳礼乐自足论、诚意论、功能论，附仁礼乐如礼何玉帛钟鼓六类字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　八佾第三 · 二十六章　第 43 课 / 498</div>
+</div>
+
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第43课 · 3.4</div>
+  <h1>林放问礼之本</h1>
+  <div class="h1-sub">八佾第三 · 3.4　第 43 课</div>
+  <div class="src">原文：林放问礼之本。子曰：「大哉问！礼，与其奢也，宁俭；丧，与其易也，宁戚。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">本</div><div class="tzcap">礼从哪里长出来</div></div><div class="tzitem"><div class="cell">奢</div><div class="tzcap">排场过头</div></div><div class="tzitem"><div class="cell">俭</div><div class="tzcap">简而不薄</div></div><div class="tzitem"><div class="cell">戚</div><div class="tzcap">哀在心里</div></div></div><div class="h2" id="sc-2">一句话讲清</div><div class="scene">有人问孔子：礼的根本是什么？夫子先说这问题问得好，然后给了两个对比：办礼，与其铺张，不如朴素；办丧事，与其只是把事办得顺溜，不如心里真的难过。</div><div class="h2" id="sc-3">字义小窗</div><div class="rows"><div class="row"><div class="k">林放</div><div class="v">鲁国人，好礼而问其本。</div></div><div class="row"><div class="k">本</div><div class="v">树根。礼的根，不在器物，在心。</div></div><div class="row"><div class="k">易</div><div class="v">把事情办得轻省、顺当，却少了那份郑重。</div></div><div class="row"><div class="k">戚</div><div class="v">哀戚，心里的难过。</div></div></div><div class="h2" id="sc-4">共读</div><div class="scene">「大哉问！」——夫子不是在夸人，是在夸这个问题。礼被办成一套流程以后，很少有人再回头问：这一套究竟为了什么。</div><div class="scene">「与其奢也，宁俭」——两个都不完美，但奢离本更远。俭是少，不是薄；是把多余的东西去掉，留下要紧的。</div><div class="h2" id="sc-5">生活里的一天</div><div class="scene">奶奶过生日，家里订了很大的蛋糕、请了很多人，可奶奶一直坐在角落里没说话。后来小辈们围过来，一人说一句小时候的事，她才笑起来——那天最像「过生日」的，是后面那半小时。</div><div class="scene">同学的爷爷走了。灵堂布置得很体面，司仪的话一句接一句，可同学一直低着头。散场时他说：其实我只想再安静坐一会儿。</div><div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k">问题一</div><div class="v">「与其奢也，宁俭」，是不是说越省越好？</div></div><div class="row"><div class="k">问题二</div><div class="v">丧事里「易」和「戚」差在哪里？</div></div><div class="row"><div class="k">问题三</div><div class="v">你参加过的那场婚礼或葬礼，哪一刻让你觉得「这才是真的」？</div></div></div><div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k">一</div><div class="v">做事先把「为谁做」想清楚，再想「做多大」。</div></div><div class="row"><div class="k">二</div><div class="v">少一点，但每一样都用上心——这叫俭，不叫省。</div></div><div class="row"><div class="k">三</div><div class="v">难过的时候不必装镇定，那是礼允许的。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第43课 · 3.4</div>
+  <h1>林放问礼之本</h1>
+  <div class="h1-sub">八佾第三 · 3.4　第 43 课</div>
+  <div class="src">原文：林放问礼之本。子曰：「大哉问！礼，与其奢也，宁俭；丧，与其易也，宁戚。」</div>
+  <div class="h2" id="sc-lian">连读：从僭到本</div><div class="scene">3.1 八佾舞于庭，僭在数；3.2 三家以雍彻，僭在位；3.3 人而不仁如礼何，点出礼乐无所附丽。三章连着讲「礼失」，3.4 忽然掉头问「礼之本」——失其本，才处处只剩形式。</div><div class="h2" id="sc-b">字义句读</div><div class="rows"><div class="row"><div class="k">林放</div><div class="v">鲁人。《论语》中仅此一见，因一问而留名。</div></div><div class="row"><div class="k">本</div><div class="v">与本末相对。朱子：「礼之本，在于俭戚。」</div></div><div class="row"><div class="k k2">奢 / 俭</div><div class="v">奢，过也；俭，约也。二者皆非中，而奢去本远。</div></div><div class="row"><div class="k">易</div><div class="v">朱子训「慢易」，谓治丧轻慢、徒具其事；郑玄一路训「治」，亦通。</div></div><div class="row"><div class="k">戚</div><div class="v">哀戚。丧礼之本在哀，不在仪节之备。</div></div></div><div class="h2" id="sc-c">两读：「易」字怎么讲</div><div class="scene">一读：易＝慢易。丧事办得顺溜、轻省，仪节不缺而哀情不足。此读与「戚」正相对，朱子取之。</div><div class="scene">二读：易＝治。郑玄「易谓治也」，谓料理丧事周全。若作此读，则「与其易也，宁戚」是说：与其把事办得周全，不如心里真有哀——朱子其实也承此意，只是把「易」的贬义说得更明。</div><div class="scene">两读不冲突：都指向「事办得好，心不到」。差别只在「易」是轻慢，还是仅仅「办得周全」。</div><div class="h2" id="sc-d">章旨</div><div class="scene">礼有本有文。文是器物、仪节、排场；本是敬与哀。夫子不否认文，只说：两个方向都偏时，宁可往本那边偏。这是给「礼」定优先级，不是否定礼。</div><div class="h2" id="sc-e">三层</div><div class="rows"><div class="row"><div class="k">第一层</div><div class="v">问得对：先把问题问对，答案才可能对。</div></div><div class="row"><div class="k">第二层</div><div class="v">奢不如俭：多在物上用力，少在心上用力，礼就越办越空。</div></div><div class="row"><div class="k">第三层</div><div class="v">易不如戚：丧礼最不能省的，是那份难过。</div></div></div><div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「易」训「慢易」还是「治」，汉宋两读；本文两存，以「心不到」为共义。</div><div class="q">「与其…宁…」是比较句式，非取舍定论：夫子未说奢可废，只说二者相权。</div><div class="q">林放其人，一说是鲁人，一说为孔子弟子；《史记·弟子列传》不载，本文取「鲁人」而不列入门人。</div><div class="q">此章是否专对鲁国当时僭奢之风而发，无确证，只能看作通则。</div></div><div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">奢：物有余</div><div class="b">俭：物不足而心足</div></div><div class="pair"><div class="a">易：事办得顺</div><div class="b">戚：心跟得上</div></div><div class="pair"><div class="a">本：敬与哀</div><div class="b">文：器与仪</div></div><div class="pair"><div class="a">礼之用：和</div><div class="b">礼之失：空转</div></div></div><div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《礼记·檀弓》</div><div class="b">丧礼主哀，与其哀不足而礼有余，不若礼不足而哀有余。</div></div><div class="pair"><div class="a">《八佾》3.3</div><div class="b">人而不仁如礼何——本亡则文无所附。</div></div><div class="pair"><div class="a">《学而》1.13</div><div class="b">礼之用，和为贵——本立而后文行。</div></div><div class="pair"><div class="a">《阳货》17.8</div><div class="b">礼云礼云，玉帛云乎哉——同一声问。</div></div></div><div class="h2" id="sc-19">图一　林放问本</div><div class="figs single"><div class="fig"><div class="cap">图一 · 一问之下，满庭陈设忽然显得轻</div><div class="ph">图位：竖幅 3:4 水墨。庭中陈设齐备而无人用心：一侧几案上礼器罗列、锦帛堆叠；另一侧一位士人空手立着，只向夫子发问。夫子坐着，手未指器物，只微向前倾。远处两三个仆役还在搬抬器物，动作忙碌而神情空。重心在「物多而心少」的反差，画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>庭中陈设齐备而无人用心：一侧几案上礼器罗列、锦帛堆叠；另一侧一位士人空手立着，只向夫子发问。夫子坐着，手未指器物，只微向前倾。远处两三个仆役还在搬抬器物，动作忙碌而神情空。重心在「物多而心少」的反差，画面零文字。</pre></details><div class="h2" id="sc-20">义理图一　四对坐标</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" role="img" aria-label="礼的四个坐标：奢与俭、易与戚">
+  <line x1="60" y1="130" x2="380" y2="130" stroke="#DED2B9"/>
+  <circle cx="60" cy="130" r="5" fill="#A2503B"/><circle cx="380" cy="130" r="5" fill="#4A5C55"/>
+  <text x="60" y="112" text-anchor="middle" font-size="12" fill="#A2503B">奢</text>
+  <text x="60" y="152" text-anchor="middle" font-size="10.5" fill="#8A8074">物有余</text>
+  <text x="380" y="112" text-anchor="middle" font-size="12" fill="#4A5C55">俭</text>
+  <text x="380" y="152" text-anchor="middle" font-size="10.5" fill="#8A8074">物不足</text>
+  <text x="220" y="78" text-anchor="middle" font-size="11" fill="#2F2A24">礼：与其奢也，宁俭</text>
+  <line x1="60" y1="212" x2="380" y2="212" stroke="#DED2B9"/>
+  <circle cx="60" cy="212" r="5" fill="#A2503B"/><circle cx="380" cy="212" r="5" fill="#4A5C55"/>
+  <text x="60" y="238" text-anchor="middle" font-size="12" fill="#A2503B">易</text>
+  <text x="60" y="196" text-anchor="middle" font-size="10.5" fill="#8A8074">事办得顺</text>
+  <text x="380" y="238" text-anchor="middle" font-size="12" fill="#4A5C55">戚</text>
+  <text x="380" y="196" text-anchor="middle" font-size="10.5" fill="#8A8074">心跟得上</text>
+  <text x="220" y="196" text-anchor="middle" font-size="11" fill="#2F2A24">丧：与其易也，宁戚</text>
+</svg></div><div class="figcap">义理图一 · 两条轴，四端：偏于物者退半步，偏于心者进一步。</div><div class="h2" id="sc-21">义理图二　本与文</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240" role="img" aria-label="本在情，文在物；本文相须">
+  <circle cx="150" cy="120" r="44" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="150" y="118" text-anchor="middle" font-size="19" font-weight="600" fill="#A2503B">本</text>
+  <text x="150" y="140" text-anchor="middle" font-size="10.5" fill="#8A8074">敬 · 哀</text>
+  <rect x="270" y="86" width="126" height="68" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="333" y="114" text-anchor="middle" font-size="16" fill="#2F2A24">文</text>
+  <text x="333" y="134" text-anchor="middle" font-size="10.5" fill="#8A8074">器 · 仪 · 排场</text>
+  <line x1="194" y1="120" x2="270" y2="120" stroke="#4A5C55" stroke-width="1.5"/>
+  <polygon points="270,120 261,116 261,124" fill="#4A5C55"/>
+  <text x="232" y="108" text-anchor="middle" font-size="10" fill="#4A5C55">附丽</text>
+  <text x="220" y="210" text-anchor="middle" font-size="11" fill="#2F2A24">本亡则文空转：礼云礼云，玉帛云乎哉</text>
+</svg></div><div class="figcap">义理图二 · 文依本立；本去，文只剩动作。</div><div class="h2" id="sc-22">附论一　俭不是寒酸</div><div class="scene">俭的反面不是体面，是「用力用错了地方」。一场婚礼，把预算花在灯光和车队，还是花在让每位长辈坐得舒服、说得上话——前者是奢，后者未必贵。俭的判准不在花多少钱，在每一分钱是否落在人身上。</div><div class="h2" id="sc-23">附论二　丧礼允许你难过</div><div class="scene">今天很多丧事被办成一场「流程管理」：时间、路线、致辞、答谢，样样周全，唯独没有留给哀伤的位置。夫子这句话像是替活着的人争一个权利：你可以不周全，但你不必不难过。</div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.49</div><div class="foot-r">第 43 课 / 498</div></footer>
+</section>
+</footer>
+</div>
+</body>
+</html>
