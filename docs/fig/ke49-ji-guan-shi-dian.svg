@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="灌是降神，灌后是人事：时点一分为二">
+  <rect x="40" y="60" width="150" height="76" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="92" text-anchor="middle" font-size="13" fill="#4A5C55">灌 · 降神</text>
+  <text x="115" y="116" text-anchor="middle" font-size="10" fill="#8A8074">初献，尚有敬心</text>
+  <rect x="250" y="60" width="150" height="76" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="325" y="92" text-anchor="middle" font-size="13" fill="#A2503B">灌后 · 人事</text>
+  <text x="325" y="116" text-anchor="middle" font-size="10" fill="#8A8074">仪节，全凭执事</text>
+  <line x1="190" y1="98" x2="250" y2="98" stroke="#DED2B9" stroke-dasharray="4 4"/>
+  <text x="220" y="176" text-anchor="middle" font-size="10.5" fill="#2F2A24">降神已毕，往后全是人做的敬与不敬</text>
+</svg>

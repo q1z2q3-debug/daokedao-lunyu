@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="至大之治落到至近之掌">
+  <rect x="40" y="64" width="140" height="68" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="110" y="94" text-anchor="middle" font-size="13" fill="#2F2A24">天下</text>
+  <text x="110" y="116" text-anchor="middle" font-size="10" fill="#8A8074">至大，抽象</text>
+  <line x1="180" y1="98" x2="260" y2="98" stroke="#4A5C55" stroke-width="1.5"/>
+  <text x="220" y="88" text-anchor="middle" font-size="10" fill="#4A5C55">示诸斯</text>
+  <rect x="260" y="64" width="140" height="68" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="330" y="94" text-anchor="middle" font-size="13" fill="#A2503B">掌</text>
+  <text x="330" y="116" text-anchor="middle" font-size="10" fill="#8A8074">至近，可见</text>
+  <text x="220" y="172" text-anchor="middle" font-size="10.5" fill="#2F2A24">道理通透，再大的事也一目了然</text>
+</svg>

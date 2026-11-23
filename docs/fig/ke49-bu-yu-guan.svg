@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="不看、不毁、不越、不弃四个位置">
+  <rect x="170" y="86" width="100" height="44" fill="#FBF7EC" stroke="#4A5C55"/>
+  <text x="220" y="113" text-anchor="middle" font-size="12" fill="#4A5C55">夫子之表态</text>
+  <rect x="40" y="36" width="92" height="36" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="86" y="59" text-anchor="middle" font-size="11" fill="#2F2A24">不看</text>
+  <rect x="308" y="36" width="92" height="36" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="354" y="59" text-anchor="middle" font-size="11" fill="#2F2A24">不毁礼</text>
+  <rect x="40" y="148" width="92" height="36" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="86" y="171" text-anchor="middle" font-size="11" fill="#2F2A24">不越位</text>
+  <rect x="308" y="148" width="92" height="36" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="354" y="171" text-anchor="middle" font-size="11" fill="#2F2A24">不弃礼</text>
+  <line x1="132" y1="54" x2="170" y2="96" stroke="#DED2B9"/><line x1="308" y1="54" x2="270" y2="96" stroke="#DED2B9"/>
+  <line x1="132" y1="166" x2="170" y2="120" stroke="#DED2B9"/><line x1="308" y1="166" x2="270" y2="120" stroke="#DED2B9"/>
+</svg>

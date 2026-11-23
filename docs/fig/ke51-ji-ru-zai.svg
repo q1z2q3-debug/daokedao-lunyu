@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="祭祖先如祖先在，祭神如神在，两层临在">
+  <rect x="40" y="60" width="150" height="72" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="90" text-anchor="middle" font-size="12.5" fill="#4A5C55">祭祖先</text>
+  <text x="115" y="114" text-anchor="middle" font-size="10" fill="#8A8074">如祖先在</text>
+  <rect x="250" y="60" width="150" height="72" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="325" y="90" text-anchor="middle" font-size="12.5" fill="#A2503B">祭神</text>
+  <text x="325" y="114" text-anchor="middle" font-size="10" fill="#8A8074">如神在</text>
+  <text x="220" y="168" text-anchor="middle" font-size="10.5" fill="#2F2A24">如＝临在，不断神之有无</text>
+</svg>
