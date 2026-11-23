@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="270" role="img" aria-label="政的两途：出仕居位与孝友于家，汇合于是亦为政">
+    <rect x="40" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">出仕居位</text>
+    <text x="110" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">朝堂之政</text>
+    <rect x="260" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="330" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">孝友于家</text>
+    <text x="330" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">家门之德</text>
+    <path d="M110 116 L176 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M176 158 l-6 -2 M176 158 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M330 116 L264 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M264 158 l6 -2 M264 158 l3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="150" y="160" width="140" height="50" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#4A5C55">是亦为政</text>
+    <text x="220" y="232" text-anchor="middle" font-size="10.5" fill="#5C5347">政本在家门，不必居位，方谓为政</text>
+  </svg>

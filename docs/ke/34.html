@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十四课 举直错诸枉（为政 2.19）</title>
+<meta name="description" content="《论语·为政》2.19 哀公问何为则民服，孔子对曰举直错诸枉则民服，举枉错诸直则民不服。一课两页：少儿页讲用人公道、人心自服；成人页论用人骨架、错字置废两训、民服是心服非压服，并与 12.22 举直错诸枉能使枉者直互证。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 34 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">用人骨架</a><a href="#sc-d">错字</a><a href="#sc-e">民服</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 位置</a><a href="#sc-21">义理二 互证</a><a href="#sc-22">附论一 枉七见</a><a href="#sc-23">附论二 错措</a><a href="#sc-24">附论三 直二十二见</a><a href="#sc-25">附论四 举十四见</a><a href="#sc-26">附论五 服十八见</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>举直错诸枉</h1>
+    <div class="h1-sub">为政 2.19　底本：朱熹《论语集注》</div>
+    <div class="src">哀公问曰：「何为则民服？」孔子对曰：「举直错诸枉，则民服；举枉错诸直，则民不服。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>直</span></div><div class="tzcap"><span>8 画</span><span>正直</span></div></div>
+      <div class="tzitem"><div class="cell"><span>枉</span></div><div class="tzcap"><span>8 画</span><span>曲私</span></div></div>
+      <div class="tzitem"><div class="cell"><span>错</span></div><div class="tzcap"><span>13 画</span><span>安置</span></div></div>
+      <div class="tzitem"><div class="cell"><span>服</span></div><div class="tzcap"><span>8 画</span><span>心服</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">直</div><div class="v"><b>正直。</b>——<b>「举直」就是任用正直、做事守规矩的人。</b></div></div>
+      <div class="row"><div class="k">枉</div><div class="v"><b>弯曲，曲私。</b>——<b>与「直」相对，指只顾自己、不走正道的人。</b></div></div>
+      <div class="row"><div class="k">错</div><div class="v"><b>通「措」，放、安置。</b>——<b>不是对错的错，是把人放在哪个位置上。</b></div></div>
+      <div class="row"><div class="k">服</div><div class="v"><b>顺从，心服。</b>——<b>百姓看见用人公道，心里才服。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>把正直的人放在前面，百姓就心服；把曲私的人放在前面，百姓就不服。</b>——<b>（为政 2.19）</b></div>
+    <p>鲁哀公问孔子：怎么做，百姓才会顺从？<b>孔子答的不是政令，是用人——把什么人放在什么位置上。</b></p>
+    <p><b>一句话：用人公道，人心自服。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，先分清直和枉。</b>——<b>直是正直、做事守规矩；枉是曲私、只顾自己。</b>——<b>看人先看长期行事，不凭一时印象。</b></p>
+    <p><b>第二层，把直的放在上面。</b>——<b>「举直错诸枉」：正直的人被抬举，安置在曲私的人之上。</b>——<b>位置就是导向。</b></p>
+    <p><b>第三层，看百姓服不服。</b>——<b>直者在上，百姓信，自然服；枉者在上，百姓疑，自然不服。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>位置一正，人心一正；位置一倒，人心一倒。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　小队选组长。</b>——<b>做事公道、肯负责的人被选上，大家愿意听；</b>——<b>选了只讨好自己人的，小队就散。</b></p>
+    <p><b>二　班里定规矩。</b>——<b>守规矩的人被尊重，投机的人被提醒；</b>——<b>规矩才立得住。</b></p>
+    <p><b>三　家里分工。</b>——<b>说话算数的人管一件事，家人放心；</b>——<b>说了不算的人掌事，家人就不服。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>人放在什么位置，人心就往哪边偏。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　「服」是不是害怕？</b>——<b>不是。</b>——<b>怕是被逼出来的，服是看见公道之后自己认。</b></p>
+    <p><b>二　「错诸枉」是不是把坏人除掉？</b>——<b>不是。</b>——<b>是安排位置：直者在上，枉者在下，慢慢被带过来。</b></p>
+    <p><b>三　直枉怎么分？</b>——<b>看他平日做事：对人公不公，遇事先想自己还是先想大家。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>自己先做一个直的人。</b>——<b>正直不是凶，是做事守规矩。</b></div>
+    <div class="scene"><b>与人相处，靠近公道的人。</b>——<b>也让自己配得上被放在前面。</b></div>
+    <div class="scene"><b>位置不是争来的。</b>——<b>是平日一件件事做出来的。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把「民服」讲成「人心服」，不要讲成「压得住」。</b>——<b>压得住是往后压，心服是向前归。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让守规矩、肯负责的孩子多担一件小事；次序清楚，孩子之间也服气。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>孩子说「我不服」，大人接「你敢不服」。</b>——<b>从此他学的是畏，不是服。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>家里遇分歧，先问「这件事谁办得公道」，再定谁负责——把判断落在人，不落在声量。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>群里、班里都有「位置」：组长、班委、管理员。</b>——<b>位置一偏，风向就偏；孩子看得见。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>《尚书》讲「知人则哲，能官人」——认识人、安排人，是治理最早的一课。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教孩子做一个让人放心托付的人，不是一个抢位置的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>举直错诸枉</h1>
+    <div class="h1-sub">为政 2.19　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">哀公问曰：「何为则民服？」孔子对曰：「举直错诸枉，则民服；举枉错诸直，则民不服。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「学」到「政」</div>
+  <p><b>上一章说「寡尤寡悔，禄在其中」——学的落地。</b>——<b>这一章说「举直错诸枉，则民服」——政的入手。</b></p>
+  <p><b>2.18 管一个人怎么立得住；本章管在上位的人怎么用人。</b>——<b>一章向内修己，一章向外官人；修己是官人之本，官人是修己之验。</b></p>
+  <p><b>哀公问的是「服」——百姓顺不顺从。</b>——<b>孔子答的却是直、枉、错三个字。</b>——<b>问在民心，答在用人：民服不服，先看你把什么人放在什么位置上。</b></p>
+  <p><b>《为政》至此十九章。</b>——<b>前十八章讲德、学、孝、知、禄；这一章第一次正面回答「政」的核心——用人。</b></p>
+  <div class="scene"><b>本章在《为政》里的位置，是「政的入手」。</b>——<b>修己之后，第一步是识人、定位。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k k2">哀公</div><div class="v"><b>鲁君，名蒋。</b>——<b>对国君之问，《论语》多记「孔子对曰」——对君问之辞。</b></div></div>
+    <div class="row"><div class="k">服</div><div class="v"><b>顺从、心服。</b>——<b>全书十八见，本章三见（民服、民服、不服）。</b></div></div>
+    <div class="row"><div class="k">举</div><div class="v"><b>抬举、任用。</b>——<b>全书十四见，本章两见（举直、举枉）。</b></div></div>
+    <div class="row"><div class="k k2">直·枉</div><div class="v"><b>正直之人 / 邪曲之人，对举。</b>——<b>「直」全书二十二见，本章二；「枉」七见，本章二。</b></div></div>
+    <div class="row"><div class="k">错</div><div class="v"><b>通「措」，置也，安置；一说废退。</b>——<b>「錯」四见，本章二；「措」一见（13.3 无所措手足）。</b></div></div>
+    <div class="row"><div class="k">诸</div><div class="v"><b>「之于」合音。</b>——<b>错诸枉＝错之于枉。若作语助，则「错枉」不辞。</b></div></div>
+  </div>
+  <p><b>句读是对称两组。</b>——<b>「举直错诸枉，则民服；举枉错诸直，则民不服。」</b>——<b>一正一反，直枉互换，服与不服相应。</b></p>
+  <p><b>读法上一处要紧：「错诸枉」不是「除掉枉」，是安置位置。</b>——<b>若读成清洗，本章即变成贬逐之术；孔子说的是次序，不是清除。</b></p>
+
+  <div class="h2" id="sc-c">二　用人一副骨架：直在上，枉在下</div>
+  <p><b>孔子答哀公，只给一个动作：举。</b>——<b>举谁？直的。放在哪儿？错诸枉——安置在枉者之上。</b></p>
+  <p><b>骨架分三层：先辨直枉（识人），再定位置（错），后观民服（效验）。</b>——<b>识人不清，位置摆错；位置一错，民心即散。</b></p>
+  <p><b>《集解》引包咸曰：「举正直之人用之，废置邪枉之人。」</b>——<b>包氏把「错」解成废退；朱子注：「举直错诸枉，言得人而任之，则民服。」朱子重在任用。</b>——<b>两训不悖：直者进，枉者退，是同一枚位置的两面。</b></p>
+  <p><b>狠处在对称：「举枉错诸直」不是陪衬，是翻面。</b>——<b>位置一倒，民即不服。用人方向错了，再好的政令也收不住人心。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>识人是前题，定位是下手，民服是验单。</b></div>
+
+  <div class="h2" id="sc-d">三　「错」字：置与废，两训一理</div>
+  <p><b>「错」全书四见，皆在本章与 12.22；「措」全书一见，在 13.3「民无所措手足」。</b>——<b>错、措古今字，本义是安置。</b></p>
+  <p><b>训「置」：把直者安置在枉者之上，以直率枉。</b>——<b>训「废」：把枉者废退于直者之下，不以枉累直。</b>——<b>两训落点相同：直者居上，枉者居下。</b></p>
+  <p><b>刘宝楠《论语正义》谓「错」假借为「措」；《说文》「措，置也」，可从。</b></p>
+  <p><b>后世易把「错诸枉」读成「除掉枉者」。</b>——<b>孔子没有说清除，只说位置。位置安排本身就是引导：直者在上，枉者见直而化；这层意思，12.22 说得更透。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>错是排位，不是开刀。</b></div>
+
+  <div class="h2" id="sc-e">四　「民服」：心服，不是压服</div>
+  <p><b>哀公的问题，容易读成「怎么让百姓听话」。</b>——<b>孔子答案里没有威、刑、赏，只有用人。</b></p>
+  <p><b>2.3 早已说过：「道之以政，齐之以刑，民免而无耻。」</b>——<b>政令刑罚只换来免罪，换不来耻心；本章的「服」，正是 2.3 反面所缺的心服。</b></p>
+  <p><b>心服的根源在公：上位者把正直的人放在前面，百姓看得见，自然信；把邪曲的人放在前面，百姓也看得见，自然不服。</b>——<b>服与不服，是百姓用人事做出来的回应。</b></p>
+  <p><b>故本章不是牧民之术，是用人之公。</b>——<b>对上位者是问责：民不服，先查自己用了谁；对在下者是镜鉴：自己平日所举所亲，是直是枉。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>服不在威权上，在用人的公道上。</b></div>
+
+  <div class="h2" id="sc-f">五　反向：四种误读，两种假公</div>
+  <p><b>四种误读，都在把「举直错枉」推过头或拧方向。</b></p>
+  <p><b>一，民服以为压服。</b>——<b>把「服」读成畏惧，则本章成了权术；孔子答的是用人，不是立威。</b></p>
+  <p><b>二，错枉以为除枉。</b>——<b>把「错诸枉」读成清洗异己；孔子说的是位置次序，不是清除。</b></p>
+  <p><b>三，直枉以为标签。</b>——<b>见一人即判直枉；直枉在行事与长期观察，不在一时印象。</b></p>
+  <p><b>四，本章以为君主专属。</b>——<b>用人之理通于一切群体：家、塾、团队，位置一错，人心即散。</b></p>
+  <p><b>两种假公，都在借「直」立己。</b>——<b>一，借直名排异：以「举直」为名，把不合己者皆目为枉，实则党同伐异。</b>——<b>二，以枉枉为借口：明知所举非人，反说「人皆有过」，不肯正位置。</b></p>
+  <p><b>真「举直」有一条验法：所举之人，是否经得起百姓与时日两看。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>举直是正位置，不是立党同伐异之名。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>辨直枉，定位置；直者在上则民服，枉者在上则民不服。</p>
+  <p><b>一反。</b>这不是压服百姓之术，是用人之公。孔子答服而言举直：所与者位置，所不与者威权。</p>
+  <p><b>一辨。</b>「错」不是清除，是安置；「服」不是畏惧，是心服。位置二字，是本章分寸。</p>
+  <p><b>一证。</b>五个数：<b>「枉」全书七见，本章二；「錯」四见，本章二，「措」一见；「直」二十二见，本章二；「舉」十四见，本章二；「服」十八见，本章三。</b>——<b>详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「政的入手」。</b>——<b>识人定位，民心自见。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>底本作「哀公闻曰」，通行本作「哀公问曰」。</b><b>正文从通行本正字作「问」</b>：「闻」与「问」形近致讹；底本异文存此备查。</div></div>
+    <div class="q"><span>02</span><div><b>「错」训「置」还是「废」。</b><b>本课主「置」</b>：错通措，置也，直者安置于枉者之上；包咸「废置邪枉之人」一训可并存，落点同为直上枉下。</div></div>
+    <div class="q"><span>03</span><div><b>「诸」是「之于」合音还是语助。</b><b>本课取合音</b>：错诸枉＝错之于枉。若作语助，则「错枉」不辞。</div></div>
+    <div class="q"><span>04</span><div><b>本章是否主张罢黜小人。</b><b>本课判「否」</b>：孔子说用人次序与位置，未言清除；举枉错直之戒，是戒位置颠倒，不是兴贬逐之狱。</div></div>
+    <div class="q"><span>05</span><div><b>本章与 12.22 是否重复。</b><b>本课判「互补」</b>：本章对哀公论政，落点民服；12.22 答樊迟问知，落点「能使枉者直」——一论效验，一论教化。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>这是孔子教君主压服百姓。</b></div><div class="b"><b>服来自用人之公，不来自威权。</b>——<b>威权只得免罪，不得心服。</b></div></div>
+    <div class="pair"><div class="a"><b>举直错枉就是把坏人赶尽。</b></div><div class="b"><b>是位置安排，不是清除。</b>——<b>直者在上，枉者自化。</b></div></div>
+    <div class="pair"><div class="a"><b>民服是怕上级。</b></div><div class="b"><b>本章的服是心服。</b>——<b>百姓看你用了谁，再决定信不信。</b></div></div>
+    <div class="pair"><div class="a"><b>直枉一眼可分。</b></div><div class="b"><b>直枉在行事与长期观察。</b>——<b>不在一时标签。</b></div></div>
+    <div class="pair"><div class="a"><b>这是统治者的择人术。</b></div><div class="b"><b>对上位者是问责，对在下者是镜鉴。</b>——<b>自己所举所亲是直是枉。</b></div></div>
+    <div class="pair"><div class="a"><b>举枉错诸直只是反例说说。</b></div><div class="b"><b>同一枚硬币翻面。</b>——<b>位置一倒，民即不服。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》12.22「举直错诸枉，能使枉者直。」</b>——<b>同句互证：本章落点民服，彼章落点枉者化直。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》13.2「先有司，赦小过，举贤才。」</b>——<b>政事上的用人一路：先分职，赦小过，再举贤。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》2.20「举善而教不能，则劝。」</b>——<b>同篇答季康子：举善与教不能并举，与本章「举直」相足。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》2.3「道之以政，齐之以刑，民免而无耻。」</b>——<b>对照：威刑可得免罪，换不来本章的心服。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《中庸》「其人存，则其政举；其人亡，则其政息。」</b>——<b>政在人举：人存政举，正是「举直」的道理。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《尚书·皋陶谟》「知人则哲，能官人。」</b>——<b>知人官人，是本章「举」的古典依据；子夏举舜举皋陶、汤举伊尹，即此一路。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　位置一换，人心一换</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 举直与民服</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。堂上两列人：左列端正者在前，衣袂整肃，立于阶上；右列曲躬者在后，立于阶下。阶下百姓仰首，神色安定；堂侧另一幅翻面景象：曲躬者立于阶上，端正者退在阶下，百姓垂首有疑色。案上一卷简，朱笔圈出「直」「枉」二字。要让人一眼看出：位置一换，人心一换。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>阶上的直者</b>：举直，正直的人被抬举到前面；<b>阶下的枉者</b>：错诸枉，安置在直者之下；<b>仰首的百姓</b>：民服，服在用人之公。</div>
+
+  <div class="h2" id="sc-20">义理图一　用人位置：直在上，枉在下</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" role="img" aria-label="用人位置图：直者在上枉者在下则民服，枉者在上直者在下则民不服">
+    <text x="110" y="40" text-anchor="middle" font-size="11.5" fill="#4A5C55">举直错诸枉</text>
+    <text x="330" y="40" text-anchor="middle" font-size="11.5" fill="#A2503B">举枉错诸直</text>
+    <rect x="60" y="58" width="100" height="42" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="110" y="84" text-anchor="middle" font-size="15" fill="#2F2A24">直</text>
+    <path d="M110 104 L110 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M110 120 l-5 -4 M110 120 l5 -4" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="60" y="126" width="100" height="42" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="152" text-anchor="middle" font-size="15" fill="#5C5347">枉</text>
+    <text x="110" y="196" text-anchor="middle" font-size="11.5" fill="#4A5C55">则民服</text>
+    <rect x="280" y="58" width="100" height="42" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="330" y="84" text-anchor="middle" font-size="15" fill="#2F2A24">枉</text>
+    <path d="M330 104 L330 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M330 120 l-5 -4 M330 120 l5 -4" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="280" y="126" width="100" height="42" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="330" y="152" text-anchor="middle" font-size="15" fill="#5C5347">直</text>
+    <text x="330" y="196" text-anchor="middle" font-size="11.5" fill="#A2503B">则民不服</text>
+    <line x1="220" y1="48" x2="220" y2="170" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="220" y="236" text-anchor="middle" font-size="10.5" fill="#5C5347">直者在上，枉者在下；位置一倒，人心一倒</text>
+  </svg><div class="figcap">图一　用人位置：直在上，枉在下</div></div>
+
+  <div class="h2" id="sc-21">义理图二　同句互证：民服与枉者直</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" role="img" aria-label="同句互证图：举直错诸枉，为政篇落点民服，颜渊篇落点枉者直，子夏举皋陶伊尹">
+    <rect x="140" y="20" width="160" height="38" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="220" y="44" text-anchor="middle" font-size="14" fill="#2F2A24">举直错诸枉</text>
+    <path d="M220 58 L110 92" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M110 92 l6 -2 M110 92 l2 6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M220 58 L330 92" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M330 92 l-6 -2 M330 92 l-2 6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="30" y="96" width="160" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="110" y="120" text-anchor="middle" font-size="10" fill="#8A8074">为政 2.19</text>
+    <text x="110" y="140" text-anchor="middle" font-size="13" fill="#4A5C55">则民服</text>
+    <rect x="250" y="96" width="160" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="330" y="120" text-anchor="middle" font-size="10" fill="#8A8074">颜渊 12.22</text>
+    <text x="330" y="140" text-anchor="middle" font-size="13" fill="#4A5C55">能使枉者直</text>
+    <path d="M110 154 L110 176" stroke="#8A8074" stroke-width="1.4"/>
+    <path d="M330 154 L330 176" stroke="#8A8074" stroke-width="1.4"/>
+    <path d="M110 176 L330 176" stroke="#8A8074" stroke-width="1.4"/>
+    <path d="M220 176 L220 186" stroke="#8A8074" stroke-width="1.4"/>
+    <rect x="60" y="186" width="320" height="44" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="220" y="212" text-anchor="middle" font-size="11" fill="#5C5347">子夏曰：舜举皋陶，汤举伊尹，不仁者远矣</text>
+  </svg><div class="figcap">图二　同句互证：民服与枉者直</div></div>
+
+  <div class="h2" id="sc-22">附论一　「枉」七见</div>
+  <p><b>「枉」全书七见：2.19 两见（错诸枉、举枉），12.22 四见（错诸枉、枉者直，引文重出），18.2 一见（枉道而事人）。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">枉</span><span class="n">2.19</span></div><div class="u"><b>错诸枉、举枉</b><i>——邪曲，与直对。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">枉</span><span class="n">12.22</span></div><div class="u"><b>错诸枉、枉者直</b><i>——同句互证，四见集中于一章。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">枉</span><span class="n">18.2</span></div><div class="u"><b>枉道而事人</b><i>——曲道，与「直道」对举。</i></div></div>
+  </div>
+  <p><b>七见之中，四见集中在 12.22 一章。</b>——<b>足见此句是孔子论人的常语，非本章孤例。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「錯」四见与「措」一见</div>
+  <p><b>「錯」全书四见：2.19 两见，12.22 两见，皆「错诸枉」之错。「措」全书一见：13.3「民无所措手足」。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">錯</span><span class="n">2.19</span></div><div class="u"><b>错诸枉、错诸直</b><i>——假借为「措」，安置。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">錯</span><span class="n">12.22</span></div><div class="u"><b>错诸枉（两见）</b><i>——同字同训。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">措</span><span class="n">13.3</span></div><div class="u"><b>无所措手足</b><i>——本字，置也。</i></div></div>
+  </div>
+  <p><b>错、措古今字。</b>——<b>《说文》「措，置也」；13.3 用本字，本章与 12.22 用假借字，读古书须知二者同训。</b>——<b>「错」别义为交错、错杂，此处不取。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「直」二十二见</div>
+  <p><b>「直」全书二十二见：本章二见；12.22 四见；13.18 三见（直躬、直者、直在其中）；余十三见散见各篇。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">直</span><span class="n">2.19</span></div><div class="u"><b>举直、错诸直</b><i>——用人语境中的正直之人。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">直</span><span class="n">12.22</span></div><div class="u"><b>枉者直（四见）</b><i>——化枉为直。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">直</span><span class="n">13.18</span></div><div class="u"><b>直躬、直者、直在其中</b><i>——父子相隐之直。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">直</span><span class="n">余十三见</span></div><div class="u"><b>心性、品行、交友三路</b><i>——如《雍也》「人之生也直」、《公冶长》「孰谓微生高直」、《季氏》「友直」。</i></div></div>
+  </div>
+  <p><b>本章的「直」是品行之直的用人化：直者不只是个人品格，是要被放到位置上的人。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「舉」十四见</div>
+  <p><b>「舉」全书十四见：2.19 两见（举直、举枉），2.20 一见（举善），7.8 一见（举一隅），10.20 一见（色斯举矣），12.22 四见（举直两见、举皋陶、举伊尹），13.2 三见（举贤才两见、举尔所知），15.23 一见（不以言举人），20.1 一见（举逸民）。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">舉</span><span class="n">2.19</span></div><div class="u"><b>举直、举枉</b><i>——任用，政事语境。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">舉</span><span class="n">13.2</span></div><div class="u"><b>举贤才（三见）</b><i>——仲弓问政，同一用人路。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">舉</span><span class="n">12.22</span></div><div class="u"><b>举直、举皋陶、举伊尹（四见）</b><i>——子夏所举之古例。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">舉</span><span class="n">余五见</span></div><div class="u"><b>2.20、7.8、10.20、15.23、20.1 各一</b><i>——举善、举一隅、色斯举、举人、举逸民。</i></div></div>
+  </div>
+  <p><b>十四见分三类：举用之人、启发之举（举一隅）、飞起之举（色斯举矣）。</b>——<b>用人一路占其大半，可见「举」在《论语》中是政事核心字。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「服」十八见</div>
+  <p><b>「服」全书十八见：本章三见（民服、民服、不服）；余为服劳（2.8 服其劳）、朝服亵服（乡党篇数见）、人名（14.36 子服景伯）。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">服</span><span class="n">2.19</span></div><div class="u"><b>民服、民服、不服</b><i>——全书唯一论「民服」之处。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">服</span><span class="n">2.8</span></div><div class="u"><b>服其劳</b><i>——事役。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">服</span><span class="n">乡党</span></div><div class="u"><b>朝服、亵服</b><i>——衣冠。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">服</span><span class="n">14.36</span></div><div class="u"><b>子服景伯</b><i>——人名。</i></div></div>
+  </div>
+  <p><b>故「民服」一词，本章自具义理：服不是免，不是畏，是见用人之公而后心服。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 34 课　为政 2.19</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.45　二〇二六年十一月</div>
+  </footer>
+
+
+
+</div>
+</body>
+</html>

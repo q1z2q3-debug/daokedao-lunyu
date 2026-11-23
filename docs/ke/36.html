@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十六课 书云孝乎（为政 2.21）</title>
+<meta name="description" content="《论语·为政》2.21 或谓孔子曰子奚不为政，子曰书云孝乎惟孝、友于兄弟、施于有政，是亦为政，奚其为为政。一课两页：少儿页讲孝友由家及外；成人页论断句两读、「是亦为政」是政本在家门的定义、反问句式与字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 36 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">专题一 断句</a><a href="#sc-d">专题二 是亦为政</a><a href="#sc-e">专题三 反问</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 两途汇合</a><a href="#sc-21">义理二 断句两读</a><a href="#sc-22">附论一 孝十九见</a><a href="#sc-23">附论二 政四十三见</a><a href="#sc-24">附论三 奚十一见</a><a href="#sc-25">附论四 书五见</a><a href="#sc-26">附论五 施与惟</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>书云孝乎</h1>
+    <div class="h1-sub">为政 2.21　底本：朱熹《论语集注》</div>
+    <div class="src">或谓孔子曰：「子奚不为政？」子曰：「书云：『孝乎惟孝，友于兄弟，施于有政。』是亦为政，奚其为为政？」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>孝</span></div><div class="tzcap"><span>7 画</span><span>尽心奉养父母</span></div></div>
+      <div class="tzitem"><div class="cell"><span>政</span></div><div class="tzcap"><span>9 画</span><span>治理众人的事</span></div></div>
+      <div class="tzitem"><div class="cell"><span>友</span></div><div class="tzcap"><span>4 画</span><span>兄弟相亲相爱</span></div></div>
+      <div class="tzitem"><div class="cell"><span>施</span></div><div class="tzcap"><span>9 画</span><span>延及、推行</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">孝</div><div class="v"><b>尽心奉养父母。</b>——<b>本章引古书赞叹孝：笃孝的人，德行最厚。</b></div></div>
+      <div class="row"><div class="k">政</div><div class="v"><b>治理众人的事。</b>——<b>问话的人说的「为政」，是出去做官。</b></div></div>
+      <div class="row"><div class="k">友</div><div class="v"><b>兄弟相亲相爱。</b>——<b>「友于兄弟」，后来「友于」就成了兄弟的代称。</b></div></div>
+      <div class="row"><div class="k">施</div><div class="v"><b>把好德行推出去，延及旁人。</b>——<b>由家门之内，推到众人之事。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>在家里孝顺父母、友爱兄弟，把这份心推到外面，也就是参与政事。</b>——<b>（为政 2.21）</b></div>
+    <p>有人问孔子：<b>你为什么不出去做官？</b>——<b>孔子没有直接答，他引了一句古书：孝啊，笃孝的人，友爱兄弟，把这份德行推行到政事上。</b>——<b>这也就是为政，为什么一定要做官才算为政呢？</b></p>
+    <p><b>一句话：把家里的事做好，也是在为众人做事。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，孝在门内。</b>——<b>对父母尽心，对兄弟友爱；这是德行的起点。</b>——<b>起点稳，往外推才稳。</b></p>
+    <p><b>第二层，德行要推出去。</b>——<b>「施于有政」：门内的好，延及门外；家是小处，众人是大处。</b></p>
+    <p><b>第三层，这也就是为政。</b>——<b>不一定坐在官位上；德行影响到众人，就是为政。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>家是起点，不是尽头。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　对父母说话有耐心。</b>——<b>不顶嘴，不嫌烦；这是孝的日常。</b></p>
+    <p><b>二　兄弟姐妹有争执。</b>——<b>先各让一步，再一起玩；友爱不是争输赢。</b></p>
+    <p><b>三　家里的好习惯带到外面。</b>——<b>守时、诚实、替人想，带到学校和朋友中间。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>门内做好，门外带出去。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　不做官就不算为政吗？</b>——<b>孔子说不算：德行延及众人，也是为政。</b></p>
+    <p><b>二　孝是不是只对父母好？</b>——<b>孝先对父母，再推到兄弟、旁人；一层一层往外。</b></p>
+    <p><b>三　「友于兄弟」是什么意思？</b>——<b>兄弟相亲相爱；后来「友于」就代指兄弟。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>把家里的小事做稳，是做人的底子。</b></div>
+    <div class="scene"><b>好德行不是关起门来的事，要带出门。</b></div>
+    <div class="scene"><b>不必急着要位置；先把身边的人待好。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把本章讲成「德行由家及外」，不要讲成「可以不工作、不做事」。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让孩子在家庭里承担一份责任（敬长、睦兄弟），再看他如何对待同学。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「是亦为政」听成「家事做好自然有官做」；这是把本读成了果。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>问孩子「这件好品行，你带到哪里去过」——把门内门外连成一条线。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>分工越细，越容易把家事与公事看成两截；本章提醒二者本是一条线。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>《大学》修齐治平，由身到家、到国、到天下，是同一条推己及人的线。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个把家门之德带出门的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>书云孝乎</h1>
+    <div class="h1-sub">为政 2.21　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">或谓孔子曰：「子奚不为政？」子曰：「书云：『孝乎惟孝，友于兄弟，施于有政。』是亦为政，奚其为为政？」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「仕」到「家」</div>
+  <p><b>上一章季康子问「使民敬、忠以勤」，孔子答「孝慈，则忠」——上之行于下。</b>——<b>本章有人问孔子为何不出仕——下之行于上。</b></p>
+  <p><b>《为政》前二十章多讲何为政、何以民服。</b>——<b>本章被问到本人：你自己为何不做官。</b>——<b>孔子不答出处，先换定义：孝于亲、友于兄弟，德行延及政事，这也就是为政。</b></p>
+  <p><b>2.1 说「为政以德，譬如北辰」——德在朝堂，星拱之。</b>——<b>本章补另一面：德在家门，亦是政。</b>——<b>朝堂与家门，不是两处。</b></p>
+  <div class="scene"><b>本章在《为政》里的位置，是「政本在家门」。</b>——<b>前二十章讲政之所出，本章讲政之所本。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">或</div><div class="v"><b>有人。</b>——<b>不定指其名，《论语》常例。</b></div></div>
+    <div class="row"><div class="k">奚</div><div class="v"><b>何，为何。</b>——<b>疑问词；全书十一见，本章两见。</b></div></div>
+    <div class="row"><div class="k k2">书云</div><div class="v"><b>《尚书》说。</b>——<b>书，《尚书》；云，说。</b></div></div>
+    <div class="row"><div class="k k2">友于</div><div class="v"><b>于，与；兄弟相爱曰友。</b>——<b>「友于」后为兄弟代称，出此。</b></div></div>
+    <div class="row"><div class="k">施</div><div class="v"><b>延及、推行。</b>——<b>有，语助；有政即政事。</b></div></div>
+    <div class="row"><div class="k">亦</div><div class="v"><b>也是。</b>——<b>「是亦为政」：这也就是为政。</b></div></div>
+  </div>
+  <p><b>句读是两停。</b>——<b>先引《书》三停：「孝乎惟孝，友于兄弟，施于有政」；再出孔子自答两句：「是亦为政，奚其为为政？」</b>——<b>引文是据，自答是断。</b></p>
+  <p><b>读法上一处要紧：「亦」是也是，不是代替。</b>——<b>孝友是政之本，不是政之全；若读成「家事即可替政事」，本章立刻偏枯。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　断句：「孝乎！惟孝」还是连读</div>
+  <p><b>这是本章最大的义理分歧点。</b>——<b>断句不同，「孝」与「为政」的关系判断也随之不同。</b></p>
+  <p><b>读法甲：孝乎！惟孝，友于兄弟，施于有政。</b>——<b>「乎」作叹词一顿，「惟孝」领起下文：赞叹孝啊，笃孝之人，友爱兄弟，把德行推行到政事上。</b>——<b>包咸《集解》注「美大孝之辞」，近此一路。</b></p>
+  <p><b>读法乙：孝乎惟孝，四字连读，「乎惟」连文。</b>——<b>解作「孝啊，唯有孝」；孝字被裹在修饰语里，不再是被单独托起的主体。</b></p>
+  <p><b>本课取甲。</b>——<b>一是叹词一顿，「惟孝」方能与下「友于兄弟」「施于有政」排成三停，句法整齐；二是今传《尚书·君陈》作「惟孝友于兄弟，克施有政」，可相参照，「惟孝」本是领起语。</b>——<b>两读并存，主训取甲。</b></p>
+  <p><b>断句之差不是小事。</b>——<b>甲读把「孝」立为主体，由家及政；乙读把「孝」降为形容，政仍是中心。</b>——<b>本章重心在家门之德，故取甲。</b></p>
+
+  <div class="h2" id="sc-d">三　专题二　「是亦为政」：政的另一种实现</div>
+  <p><b>或人的问话藏着一个前提：为政＝出仕居位。</b>——<b>孔子不否认出仕，只把定义放宽：行孝友于家，其影响延及政事，这也是为政。</b></p>
+  <p><b>包咸《集解》注：「施于有政，行之为政，亦为政也。」</b>——<b>朱子《集注》大意：孝友如此，则是亦为政耳，何必居位乃为为政乎。</b>——<b>原话与注家语须分清：「孝乎惟孝，友于兄弟，施于有政」是所引《书》文，「是亦为政，奚其为为政」才是孔子自断。</b></p>
+  <p><b>这里要辨一层：这不是「不必做官」的遁词。</b>——<b>孔子一生亦尝仕；本章答的是「为何不仕」的诘问，把政的场所从朝堂扩到家国之间，不是把政事本身取消。</b></p>
+  <p><b>反方须立：若孝友即可为政，政事可废乎？</b>——<b>本课判「不可」。本章说的是政之本在伦理，不是说政事可省。</b>——<b>家齐而后国治，是一条线，不是一个点。</b></p>
+
+  <div class="h2" id="sc-e">四　专题三　「奚其为为政」：反问的分量</div>
+  <p><b>全书「奚」十一见，本章两见。</b>——<b>「奚其为为政」是孔子少见的直接反问句式：除了居位做政，德行影响政事者，何为不算政？</b></p>
+  <p><b>「为为政」三字叠：为（wéi）政，做这个政。</b>——<b>奚其为为政：为何一定要那样「做政」才算？</b>——<b>句法与 13.3「奚其正」相近，可对读。</b></p>
+  <p><b>反问在此不是赌气，是把对方默认的前提翻出来摆给人看。</b>——<b>你说的「为政」，只是居位那一种；我给你看另一种。</b>——<b>前提一换，答案自明。</b></p>
+
+  <div class="h2" id="sc-f">五　反向：四种误读，两种假托</div>
+  <p><b>四种误读，都在把本章推过头。</b></p>
+  <p><b>一，以为孔子避世不仕。</b>——<b>本章是定义之争，不是出处之争；答的是「政是什么」，不是「我出不出仕」。</b></p>
+  <p><b>二，以为孝友可以代替政事。</b>——<b>本章立本，不废末；家门之德是政之本，不是政之全。</b></p>
+  <p><b>三，以为引《书》是拉经典压人。</b>——<b>孔子引《书》是借古说今：古之教本，在家门之内。</b></p>
+  <p><b>四，以为「是亦为政」是安慰不仕者。</b>——<b>它是判断，不是安慰；判断的标准是德行的影响，不是身份的高低。</b></p>
+  <p><b>两种假托，都在借本章卸责。</b>——<b>一，借本章说「在家尽孝，就是不做事的理由」；孝是本分，不是避事的口子。</b>——<b>二，借本章说「家事做好，自然升官」；「亦」是也是，不是代替，本立而道生，不保证位置。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>本章立的是本，不是开的口子。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>孝于亲、友于兄弟，德行延及政事，即是为政；不必居位，方谓为政。</p>
+  <p><b>一反。</b>这不是不仕的借口，是「政本在家门」的定义。孔子答出仕之问，落处仍在德行。</p>
+  <p><b>一辨。</b>「亦」是「也是」，不是「代替」；孝友是政之本，不是政之全。家门与朝堂是一条线，不是两处。</p>
+  <p><b>一证。</b>六个数：<b>「孝」全书十九见，本章两见；「政」四十三见，本章四见；「奚」十一见，本章两见；「书」五见，本章一见；「施」六见，本章一见；「惟」三见，本章一见。</b>——<b>详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「政之所本」。</b>——<b>德在家门，一线延及邦国；不必另找一处朝堂。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「孝乎惟孝」断句：叹词顿开，还是四字连读。</b><b>本课取叹词顿开</b>（孝乎！惟孝），理由见专题一；连读一路并存不废。</div></div>
+    <div class="q"><span>02</span><div><b>所引《书》出《君陈》还是佚文。</b>今传《尚书·君陈》有「惟孝友于兄弟，克施有政」相近之语；《君陈》属晚出古文，本章所引为先秦传述之《书》文，不可径指为今文某篇原文。两存，出处谨慎标注。</div></div>
+    <div class="q"><span>03</span><div><b>「有政」之「有」是语助，还是指「在位者、有司」。</b><b>本课取语助一路</b>：有政即政事；若解作「施于在位者」，文意亦通，并存。</div></div>
+    <div class="q"><span>04</span><div><b>本章是否为孔子不仕后的辩解。</b>史无明文；<b>本课判为定义之答，非出处之辩。</b>孔子何时不仕、本章作于何时，本章无内证。</div></div>
+    <div class="q"><span>05</span><div><b>「友于兄弟」是兄友弟恭双向，还是专指兄弟相爱。</b>包咸注「兄弟相友爱」；<b>本课取双向相爱</b>，不分长幼单向。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>不出仕，就是不问政。</b></div><div class="b"><b>政本在家门；孝友行于家，其及于政，亦是为政。</b></div></div>
+    <div class="pair"><div class="a"><b>孝是私事，政是公事。</b></div><div class="b"><b>家门之德延及邦国；公私之间本是一条线。</b></div></div>
+    <div class="pair"><div class="a"><b>孔子引《书》，是抬经典压人。</b></div><div class="b"><b>借古教说今本；古之教本，在家门。</b></div></div>
+    <div class="pair"><div class="a"><b>「是亦为政」＝做好家事自然升官。</b></div><div class="b"><b>「亦」是也是，不是代替；本立而道生，不保证位置。</b></div></div>
+    <div class="pair"><div class="a"><b>反问「奚其为为政」是赌气。</b></div><div class="b"><b>是定义反问：除居位外，德行影响政事者，何为不算政。</b></div></div>
+    <div class="pair"><div class="a"><b>本章教人不必求仕。</b></div><div class="b"><b>本章辨政之定义，不替人定出处；仕与不仕，另看其人其时。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》1.2「其为人也孝弟……孝弟也者，其为仁之本与。」</b>——<b>孝弟为仁之本；本章把这个「本」接到政上。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》2.5–2.8 四问孝：无违、父母唯其疾之忧、不敬何以别乎、色难。</b>——<b>孝的判据在礼、在忧、在敬、在色；本章是孝的外推。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》1.7「父在观其志……三年无改于父之道，可谓孝矣。」</b>——<b>家门之内的孝；本章由门内推到门外。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》2.20「孝慈，则忠。」</b>——<b>上孝慈则下忠；与本章互为内外：上之行下，下之行上。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《尚书·君陈》（今传）「惟孝友于兄弟，克施有政。」</b>——<b>与本章所引相近；出处谨慎，见存疑二。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《大学》「身修而后家齐，家齐而后国治，国治而后天下平。」</b>——<b>修齐治平一条线；本章是这条线在《论语》里的一处早影。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　门内与门外</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 孝友及政</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：横卷 4:3 水墨。庭门之内，子侍亲侧，兄弟并立，温然有序；门外远处朝堂阙楼隐约，一线自门内牵向门外。案头一卷《书》。要让人一眼看出：门内的德行，一线延到门外，不是另起一处。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>侍亲与并立的兄弟</b>：孝友，德行在门内；<b>一线牵出的门</b>：施于有政，由近及远；<b>远处阙楼</b>：有政就在这一线的尽头，不在门外另找。</div>
+
+  <div class="h2" id="sc-20">义理图一　两途汇合：是亦为政</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="政的两途：出仕居位与孝友于家，汇合于是亦为政">
+    <rect x="40" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">出仕居位</text>
+    <text x="110" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">朝堂之政</text>
+    <rect x="260" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="330" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">孝友于家</text>
+    <text x="330" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">家门之德</text>
+    <path d="M110 116 L176 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M176 158 l-6 -2 M176 158 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M330 116 L264 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M264 158 l6 -2 M264 158 l3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="150" y="160" width="140" height="50" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#4A5C55">是亦为政</text>
+    <text x="220" y="232" text-anchor="middle" font-size="10.5" fill="#5C5347">政本在家门，不必居位，方谓为政</text>
+  </svg><div class="figcap">图一　两途汇合：是亦为政</div></div>
+
+  <div class="h2" id="sc-21">义理图二　断句两读对照</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="断句两读对照：甲读孝乎惟孝叹词顿开，乙读四字连读">
+    <text x="34" y="44" font-size="11" fill="#4A5C55">甲 · 本课所取</text>
+    <rect x="30" y="54" width="380" height="60" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="90" text-anchor="middle" font-size="13" fill="#2F2A24">孝乎！惟孝，友于兄弟，施于有政。</text>
+    <text x="34" y="150" font-size="11" fill="#8A8074">乙 · 连读并存</text>
+    <rect x="30" y="160" width="380" height="60" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="220" y="196" text-anchor="middle" font-size="13" fill="#5C5347">孝乎惟孝，友于兄弟，施于有政。</text>
+    <text x="220" y="240" text-anchor="middle" font-size="10.5" fill="#5C5347">叹词一顿，惟孝领起下文；由家及政</text>
+  </svg><div class="figcap">图二　断句两读对照</div></div>
+
+  <div class="h2" id="sc-22">附论一　「孝」十九见，本章两见</div>
+  <p><b>底本全书（自《学而》首章起）grep「孝」，凡十九见；本章两见，皆在引文「孝乎惟孝」。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">孝</span><span class="n">2.5–2.8</span></div><div class="u"><b>问孝四章</b><i>——孟懿子、孟武伯、子游、子夏，判据在礼、忧、敬、色。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">孝</span><span class="n">1.2 / 1.6</span></div><div class="u"><b>孝弟</b><i>——为仁之本；入则孝。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">孝</span><span class="n">2.20</span></div><div class="u"><b>孝慈则忠</b><i>——上之行于下。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">孝</span><span class="n">2.21</span></div><div class="u"><b>孝乎惟孝</b><i>——本章两见；引《书》赞叹，孝被抬到为政之本的位置。</i></div></div>
+  </div>
+  <p><b>本章的两见不是「问孝」，是引《书》赞叹孝。</b>——<b>孝在本章由「事亲之德」被抬到「为政之本」的位置。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「政」四十三见，本章四见</div>
+  <p><b>底本全书 grep「政」，凡四十三见；本章四见：不为政、有政、为政、为政。</b></p>
+  <p><b>「为政」连用，篇首 2.1「为政以德」即见。</b>——<b>本章四见，两作「为政」，一作「有政」，一作「不为政」。</b></p>
+  <p><b>或人所说的「政」是居位之政，孔子所续的「政」是德行及物之政。</b>——<b>同一个字，两处所指宽窄不同。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「奚」十一见，本章两见</div>
+  <p><b>底本全书 grep「奚」，凡十一见，分布八章。</b>——<b>「奚」皆疑问词：何、为何、何处。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">2.21</span></div><div class="u"><b>子奚不为政 / 奚其为为政</b><i>——本章两见；一问为何不做，一问怎样才算做。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">3.2</span></div><div class="u"><b>奚取于三家之堂</b><i>——讥三家僭礼。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">7.19</span></div><div class="u"><b>女奚不曰</b><i>——子路不对，孔子教其自评。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">11.15</span></div><div class="u"><b>奚为于丘之门</b><i>——责子路之瑟。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">13.3</span></div><div class="u"><b>子将奚先 / 奚其正</b><i>——正名之辩。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">13.5</span></div><div class="u"><b>亦奚以为</b><i>——诵诗多而不达。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">14.19</span></div><div class="u"><b>奚而不丧 / 奚其丧</b><i>——论灵公无道而不亡。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">奚</span><span class="n">14.38</span></div><div class="u"><b>奚自</b><i>——晨门问来路。</i></div></div>
+  </div>
+  <p><b>本章两问方向相反。</b>——<b>前问是或人的诘难，后问是孔子的反诘。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「书」五见，本章一见</div>
+  <p><b>底本全书 grep「书」，凡五见。</b>——<b>「书云」全书两见：本章与 14.40。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">书</span><span class="n">2.21</span></div><div class="u"><b>书云</b><i>——引《书》言孝友及政。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">书</span><span class="n">7.18</span></div><div class="u"><b>诗、书、执礼</b><i>——雅言所及。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">书</span><span class="n">11.25</span></div><div class="u"><b>何必读书</b><i>——子路之辩。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">书</span><span class="n">14.40</span></div><div class="u"><b>书云：高宗谅阴</b><i>——引《书》言三年不言。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">书</span><span class="n">15.6</span></div><div class="u"><b>书诸绅</b><i>——子张记于衣带。</i></div></div>
+  </div>
+  <p><b>引《书》在《论语》里不多。</b>——<b>凡引皆落在德行与政事的根本处。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「施」六见、「惟」三见</div>
+  <p><b>「施」六见：2.21「施于有政」；5.26「无施劳」；6.30「博施于民而能济众」；12.2「己所不欲，勿施于人」；15.24「己所不欲，勿施于人」；季氏篇「君子不施其亲」。</b></p>
+  <p><b>「惟」三见：2.21「惟孝」；7.11「惟我与尔有是夫」；19.12「其惟圣人乎」。</b></p>
+  <p><b>「施」在本章是「延及、推行」。</b>——<b>与「勿施于人」之「加」义有别。</b>——<b>本章之施，是由近及远：孝于亲，友于兄弟，再延及政事。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 36 课　为政 2.21</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.45　二〇二六年十一月</div>
+  </footer>
+
+
+</div>
+</body>
+</html>

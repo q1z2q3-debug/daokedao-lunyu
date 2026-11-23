@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="260" role="img" aria-label="两条路径：政刑民免而无耻，德礼有耻且格">
+    <text x="99" y="40" text-anchor="middle" font-size="11.5" fill="#A2503B">路径一 · 政刑</text>
+    <text x="341" y="40" text-anchor="middle" font-size="11.5" fill="#4A5C55">路径二 · 德礼</text>
+    <rect x="24" y="56" width="150" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="99" y="80" text-anchor="middle" font-size="12.5" fill="#2F2A24">道之以政</text>
+    <text x="99" y="100" text-anchor="middle" font-size="12.5" fill="#2F2A24">齐之以刑</text>
+    <path d="M99 118 L99 138" stroke="#A2503B" stroke-width="1.6"/>
+    <path d="M99 138 l-4 -5 M99 138 l4 -5" stroke="#A2503B" stroke-width="1.6" fill="none"/>
+    <text x="99" y="162" text-anchor="middle" font-size="12" fill="#8A8074">民免而无耻</text>
+    <line x1="210" y1="52" x2="210" y2="176" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <rect x="266" y="56" width="150" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="341" y="80" text-anchor="middle" font-size="12.5" fill="#2F2A24">庄 · 孝慈</text>
+    <text x="341" y="100" text-anchor="middle" font-size="12" fill="#2F2A24">举善而教不能</text>
+    <path d="M341 118 L341 138" stroke="#4A5C55" stroke-width="1.6"/>
+    <path d="M341 138 l-4 -5 M341 138 l4 -5" stroke="#4A5C55" stroke-width="1.6" fill="none"/>
+    <text x="341" y="162" text-anchor="middle" font-size="12" fill="#8A8074">有耻且格</text>
+    <text x="341" y="182" text-anchor="middle" font-size="11" fill="#8A8074">民敬忠劝</text>
+    <text x="220" y="214" text-anchor="middle" font-size="10.5" fill="#5C5347">同问民之从违：一在下加刑，一在上先正</text>
+  </svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 270" width="440" height="280" role="img" aria-label="三事三应：临之以庄则敬，孝慈则忠，举善而教不能则劝">
+    <text x="115" y="26" text-anchor="middle" font-size="10" fill="#8A8074">上者所行</text>
+    <text x="295" y="26" text-anchor="middle" font-size="10" fill="#8A8074">民之所应</text>
+    <rect x="30" y="44" width="170" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="115" y="72" text-anchor="middle" font-size="13" fill="#2F2A24">临之以庄</text>
+    <path d="M204 67 L234 67" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M234 67 l-5 -3 M234 67 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="44" width="110" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="295" y="72" text-anchor="middle" font-size="13" fill="#A2503B">则敬</text>
+    <rect x="30" y="104" width="170" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="115" y="132" text-anchor="middle" font-size="13" fill="#2F2A24">孝慈</text>
+    <path d="M204 127 L234 127" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M234 127 l-5 -3 M234 127 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="104" width="110" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="295" y="132" text-anchor="middle" font-size="13" fill="#A2503B">则忠</text>
+    <rect x="30" y="164" width="170" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="115" y="192" text-anchor="middle" font-size="12" fill="#2F2A24">举善而教不能</text>
+    <path d="M204 187 L234 187" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M234 187 l-5 -3 M234 187 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="164" width="110" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="295" y="192" text-anchor="middle" font-size="13" fill="#A2503B">则劝</text>
+    <text x="220" y="230" text-anchor="middle" font-size="11" fill="#2F2A24">三事在上，三应在民；相应不是交易</text>
+    <text x="220" y="252" text-anchor="middle" font-size="10.5" fill="#5C5347">临之以庄则敬，孝慈则忠，举善而教不能则劝</text>
+  </svg>

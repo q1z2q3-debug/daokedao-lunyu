@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="440" height="250" role="img" aria-label="用人位置图：直者在上枉者在下则民服，枉者在上直者在下则民不服">
+    <text x="110" y="40" text-anchor="middle" font-size="11.5" fill="#4A5C55">举直错诸枉</text>
+    <text x="330" y="40" text-anchor="middle" font-size="11.5" fill="#A2503B">举枉错诸直</text>
+    <rect x="60" y="58" width="100" height="42" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="110" y="84" text-anchor="middle" font-size="15" fill="#2F2A24">直</text>
+    <path d="M110 104 L110 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M110 120 l-5 -4 M110 120 l5 -4" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="60" y="126" width="100" height="42" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="152" text-anchor="middle" font-size="15" fill="#5C5347">枉</text>
+    <text x="110" y="196" text-anchor="middle" font-size="11.5" fill="#4A5C55">则民服</text>
+    <rect x="280" y="58" width="100" height="42" fill="#FFFDF6" stroke="#A2503B"/>
+    <text x="330" y="84" text-anchor="middle" font-size="15" fill="#2F2A24">枉</text>
+    <path d="M330 104 L330 120" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M330 120 l-5 -4 M330 120 l5 -4" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="280" y="126" width="100" height="42" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="330" y="152" text-anchor="middle" font-size="15" fill="#5C5347">直</text>
+    <text x="330" y="196" text-anchor="middle" font-size="11.5" fill="#A2503B">则民不服</text>
+    <line x1="220" y1="48" x2="220" y2="170" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="220" y="236" text-anchor="middle" font-size="10.5" fill="#5C5347">直者在上，枉者在下；位置一倒，人心一倒</text>
+  </svg>

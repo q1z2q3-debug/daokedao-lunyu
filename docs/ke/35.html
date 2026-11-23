@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十五课 临之以庄（为政 2.20）</title>
+<meta name="description" content="《论语·为政》2.20 季康子问使民敬忠以劝，孔子答以临之以庄则敬、孝慈则忠、举善而教不能则劝。一课两页：少儿页讲先把自己的样子、心肠、做法摆正；成人页论三事三应的因果、庄与色庄之辨、与道之以政两条路径对读。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 35 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">三事三应</a><a href="#sc-d">色庄之辨</a><a href="#sc-e">两条路径</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 三事三应</a><a href="#sc-21">义理二 两条路径</a><a href="#sc-22">附论一 敬二十二见</a><a href="#sc-23">附论二 忠十八见</a><a href="#sc-24">附论三 莊六见</a><a href="#sc-25">附论四 慈一见</a><a href="#sc-26">附论五 异文勤劝</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>临之以庄</h1>
+    <div class="h1-sub">为政 2.20　底本：朱熹《论语集注》</div>
+    <div class="src">季康子问：「使民敬、忠以劝，如之何？」子曰：「临之以庄，则敬；孝慈，则忠；举善而教不能，则劝。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>庄</span></div><div class="tzcap"><span>6 画</span><span>端端正正</span></div></div>
+      <div class="tzitem"><div class="cell"><span>敬</span></div><div class="tzcap"><span>12 画</span><span>心里看重</span></div></div>
+      <div class="tzitem"><div class="cell"><span>慈</span></div><div class="tzcap"><span>13 画</span><span>心软而有爱</span></div></div>
+      <div class="tzitem"><div class="cell"><span>劝</span></div><div class="tzcap"><span>4 画</span><span>自己上进</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">庄</div><div class="v"><b>端严、庄重。</b>——<b>自己的样子有分寸，不随便、不浮滑；不是板着脸。</b></div></div>
+      <div class="row"><div class="k">敬</div><div class="v"><b>看重、不轻慢。</b>——<b>别人对你庄，你心里才肯敬他。</b></div></div>
+      <div class="row"><div class="k">慈</div><div class="v"><b>慈爱、体恤。</b>——<b>上者对亲人孝、对下面慈，人心才肯归向。</b></div></div>
+      <div class="row"><div class="k">劝</div><div class="v"><b>勉力上进。</b>——<b>看见好的想学，自己不够的肯补；是大家互相勉励。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>你庄重待人，人就敬重你；你孝顺慈爱，人就尽心待你；你抬举好人、教好不会的人，大家就自己往好处走。</b>——<b>（为政 2.20）</b></div>
+    <p>季康子问孔子：<b>怎么才能让百姓敬重我、尽心待我、互相勉励上进？</b>——<b>孔子没说怎么管人，先说怎么待他们。</b></p>
+    <p><b>一句话：先把自己摆正，别人自然跟着正。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，先看自己的样子。</b>——<b>「临之以庄」：你在人面前端端正正，不嬉皮笑脸，不轻浮随便；人看你这样，才不敢轻慢你。</b></p>
+    <p><b>第二层，再看自己的心肠。</b>——<b>「孝慈」：你对长辈孝，对晚辈慈，心肠厚；人感你的情，才肯尽心相报。</b></p>
+    <p><b>第三层，最后看做事的办法。</b>——<b>「举善而教不能」：好的人抬举起来，不会的人教他跟上；大家看得出好坏、学得到样子，就自己上进。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>样子、心肠、办法，三样都从自己做起；别人的回应，是后头跟着来的。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　你对弟弟妹妹摆脸色。</b>——<b>他学你的样子，也跟着板脸、顶嘴。</b>——<b>你端得住，他才敬你。</b></p>
+    <p><b>二　同学遇到难处，你帮过他。</b>——<b>等你有事，他才肯想着你、搭把手。</b>——<b>慈是先有心，不是先算回报。</b></p>
+    <p><b>三　小组里选领头的。</b>——<b>选做得好的，也拉一把跟不上的；大家才肯往一处使劲。</b>——<b>只挑好的、丢下弱的，人心就散了。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>你怎么待人，人就怎么待你；先尽自己，再看别人。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　庄重是不是凶巴巴？</b>——<b>不是。</b>——<b>凶是让人怕，庄是让人敬；怕的人躲着你，敬的人跟着你。</b></p>
+    <p><b>二　慈爱心是不是不管规矩？</b>——<b>也不是。</b>——<b>慈是心肠软，规矩还要立；只软不管，人就懈了。</b></p>
+    <p><b>三　「劝」是什么意思？</b>——<b>是自己肯上进，互相勉励。</b>——<b>不是大人劝一句、赏一点；是看见了好样子，心里想学。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>想让人服你，先看自己站得正不正。</b>——<b>样子端、心肠厚、办法公，服是自然来的。</b></div>
+    <div class="scene"><b>别先怪别人不敬。</b>——<b>先问自己：我待他的样子，值不值得他敬。</b></div>
+    <div class="scene"><b>会带人的人，既抬举好人，也帮扶跟不上的人。</b>——<b>丢下弱的，不是公平。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把「庄」讲成「自己有分寸」，不要讲成「摆架子、端威风」。</b>——<b>分寸是向内收，威风是向外压。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让他带弟妹做一件事：先自己做个样子，再教不会的。</b>——<b>举善教不能，就是带头加帮扶。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>大人自己手机不离手，却要求孩子端坐读书。</b>——<b>上面样子不正，下面的话就没人听。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>遇孩子顶嘴、不服，先停一句「我平时怎么待他」，再谈「他该不该」。</b>——<b>责任先归上一层。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>今天的「使民」，换成带班、带团队、带社群。</b>——<b>靠规则压人只能免事，靠样子带人才能入心。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>管理上讲「以身作则」，教育上讲「身教重于言教」。</b>——<b>与本章三事同一副心肠。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教孩子做一个「先正自己」的人，不是「先管别人」的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>临之以庄</h1>
+    <div class="h1-sub">为政 2.20　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">季康子问：「使民敬、忠以劝，如之何？」子曰：「临之以庄，则敬；孝慈，则忠；举善而教不能，则劝。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「用人」到「正身」</div>
+  <p><b>2.19 哀公问「何为则民服」——答在用人：举直错枉。</b>——<b>2.20 季康子问「使民敬忠以劝」——答在正身：庄、孝慈、举善教不能。</b>——<b>一问民服不服，一问民敬不敬；前者是把对的人放上去，后者是把自己这个人先摆正。</b></p>
+  <p><b>2.21 或谓孔子「子奚不为政」——答在「是亦为政」：孝友施于有政。</b>——<b>三章连读：2.19 论用人，2.20 论自身，2.21 论政之本在德化。</b>——<b>用人之前，先看自身；自身不立，用人也只是摆设。</b></p>
+  <p><b>问者是季康子——鲁国季氏权臣，桓子之子季肥。</b>——<b>权臣问的是「怎么使民」，孔子答的是「怎么待民」；问在驭下，答在上先。</b></p>
+  <p><b>《为政》至此二十章。</b>——<b>前半多讲为学、修身；自 2.19 起接连三章答人问政，把修身落到政事上。本章是政事问答的第二站。</b></p>
+  <div class="scene"><b>本章在《为政》里的位置，是「修身落到政事」。</b>——<b>前十八章讲怎么立、怎么学、怎么知；问政三章，把这些收到上位者自己身上。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k k2">季康子</div><div class="v"><b>季氏，名肥，谥康子，季桓子之子；鲁哀公时执季氏之政，三桓之首。</b></div></div>
+    <div class="row"><div class="k">使</div><div class="v"><b>驱使、支使。</b>——<b>问者口中的「使民」，是上位者对下位者的施为。</b></div></div>
+    <div class="row"><div class="k">敬</div><div class="v"><b>严肃、恭敬；民对在上者不轻慢。</b>——<b>全书二十二见，本章两见。</b></div></div>
+    <div class="row"><div class="k">忠</div><div class="v"><b>尽心竭力；民对上位者与所事之事尽心尽力。</b>——<b>全书十八见，本章两见。</b></div></div>
+    <div class="row"><div class="k">劝</div><div class="v"><b>勉也，相劝勉、向善上进。</b>——<b>通行本作「劝」；底本作「勤」，说见存疑 01 与附论五。</b></div></div>
+    <div class="row"><div class="k">临</div><div class="v"><b>居上而对下。</b>——<b>《说文》：「临，监也。」此处是上临下，不是走近看。全书六见。</b></div></div>
+    <div class="row"><div class="k">庄</div><div class="v"><b>端严、庄重，容貌举止有分寸。</b>——<b>不是板脸，不是威厉。全书六见，义理三处。</b></div></div>
+    <div class="row"><div class="k k2">孝慈</div><div class="v"><b>上者孝于亲、慈于民。</b>——<b>朱子《集注》大意：孝慈谓上孝于亲、慈于民。主语在上者，不在民。</b></div></div>
+    <div class="row"><div class="k k2">举善教不能</div><div class="v"><b>举用善人；教导能力不足的人。</b>——<b>两句一事两面：抬举好的，扶不起的。</b></div></div>
+  </div>
+  <p><b>句读是三问三答，句法整齐。</b>——<b>「临之以庄，则敬；孝慈，则忠；举善而教不能，则劝。」三事对三应，一一相应。</b></p>
+  <p><b>读法上一处要紧：「孝慈」一句承上省略「临之」「以」字。</b>——<b>补足作「孝慈以临之，则忠」，句法与前后齐。若把主语解成民，则三答皆从上者发端的句法就散了。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　三事三应：因果都在上者</div>
+  <p><b>三答不是三条安民政策，是三组因果。</b>——<b>因在上者，果在民：临之以庄则敬，孝慈则忠，举善而教不能则劝。</b></p>
+  <p><b>朱子《集注》大意：上者庄重，民不敢不敬；上者孝慈，民思忠；上者举善教不能，民知所向而相劝勉。</b></p>
+  <p><b>三组的次序有讲究。</b>——<b>第一组先立态度：庄是上者对下的样子。第二组再立心肠：孝慈是上者对亲对下的情分。第三组落到事上：举善、教不能是用人与教化的办法。由己及人，由心及事。</b></p>
+  <p><b>「则」字要读准：是相应，不是交易。</b>——<b>庄不是换敬的筹码，孝慈不是买忠的本钱；上者如此做，民自然如此应。</b>——<b>把「则」读成「则民一定」，本章就成了驭民术；读成「相感相应」，才是德化。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>三事是因，三应是果；因果的方向，从上指到下。</b></div>
+
+  <div class="h2" id="sc-d">三　专题二　「庄」不是板脸：色庄之辨</div>
+  <p><b>「庄」在全书六见，义理上三处：本章「临之以庄」、先进篇「色庄者乎」、15.33「不庄以莅之……则民不敬」。</b>——<b>余二处为「卞庄子」「孟庄子」，人名。</b></p>
+  <p><b>先进篇孔子说：「论笃是与，君子者乎？色庄者乎？」</b>——<b>只凭言论笃实就赞许他，究竟是真君子，还是只在脸色上装庄重？「色庄」是本章的反面：样子端严，内里不诚。</b></p>
+  <p><b>15.33 孔子又说：「知及之，仁能守之，不庄以莅之，则民不敬。」</b>——<b>智够、仁够，待民不庄重，民还是不敬。可见庄与智、仁并列，是第三种立身的样子：智是明，仁是厚，庄是重。</b></p>
+  <p><b>故「临之以庄」的庄，是自持的端重，不是压人的威严。</b>——<b>板脸给人看，是色庄；自己心里有分寸、举止有尺度，不必作态，人自肃然。</b>——<b>先进篇那章「色庄者乎」正是验法：看人看己，都要问一句——是真庄，还是色庄。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>庄是内里有分寸的外显；只在脸上做出来的庄重，经不起撤掉旁人眼光那一刻。</b></div>
+
+  <div class="h2" id="sc-e">四　专题三　与 2.3 对读：同一问题的两条路径</div>
+  <p><b>2.3：「道之以政，齐之以刑，民免而无耻；道之以德，齐之以礼，有耻且格。」</b>——<b>一条路径是政刑：以禁令引导，以刑罚齐一；民只求躲过，心里没有羞耻。另一条路径是德礼：以德先之，以礼齐之；民有耻心，自归于善。</b></p>
+  <p><b>本章是德礼路径在答问中的展开。</b>——<b>季康子问的「使民敬忠劝」，2.3 说的「有耻且格」，是同一结果的两种说法：民不愿做坏事，是有耻；民敬重、尽心、上进，是格。</b></p>
+  <p><b>两章对读，责任方向相反。</b>——<b>政刑一路，责任在下：民不从，加刑。德礼一路，责任在上：民不敬、不忠、不劝，先问上者庄不庄、慈不慈、举善教不能做到没有。</b></p>
+  <p><b>12.17 孔子答季康子：「政者，正也。子帅以正，孰敢不正？」</b>——<b>同一问者，同一方向：正己而后正人。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>政刑把责任往下放，德礼把责任往上收；本章三事，全在上者先尽自己。</b></div>
+
+  <div class="h2" id="sc-f">五　反向：四种误读，两种假德</div>
+  <p><b>四种误读，都在把三事推成手段。</b></p>
+  <p><b>一，临之以庄以为摆架子。</b>——<b>庄成了威严的姿势；姿势一做，民畏而不敬。畏与敬不同：畏是不敢近，敬是心肯服。</b></p>
+  <p><b>二，孝慈以为姑息讨好。</b>——<b>慈成了无原则的宽惠；惠而不教，民恃恩而不忠。</b></p>
+  <p><b>三，举善教不能以为只选好人。</b>——<b>举善是抬举，教不能是扶持；只举不教，是把不能者弃在一边。</b></p>
+  <p><b>四，使民敬忠劝以为驭民目标。</b>——<b>把民的反应当成可以计算、可以兑换的指标；一旦如此想，三事全成了术。</b></p>
+  <p><b>两种假德，都在借三事装样子。</b>——<b>一，假威：以颜色之厉代庄。面无表情、声高令急，内里并无自持；人见之退，不是敬。</b>——<b>二，假慈：以姑息之宽代慈。无原则说好话、好照应，心肠软而规矩废；人得之便懈，不是忠。</b></p>
+  <p><b>真庄真慈有一条验法：撤掉旁人的眼光，你对下属、对晚辈的样子，变不变。</b>——<b>不变，是真；一变，是色庄、色慈。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>三事做给人看，是术；三事做在自己身上，是德。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>上者庄以临下则民敬，孝慈则民忠，举善教不能则民劝；三事皆先正其身，民自相感相应。</p>
+  <p><b>一反。</b>这不是驭民之术，是正己之论。孔子答「使民」而言上者三事：所与者自身之德，所不与者驭下之法。</p>
+  <p><b>一辨。</b>「庄」不是板脸，是自持端重；「慈」不是姑息，是有心而有法；「劝」不是上者劝赏，是民自相勉。三事的分寸，都在上者先尽自己。</p>
+  <p><b>一证。</b>六个数：<b>「敬」全书二十二见，本章两见；「忠」十八见，本章两见；「莊」六见，义理三处；「慈」全书一见，唯本章；「孝」十九见；「善」四十二见。</b>——<b>详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「修身落到政事」。</b>——<b>为学修身不是关起门来做；上位者把自己摆正，政事就在其中。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>异文：底本两处作「勤」，通行本作「劝」。</b><b>本课从通行本作「劝」</b>：劝，勉也，民相劝勉向善；勤，劳也，力役之事。两字形近，古写或淆。本章「举善而教不能，则×」，义为民知所勉而上进，作「劝」于义为长。底本「勤」可视为形近讹或异文，两存备考。</div></div>
+    <div class="q"><span>02</span><div><b>「孝慈」的主语在上者还是在民。</b><b>本课取在上者</b>：上者孝于亲、慈于民，民感其恩而思忠。若解作「民孝慈则忠」，则孝慈成了民的先务，与三答皆从上者自身发端的句法不合。</div></div>
+    <div class="q"><span>03</span><div><b>「临之以庄」的「临」是否专指居位者。</b><b>本课取广义</b>：凡上对下、长对幼、师对徒，皆可曰临。章虽对季康子发，理不限国君大夫。</div></div>
+    <div class="q"><span>04</span><div><b>本章与 12.17「政者正也」是否重复。</b><b>本课判「互补」</b>：12.17 标一个总纲——政者正也；本章展开三目——庄、孝慈、举善教不能。一纲一目，非同一语。</div></div>
+    <div class="q"><span>05</span><div><b>「劝」是否可训「勉力于事」。</b><b>本课取「相劝勉、向善」一路</b>：与「举善教不能」相接，义为见善而慕、不能而学，民自上进；若训「勤力公事」，则与「勤」字浑，失了劝的向善意。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>这是教统治者驾驭百姓的权术。</b></div><div class="b"><b>三答都从在上者自身做起。</b>——<b>敬忠劝是化出来的，不是驭出来的。</b></div></div>
+    <div class="pair"><div class="a"><b>临之以庄就是摆脸色、立威严。</b></div><div class="b"><b>庄是自持端重。</b>——<b>色庄者乎，庄而无情是伪。</b></div></div>
+    <div class="pair"><div class="a"><b>孝慈就是对人心软、多照顾。</b></div><div class="b"><b>孝是上者先行孝，慈是上者存慈心。</b>——<b>化民之本，不是姑息。</b></div></div>
+    <div class="pair"><div class="a"><b>举善就是提拔好人。</b></div><div class="b"><b>举善之外还有教不能。</b>——<b>只举不教，是弃不能者于不顾。</b></div></div>
+    <div class="pair"><div class="a"><b>民敬忠劝是靠赏罚换来的。</b></div><div class="b"><b>2.3 已辨：政刑只能免而无耻。</b>——<b>本章三事皆德礼一路。</b></div></div>
+    <div class="pair"><div class="a"><b>上位者自己做不做无所谓，规矩立住就行。</b></div><div class="b"><b>13.6 其身正，不令而行。</b>——<b>上不正，虽令不从。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》2.3「道之以政，齐之以刑，民免而无耻；道之以德，齐之以礼，有耻且格。」</b>——<b>同一问题两条路径：政刑驱民，德礼立信；本章是德礼路径的展开。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》12.17「政者，正也。子帅以正，孰敢不正？」</b>——<b>季康子问政系列；正己是本章三事的总纲。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》12.19「子欲善，而民善矣。君子之德风，小人之德草；草上之风必偃。」</b>——<b>上欲善则民善，与孝慈、举善同一路。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》13.6「其身正，不令而行；其身不正，虽令不从。」</b>——<b>三答皆先正其身；身正，令不令都行。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》15.33「知及之，仁能守之，不庄以莅之，则民不敬。」</b>——<b>庄与敬的因果，孔子自己再说一遍。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《礼记·大学》「上老老而民兴孝，上长长而民兴弟，上恤孤而民不倍。」</b>——<b>上者先之，民兴之；与孝慈则忠同构。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　堂上人与阶下人</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 临之以庄，孝慈举善</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。堂上一位长者端坐，神色端肃而不厉；案上一卷、一杯水，无刑具、无榜文。阶下三人：一人敛容拱手，一人俯身奉事，一人引后来者同往善处。庭中老树旁抽新枝，日光平入。要让人一眼看出：堂上人的样子，就是阶下人的样子。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>端坐端肃的长者</b>：临之以庄；<b>敛容拱手、俯身奉事的两人</b>：敬与忠；<b>引后来者同往的人</b>：举善而教不能，民自相劝。</div>
+
+  <div class="h2" id="sc-20">义理图一　三事三应：因果都在上者</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 270" role="img" aria-label="三事三应：临之以庄则敬，孝慈则忠，举善而教不能则劝">
+    <text x="115" y="26" text-anchor="middle" font-size="10" fill="#8A8074">上者所行</text>
+    <text x="295" y="26" text-anchor="middle" font-size="10" fill="#8A8074">民之所应</text>
+    <rect x="30" y="44" width="170" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="115" y="72" text-anchor="middle" font-size="13" fill="#2F2A24">临之以庄</text>
+    <path d="M204 67 L234 67" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M234 67 l-5 -3 M234 67 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="44" width="110" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="295" y="72" text-anchor="middle" font-size="13" fill="#A2503B">则敬</text>
+    <rect x="30" y="104" width="170" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="115" y="132" text-anchor="middle" font-size="13" fill="#2F2A24">孝慈</text>
+    <path d="M204 127 L234 127" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M234 127 l-5 -3 M234 127 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="104" width="110" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="295" y="132" text-anchor="middle" font-size="13" fill="#A2503B">则忠</text>
+    <rect x="30" y="164" width="170" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="115" y="192" text-anchor="middle" font-size="12" fill="#2F2A24">举善而教不能</text>
+    <path d="M204 187 L234 187" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M234 187 l-5 -3 M234 187 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="240" y="164" width="110" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="295" y="192" text-anchor="middle" font-size="13" fill="#A2503B">则劝</text>
+    <text x="220" y="230" text-anchor="middle" font-size="11" fill="#2F2A24">三事在上，三应在民；相应不是交易</text>
+    <text x="220" y="252" text-anchor="middle" font-size="10.5" fill="#5C5347">临之以庄则敬，孝慈则忠，举善而教不能则劝</text>
+  </svg><div class="figcap">图一　三事三应：因果都在上者</div></div>
+
+  <div class="h2" id="sc-21">义理图二　两条路径：政刑与德礼</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="两条路径：政刑民免而无耻，德礼有耻且格">
+    <text x="99" y="40" text-anchor="middle" font-size="11.5" fill="#A2503B">路径一 · 政刑</text>
+    <text x="341" y="40" text-anchor="middle" font-size="11.5" fill="#4A5C55">路径二 · 德礼</text>
+    <rect x="24" y="56" width="150" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="99" y="80" text-anchor="middle" font-size="12.5" fill="#2F2A24">道之以政</text>
+    <text x="99" y="100" text-anchor="middle" font-size="12.5" fill="#2F2A24">齐之以刑</text>
+    <path d="M99 118 L99 138" stroke="#A2503B" stroke-width="1.6"/>
+    <path d="M99 138 l-4 -5 M99 138 l4 -5" stroke="#A2503B" stroke-width="1.6" fill="none"/>
+    <text x="99" y="162" text-anchor="middle" font-size="12" fill="#8A8074">民免而无耻</text>
+    <line x1="210" y1="52" x2="210" y2="176" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <rect x="266" y="56" width="150" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="341" y="80" text-anchor="middle" font-size="12.5" fill="#2F2A24">庄 · 孝慈</text>
+    <text x="341" y="100" text-anchor="middle" font-size="12" fill="#2F2A24">举善而教不能</text>
+    <path d="M341 118 L341 138" stroke="#4A5C55" stroke-width="1.6"/>
+    <path d="M341 138 l-4 -5 M341 138 l4 -5" stroke="#4A5C55" stroke-width="1.6" fill="none"/>
+    <text x="341" y="162" text-anchor="middle" font-size="12" fill="#8A8074">有耻且格</text>
+    <text x="341" y="182" text-anchor="middle" font-size="11" fill="#8A8074">民敬忠劝</text>
+    <text x="220" y="214" text-anchor="middle" font-size="10.5" fill="#5C5347">同问民之从违：一在下加刑，一在上先正</text>
+  </svg><div class="figcap">图二　两条路径：政刑免而无耻，德礼有耻且格</div></div>
+
+  <div class="h2" id="sc-22">附论一　「敬」二十二见</div>
+  <p><b>「敬」全书二十二见，本章两见（使民敬、则敬）。</b>——<b>散在事上、持己、典礼、鬼神四路。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">敬</span><span class="n">1.5</span></div><div class="u"><b>敬事而信</b><i>——事上，办事谨慎而守信。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">敬</span><span class="n">2.7</span></div><div class="u"><b>不敬何以别乎</b><i>——典礼，养父母之心与养口体之别。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">敬</span><span class="n">6.2</span></div><div class="u"><b>居敬而行简</b><i>——持己，内心庄重而行事宽简。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">敬</span><span class="n">13.19</span></div><div class="u"><b>执事敬</b><i>——持己，管事严肃认真。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">敬</span><span class="n">15.33</span></div><div class="u"><b>则民不敬</b><i>——对民，上不庄则民不敬。</i></div></div>
+  </div>
+  <p><b>二十二处之中，本章一处对民：上者庄，民敬。</b>——<b>敬是民的应，不是上者的术；上者先有可敬之实，民才有此一敬。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「忠」十八见</div>
+  <p><b>「忠」全书十八见，本章两见（忠以劝、则忠）。</b>——<b>代表各见，列下。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">忠</span><span class="n">1.4</span></div><div class="u"><b>为人谋而不忠乎</b><i>——替人办事尽心与否。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">忠</span><span class="n">3.19</span></div><div class="u"><b>臣事君以忠</b><i>——对上尽心，与君使臣以礼相对。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">忠</span><span class="n">12.14</span></div><div class="u"><b>行之以忠</b><i>——政事上尽心去做。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">忠</span><span class="n">13.19</span></div><div class="u"><b>与人忠</b><i>——对人尽心，与执事敬并列。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">忠</span><span class="n">14.7</span></div><div class="u"><b>忠焉，能勿诲乎</b><i>——忠到极处，不能不教诲。</i></div></div>
+  </div>
+  <p><b>忠的本义是尽心。</b>——<b>对人尽心，对事尽心，对上尽心。本章「则忠」是民对上位者尽心；而尽心之来，在在上者先孝慈——上者厚待其亲、慈及其民，民才肯尽心相报。忠是果，慈是因。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「莊」六见：义理三处</div>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">莊</span><span class="n">2.20</span></div><div class="u"><b>临之以庄</b><i>——义理：上者端重，民自敬。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">莊</span><span class="n">先进</span></div><div class="u"><b>色庄者乎</b><i>——义理：真庄与色庄之辨。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">莊</span><span class="n">14.12</span></div><div class="u"><b>卞庄子</b><i>——人名，不与义理。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">莊</span><span class="n">15.33</span></div><div class="u"><b>不庄以莅之／庄以莅之</b><i>——义理：两见，庄与民敬的因果。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">莊</span><span class="n">19.18</span></div><div class="u"><b>孟庄子</b><i>——人名，不与义理。</i></div></div>
+  </div>
+  <p><b>义理三处：本章与 15.33 论庄与民敬的因果，先进篇论真庄与色庄的分别。</b></p>
+  <p><b>15.33 把庄与智、仁并列：「知及之，仁能守之，不庄以莅之，则民不敬。」</b>——<b>智明、仁厚，还需仪态端重；缺这一样，民仍不敬。庄是第三种本钱，不在智仁之内，在智仁之外接人处。</b></p>
+  <p class="note2"><b>底本作「泣」，形近而讹，从通行本作「莅」。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「慈」全书一见</div>
+  <p><b>「慈」全书仅一见，就在本章「孝慈」。</b>——<b>孝对亲，慈对下；两字连用，是上者一身兼两般情分。</b></p>
+  <p><b>慈在别处换了说法：12.19「子欲善，而民善矣」、13.19「与人忠」，皆慈心肠的展转。</b>——<b>单看本章，慈字只此一现；正因只此一现，更见本章把「上者心肠」放在与「上者态度」并列的位置。</b></p>
+
+  <div class="h2" id="sc-26">附论五　异文：底本「勤」，通行本作「劝」</div>
+  <p><b>底本「勸」字全书零见；「勤」字三见：本章两处（忠以勤、则勤），18.7「四体不勤」一处。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">勸</span><span class="n">全书</span></div><div class="u"><b>零见</b><i>——底本无「劝」字；通行本本章两处作「劝」。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">勤</span><span class="n">2.20</span></div><div class="u"><b>忠以勤／则勤</b><i>——本章两处，今从通行本作「劝」。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">勤</span><span class="n">18.7</span></div><div class="u"><b>四体不勤</b><i>——劳作、力役之义，与本章不同。</i></div></div>
+  </div>
+  <p><b>通行本本章两处皆作「劝」。劝，勉也；勤，劳也。两字形近，写刻易淆。</b>——<b>本章上文「举善而教不能」，下应之辞义为民见善而慕、不能而学，自相勉以上进，作「劝」于义为长；若作「勤」，则成「民勤劳」，与教不能的向善意不接。</b></p>
+  <p><b>故本课正文从通行本作「劝」，底本「勤」录存备考。</b>——<b>读旧本遇两字相淆，先看上下文所指：指力役劳作曰勤，指向上勉进曰劝。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 35 课　为政 2.20</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.45　二〇二六年十一月</div>
+  </footer>
+
+</div>
+</body>
+</html>

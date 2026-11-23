@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" width="440" height="250" role="img" aria-label="同句互证图：举直错诸枉，为政篇落点民服，颜渊篇落点枉者直，子夏举皋陶伊尹">
+    <rect x="140" y="20" width="160" height="38" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="220" y="44" text-anchor="middle" font-size="14" fill="#2F2A24">举直错诸枉</text>
+    <path d="M220 58 L110 92" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M110 92 l6 -2 M110 92 l2 6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M220 58 L330 92" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M330 92 l-6 -2 M330 92 l-2 6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="30" y="96" width="160" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="110" y="120" text-anchor="middle" font-size="10" fill="#8A8074">为政 2.19</text>
+    <text x="110" y="140" text-anchor="middle" font-size="13" fill="#4A5C55">则民服</text>
+    <rect x="250" y="96" width="160" height="58" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="330" y="120" text-anchor="middle" font-size="10" fill="#8A8074">颜渊 12.22</text>
+    <text x="330" y="140" text-anchor="middle" font-size="13" fill="#4A5C55">能使枉者直</text>
+    <path d="M110 154 L110 176" stroke="#8A8074" stroke-width="1.4"/>
+    <path d="M330 154 L330 176" stroke="#8A8074" stroke-width="1.4"/>
+    <path d="M110 176 L330 176" stroke="#8A8074" stroke-width="1.4"/>
+    <path d="M220 176 L220 186" stroke="#8A8074" stroke-width="1.4"/>
+    <rect x="60" y="186" width="320" height="44" fill="#FCF9F0" stroke="#DED2B9"/>
+    <text x="220" y="212" text-anchor="middle" font-size="11" fill="#5C5347">子夏曰：舜举皋陶，汤举伊尹，不仁者远矣</text>
+  </svg>
