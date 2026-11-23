@@ -359,6 +359,9 @@ for lesson, sec, title, srctxt, kid, ad in LESSONS:
     html = PREFIX + '\n' + page(lesson, sec, title, sec, srctxt, kid, ad) + SUFFIX
     html = re.sub(r'<title>.*?</title>', '<title>润泽说 道可道之论语 · ' + NO[str(lesson)] + ' ' + title + '（八佾 ' + sec + '）</title>', html, count=1)
     html = re.sub(r'(name="description" content=")[^"]*(")', lambda m: m.group(1) + DESC[str(lesson)] + m.group(2), html, count=1)
+    html = html.replace('</style>', '.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}\n' + '</style>', 1)
+    html = html.replace('</style>', 'pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}\n' + '</style>', 1)
+    html = html.replace('</style>', '.doubt .q:not(:has(span)){grid-template-columns:1fr}\n' + '</style>', 1)
     os.makedirs(f'{ROOT}/src/html', exist_ok=True)
     open(f'{ROOT}/src/html/ke-{lesson}.html','w',encoding='utf-8').write(html)
     print(lesson, len(html))
