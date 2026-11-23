@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第四十二课 人而不仁如礼何（八佾 3.3）</title>
+<meta name="description" content="《论语·八佾》3.3 子曰人而不仁，如礼何？人而不仁，如乐何？一课两页：少儿页讲仁是礼乐的根、无仁则礼乐空转；成人页论「如……何」句式、礼乐与仁的先后、「而」字两读，驳礼乐自足论、诚意论、功能论，附仁礼乐如礼何玉帛钟鼓六类字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　八佾第三 · 二十六章　第 47 课 / 498</div>
+</div>
+
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第47课 · 3.8</div>
+  <h1>绘事后素</h1>
+  <div class="h1-sub">八佾第三 · 3.8　第 47 课</div>
+  <div class="src">原文：子夏问曰：「巧笑倩兮，美目盼兮，素以为绚兮。何谓也？」子曰：「绘事后素。」曰：「礼后乎？」子曰：「起予者商也！始可与言诗已矣。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">倩</div><div class="tzcap">笑时嘴角好看</div></div><div class="tzitem"><div class="cell">盼</div><div class="tzcap">眼波清亮</div></div><div class="tzitem"><div class="cell">素</div><div class="tzcap">白底子</div></div><div class="tzitem"><div class="cell">绘事后素</div><div class="tzcap">先有白底，再上彩</div></div></div><div class="h2" id="sc-2">一句话讲清</div><div class="scene">子夏读诗，问那几句夸美人的话是什么意思。夫子说：先有干净的白底，才画得上彩色。子夏一下接住：那礼，是不是也排在后面？</div><div class="h2" id="sc-3">字义小窗</div><div class="rows"><div class="row"><div class="k k2">倩</div><div class="v">笑的样子好看。「巧笑倩兮」。</div></div><div class="row"><div class="k k2">盼</div><div class="v">眼睛黑白分明、有神。「美目盼兮」。</div></div><div class="row"><div class="k k2">素</div><div class="v">白净的底子。</div></div><div class="row"><div class="k k2">绘事后素</div><div class="v">画画先有粉白底子，才施五彩。</div></div></div><div class="h2" id="sc-4">共读</div><div class="scene">夫子没讲诗，讲的是画：一张纸若不干净，颜色越多越脏；底子干净，几笔就好看。</div><div class="scene">子夏立刻把话挪到礼上：「礼后乎？」——礼也是后加的那层彩，先得有个人样，才谈得上礼节。夫子大喜：「起予者商也！」</div><div class="h2" id="sc-5">生活里的一天</div><div class="scene">同学把爷爷的旧木桌重新漆了一遍，先刮掉旧漆、磨平、上一道白底，最后才上色。他说：底子没弄好，颜色再贵也盖不住。</div><div class="scene">班里做手抄报，有的同学先贴满花边和贴纸，字却歪歪扭扭；老师只说了一句：先把字写正。</div><div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「素以为绚」是说白底子本身就很美吗？</div></div><div class="row"><div class="k k2">问二</div><div class="v">为什么夫子称赞子夏「起予」？</div></div><div class="row"><div class="k k2">问三</div><div class="v">「礼后乎」的「后」，是排在后面，还是次要？</div></div></div><div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">先打底，再上色：顺序错了，越用力越糟。</div></div><div class="row"><div class="k k2">二</div><div class="v">礼不是装饰，是底色之上的花纹。</div></div><div class="row"><div class="k k2">三</div><div class="v">会读书的人，能从一句诗里读出一层道理。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第47课 · 3.8</div>
+  <h1>绘事后素</h1>
+  <div class="h1-sub">八佾第三 · 3.8　第 47 课</div>
+  <div class="src">原文：子夏问曰：「巧笑倩兮，美目盼兮，素以为绚兮。何谓也？」子曰：「绘事后素。」曰：「礼后乎？」子曰：「起予者商也！始可与言诗已矣。」</div>
+  <div class="h2" id="sc-lian">连读：从射到绘</div><div class="scene">上一章讲射：标准要立对。此章讲绘：底色要先有。两章都在说「先后」——礼不是第一层，礼是第二层；第一层是人的质地。</div><div class="h2" id="sc-b">字义句读</div><div class="rows"><div class="row"><div class="k k2">巧笑倩兮</div><div class="v">笑时嘴角生姿。「倩」，口辅之美。</div></div><div class="row"><div class="k k2">美目盼兮</div><div class="v">目黑白分明。「盼」，目之黑白分也。</div></div><div class="row"><div class="k k2">素以为绚兮</div><div class="v">以素为绚：白底上才见文采。此句逸诗，今《诗》无之。</div></div><div class="row"><div class="k k2">绘事后素</div><div class="v">绘事，画画之事；后素，后于素——先有素地，后施彩。</div></div><div class="row"><div class="k k2">起予</div><div class="v">启发我。「商」，子夏名。</div></div></div><div class="h2" id="sc-c">两读：「绘事后素」</div><div class="scene">甲读（朱子）：先有粉素之地，而后施五彩。素在先，绘在后——礼后于忠信，正如彩后于素。</div><div class="scene">乙读（郑玄一路）：绘画先布众色，最后以素粉分其间。《考工记》「凡画缋之事后素功」，说的正是收尾用素。</div><div class="scene">两读方向相反，落点却同一个：素与绘有先后，且素为质地。夫子取哪读，文中未言；子夏所悟「礼后」，则两读皆通。</div><div class="h2" id="sc-d">章旨</div><div class="scene">此章讲「文」与「质」的次序。人有忠信之质，才承得起礼文；无质而徒有礼，如脏纸上涂彩。夫子借诗说画，子夏借画说礼，一问一答之间，诗与礼通了。</div><div class="h2" id="sc-e">三层</div><div class="rows"><div class="row"><div class="k k2">第一层</div><div class="v">诗：美人有倩盼之质，才有绚烂之文。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">画：有素地，才施五彩。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">礼：有忠信，才行礼文。</div></div></div><div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「素以为绚兮」为逸诗，不见于今《诗经·卫风·硕人》，断句亦有异读。</div><div class="q">「绘事后素」两读（素先／素后），郑、朱不同；本文并列，以「素为质地」为共义。</div><div class="q">子夏所悟是否即「礼后于仁」，后儒有以「后」为「而后」、有以「后」为「次要」，语气不同。</div><div class="q">「起予者商也」是否当时即许其传诗，无确证；看作嘉许之辞即可。</div></div><div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">素：质地</div><div class="b">绘：文采</div></div><div class="pair"><div class="a">忠信：质</div><div class="b">礼：文</div></div><div class="pair"><div class="a">先后：次序</div><div class="b">轻重：非主次</div></div><div class="pair"><div class="a">诗：可言</div><div class="b">礼：可通</div></div></div><div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《卫风·硕人》</div><div class="b">巧笑倩兮，美目盼兮——逸句所本。</div></div><div class="pair"><div class="a">《考工记》</div><div class="b">凡画缋之事，后素功——乙读之据。</div></div><div class="pair"><div class="a">《雍也》6.18</div><div class="b">文质彬彬，然后君子——质文相须。</div></div><div class="pair"><div class="a">《颜渊》12.8</div><div class="b">君子质而已矣，何以文为——质胜之偏。</div></div></div><div class="h2" id="sc-19">图一　素壁将绘</div><div class="figs single"><div class="fig"><div class="cap">图一 · 一张白底，几枝未上色的线</div><div class="ph">图位：竖幅 3:4 水墨。画室一角：一张素白绢面绷在木框上，绢上只有极淡的墨线稿，未着一色；旁边案上摆着研好的赭石、青灰与白粉，笔洗净搁在笔架上，未蘸彩。窗外一束光落在绢面，白底反光最亮。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>画室一角：一张素白绢面绷在木框上，绢上只有极淡的墨线稿，未着一色；旁边案上摆着研好的赭石、青灰与白粉，笔洗净搁在笔架上，未蘸彩。窗外一束光落在绢面，白底反光最亮。画面零文字。</pre></details><div class="h2" id="sc-20">义理图一　三层先后</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="诗、画、礼三层：素在先，绘在后">
+  <rect x="40" y="46" width="360" height="40" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="58" y="72" font-size="11.5" fill="#2F2A24">诗　有倩盼之质，方有绚烂之文</text>
+  <rect x="40" y="104" width="360" height="40" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="58" y="130" font-size="11.5" fill="#2F2A24">画　有粉素之地，方施五彩</text>
+  <rect x="40" y="162" width="360" height="40" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="58" y="188" font-size="11.5" fill="#A2503B">礼　有忠信之质，方行礼文</text>
+  <line x1="220" y1="86" x2="220" y2="104" stroke="#4A5C55"/><line x1="220" y1="144" x2="220" y2="162" stroke="#4A5C55"/>
+  <text x="220" y="226" text-anchor="middle" font-size="10.5" fill="#8A8074">同一句式，三层递进：礼后乎</text>
+</svg></div><div class="figcap">义理图一 · 诗、画、礼共用一条次序：质先文后。</div><div class="h2" id="sc-21">义理图二　素与绘</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="素为质地，绘为文采">
+  <rect x="50" y="50" width="150" height="120" fill="#FBF7EC" stroke="#DED2B9"/>
+  <text x="125" y="116" text-anchor="middle" font-size="14" fill="#8A8074">素</text>
+  <rect x="240" y="50" width="150" height="120" fill="#FFFDF6" stroke="#A2503B">
+    <rect x="262" y="72" width="106" height="24" fill="#A2503B" opacity="0.55"/>
+    <rect x="262" y="110" width="70" height="16" fill="#4A5C55" opacity="0.55"/>
+    <rect x="262" y="138" width="88" height="10" fill="#2F2A24" opacity="0.35"/>
+  </rect>
+  <text x="315" y="196" text-anchor="middle" font-size="14" fill="#A2503B">绘</text>
+  <text x="220" y="60" text-anchor="middle" font-size="10.5" fill="#8A8074">素为其地</text>
+</svg></div><div class="figcap">义理图二 · 绘是素上之物：去其素，彩无所附。</div><div class="h2" id="sc-22">附论一　礼不是装饰</div><div class="scene">今天很多人学礼，学的是姿态与话术：见面怎么说、席上怎么坐、敬酒怎么端。这些不是没用，但它们都是彩。底色是这个人是否忠信、是否肯担事。底色不对，彩越厚越显假。</div><div class="h2" id="sc-23">附论二　会读诗的人</div><div class="scene">子夏从一句夸美人的诗里读出了礼的次序，夫子说「始可与言诗已矣」。读书之乐不在记得多，在能把这一处的话，用到那一处去。</div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.51</div><div class="foot-r">第 47 课 / 498</div></footer>
+</section>
+</footer>
+</div>
+</body>
+</html>

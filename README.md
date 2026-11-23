@@ -123,7 +123,9 @@ https://q1z2q3-debug.github.io/daokedao-lunyu/
 |---|---|
 | `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–48）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
 | `book/润泽说 道可道之论语·上论（已刊）.md` | 书稿主档：前言、学而、为政、八佾 3.1–3.9（3.4 起为连载摘记） |
-| `src/` | 源稿与生成器：`ke-46-48.py`（3.7–3.9 页面生成器）；01–42 源稿仍在外部 `../润泽说-论语` |
+| `manuscript/ba-yi/` | 3.4–3.9（第 43–48 课）母本 md：少儿页七节 + 成人页九至十三节，与 `docs/ke` 逐节对应 |
+| `src/` | 生成器与源 HTML：`ke-43-45.py`、`ke-46-48.py` 生成 `src/html/ke-43..48.html`（图位版）；01–42 源稿仍在外部 `../润泽说-论语` |
+| `src/html/` | 阅读版源 HTML（无 base64、图位待供），发布态在 `docs/ke/` |
 | `dist/` | 分发物料：公众号长文、小红书 3 篇、三课合刊 PDF、22 位缺图 Prompt、46–48 图一 Prompt |
 | `scripts/` | 校验与巡检：`verify.py`、`check_live.py`、`expected.json`（图位基线）、`build_site.py` |
 | `.github/workflows/` | `verify`、`live`、`figs` 三条流水线 |
