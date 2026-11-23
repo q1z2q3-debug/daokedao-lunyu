@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="250" role="img" aria-label="换位：求禄在外，禄在其中在内">
+    <text x="60" y="52" text-anchor="middle" font-size="11.5" fill="#A2503B">求：禄在外</text>
+    <text x="330" y="52" text-anchor="middle" font-size="11.5" fill="#4A5C55">在：禄在内</text>
+    <circle cx="48" cy="120" r="7" fill="#5C5347"/>
+    <text x="48" y="146" text-anchor="middle" font-size="10" fill="#8A8074">我</text>
+    <path d="M58 120 L150 120" stroke="#A2503B" stroke-width="2"/>
+    <path d="M150 120 l-7 -4 M150 120 l-7 4" stroke="#A2503B" stroke-width="2" fill="none"/>
+    <text x="168" y="124" font-size="14" font-weight="600" fill="#A2503B">禄</text>
+    <line x1="210" y1="80" x2="210" y2="170" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="210" y="186" text-anchor="middle" font-size="9.5" fill="#8A8074">界</text>
+    <rect x="252" y="80" width="158" height="86" fill="#FFFDF6" stroke="#4A5C55"/>
+    <circle cx="272" cy="142" r="7" fill="#5C5347"/>
+    <text x="272" y="126" text-anchor="middle" font-size="10" fill="#8A8074">我</text>
+    <path d="M282 140 L344 130" stroke="#4A5C55" stroke-width="2"/>
+    <path d="M344 130 l-7 -4 M344 130 l-7 4" stroke="#4A5C55" stroke-width="2" fill="none"/>
+    <text x="358" y="128" font-size="13" font-weight="600" fill="#4A5C55">禄</text>
+    <text x="60" y="202" text-anchor="middle" font-size="10" fill="#8A8074">越界而逐，禄不至</text>
+    <text x="330" y="202" text-anchor="middle" font-size="10" fill="#8A8074">守界而做，禄自至</text>
+    <text x="220" y="230" text-anchor="middle" font-size="10.5" fill="#5C5347">禄不在你追的前方，在你站的地方</text>
+  </svg>

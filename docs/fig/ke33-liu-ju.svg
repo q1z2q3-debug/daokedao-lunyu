@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="440" height="280" role="img" aria-label="六句骨架：闻则言，见则行">
+    <text x="24" y="58" font-size="10" fill="#8A8074">闻 · 言</text>
+    <text x="24" y="140" font-size="10" fill="#8A8074">见 · 行</text>
+    <rect x="24" y="68" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="70" y="96" text-anchor="middle" font-size="13" fill="#2F2A24">多闻</text>
+    <rect x="150" y="68" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="196" y="96" text-anchor="middle" font-size="13" fill="#A2503B">阙疑</text>
+    <rect x="276" y="68" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="322" y="96" text-anchor="middle" font-size="12" fill="#2F2A24">慎言其余</text>
+    <text x="392" y="96" font-size="12" fill="#4A5C55">寡尤</text>
+    <rect x="24" y="150" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="70" y="178" text-anchor="middle" font-size="13" fill="#2F2A24">多见</text>
+    <rect x="150" y="150" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="196" y="178" text-anchor="middle" font-size="13" fill="#A2503B">阙殆</text>
+    <rect x="276" y="150" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="322" y="178" text-anchor="middle" font-size="12" fill="#2F2A24">慎行其余</text>
+    <text x="392" y="178" font-size="12" fill="#4A5C55">寡悔</text>
+    <path d="M118 91 L148 91" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M148 91 l-5 -3 M148 91 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M244 91 L274 91" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M274 91 l-5 -3 M274 91 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M372 91 L384 91" stroke="#4A5C55" stroke-width="1.6"/>
+    <path d="M384 91 l-6 -3 M384 91 l-6 3" stroke="#4A5C55" stroke-width="1.6" fill="none"/>
+    <path d="M118 173 L148 173" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M148 173 l-5 -3 M148 173 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M244 173 L274 173" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M274 173 l-5 -3 M274 173 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M372 173 L384 173" stroke="#4A5C55" stroke-width="1.6"/>
+    <path d="M384 173 l-6 -3 M384 173 l-6 3" stroke="#4A5C55" stroke-width="1.6" fill="none"/>
+    <text x="220" y="224" text-anchor="middle" font-size="11" fill="#2F2A24">博 → 精 → 约：三层收束，尤悔自寡</text>
+    <text x="220" y="248" text-anchor="middle" font-size="10.5" fill="#5C5347">言寡尤，行寡悔，禄在其中矣</text>
+  </svg>

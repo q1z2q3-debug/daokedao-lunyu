@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十三课 子张学干禄（为政 2.18）</title>
+<meta name="description" content="《论语·为政》2.18 子张学干禄，孔子答以多闻阙疑、慎言其余则寡尤，多见阙殆、慎行其余则寡悔，言寡尤行寡悔，禄在其中矣。一课两页：少儿页讲有把握才说、才做；成人页论三层骨架（学之博、择之精、守之约）、阙字三用、「禄在其中」是结果论非目的论。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 33 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">六句骨架</a><a href="#sc-d">阙字</a><a href="#sc-e">禄在其中</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 六句骨架</a><a href="#sc-21">义理二 换位</a><a href="#sc-22">附论一 干四见</a><a href="#sc-23">附论二 阙五见</a><a href="#sc-24">附论三 殆四见</a><a href="#sc-25">附论四 尤悔</a><a href="#sc-26">附论五 在其中</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>子张学干禄</h1>
+    <div class="h1-sub">为政 2.18　底本：朱熹《论语集注》</div>
+    <div class="src">子张学干禄。子曰：「多闻阙疑，慎言其余，则寡尤；多见阙殆，慎行其余，则寡悔。言寡尤，行寡悔，禄在其中矣。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>干</span></div><div class="tzcap"><span>3 画</span><span>伸手去求</span></div></div>
+      <div class="tzitem"><div class="cell"><span>禄</span></div><div class="tzcap"><span>12 画</span><span>做事得的报酬</span></div></div>
+      <div class="tzitem"><div class="cell"><span>阙</span></div><div class="tzcap"><span>13 画</span><span>先空着</span></div></div>
+      <div class="tzitem"><div class="cell"><span>寡</span></div><div class="tzcap"><span>14 画</span><span>少一点</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">干</div><div class="v"><b>求。</b>——<b>「干禄」就是求俸禄、求位置；不是冲撞，是伸手去取。</b></div></div>
+      <div class="row"><div class="k">禄</div><div class="v"><b>做事得的报酬。</b>——<b>古时候做官得的粮食叫禄；今天说的是工作与机会。</b></div></div>
+      <div class="row"><div class="k">阙</div><div class="v"><b>先空着。</b>——<b>不是不写，是「这一处我还不知道，留个位置」。</b></div></div>
+      <div class="row"><div class="k">寡</div><div class="v"><b>少。</b>——<b>「寡尤」就是少犯错、少招人怪。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>多听多看，拿不准的放一边；只说有把握的，只做有把握的。</b>——<b>（为政 2.18）</b></div>
+    <p>子张想求一个好前程，来问孔子。<b>孔子没教他怎么求，教他怎么「少出错」。</b>——<b>听得多、看得多；没把握的先空着；有把握的说出来、做出来——错少了，前程自然在其中。</b></p>
+    <p><b>一句话：把事做准了，路就在脚下。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，多听多看。</b>——<b>听人说，看人做；听得杂一点，看得广一点，心里才有底。</b>——<b>只听不看，容易空；只看不听，容易窄。</b></p>
+    <p><b>第二层，拿不准的，先空着。</b>——<b>「阙疑」「阙殆」：一个说法没证实，就留个空；一件事没试过，就先不硬上。</b>——<b>空着不是偷懒，是把位置留住。</b></p>
+    <p><b>第三层，有把握的，才说才做。</b>——<b>「慎言其余」「慎行其余」——「其余」就是有把握的那部分。</b>——<b>说它有把握，是因为你真懂；做它有把握，是因为你真试过。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>先把不确定的放下，再把确定的做稳。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　同学问你一道题，你不会。</b>——<b>说「我回去想想」，比随口给个答案好。</b>——<b>随口给的，害他全做错。</b></p>
+    <p><b>二　听到一个没证实的事。</b>——<b>先别说出去；等一等，或问一句「你从哪儿听来的」。</b>——<b>说出去一次，就替别人担了名。</b></p>
+    <p><b>三　做手工，没试过的新材料。</b>——<b>先用小角料试一块；试成了再上大件。</b>——<b>试错在小处，成了在大处。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>不确定的留一手，确定的下一手。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　「空着」是不是偷懒？</b>——<b>不是。</b>——<b>空着之后要去补：查、问、试。</b>——<b>一直空着不补，才是偷懒。</b></p>
+    <p><b>二　为什么只说「有把握的」？</b>——<b>因为话一出口，别人会拿去做事。</b>——<b>你说错一句，别人可能错一路。</b></p>
+    <p><b>三　「禄」是什么？</b>——<b>就是好好做事之后，别人给你的那份回报：一个位置、一份工作、一句信得过。</b>——<b>它不是求来的，是做出来的。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>少说没把握的，少做没试过的。</b>——<b>不是胆小，是把手里的活儿做准。</b></div>
+    <div class="scene"><b>说错一次，要补三次。</b>——<b>所以开口之前，先问自己一句「我确定吗」。</b></div>
+    <div class="scene"><b>路不在前面，在脚下。</b>——<b>把今天的事做稳，明天的事自己会来。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把「慎言」讲成「说话要负责」，不要讲成「少说话」。</b>——<b>负责是往前，少说是往后退。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让他负责一件小事（浇花、收碗），先说清做到什么算好，再交给他。</b>——<b>有标准，才谈得上「寡悔」。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>孩子说「我不确定」，大人接「那你就是不会」。</b>——<b>从此他学会的，是不确定也硬说。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>说话前加一句「我查过／我试过／我听人说的」——三句把话分了等级。</b>——<b>分得清等级，才分得清责任。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>消息一秒转发，谁先发谁显得知道。</b>——<b>先发的人常常最先错；晚一步查实的人，反而站得住。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>工程上最贵的一课，是「不确定的地方先做试验」。</b>——<b>桥要压载，药要试服，同一个理。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个「说话算数」的人，不是「什么都敢说」的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>子张学干禄</h1>
+    <div class="h1-sub">为政 2.18　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子张学干禄。子曰：「多闻阙疑，慎言其余，则寡尤；多见阙殆，慎行其余，则寡悔。言寡尤，行寡悔，禄在其中矣。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「界」到「用」</div>
+  <p><b>上一章说「知之为知之」——划界。</b>——<b>这一章说「多闻阙疑，慎言其余」——用界。</b>——<b>界划在心上，是自知；界用在嘴上与脚上，才是本事。</b></p>
+  <p><b>2.17 管「知道到哪儿」，本章管「说到哪儿、做到哪儿」。</b>——<b>同一把尺，量三处：心、言、行。</b>——<b>心不划界，言就虚；言不划界，行就莽。</b></p>
+  <p><b>子张问的是「禄」——俸禄、位置、出路。</b>——<b>孔子答的却是「闻」「见」「阙」「慎」四个字。</b>——<b>问在此，答在彼；这不是回避，是把「禄」的来处指给他看。</b></p>
+  <p><b>《为政》至此十八章。</b>——<b>前十七章讲怎么立、怎么学、怎么知；这一章第一次把「学」接到「食」上——学与禄的关系，孔子给了一个极冷静的答案。</b></p>
+  <div class="scene"><b>本章在《为政》里的位置，是「学的落地」。</b>——<b>2.17 把界划在心上，2.18 把界用在言与行上；界落到事上，才算学会。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">干</div><div class="v"><b>求也（《集解》引孔安国）。</b>——<b>不是「干犯」之干，是「求取」之干。</b>——<b>全书四见，唯本章作「求」。</b></div></div>
+    <div class="row"><div class="k">禄</div><div class="v"><b>仕者之奉也（朱子）。</b>——<b>俸禄、位置、出路，统言之曰禄。</b>——<b>全书五见，本章两见（干禄、禄在其中）。</b></div></div>
+    <div class="row"><div class="k k2">阙</div><div class="v"><b>空也，缺也；此处作动词：把它空着，不硬填。</b>——<b>全书五见，义理三处（本章两、13.3 阙如）。</b></div></div>
+    <div class="row"><div class="k">殆</div><div class="v"><b>危也；引申为「疑而未定」。</b>——<b>此处与「疑」对举，指行事上没把握的那一半。</b></div></div>
+    <div class="row"><div class="k">尤</div><div class="v"><b>过也；招来的责怪。</b>——<b>从「言」来。</b></div></div>
+    <div class="row"><div class="k">悔</div><div class="v"><b>恨也，事后之憾。</b>——<b>从「行」来。</b></div></div>
+  </div>
+  <p><b>句读是整齐的两组。</b>——<b>「多闻阙疑，慎言其余，则寡尤」——闻与言一对；「多见阙殆，慎行其余，则寡悔」——见与行一对。</b>——<b>末以「言寡尤，行寡悔，禄在其中矣」收。</b></p>
+  <p><b>读法上一处要紧：「其余」二字。</b>——<b>不是「其余全部」，是「剩下的、有把握的那部分」。</b>——<b>若读成「除存疑之外一概不说」，则成了闭口；若读成「什么都敢说」，则阙字落空。</b></p>
+
+  <div class="h2" id="sc-c">二　六句一副骨架</div>
+  <p><b>六句不是六条格言，是一副三层骨架。</b>——<b>朱子注点得极准：「多闻见者学之博，阙疑殆者择之精，慎言行者守之约。」</b></p>
+  <p><b>第一层，学之博：多闻、多见。</b>——<b>闻是听人，见是看事；两路并进，才不偏枯。</b>——<b>只听不说的人空，只说不听的人窄。</b></p>
+  <p><b>第二层，择之精：阙疑、阙殆。</b>——<b>把拿不准的挑出来，空着，不混进结论。</b>——<b>「择」在此不是选好的，是分出哪一半还不到火候。</b></p>
+  <p><b>第三层，守之约：慎言其余、慎行其余。</b>——<b>不是不言不行，是只把有把握的那部分说出来、做出去。</b>——<b>「约」是收束，不是退缩。</b></p>
+  <p><b>三层下来，才有「寡尤」「寡悔」。</b>——<b>尤在言，悔在行；言招怨，行招憾。</b>——<b>少怨少憾，不是靠能说会做，是靠「只说有把握的、只做有把握的」。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>博是收料，精是挑料，约是下料；三道工序，一道也不能省。</b></div>
+
+  <div class="h2" id="sc-d">三　「阙」字：全书五见，义理三处</div>
+  <p><b>「阙」在全书五见：2.18 两见（阙疑、阙殆）、13.3「盖阙如也」、14.44「阙党童子」（地名）、15.26「史之阙文」。</b>——<b>义理上只三处：本章两处，与 13.3 一处。</b></p>
+  <p><b>13.3 子路问政，孔子说「必也正名乎」，子路嫌迂，孔子斥之曰：「君子于其所不知，盖阙如也。」</b>——<b>不知的就空着，这是「正名」的第一步。</b></p>
+  <p><b>两处合看：「阙」是孔子处理「不知道」的通用手法。</b>——<b>2.17 说「不知为不知」，是心法；2.18 说「阙疑」「阙殆」，是手法；13.3 说「阙如」，是政事上的用法。</b>——<b>心法、手法、政法的同一处，就是这一个「阙」字。</b></p>
+  <p><b>阙不是空白。空白是没写，阙是「知道这里该有、暂时不填」。</b>——<b>它标出了位置，也标出了边界。</b>——<b>15.26 孔子叹「吾犹及史之阙文也……今亡矣夫」——他怀念的，正是那种「不知道就空着」的旧风。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>阙是留位，不是留白；留位的人，知道自己还差哪一块。</b></div>
+
+  <div class="h2" id="sc-e">四　「禄在其中」：结果，不是目的</div>
+  <p><b>子张问禄，孔子答以「寡尤」「寡悔」，然后说「禄在其中矣」。</b>——<b>四个字要读准：「在其中」，不是「由此得」。</b></p>
+  <p><b>15.32 说得更明白：「君子谋道不谋食。耕也，馁在其中矣；学也，禄在其中矣。君子忧道不忧贫。」</b>——<b>耕者不必求饱，饱在其中；学者不必求禄，禄在其中。</b>——<b>「其中」是一个位置：它在你已经做好的那件事里，不在你做那件事之外。</b></p>
+  <p><b>故「禄在其中」是结果论，不是目的论。</b>——<b>若把它读成「照此做就能得禄」，则本章立刻变成一本升迁手册；若把它读成「不必管禄」，又失了子张问禄的实际。</b>——<b>孔子给的是第三条：把力气放在「寡尤寡悔」上，禄自有它的来处；来不来，不归你管。</b></p>
+  <p><b>4.14「不患无位，患所以立」是同一副心肠。</b>——<b>不怕没有位置，怕的是没有立得住的理由。</b>——<b>位置是别人给的，理由是自己做出来的。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>把「求」换成「在」：求者逐外，在者守内。</b></div>
+  <div class="h2" id="sc-f">五　反向：四种误读，两种假谦</div>
+  <p><b>四种误读，都在把「阙」与「慎」推过头。</b></p>
+  <p><b>一，阙疑以为不学。</b>——<b>多闻在前，阙疑在后；不闻而阙，是空，不是慎。</b></p>
+  <p><b>二，慎言以为不言。</b>——<b>只说有把握的，不是一句不说；不言的人，是无话可说，不是有话说准。</b></p>
+  <p><b>三，寡尤悔以为无过。</b>——<b>寡是少，不是零；求零者，必至作假。</b></p>
+  <p><b>四，多闻以为博杂。</b>——<b>闻而不阙，是堆；阙而不闻，是空；闻而能阙，才是学。</b></p>
+  <p><b>两种假谦，都在借「阙」躲事。</b>——<b>一，不置一词：凡问皆曰「不知道」，凡议皆曰「不敢」，以「慎」为名，行「不任」之实。</b>——<b>二，推诿不知：分明有判断，偏说「我不懂」，等别人先说，好跟着走。</b></p>
+  <p><b>真「阙」有一条验法：阙过之后，你去补了没有。</b>——<b>补了，是待；一直空着，是弃。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>阙是留一手，不是缩一手；留的那手，迟早要接上。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>闻见欲博，阙疑欲精，言行欲约；三样俱到，尤悔自寡，禄在其中。</p>
+  <p><b>一反。</b>这不是求禄之术，是去禄之累。孔子答禄而言寡尤寡悔：所与者「所以立」，所不与者「位」。</p>
+  <p><b>一辨。</b>「阙」不是不学，是知道哪儿该空着；「慎」不是不言，是只说有把握的那一半。「其余」二字，是本章的分寸。</p>
+  <p><b>一证。</b>六个数：<b>「阙」全书五见，义理三处（本章两、13.3）；「殆」四见，本章一；「尤」三见，本章两；「悔」三见，本章两；「禄」五见，本章两（干禄、禄在其中）；「干」四见。</b>——<b>详见附论一至四。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「学的落地」。</b>——<b>界划在心上不算完，落到嘴上、脚上，才算学会。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「阙殆」的「殆」训「疑」还是「危」。</b><b>本课取「疑而未定」</b>：与上句「阙疑」对举，句法整齐；若训「危」，则「阙危」不成词。两存，主训取「疑」。</div></div>
+    <div class="q"><span>02</span><div><b>「禄在其中」是否以禄诱人。</b><b>本课判「否」</b>：15.32「学也，禄在其中矣」与「君子忧道不忧贫」连读，可见「其中」是位置，不是许诺。</div></div>
+    <div class="q"><span>03</span><div><b>「子张学干禄」的「学」字属上还是连下。</b><b>本课取属上</b>：子张所学在「干禄」，孔子答以「多闻阙疑」。若「学」连下作「学干禄之术」，则孔子所答与所问不合。</div></div>
+    <div class="q"><span>04</span><div><b>本章与 15.32 是否重复。</b><b>本课判「互补」</b>：本章说「怎么做」（闻见阙慎），15.32 说「为什么」（谋道不谋食）。一法一理，非同一语。</div></div>
+    <div class="q"><span>05</span><div><b>「多闻阙疑」是否等于「述而不作」。</b><b>本课判「相近而不同」</b>：7.1「述而不作，信而好古」是自处之辞；本章是教人接物之法——对己守旧，对人守界。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>这是孔子教的升迁术。</b></div><div class="b"><b>这是去禄之累的法子。</b>——<b>禄是结果，不是筹码；拿它当筹码，事就做不准。</b></div></div>
+    <div class="pair"><div class="a"><b>阙疑就是不懂别问。</b></div><div class="b"><b>多闻在前；不闻而阙，是空，不是慎。</b>——<b>阙之后要去补。</b></div></div>
+    <div class="pair"><div class="a"><b>慎言就是少说话。</b></div><div class="b"><b>是只说有把握的那一半。</b>——<b>「其余」不是零。</b></div></div>
+    <div class="pair"><div class="a"><b>寡尤寡悔就是从不犯错。</b></div><div class="b"><b>寡是少，不是零。</b>——<b>求零者，必至作假。</b></div></div>
+    <div class="pair"><div class="a"><b>多闻就是什么都听。</b></div><div class="b"><b>听而不阙是堆，阙而不闻是空。</b>——<b>闻而能阙，才是学。</b></div></div>
+    <div class="pair"><div class="a"><b>说「不知道」最稳妥。</b></div><div class="b"><b>阙过之后要去补；一直空着，是弃地。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》15.32「君子谋道不谋食……学也，禄在其中矣；君子忧道不忧贫。」</b>——<b>同一句「在其中」，一在耕，一在学：位置在你做的事里。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》4.14「不患无位，患所以立。」</b>——<b>不怕没位置，怕没立住的理由；与「禄在其中」同一副心肠。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》7.28「多闻，择其善者而从之；多见而识之；知之次也。」</b>——<b>多闻多见两路，本章承之而加「阙」与「慎」。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》13.3「君子于其所不知，盖阙如也。」</b>——<b>政事上的「阙」；同一手法，用在正名。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《中庸》「博学之，审问之，慎思之，明辨之，笃行之。」</b>——<b>博学对应多闻见，审问明辨对应阙疑殆，笃行对应慎行其余。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《易·颐》大象「君子以慎言语，节饮食。」；《老子》五章「多言数穷，不如守中。」</b>——<b>两源同戒：口是关口，不是通道。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　满简与空简</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 多闻与阙疑</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。案上两堆简：一堆已读旧、绳结紧、批注密；另一堆摊开、空白处多，笔搁在砚上、墨已干。一人坐案前，手按空白简，指节轻压，未落笔；窗外一人持刺求见，候在阶下。要让人一眼看出：满的在手边，空的也摊着，人不急着写。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>密批的旧简</b>：多闻多见，料已收在案上；<b>空白的简与干墨</b>：阙疑——留位不填，等它到火候；<b>窗外候着的人</b>：所求的禄在门外等，不在笔下催。</div>
+
+  <div class="h2" id="sc-20">义理图一　六句骨架：博、精、约</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" role="img" aria-label="六句骨架：闻则言，见则行">
+    <text x="24" y="58" font-size="10" fill="#8A8074">闻 · 言</text>
+    <text x="24" y="140" font-size="10" fill="#8A8074">见 · 行</text>
+    <rect x="24" y="68" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="70" y="96" text-anchor="middle" font-size="13" fill="#2F2A24">多闻</text>
+    <rect x="150" y="68" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="196" y="96" text-anchor="middle" font-size="13" fill="#A2503B">阙疑</text>
+    <rect x="276" y="68" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="322" y="96" text-anchor="middle" font-size="12" fill="#2F2A24">慎言其余</text>
+    <text x="392" y="96" font-size="12" fill="#4A5C55">寡尤</text>
+    <rect x="24" y="150" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="70" y="178" text-anchor="middle" font-size="13" fill="#2F2A24">多见</text>
+    <rect x="150" y="150" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="196" y="178" text-anchor="middle" font-size="13" fill="#A2503B">阙殆</text>
+    <rect x="276" y="150" width="92" height="46" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="322" y="178" text-anchor="middle" font-size="12" fill="#2F2A24">慎行其余</text>
+    <text x="392" y="178" font-size="12" fill="#4A5C55">寡悔</text>
+    <path d="M118 91 L148 91" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M148 91 l-5 -3 M148 91 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M244 91 L274 91" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M274 91 l-5 -3 M274 91 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M372 91 L384 91" stroke="#4A5C55" stroke-width="1.6"/>
+    <path d="M384 91 l-6 -3 M384 91 l-6 3" stroke="#4A5C55" stroke-width="1.6" fill="none"/>
+    <path d="M118 173 L148 173" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M148 173 l-5 -3 M148 173 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M244 173 L274 173" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M274 173 l-5 -3 M274 173 l-5 3" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M372 173 L384 173" stroke="#4A5C55" stroke-width="1.6"/>
+    <path d="M384 173 l-6 -3 M384 173 l-6 3" stroke="#4A5C55" stroke-width="1.6" fill="none"/>
+    <text x="220" y="224" text-anchor="middle" font-size="11" fill="#2F2A24">博 → 精 → 约：三层收束，尤悔自寡</text>
+    <text x="220" y="248" text-anchor="middle" font-size="10.5" fill="#5C5347">言寡尤，行寡悔，禄在其中矣</text>
+  </svg><div class="figcap">图一　六句骨架：博、精、约</div></div>
+
+  <div class="h2" id="sc-21">义理图二　换位：求在外，在在内</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="换位：求禄在外，禄在其中在内">
+    <text x="60" y="52" text-anchor="middle" font-size="11.5" fill="#A2503B">求：禄在外</text>
+    <text x="330" y="52" text-anchor="middle" font-size="11.5" fill="#4A5C55">在：禄在内</text>
+    <circle cx="48" cy="120" r="7" fill="#5C5347"/>
+    <text x="48" y="146" text-anchor="middle" font-size="10" fill="#8A8074">我</text>
+    <path d="M58 120 L150 120" stroke="#A2503B" stroke-width="2"/>
+    <path d="M150 120 l-7 -4 M150 120 l-7 4" stroke="#A2503B" stroke-width="2" fill="none"/>
+    <text x="168" y="124" font-size="14" font-weight="600" fill="#A2503B">禄</text>
+    <line x1="210" y1="80" x2="210" y2="170" stroke="#DED2B9" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="210" y="186" text-anchor="middle" font-size="9.5" fill="#8A8074">界</text>
+    <rect x="252" y="80" width="158" height="86" fill="#FFFDF6" stroke="#4A5C55"/>
+    <circle cx="272" cy="142" r="7" fill="#5C5347"/>
+    <text x="272" y="126" text-anchor="middle" font-size="10" fill="#8A8074">我</text>
+    <path d="M282 140 L344 130" stroke="#4A5C55" stroke-width="2"/>
+    <path d="M344 130 l-7 -4 M344 130 l-7 4" stroke="#4A5C55" stroke-width="2" fill="none"/>
+    <text x="358" y="128" font-size="13" font-weight="600" fill="#4A5C55">禄</text>
+    <text x="60" y="202" text-anchor="middle" font-size="10" fill="#8A8074">越界而逐，禄不至</text>
+    <text x="330" y="202" text-anchor="middle" font-size="10" fill="#8A8074">守界而做，禄自至</text>
+    <text x="220" y="230" text-anchor="middle" font-size="10.5" fill="#5C5347">禄不在你追的前方，在你站的地方</text>
+  </svg><div class="figcap">图二　换位：求在外，在在内</div></div>
+  <div class="h2" id="sc-22">附论一　「干」四见</div>
+  <p><b>「干」在全书四见。</b>——<b>2.18「干禄」（求禄）；季氏篇「谋动干戈于邦内」（干戈）；17.1「比干谏而死」（人名）；18.9「亚饭干」（人名）。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">干</span><span class="n">2.18</span></div><div class="u"><b>干禄</b><i>——求取。全书唯此处作「求」的动词。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">干</span><span class="n">季氏</span></div><div class="u"><b>干戈</b><i>——兵器，非动词。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">干</span><span class="n">17.1</span></div><div class="u"><b>比干</b><i>——人名，殷之三仁。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">干</span><span class="n">18.9</span></div><div class="u"><b>亚饭干</b><i>——乐师名。</i></div></div>
+  </div>
+  <p><b>四处之中，只有本章是「求」。</b>——<b>故「干禄」的「干」，不可与「干犯」「干戈」混。</b>——<b>求禄之求，是伸手去取，不是冲撞。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「阙」五见：从阙疑到阙如</div>
+  <p><b>五见分三类。</b>——<b>一是认识上的阙（2.18 阙疑、阙殆）；二是政事上的阙（13.3 阙如）；三是名物上的阙（14.44 阙党，地名；15.26 史之阙文）。</b></p>
+  <p><b>三类的共同点是「留位」：留一个空位，标出边界。</b>——<b>孔子对「史之阙文」还有一句叹：「吾犹及史之阙文也……今亡矣夫。」</b>——<b>他怀念的，正是那种「不知道就空着」的旧风。</b></p>
+  <p><b>一条可味：阙字从「门」从「癸」，本义是门有空处。</b>——<b>门有缺处，人才进出；说有缺处，学问才进退。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「殆」四见</div>
+  <p><b>四见：2.15「思而不学则殆」、2.18「阙殆」、15.11「佞人殆」、18.5「今之从政者殆而」。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">殆</span><span class="n">2.15</span></div><div class="u"><b>思而不学则殆</b><i>——心疲、空转。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">殆</span><span class="n">2.18</span></div><div class="u"><b>多见阙殆</b><i>——事疑、未定。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">殆</span><span class="n">15.11</span></div><div class="u"><b>佞人殆</b><i>——危。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">殆</span><span class="n">18.5</span></div><div class="u"><b>今之从政者殆而</b><i>——危。</i></div></div>
+  </div>
+  <p><b>同一字，两处两义：思而不学，是心疲；闻而不阙，是事疑。</b>——<b>读古书须逐处看，不可一字通训。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「尤」「悔」各三见</div>
+  <p><b>「尤」三见：2.18 两见（寡尤、言寡尤），14.35「不怨天，不尤人」。</b>——<b>「悔」三见：2.18 两见（寡悔、行寡悔），述而篇「暴虎冯河，死而无悔者，吾不与也」。</b></p>
+  <p><b>两字各有一半在本章。</b>——<b>尤从「言」来，悔从「行」来；一个向外招，一个向内留。</b>——<b>故本章以「言寡尤，行寡悔」收：外少怨，内少憾。</b></p>
+  <p><b>再看 14.35「不怨天，不尤人」：尤的对象由人转到天，怨也就到了头。</b>——<b>本章的「寡尤」只求「少」，14.35 的「不尤」求「无」；两级台阶，同一方向。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「禄在其中」：结果论，不是目的论</div>
+  <p><b>「在其中」三字，全书两见：2.18 与 15.32。</b>——<b>两处句法相同：耕者馁在其中，学者禄在其中。</b></p>
+  <p><b>这不是许诺，是定位。</b>——<b>做对了事，报酬在其中；做不对，报酬也在其中——只是方向相反。</b>——<b>孔子把「禄」从目标降为位置：它不在你追的前方，在你站的地方。</b></p>
+  <p><b>故本章最狠的一句，不是「寡尤寡悔」，是「在其中」。</b>——<b>它把「求」换成了「在」：求者逐外，在者守内。</b>——<b>子张问的是「怎么得」，孔子答的是「在哪儿得」。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>禄不是一个要追的东西，是一个要做对的位置。</b></div>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 33 课　为政 2.18</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.44　二〇二六年十一月</div>
+  </footer>
+
+
+
+</div>
+</body>
+</html>
