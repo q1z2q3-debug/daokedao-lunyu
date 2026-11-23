@@ -3,6 +3,7 @@ import re, os
 
 import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+VER = open(f'{ROOT}/VERSION', encoding='utf-8').read().strip()
 src = open(f'{ROOT}/docs/ke/42.html', encoding='utf-8').read()
 i = src.find('<div class="wrap">')
 PREFIX = src[:i+len('<div class="wrap">')]
@@ -64,7 +65,7 @@ def page(lesson, section, h1, sub, src_txt, kid, adult):
   <div class="h1-sub">八佾第三 · {section}　第 {lesson} 课</div>
   <div class="src">{src_txt}</div>
   {adult}
-  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.51</div><div class="foot-r">第 {lesson} 课 / 498</div></footer>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v{VER}</div><div class="foot-r">第 {lesson} 课 / 498</div></footer>
 </section>
 '''
 
@@ -352,8 +353,12 @@ LESSONS = [
  (45,'3.6','季氏旅于泰山','原文：季氏旅于泰山。子谓冉有曰：「女弗能救与？」对曰：「不能。」子曰：「呜呼！曾谓泰山不如林放乎？」',L45_kid,L45_adult),
 ]
 
+NO = {'43': '第四十三课', '44': '第四十四课', '45': '第四十五课', '46': '第四十六课', '47': '第四十七课', '48': '第四十八课'}
+DESC = {'43': '《论语·八佾》3.4 林放问礼之本。一课两页：少儿页讲礼有本有文，本在敬与哀，偏时宁往本偏；成人页辨「易」字两读（变易／治办）、奢俭与丧易丧戚的取舍，立「宁俭宁戚」的优先级，附存疑一条。', '44': '《论语·八佾》3.5 夷狄之有君，不如诸夏之亡也。一课两页：少儿页讲君在分不在位；成人页辨「亡」两读（无／亡失）与「谁不如谁」两解，三层递到「位在分不在、名存而分亡」，附存疑。', '45': '《论语·八佾》3.6 季氏旅于泰山。一课两页：少儿页讲名分与执行两道；成人页论大夫祭名山之僭、冉有「弗能救」之失职，与 3.1、3.2 合为礼崩三证，附存疑与句读辨。', '46': '《论语·八佾》3.7 射不主皮，为力不同科。一课两页：少儿页讲比的是容仪不是力气，尽力而量力；成人页辨「主皮」与「贯革」、古之道何指，附存疑与双卡。', '47': '《论语·八佾》3.8 绘事后素。一课两页：少儿页讲底子先于花样；成人页辨「素」为白底还是素功、「礼后乎」是先后还是轻重，子夏由诗悟礼，孔子许其可与言诗。', '48': '《论语·八佾》3.9 夏礼吾能言之，杞宋不足征。一课两页：少儿页讲「记得」不等于「有据」；成人页辨「文献」二字（文与献）、能言与能征之别，断在证据不在理解。'}
 for lesson, sec, title, srctxt, kid, ad in LESSONS:
     html = PREFIX + '\n' + page(lesson, sec, title, sec, srctxt, kid, ad) + SUFFIX
+    html = re.sub(r'<title>.*?</title>', '<title>润泽说 道可道之论语 · ' + NO[str(lesson)] + ' ' + title + '（八佾 ' + sec + '）</title>', html, count=1)
+    html = re.sub(r'(name="description" content=")[^"]*(")', lambda m: m.group(1) + DESC[str(lesson)] + m.group(2), html, count=1)
     os.makedirs(f'{ROOT}/src/html', exist_ok=True)
     open(f'{ROOT}/src/html/ke-{lesson}.html','w',encoding='utf-8').write(html)
     print(lesson, len(html))

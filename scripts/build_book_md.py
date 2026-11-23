@@ -3,7 +3,7 @@
 """把各课母本 md 串成「已刊」母本（学而篇起，入为政篇、八佾篇）。
 
 用法：python3 scripts/build_book_md.py
-源：../润泽说-论语/前言-读论语之前.md、../润泽说-论语/单课/[123].N-*.md
+源：../润泽说-论语/前言-读论语之前.md、../润泽说-论语/单课/[123].N-*.md、manuscript/ba-yi/NN-*.md（3.4 起）
 产物：book/润泽说 道可道之论语·上论（已刊）.md
 约定：各课原 `# 标题` 降为 `## 标题`；每课前加一行课次索引（便于目录生成）。
 """
@@ -21,7 +21,7 @@ subtitle: 上论 · 通释读本（连载）
 author: 润泽
 base: 朱熹《论语集注》
 chapters: 498
-published: 前言 + 学而十六章 + 为政二十四章 + 八佾三章
+published: 前言 + 学而十六章 + 为政二十四章 + 八佾九章
 version: 0.15.51
 date: 2026-11-20
 ---
@@ -29,7 +29,7 @@ date: 2026-11-20
 # 润泽说 道可道之论语 · 上论（已刊）
 
 > 一章一课，一课两页：少儿页可念、成人页可考。
-> 本册为连载中的第一批：前言一篇、学而十六章、为政二十四章、八佾三章。全书依朱熹本四百九十八章，按篇推进。
+> 本册为连载中的第一批：前言一篇、学而十六章、为政二十四章、八佾九章。全书依朱熹本四百九十八章，按篇推进。
 
 """
 
@@ -70,6 +70,19 @@ def main():
     for path in sorted(glob.glob(os.path.join(SRC, "单课", "[123].*.md")), key=_k):
         txt = open(path, encoding="utf-8").read()
         parts.append(shift(txt).strip())
+
+    # 3.4 起（第 43 课以后）的母本入库于 manuscript/ba-yi/NN-*.md
+    def _k3(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (3, int(m.group(1)) - 39) if m else (99, 99)
+
+    for path in sorted(glob.glob(os.path.join(ROOT, "manuscript", "ba-yi", "*.md")), key=_k3):
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        # 统一课标题体例：「## 第 43 课 · 林放问礼之本」→「## 3.4　林放问礼之本」
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 3.%d　%s" % (int(m.group(1)) - 39, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
 
     body = "\n\n---\n\n".join(parts)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

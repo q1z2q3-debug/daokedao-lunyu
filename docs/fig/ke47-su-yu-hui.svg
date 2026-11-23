@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" width="440" height="220" role="img" aria-label="素为质地，绘为文采">
+  <rect x="50" y="50" width="150" height="120" fill="#FBF7EC" stroke="#DED2B9"/>
+  <text x="125" y="116" text-anchor="middle" font-size="14" fill="#8A8074">素</text>
+  <rect x="240" y="50" width="150" height="120" fill="#FFFDF6" stroke="#A2503B">
+    <rect x="262" y="72" width="106" height="24" fill="#A2503B" opacity="0.55"/>
+    <rect x="262" y="110" width="70" height="16" fill="#4A5C55" opacity="0.55"/>
+    <rect x="262" y="138" width="88" height="10" fill="#2F2A24" opacity="0.35"/>
+  </rect>
+  <text x="315" y="196" text-anchor="middle" font-size="14" fill="#A2503B">绘</text>
+  <text x="220" y="60" text-anchor="middle" font-size="10.5" fill="#8A8074">素为其地</text>
+</svg>

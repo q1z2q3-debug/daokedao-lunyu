@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" width="440" height="200" role="img" aria-label="夏殷之礼的证据链在杞宋处断开">
+  <line x1="40" y1="100" x2="400" y2="100" stroke="#DED2B9"/>
+  <circle cx="70" cy="100" r="7" fill="#4A5C55"/><circle cx="160" cy="100" r="7" fill="#4A5C55"/>
+  <circle cx="250" cy="100" r="7" fill="#A2503B"/><circle cx="340" cy="100" r="7" fill="#A2503B"/>
+  <text x="70" y="80" text-anchor="middle" font-size="10.5" fill="#4A5C55">夏礼</text>
+  <text x="160" y="80" text-anchor="middle" font-size="10.5" fill="#4A5C55">殷礼</text>
+  <text x="250" y="80" text-anchor="middle" font-size="10.5" fill="#A2503B">杞</text>
+  <text x="340" y="80" text-anchor="middle" font-size="10.5" fill="#A2503B">宋</text>
+  <text x="70" y="126" text-anchor="middle" font-size="9.5" fill="#8A8074">能言</text>
+  <text x="160" y="126" text-anchor="middle" font-size="9.5" fill="#8A8074">能言</text>
+  <text x="250" y="126" text-anchor="middle" font-size="9.5" fill="#8A8074">不足</text>
+  <text x="340" y="126" text-anchor="middle" font-size="9.5" fill="#8A8074">不足</text>
+  <line x1="282" y1="100" x2="306" y2="100" stroke="#A2503B" stroke-width="1.5"/>
+  <text x="220" y="170" text-anchor="middle" font-size="10.5" fill="#2F2A24">断在第三、第四环：制度尚在，证据不在</text>
+</svg>

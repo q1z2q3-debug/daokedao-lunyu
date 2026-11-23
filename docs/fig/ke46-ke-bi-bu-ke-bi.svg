@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" width="440" height="220" role="img" aria-label="可比与不可比：中、容体可学，力不可齐">
+  <line x1="60" y1="120" x2="380" y2="120" stroke="#DED2B9"/>
+  <circle cx="110" cy="120" r="8" fill="#4A5C55"/><circle cx="220" cy="120" r="8" fill="#4A5C55"/><circle cx="330" cy="120" r="8" fill="#A2503B"/>
+  <text x="110" y="100" text-anchor="middle" font-size="11" fill="#4A5C55">中</text>
+  <text x="220" y="100" text-anchor="middle" font-size="11" fill="#4A5C55">容体</text>
+  <text x="330" y="100" text-anchor="middle" font-size="11" fill="#A2503B">力</text>
+  <text x="110" y="148" text-anchor="middle" font-size="9.5" fill="#8A8074">可学</text>
+  <text x="220" y="148" text-anchor="middle" font-size="9.5" fill="#8A8074">可练</text>
+  <text x="330" y="148" text-anchor="middle" font-size="9.5" fill="#8A8074">天定</text>
+</svg>

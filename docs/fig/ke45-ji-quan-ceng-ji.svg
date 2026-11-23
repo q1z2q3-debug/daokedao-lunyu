@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="250" role="img" aria-label="祭权层级：天子、诸侯、大夫">
+  <rect x="170" y="30" width="100" height="40" fill="#FFFDF6" stroke="#2F2A24"/>
+  <text x="220" y="56" text-anchor="middle" font-size="13" fill="#2F2A24">天子</text>
+  <rect x="120" y="96" width="200" height="40" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="220" y="122" text-anchor="middle" font-size="13" fill="#4A5C55">诸侯 · 祭境内山川</text>
+  <rect x="120" y="162" width="200" height="40" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="220" y="188" text-anchor="middle" font-size="13" fill="#A2503B">大夫 · 不得祭名山</text>
+  <line x1="220" y1="70" x2="220" y2="96" stroke="#DED2B9"/>
+  <line x1="220" y1="136" x2="220" y2="162" stroke="#DED2B9"/>
+  <text x="360" y="188" text-anchor="end" font-size="10.5" fill="#8A8074">季氏在此越界</text>
+  <text x="220" y="228" text-anchor="middle" font-size="10.5" fill="#8A8074">祭权随分而止：上得下不得，非关诚心</text>
+</svg>
