@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.50**，已刊 **49 件**（前言一篇 + 学而十六章 + 为政二十四章 + 专题五篇 + 论文三篇）
+- 当前版本 **v0.15.51**，已刊 **57 件**（前言一篇 + 48 课／49 章 + 专题五篇 + 论文三篇）；八佾已至 3.9。
 
 ---
 
@@ -114,3 +114,19 @@ https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 道德经 · 心经 · 金刚经 · 坛经 · 阴符经 · 易传 · 庄子 · 千字文 · 三字经 · 甲骨文
 （同一位作者、同一套义理、同一种体例，各自独立一库、各有一站。）
+
+---
+
+## 仓库结构
+
+| 路径 | 内容 |
+|---|---|
+| `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–48）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
+| `book/润泽说 道可道之论语·上论（已刊）.md` | 书稿主档：前言、学而、为政、八佾 3.1–3.9（3.4 起为连载摘记） |
+| `src/` | 源稿与生成器：`ke-46-48.py`（3.7–3.9 页面生成器）；01–42 源稿仍在外部 `../润泽说-论语` |
+| `dist/` | 分发物料：公众号长文、小红书 3 篇、三课合刊 PDF、22 位缺图 Prompt、46–48 图一 Prompt |
+| `scripts/` | 校验与巡检：`verify.py`、`check_live.py`、`expected.json`（图位基线）、`build_site.py` |
+| `.github/workflows/` | `verify`、`live`、`figs` 三条流水线 |
+
+插图原档（22 张 1328px PNG）不在仓库历史内，放在 Release：
+<https://github.com/q1z2q3-debug/daokedao-lunyu/releases/tag/fig-orig-1328>
