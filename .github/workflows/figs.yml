@@ -1,0 +1,24 @@
+name: figs
+
+on:
+  schedule:
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 列出缺图课次
+        run: |
+          echo "### 缺图图位" >> $GITHUB_STEP_SUMMARY
+          for f in docs/ke/*.html; do
+            n=$(grep -c 'class="ph"' "$f")
+            if [ "$n" -gt 0 ]; then
+              t=$(grep -o '<title>[^<]*' "$f" | sed 's/<title>//')
+              echo "- $(basename "$f")　$t" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "合计：$(grep -o 'class="ph"' docs/ke/*.html | wc -l) 处" >> $GITHUB_STEP_SUMMARY
