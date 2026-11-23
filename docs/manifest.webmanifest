@@ -1,0 +1,24 @@
+{
+ "name": "论语 · 道可道（润泽说）",
+ "short_name": "道可道·论语",
+ "description": "一页两读：少儿页与成人页对照，逐章读《论语》。",
+ "start_url": "/daokedao-lunyu/index.html",
+ "scope": "/daokedao-lunyu/",
+ "display": "standalone",
+ "background_color": "#FBF7EC",
+ "theme_color": "#FBF7EC",
+ "lang": "zh-CN",
+ "icons": [
+  {
+   "src": "/daokedao-lunyu/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/daokedao-lunyu/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}
