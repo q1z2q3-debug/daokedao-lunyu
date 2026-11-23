@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十七课 人而无信（为政 2.22）</title>
+<meta name="description" content="《论语·为政》2.22 子曰人而无信、不知其可也，大车无輗，小车无軏，其何以行之哉。一课两页：少儿页讲信是人与人之间的接口；成人页考輗軏器物之喻、「可」字义、信与恭慎的德目排序，附字频证据与三误读对照。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 窄屏：字义小课堂四格改 2×2，释义各自成行，避免相压 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:10px;justify-content:center}
+  .tzitem{min-width:0;width:100%}
+  .tzcap{font-size:10px}
+  .tzcap span{white-space:normal;display:block}
+}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 37 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">专题一 器物考</a><a href="#sc-d">专题二 可字义</a><a href="#sc-e">专题三 德目排序</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 信为接口</a><a href="#sc-21">义理二 三误读对照</a><a href="#sc-22">附论一 信三十八见</a><a href="#sc-23">附论二 行八十二见</a><a href="#sc-24">附论三 可百五十六见</a><a href="#sc-25">附论四 车八见</a><a href="#sc-26">附论五 輗軏何哉</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>人而无信</h1>
+    <div class="h1-sub">为政 2.22　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「人而无信，不知其可也。大车无輗，小车无軏，其何以行之哉？」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>信</span></div><div class="tzcap"><span>9 画</span><span>诚实、言行相应</span></div></div>
+      <div class="tzitem"><div class="cell"><span>輗</span></div><div class="tzcap"><span>ní</span><span>大车辕端缚轭的关键</span></div></div>
+      <div class="tzitem"><div class="cell"><span>軏</span></div><div class="tzcap"><span>yuè</span><span>小车辕端钩衡的曲钩</span></div></div>
+      <div class="tzitem"><div class="cell"><span>行</span></div><div class="tzcap"><span>6 画</span><span>车行、做事</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">信</div><div class="v"><b>诚实可靠，言行相应。</b>——<b>本章之信，是事前就能被人放心托付的接口。</b></div></div>
+      <div class="row"><div class="k">可</div><div class="v"><b>可以、可行。</b>——<b>「不知其可」：不知道他还能做成什么事。</b></div></div>
+      <div class="row"><div class="k k2">大车·輗</div><div class="v"><b>大车是牛车。</b>——<b>輗是辕端横木，缚住轭来驾牛；大车无輗，牛和车接不上。</b></div></div>
+      <div class="row"><div class="k k2">小车·軏</div><div class="v"><b>小车是马车。</b>——<b>軏是辕端曲钩，钩住衡来驾马；小车无軏，马和车接不上。</b></div></div>
+      <div class="row"><div class="k">行</div><div class="v"><b>车行，引申为做事、立身。</b>——<b>无輗軏则车不走，无信则人立不住。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>一个人不讲信用，就像车少了接驾的关键；车走不动，人也做不成事。</b>——<b>（为政 2.22）</b></div>
+    <p>孔子说：<b>人如果没有信，不知道他还能做什么。</b>——<b>大车没有輗，小车没有軏，那它凭什么往前走呢？</b></p>
+    <p><b>一句话：信是人和人、人和事之间的那个「接口」。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，先看人。</b>——<b>「人而无信，不知其可也」：说话不算数，答应了做不到，旁人就没法放心托付。</b></p>
+    <p><b>第二层，再看车。</b>——<b>大车靠輗接牛，小车靠軏接马；关键一掉，车再好看也停在原地。</b></p>
+    <p><b>第三层，反问收束。</b>——<b>「其何以行之哉」：没有这处关键，车凭什么走？人没有信，事凭什么成？</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>信不是挂在嘴上的好话，是让事做得成的那个零件。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　答应的事记下来。</b>——<b>说好几时还书、几时到，就照说的做；做不到先开口讲明。</b></p>
+    <p><b>二　不随口许诺。</b>——<b>没把握的事不先应下来；轻诺最容易失信。</b></p>
+    <p><b>三　答应了就做到。</b>——<b>借了东西按时还，托的事有回音；这就是身边的「輗軏」。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>说话和做事对上，别人才接得住你。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　輗和軏分别在哪种车上？</b>——<b>輗在大车（牛车）上，軏在小车（马车）上；两个不能换。</b></p>
+    <p><b>二　车没有輗軏会怎样？</b>——<b>辕和衡接不上，牛马拉不动车，车停在原地。</b></p>
+    <p><b>三　人没有信，像什么？</b>——<b>像没有輗軏的车：接口坏了，事一件也推不动。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>信用是一点点攒出来的：每一次说到做到，都是在装车上的关键。</b></div>
+    <div class="scene"><b>接口比承诺重要：让人放心托付，比说得漂亮更要紧。</b></div>
+    <div class="scene"><b>守信也要讲道理：不合义的话，不必死守。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把本章讲成「信是行事的接口」，不要讲成「老实听话、不许反驳」。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>日常场景：</b>——<b>让孩子承担可兑现的小约定（还物、守时、回话），看他是否说到做到。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「守信」听成死守约；信要近义，错的、不合理的诺言不必硬守。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>问孩子「上次答应的事，做到了吗」——把诺言和回音连成一条线。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>线上交往多，承诺更轻、回音更快；本章提醒：接口在，关系才接得上。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>车的关键是机械接口；信是人与人协作的接口，喻体可对照工程上的连接件。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个说话能对上事、别人接得住的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>人而无信</h1>
+    <div class="h1-sub">为政 2.22　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「人而无信，不知其可也。大车无輗，小车无軏，其何以行之哉？」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「孝友」到「立人」</div>
+  <p><b>上一章有人问孔子为何不出仕，孔子把政本挪到家门：孝于亲、友于兄弟，亦是为政。</b>——<b>本章从家门之德落到立身之德：人若无信，便如车无关键，行不得。</b></p>
+  <p><b>《为政》前二十一章多讲何为政、何以民服、孝友何先。</b>——<b>本章是孔子对「人之所以立得住」下的一个硬判据。</b></p>
+  <p><b>2.21 说孝友及政，本章说信为可行。</b>——<b>一在家门，一在接口。</b>——<b>车驾之喻在《论语》里不多见；喻体落在「行之」二字上，不在车本身。</b></p>
+  <div class="scene"><b>本章在《为政》里的位置，是「立身之接口」。</b>——<b>前二十一章讲政之所出、家之所本，本章讲人之所以行。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">而</div><div class="v"><b>假设连词，如果。</b>——<b>「人而无信」即人若无信。</b></div></div>
+    <div class="row"><div class="k">信</div><div class="v"><b>诚、实；言行相应，可被预期。</b>——<b>本章之信是事前可凭的接口，不是事后夸人的德行。</b></div></div>
+    <div class="row"><div class="k">可</div><div class="v"><b>可以、可行；亦可解作认可。</b>——<b>「不知其可」：不知他还能成什么事。</b></div></div>
+    <div class="row"><div class="k k2">大车·輗</div><div class="v"><b>大车，牛车，平地任载之车。</b>——<b>輗（ní）：辕端横木，缚轭以驾牛者。</b></div></div>
+    <div class="row"><div class="k k2">小车·軏</div><div class="v"><b>小车，驷马车，田车、兵车、乘车。</b>——<b>軏（yuè）：辕端上曲，钩衡以驾马者。</b></div></div>
+    <div class="row"><div class="k">行</div><div class="v"><b>车行，引申为行事、立身。</b>——<b>「何以」即以何，凭什么；「哉」为反问叹词。</b></div></div>
+  </div>
+  <p><b>句读是三停。</b>——<b>先断人：「人而无信，不知其可也」；再比车：「大车无輗，小车无軏」；再反问收束：「其何以行之哉？」</b>——<b>先立判据，再出喻体，末句把喻体扣回人行。</b></p>
+  <p><b>一处要紧：輗属大车（牛车），軏属小车（马车）。</b>——<b>二字不可写反、不可混用；信对言，行对衡，形近音近者须分清。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　輗軏之喻：器物考</div>
+  <p><b>包咸《集解》注：「大车，牛车。輗者，辕端横木，以缚轭。小车，驷马车。軏者，辕端上曲钩衡。」</b></p>
+  <p><b>朱熹《集注》注：「大车，谓平地任载之车。輗，辕端横木，缚轭以驾牛者。小车，谓田车、兵车、乘车。軏，辕端上曲，钩衡以驾马者。车无此二者，则不可以行，人而无信，亦犹是也。」</b></p>
+  <p><b>形制上有一分歧。</b>——<b>包、朱以輗軏为辕端的木构件；清儒段玉裁《说文解字注》引戴震一路，以为輗軏是贯穿辕与衡的金属关键（销键）。</b>——<b>两存，详见存疑三。</b></p>
+  <p><b>喻体的落点不在车，在「行之」。</b>——<b>輗軏是车与驾畜之间的接口；信是人与人事之间的接口。</b>——<b>接口坏了，车再完好也动不了。</b></p>
+
+  <div class="h2" id="sc-d">三　专题二　「不知其可」的「可」字义</div>
+  <p><b>孔安国《集解》注：「言人而无信，其馀终无可。」</b>——<b>其余终究无可取。</b></p>
+  <p><b>训读有两系。</b>——<b>甲，可＝可以、可行；「不知其可」＝不知他还可以做什么。乙，可＝认可、许可；「不知其可」＝不见其可立于人前。</b></p>
+  <p><b>本课取甲为主。</b>——<b>与下文「何以行之」相应，「可」落在可行性上；乙义并存不废。</b></p>
+  <p><b>这一处要紧：孔子不是说无信之人道德有亏，而是说无信之人在行事系统里失去了被调用的可能。</b>——<b>判断是功能性的，不是情绪性的；这也是本章与一般道德劝勉不同的地方。</b></p>
+
+  <div class="h2" id="sc-e">四　专题三　信与恭、慎：德目排序</div>
+  <p><b>1.13「信近于义，言可复也。恭近于礼，远耻辱也。」</b>——<b>信与恭并列，各有所近：信近义，恭近礼。</b>——<b>信不是最高德目本身，与义相接才可立。</b></p>
+  <p><b>2.18「慎言其余，则寡尤；慎行其余，则寡悔。」</b>——<b>慎管言行的边界；信管言行的成色。</b>——<b>慎而无信，守得住边界，撑不起托付；信而不慎，热心过头，反招尤悔。</b></p>
+  <p><b>《阳货》篇「恭、宽、信、敏、惠：信则人任焉。」</b>——<b>信列五德之一，其效在「人任」：被人托付。</b></p>
+  <p><b>本章立信为可行之接口；1.13 给信立界（近义），2.18 给信立守（慎言慎行），《阳货》给信见效（人任）。</b>——<b>四章合看，信不是孤德。</b></p>
+
+  <div class="h2" id="sc-f">五　反向：三种误读，两种假托</div>
+  <p><b>三种误读，都在把本章读偏。</b></p>
+  <p><b>一，把信当权宜。</b>——<b>以为兵不厌诈，信只在讲规矩时用，临事可以从权。本章把信立为「行」的机械条件；权诈另是一道，不可借本章翻案。</b></p>
+  <p><b>二，把信当私德。</b>——<b>以为信只对熟人、朋友讲，对外人、对公事可从略。信及于行事与众人；12.7「民无信不立」，信是邦国之基，不止朋友一伦。</b></p>
+  <p><b>三，把信当契约条文。</b>——<b>以为把话说死、把字据写死就是信。信是接口不是条文；1.13「信近于义」，不合义的诺言，复与不复另当别论。</b></p>
+  <p><b>两种假托，都在借本章卸责或责人。</b>——<b>一，借本章说「我这人实在，不会转弯」；实在不是不学的借口，《阳货》篇「好信不好学，其蔽也贼」。</b>——<b>二，借本章要求别人守信，自己却轻诺寡信；本章是自立之教，不是责人之柄。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>本章立的是可行之接口，不是开的权宜口子。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>人无信，如车无輗軏；信是行事可行的接口，不是道德装饰。</p>
+  <p><b>一反。</b>这不是道德劝勉式的高调，是可行性判断：无信则事不行、人不立。</p>
+  <p><b>一辨。</b>信近于义而后可复；信不是死守诺言，更不是对谁都讲私人义气。</p>
+  <p><b>一证。</b>六个数：<b>「信」全书三十八见，本章一见；「行」八十二见，本章一见；「可」一百五十六见，本章一见；「车」八见，本章两见；「輗」「軏」全书各一见；「何」一百一十八见、「哉」六十一见，本章各一见。</b>——<b>详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「人之所以行」。</b>——<b>信在人身，即是车之輗軏；接口在，事才推得动。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「可」训可以／可行，还是认可。</b><b>本课取可以／可行</b>，与「何以行之」相应；认可一路并存。</div></div>
+    <div class="q"><span>02</span><div><b>大车小车之分。</b>包咸以牛车、驷马车对举；朱熹以平地任载之车、田兵乘车对举。两说相承，牛车马车之实一致，名目宽窄有别。</div></div>
+    <div class="q"><span>03</span><div><b>輗軏是辕端木构件，还是贯穿辕衡的关键销。</b>包、朱主木构件；段玉裁《说文注》引戴震说主金属关键。两存，形制细节不强定。</div></div>
+    <div class="q"><span>04</span><div><b>本章专就交友之信说，还是通指一切言行之信。</b><b>本课取通指</b>；车驾之喻及于行事全体，不限于朋友一伦。</div></div>
+    <div class="q"><span>05</span><div><b>「人而无信」之「而」：假设连词，还是转折连词。</b><b>本课取假设</b>；转折一路于文意不切，存而不论。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>信是挂在嘴上的道德装饰。</b></div><div class="b"><b>信是行动的接口；车无輗軏则不行，人无信则事不成。</b></div></div>
+    <div class="pair"><div class="a"><b>信可以看场合，兵不厌诈。</b></div><div class="b"><b>本章把信立为可行的条件；权诈另论，不可借本章翻案。</b></div></div>
+    <div class="pair"><div class="a"><b>信是私德，只对熟人讲。</b></div><div class="b"><b>信及于行事与众人；民无信不立，信是邦国之基。</b></div></div>
+    <div class="pair"><div class="a"><b>信就是把契约条文写死。</b></div><div class="b"><b>信是接口不是条文；信近于义，不合义的诺言另当别论。</b></div></div>
+    <div class="pair"><div class="a"><b>车无輗軏只是比喻，信不信无妨。</b></div><div class="b"><b>喻落在「何以行之」：无信则车停、事滞、人不立。</b></div></div>
+    <div class="pair"><div class="a"><b>本章教人做老好人。</b></div><div class="b"><b>本章论可行性，不论讨好；信须近义，恭须近礼。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》1.13「信近于义，言可复也。」</b>——<b>信要合义，诺言才可兑现；本章立信，1.13 给信立界。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》12.7「自古皆有死；民无信不立。」</b>——<b>信为邦国立之基；本章是车驾之喻，12.7 是邦国之喻。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》13.20「言必信，行必果；硁硁然，小人哉！」</b>——<b>信若不辨义，只是小信；与 1.13 互参。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》15.6「言忠信，行笃敬，虽蛮貊之邦行矣。」</b>——<b>忠信笃敬为可行之具；与本章「何以行之」正相应。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》2.18「慎言其余，则寡尤；慎行其余，则寡悔。」</b>——<b>言行皆有慎；信落在言行上，慎守其边界。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《论语·阳货》「好信不好学，其蔽也贼。」</b>——<b>信须学以通之；本章立本，此章戒偏。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　车之輗軏，人之信</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 无关键则车不行</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：横卷 4:3 水墨。古道之上，一大车（牛挽）一小车（马驾）并列；两车辕端与衡轭相接处各画一处关键，特写清晰；其中一车关键脱落，辕衡脱开，车停不前。路边一人拱手，神色持重。不画人物面目夸张，不画战争场景。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>大车之輗、小车之軏</b>：车与驾畜相接的关键；<b>脱落而停的车</b>：无接口则不行；<b>持重之人</b>：信在人身上，即是这处关键。</div>
+
+  <div class="h2" id="sc-20">义理图一　信为接口：人车两喻相扣</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="信为接口：人无信行事无接口，车无輗軏辕衡脱开，汇合于信为可行之接口">
+    <rect x="40" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">人而无信</text>
+    <text x="110" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">行事无接口</text>
+    <rect x="260" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="330" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">车无輗軏</text>
+    <text x="330" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">辕衡脱不开</text>
+    <path d="M110 116 L176 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M176 158 l-6 -2 M176 158 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M330 116 L264 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M264 158 l6 -2 M264 158 l3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="150" y="160" width="140" height="50" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#4A5C55">信为可行接口</text>
+    <text x="220" y="232" text-anchor="middle" font-size="10.5" fill="#5C5347">无信则事不成，无輗軏则车不行</text>
+  </svg><div class="figcap">图一　信为接口：人车两喻相扣</div></div>
+
+  <div class="h2" id="sc-21">义理图二　三误读与正解对照</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" role="img" aria-label="信的三种误读：权宜、私德、条文，与三条正解对照">
+    <text x="30" y="26" font-size="11" fill="#8A8074">误读</text>
+    <text x="230" y="26" font-size="11" fill="#4A5C55">正解 · 本课所取</text>
+    <rect x="30" y="38" width="180" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="120" y="62" text-anchor="middle" font-size="12" fill="#5C5347">把信当权宜</text>
+    <text x="120" y="82" text-anchor="middle" font-size="10.5" fill="#8A8074">兵不厌诈，临事从权</text>
+    <path d="M212 66 L226 66" stroke="#5C5347" stroke-width="1.4"/>
+    <path d="M226 66 l-5 -2 M226 66 l-2 -5" stroke="#5C5347" stroke-width="1.4" fill="none"/>
+    <rect x="230" y="38" width="180" height="56" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="320" y="62" text-anchor="middle" font-size="12" fill="#2F2A24">信是可行条件</text>
+    <text x="320" y="82" text-anchor="middle" font-size="10.5" fill="#8A8074">权诈另论，不可翻案</text>
+    <rect x="30" y="118" width="180" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="120" y="142" text-anchor="middle" font-size="12" fill="#5C5347">把信当私德</text>
+    <text x="120" y="162" text-anchor="middle" font-size="10.5" fill="#8A8074">只对熟人朋友讲</text>
+    <path d="M212 146 L226 146" stroke="#5C5347" stroke-width="1.4"/>
+    <path d="M226 146 l-5 -2 M226 146 l-2 -5" stroke="#5C5347" stroke-width="1.4" fill="none"/>
+    <rect x="230" y="118" width="180" height="56" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="320" y="142" text-anchor="middle" font-size="12" fill="#2F2A24">信及行事众人</text>
+    <text x="320" y="162" text-anchor="middle" font-size="10.5" fill="#8A8074">民无信不立</text>
+    <rect x="30" y="198" width="180" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="120" y="222" text-anchor="middle" font-size="12" fill="#5C5347">把信当条文</text>
+    <text x="120" y="242" text-anchor="middle" font-size="10.5" fill="#8A8074">把话说死写死</text>
+    <path d="M212 226 L226 226" stroke="#5C5347" stroke-width="1.4"/>
+    <path d="M226 226 l-5 -2 M226 226 l-2 -5" stroke="#5C5347" stroke-width="1.4" fill="none"/>
+    <rect x="230" y="198" width="180" height="56" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="320" y="222" text-anchor="middle" font-size="12" fill="#2F2A24">信近于义</text>
+    <text x="320" y="242" text-anchor="middle" font-size="10.5" fill="#8A8074">是接口，非死条文</text>
+    <text x="220" y="284" text-anchor="middle" font-size="10.5" fill="#5C5347">三误读皆把信读偏；正解以「可行」与「近义」为界</text>
+  </svg><div class="figcap">图二　三误读与正解对照</div></div>
+
+  <div class="h2" id="sc-22">附论一　「信」三十八见，本章一见</div>
+  <p><b>底本全书（自《学而》首章起）grep「信」，凡三十八见；本章一见，在「人而无信」。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">信</span><span class="n">1.4 / 1.7 / 5.26</span></div><div class="u"><b>交友待人</b><i>——与朋友交而不信乎／言而有信／朋友信之。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">信</span><span class="n">1.5 / 12.7 / 13.4 / 19.10</span></div><div class="u"><b>政事托付</b><i>——敬事而信／民无信不立／上好信／信而后劳其民。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">信</span><span class="n">1.6 / 1.8 / 1.13 / 8.13 / 15.18</span></div><div class="u"><b>为学修身</b><i>——谨而信／主忠信／信近于义／笃信好学／信以成之。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">信</span><span class="n">2.22</span></div><div class="u"><b>本章</b><i>——人而无信；信被单提出来，立为「行」的条件。</i></div></div>
+  </div>
+  <p><b>三十八见中，本章之一见是把信从诸德目中单提出来。</b>——<b>其落点不在私人交情，在行事可行与否。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「行」八十二见，本章一见</div>
+  <p><b>底本全书 grep「行」，凡八十二见；本章一见，在「其何以行之哉」。</b></p>
+  <p><b>「行」在全书有两系用法。</b>——<b>一是行走、车行，如本章「行之」、10.19「升车」一节；二是行事、施行，如 2.13「先行其言」、12.14「行之以忠」、15.24「终身行之」。</b></p>
+  <p><b>本章之「行」本是车行，喻中带行事之义。</b>——<b>车得輗軏而后行，人有信而后行事可行；两义在本章是一层。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「可」一百五十六见，本章一见</div>
+  <p><b>底本全书 grep「可」，凡一百五十六见；本章一见，在「不知其可也」。</b></p>
+  <p><b>「可」在《论语》多作可以、能够、许可解。</b>——<b>如 1.13「亦可宗也」一类判断句中亦常见。</b></p>
+  <p><b>本章「其可」与下文「何以行之」相扣。</b>——<b>可，是可行、可立；无信之人，其余终无可取。</b>——<b>字频虽大，本章用法属判断之「可」，不是疑问之「何可」。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「车」八见，本章两见</div>
+  <p><b>底本全书 grep「车」，凡八见；本章两见：大车、小车。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">车</span><span class="n">2.22</span></div><div class="u"><b>大车、小车</b><i>——本章两见；车驾为喻体，余处多记车马之实。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">车</span><span class="n">5.26</span></div><div class="u"><b>愿车马衣轻裘</b><i>——与朋友共，敝之而无憾。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">车</span><span class="n">10.16</span></div><div class="u"><b>虽车马</b><i>——朋友之馈，非祭肉不拜。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">车</span><span class="n">10.19</span></div><div class="u"><b>升车／车中</b><i>——孔子立容，不内顾、不疾言、不亲指。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">车</span><span class="n">11.8</span></div><div class="u"><b>请子之车</b><i>——颜路请车以为椁，孔子不徒行。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">车</span><span class="n">14.16</span></div><div class="u"><b>不以兵车</b><i>——桓公九合诸侯，管仲之力。</i></div></div>
+  </div>
+  <p><b>八见之中，本章独以车驾为喻体。</b>——<b>其余多记车马之实，未作义理比喻。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「輗」「軏」各一见；「何」「哉」本章各一见</div>
+  <p><b>「輗」全书一见，「軏」全书一见，皆在本章；二字为车制专名，他篇不再出现。</b></p>
+  <p><b>「何」全书一百一十八见，本章一见（其何以）；「哉」全书六十一见，本章一见（行之哉）。</b></p>
+  <p><b>「何以」是以何、凭什么；「哉」与「何以」相配，是反问收束。</b>——<b>车无关键，凭什么走？人无信，凭什么立？</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 37 课　为政 2.22</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.46　二〇二六年十一月</div>
+  </footer>
+
+
+</div>
+</body>
+</html>

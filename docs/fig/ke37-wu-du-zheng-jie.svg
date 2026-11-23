@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" width="440" height="300" role="img" aria-label="信的三种误读：权宜、私德、条文，与三条正解对照">
+    <text x="30" y="26" font-size="11" fill="#8A8074">误读</text>
+    <text x="230" y="26" font-size="11" fill="#4A5C55">正解 · 本课所取</text>
+    <rect x="30" y="38" width="180" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="120" y="62" text-anchor="middle" font-size="12" fill="#5C5347">把信当权宜</text>
+    <text x="120" y="82" text-anchor="middle" font-size="10.5" fill="#8A8074">兵不厌诈，临事从权</text>
+    <path d="M212 66 L226 66" stroke="#5C5347" stroke-width="1.4"/>
+    <path d="M226 66 l-5 -2 M226 66 l-2 -5" stroke="#5C5347" stroke-width="1.4" fill="none"/>
+    <rect x="230" y="38" width="180" height="56" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="320" y="62" text-anchor="middle" font-size="12" fill="#2F2A24">信是可行条件</text>
+    <text x="320" y="82" text-anchor="middle" font-size="10.5" fill="#8A8074">权诈另论，不可翻案</text>
+    <rect x="30" y="118" width="180" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="120" y="142" text-anchor="middle" font-size="12" fill="#5C5347">把信当私德</text>
+    <text x="120" y="162" text-anchor="middle" font-size="10.5" fill="#8A8074">只对熟人朋友讲</text>
+    <path d="M212 146 L226 146" stroke="#5C5347" stroke-width="1.4"/>
+    <path d="M226 146 l-5 -2 M226 146 l-2 -5" stroke="#5C5347" stroke-width="1.4" fill="none"/>
+    <rect x="230" y="118" width="180" height="56" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="320" y="142" text-anchor="middle" font-size="12" fill="#2F2A24">信及行事众人</text>
+    <text x="320" y="162" text-anchor="middle" font-size="10.5" fill="#8A8074">民无信不立</text>
+    <rect x="30" y="198" width="180" height="56" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="120" y="222" text-anchor="middle" font-size="12" fill="#5C5347">把信当条文</text>
+    <text x="120" y="242" text-anchor="middle" font-size="10.5" fill="#8A8074">把话说死写死</text>
+    <path d="M212 226 L226 226" stroke="#5C5347" stroke-width="1.4"/>
+    <path d="M226 226 l-5 -2 M226 226 l-2 -5" stroke="#5C5347" stroke-width="1.4" fill="none"/>
+    <rect x="230" y="198" width="180" height="56" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="320" y="222" text-anchor="middle" font-size="12" fill="#2F2A24">信近于义</text>
+    <text x="320" y="242" text-anchor="middle" font-size="10.5" fill="#8A8074">是接口，非死条文</text>
+    <text x="220" y="284" text-anchor="middle" font-size="10.5" fill="#5C5347">三误读皆把信读偏；正解以「可行」与「近义」为界</text>
+  </svg>

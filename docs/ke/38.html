@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十八课 十世可知（为政 2.23）</title>
+<meta name="description" content="《论语·为政》2.23 子张问十世可知也，子曰殷因于夏礼、周因于殷礼，所损益可知也；其或继周者，虽百世可知也。一课两页：少儿页讲礼有沿袭主轴、有可增删节目；成人页论「世」量词两说、因与损益的边界、继周者的政治含义与字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 38 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">专题一 十世量词</a><a href="#sc-d">专题二 因与损益</a><a href="#sc-e">专题三 继周者</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 因加损益</a><a href="#sc-21">义理二 边界对照</a><a href="#sc-22">附论一 因五见</a><a href="#sc-23">附论二 世十五见</a><a href="#sc-24">附论三 损益</a><a href="#sc-25">附论四 继与殷</a><a href="#sc-26">附论五 礼与百</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>十世可知</h1>
+    <div class="h1-sub">为政 2.23　底本：朱熹《论语集注》</div>
+    <div class="src">子张问：「十世可知也？」子曰：「殷因于夏礼，所损益，可知也；周因于殷礼，所损益，可知也。其或继周者，虽百世，可知也。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="五个关键字">
+      <div class="tzitem"><div class="cell"><span>因</span></div><div class="tzcap"><span>6 画</span><span>沿袭、承接</span></div></div>
+      <div class="tzitem"><div class="cell"><span>世</span></div><div class="tzcap"><span>5 画</span><span>一代相接</span></div></div>
+      <div class="tzitem"><div class="cell"><span>损</span></div><div class="tzcap"><span>10 画</span><span>减下去</span></div></div>
+      <div class="tzitem"><div class="cell"><span>益</span></div><div class="tzcap"><span>10 画</span><span>加上来</span></div></div>
+      <div class="tzitem"><div class="cell"><span>继</span></div><div class="tzcap"><span>10 画</span><span>接续、承续</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">因</div><div class="v"><b>沿袭、接着往下传。</b>——<b>殷代承接夏代的礼，周代承接殷代的礼。</b></div></div>
+      <div class="row"><div class="k">世</div><div class="v"><b>一代，父子相继为一世。</b>——<b>十世就是十代；百世是一百代。</b></div></div>
+      <div class="row"><div class="k">损</div><div class="v"><b>减掉、删去。</b>——<b>前代的礼，有的条目后世不再用。</b></div></div>
+      <div class="row"><div class="k">益</div><div class="v"><b>加上、添上。</b>——<b>也有的条目是后世新添出来的。</b></div></div>
+      <div class="row"><div class="k">继</div><div class="v"><b>接续、承续。</b>——<b>继周者，就是接着周代往下走的朝代。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>礼有一直传下来的主轴，也有可以增删的节目；一代一代推下去，百代以后也能知道个大概。</b>——<b>（为政 2.23）</b></div>
+    <p>子张问孔子：<b>往后十代的事，能预先知道吗？</b>——<b>孔子说：殷代承接夏代的礼，有减有增；周代承接殷代的礼，也有减有增。</b>——<b>照着这个道理推下去，即使一百代，也可以知道。</b></p>
+    <p><b>一句话：规矩有传下来的根本，也有随时代调理的地方，所以能往后推。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，礼是接着传下来的。</b>——<b>殷接夏，周接殷；不是每一代都从头另造一套。</b></p>
+    <p><b>第二层，传下来的也有增删。</b>——<b>有的旧条目减掉，有的新条目添上；损益就是增和减。</b></p>
+    <p><b>第三层，脉络清楚，就能往后推。</b>——<b>因为有主轴、有节目，所以虽百世，可知也。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>根本不变，节目可调；看得清脉络，就推得远。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　家里的老规矩。</b>——<b>吃饭招呼长辈、说话有礼貌；这是一代代传下来的，不改。</b></p>
+    <p><b>二　习惯也随日子调整。</b>——<b>以前靠纸笔记事，现在用手机；办法换了，把事做好的心没换。</b></p>
+    <p><b>三　看一件事能不能往后推。</b>——<b>先找不变的根本，再看可调的办法；不抱着死规矩，也不随手掀翻。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>守住根本，调理节目。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　孔子能算出十代以后的吉凶吗？</b>——<b>不能。可知的是礼的因革脉络，不是具体祸福。</b></p>
+    <p><b>二　礼是不是一点都不能改？</b>——<b>大体相因，节目有损益；改的是仪文，不是根本。</b></p>
+    <p><b>三　「继周者」一定还是周朝的人吗？</b>——<b>不一定；接着周代往下走的，可能是别的朝代。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>做人的根本要传下去，做事的办法可以随时代调理。</b></div>
+    <div class="scene"><b>看事先找不变的主轴，再看可调的节目。</b></div>
+    <div class="scene"><b>不抱死规矩，也不随手把规矩掀翻。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把本章讲成「礼有因有革」，不要讲成孔子会算命、能预知后世兴衰。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让孩子分一分：哪些是家里一直守的底线（诚实、敬长），哪些做法可以随条件换。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「损益」听成规矩可以随便改；也别把「因」听成老规矩一概照搬。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>问孩子「这件事里，什么是不能动的根本，什么是可以换的办法」——把因与损益分开看。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>变化越快，越容易把旧规矩当累赘；本章提醒：变的是节目，不是主轴。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>历史上的制度沿革，常是沿袭中有增删；可与朝代礼制的演变对照着看。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个守根本、会调理的人。</b></div></div>
+    </div>
+  </section>
+
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>十世可知</h1>
+    <div class="h1-sub">为政 2.23　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子张问：「十世可知也？」子曰：「殷因于夏礼，所损益，可知也；周因于殷礼，所损益，可知也。其或继周者，虽百世，可知也。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「问未来」到「知结构」</div>
+  <p><b>2.22 以大车无輗、小车无軏为喻，讲人而无信，不知其可——一节立身处世的关节。</b>——<b>本章子张问「十世可知也」：往后十代，礼制沿革可不可以预知。</b></p>
+  <p><b>子张是孔门后辈，颛孙师，字子张。</b>——<b>他问的是前瞻：世道往后走，礼的善恶因革，能不能预先知道。</b>——<b>孔子不答预言，答方法：因是沿袭，损益是增删。</b></p>
+  <p><b>《为政》前二十章多讲何为政、何以民服。</b>——<b>本章落到制度沿革：礼不是一件摆死的器物，是一条历代相承、又历代有增删的脉络。</b></p>
+  <div class="scene"><b>2.22 讲无信不立，本章讲制度可推；立身与沿革，都有可循的线索。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k k2">子张</div><div class="v"><b>颛孙师，字子张，孔门弟子。</b></div></div>
+    <div class="row"><div class="k">世</div><div class="v"><b>一代。</b>——<b>一世多长，注家两说，见专题一。</b></div></div>
+    <div class="row"><div class="k">因</div><div class="v"><b>沿袭、承接。</b>——<b>此字不可混于「困」；本章之因，是顺着前代接下去。</b></div></div>
+    <div class="row"><div class="k k2">损益</div><div class="v"><b>所减损、所增益的部分。</b>——<b>损不可混于「捐」；益，增加。</b></div></div>
+    <div class="row"><div class="k">继</div><div class="v"><b>接续、承续。</b>——<b>继周：继承周而有天下者。继不可混于「断」。</b></div></div>
+    <div class="row"><div class="k">虽</div><div class="v"><b>即使。</b>——<b>百世：百代；百是推极之数，见存疑二。</b></div></div>
+  </div>
+  <p><b>句读是一问一答。</b>——<b>问只一句；答分三停：「殷因于夏礼，所损益，可知也；周因于殷礼，所损益，可知也。其或继周者，虽百世，可知也。」</b>——<b>两「可知也」叠句相承，末一句由三代推到百世。</b></p>
+  <p><b>读法上一处要紧：因不等于一成不变，损益不等于妄改。</b>——<b>把「因」读成照搬，或把「损益」读成随便掀翻，本章立刻偏枯。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　「十世」的量词：一世多长</div>
+  <p><b>这是本章一处名物分歧，世指什么，注家有两说。</b></p>
+  <p><b>读法甲：父子相继为一世，一世即一代。</b>——<b>本章承夏、殷、周三代而言，世是朝代代际；杨伯峻《论语译注》译「十代」，近此一路。</b></p>
+  <p><b>读法乙：三十年为一世。</b>——<b>《说文》「世，三十年为一世」，古制以三十年为一世；后世亦沿此说。</b></p>
+  <p><b>本课取甲。</b>——<b>一是本章自三代礼制说起，因、继都是代际相接，世指朝代代际，文意最顺；二是「十世」对「百世」，都是以代数言，不以年数言。</b>——<b>三十年一说并存不废，入存疑一。</b></p>
+  <p><b>子张问的是「十世」，孔子答推到「百世」。</b>——<b>数字放大，不是夸口，是显这套推演方法可以推得很远。</b></p>
+
+  <div class="h2" id="sc-d">三　专题二　「因」与「损益」的边界：什么能改，什么不能改</div>
+  <p><b>本章核心在辨清两样东西：因，损益。</b></p>
+  <p><b>因：沿袭的主轴。</b>——<b>何晏《集解》引马融曰：「所因，谓三纲五常也。」伦常大体，历代相因，不改其本。</b></p>
+  <p><b>损益：可增删的节目。</b>——<b>马融曰：「所损益，谓文质三统也。」仪文度数，因时势、随人情而增减。</b></p>
+  <p><b>朱子《集注》大意：三代之礼，相因而有损益；所因者大体，所损益者节目。</b>——<b>注家语与孔子原话须分清：「殷因于夏礼，所损益，可知也」「周因于殷礼，所损益，可知也」是孔子原话，马融、朱子的分解是后人注语。</b></p>
+  <p><b>边界判断：礼不是不可变的实体，而是「因＋损益」的结构。</b>——<b>主轴不变，节目可改；改的是文貌仪节，不是伦常根本。</b></p>
+  <p><b>反方须立：若一切皆因，便是复古原教旨，后人只当照搬；若一切皆损益，便是制度虚无，规矩可以随手掀翻。</b>——<b>孔子两面都不是：本章同时承认沿袭与增删，两边各有边界。</b></p>
+
+  <div class="h2" id="sc-e">四　专题三　「其或继周者」：政治含义</div>
+  <p><b>其或：假若有。继周者：继周而有天下者，未必仍是姬姓。</b></p>
+  <p><b>这一句要读出分寸：孔子不替周室保万世，反承认继周者可以易姓；但无论谁继，礼之因革结构仍可推。</b></p>
+  <p><b>刘宝楠《论语正义》大意：礼有损益，而所因者常在，故虽百世可知。</b>——<b>杨伯峻译：以后若有继周而起的，即使一百代，也可以预先知道。</b></p>
+  <p><b>可知的是什么？是礼之因革大势：大体相沿，节目有损益。</b>——<b>不是每一桩具体政令，不是某一家兴亡的吉凶。</b>——<b>孔子在此给的是方法论，不是预言术；这一层辨不清，本章就被读成了占验之书。</b></p>
+
+  <div class="h2" id="sc-f">五　反向：三种误读，两种假托</div>
+  <p><b>三种误读，都在把本章推过头。</b></p>
+  <p><b>一，算命式误读：读成孔子预知后世兴衰，本章是预言。</b>——<b>正解：可知的是沿革结构，不是具体吉凶；因＋损益是推演框架，不是占验。</b></p>
+  <p><b>二，复古式误读：读成礼制不可变，后人只当照搬。</b>——<b>正解：因是大体相沿，损益正是承认节目可改；周因殷礼，本身就有增删。</b></p>
+  <p><b>三，制度史误读：取消义理，只把本章当作一条制度演变史料。</b>——<b>正解：本章有判断——伦常主轴不可废，文貌损益有边界；不是纯记事。</b></p>
+  <p><b>两种假托，都在借本章卸责。</b>——<b>一，借「百世可知」说自己能掐算未来；孔子不教人占验，可知的是脉络，不是祸福。</b>——<b>二，借「损益」说制度可以随便改；损益有边界，所因之主轴不能动。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>本章立的是沿革方法，不是开的占验口子。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>礼有相因之主轴，有损益之节目；由夏而殷而周，脉络可推，虽百世可知。</p>
+  <p><b>一反。</b>这不是预言术，是沿革方法论；可知的是结构大势，不是具体吉凶。</p>
+  <p><b>一辨。</b>因是大体沿袭，损益是节目增删；「因」不等于一成不变，「损益」不等于妄改。</p>
+  <p><b>一证。</b>六个数：<b>「因」全书五见，本章两见；「世」十五见，本章两见；「损」六见，本章两见；「益」十二见，本章两见；「继」三见，本章一见；「礼」七十六见，本章两见。</b>——<b>「百」十七见，本章一见。详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是制度沿革的方法论。</b>——<b>礼有主轴，一线相承；节目有损益，随势调理。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「十世」长度：一世三十年，还是父子相继为一代。</b><b>本课取一代</b>；三十年一说并存，见专题一。</div></div>
+    <div class="q"><span>02</span><div><b>「虽百世」是否夸张。</b>十世是子张所问之目，百世是孔子推极之辞；意在显方法可推之久远，不是实数纪年。</div></div>
+    <div class="q"><span>03</span><div><b>「所损益」主语：礼之条目仪文，还是整套制度的损益。</b><b>本课取节目仪文一路</b>；大体制度之因，另立于「因」字。两解并存。</div></div>
+    <div class="q"><span>04</span><div><b>「其或继周者」是否含易姓革命之意。</b>本章承认继周者不必姬姓；但无明文斥革命、颂革命，表述谨慎，不引申为改制宣言。</div></div>
+    <div class="q"><span>05</span><div><b>本章与 3.9「文献不足」、3.14「周监二代」的义理先后。</b>三章互见：本章总论因革可推，3.9 言文献不足则不能征，3.14 言周文监于二代之盛；不可互相替代。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>孔子能预知十代以后的事。</b></div><div class="b"><b>可知的是礼之因革结构，不是具体吉凶；是推演，不是占验。</b></div></div>
+    <div class="pair"><div class="a"><b>礼是老规矩，后人只能照搬。</b></div><div class="b"><b>大体相因，节目损益；周因殷礼而有增删。</b></div></div>
+    <div class="pair"><div class="a"><b>制度随时代想改就改。</b></div><div class="b"><b>损益有边界，所因之伦常主轴不可动。</b></div></div>
+    <div class="pair"><div class="a"><b>「继周者」是保周室万世。</b></div><div class="b"><b>继周者未必姬姓；孔子不替一姓保长久。</b></div></div>
+    <div class="pair"><div class="a"><b>本章是一条制度史材料。</b></div><div class="b"><b>本章有判断：主轴不可废，文貌有边界。</b></div></div>
+    <div class="pair"><div class="a"><b>「百世可知」是夸口。</b></div><div class="b"><b>百世是推极之辞，显方法可推之久远，不是实数。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》3.9「夏礼，吾能言之，杞不足征也；殷礼，吾能言之，宋不足征也。」</b>——<b>文献足则能征；本章言因革可推，3.9 言征考之限，一推一证，互为表里。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》3.14「周监于二代，郁郁乎文哉！吾从周。」</b>——<b>周监夏殷而损益，正是本章「周因于殷礼，所损益」的注脚。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》15.11「行夏之时，乘殷之辂，服周之冕。」</b>——<b>三代之物各有所取，损益之实见于邦制。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》16.2「盖十世希不失矣……五世……三世。」</b>——<b>世之长短与政权得失对读；本章十世是问代际，16.2 是论世数与失国。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》20.1「兴灭国，继绝世，举逸民。」</b>——<b>继绝世之继，与本章「继周」之继同：接续、承续。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《中庸》「百世以俟圣人而不惑」。</b>——<b>百世之推，由礼之结构可立；与本章「虽百世，可知也」遥相呼应。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　三代相因</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 因革一线</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：横卷 4:3 水墨。三代礼制一线相承：左侧夏鼎，中列殷彝，右设周簋，三器之间以细线相牵；器表纹饰厚薄不一，线端托一轴礼卷。要让人一眼看出：一线相因，节目有损益，不是三件不相干的古物。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>夏鼎—殷彝—周簋</b>：三代相因；<b>器身纹饰厚薄不一</b>：所损益；<b>一线牵向礼卷</b>：百世可推的是结构。</div>
+
+  <div class="h2" id="sc-20">义理图一　因＋损益推演结构</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 250" role="img" aria-label="因加损益推演结构：夏礼、殷礼、周礼相因而损益，继周者虽百世可知">
+    <rect x="16" y="72" width="84" height="52" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="58" y="102" text-anchor="middle" font-size="13" fill="#2F2A24">夏礼</text>
+    <path d="M100 98 L128 98" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M128 98 l-6 -2 M128 98 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <text x="117" y="86" text-anchor="middle" font-size="10" fill="#8A8074">因＋损益</text>
+    <rect x="134" y="72" width="84" height="52" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="176" y="102" text-anchor="middle" font-size="13" fill="#2F2A24">殷礼</text>
+    <path d="M218 98 L246 98" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M246 98 l-6 -2 M246 98 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <text x="235" y="86" text-anchor="middle" font-size="10" fill="#8A8074">因＋损益</text>
+    <rect x="252" y="72" width="84" height="52" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="294" y="102" text-anchor="middle" font-size="13" fill="#2F2A24">周礼</text>
+    <path d="M336 98 L364 98" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M364 98 l-6 -2 M364 98 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <text x="353" y="86" text-anchor="middle" font-size="10" fill="#8A8074">继周者</text>
+    <rect x="370" y="72" width="76" height="52" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="408" y="102" text-anchor="middle" font-size="12.5" font-weight="600" fill="#4A5C55">百世可知</text>
+    <text x="230" y="186" text-anchor="middle" font-size="10.5" fill="#5C5347">所因者大体相沿，所损益者节目增减；脉络可推，虽百世可知</text>
+  </svg><div class="figcap">图一　因＋损益推演结构</div></div>
+
+  <div class="h2" id="sc-21">义理图二　边界对照：所因与所损益</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="边界对照：所因三纲五常大体不可动，所损益文质三统节目可增减">
+    <text x="34" y="44" font-size="11" fill="#4A5C55">甲 · 所因 · 不可动</text>
+    <rect x="30" y="54" width="380" height="60" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="90" text-anchor="middle" font-size="13" fill="#2F2A24">三纲五常 · 伦常大体 · 历代相因</text>
+    <text x="34" y="150" font-size="11" fill="#8A8074">乙 · 所损益 · 可增减</text>
+    <rect x="30" y="160" width="380" height="60" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="220" y="196" text-anchor="middle" font-size="13" fill="#5C5347">文质三统 · 仪文节目 · 因时势调理</text>
+    <text x="220" y="240" text-anchor="middle" font-size="10.5" fill="#5C5347">主轴不改其本，节目随势调理；损益有边界</text>
+  </svg><div class="figcap">图二　所因与所损益边界对照</div></div>
+
+  <div class="h2" id="sc-22">附论一　「因」五见，本章两见</div>
+  <p><b>底本全书 grep「因」，凡五见；本章两见：殷因于夏礼、周因于殷礼。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">因</span><span class="n">1.13</span></div><div class="u"><b>因不失其亲</b><i>——依凭、亲附一路。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">因</span><span class="n">2.23</span></div><div class="u"><b>殷因于夏礼 / 周因于殷礼</b><i>——本章两见；沿袭、承接。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">因</span><span class="n">11.26</span></div><div class="u"><b>因之以饥馑</b><i>——继加、仍继。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">因</span><span class="n">20.2</span></div><div class="u"><b>因民之所利而利之</b><i>——顺着、凭借。</i></div></div>
+  </div>
+  <p><b>因在本章是沿袭、承接。</b>——<b>同字而义有宽窄，本章取沿袭一义。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「世」十五见，本章两见</div>
+  <p><b>底本全书 grep「世」，凡十五见；本章两见：十世、百世。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">世</span><span class="n">2.23</span></div><div class="u"><b>十世 / 百世</b><i>——本章两见；朝代代际。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">世</span><span class="n">16.2 / 16.3</span></div><div class="u"><b>十世、五世、三世、四世</b><i>——论世数与政权得失。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">世</span><span class="n">6.16 等</span></div><div class="u"><b>今之世 / 没世 / 后世 / 辟世 / 继绝世</b><i>——散见各篇；14.8「世叔」为人名，不入义理计数。</i></div></div>
+  </div>
+  <p><b>世在本章指朝代代际。</b>——<b>「世叔」是人名，与代际之义无涉。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「损」六见、「益」十二见，本章各两见</div>
+  <p><b>底本全书 grep「损」，凡六见：2.23 两见；16.4「损者三友」「损矣」；16.5「损者三乐」「损矣」。</b></p>
+  <p><b>底本全书 grep「益」，凡十二见：2.23 两见；6.4「请益」；11.17「附益之」；13.1「请益」；14.44「益者与」「非求益者也」；15.31「无益，不如学也」；16.4「益者三友」「益矣」；16.5「益者三乐」「益矣」。</b></p>
+  <p><b>本章损益对举，是礼之节目增删。</b>——<b>16.4、16.5 之损益，指交友、乐事之得失；两处「请益」是请求再加，义又不同。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「继」三见，本章一见；「殷」七见，本章两见</div>
+  <p><b>底本全书 grep「继」，凡三见：2.23「其或继周者」；6.4「君子周急不继富」；20.1「继绝世」。继皆接续、承续。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">殷</span><span class="n">2.23</span></div><div class="u"><b>殷因 / 殷礼</b><i>——本章两见。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">殷</span><span class="n">3.9 / 3.21</span></div><div class="u"><b>殷礼吾能言之 / 殷人以柏</b><i>——八佾篇论礼与社主。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">殷</span><span class="n">8.20 / 15.11 / 18.1</span></div><div class="u"><b>服事殷 / 乘殷之辂 / 殷有三仁</b><i>——泰伯、卫灵公、微子三篇。</i></div></div>
+  </div>
+
+  <div class="h2" id="sc-26">附论五　「礼」七十六见，本章两见；「百」十七见，本章一见</div>
+  <p><b>底本全书 grep「礼」，凡七十六见；本章两见：夏礼、殷礼。</b></p>
+  <p><b>底本全书 grep「百」，凡十七见；本章一见：百世。</b>——<b>余百多指数量：诗三百、九百、百里、百姓、百官、百工、百物之类；本章百世之百，是虚极之数，不落实量。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 38 课　为政 2.23</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.46　二〇二六年十一月</div>
+  </footer>
+
+
+</div>
+</body>
+</html>

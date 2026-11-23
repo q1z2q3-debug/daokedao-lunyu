@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="440" height="250" role="img" aria-label="边界对照：所因三纲五常大体不可动，所损益文质三统节目可增减">
+    <text x="34" y="44" font-size="11" fill="#4A5C55">甲 · 所因 · 不可动</text>
+    <rect x="30" y="54" width="380" height="60" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="90" text-anchor="middle" font-size="13" fill="#2F2A24">三纲五常 · 伦常大体 · 历代相因</text>
+    <text x="34" y="150" font-size="11" fill="#8A8074">乙 · 所损益 · 可增减</text>
+    <rect x="30" y="160" width="380" height="60" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="220" y="196" text-anchor="middle" font-size="13" fill="#5C5347">文质三统 · 仪文节目 · 因时势调理</text>
+    <text x="220" y="240" text-anchor="middle" font-size="10.5" fill="#5C5347">主轴不改其本，节目随势调理；损益有边界</text>
+  </svg>

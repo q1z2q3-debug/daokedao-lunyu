@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十九课 非其鬼而祭之（为政 2.24）</title>
+<meta name="description" content="《论语·为政》2.24 子曰非其鬼而祭之谄也，见义不为无勇也。一课两页：少儿页讲越分求媚与临事退缩；成人页论祭之资格、谄与敬一线之隔、义与勇相须，附鬼祭谄义勇五字字频证据。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 39 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">专题一 祭之资格</a><a href="#sc-d">专题二 谄与敬</a><a href="#sc-e">专题三 义与勇</a><a href="#sc-f">反向</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 两截一理</a><a href="#sc-21">义理二 义勇相须</a><a href="#sc-22">附论一 鬼五见</a><a href="#sc-23">附论二 祭十四见</a><a href="#sc-24">附论三 谄三见</a><a href="#sc-25">附论四 义二十四见</a><a href="#sc-26">附论五 勇十六见</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>非其鬼而祭之</h1>
+    <div class="h1-sub">为政 2.24　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「非其鬼而祭之，谄也；见义不为，无勇也。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>鬼</span></div><div class="tzcap"><span>10 画</span><span>先祖，死去的长辈</span></div></div>
+      <div class="tzitem"><div class="cell"><span>祭</span></div><div class="tzcap"><span>11 画</span><span>供奉、拜祭先祖神灵</span></div></div>
+      <div class="tzitem"><div class="cell"><span>谄</span></div><div class="tzcap"><span>10 画</span><span>低声下气讨好求好处</span></div></div>
+      <div class="tzitem"><div class="cell"><span>义</span></div><div class="tzcap"><span>3 画</span><span>事情上该做的道理</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">鬼</div><div class="v"><b>先祖。</b>——<b>「其鬼」就是自己家当祭的先祖；这里不是可怕的意思。</b></div></div>
+      <div class="row"><div class="k">祭</div><div class="v"><b>供奉拜祭。</b>——<b>祭有祭的本分：谁家的先祖，谁家祭。</b></div></div>
+      <div class="row"><div class="k">谄</div><div class="v"><b>讨好、求媚。</b>——<b>不该自己祭的也去祭，想求好处，就是谄媚。</b></div></div>
+      <div class="row"><div class="k">义</div><div class="v"><b>该做的事。</b>——<b>见到该做的事却躲开，孔子说这是没有勇气。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>不该祭的去祭，是讨好求好处；该做的事不做，是没有勇气。</b>——<b>（为政 2.24）</b></div>
+    <p>孔子说：<b>不是自己所当祭的先祖，却去祭他，这是谄媚；</b>——<b>见到合乎道理的事，却不去做，这是没有勇气。</b></p>
+    <p><b>一句话：知道自己该站哪里，并且站得住。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，先分本分。</b>——<b>谁家的先祖谁家祭；越过自己的本分去拜，心思就偏到求好处上去了。</b></p>
+    <p><b>第二层，再看行动。</b>——<b>道理上该做的事，见到了就去做；光知道不做，不算真有道理。</b></p>
+    <p><b>第三层，两件事一个理。</b>——<b>上半截戒越分去求，下半截戒当为而退；合起来就是：站对位置，又敢站住。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>不抢不该抢的，不躲该做的。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　不抢别人的功劳。</b>——<b>同学做出的成绩，不去冒领讨好老师；本分之内的事才认。</b></p>
+    <p><b>二　看到不平敢出声。</b>——<b>有人受欺负，不跟着躲；量力而为，先告诉老师或家长。</b></p>
+    <p><b>三　不懂的事不乱拜规矩。</b>——<b>别人家的长辈、家里的旧俗，不随意附和；先问清分际。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>分际清楚，行动跟上。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　「其鬼」是谁的鬼？</b>——<b>自己家当祭的先祖；不是随便哪一位神灵。</b></p>
+    <p><b>二　讨好和尊敬怎么分？</b>——<b>心里求好处是讨好，心里尽本分是尊敬；同一桩事，念头不同。</b></p>
+    <p><b>三　知道该做却没做，算有勇气吗？</b>——<b>本章说不算：见义不为，就是无勇。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>不属于自己的，不去求；属于自己的，不躲开。</b></div>
+    <div class="scene"><b>勇气不是敢打敢冲，是该站出来的时候站出来。</b></div>
+    <div class="scene"><b>道理想到了，还要落到手上做出来。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>把本章讲成「守本分、敢担当」，不要讲成「不许讲鬼神、遇事要拼命」。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>日常场景：</b>——<b>看孩子在群体中是否越界争功，是否遇到该说的话往后缩；就事论事，不贴标签。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>把「见义不为」听成道德绑架，要求孩子事事冲锋；义是事之宜，先度当否。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>问孩子「这件事该不该你做」「你当时为什么退了」——把判断和行动分开再合起来看。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>现代分工里，越分依附与明哲保身都常见；本章两头都戒：不攀附，不退缩。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>祭祀之礼与等级资格，可参《礼记》祭法一类古礼；勇与义的关系，可参后世「见义勇为」一语。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个守分、敢担当的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page adult">
+    <div class="leaf-tag">成人页</div>
+    <h1>非其鬼而祭之</h1>
+    <div class="h1-sub">为政 2.24　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「非其鬼而祭之，谄也；见义不为，无勇也。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「信」与「礼」到「分」与「断」</div>
+  <p><b>2.22 论信：「人而无信，不知其可也」——人无信，如车无輗軏，行不得。</b>——<b>2.23 论礼之损益：「殷因于夏礼……虽百世，可知也」——礼有因有革，其理可知。</b></p>
+  <p><b>本章接在两章之后，落回君子自身两件事：不该祭的去祭，是谄；该做的不做，是无勇。</b>——<b>上半截对鬼神，下半截对人事；看似两截，合看是一理。</b></p>
+  <p><b>2.23 说礼有损益，而其分不可乱；本章正是「分」的一处落实。</b>——<b>祭有祭的分，义有义的断。分定则不谄，断立则不怯。</b></p>
+  <div class="scene"><b>本章在《为政》里的位置，是修身的分寸与决断。</b>——<b>前二十三章讲为政、孝、信、礼；本章收束到自身：知所立，立得住。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">非</div><div class="v"><b>不是。</b>——<b>「非其鬼」：不是自己所当祭的。</b></div></div>
+    <div class="row"><div class="k">其</div><div class="v"><b>自己的、所应当的。</b>——<b>「其鬼」即自己所当祭之鬼。</b></div></div>
+    <div class="row"><div class="k">鬼</div><div class="v"><b>人死为鬼；此指先祖。</b>——<b>与「神」（天神）对举，此处非贬义。</b></div></div>
+    <div class="row"><div class="k">祭</div><div class="v"><b>祭祀。</b>——<b>祭有其分，各依等级。</b></div></div>
+    <div class="row"><div class="k">谄</div><div class="v"><b>谄媚，卑屈求媚。</b>——<b>底本作「諂」，通行本作「谄」；切勿误作「陷」。</b></div></div>
+    <div class="row"><div class="k">义</div><div class="v"><b>事之宜，所当为者。</b>——<b>「见义不为」：见到该做的事却不做。</b></div></div>
+    <div class="row"><div class="k">勇</div><div class="v"><b>临事敢发。</b>——<b>「无勇」：当为而不敢为。</b></div></div>
+  </div>
+  <p><b>句读是两停。</b>——<b>上停「非其鬼而祭之，谄也」，下停「见义不为，无勇也」。</b>——<b>每停都是「事＋断」：先摆出所行之事，再下一个断语。</b></p>
+  <p><b>读法上一处要紧：两截句法对称，判词各落一字——谄、勇。</b>——<b>上停戒越分，下停戒退缩；合看是「分」与「断」两件事。</b></p>
+
+  <div class="h2" id="sc-c">二　专题一　「鬼」的所指与「祭」的资格</div>
+  <p><b>本章先辨「谁有资格祭谁」。</b></p>
+  <p><b>「其鬼」之「其」，指自己所当祭者。</b>——<b>古人祭祀有其分：先祖曰鬼，各祭其祖；天神、山川、五祀，各依等级。</b>——<b>非己所当祭之鬼而去祭之，便是越分。</b></p>
+  <p><b>孔安国《集解》注「非其鬼」谓非己先祖；朱子《集注》大意：非其鬼，谓非其所当祭之鬼。</b>——<b>注家语与孔子原话须分清：「非其鬼而祭之」是孔子所举之事，「谄也」才是孔子所断。</b></p>
+  <p><b>这里要辨一层：「鬼」在本章不是贬义。</b>——<b>人死归土曰鬼，先祖之称；与「神」对举时，天神曰神，人鬼曰鬼。</b>——<b>本章所戒的不是祭鬼本身，是祭了不该自己祭的鬼。</b></p>
+  <p><b>反方须立：祭祀本是表达追思与敬意，何分彼此？</b>——<b>本课判：礼定其分，分定而后诚有所归。</b>——<b>越分而祭，心思不在敬，在求；资格一乱，祭便成了交易。</b></p>
+
+  <div class="h2" id="sc-d">三　专题二　「谄」与「敬」一线之隔</div>
+  <p><b>「谄」与「敬」只差一个念头：求福，还是尽礼。</b></p>
+  <p><b>3.12「祭如在，祭神如神在」——祭的时候如神在面前，是尽礼、是诚敬。</b>——<b>本章「非其鬼而祭之」——祭的不是自己当祭的，意在求其庇佑，是卑屈、是求媚。</b>——<b>同一桩祭事，心在礼则为敬，心在求则为谄。</b></p>
+  <p><b>「谄」字全书三见：1.15「贫而无谄」，对富贵而不卑屈；3.18「事君尽礼，人以为谄也」，尽礼而被人疑为谄媚；本章「非其鬼而祭之」，对鬼神越分求媚。</b>——<b>三处所对不同，其病一：把自己放低，去求一个不该求的。</b></p>
+  <p><b>朱子《集注》以「谄」为卑屈以求媚；刘宝楠《正义》大意申此义：谄谓媚于鬼神以求福；杨伯峻《译注》译为「谄媚」。</b>——<b>原话与注家语分清：「谄也」是孔子断语，求福之意是注家所申。</b></p>
+
+  <div class="h2" id="sc-e">四　专题三　「见义不为」：义是判断，还是行动</div>
+  <p><b>下半截的难点在：知义而不行，算不算有义。</b></p>
+  <p><b>「义」是事之宜——判断这件事该不该做。</b>——<b>「勇」是断而能行——判断落下来，身子跟上去。</b>——<b>本章「见义不为」，不是不知义，是见到了、判断了，却退开；孔子断为「无勇」。</b></p>
+  <p><b>这里要辨一层：本章把「无勇」落在义上。</b>——<b>勇不是血气之勇，不是敢冲敢打；8.2「勇而无礼则乱」，17.21「君子有勇而无义为乱」——勇若无义，反成祸乱。</b></p>
+  <p><b>知而不行是否等于不知？</b>——<b>本课判：在本章的尺度上，行不到，勇便不足；义判断得再清楚，落不到行动，本章即谓之无勇。</b></p>
+  <p><b>反方须留：义有大小，时势有险易，见义不为的责备须看情境。</b>——<b>当为而不为与量力而后动，不可一概而论；此层入存疑。</b></p>
+
+  <div class="h2" id="sc-f">五　反向：两种误读，一种假托</div>
+  <p><b>两种误读，都在把本章推过头。</b></p>
+  <p><b>一，把「非其鬼」读成排外或迷信禁令。</b>——<b>以为本章不许祭别的神、是讲破除迷信。</b>——<b>正解：本章戒越分求媚，不废正常祭祀；所戒在「分」与「求」，不在祭祀这件事本身。</b></p>
+  <p><b>二，把「见义不为」读成道德绑架。</b>——<b>以为见人有难便须立刻挺身，凡事冲锋在前。</b>——<b>正解：义是事之宜，勇是当为而为；不逞血气之勇，不越义之外去逞强。</b></p>
+  <p><b>一种假托，借本章卸责。</b>——<b>借「明哲保身」之说，把当为而避说成谨慎全身。</b>——<b>本课判：保身若失其义，即是孔子所讥；真正的谨慎是先度义之当否，不是一见事就退。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>本章戒两头：不攀附，不退缩。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>不该祭的去祭，是越分求媚；该做的躲开不做，是临事无勇。两截一理：知所当立，立得住。</p>
+  <p><b>一反。</b>这不是排外的禁令，也不是绑人的道德；上半截戒求非分，下半截戒弃当为，落处在修身的分寸与决断。</p>
+  <p><b>一辨。</b>「谄」是求福，不是尽礼；「勇」是行义，不是好斗。知义而不行，本章判为无勇；越分而祭，心再诚也是谄。</p>
+  <p><b>一证。</b>五个数：<b>「鬼」全书五见，本章一见；「祭」十四见，本章一见；「諂（谄）」三见，本章一见；「义」二十四见，本章一见；「勇」十六见，本章一见。</b>——<b>详见附论一至五。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是修身的分寸与决断。</b>——<b>分定则不谄，断立则不怯；知道站哪里，并且站得住。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>异文：底本作「諂」，通行本作「谄」。</b><b>本课从通行本作「谄」。</b>谄，谄媚求媚；「陷」为陷落、陷阱，两字形近而义别，本章切勿误作「陷」。底本「諂」录存备考。</div></div>
+    <div class="q"><span>02</span><div><b>「鬼」兼指先祖与一切神灵，还是专指先祖。</b><b>本课取：本篇指所当祭之先祖</b>；与「神」对举时，天神曰神、人鬼曰鬼。若解作泛指一切不当祭者，文意亦通，并存。</div></div>
+    <div class="q"><span>03</span><div><b>「谄」求媚的对象：求媚于鬼神，还是求媚于能左右祸福者。</b><b>本课取前者一路</b>：越分祭鬼，意在求福；其谄在鬼，其病在己之卑屈。两存。</div></div>
+    <div class="q"><span>04</span><div><b>「见义不为」是否一概责备，须看情境。</b>义有大小，时势有险易；量力而后动与当为而避，界限何在，本章无内证。<b>本课判：当为而退，即无勇</b>；情境之异，另看其人其时。</div></div>
+    <div class="q"><span>05</span><div><b>两句是一事之两面，还是两德目并列。</b><b>本课取两截一理</b>：上截越分而求，下截当为而避，合看是「分」与「断」。并列一路并存不废。</div></div>
+  </div>
+
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>祭神祭祖越多，心越诚。</b></div><div class="b"><b>祭以礼与分为准；非其鬼而祭，心再诚也是谄。</b></div></div>
+    <div class="pair"><div class="a"><b>鬼是迷信，本章是讲禁令。</b></div><div class="b"><b>本章戒越分求媚，不废正常祭祀；所论在分与诚。</b></div></div>
+    <div class="pair"><div class="a"><b>见义不为是谨慎、明哲保身。</b></div><div class="b"><b>当为而避，即无勇；保身须以义为度。</b></div></div>
+    <div class="pair"><div class="a"><b>勇敢就是敢冲敢打。</b></div><div class="b"><b>勇以义为上；无义之勇是乱、是盗。</b></div></div>
+    <div class="pair"><div class="a"><b>心里知道该做，就算有义。</b></div><div class="b"><b>义要落到行动；知而不行，本章判为无勇。</b></div></div>
+    <div class="pair"><div class="a"><b>两句各管一头，互不相关。</b></div><div class="b"><b>上截越分而求，下截当为而避；合看是分与断：知道站哪里，并且站得住。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《论语》1.15「贫而无谄，富而无骄。」</b>——<b>「谄」字三见之一；彼处对富贵卑屈，此处对鬼神越分求媚，其病一在卑屈。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《论语》3.12「祭如在，祭神如神在。吾不与祭，如不祭。」</b>——<b>祭的诚敬；本章从反面立资格之限：敬在礼，不在求。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》6.22「务民之义，敬鬼神而远之。」</b>——<b>义与鬼神对举；本章上半截论祭之资格，下半截论义之当为，正与此章相足。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》11.12「未能事人，焉能事鬼？」</b>——<b>事人先于事鬼；舍人事而媚鬼神，正是本章所戒。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》14.12「见利思义」、16.10「见得思义」、19.1「见得思义」。</b>——<b>义是临事之断；本章见义不为，是临断而退。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《论语》17.21「君子义以为上。君子有勇而无义为乱，小人有勇而无义为盗。」</b>——<b>勇以义为上；本章无勇，是义断处不敢发。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　越分与退缩</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 两截一理</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：横卷 4:3 水墨。画面以中线分左右：左侧一人越界，向不属于自己的牌位下拜，案上祭品丰厚而神色卑屈；右侧当为之事在前，一人退步侧身，欲行不行。中线立一道界石，上题「分」字。要让人一眼看出：左是越分而求，右是当为而避，两病相对。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>越界下拜的人</b>：非其鬼而祭，谄在越分求媚；<b>退步侧身的人</b>：见义不为，无勇在临事而退；<b>中线界石</b>：分与断——知道自己该站哪里，并且站得住。</div>
+
+  <div class="h2" id="sc-20">义理图一　两截一理：分与断</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="两截一理：非其鬼而祭之是谄，见义不为是无勇，汇合于分与断">
+    <rect x="40" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="110" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">非其鬼而祭之</text>
+    <text x="110" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">越分而求 · 谄</text>
+    <rect x="260" y="56" width="140" height="58" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="330" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">见义不为</text>
+    <text x="330" y="102" text-anchor="middle" font-size="10.5" fill="#8A8074">当为而避 · 无勇</text>
+    <path d="M110 116 L176 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M176 158 l-6 -2 M176 158 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <path d="M330 116 L264 158" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M264 158 l6 -2 M264 158 l3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="150" y="160" width="140" height="50" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#4A5C55">分与断</text>
+    <text x="220" y="232" text-anchor="middle" font-size="10.5" fill="#5C5347">知所当立，立得住</text>
+  </svg><div class="figcap">图一　两截一理：分与断</div></div>
+
+  <div class="h2" id="sc-21">义理图二　义勇相须</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="义勇相须：知义判断到行义行动到勇站得住，知而不行即为无勇">
+    <rect x="20" y="66" width="110" height="64" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="75" y="94" text-anchor="middle" font-size="13" fill="#2F2A24">知义</text>
+    <text x="75" y="114" text-anchor="middle" font-size="10.5" fill="#8A8074">判断</text>
+    <path d="M132 98 L160 98" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M160 98 l-6 -2 M160 98 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="165" y="66" width="110" height="64" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="220" y="94" text-anchor="middle" font-size="13" fill="#2F2A24">行义</text>
+    <text x="220" y="114" text-anchor="middle" font-size="10.5" fill="#8A8074">行动</text>
+    <path d="M277 98 L305 98" stroke="#5C5347" stroke-width="1.6"/>
+    <path d="M305 98 l-6 -2 M305 98 l-3 -6" stroke="#5C5347" stroke-width="1.6" fill="none"/>
+    <rect x="310" y="66" width="110" height="64" fill="#FFFDF6" stroke="#4A5C55"/>
+    <text x="365" y="94" text-anchor="middle" font-size="13" fill="#2F2A24">勇</text>
+    <text x="365" y="114" text-anchor="middle" font-size="10.5" fill="#8A8074">站得住</text>
+    <text x="220" y="176" text-anchor="middle" font-size="12" fill="#A2503B">知而不行，本章判为无勇</text>
+    <text x="220" y="212" text-anchor="middle" font-size="10.5" fill="#5C5347">无义之勇，是乱是盗（17.21）</text>
+  </svg><div class="figcap">图二　义勇相须</div></div>
+
+  <div class="h2" id="sc-22">附论一　「鬼」五见，本章一见</div>
+  <p><b>底本全书 grep「鬼」，凡五见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">鬼</span><span class="n">2.24</span></div><div class="u"><b>非其鬼而祭之</b><i>——本章一见；祭先看是不是自己的鬼。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">鬼</span><span class="n">6.22</span></div><div class="u"><b>敬鬼神而远之</b><i>——义与鬼神对举。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">鬼</span><span class="n">8.21</span></div><div class="u"><b>致孝乎鬼神</b><i>——禹之菲饮食而致孝。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">鬼</span><span class="n">11.12</span></div><div class="u"><b>事鬼神 / 事鬼</b><i>——一章两见；未能事人，焉能事鬼。</i></div></div>
+  </div>
+  <p><b>「鬼」在全书多与「神」连文，或指先祖。</b>——<b>本章单出「其鬼」，正指所当祭之先祖；五见之中，唯本章把「鬼」与资格之辨绑在一起。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「祭」十四见，本章一见</div>
+  <p><b>底本全书 grep「祭」，凡十四见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">祭</span><span class="n">2.5 / 2.24</span></div><div class="u"><b>祭之以礼 / 非其鬼而祭之</b><i>——前一章论祭之礼，本章论祭之资格。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">祭</span><span class="n">3.12</span></div><div class="u"><b>祭如在等四见</b><i>——祭神如神在，吾不与祭，如不祭。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">祭</span><span class="n">10.6</span></div><div class="u"><b>祭于公 / 祭肉 / 瓜祭</b><i>——一章三见，记乡党饮食之礼。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">祭</span><span class="n">10.12 / 10.16</span></div><div class="u"><b>君祭 / 祭肉</b><i>——侍食与朋友馈遗之礼。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">祭</span><span class="n">12.2</span></div><div class="u"><b>使民如承大祭</b><i>——仲弓问仁，敬以承事。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">祭</span><span class="n">19.1 / 20.1</span></div><div class="u"><b>祭思敬 / 食丧祭</b><i>——临事思敬；为政所重。</i></div></div>
+  </div>
+  <p><b>十四见中，论祭之礼与诚敬者居其大半。</b>——<b>本章是唯一从「资格」立论的一处：祭之当否，先看分，再看诚。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「諂（谄）」三见，本章一见</div>
+  <p><b>底本全书 grep「諂」，凡三见；通行本作「谄」。本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">谄</span><span class="n">1.15</span></div><div class="u"><b>贫而无谄</b><i>——对富贵不卑屈，守得住。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">谄</span><span class="n">2.24</span></div><div class="u"><b>非其鬼而祭之，谄也</b><i>——本章一见；对鬼神越分求媚。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">谄</span><span class="n">3.18</span></div><div class="u"><b>人以为谄也</b><i>——事君尽礼，被疑为谄媚。</i></div></div>
+  </div>
+  <p><b>三处所对不同：对富贵、对鬼神、对君上；其病一在卑屈求媚。</b>——<b>1.15 是无谄，3.18 是被疑为谄，本章是断为谄。</b></p>
+  <p><b>底本「諂」与通行本「谄」同字异体；「陷」为另一字，形近易淆。</b>——<b>读旧本须先辨上下文：谄媚求媚曰谄，陷落陷阱曰陷。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「义」二十四见，本章一见</div>
+  <p><b>底本全书 grep「義」，凡二十四见；本章一见。（本课正文依简体作「义」。）</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">义</span><span class="n">1.13 / 4.10</span></div><div class="u"><b>信近于义 / 义之与比</b><i>——义为言行与取舍之准。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">义</span><span class="n">4.16 / 15.18</span></div><div class="u"><b>君子喻于义 / 义以为质</b><i>——君子以义为立身之本。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">义</span><span class="n">6.22 / 7.3</span></div><div class="u"><b>务民之义 / 闻义不能徙</b><i>——义为民事之宜；闻义当徙。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">义</span><span class="n">14.12 / 16.10 / 19.1</span></div><div class="u"><b>见利思义 / 见得思义</b><i>——临事临利，以义为断。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">义</span><span class="n">17.21</span></div><div class="u"><b>义以为上等三见</b><i>——君子有勇而无义为乱。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">义</span><span class="n">2.24</span></div><div class="u"><b>见义不为</b><i>——本章一见；义字落到行动上的反照。</i></div></div>
+  </div>
+  <p><b>「义」在全书是临事之宜、取舍之准。</b>——<b>本章「见义不为」，是判断已有、行动未随。</b></p>
+
+  <div class="h2" id="sc-26">附论五　「勇」十六见，本章一见</div>
+  <p><b>底本全书 grep「勇」，凡十六见；本章一见。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">勇</span><span class="n">9.29 / 14.28</span></div><div class="u"><b>勇者不惧</b><i>——两见；勇与知、仁并列。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">勇</span><span class="n">8.2 / 17.21</span></div><div class="u"><b>勇而无礼则乱 / 有勇无义为乱</b><i>——勇须有礼有义，否则为乱。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">勇</span><span class="n">14.4 / 14.12</span></div><div class="u"><b>必有勇 / 卞庄子之勇</b><i>——勇为成人之一目。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">勇</span><span class="n">5.7 / 8.10 / 17.7</span></div><div class="u"><b>好勇 / 好勇疾贫 / 好勇不好学</b><i>——血气之勇，须以学礼义节之。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">勇</span><span class="n">2.24</span></div><div class="u"><b>无勇也</b><i>——本章一见；怯于义，非怯于力。</i></div></div>
+  </div>
+  <p><b>十六见中，勇多与礼、义对举：勇须有礼有义，否则为乱为盗。</b>——<b>本章「无勇」不是怯于力，是怯于义；与全书「勇以义为上」的主线一致。</b></p>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 39 课　为政 2.24</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.46　二〇二六年十一月</div>
+  </footer>
+
+
+</div>
+</body>
+</html>
