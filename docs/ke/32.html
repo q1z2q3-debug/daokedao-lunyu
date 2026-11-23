@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第三十二课 知之为知之（为政 2.17）</title>
+<meta name="description" content="《论语·为政》2.17 子曰由诲女知之乎，知之为知之，不知为不知，是知也。一课两页：少儿页讲知道就说知道；成人页论「知」之界：认识（知有所止）、伦理（不自欺）、教学（不知是起点），连读 2.15 转、2.16 端、2.17 界三关。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+  
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:32px}
+    .cell span{font-size:36px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+</style>
+</head>
+
+<body>
+<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="series">润泽说 · 道可道之论语</div>
+    <div class="crumb"><b>上论</b>　为政第二 · 二十四章　第 32 课 / 498</div>
+  </div>
+  <div class="toc">
+    <div class="toc-t"><span class="lbl">少儿页</span><a href="#sc-1">字义小课堂</a><a href="#sc-2">一句话讲清</a><a href="#sc-3">共读</a><a href="#sc-4">生活里的一天</a><a href="#sc-5">三个小问题</a><a href="#sc-6">成长小启示</a><a href="#sc-7">家长栏</a></div>
+    <div class="toc-t"><span class="lbl">成人页</span><a href="#sc-lian">连读</a><a href="#sc-b">字义句读</a><a href="#sc-c">为何对子路说</a><a href="#sc-d">三层</a><a href="#sc-e">四种假知</a><a href="#sc-f">三关</a><a href="#sc-h">章旨</a><a href="#sc-i">存疑</a><a href="#sc-j">双卡</a><a href="#sc-k">跨典</a></div>
+    <div class="toc-t"><span class="lbl">图与附论</span><a href="#sc-19">图一</a><a href="#sc-20">义理一 四格</a><a href="#sc-21">义理二 三关</a><a href="#sc-22">附论一 诲五见</a><a href="#sc-23">附论二 女十九见</a><a href="#sc-24">附论三 是知三见</a><a href="#sc-25">附论四 不知二十八见</a><a href="#sc-26">附论五 知与智</a></div>
+  </div>
+
+  <section class="page">
+    <div class="leaf-tag">少儿页</div>
+    <h1>知之为知之</h1>
+    <div class="h1-sub">为政 2.17　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「由！诲女知之乎！知之为知之，不知为不知，是知也。」</div>
+
+    <div class="h2" id="sc-1">字义小课堂</div>
+    <div class="tzg" aria-label="四个关键字">
+      <div class="tzitem"><div class="cell"><span>诲</span></div><div class="tzcap"><span>9 画</span><span>教给你听</span></div></div>
+      <div class="tzitem"><div class="cell"><span>女</span></div><div class="tzcap"><span>3 画</span><span>古时候的「你」</span></div></div>
+      <div class="tzitem"><div class="cell"><span>知</span></div><div class="tzcap"><span>8 画</span><span>知道</span></div></div>
+      <div class="tzitem"><div class="cell"><span>是</span></div><div class="tzcap"><span>9 画</span><span>这就是</span></div></div>
+    </div>
+    <div class="rows">
+      <div class="row"><div class="k">诲</div><div class="v"><b>教给你听。</b>——<b>不是骂你，是坐下来把一件事讲明白。</b></div></div>
+      <div class="row"><div class="k">女</div><div class="v"><b>你。</b>——<b>古时候说「女」，就是我们说的「汝」，当面叫你。</b></div></div>
+      <div class="row"><div class="k">知</div><div class="v"><b>知道。</b>——<b>心里明白，能说出来，还能拿它办事。</b></div></div>
+      <div class="row"><div class="k">是</div><div class="v"><b>这就是。</b>——<b>「是知也」：这样的人，才叫聪明。</b></div></div>
+    </div>
+
+    <div class="h2" id="sc-2">一句话讲清</div>
+    <div class="scene"><b>知道就说知道，不知道就说不知道——这就是聪明。</b>——<b>（为政 2.17）</b></div>
+    <p>孔子对着子路说：<b>「由！我教你知道什么叫『知道』吧。」</b>——<b>知道的，就说知道；不知道的，就说不知道。这样的人，才是真的聪明。</b></p>
+    <p><b>一句话：装懂的人，最不聪明。</b></p>
+
+    <div class="h2" id="sc-3">共读</div>
+    <p><b>第一层，什么叫「知之为知之」。</b>——<b>你会的，就说「我会」；能讲明白，也能做出来。</b>——<b>不是背下来的，是真懂了。</b></p>
+    <p><b>第二层，什么叫「不知为不知」。</b>——<b>你不会的，就直说「我不会」。</b>——<b>难在这里：说「不会」，有时候比说「会」更要有胆子。</b></p>
+    <p><b>第三层，什么叫「是知也」。</b>——<b>知道自己会什么、不会什么，这个「知道」本身，就是聪明。</b>——<b>聪明不是知道得多，是知道自己不知道什么。</b></p>
+    <div class="scene"><b>一句话说透：</b>——<b>敢说「我不会」，才是真会。</b></div>
+
+    <div class="h2" id="sc-4">生活里的一天</div>
+    <p><b>一　作业有一道不会。</b>——<b>空着交，比抄一个答案强；空着，老师才知道讲到哪儿。</b></p>
+    <p><b>二　同学聊一个你没听过的动画。</b>——<b>说「我没看过，你讲讲」，比点头附和有意思。</b>——<b>附和一次，就少听一个故事。</b></p>
+    <p><b>三　老师问「还有谁不懂」。</b>——<b>举手的人，是在给自己记账：这一处，我记下了。</b>——<b>不举手的，账就一直糊涂着。</b></p>
+    <div class="scene"><b>三个场景是一件事：</b>——<b>不会不丢人，装作会才丢人。</b></div>
+
+    <div class="h2" id="sc-5">三个小问题</div>
+    <p><b>一　说「不知道」，别人会不会笑我？</b>——<b>会笑的，多半也在装。</b>——<b>真正懂的人，听到「不知道」，会接着问「那你想知道吗」。</b></p>
+    <p><b>二　是不是什么都要说「不知道」？</b>——<b>不是。</b>——<b>会的就说会；不知道的就说不知道，然后去问。</b>——<b>说过「不知道」就停住，那叫不学，不叫诚实。</b></p>
+    <p><b>三　怎么知道自己是真懂还是假懂？</b>——<b>试着讲给别人听。</b>——<b>讲得清，是懂；讲到一半卡住，那就是不懂的那一处。</b></p>
+
+    <div class="h2" id="sc-6">成长小启示</div>
+    <div class="scene"><b>敢说不会，才是会。</b>——<b>「不会」两个字，是给学习开的一扇门。</b></div>
+    <div class="scene"><b>不懂就问，问前先说「我不懂」。</b>——<b>先说这一句，问出来的答案才真属于你。</b></div>
+    <div class="scene"><b>聪明不是知道得多，是知道自己不知道什么。</b>——<b>知道边界的人，走路不会踩空。</b></div>
+
+    <div class="h2" id="sc-7">家长栏</div>
+    <div class="rows">
+      <div class="row"><div class="k">语</div><div class="v"><b>陪读：</b>——<b>别问「你怎么又不会」，问「你哪一处不会」。</b>——<b>前者堵嘴，后者开口。</b></div></div>
+      <div class="row"><div class="k">用</div><div class="v"><b>家务场景：</b>——<b>让他自己说「这个我还不会做」，你再说「我教你第一步」。</b>——<b>认账在前，教在后。</b></div></div>
+      <div class="row"><div class="k">过</div><div class="v"><b>常踩的：</b>——<b>孩子一说「不会」，大人立刻接「这么简单都不会」。</b>——<b>从此他学会的，是先把「不会」藏起来。</b></div></div>
+      <div class="row"><div class="k k2">教与学</div><div class="v"><b>一法：</b>——<b>每天留一句「今天我有一处没懂」；说出来不加分，不说也不罚。</b>——<b>久了，「不知道」就成了家里能说的一句话。</b></div></div>
+      <div class="row"><div class="k">时</div><div class="v"><b>时代特点：</b>——<b>搜索一秒给答案，孩子容易把「查到了」当成「学会了」。</b>——<b>查到是别人的，讲得出才是自己的。</b></div></div>
+      <div class="row"><div class="k">融</div><div class="v"><b>跨学科：</b>——<b>科学里最要紧的一步，是先说「这里我们还不知道」。</b>——<b>承认空白，才有实验。</b></div></div>
+      <div class="row"><div class="k">一</div><div class="v"><b>一句话：</b>——<b>教他做一个「知道自己知道什么」的人，不是「什么都知道一点」的人。</b></div></div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="leaf-tag">成人页</div>
+    <h1>知之为知之</h1>
+    <div class="h1-sub">为政 2.17　上论·为政　底本：朱熹《论语集注》</div>
+    <div class="src">子曰：「由！诲女知之乎！知之为知之，不知为不知，是知也。」</div>
+
+  <div class="h2" id="sc-lian">零　连读：从「端」到「界」</div>
+  <p><b>上一章说「攻乎异端」——学要有个端。</b>——<b>这一章说「知之为知之」——端立住了，还要划界。</b>——<b>2.15 管「思之转不转」，2.16 管「端之立不立」，本章管「知之界清不清」。</b></p>
+  <p><b>三章连读，是一副骨架：先能转，再有端，最后有界。</b>——<b>转而无端，思愈精愈偏；端而无界，守愈久愈僵。</b>——<b>界不清，则端是假的；端是假的，则转是空转。</b></p>
+  <p><b>这一章最容易被读成一句道德劝勉：做人要诚实。</b>——<b>诚实固然在其中，但第一义是认识论：知道自己知道什么、不知道什么。</b>——<b>若只作修身语看，便与《为政》全篇的「怎么学、怎么立」脱了节。</b></p>
+  <p><b>本章的直接对象是子路。</b>——<b>孔子不称「仲由」，只唤一个字：「由！」——当面点名，语气重，不容绕。</b></p>
+  <div class="scene"><b>本章在《为政》里的位置，是「学的界碑」。</b>——<b>2.15 转得动，2.16 立得住，2.17 说得清；三样都有，学才站得起来。</b></div>
+
+  <div class="h2" id="sc-b">一　字义与句读</div>
+  <div class="rows">
+    <div class="row"><div class="k">诲</div><div class="v"><b>教也（《集解》引孔安国）。</b>——<b>不是训斥，是「我把这个教给你」。</b>——<b>全书五见，唯本章是「诲」加一个「知」。</b></div></div>
+    <div class="row"><div class="k">女</div><div class="v"><b>即「汝」，你。</b>——<b>古时对男子亦称「女」。</b>——<b>全书十九见，除「女子」（17.23）、「女乐」（18.4）两处本义，余十七处皆作「汝」。</b></div></div>
+    <div class="row"><div class="k k2">知（两读）</div><div class="v"><b>知道（本义）；末字「是知也」读「智」（朱子注去声）。</b>——<b>一章六「知」，前五本义，末一断语。</b></div></div>
+    <div class="row"><div class="k">为</div><div class="v"><b>系词「就是」，非「谓」。</b>——<b>「知之为知之」＝知道的，就是知道。</b></div></div>
+  </div>
+  <p><b>句读两式。</b>——<b>一作「由！诲女知之乎！」——我教你知道它吗；一作「由，诲女，知之乎」——我教你，你懂了吗。</b>——<b>本课取前一式：全章讲的是「知」本身，不是一次课堂问答；「之」指「知」这件事。</b></p>
+  <p><b>补按：「诲」全书只五见。</b>——<b>2.17、7.2「诲人不倦」、7.7「未尝无诲焉」、7.34「诲人不倦」、14.7「忠焉，能勿诲乎」。</b>——<b>五处之中，只有本章是「诲」加一个字「知」——孔子教人的落点，不在博闻，在「知道自己知道什么」。</b>——<b>详见附论一。</b></p>
+
+  <div class="h2" id="sc-c">二　孔子为什么对子路说这句</div>
+  <p><b>注家一致认为此章为子路而发。</b>——<b>何晏《集解》引孔安国：「子路好勇，故夫子教之。」</b>——<b>好勇之人，敢冲，也敢断；敢断之病，在把没弄清的当作已弄清。</b></p>
+  <p><b>朱子《集注》说得更直：「夫子以子路好勇，盖有强其所不知以为知者，故告之曰：我教女以知之之道乎？但所知者则以为知，所不知者则以为不知，如此则虽或不能尽知，而无自欺之蔽，亦不害其为知矣。」</b>——<b>「强其所不知以为知」六个字，是本章的病灶名。</b></p>
+  <p><b>子路其人在《论语》里是立体的。</b>——<b>11.22 孔子自陈「由也兼人，故退之」——他力气过盛，要往后拉；先进篇「侍坐」章「子路率尔而对」——抢话，抢在别人之前把话说定。</b>——<b>一个人若天性敢作敢当，最缺的不是勇气，是边界。</b>——<b>孔子对他说这句，是对症。</b></p>
+  <p><b>先秦另有同文异载。</b>——<b>《荀子·子道》记孔子语子路：「君子知之曰知之，不知曰不知，言之要也；能之曰能之，不能曰不能，行之至也。」</b>——<b>把「知」与「能」并列，把「言之要」与「行之至」并列。</b>——<b>可见这句在战国已是传诵之言，并非一时之语；也可见本章与子路相关，非后人附会。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>孔子给子路的，不是一句「要诚实」，是一把尺：说到哪儿，算到哪儿。</b></div>
+
+  <div class="h2" id="sc-d">三　三层：认识、伦理、教学</div>
+  <p><b>第一层，认识论：知有边界。</b>——<b>人所能知者有限，所不知者无穷。「知之为知之」的第一义，是承认这个边界存在。</b>——<b>承认边界，才有可靠的知识；不承认边界，知识就成了自说自话。</b></p>
+  <p><b>第二层，伦理：不自欺。</b>——<b>《大学》说「毋自欺也」，《中庸》说「诚者，天之道也」。</b>——<b>「不知为不知」是「诚」在认识上的落地：对自己不说假话。</b>——<b>自欺之害不在骗人，在骗自己——骗过一次，此后所有判断都建在假地基上。</b></p>
+  <p><b>第三层，教学法：「不知」是起点，不是终点。</b>——<b>若把「不知为不知」读成「不知道就别学了」，则与孔子全部学风相反。</b>——<b>7.28 孔子自陈：「盖有不知而作之者，我无是也。多闻，择其善者而从之；多见而识之；知之次也。」</b>——<b>他也承认有「不知」，办法是多闻多见，不是闭口。</b>——<b>「不知为不知」只划界，不封路；界内可知，界外待问。</b></p>
+  <p><b>三层合看：先认边界（认识），再守诚实（伦理），再由此出发（教学）。缺一层，另两层都虚。</b>——<b>只认边界而不出发，是惰；只守诚实而不求知，是空；只顾求知而不划界，是乱。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>「不知道」是门口，不是墙；站在门口说一声，然后走进去。</b></div>
+
+  <div class="h2" id="sc-e">四　反向：四种「假知」，两种不算「不知」</div>
+  <p><b>四种假知，都是把「不知」装扮成「知」。</b></p>
+  <p><b>一，强不知以为知。</b>——<b>硬断、硬答、硬撑，此为「自欺」，朱子所指。</b></p>
+  <p><b>二，随众以为知。</b>——<b>众人这么说，我便这么说；说的不是自己的判断，是回声。</b></p>
+  <p><b>三，以不知为耻。</b>——<b>宁可说错，不肯说不会；面子在前，事实在后。</b></p>
+  <p><b>四，以知为尽。</b>——<b>学了一点，便以为全部在手；此病最隐蔽——它不假，它只是小。</b></p>
+  <p><b>两种不算「不知为不知」。</b>——<b>一，谦辞：明明知道，偏说「略知一二」；这不是诚实，是客套。</b>——<b>二，惰学：以「我不知道」为终，不再问、不再查；这不是划界，是弃地。</b></p>
+  <p><b>界线仍只有一条：说「不知」之后，是去问，还是就此停住。</b></p>
+  <p><b>孔子自己的实践可作证。</b>——<b>3.11 或问禘之说，子曰「不知也」；5.8 孟武伯问「子路仁乎」，子曰「不知也」，又说「不知其仁」。</b>——<b>对「仁」这样的大事，孔子反复说「不知」。他不是不知道「仁」字怎么写，是不肯把没到的话说满。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>假知有四种装法，真知只有一种说法：说到哪儿，算到哪儿。</b></div>
+
+  <div class="h2" id="sc-f">五　三关：转、立、清</div>
+  <p><b>把三章摆在一起，是一条有次第的路。</b>——<b>2.15「学而不思则罔，思而不学则殆」——管「转」；2.16「攻乎异端，斯害也已」——管「立」；2.17「知之为知之」——管「清」。</b></p>
+  <p><b>转是动，立是端，清是界。</b>——<b>三者的次序不是并列，是层累：不动则无端，无端则无界可划。</b>——<b>反过来，界不清则端是假的，端是假的则转是空转。</b></p>
+  <p><b>本课称此为「学之三关」。</b>——<b>三关都过，学才有骨头；过两关，仍会偏：能转不能立，是聪明的浮萍；能立不能清，是硬气的空壳；能清不能转，是记账的算盘。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>转要有个端，端要有个界；三样齐了，学问才立在地上。</b></div>
+
+  <div class="h2" id="sc-h">六　章旨</div>
+  <p><b>一句。</b>知有界，守界曰智。知之为知之，不知为不知，是不以不知充知。</p>
+  <p><b>一反。</b>这不是叫人少学，是叫人先划界再学。孔子自陈「多闻」「多见」，正是不肯「不知而作」。</p>
+  <p><b>一辨。</b>「是知也」的「知」读智，非本义之知：能守界，才叫智；守界不是知识多，是知道自己知识到哪儿为止。</p>
+  <p><b>一证。</b>四个数：<b>「诲」全书五见（2.17、7.2、7.7、7.34、14.7），本章为唯一「诲＋知」；「知」全书一百一十五见，为政一篇十三见；「不知」全书二十八见，为政一篇三见；「知之為知之」全书仅此一见。</b>——<b>详见附论一、三、四。</b></p>
+  <div class="scene"><b>本章在《为政》的位置，是「学的界碑」。</b>——<b>2.15 转得动，2.16 立得住，2.17 说得清；三样都有，学才站得起来。</b></div>
+
+  <div class="h2" id="sc-i">七　存疑五条</div>
+  <div class="doubt">
+    <div class="q"><span>01</span><div><b>「是知也」的「知」读本音还是破读为智。</b><b>本课取朱子「去声」读智</b>：前五「知」是本义，末一「知」是断语，读智才通。但原文作「知」，故页中作「是知（智）也」，两存其字。</div></div>
+    <div class="q"><span>02</span><div><b>句读：「由！诲女知之乎！」还是「由，诲女，知之乎」。</b><b>本课取前者</b>：本章主题是「知」，非一次问答；「之」指「知」这件事。若作后式，则「知之」成了「你懂了吗」，全章重心移向问答，与三章连读之旨不合。</div></div>
+    <div class="q"><span>03</span><div><b>「知之为知之」的「为」是系词还是「谓」。</b><b>本课取系词「就是」</b>：若作「谓」，句意变成「把知道的叫作知道」，反嫌迂曲，且与下句「不知为不知」不对称。</div></div>
+    <div class="q"><span>04</span><div><b>本章是否专为子路发。</b><b>本课判为「与子路相关，而非专为其病」</b>：原文只称「由」，未言其病；孔安国「好勇」、朱子「强其所不知以为知」，皆注家推断。但《荀子·子道》同文正记孔子语子路，可证相关；至于是否「专为」，则不可过断。</div></div>
+    <div class="q"><span>05</span><div><b>「不知为不知」是否等于「不必求知」。</b><b>本课判「否」</b>：它是求知的起点——界内可知，界外待问。若以「不知」为终，则与 7.28「多闻多见」相反，与 15.16「不曰如之何」之叹亦相反。</div></div>
+  </div>
+  <div class="h2" id="sc-j">八　双卡：六对俗见与正解</div>
+  <div class="cards">
+    <div class="cardshd"><span>俗见</span><span>正解</span></div>
+    <div class="pair"><div class="a"><b>说「不知道」很没面子。</b></div><div class="b"><b>不知而说知，才是把面子押在假话上。</b>——<b>假话一立，后面全要补，补到补不动为止。</b></div></div>
+    <div class="pair"><div class="a"><b>「不知为不知」是叫人别学了。</b></div><div class="b"><b>是叫人先划界再学。</b>——<b>界内深挖，界外去问；7.28 多闻多见，正是此法。</b></div></div>
+    <div class="pair"><div class="a"><b>这是一句谦虚话。</b></div><div class="b"><b>这是认识的标准，不是礼貌。</b>——<b>谦虚只说「我不行」，这句说「我知到哪儿」。</b></div></div>
+    <div class="pair"><div class="a"><b>知道得多就叫聪明。</b></div><div class="b"><b>知道自己不知道什么，才叫聪明。</b>——<b>前一个靠记，后一个靠判。</b></div></div>
+    <div class="pair"><div class="a"><b>当众说不会，显得笨。</b></div><div class="b"><b>不问才一直笨；问了，笨只笨一次。</b></div></div>
+    <div class="pair"><div class="a"><b>心里明白就行，不必说出口。</b></div><div class="b"><b>说给人听，是给自己定界。</b>——<b>不说，界就虚着。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-k">九　跨典六条</div>
+  <div class="rows">
+    <div class="row"><div class="k">一</div><div class="v"><b>《荀子·子道》：「君子知之曰知之，不知曰不知，言之要也；能之曰能之，不能曰不能，行之至也。」</b>——<b>知与能并列，言与行并列：承认不会，是说话的要领，也是做事的底线。</b></div></div>
+    <div class="row"><div class="k">二</div><div class="v"><b>《大学》「毋自欺也」；《中庸》「诚者，天之道也；诚之者，人之道也」。</b>——<b>不自欺，是诚的起点；认识的诚，先于言语的诚。</b></div></div>
+    <div class="row"><div class="k">三</div><div class="v"><b>《论语》7.28「盖有不知而作之者，我无是也。多闻，择其善者而从之；多见而识之；知之次也。」</b>——<b>孔子自陈不作「不知而作」；「不知」之后是多闻多见，不是闭口。</b></div></div>
+    <div class="row"><div class="k">四</div><div class="v"><b>《论语》3.11 或问禘之说，子曰「不知也」。</b>——<b>孔子对礼制细节直言不知；不知就说不不知，是其身教。</b></div></div>
+    <div class="row"><div class="k">五</div><div class="v"><b>《论语》5.8 孟武伯问「子路仁乎」，子曰「不知也」；又问，曰「不知其仁也」。</b>——<b>对「仁」这样的大题目，孔子不肯说满；界守得住，话才守得住。</b></div></div>
+    <div class="row"><div class="k">六</div><div class="v"><b>《老子》七十一章「知不知，上；不知知，病。」</b>——<b>东方两源同一断语：知道自己不知道，是上；不知道却以为知道，是病。</b></div></div>
+  </div>
+
+  <div class="h2" id="sc-19">图一　门槛上的一脚</div>
+  <div class="figs single">
+    <div class="fig">
+      <div class="cap">图一 · 界内与界外</div>
+      <div class="ph" style="height:auto;display:block;padding:18px 20px;font-size:12.5px;line-height:2;letter-spacing:0;text-align:left;color:#7A7368;background:#FAF7F1">图位（待供图）：竖幅 3:4 水墨。院中一道木门槛，弟子一脚已抬起、身向前倾、手按腰间，脸朝门外；长者立于阶上，伸掌向下，掌心朝地，示意「止」；阶旁一案，一盏灯，摊着一卷简，灯只照简，不照门外。两人不同框对视。要让人一眼看出：可问的就在案上，要跨的在门外。</div>
+    </div>
+  </div>
+  <div class="read"><b>读图三处：</b>——<b>门槛</b>：界。它不挡人，只标出「哪边是院子里」；<b>抬起的那只脚</b>：强不知以为知的那股勇——不是不能走，是没弄清就走；<b>案上灯与摊简</b>：可知者就在手边，光照处正要读，不必跨出去撑。</div>
+
+  <div class="h2" id="sc-20">义理图一　四格：知与不知，承与不承</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" role="img" aria-label="四格：知与不知乘以承认为知与否">
+    <line x1="55" y1="160" x2="385" y2="160" stroke="#4A5C55" stroke-width="2"/>
+    <line x1="220" y1="72" x2="220" y2="252" stroke="#4A5C55" stroke-width="2"/>
+    <text x="52" y="178" font-size="10.5" fill="#8A8074">实际：不知</text>
+    <text x="388" y="178" font-size="10.5" fill="#8A8074" text-anchor="end">实际：知</text>
+    <text x="234" y="66" font-size="10.5" fill="#8A8074">自称：知</text>
+    <text x="234" y="272" font-size="10.5" fill="#8A8074">自称：不知</text>
+    <circle cx="145" cy="112" r="6.5" fill="#A2503B"/>
+    <text x="158" y="92" font-size="13" font-weight="600" fill="#A2503B">自欺</text>
+    <text x="158" y="108" font-size="10" fill="#8A8074">不知称知</text>
+    <circle cx="295" cy="112" r="6.5" fill="#4A5C55"/>
+    <text x="308" y="92" font-size="13" font-weight="600" fill="#2F2A24">知之</text>
+    <text x="308" y="108" font-size="10" fill="#8A8074">知而称知</text>
+    <circle cx="140" cy="228" r="6.5" fill="#7C8B6F"/>
+    <text x="153" y="203" font-size="12" font-weight="600" fill="#4A5C55">不知为不知</text>
+    <text x="153" y="219" font-size="10" fill="#8A8074">是知也</text>
+    <circle cx="295" cy="228" r="6.5" fill="#C58A73"/>
+    <text x="308" y="203" font-size="13" font-weight="600" fill="#8A6A4E">藏</text>
+    <text x="308" y="219" font-size="10" fill="#8A8074">知而称不知</text>
+    <text x="220" y="292" text-anchor="middle" font-size="10.5" fill="#5C5347">判准不在知道多少，在承不承认</text>
+  </svg><div class="figcap">图一　四格：知与不知，承与不承</div></div>
+
+  <div class="h2" id="sc-21">义理图二　三关：转、立、清</div>
+  <div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-label="三关：2.15转、2.16立、2.17清">
+    <text x="80" y="52" text-anchor="middle" font-size="10" fill="#8A8074">关一</text>
+    <text x="220" y="52" text-anchor="middle" font-size="10" fill="#8A8074">关二</text>
+    <text x="360" y="52" text-anchor="middle" font-size="10" fill="#8A8074">关三</text>
+    <rect x="26" y="66" width="108" height="64" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="80" y="92" text-anchor="middle" font-size="11" fill="#8A8074">2.15 学与思</text>
+    <text x="80" y="116" text-anchor="middle" font-size="15" font-weight="600" fill="#A2503B">转</text>
+    <rect x="166" y="66" width="108" height="64" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="220" y="92" text-anchor="middle" font-size="11" fill="#8A8074">2.16 攻异端</text>
+    <text x="220" y="116" text-anchor="middle" font-size="15" font-weight="600" fill="#A2503B">立</text>
+    <rect x="306" y="66" width="108" height="64" fill="#FFFDF6" stroke="#DED2B9"/>
+    <text x="360" y="92" text-anchor="middle" font-size="11" fill="#8A8074">2.17 守界</text>
+    <text x="360" y="116" text-anchor="middle" font-size="15" font-weight="600" fill="#A2503B">清</text>
+    <path d="M136 98 L164 98" stroke="#5C5347" stroke-width="2"/>
+    <path d="M164 98 l-6 -3.5 M164 98 l-6 3.5" stroke="#5C5347" stroke-width="2" fill="none"/>
+    <path d="M276 98 L304 98" stroke="#5C5347" stroke-width="2"/>
+    <path d="M304 98 l-6 -3.5 M304 98 l-6 3.5" stroke="#5C5347" stroke-width="2" fill="none"/>
+    <text x="220" y="176" text-anchor="middle" font-size="11.5" fill="#2F2A24">转要有个端，端要有个界</text>
+    <text x="220" y="200" text-anchor="middle" font-size="10.5" fill="#8A8074">不动则无端，无端则无界可划；界不清，则端是假的</text>
+    <text x="220" y="226" text-anchor="middle" font-size="10.5" fill="#5C5347">三关都过，学才有骨头</text>
+  </svg><div class="figcap">图二　三关：转、立、清</div></div>
+  <div class="h2" id="sc-22">附论一　「诲」五见：孔子教人的五种口吻</div>
+  <p><b>「诲」在《论语》只五见，五处口吻不同。</b>——<b>把它排开看，能看出孔子「教」的五种形态。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">诲</span><span class="n">2.17</span></div><div class="u"><b>「由！诲女知之乎」——点名、当面、带警示。</b><i>——对一个具体的人，下一剂具体的药。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">诲</span><span class="n">7.2</span></div><div class="u"><b>「默而识之，学而不厌，诲人不倦，何有于我哉」——自述。</b><i>——教不倦，是他给自己定的常课。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">诲</span><span class="n">7.7</span></div><div class="u"><b>「自行束脩以上，吾未尝无诲焉」——立门规。</b><i>——教不设门槛，只设一束干肉之礼。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">诲</span><span class="n">7.34</span></div><div class="u"><b>「抑为之不厌，诲人不倦，则可谓云尔已矣」——对答。</b><i>——学生称他圣与仁，他只认「不厌」「不倦」两条。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">诲</span><span class="n">14.7</span></div><div class="u"><b>「爱之，能勿劳乎？忠焉，能勿诲乎」——说理。</b><i>——爱与忠，都要落到「劳」与「诲」上。</i></div></div>
+  </div>
+  <p><b>五处合看：诲不是一次讲学，是一种持续的关系。</b>——<b>点名时的重，自述时的常，立规时的宽，对答时的实，说理时的切。</b>——<b>本章落在「重」这一头：一个「由」字先立住人，再谈「知」。</b></p>
+
+  <div class="h2" id="sc-23">附论二　「女」十九见：当面直呼的分量</div>
+  <p><b>《论语》记孔子称弟子，多用字（回、赐、由、求）。</b>——<b>用「女（汝）」的十七处，多是当面、直指、不容回避。</b></p>
+  <div class="rows">
+    <div class="row"><div class="k">2.17</div><div class="v"><b>「诲女知之乎」</b>——<b>当面点破：把「知道」这件事摆到他面前。</b></div></div>
+    <div class="row"><div class="k">5.4</div><div class="v"><b>「女，器也」</b>——<b>当面定评，一字不绕。</b></div></div>
+    <div class="row"><div class="k">5.9</div><div class="v"><b>「女与回也，孰愈」</b>——<b>当面设问，逼出实话。</b></div></div>
+    <div class="row"><div class="k">6.12</div><div class="v"><b>「今女画」</b>——<b>当面断其自限：不是力不足，是你自己划了线。</b></div></div>
+    <div class="row"><div class="k">6.13</div><div class="v"><b>「女为君子儒！无为小人儒！」</b>——<b>当面立向，两个「为」把路劈成两条。</b></div></div>
+    <div class="row"><div class="k">6.14</div><div class="v"><b>「女得人焉尔乎」</b>——<b>当面考政：做官先问得人没有。</b></div></div>
+    <div class="row"><div class="k">7.19</div><div class="v"><b>「女奚不曰」</b>——<b>当面教他如何答人：该说的话，要替他说出来。</b></div></div>
+    <div class="row"><div class="k">15.3</div><div class="v"><b>「女以予为多学而识之者与」</b>——<b>当面勘其误解：你以为我是记得多？</b></div></div>
+    <div class="row"><div class="k">17.7</div><div class="v"><b>「由也，女闻六言六蔽矣乎」</b>——<b>当面设教，六言六蔽一口气说完。</b></div></div>
+    <div class="row"><div class="k">17.19</div><div class="v"><b>「于女安乎」「女安，则为之」</b>——<b>当面逼其自认，认了便不再劝。</b></div></div>
+  </div>
+  <p><b>一条可味：孔子最重的话，往往用「女」；最重的「女」，往往带着一个具体的病。</b>——<b>「诲女知之乎」正是此例：先点人，再点病，最后给一把尺。</b></p>
+
+  <div class="h2" id="sc-24">附论三　「是知」三见：字形检索的陷阱</div>
+  <p><b>以「是知」二字检索全书，得三处。</b>——<b>三处字形相同，语法各异。</b></p>
+  <div class="rows">
+    <div class="row"><div class="k">2.17</div><div class="v"><b>「是知也」</b>——<b>「是」指代上文，「知」读智：这就是智。</b>——<b>义例。</b></div></div>
+    <div class="row"><div class="k">14.38</div><div class="v"><b>晨门曰「是知其不可而为之者与」</b>——<b>「是」指人，「知」是本义：这是那个知道做不到还要做的人。</b>——<b>偶合。</b></div></div>
+    <div class="row"><div class="k">18.6</div><div class="v"><b>长沮曰「是知津矣」</b>——<b>「是」指人，「知」是本义：这人知道渡口在哪儿。</b>——<b>偶合。</b></div></div>
+  </div>
+  <p><b>凡以字串立论者，须逐条回看上下文；否则「三见」之说，会把两个偶合当成一个义例。</b>——<b>本课取「一义例、两偶合」。</b>——<b>这也是本丛书一贯的法子：数可以数，义须逐条看。</b></p>
+
+  <div class="h2" id="sc-25">附论四　「不知」二十八见：孔子在哪些事上说「不知」</div>
+  <p><b>全书「不知」二十八见，为政一篇三见。</b>——<b>按所对之事分四类。</b></p>
+  <div class="t4">
+    <div class="t4r"><div class="zh"><span class="z">一</span><span class="n">礼制细节</span></div><div class="u"><b>3.11 或问禘之说，子曰「不知也」。</b><i>——不知就说不知，不拿空话说礼。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">二</span><span class="n">人之德行</span></div><div class="u"><b>5.8「不知其仁也」；14.1「仁则吾不知也」。</b><i>——对人的评价，不肯说满。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">三</span><span class="n">表态·自陈</span></div><div class="u"><b>7.28「盖有不知而作之者，我无是也」。</b><i>——不以不知充知，是孔子自许的一条。</i></div></div>
+    <div class="t4r"><div class="zh"><span class="z">四</span><span class="n">为戒·为叹</span></div><div class="u"><b>1.1「人不知而不愠」；1.16「患不知人也」；20.3「不知命，无以为君子也」。</b><i>——一是不因人之不知而愠，一是以己之不知为患。</i></div></div>
+  </div>
+  <p><b>四类之中，第一、二类是「守界」，第三类是「不以不知充知」，第四类是「不因人之不知而愠」。</b>——<b>同一「不知」，四种用法；孔子于「知」的分寸，全在这四类里。</b></p>
+
+  <div class="h2" id="sc-26">附论五　一字之转：知与智</div>
+  <p><b>本章末字，注家读「智」。</b>——<b>一字之转，转出一个判断：知识（知）与智慧（智），差在守界。</b></p>
+  <p><b>知，是知道某事；智，是知道自己知道到哪儿。</b>——<b>前者可积，后者须判；积者日增，判者日省。</b>——<b>故「是知也」不作「这就是知识」，而作「这就是智慧」：把「不知」如实摆出来的人，才配称智。</b></p>
+  <p><b>朱子说「虽或不能尽知，而无自欺之蔽，亦不害其为知矣，况由此而求之，又有可知之理乎」——两层：</b>——<b>先说守界不害其为知，再说守界之后有可知之理。</b>——<b>守界不是终点，是入口。</b></p>
+  <div class="scene"><b>一句话收：</b>——<b>知是知道一件事，智是知道自己知道到哪儿；前者靠记，后者靠守。</b></div>
+
+  </section>
+
+  <footer>
+    <div class="foot-l">润泽说 · 道可道之论语　第 32 课　为政 2.17</div>
+    <div class="foot-r">底本：朱熹《论语集注》　v0.15.43　二〇二六年十一月</div>
+  </footer>
+
+
+
+</div>
+</body>
+</html>
