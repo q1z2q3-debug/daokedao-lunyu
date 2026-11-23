@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import re
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import os
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+VER = open(f'{ROOT}/VERSION', encoding='utf-8').read().strip()
 src = open(f'{ROOT}/docs/ke/45.html', encoding='utf-8').read()
 i = src.find('<div class="wrap">')
 PREFIX = src[:i+len('<div class="wrap">')]
@@ -50,7 +52,7 @@ def page(lesson, sec, h1, srctxt, kid, ad):
   <div class="h1-sub">八佾第三 · {sec}　第 {lesson} 课</div>
   <div class="src">{srctxt}</div>
   {ad}
-  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.51</div><div class="foot-r">第 {lesson} 课 / 498</div></footer>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v{VER}</div><div class="foot-r">第 {lesson} 课 / 498</div></footer>
 </section>
 '''
 
@@ -320,7 +322,17 @@ LESSONS = [
  (48,'3.9','夏礼能言','原文：子曰：「夏礼，吾能言之，杞不足征也；殷礼，吾能言之，宋不足征也。文献不足故也。足，则吾能征之矣。」',K48,A48),
 ]
 
+NO = {46: '第四十六课', 47: '第四十七课', 48: '第四十八课'}
+DESC = {
+ 46: '《论语·八佾》3.7 射不主皮，为力不同科。一课两页：少儿页讲比的是容仪不是力气，尽力而量力；成人页辨「主皮」与「贯革」、古之道何指，附存疑与双卡。',
+ 47: '《论语·八佾》3.8 绘事后素。一课两页：少儿页讲底子先于花样；成人页辨「素」为白底还是素功、「礼后乎」是先后还是轻重，子夏由诗悟礼，孔子许其可与言诗。',
+ 48: '《论语·八佾》3.9 夏礼吾能言之，杞宋不足征。一课两页：少儿页讲「记得」不等于「有据」；成人页辨「文献」二字（文与献）、能言与能征之别，断在证据不在理解。',
+}
 for lesson, sec, title, srctxt, kid, ad in LESSONS:
     html = PREFIX + '\n' + page(lesson, sec, title, srctxt, kid, ad) + SUFFIX
+    html = re.sub(r'<title>.*?</title>',
+                  f'<title>润泽说 道可道之论语 · {NO[lesson]} {title}（八佾 {sec}）</title>', html, count=1)
+    html = re.sub(r'(name="description" content=")[^"]*(")',
+                  lambda m: m.group(1) + DESC[lesson] + m.group(2), html, count=1)
     open(f'{ROOT}/docs/ke/{lesson}.html', 'w', encoding='utf-8').write(html)
     print(lesson, len(html))
