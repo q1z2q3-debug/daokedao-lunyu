@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/4000/svg" viewBox="0 0 440 220" role="img" aria-label="君子无所争为本，必也射乎为有节之争，本末相承">
+  <rect x="150" y="34" width="140" height="52" fill="#FBF7EC" stroke="#4A5C55"/>
+  <text x="220" y="64" text-anchor="middle" font-size="12.5" fill="#4A5C55">本 · 君子无所争</text>
+  <line x1="220" y1="86" x2="220" y2="120" stroke="#4A5C55" stroke-width="1.5"/>
+  <text x="236" y="106" text-anchor="start" font-size="10" fill="#8A8074">例不离本</text>
+  <rect x="150" y="120" width="140" height="52" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="220" y="150" text-anchor="middle" font-size="12.5" fill="#A2503B">例 · 必也射乎</text>
+  <text x="220" y="196" text-anchor="middle" font-size="10.5" fill="#2F2A24">有节之争，仍以君子之道行之</text>
+</svg>

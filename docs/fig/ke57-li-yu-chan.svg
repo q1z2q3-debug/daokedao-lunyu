@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="礼之敬与谄之求悦相对，同形而异心">
+  <rect x="40" y="46" width="150" height="74" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="78" text-anchor="middle" font-size="13" fill="#4A5C55">礼 · 敬</text>
+  <text x="115" y="102" text-anchor="middle" font-size="10" fill="#8A8074">尽其在我</text>
+  <rect x="250" y="46" width="150" height="74" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="325" y="78" text-anchor="middle" font-size="13" fill="#A2503B">谄 · 求悦</text>
+  <text x="325" y="102" text-anchor="middle" font-size="10" fill="#8A8074">卑屈有求</text>
+  <text x="220" y="160" text-anchor="middle" font-size="10.5" fill="#2F2A24">外观相近，分限在动机</text>
+</svg>

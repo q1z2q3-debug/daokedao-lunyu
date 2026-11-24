@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="节目托住意思，存节目以存其意">
+  <rect x="150" y="40" width="140" height="50" fill="#FBF7EC" stroke="#4A5C55"/>
+  <text x="220" y="70" text-anchor="middle" font-size="12.5" fill="#4A5C55">意思 · 礼之意</text>
+  <rect x="120" y="120" width="200" height="50" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="220" y="150" text-anchor="middle" font-size="12.5" fill="#A2503B">节目 · 告朔之饩羊</text>
+  <line x1="220" y1="90" x2="220" y2="120" stroke="#4A5C55" stroke-width="1.5"/>
+  <text x="220" y="196" text-anchor="middle" font-size="10.5" fill="#2F2A24">节目先撤，意思随之而散</text>
+</svg>

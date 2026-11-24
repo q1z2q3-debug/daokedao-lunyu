@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="射的两套标准：中与容体，力与贯革">
+  <rect x="40" y="46" width="150" height="74" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="76" text-anchor="middle" font-size="12.5" fill="#4A5C55">礼射</text>
+  <text x="115" y="100" text-anchor="middle" font-size="10" fill="#8A8074">中与容体</text>
+  <rect x="250" y="46" width="150" height="74" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="325" y="76" text-anchor="middle" font-size="12.5" fill="#A2503B">军射</text>
+  <text x="325" y="100" text-anchor="middle" font-size="10" fill="#8A8074">力与贯革</text>
+  <text x="220" y="160" text-anchor="middle" font-size="10.5" fill="#2F2A24">同一张弓，两套标准；选哪套，决定它是礼还是斗</text>
+</svg>

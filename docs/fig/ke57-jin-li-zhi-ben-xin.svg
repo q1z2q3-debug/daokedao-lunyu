@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="尽礼之本心与俗人之疑两端相对">
+  <rect x="40" y="56" width="150" height="100" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="92" text-anchor="middle" font-size="12.5" fill="#4A5C55">本心 · 尽礼</text>
+  <text x="115" y="116" text-anchor="middle" font-size="10" fill="#8A8074">尽其在我</text>
+  <rect x="250" y="56" width="150" height="100" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="325" y="92" text-anchor="middle" font-size="12.5" fill="#2F2A24">俗人 · 以为谄</text>
+  <text x="325" y="116" text-anchor="middle" font-size="10" fill="#8A8074">以形迹猜人</text>
+  <text x="220" y="192" text-anchor="middle" font-size="10.5" fill="#2F2A24">本心一立，俗谤不摇</text>
+</svg>

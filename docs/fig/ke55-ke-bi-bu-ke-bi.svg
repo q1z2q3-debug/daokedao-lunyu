@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="可比与不可比：中、容体可学，力不可齐">
+  <rect x="36" y="56" width="118" height="68" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="95" y="86" text-anchor="middle" font-size="12" fill="#4A5C55">中</text>
+  <text x="95" y="108" text-anchor="middle" font-size="9.5" fill="#8A8074">可学</text>
+  <rect x="161" y="56" width="118" height="68" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="220" y="86" text-anchor="middle" font-size="12" fill="#4A5C55">容体</text>
+  <text x="220" y="108" text-anchor="middle" font-size="9.5" fill="#8A8074">可学</text>
+  <rect x="286" y="56" width="118" height="68" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="345" y="86" text-anchor="middle" font-size="12" fill="#A2503B">力</text>
+  <text x="345" y="108" text-anchor="middle" font-size="9.5" fill="#8A8074">不可齐</text>
+  <text x="220" y="166" text-anchor="middle" font-size="10.5" fill="#2F2A24">礼只能以前两者为准</text>
+</svg>

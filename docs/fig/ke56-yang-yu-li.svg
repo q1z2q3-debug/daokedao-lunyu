@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="羊与礼两端对举，物轻而意重">
+  <rect x="40" y="50" width="150" height="70" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="115" y="82" text-anchor="middle" font-size="13" fill="#2F2A24">羊 · 物</text>
+  <text x="115" y="106" text-anchor="middle" font-size="10" fill="#8A8074">尔爱其羊</text>
+  <rect x="250" y="50" width="150" height="70" fill="#FBF7EC" stroke="#4A5C55"/>
+  <text x="325" y="82" text-anchor="middle" font-size="13" fill="#4A5C55">礼 · 意</text>
+  <text x="325" y="106" text-anchor="middle" font-size="10" fill="#8A8074">我爱其礼</text>
+  <text x="220" y="160" text-anchor="middle" font-size="10.5" fill="#2F2A24">物轻而意重，所重在礼</text>
+</svg>
