@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="各守其分为正，对价交换为非，两端相对">
+  <rect x="40" y="56" width="150" height="100" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="92" text-anchor="middle" font-size="12.5" fill="#4A5C55">正 · 各守其分</text>
+  <text x="115" y="116" text-anchor="middle" font-size="10" fill="#8A8074">礼忠各自尽</text>
+  <rect x="250" y="56" width="150" height="100" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="325" y="92" text-anchor="middle" font-size="12.5" fill="#A2503B">非 · 对价交换</text>
+  <text x="325" y="116" text-anchor="middle" font-size="10" fill="#8A8074">以礼换忠</text>
+  <text x="220" y="192" text-anchor="middle" font-size="10.5" fill="#2F2A24">礼忠是各尽本分，不是君恩臣忠的交换</text>
+</svg>

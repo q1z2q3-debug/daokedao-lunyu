@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="三层并列：成事不说、遂事不谏、既往不咎，时间由近及远">
+  <rect x="30" y="52" width="120" height="90" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="90" y="82" text-anchor="middle" font-size="12" fill="#4A5C55">成事 · 不说</text>
+  <text x="90" y="106" text-anchor="middle" font-size="9.5" fill="#8A8074">不追加议论</text>
+  <rect x="160" y="52" width="120" height="90" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="220" y="82" text-anchor="middle" font-size="12" fill="#4A5C55">遂事 · 不谏</text>
+  <text x="220" y="106" text-anchor="middle" font-size="9.5" fill="#8A8074">不追加劝阻</text>
+  <rect x="290" y="52" width="120" height="90" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="350" y="82" text-anchor="middle" font-size="12" fill="#A2503B">既往 · 不咎</text>
+  <text x="350" y="106" text-anchor="middle" font-size="9.5" fill="#8A8074">不追加追责</text>
+  <line x1="150" y1="97" x2="160" y2="97" stroke="#DED2B9"/><line x1="280" y1="97" x2="290" y2="97" stroke="#DED2B9"/>
+  <text x="220" y="176" text-anchor="middle" font-size="10.5" fill="#2F2A24">三层各止一个时间层，时间由近及远</text>
+</svg>

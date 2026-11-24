@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="礼属君待下之节，忠属臣奉上之心，两端对举不相为酬">
+  <rect x="40" y="46" width="150" height="74" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="78" text-anchor="middle" font-size="13" fill="#4A5C55">礼 · 君待下之节</text>
+  <text x="115" y="102" text-anchor="middle" font-size="10" fill="#8A8074">各守其分</text>
+  <rect x="250" y="46" width="150" height="74" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="325" y="78" text-anchor="middle" font-size="13" fill="#A2503B">忠 · 臣奉上之心</text>
+  <text x="325" y="102" text-anchor="middle" font-size="10" fill="#8A8074">不相为酬</text>
+  <text x="220" y="160" text-anchor="middle" font-size="10.5" fill="#2F2A24">两端对举，各由其位，不是交换</text>
+</svg>

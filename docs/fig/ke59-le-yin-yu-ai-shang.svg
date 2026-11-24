@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="乐对淫、哀对伤，情之正与情之过两端相对">
+  <rect x="36" y="40" width="118" height="62" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="95" y="66" text-anchor="middle" font-size="12" fill="#4A5C55">乐 · 和乐</text>
+  <text x="95" y="88" text-anchor="middle" font-size="9.5" fill="#8A8074">情之正</text>
+  <rect x="161" y="40" width="118" height="62" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="220" y="66" text-anchor="middle" font-size="12" fill="#A2503B">淫 · 流荡</text>
+  <text x="220" y="88" text-anchor="middle" font-size="9.5" fill="#8A8074">情之过</text>
+  <rect x="286" y="40" width="118" height="62" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="345" y="66" text-anchor="middle" font-size="12" fill="#4A5C55">哀 · 哀思</text>
+  <text x="345" y="88" text-anchor="middle" font-size="9.5" fill="#8A8074">情之正</text>
+  <rect x="161" y="116" width="118" height="62" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="220" y="142" text-anchor="middle" font-size="12" fill="#A2503B">伤 · 毁身</text>
+  <text x="220" y="164" text-anchor="middle" font-size="9.5" fill="#8A8074">情之过</text>
+  <text x="220" y="204" text-anchor="middle" font-size="10.5" fill="#2F2A24">过乐为淫，过哀为伤，中和在两端之间</text>
+</svg>
