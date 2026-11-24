@@ -1,11 +1,11 @@
-cff-version: "0.15.55"
+cff-version: "0.15.58"
 message: "若引用本书，请用下列格式。"
 title: "润泽说 道可道之论语"
 abstract: "《论语》通释读本，一章一课、一课两页（少儿页可念、成人页可考），底本朱熹《论语集注》，全书四百九十八章按篇连载。总纲为一阴一阳之谓道（学为受、习为发）与君子不器（可器而不着于器）。"
 authors:
   - name: "润泽"
-date-released: 2026-11-22
-version: 0.15.55
+date-released: 2026-11-24
+version: 0.15.58
 license: CC-BY-NC-SA-4.0
 repository-code: "https://github.com/q1z2q3-debug/daokedao-lunyu"
 url: "https://q1z2q3-debug.github.io/daokedao-lunyu/"
