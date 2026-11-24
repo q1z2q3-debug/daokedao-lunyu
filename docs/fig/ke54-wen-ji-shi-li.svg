@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="230" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230" role="img" aria-label="敬慎咨禀与恃己自专两端相对">
+  <rect x="40" y="56" width="150" height="100" fill="#FFFDF6" stroke="#4A5C55"/>
+  <text x="115" y="92" text-anchor="middle" font-size="12.5" fill="#4A5C55">敬 · 问</text>
+  <text x="115" y="116" text-anchor="middle" font-size="10" fill="#8A8074">谦、慎、不敢慢</text>
+  <rect x="250" y="56" width="150" height="100" fill="#FFFDF6" stroke="#A2503B"/>
+  <text x="325" y="92" text-anchor="middle" font-size="12.5" fill="#A2503B">自专 · 恃己知</text>
+  <text x="325" y="116" text-anchor="middle" font-size="10" fill="#8A8074">轻慢、凭臆断</text>
+  <text x="220" y="196" text-anchor="middle" font-size="10.5" fill="#2F2A24">临事不敢自专，礼之敬也</text>
+</svg>

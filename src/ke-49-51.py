@@ -90,7 +90,7 @@ A49 = ''.join([
  h2('sc-c','两读：「不欲观」起于何时'),
  scene('甲读（僭禘说）：鲁以诸侯僭行天子之禘，整场禘礼本身就不合分，夫子从一开始就不该看；「自既灌而往」是为鲁隐讳，措辞从轻。'),
  scene('乙读（灌后失礼说）：禘初灌酒降神，鲁人尚有敬心；既灌以后，威仪渐弛、执事不敬，夫子看不下去，故只说灌后不欲观。'),
- scene('本文取乙读。文本明言「自既灌而往」，是有起讫的时点限定；若全祭皆僭，夫子当直言「禘，吾不欲观之矣」，不必单标灌后。甲读所云僭禘，是此章的背景前提，不等于本章对「不欲观」时点的解释。'),
+ scene('本文取乙读。文本明言「自既灌而往」，是有起讫的时点限定；若全祭皆僭，夫子当直言「禘，吾不欲观之矣」，不必单标灌后。甲读所云僭禘，是此章的背景前提，不等于本章对「不欲观」时点的解释。乙读管「何时不欲观」（灌后执事懈怠），甲读管「整场是否合分」（诸侯僭禘），两层互不否定。'),
  h2('sc-d','章旨'),
  scene('此章记夫子观鲁禘而止：礼之失，先失在执事者的敬。夫子不毁礼、不越位，以「不看」自处——既不忍见其亵，又不公开议论人君之祭。'),
  h2('sc-e','三层'),
@@ -184,7 +184,7 @@ A50 = ''.join([
  h2('sc-c','两读：「不知也」'),
  scene('甲读（知而不答）：夫子知禘之说，以鲁僭禘，言之则揭其过，故讳而不答；「不知」是婉辞。'),
  scene('乙读（实不知）：禘礼久远，文献不足（参 3.9），夫子不知其详，故不妄说。'),
- scene('本文取甲读。下句紧接「知其说者之于天下」，夫子以「知其说者」自况其能知；若真不知，不当以此为言。乙读可旁通：制度细节确有不可考者，但非本章主旨。'),
+ scene('本文取甲读。鲁以诸侯僭行禘礼，夫子若明说其说，等于直揭人君之过，故讳而不答；「不知」是避讳之辞。至于「夫子自知」，本属注家推断，本章内证只到「不知也」与紧接着的假设譬喻，不在文本上强断。乙读（实不知）可旁通：制度细节确有不可考者，非本章主旨。'),
  h2('sc-d','章旨'),
  scene('此章重在「知者不言」与「天下在掌」两层：禘之说有所讳而不轻出口；其说若明，则治天下如示诸掌——礼之通于政，在此一喻。'),
  h2('sc-e','三层'),
@@ -192,6 +192,7 @@ A50 = ''.join([
        ('第三层','转而设喻：知说者之于天下，如示诸斯；指掌以明之。')]),
  h2('sc-h','存疑'),
  qs(['「不知也」为讳辞还是实不知，汉唐注与宋儒各有倾向；本文取讳辞。',
+     '「不知也；」底本作分号，通行本多作句号；本文从句读停顿，不改字。',
      '「示诸斯」之「斯」，旧注或指掌，或指掌上之物；文意皆通。',
      '「知其说者之于天下」是否即「知礼可以治天下」，后儒推衍程度不一，本文不作治术定论。',
      '「指其掌」是当时实有动作，还是记者形容，两存。']),
@@ -348,9 +349,6 @@ for lesson, sec, title, srctxt, kid, ad in LESSONS:
     html = PREFIX + '\n' + page(lesson, sec, title, srctxt, kid, ad) + SUFFIX
     html = re.sub(r'<title>.*?</title>', '<title>润泽说 道可道之论语 · ' + NO[str(lesson)] + ' ' + title + '（八佾 ' + sec + '）</title>', html, count=1)
     html = re.sub(r'(name="description" content=")[^"]*(")', lambda m: m.group(1) + DESC[str(lesson)] + m.group(2), html, count=1)
-    html = html.replace('</style>', '.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}\n' + '</style>', 1)
-    html = html.replace('</style>', 'pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}\n' + '</style>', 1)
-    html = html.replace('</style>', '.doubt .q:not(:has(span)){grid-template-columns:1fr}\n' + '</style>', 1)
     os.makedirs(f'{ROOT}/src/html', exist_ok=True)
     open(f'{ROOT}/src/html/ke-{lesson}.html', 'w', encoding='utf-8').write(html)
     print(lesson, len(html))

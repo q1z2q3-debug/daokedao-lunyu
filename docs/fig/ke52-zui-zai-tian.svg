@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="天居中，奥灶居侧；罪于天则诸祷无应">
+  <rect x="170" y="76" width="100" height="46" fill="#FBF7EC" stroke="#4A5C55"/>
+  <text x="220" y="104" text-anchor="middle" font-size="13" fill="#4A5C55">天</text>
+  <rect x="40" y="36" width="92" height="36" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="86" y="59" text-anchor="middle" font-size="11" fill="#2F2A24">奥</text>
+  <rect x="308" y="36" width="92" height="36" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="354" y="59" text-anchor="middle" font-size="11" fill="#2F2A24">灶</text>
+  <text x="220" y="166" text-anchor="middle" font-size="10.5" fill="#2F2A24">获罪于天，祷于奥灶不能代偿</text>
+</svg>

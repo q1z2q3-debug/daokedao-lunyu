@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="夏、殷、周三阶段，周监二代而立">
+  <rect x="30" y="70" width="100" height="64" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="80" y="100" text-anchor="middle" font-size="12" fill="#2F2A24">夏</text>
+  <text x="80" y="120" text-anchor="middle" font-size="9.5" fill="#8A8074">前代质简</text>
+  <rect x="170" y="70" width="100" height="64" fill="#FFFDF6" stroke="#DED2B9"/>
+  <text x="220" y="100" text-anchor="middle" font-size="12" fill="#2F2A24">殷</text>
+  <text x="220" y="120" text-anchor="middle" font-size="9.5" fill="#8A8074">损益相因</text>
+  <rect x="310" y="70" width="100" height="64" fill="#FBF7EC" stroke="#4A5C55"/>
+  <text x="360" y="100" text-anchor="middle" font-size="12" fill="#4A5C55">周</text>
+  <text x="360" y="120" text-anchor="middle" font-size="9.5" fill="#8A8074">郁郁成文</text>
+  <line x1="130" y1="102" x2="170" y2="102" stroke="#4A5C55"/><line x1="270" y1="102" x2="310" y2="102" stroke="#4A5C55"/>
+  <text x="220" y="172" text-anchor="middle" font-size="10.5" fill="#2F2A24">周监二代，集其成而文备</text>
+</svg>
