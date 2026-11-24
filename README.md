@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.58**，已刊 **74 件**（前言一篇 + 65 课／66 章 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26 居上不宽）。
+- 当前版本 **v0.15.59**，已刊 **79 件**（前言一篇 + 70 课／71 章 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁已开篇（4.1–4.5 五章）。
 
 ---
 
@@ -103,6 +103,11 @@
 | 第六十三课 | 仪封人请见……天将以夫子为木铎 | 判词自门外来：丧是失位不是丧事，木铎是政教之警不是神谕；天下之无道也久矣，正是木铎之时。数证：封人 1、木鐸 1、喪 22。 | [63](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/63.html) |
 | 第六十四课 | 子谓韶，尽美矣，又尽善也；谓武，尽美矣，未尽善也 | 美可听，善须问：韶武同尽美而善差一层，差在来路（征伐之起）；不作贬武，只标层次。数证：韶 3、武 14、盡美 2、盡善 2。 | [64](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/64.html) |
 | 第六十五课 | 居上不宽，为礼不敬，临丧不哀 | 三处各缺一心：宽、敬、哀是居上、行礼、临丧的根本；八佾起于讥僭，末章收于失德，一篇脉络至此闭合。数证：寬 4、敬 22、哀 12、觀 11。 | [65](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/65.html) |
+| 第六十六课 | 里仁为美，择不处仁，焉得知 | 住处就是存心之处：择了不落脚等于未择；知非算得精，是知所择。数证：仁 110、里 5、處 7、知 115。 | [66](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/66.html) |
+| 第六十七课 | 仁者安仁，知者利仁 | 约与乐两试：久穷则滥、久顺则骄；安仁为体、利仁为用，一深一浅不是两人。数证：約 6、樂 48、安 17、利 11。 | [67](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/67.html) |
+| 第六十八课 | 唯仁者，能好人，能恶人 | 好恶不是情绪是判断：唯与能立权，权不在位在仁；恶有去声、平声二读。数证：好 53、惡 39、唯 15。 | [68](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/68.html) |
+| 第六十九课 | 苟志于仁矣，无恶也 | 志是心之所之，如箭有靶；志一立，恶无处落脚——不是无过，是不为恶。数证：志 17、惡 39、苟 9。 | [69](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/69.html) |
+| 第七十课 | 君子无终食之间违仁，造次必于是，颠沛必于是 | 富贵贫贱四处一界，界是道；终食、造次、颠沛三处一验。下句「不以其道得之」，取俞樾「当作去之」说。数证：富 17、貴 8、貧 9、賤 4、終食 1、造次 1、顚沛 1。 | [70](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/70.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
@@ -168,9 +173,10 @@ https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 | 路径 | 内容 |
 |---|---|
-| `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–65，八佾已收篇）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
-| `book/润泽说 道可道之论语·上论（已刊）.md` | 书稿主档：前言、学而、为政、八佾 3.1–3.26（3.4 起为连载摘记），21.5 万字 |
+| `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–70，八佾已收篇、里仁至 4.5）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
+| `book/润泽说 道可道之论语·上论（已刊）.md` | 书稿主档：前言、学而、为政、八佾 3.1–3.26、里仁 4.1–4.5（3.4 起为连载摘记），24.1 万字 |
 | `manuscript/ba-yi/` | 3.4–3.26（第 43–65 课）母本 md：少儿页七节 + 成人页九至十四节，与 `docs/ke` 逐节对应 |
+| `manuscript/li-ren/` | 4.1–4.5（第 66–70 课）母本 md，同上体例 |
 | `src/` | 生成器与源 HTML：`ke-43-45.py`、`ke-47-48.py`、`ke-49-51.py`、`ke-52-54.py`、`ke-46-57.py` 生成 `src/html/ke-NN.html`（图位版）；01–42 源稿仍在外部 `../润泽说-论语` |
 | `src/html/` | 阅读版源 HTML（无 base64、图位待供），发布态在 `docs/ke/` |
 | `dist/` | 分发物料：公众号长文、小红书 3 篇、三课合刊 PDF、22 位缺图 Prompt、46–48 图一 Prompt |
