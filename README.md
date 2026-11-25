@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.83**，已刊 **196 件**（前言一篇 + 164 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），**述而至 7.15（夫子为卫君乎）**。
+- 当前版本 **v0.15.84**，已刊 **201 件**（前言一篇 + 192 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**泰伯至 8.5（以能问于不能）**。
 
 ---
 
@@ -201,7 +201,15 @@
 | 第一百六十一课 | 富而可求 | 让步句法，落处在「从吾所好」；執鞭孤例。数证：可求 2。 | [161](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/161.html) |
 | 第一百六十二课 | 子之所慎 | 齐（斋）战疾三进，由外而内；愼 7、戰 6。 | [162](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/162.html) |
 | 第一百六十三课 | 子在齐闻韶 | 三月不知肉味；叹的是乐之力量。韶 3、肉味孤例。 | [163](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/163.html) |
-| 第一百八十七课 | 夫子为卫君乎 | 不问而问，问夷齐即知立场；求仁孤例。数证：怨 20、伯夷 5。 | [164](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/164.html) |
+| 第一百六十四课 | 夫子为卫君乎 | 不问而问，问夷齐即知立场；求仁孤例。数证：怨 20、伯夷 5。 | [164](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/164.html) |
+| 第一百八十五课 | 奢则不孙，俭则固 | 两害取轻，与 3.4「宁俭」同旨。 | [185](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/185.html) |
+| 第一百八十六课 | 君子坦荡荡 | 只分心里有没有底；三语孤例。 | [186](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/186.html) |
+| 第一百八十七课 | 子温而厉 | 述而收篇：三对六字，每德以「而」收住过头那一面。 | [187](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/187.html) |
+| 第一百八十八课 | 太伯其可谓至德也已矣 | 泰伯开篇：让到没有痕迹，德才到极处；三孤例。 | [188](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/188.html) |
+| 第一百八十九课 | 恭而无礼则劳 | 四失一因；后两句转上讲下之化。底本脱标点已补。 | [189](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/189.html) |
+| 第一百九十课 | 曾子有疾，召门弟子 | 到终点才敢说「免了」；四孤例。底本「豫」当为「予」，已正。 | [190](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/190.html) |
+| 第一百九十一课 | 曾子有疾，孟敬子问之 | 三贵一舍；底本「笑」当为「斯」、脱「矣；」，已正。 | [191](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/191.html) |
+| 第一百九十二课 | 以能问于不能 | 三虚一归；底本「实若处」当作「实若虚」，已正。 | [192](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/192.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

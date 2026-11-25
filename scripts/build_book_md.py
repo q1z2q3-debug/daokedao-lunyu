@@ -23,7 +23,7 @@ base: 朱熹《论语集注》
 chapters: 498
 published: {published}
 version: {version}
-date: 2026-11-25
+date: 2026-11-26
 ---
 
 # 润泽说 道可道之论语 · 上论（已刊）
@@ -136,6 +136,19 @@ def main():
                      lambda m: "## 7.%d　%s" % (int(m.group(1)) - 149, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 泰伯篇（8.1 起）母本入库于 manuscript/tai-bo/NN-*.md，课号 188 对应 8.1
+    def _k8(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (8, int(m.group(1)) - 187) if m else (99, 99)
+
+    tb = sorted(glob.glob(os.path.join(ROOT, "manuscript", "tai-bo", "*.md")), key=_k8)
+    for path in tb:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 8.%d　%s" % (int(m.group(1)) - 187, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
 
     version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
@@ -156,6 +169,8 @@ def main():
         seg.append("雍也%s章" % cn(len(yy)))
     if se:
         seg.append("述而%s章" % cn(len(se)))
+    if tb:
+        seg.append("泰伯%s章" % cn(len(tb)))
     published = " + ".join(seg) if len(seg) - 4 else " + ".join(seg)
     head = HEAD.format(published=published, version=version, detail="、".join(seg))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
