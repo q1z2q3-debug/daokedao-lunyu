@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """第 96–100 课（公冶长 5.5–5.9）阅读版生成器。
 
-- 页头取 docs/ke/80.html 的 head+CSS（<div class="wrap"> 之前部分）。
+- 页头取 docs/ke/100.html 的 head+CSS（<div class="wrap"> 之前部分）。
 - 结构与 66–75 课一致：少儿页 sc-1..sc-7；成人页 sc-lian / sc-b / sc-c / sc-d /
   sc-e / sc-h / sc-i / sc-j / sc-19 图一 / sc-20、sc-21 义理图 / sc-22、sc-23 附论 / 数证表。
 - 5.6 底本作「漆彤開」，「彤」为「雕」之讹，页内记而不改正文；5.9 底本两处脱标点（「聞一以知十賜也」「弗如也吾與女，弗如也」），页内据通行本正。本批五课皆在公冶长篇内。
@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VER = open(f'{ROOT}/VERSION', encoding='utf-8').read().strip()
 
 MARK = '<div class="wrap">'
-_tpl = open(f'{ROOT}/docs/ke/80.html', encoding='utf-8').read()
+_tpl = open(f'{ROOT}/docs/ke/100.html', encoding='utf-8').read()
 PREFIX = _tpl[:_tpl.find(MARK) + len(MARK)]
 
 TOP = '''<div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
@@ -438,7 +438,7 @@ def build(L):
     head = PREFIX
     head = re.sub(r'<div style="background:#FCFAF6;.*?</div>\n', '', head, flags=re.S)
     head = re.sub(r'<title>.*?</title>',
-                  f'<title>润泽说 道可道之论语 · 第{n}课 {L["title"]}（里仁 {ref}）</title>', head, count=1)
+                  f'<title>润泽说 道可道之论语 · 第{n}课 {L["title"]}（{L.get("pianname", "里仁第四").split("第")[0]} {ref}）</title>', head, count=1)
     head = re.sub(r'(name="description" content=")[^"]*(")',
                   lambda m: m.group(1) + L['desc'] + m.group(2), head, count=1)
 
