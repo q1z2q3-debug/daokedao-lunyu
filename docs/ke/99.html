@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第99课 孟武伯问三子（里仁 5.8）</title>
+<meta name="description" content="《论语·公冶长》5.8：孟武伯问子路、冉求、公西赤之仁，孔子三答「不知其仁」，各许其才。一课两页：少儿页讲「能干一件事」与「是不是好人」是两回事；成人辨「赋」为兵赋、「宰」为邑宰家臣、「束带立朝」为朝仪应对，附「宰」十七见与「赋」「带」孤例之证。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　公冶长第五 · 二十八章　第 99 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第99课 · 5.8</div>
+  <h1>孟武伯问三子</h1>
+  <div class="h1-sub">公冶长第五 · 5.8　第 99 课</div>
+  <div class="src">原文：孟武伯問：「子路仁乎？」子曰：「不知也。」又問。子曰：「由也，千乘之國，可使治其賦也，不知其仁也。」「求也何如？」子曰：「求也，千室之邑，百乘之家，可使爲之宰也，不知其仁也。」「赤也何如？」子曰：「赤也，束帶立於朝，可使與賓客言也，不知其仁也。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">赋</div><div class="tzcap">兵赋、军赋</div></div><div class="tzitem"><div class="cell">宰</div><div class="tzcap">邑宰、家臣之长</div></div><div class="tzitem"><div class="cell">束带立朝</div><div class="tzcap">整衣冠立于朝堂</div></div><div class="tzitem"><div class="cell">不知其仁</div><div class="tzcap">不轻许其仁</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">孟武伯问：子路算仁吗？孔子说：我不知道。再问。孔子说：仲由啊，一个千乘之国，可以让他管军赋；他是不是仁，我不知道。又问冉求怎样？答：千室之邑、百乘之家，可以让他做邑宰；是不是仁，我不知道。又问公西赤怎样？答：穿着礼服立于朝堂，可以让他接待宾客、应对辞令；是不是仁，我不知道。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">孟武伯</div><div class="v">鲁国大夫，孟懿子之子。</div></div><div class="row"><div class="k k2">仁乎</div><div class="v">算仁吗。</div></div><div class="row"><div class="k k2">不知也</div><div class="v">我不知道。</div></div><div class="row"><div class="k k2">千乘之國</div><div class="v">拥有千辆兵车的诸侯之国。</div></div><div class="row"><div class="k k2">治其賦</div><div class="v">主管其兵赋、军赋之事。</div></div><div class="row"><div class="k k2">千室之邑</div><div class="v">千户的采邑。</div></div><div class="row"><div class="k k2">百乘之家</div><div class="v">拥有百辆兵车的卿大夫之家。</div></div><div class="row"><div class="k k2">爲之宰</div><div class="v">做它的邑宰、家臣之长。</div></div><div class="row"><div class="k k2">束帶立於朝</div><div class="v">整束衣带、着礼服立于朝堂。</div></div><div class="row"><div class="k k2">與賓客言</div><div class="v">接待宾客、应对辞令。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">问的是「仁不仁」，答的全是「能做什么」。三问三答，孔子每次都说一句「不知其仁」。</div><div class="scene">这不是推脱：能管军赋、能做邑宰、能接待宾客，都是实本事，孔子一一许了。</div><div class="scene">但「仁」是另一件事：本事是某一处用得上，仁是整个人立不立得住。能干，不等于好。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">看一个人，常混两件事：他有没有用，他是不是正。前一件容易看，后一件难。</div><div class="scene">「他很能干」和「他是好人」之间，隔着一整段路。孔子三次不肯跨过去，是谨慎，也是分寸。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「不知其仁」是不认他好吗？</div></div><div class="row"><div class="k k2">问二</div><div class="v">三个人各被许了什么本事？</div></div><div class="row"><div class="k k2">问三</div><div class="v">为什么孔子三次都说同一句话？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">能干一件事，不等于人好。</div></div><div class="row"><div class="k k2">二</div><div class="v">本事先看清，人品慢慢看。</div></div><div class="row"><div class="k k2">三</div><div class="v">不肯替人打包票，是一种负责。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第99课 · 5.8</div>
+  <h1>孟武伯问三子</h1>
+  <div class="h1-sub">公冶长第五 · 5.8　第 99 课</div>
+  <div class="src">原文：孟武伯問：「子路仁乎？」子曰：「不知也。」又問。子曰：「由也，千乘之國，可使治其賦也，不知其仁也。」「求也何如？」子曰：「求也，千室之邑，百乘之家，可使爲之宰也，不知其仁也。」「赤也何如？」子曰：「赤也，束帶立於朝，可使與賓客言也，不知其仁也。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">此章为 5.5–5.7 三章之汇：5.5 辨佞（口才非德）、5.6 辨信（自知之严）、5.7 辨勇（勇非全才），至此总以「才／仁」两分。三问三答同构，是全书论人最整齐的一章，也是「不知其仁」这一句法的标准样本。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">孟武伯</div><div class="v">鲁大夫，名彘；孟懿子之子。</div></div><div class="row"><div class="k k2">仁乎</div><div class="v">问其是否有仁德。</div></div><div class="row"><div class="k k2">不知也</div><div class="v">不知，谓未敢许之。</div></div><div class="row"><div class="k k2">千乘之國</div><div class="v">诸侯之国，出兵车千乘。</div></div><div class="row"><div class="k k2">賦</div><div class="v">兵赋、军赋；古以田赋出兵，故治赋即治军旅之政。</div></div><div class="row"><div class="k k2">千室之邑</div><div class="v">千户之采邑。</div></div><div class="row"><div class="k k2">百乘之家</div><div class="v">卿大夫之家，出车百乘。</div></div><div class="row"><div class="k k2">宰</div><div class="v">邑宰、家臣之长，主治一邑一家之政。</div></div><div class="row"><div class="k k2">赤</div><div class="v">公西赤，字子华。</div></div><div class="row"><div class="k k2">束帶</div><div class="v">束带于身，谓着礼服、正衣冠。</div></div><div class="row"><div class="k k2">賓客</div><div class="v">他国之使与来聘者。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">甲读（賦＝兵赋）：「治其賦」谓主军赋、兵役之政。此读依古注（赋以田出，兵以赋给），与「千乘之国」相称，本文取为主。</div><div class="scene">乙读（賦＝田赋）：「治其賦」谓主田税征收。此读较狭，与「千乘」之军旅语境不称。</div><div class="scene">「不知其仁」三称同句，两读：一为「不轻许」（本文主，与 5.5 同法），一为「实不知」（谦辞）。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">能干一件事，不等于人好；才可许，仁不轻许。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">子路仁乎——问德。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">可使治其賦——答才。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">不知其仁也——三称同句，划清才与德。</div></div></div>
+  <div class="scene">三人三才，各就其位：由治军赋、求为邑宰、赤接宾客。三才皆实，而三次都收在同一句「不知其仁」——这一句是全章的钉子。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「賦」两读：兵赋（本文主）、田赋（一说）。理由见「两读」。</div><div class="q">「不知其仁」为不轻许（本文主）抑或实不知（一说）；与 5.5 同法。</div><div class="q">孟武伯其人，名彘（一说名貙? 通行作「彘」）；本文从「孟武伯」本文，不系其名。</div><div class="q">（底本 5.8 断句核对无误；「爲之宰」之「爲」为「为」之繁体，不改。）</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">由：治賦</div><div class="b">求：爲宰</div></div><div class="pair"><div class="a">赤：與賓客言</div><div class="b">三人皆才</div></div><div class="pair"><div class="a">才：可许</div><div class="b">仁：不轻许</div></div><div class="pair"><div class="a">5.5 焉用佞</div><div class="b">5.8 三称不知</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《公冶长》5.5</div><div class="b">「不知其仁」同一句法，可互证。</div></div><div class="pair"><div class="a">《先进》「三子者出，曾晳后」</div><div class="b">四子言志，亦各见其才。</div></div><div class="pair"><div class="a">《子路》「既庶矣，又何加焉」</div><div class="b">才之施用，须有其序。</div></div><div class="pair"><div class="a">《孟子·公孙丑》「仁则荣，不仁则辱」</div><div class="b">仁与才分，正孟子所承。</div></div></div>
+  <div class="h2" id="sc-19">图一　三人各就其位</div><div class="figs single"><div class="fig"><div class="cap">图一 · 三人各就其位</div><div class="ph">图位：竖幅 3:4 水墨。一堂三案：左案置兵符与简册（治赋），中案置邑图与仓廪（为宰），右案置礼器与宾主之位（与宾客言）。三人各立其案前，衣冠整，手有所执。孔子立于堂下中央，抬头看三人，却摇头，右手轻摆。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>竖幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。堂上设三案：左案置兵符与简册，中案置邑图与仓廪小样，右案置礼器与宾主之位牌。三名士人各立其案前，衣冠整，手有所执：一人按简，一人指图，一人执礼器。孔子立于堂下中央，抬头看三人，微微摇头，右手轻摆，衣袖垂。梁柱深色，地面砖纹，光影从右来。整体低饱和，赭红只在孔子衣缘与礼器一线，青灰用于梁柱、砖地、器物阴影，笔触淡墨渲染加少量赭石勾勒，纸面微纹理。画面不出现任何文字、简册文字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="三才并列，下接不知其仁">  <rect x="20" y="56" width="110" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="75" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">由：治賦</text>  <text x="75" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">千乘之國</text>  <rect x="160" y="56" width="110" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="215" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">求：爲宰</text>  <text x="215" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">千室之邑</text>  <rect x="300" y="56" width="110" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="355" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">赤：賓客</text>  <text x="355" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">束帶立朝</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">三人三才，各就其位：才皆实，而皆止于才</text></svg></div><div class="figcap">义理图一 · 三才各就位</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="才与仁两栏对照，左偏右全">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">才：可许</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">某一处用得上</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#A2503B">仁：不轻许</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">整个人立得住</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">「不知其仁」这一句，是全章的钉子</text></svg></div><div class="figcap">义理图二 · 才与仁</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">这一章的形式极整齐：三问、三才、三句「不知其仁」。整齐到像一份判词。孔子对三个人都很熟——子路是他的老学生，冉求、公西赤也都是门下——却一次也不肯把「仁」这个字给他们。这不是吝惜，是「仁」这个字在孔子口里太重：它是整个人立不立得住，不是某一处做得好不好。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">三才的排列也有意思：治赋（军旅之政）、为宰（邑家之政）、与宾客言（朝聘之礼）。由外而内，由粗而精——正是孔门「才」的三层。而三才之上都压着同一句「不知其仁」，于是这一章读起来不是三个人，是一把尺：尺的一头是「能」，另一头是「是」。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">宰</div><div class="v">全书 17 见，分落 14 章；本章 1 见。</div></div><div class="row"><div class="k k2">乘</div><div class="v">全书 9 见，分落 8 章；本章 2 见（「千乘之國」「百乘之家」）。</div></div><div class="row"><div class="k k2">賦</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">帶</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">邑</div><div class="v">全书 3 见，分落 3 章（5.8、5.28、14.9）；本章 1 见。</div></div><div class="row"><div class="k k2">赤</div><div class="v">全书 8 见，分落 4 章（5.8、6.4、11.22、11.26）；本章 2 见。</div></div><div class="row"><div class="k k2">賓</div><div class="v">全书 5 见，分落 4 章（5.8、10.3、12.2、14.19）；本章 1 见。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 賦 refs/lunyu-baiwen.txt | wc -l 应得 1；grep -o 宰 refs/lunyu-baiwen.txt | wc -l 应得 17。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.64</div><div class="foot-r">第 99 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>

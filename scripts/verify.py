@@ -34,7 +34,9 @@ def cn(n):
         return CN[n]
     if n < 20:
         return '十' + (CN[n % 10] if n % 10 else '')
-    return CN[n // 10] + '十' + (CN[n % 10] if n % 10 else '')
+    if n < 100:
+        return CN[n // 10] + '十' + (CN[n % 10] if n % 10 else '')
+    return CN[n // 100] + '百' + (('零' + CN[n % 100]) if n % 100 < 10 else (CN[n % 100 // 10] + '十' + (CN[n % 10] if n % 10 else '')))
 
 
 def check(cond, msg):
@@ -53,25 +55,25 @@ def main():
     check(ver in cl, 'CHANGELOG 首条未记 %s' % ver)
 
     ke_files = sorted(f for f in os.listdir(KE) if f.endswith('.html'))
-    nums = [int(f[:2]) for f in ke_files if re.fullmatch(r'\d{2}\.html', f)]
+    nums = sorted(int(f.split('.')[0]) for f in ke_files if re.fullmatch(r'\d{2,3}\.html', f))
     n = max(nums) if nums else 0
     check('00-pre.html' in ke_files, '缺 docs/ke/00-pre.html')
     check(nums == list(range(1, n + 1)), '课页号不连续：共 %d 个，最大 %d' % (len(nums), n))
 
     for i in range(1, n + 1):
-        s = open(os.path.join(KE, '%02d.html' % i), encoding='utf-8').read()
+        s = open(os.path.join(KE, '%02d.html' % i if i < 100 else '%d.html' % i), encoding='utf-8').read()
         check(('第%s课' % cn(i)) in s or ('第%d课' % i) in s, '第 %d 课缺课次标注' % i)
         check(('第 %d 课' % i) in s, '第 %d 课页脚课次格式不符' % i)
         check('少儿页' in s and '成人页' in s, '第 %d 课缺少儿页或成人页' % i)
 
-    links = re.findall(r'href="(ke/\d{2}-?[a-z]*\.html)"', idx)
+    links = re.findall(r'href="(ke/\d{2,3}-?[a-z]*\.html)"', idx)
     check(len(set(links)) == n + 1, '入口页课链接 %d 个 ≠ 课页 %d 个' % (len(set(links)), n + 1))
     zt = [f for f in os.listdir(os.path.join(DOCS, 'zt')) if f.endswith('.html')]
     check(len(re.findall(r'href="zt/\d+\.html"', idx)) >= len(zt), '入口页专题链接少于 %d 个' % len(zt))
 
     parts = re.findall(r'"@type":"Chapter","name":"([^"]*)","url":"[^"]*/ke/([^"]*)"', idx)
     order = [p[1] for p in parts]
-    want = ['00-pre.html'] + ['%02d.html' % i for i in range(1, n + 1)]
+    want = ['00-pre.html'] + [('%02d.html' % i if i < 100 else '%d.html' % i) for i in range(1, n + 1)]
     check(order == want, 'JSON-LD hasPart 顺序与课次不一致（%s…）' % '、'.join(order[:4]))
 
     missing = []
