@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.84**，已刊 **201 件**（前言一篇 + 192 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**泰伯至 8.5（以能问于不能）**。
+- 当前版本 **v0.15.85**，已刊 **206 件**（前言一篇 + 197 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**泰伯至 8.10（好勇疾贫）**。
 
 ---
 
@@ -210,6 +210,11 @@
 | 第一百九十课 | 曾子有疾，召门弟子 | 到终点才敢说「免了」；四孤例。底本「豫」当为「予」，已正。 | [190](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/190.html) |
 | 第一百九十一课 | 曾子有疾，孟敬子问之 | 三贵一舍；底本「笑」当为「斯」、脱「矣；」，已正。 | [191](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/191.html) |
 | 第一百九十二课 | 以能问于不能 | 三虚一归；底本「实若处」当作「实若虚」，已正。 | [192](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/192.html) |
+| 第一百九十三课 | 可以托六尺之孤 | 三件可托，末一问一断；三孤例。底本逗误、脱「？」，已正。 | [193](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/193.html) |
+| 第一百九十四课 | 士不可以不弘毅 | 担子重、路远；五孤例。底本两处「，」当为「？」，已正。 | [194](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/194.html) |
+| 第一百九十五课 | 兴于诗，立于礼，成于乐 | 十二字教育大纲，三个动词一条线。 | [195](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/195.html) |
+| 第一百九十六课 | 民可使由之 | 「不可」为难尽使非不许使；改读入存疑。 | [196](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/196.html) |
+| 第一百九十七课 | 好勇疾贫，乱也 | 两乱一因，病灶同是「过」；三孤例。 | [197](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/197.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
