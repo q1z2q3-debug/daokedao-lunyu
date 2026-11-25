@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.77**，已刊 **168 件**（前言一篇 + 159 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），**述而至 7.10（于是日哭则不歌）**。
+- 当前版本 **v0.15.78**，已刊 **173 件**（前言一篇 + 164 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），**述而至 7.15（夫子为卫君乎）**。
 
 ---
 
@@ -197,6 +197,11 @@
 | 第一百五十七课 | 不愤不启 | 三个「不」都是按住老师的手；悱孤例。数证：憤 2、擧 14。 | [157](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/157.html) |
 | 第一百五十八课 | 子食于有丧者之侧 | 不是不吃，是吃不饱；侧 2、飽 3。 | [158](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/158.html) |
 | 第一百五十九课 | 于是日哭则不歌 | 哭过不唱，情绪有它的时长；哭 2、歌 5。 | [159](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/159.html) |
+| 第一百六十课 | 用之则行，舍之则藏 | 能进能退；勇要先怕再谋后成。数证：三軍 2、暴虎冯河孤例。 | [160](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/160.html) |
+| 第一百六十一课 | 富而可求 | 让步句法，落处在「从吾所好」；執鞭孤例。数证：可求 2。 | [161](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/161.html) |
+| 第一百六十二课 | 子之所慎 | 齐（斋）战疾三进，由外而内；愼 7、戰 6。 | [162](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/162.html) |
+| 第一百六十三课 | 子在齐闻韶 | 三月不知肉味；叹的是乐之力量。韶 3、肉味孤例。 | [163](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/163.html) |
+| 第一百六十四课 | 夫子为卫君乎 | 不问而问，问夷齐即知立场；求仁孤例。数证：怨 20、伯夷 5。 | [164](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/164.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
@@ -262,7 +267,7 @@ https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 | 路径 | 内容 |
 |---|---|
-| `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–159，八佾已收篇、里仁已收篇 4.26、公冶长已收篇 5.28、雍也三十章已收篇 6.30、述而至 7.10）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
+| `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–164，八佾已收篇、里仁已收篇 4.26、公冶长已收篇 5.28、雍也三十章已收篇 6.30、述而至 7.15）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
 | `book/润泽说 道可道之论语·上论（已刊）.md` | 书稿主档：前言、学而、为政、八佾 3.1–3.26、里仁 4.1–4.26、公冶长 5.1–5.28、雍也 6.1–6.5（3.4 起为连载摘记），39.2 万字 |
 | `manuscript/ba-yi/` | 3.4–3.26（第 43–65 课）母本 md：少儿页七节 + 成人页九至十四节，与 `docs/ke` 逐节对应 |
 | `manuscript/li-ren/` | 4.1–4.25（第 66–90 课）母本 md，同上体例 |
