@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第178课 互乡难与言（述而 7.29）</title>
+<meta name="description" content="《述而》7.29：互乡难与言，童子见而门人惑，孔子言与其进不与其退、与其洁不保其往。一课两页：少儿页讲别因为一个人从哪儿来就不理他；成人辨「與」为许抑参与、「不保其往」为不究既往抑不担保将来，附「互鄉」「難與言」「唯何甚」「人潔己」四孤例之证。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　述而第七 · 三十八章　第 178 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第178课 · 7.29</div>
+  <h1>互乡难与言</h1>
+  <div class="h1-sub">述而第七 · 7.29　第 178 课</div>
+  <div class="src">原文：互鄉難與言，童子見，門人惑。子曰：「與其進也，不與其退也，唯何甚？人潔己以進，與其潔也，不保其往也。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">互鄉</div><div class="tzcap">地名，风俗难与言</div></div><div class="tzitem"><div class="cell">見</div><div class="tzcap">来见孔子</div></div><div class="tzitem"><div class="cell">惑</div><div class="tzcap">不明白</div></div><div class="tzitem"><div class="cell">潔己</div><div class="tzcap">洁净自己</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">互乡那个地方的人很难说话。有个少年去见孔子，弟子们想不通。孔子说：我赞许他进来，不赞许他退回去——何必做得太过？人家把自己弄干净了来，我赞许他这份干净，不追究他从前怎样。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">互鄉</div><div class="v">地名，其乡风俗难与言。</div></div><div class="row"><div class="k k2">難與言</div><div class="v">难和他说话。</div></div><div class="row"><div class="k k2">童子</div><div class="v">少年。</div></div><div class="row"><div class="k k2">見</div><div class="v">来见。</div></div><div class="row"><div class="k k2">門人惑</div><div class="v">弟子不明白。</div></div><div class="row"><div class="k k2">與</div><div class="v">赞许、许可。</div></div><div class="row"><div class="k k2">唯何甚</div><div class="v">何必太过分。</div></div><div class="row"><div class="k k2">潔己</div><div class="v">洁净自己。</div></div><div class="row"><div class="k k2">不保其往</div><div class="v">不追究他从前。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">第一句：那个地方的人，不好说话。</div><div class="scene">一个少年来了，弟子们想不通。</div><div class="scene">孔子说：我赞许他往前走，不赞许他退回去。</div><div class="scene">人家干净了来，我看这一份干净，不翻旧账。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">别因为一个人从前怎样，就不给他现在的机会。</div><div class="scene">看人往前走的那一步，比看他走过的路重要。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">弟子为什么「惑」？</div></div><div class="row"><div class="k k2">问二</div><div class="v">「与其进」是什么态度？</div></div><div class="row"><div class="k k2">问三</div><div class="v">「不保其往」是不追究还是不管？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">给人机会，是给自己机会。</div></div><div class="row"><div class="k k2">二</div><div class="v">不翻旧账，是一种大度。</div></div><div class="row"><div class="k k2">三</div><div class="v">看人往哪走，不看从哪来。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第178课 · 7.29</div>
+  <h1>互乡难与言</h1>
+  <div class="h1-sub">述而第七 · 7.29　第 178 课</div>
+  <div class="src">原文：互鄉難與言，童子見，門人惑。子曰：「與其進也，不與其退也，唯何甚？人潔己以進，與其潔也，不保其往也。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章论知（7.28），此章论待人：一论所知之实，一论所待之宽。对自己严（不妄作），对别人宽（不保往）——两章合看，才是一副完整的分寸。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">互鄉</div><div class="v">乡名；其俗难与言。</div></div><div class="row"><div class="k k2">難與言</div><div class="v">难与之言。</div></div><div class="row"><div class="k k2">童子</div><div class="v">未冠者。</div></div><div class="row"><div class="k k2">見</div><div class="v">进见。</div></div><div class="row"><div class="k k2">與</div><div class="v">许也、取也。</div></div><div class="row"><div class="k k2">唯何甚</div><div class="v">何其过甚。</div></div><div class="row"><div class="k k2">潔己</div><div class="v">自洁其身。</div></div><div class="row"><div class="k k2">不保其往</div><div class="v">不保其既往。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">「與」两读：赞许、许可（本文主，谓许其进而抑其退）；参与、与共（一说，较弱）。前读为长。</div><div class="scene">「不保其往」两读：不追究其既往（本文主，谓不翻旧账）；不担保其将来（一说，谓「往」为往后）。前读为长，与「与其洁」正对：看现在这份洁。</div><div class="scene">「唯何甚」两读：何必太过（本文主，责门人之严）；一说「唯」为发语，「何甚」谓何事过甚（义近）。</div><div class="scene">章法：一事（童子见）、一惑（门人）、三答（与进不与退／唯何甚／与洁不保往）。孔子对门人只说两句：一句反问，一句实答。</div><div class="scene">文本内证：「互鄉」「難與言」「與其進」「與其退」「唯何甚」「人潔己」「不保其往」各 1 见，皆仅本章——一章六孤例。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">看人来时那一步干净，不看他来路。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">互鄉難與言——地之成见。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">童子見，門人惑——人之疑。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">與其進，不與其退——许其前。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">唯何甚——责其严。</div></div><div class="row"><div class="k k2">第五层</div><div class="v">人潔己以進，與其潔，不保其往——看现在。</div></div></div>
+  <div class="scene">全章最见分寸的是「唯何甚」三个字：不是讲大道理，是反问门人——你们何必做得这么过？紧接着给出理由，两条都很实：许他进来这一步，不追究他从前；看这份洁净，不保他往后。前不究，后不保，只管眼前这一步。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「與」两读：赞许（本文主）、与共（一说，较弱）。</div><div class="q">「不保其往」两读：不究既往（本文主）、不保将来（一说）。前读为长。</div><div class="q">「唯何甚」两读：何必太过（本文主）、何事过甚（义近）。</div><div class="q">（底本 7.29 引语层次两段，核对无误。）</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">互乡：难言</div><div class="b">童子：可见</div></div><div class="pair"><div class="a">与其进：许</div><div class="b">不与其退：不究</div></div><div class="pair"><div class="a">洁己：自重</div><div class="b">不保往：不追</div></div><div class="pair"><div class="a">7.28 不妄</div><div class="b">7.29 不苛</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《述而》7.28「不妄作」</div><div class="b">上章：对己严。</div></div><div class="pair"><div class="a">《先进》11.26「童子」</div><div class="b">「童子」之再见。</div></div><div class="pair"><div class="a">《宪问》14.44「童子」</div><div class="b">「童子」之三见。</div></div><div class="pair"><div class="a">《子张》19.3「君子不保」</div><div class="b">「保」之义，可参。</div></div></div>
+  <div class="h2" id="sc-19">图一　门槛外的一步</div><div class="figs single"><div class="fig"><div class="cap">图一 · 门槛外的一步</div><div class="ph">图位：竖幅 3:4 水墨。门前，一少年衣裳洁净但旧，立于阶下，脚已迈上第一级；门内数名弟子侧身挡着，一人举手相拦；孔子立在门内正中，抬手止住弟子，向少年点头。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>竖幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。门前石阶，一少年衣裳洁净而旧，立于阶下，一只脚已迈上第一级台阶，手垂在身侧，神色拘谨。门内数名弟子侧身挡着，一人举手相拦，面上不解。孔子立于门内正中，衣缘一道赭红，抬一手止住弟子，向少年微微点头。门框青灰，光从门外斜入。整体低饱和，青灰用于门框与石阶，笔触淡墨渲染加少量赭石勾勒，纸面微纹理。画面不出现任何文字、门匾题字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="成见、一步、许进、不究四段">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#8A8074">互鄉：成见</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">地</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">童子見：一步</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">人</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#A2503B">與其進：许</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">往前看</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#A2503B">不保其往：不究</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不翻账</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">前不究，后不保，只管眼前这一步</text></svg></div><div class="figcap">义理图一 · 只管这一步</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="从前与现在两栏">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#8A8074">看从前：旧账</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">越看越窄</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">看现在：干净</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">越看越宽</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">人家把自己弄干净了来，我赞许这份干净</text></svg></div><div class="figcap">义理图二 · 从前与现在</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">这一章的分寸，全在「唯何甚」三个字上。门人不是坏心，是守规矩守得过了；孔子也不训他们，只反问一句：何必如此？然后给出两条：许他进来这一步，不究他从前怎样。宽不是没原则，是把原则用在「现在」上。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">「不保其往」四个字最容易被读成「不管以后」。其实这一句讲的是不翻旧账：他从前如何，我不追究；他现在洁净，我就认这份洁净。前面「与其进也，不与其退也」已经定了调——看人往前走的那一步，而不是看他退回去的来路。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">互鄉</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">難與言</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">與其進</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">與其退</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">唯何甚</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">人潔己</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 互鄉 refs/lunyu-baiwen.txt | wc -l 应得 1；grep -o 唯何甚 refs/lunyu-baiwen.txt | wc -l 应得 1。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.80</div><div class="foot-r">第 178 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
