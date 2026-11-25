@@ -21,15 +21,15 @@ subtitle: 上论 · 通释读本（连载）
 author: 润泽
 base: 朱熹《论语集注》
 chapters: 498
-published: 前言 + 学而十六章 + 为政二十四章 + 八佾二十六章 + 里仁十章
-version: 0.15.60
+published: {published}
+version: {version}
 date: 2026-11-25
 ---
 
 # 润泽说 道可道之论语 · 上论（已刊）
 
 > 一章一课，一课两页：少儿页可念、成人页可考。
-> 本册为连载中的第一批：前言一篇、学而十六章、为政二十四章、八佾二十六章、里仁十章（4.1–4.10）。全书依朱熹本四百九十八章，按篇推进。
+> 本册为连载中的一批：{detail}。全书依朱熹本四百九十八章，按篇推进。
 
 """
 
@@ -89,16 +89,47 @@ def main():
         m = re.match(r"(\d+)-", os.path.basename(path))
         return (4, int(m.group(1)) - 65) if m else (99, 99)
 
-    for path in sorted(glob.glob(os.path.join(ROOT, "manuscript", "li-ren", "*.md")), key=_k4):
+    li = sorted(glob.glob(os.path.join(ROOT, "manuscript", "li-ren", "*.md")), key=_k4)
+    for path in li:
         txt = open(path, encoding="utf-8").read()
         txt = shift(txt)
         txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
                      lambda m: "## 4.%d　%s" % (int(m.group(1)) - 65, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 公冶长篇（5.1 起）母本入库于 manuscript/gong-ye-chang/NN-*.md，课号 92 对应 5.1
+    def _k5(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (5, int(m.group(1)) - 91) if m else (99, 99)
+
+    gy = sorted(glob.glob(os.path.join(ROOT, "manuscript", "gong-ye-chang", "*.md")), key=_k5)
+    for path in gy:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 5.%d　%s" % (int(m.group(1)) - 91, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
+
+    version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
+
+    def cn(n):
+        d = "零一二三四五六七八九"
+        if n < 10:
+            return d[n]
+        if n < 20:
+            return "十" + (d[n % 10] if n % 10 else "")
+        return d[n // 10] + "十" + (d[n % 10] if n % 10 else "")
+    seg = ["前言一篇", "学而十六章", "为政二十四章", "八佾二十六章"]
+    if li:
+        seg.append("里仁%s章" % cn(len(li)))
+    if gy:
+        seg.append("公冶长%s章" % cn(len(gy)))
+    published = " + ".join(seg) if len(seg) - 4 else " + ".join(seg)
+    head = HEAD.format(published=published, version=version, detail="、".join(seg))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    open(OUT, "w", encoding="utf-8").write(HEAD + body + "\n")
+    open(OUT, "w", encoding="utf-8").write(head + body + "\n")
     print("母本已生成：", OUT, len(body), "字")
 
 

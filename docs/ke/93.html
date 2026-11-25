@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第93课 子谓南容（里仁 5.2）</title>
+<meta name="description" content="《论语·公冶长》5.2：子谓南容，邦有道不废，邦无道免于刑戮。一课两页：少儿页讲世道好时有用、世道乱时能保全自己；成人辨「不废」为见用抑或不废其道、「免」为苟免抑或知几，附「戮」全书孤例与「邦」四十八章之证。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　公冶长第五 · 二十八章　第 93 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第93课 · 5.2</div>
+  <h1>子谓南容</h1>
+  <div class="h1-sub">公冶长第五 · 5.2　第 93 课</div>
+  <div class="src">原文：子謂南容：「邦有道，不廢；邦無道，免於刑戮。」以其兄之子妻之。</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">邦</div><div class="tzcap">邦国、世道</div></div><div class="tzitem"><div class="cell">废</div><div class="tzcap">弃置不用</div></div><div class="tzitem"><div class="cell">刑戮</div><div class="tzcap">刑罚、杀戮</div></div><div class="tzitem"><div class="cell">免</div><div class="tzcap">免于、避开</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">孔子说南容：国家有道的时候，他不会没有位置；国家无道的时候，他能保住自己不受刑戮。于是把侄女嫁给了他。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">邦</div><div class="v">邦国。</div></div><div class="row"><div class="k k2">有道</div><div class="v">政治清明。</div></div><div class="row"><div class="k k2">废</div><div class="v">弃置、不用。</div></div><div class="row"><div class="k k2">刑戮</div><div class="v">刑罚与杀戮。</div></div><div class="row"><div class="k k2">免</div><div class="v">避开。</div></div><div class="row"><div class="k k2">兄之子</div><div class="v">哥哥的女儿，即侄女。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">「邦有道，不废」是本事：太平时候有你的用处。</div><div class="scene">「邦无道，免于刑戮」是分寸：乱的时候不把自己搭进去。</div><div class="scene">两句合看，是一种很完整的活法：该出的时候出得来，该退的时候退得掉。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">顺的时候看不出人；乱的时候才见——有人硬顶，把自己顶没了；有人一味退，退得没了骨头。南容是第三种：不乱说、不乱站。</div><div class="scene">「免」不是逃，是不往刀口上站。这与怯懦只隔一层：一层是保住有用之身，一层是舍掉了该守的东西。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「不废」是有官做吗？</div></div><div class="row"><div class="k k2">问二</div><div class="v">「免于刑戮」算不算滑头？</div></div><div class="row"><div class="k k2">问三</div><div class="v">为什么孔子把侄女嫁给这样一个人？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">太平时候有用，乱时候能保全。</div></div><div class="row"><div class="k k2">二</div><div class="v">不往刀口上站，不是逃。</div></div><div class="row"><div class="k k2">三</div><div class="v">保住有用之身，才谈得上后来。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第93课 · 5.2</div>
+  <h1>子谓南容</h1>
+  <div class="h1-sub">公冶长第五 · 5.2　第 93 课</div>
+  <div class="src">原文：子謂南容：「邦有道，不廢；邦無道，免於刑戮。」以其兄之子妻之。</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章取「非其罪」，此章取「免于刑戮」：一辨罪之在不在身，一辨身之立不立得住。两章皆择婿，而所取不同——公冶长取其无罪，南容取其知几。观人之法，于此见两层。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">邦</div><div class="v">邦国；此谓世道。</div></div><div class="row"><div class="k k2">有道</div><div class="v">政治清明。</div></div><div class="row"><div class="k k2">廢</div><div class="v">弃置不用；一说「废」谓废其道。</div></div><div class="row"><div class="k k2">刑戮</div><div class="v">刑罚与诛戮。</div></div><div class="row"><div class="k k2">免</div><div class="v">脱也、避也。</div></div><div class="row"><div class="k k2">兄之子</div><div class="v">兄之女，即侄女。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">甲读（不废＝见用）：「不废」谓不见废弃，有其位、有其事。此读最直，与「有道」相应：明时当出。</div><div class="scene">乙读（不废＝不废其道）：「不废」谓不废其道，虽不见用而道不失。此读较重，然与下句「免于刑戮」轻重不称。</div><div class="scene">本文取甲为主。文本内证：「廢」全书 8 见，分落 7 章；多作「弃置」义（如 18.7「废中权」则另义）。本章与「邦有道」对举，正取「见用」义。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">明时有用，乱时能全；进退都有分寸，这才可托。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">邦有道·不废——出得来。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">邦无道·免于刑戮——退得掉。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">妻之——判断落到实处：此人可托终身。</div></div></div>
+  <div class="scene">两句是两种世道下的同一件事：怎么把自己放对位置。孔子择婿不取才高，取「知进退」——这是很实的眼光。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「不废」两读：见用（本文主）、不废其道（一说）。理由见「两读」。</div><div class="q">「免」是知几而避，抑或苟免，两说并存；本文取「知几」，不取苟免。</div><div class="q">南容即南宫适（一说南宫绦），其人名异说较多；本文从「南容」本文，不系其人。</div><div class="q">「以其兄之子妻之」是孔子为其兄之女择嫁，抑或兄之女已孤而孔子主婚，无据；本文只就「妻之」立论。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">有道：不废</div><div class="b">无道：免戮</div></div><div class="pair"><div class="a">出得来</div><div class="b">退得掉</div></div><div class="pair"><div class="a">知几：避刀口</div><div class="b">苟免：舍所守</div></div><div class="pair"><div class="a">5.1 无罪</div><div class="b">5.2 知几</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《泰伯》「邦有道，贫且贱焉，耻也」</div><div class="b">明时当出，即「不废」。</div></div><div class="pair"><div class="a">《宪问》「邦无道，危行言孙」</div><div class="b">「言孙」正是免戮之法。</div></div><div class="pair"><div class="a">《卫灵公》「邦无道，则可卷而怀之」</div><div class="b">卷怀，即免于刑戮之正解。</div></div><div class="pair"><div class="a">《诗经·大雅·烝民》「既明且哲，以保其身」</div><div class="b">明哲保身，本非贬义。</div></div></div>
+  <div class="h2" id="sc-19">图一　两条世道</div><div class="figs single"><div class="fig"><div class="cap">图一 · 两条世道</div><div class="ph">图位：竖幅 3:4 水墨。画面分上下两道：上道天光开，路宽，一人执笏行于其中，步履稳；下道云低日晦，路窄多棘，另一人侧身贴壁而行，衣不扬、口不开，脚避荆棘。两道具同一人（南容）之影，一显一隐。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>竖幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。画面上下分为两道：上道天光开明，路宽平，一名士人执笏而行，步履稳，衣冠整；下道云低日晦，路窄多荆棘，另一名同一面容的士人侧身贴壁而行，衣袖不扬、口闭，脚下避开荆棘。两道具同一人之影，一显一隐，中间以一道淡墨横带分开。远处山影一半明一半暗。整体低饱和，赭红只在上道士人腰带一线，青灰用于下道云气、荆棘与山影，笔触淡墨渲染加少量赭石勾勒，纸面微纹理。画面不出现任何文字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="有道、无道、妻之三段递进，末为托付">  <rect x="30" y="56" width="120" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="90" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">邦有道</text>  <text x="90" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不废：出得来</text>  <rect x="160" y="56" width="120" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="220" y="88" text-anchor="middle" font-size="12" fill="#8A8074">邦無道</text>  <text x="220" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">免於刑戮</text>  <rect x="290" y="56" width="120" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="350" y="88" text-anchor="middle" font-size="12" fill="#A2503B">妻之</text>  <text x="350" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">可托终身</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">两种世道，同一件事：把自己放对位置</text></svg></div><div class="figcap">义理图一 · 两道世道</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="知几与苟免两栏对照，左全右失">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">知几而避</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">保有用之身</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#A2503B">苟免</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">舍所守</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">「免」与「逃」只隔一层：守的东西还在不在</text></svg></div><div class="figcap">义理图二 · 免与逃</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">这一章与 5.1 是一对。公冶长那一章，孔子辨的是「罪在不在身」；南容这一章，辨的是「身立不立得住」。两次择婿，取的都不是才气，是「在坏处境里怎么保住自己」。这个标准听起来很低，其实很高：乱世里能保住自己而不失所守的人，极少。多数人要么硬顶到折，要么软到没了骨头。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">「免于刑戮」这四个字，后世常被读成滑头。但孔子说的是「免于刑戮」，不是「免于责任」。区别在：一个是不往刀口上站，一个是该站的时候不站。前者是知几，后者是苟免。南容属于前者——《论语》他处说他「邦无道，免于刑戮」，又说「君子哉若人」，可见孔门并不轻视这种保全。明哲保身，本来不是贬词。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">邦</div><div class="v">全书 48 见，分落 24 章；本章 2 见（「邦有道」「邦無道」）。</div></div><div class="row"><div class="k k2">廢</div><div class="v">全书 8 见，分落 7 章（5.2、6.12、14.36、15.23、18.7、18.8、20.1）；本章 1 见。</div></div><div class="row"><div class="k k2">戮</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">免</div><div class="v">全书 6 见，分落 6 章（2.3、5.2、6.16、6.19、8.3、17.21）；本章 1 见。</div></div><div class="row"><div class="k k2">刑</div><div class="v">全书 5 见，分落 4 章（2.3、4.11、5.2、13.3）；本章 1 见。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 戮 refs/lunyu-baiwen.txt | wc -l 应得 1；grep -n 邦 refs/lunyu-baiwen.txt | wc -l 核 48 见。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.63</div><div class="foot-r">第 93 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
