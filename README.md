@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.61**，已刊 **89 件**（前言一篇 + 80 课／81 章 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁至 4.15（一以贯之）。
+- 当前版本 **v0.15.62**，已刊 **94 件**（前言一篇 + 85 课／86 章 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁至 4.20（三年无改于父之道）。
 
 ---
 
@@ -118,6 +118,11 @@
 | 第七十八课 | 能以礼让为国乎，何有；不能以礼让为国，如礼何 | 「何有」取何难义，同 6.8「于从政乎何有」（全书 7 见 5 章）；礼以让为里，失让则礼无所施。数证：讓 7、國 11、禮 76。 | [78](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/78.html) |
 | 第七十九课 | 不患无位，患所以立；不患莫己知，求为可知也 | 「所以立」取立身之道为主、立位之具为辅；「可知」是值得被知道，非知名；底本脱「；」已补。数证：患 17、位 8、立 26。 | [79](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/79.html) |
 | 第八十课 | 吾道一以贯之 | 「一」取一法（尽己、推己之忠恕）为主，一理（宋儒）为辅；「贯」全书三见皆串合义；「唯」为曾子应诺。数证：貫 3、忠 18、恕 2、一 33、唯 15。 | [80](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/80.html) |
+| 第八十一课 | 君子喻于义，小人喻于利 | 「喻」全书仅两见皆在本章，取「心里透亮」义；义利不作两截，作次序。数证：喻 2、義 24、利 11。 | [81](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/81.html) |
+| 第八十二课 | 见贤思齐焉，见不贤而内自省也 | 「齊」全书 26 见，作「等齐」义仅本章一见，故以常训定之；「内」字是全章活眼。数证：賢 25、齊 26、內 7、省 4。 | [82](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/82.html) |
+| 第八十三课 | 事父母几谏，见志不从，又敬不违，劳而不怨 | 「幾」取「微」义为主、「及」为辅；三道关：嘴、脸、心。数证：幾 5、諫 5、違 13、勞 10、怨 20。 | [83](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/83.html) |
+| 第八十四课 | 父母在，不远游，游必有方 | 活眼在「方」字：不限距离，限「不知所在」；底本作「游」、通行本作「遊」，两存记例。数证：游 12、遊 2、方 15、在 51。 | [84](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/84.html) |
+| 第八十五课 | 三年无改于父之道，可谓孝矣 | 「道」取父之善道为主，不作盲守；此句与学而 1.11 重出，已成摘句另立。数证：改 14、道 89、孝 19、年 20。 | [85](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/85.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
@@ -183,10 +188,10 @@ https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 | 路径 | 内容 |
 |---|---|
-| `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–80，八佾已收篇、里仁至 4.15）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
-| `book/润泽说 道可道之论语·上论（已刊）.md` | 书稿主档：前言、学而、为政、八佾 3.1–3.26、里仁 4.1–4.15（3.4 起为连载摘记），26.9 万字 |
+| `docs/` | 站点（GitHub Pages，`main:/docs`）：`index.html` 入口、`book.html` 卷首、`ke/` 一课一页（00-pre + 01–85，八佾已收篇、里仁至 4.20）、`zt/` 专题论文 8 页、`fig/` 义理图 SVG、`manifest.webmanifest` + 图标（PWA） |
+| `book/润泽说 道可道之论语·上论（已刊）.md` | 书稿主档：前言、学而、为政、八佾 3.1–3.26、里仁 4.1–4.20（3.4 起为连载摘记），28.4 万字 |
 | `manuscript/ba-yi/` | 3.4–3.26（第 43–65 课）母本 md：少儿页七节 + 成人页九至十四节，与 `docs/ke` 逐节对应 |
-| `manuscript/li-ren/` | 4.1–4.15（第 66–80 课）母本 md，同上体例 |
+| `manuscript/li-ren/` | 4.1–4.20（第 66–85 课）母本 md，同上体例 |
 | `src/` | 生成器与源 HTML：`ke-43-45.py`、`ke-47-48.py`、`ke-49-51.py`、`ke-52-54.py`、`ke-46-57.py` 生成 `src/html/ke-NN.html`（图位版）；01–42 源稿仍在外部 `../润泽说-论语` |
 | `src/html/` | 阅读版源 HTML（无 base64、图位待供），发布态在 `docs/ke/` |
 | `dist/` | 分发物料：公众号长文、小红书 3 篇、三课合刊 PDF、22 位缺图 Prompt、46–48 图一 Prompt |

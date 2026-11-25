@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第82课 见贤思齐，见不贤内自省（里仁 4.17）</title>
+<meta name="description" content="《论语·里仁》4.17：见贤思齐焉，见不贤而内自省也。一课两页：少儿页讲看见好的想学，看见不好的先查自己；成人辨「齐」为等齐、「内自省」为省己抑或省人，附「齐」全书二十六见中作「等齐」义仅本章一见之证。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　里仁第四 · 二十六章　第 82 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第82课 · 4.17</div>
+  <h1>见贤思齐，见不贤内自省</h1>
+  <div class="h1-sub">里仁第四 · 4.17　第 82 课</div>
+  <div class="src">原文：子曰：「見賢思齊焉；見不賢而內自省也。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">贤</div><div class="tzcap">德才胜过己者</div></div><div class="tzitem"><div class="cell">齐</div><div class="tzcap">与之为一、看齐</div></div><div class="tzitem"><div class="cell">内</div><div class="tzcap">向自己身上</div></div><div class="tzitem"><div class="cell">省</div><div class="tzcap">检查、反省</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">孔子说：看见比自己好的人，就想跟他一样；看见不好的，就回头查自己有没有同样的毛病。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">贤</div><div class="v">德才胜过自己的人。</div></div><div class="row"><div class="k k2">齐</div><div class="v">一样、看齐。</div></div><div class="row"><div class="k k2">内</div><div class="v">向自己身上。</div></div><div class="row"><div class="k k2">省</div><div class="v">检查、反省。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">上半句好懂，下半句难做。看见好的想学，是向上之心；看见不好的先查自己，是收心。</div><div class="scene">「内自省」三个字最要紧：不是「他怎么这样」，是「我有没有这样」。指出去的手，要收回来。</div><div class="scene">两句合起来是一条：眼睛向外看，功夫向里做。看得见别人的好与不好，才有材料省自己。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">同组有人做事又快又稳，你想的是「他怎么做到的」，而不是「他运气好」——这就是思齐。</div><div class="scene">有人当众失态，你心里第一句若是「我上次是不是也这样」，这一章就读进去了；若是「真难看」，还没读进去。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「齐」是看齐，还是比高低？</div></div><div class="row"><div class="k k2">问二</div><div class="v">为什么见不贤要「内」自省？</div></div><div class="row"><div class="k k2">问三</div><div class="v">只思齐不内省，会怎样？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">看见好的，想学，不嫉妒。</div></div><div class="row"><div class="k k2">二</div><div class="v">看见不好的，先查自己。</div></div><div class="row"><div class="k k2">三</div><div class="v">眼睛向外，功夫向里。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第82课 · 4.17</div>
+  <h1>见贤思齐，见不贤内自省</h1>
+  <div class="h1-sub">里仁第四 · 4.17　第 82 课</div>
+  <div class="src">原文：子曰：「見賢思齊焉；見不賢而內自省也。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章以「所喻」分人，此章以「所见」修己：所喻既定，则见贤知所齐、见不贤知所省。4.18 转言事亲，把这一层落到最难的一处关系上——对父母。由人及亲，是里仁由泛论入日用的第二步。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">賢</div><div class="v">德才胜己者；《说文》「多才也」。</div></div><div class="row"><div class="k k2">齊</div><div class="v">等也、同也；谓与之相齐。</div></div><div class="row"><div class="k k2">焉</div><div class="v">语助；此处兼有「于此」意。</div></div><div class="row"><div class="k k2">內</div><div class="v">向己身；与「外」对。</div></div><div class="row"><div class="k k2">自省</div><div class="v">自察、自检。</div></div><div class="row"><div class="k k2">也</div><div class="v">句末表论断。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">甲读（齐＝等齐）：「思齐」谓思与贤者相齐，见其高一等，欲与之同。此读最直，与「齐」之常训合。</div><div class="scene">乙读（齐＝整肃）：「齐」读如「斋」，谓见贤而思自整肃。此读迂曲，全书「齐」无作此用者，不取。</div><div class="scene">本文取甲读。文本内证：「齊」全书 26 见，多为国名（齊國、齊景公）、斋戒（「齊，必有明衣」）、齊衰（丧服）、齐一（「齊之以刑」）诸义；作「等齐」义者，本章一见而已。正因仅此一见，故须以常训「等」定之，不宜别生新解。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">眼睛向外看得见人，功夫向里做得成己；两半句，一半是向上，一半是收心。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">见贤——向外，看见高处。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">思齐——向上，欲与之同。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">见不贤·内自省——收心，把指出去的手收回来。</div></div></div>
+  <div class="scene">两句一放一收：上句放眼看人，下句收心看己。只说上句，易成攀比；只说下句，易成刻薄自己。两句合，才是修养。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">底本 4.17 断句脱一「；」（作「見賢思齊焉見不賢」），据通行本补。</div><div class="q">「齊」两读：等齐（本文主）、整肃（一说，不取）。理由见「两读」。</div><div class="q">「内自省」是省己有无所见之过（本文主），抑或省己何以不贤（一说为辅）。</div><div class="q">「焉」是纯语助，还是兼「于此」义，两读皆通；本文取兼义，与「思齐」相承。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">见贤：向上</div><div class="b">见不贤：收心</div></div><div class="pair"><div class="a">思齐：欲与之同</div><div class="b">内自省：查己有无</div></div><div class="pair"><div class="a">向外看人</div><div class="b">向里做己</div></div><div class="pair"><div class="a">4.16 所喻</div><div class="b">4.17 所见</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《学而》「三人行必有我师」</div><div class="b">择其善者从之，即思齐。</div></div><div class="pair"><div class="a">《颜渊》「内省不疚」</div><div class="b">内省之效：不疚。</div></div><div class="pair"><div class="a">《公冶长》「吾未见能见其过而内自讼者」</div><div class="b">内自讼，即内自省之深一层。</div></div><div class="pair"><div class="a">《季氏》「见善如不及」</div><div class="b">见善如不及，见不善如探汤。</div></div></div>
+  <div class="h2" id="sc-19">图一　一镜一影</div><div class="figs single"><div class="fig"><div class="cap">图一 · 一镜一影</div><div class="ph">图位：竖幅 3:4 水墨。一室内一面铜镜立于案，镜中映出一名士人的正面；士人立于镜前，侧头看向窗外另一人的背影（那人正走远，衣冠不整）。镜旁另有一盆水，水面平。夫子立于门侧。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>竖幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。室内一案，案上立一面圆铜镜，镜面映出一名士人的正面半身，眉目清正；士人立于镜前，一手扶镜缘，侧头望向窗外：窗外另一人正走远，衣冠歪斜、步履仓促，只余背影。案旁另置一盆清水，水面平如纸。门侧夫子立，衣缘一道赭红，目光落在照镜的那位身上。墙素净，窗棂简。整体低饱和，赭红只在夫子衣缘与镜缘一线，青灰用于窗棂、镜影与水色，笔触淡墨渲染加少量赭石勾勒，纸面微纹理。画面不出现任何文字、镜铭、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="思齐与内自省两栏对照，左放右收">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">见贤 · 思齐</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">向高处看</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#A2503B">见不贤 · 内自省</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">把手收回来</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">一半向上，一半收心；缺一半都不成修养</text></svg></div><div class="figcap">义理图一 · 一放一收</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="见、思省、成己三段递进，末为成己">  <rect x="30" y="56" width="120" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="90" y="88" text-anchor="middle" font-size="12" fill="#8A8074">见</text>  <text x="90" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">向外看人</text>  <rect x="160" y="56" width="120" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="220" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">思齐 / 自省</text>  <text x="220" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">两向用力</text>  <rect x="290" y="56" width="120" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="350" y="88" text-anchor="middle" font-size="12" fill="#A2503B">成己</text>  <text x="350" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不是成人之短</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">看人是为了做己，不是为了判人</text></svg></div><div class="figcap">义理图二 · 看人为了做己</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">下半句比上半句难，难在一个「内」字。见贤思齐，还有向上之心作动力；见不贤，最省力的反应是指出去——「他怎么这样」。指出去只要一句话，收回来要动一次刀。孔子把「内」字放在「自省」前面，正是防这一手：先别急着判人，先看看自己身上有没有同一处。人群里最费力的修养，就在这一转。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">「齊」字这一处也值得留意。全书二十六见，多是国名、斋戒、齊衰、齐一这些意思，作「等齐」用的只有本章一次。这提醒我们：读《论语》不能凭一字之僻义立说。凡遇孤例，正当以常训定之，再以上下文校之——本章「思齐」与「内自省」对，一外一内，正是「与之相齐」之意，常训自安，不必另辟。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">賢</div><div class="v">全书 25 见，分落 18 章；本章 2 见（「見賢」「見不賢」）。</div></div><div class="row"><div class="k k2">齊</div><div class="v">全书 26 见，分落 22 章；作「等齐」义者，本章一见（余为国名、斋戒、齊衰、齐一诸义）。</div></div><div class="row"><div class="k k2">內</div><div class="v">全书 7 见，分落 6 章（4.17、10.26、12.4、12.5、16.1、17.12）；本章 1 见。</div></div><div class="row"><div class="k k2">省</div><div class="v">全书 4 见，分落 4 章（1.4、2.9、4.17、12.4）；本章 1 见。</div></div><div class="row"><div class="k k2">校勘</div><div class="v">底本 4.17 断句脱「；」，据通行本补于「見賢思齊焉」之后。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -n 齊 refs/lunyu-baiwen.txt 核 26 见落点；grep -o 省 refs/lunyu-baiwen.txt | wc -l 应得 4。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.61</div><div class="foot-r">第 82 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
