@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.85**，已刊 **206 件**（前言一篇 + 197 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**泰伯至 8.10（好勇疾贫）**。
+- 当前版本 **v0.15.86**，已刊 **211 件**（前言一篇 + 202 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**泰伯至 8.15（师挚之始）**。
 
 ---
 
@@ -215,6 +215,11 @@
 | 第一百九十五课 | 兴于诗，立于礼，成于乐 | 十二字教育大纲，三个动词一条线。 | [195](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/195.html) |
 | 第一百九十六课 | 民可使由之 | 「不可」为难尽使非不许使；改读入存疑。 | [196](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/196.html) |
 | 第一百九十七课 | 好勇疾贫，乱也 | 两乱一因，病灶同是「过」；三孤例。 | [197](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/197.html) |
+| 第一百九十八课 | 如有周公之才之美 | 才高也挡不住一骄一吝；先抬后摔。 | [198](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/198.html) |
+| 第一百九十九课 | 三年学，不至于穀 | 学不为禄，人难遇；谷为俸禄。 | [199](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/199.html) |
+| 第二百课 | 笃信好学，守死善道 | 四层由内及外，末以两耻收；底本「不人」正为「不入」。 | [200](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/200.html) |
+| 第二百零一课 | 不在其位，不谋其政 | 八字两层，守位不越位；与 14.26 重出。 | [201](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/201.html) |
+| 第二百零二课 | 师挚之始，关雎之乱 | 乐之始终；「亂」为卒章；底本「關睢」形讹记存疑。 | [202](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/202.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
