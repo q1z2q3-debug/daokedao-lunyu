@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第87课 古者言之不出（里仁 4.22）</title>
+<meta name="description" content="《论语·里仁》4.22：古者言之不出，耻躬之不逮也。一课两页：少儿页讲话不轻出口，是怕自己做不到；成人辨「躬」为自身、「逮」为及，附「逮」全书三见与「躬」十一见之证。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　里仁第四 · 二十六章　第 87 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第87课 · 4.22</div>
+  <h1>古者言之不出</h1>
+  <div class="h1-sub">里仁第四 · 4.22　第 87 课</div>
+  <div class="src">原文：子曰：「古者言之不出，恥躬之不逮也。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">古者</div><div class="tzcap">古人</div></div><div class="tzitem"><div class="cell">出</div><div class="tzcap">出口、说出</div></div><div class="tzitem"><div class="cell">躬</div><div class="tzcap">自身</div></div><div class="tzitem"><div class="cell">逮</div><div class="tzcap">及、赶上</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">孔子说：古人不轻易把话说出口，是怕自己做不到。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">古者</div><div class="v">古人。</div></div><div class="row"><div class="k k2">言之不出</div><div class="v">话不轻易出口。</div></div><div class="row"><div class="k k2">耻</div><div class="v">以……为耻。</div></div><div class="row"><div class="k k2">躬</div><div class="v">自身、自己。</div></div><div class="row"><div class="k k2">逮</div><div class="v">及、赶上。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">「言之不出」不是不会说，是不肯先说。</div><div class="scene">「耻躬之不逮」是原因：话一出口就成了承诺，做不到就欠着。古人怕的是这个欠。</div><div class="scene">所以这一章管的不是嘴，是嘴和手之间的距离：话说出去了，手没跟上，自己先羞。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">答应一件事之前先掂一掂：这个时间我拿得出来吗。掂过再答，比答了再补容易。</div><div class="scene">也有人把「说」当「做」：会上表了态，事就算完了。这一章说的正是这个漏洞——话出了，躬没逮。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「不出」是不说，还是慢说？</div></div><div class="row"><div class="k k2">问二</div><div class="v">「躬」指身体还是指自己？</div></div><div class="row"><div class="k k2">问三</div><div class="v">怕做不到，就不说吗？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">话一出口，就是承诺。</div></div><div class="row"><div class="k k2">二</div><div class="v">先掂手，再开口。</div></div><div class="row"><div class="k k2">三</div><div class="v">说了做不到，自己先羞。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第87课 · 4.22</div>
+  <h1>古者言之不出</h1>
+  <div class="h1-sub">里仁第四 · 4.22　第 87 课</div>
+  <div class="src">原文：子曰：「古者言之不出，恥躬之不逮也。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章言知年，此章言慎言，两章一情一戒。4.23 言「以约失之者鲜」，4.24 言「讷于言而敏于行」，三章相承，皆论言行之节——里仁自 4.21 以下，由事亲转入立身之细目。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">古者</div><div class="v">古人；谓古之君子。</div></div><div class="row"><div class="k k2">言之不出</div><div class="v">不轻出诸口。</div></div><div class="row"><div class="k k2">恥</div><div class="v">以为羞。</div></div><div class="row"><div class="k k2">躬</div><div class="v">身也、自也。</div></div><div class="row"><div class="k k2">不逮</div><div class="v">不及；谓行不及言。</div></div><div class="row"><div class="k k2">也</div><div class="v">句末表论断。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">甲读（躬＝自身）：「躬」谓己身，「躬之不逮」即自身行不及所言。此读最直，与「耻」字相承：所耻者己之行。</div><div class="scene">乙读（躬＝躬行）：「躬」作动词，谓躬行、实践，「不逮」谓实践不及。两读所指实同，乙读更显「行」义。</div><div class="scene">本文取甲读，而乙读可并存。文本内证：「躬」全书 11 见，分落 8 章（4.22、7.33、10.4、10.5、13.18、14.5、15.15、20.1）；作「自身」义者，本章与 14.5「躬自厚」为最显，余多作「鞠躬」「躬稼」之形。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">话一出口便是债，怕欠，所以慢说。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">言之不出——现象：不轻说。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">恥——动机：以行不及言为羞。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">躬之不逮——实质：嘴与手之间的那段距离。</div></div></div>
+  <div class="scene">三层由外及里：现象、动机、实质。全章十字，说的不是「少说话」，是「别让话跑到手前面去」。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「躬」两读：自身（本文主）、躬行（一说，可并存）。</div><div class="q">「逮」是「及」抑或「赶上」，两训相近；本文取「及」。</div><div class="q">「古者」是否实指三代，一说托古；本文从托古之说，不系年。</div><div class="q">「言之不出」是绝不先说，抑或迟说，两读皆通；本文取「不轻出」。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">言：出口</div><div class="b">躬：自身</div></div><div class="pair"><div class="a">言之不出：慢说</div><div class="b">躬之不逮：行不及</div></div><div class="pair"><div class="a">耻：以欠为羞</div><div class="b">夸：以说为成</div></div><div class="pair"><div class="a">4.22 慢说</div><div class="b">4.24 讷言</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《学而》「信近于义，言可复也」</div><div class="b">言可复，即不欠。</div></div><div class="pair"><div class="a">《为政》「先行其言而后从之」</div><div class="b">先做后说，正为此章注脚。</div></div><div class="pair"><div class="a">《宪问》「耻其言而过其行」</div><div class="b">同耻，同惧。</div></div><div class="pair"><div class="a">《礼记·表记》「君子寡言而行，以成其信」</div><div class="b">寡言成信，与此章同旨。</div></div></div>
+  <div class="h2" id="sc-19">图一　话停在口边</div><div class="figs single"><div class="fig"><div class="cap">图一 · 话停在口边</div><div class="ph">图位：竖幅 3:4 水墨。一名士人立于庭中，口微启而止，一手抬至胸前又按下；另一手垂着。身前地上一只未完工的木器、一把刨子。对面一人拱手相待，等他说话。远处墙上有日影，斜。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>竖幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。庭中一名士人立于阶前，口微启而止，一手抬至胸前又按下，另一手垂着；身前地上一只未完工的木器，旁置一把刨子与几片木屑。对面一人拱手相待，身体前倾，等他开口。远处素墙一道日影斜落。地面淡影，庭树一角。整体低饱和，赭红只在对谈者袖口一线，青灰用于墙面、木器、日影与地砖，笔触淡墨渲染加少量赭石勾勒，纸面微纹理。画面不出现任何文字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="言不出、耻、躬不逮三段递进，末为距离">  <rect x="30" y="56" width="120" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="90" y="88" text-anchor="middle" font-size="12" fill="#8A8074">言之不出</text>  <text x="90" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不轻说</text>  <rect x="160" y="56" width="120" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="220" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">恥</text>  <text x="220" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">以欠为羞</text>  <rect x="290" y="56" width="120" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="350" y="88" text-anchor="middle" font-size="12" fill="#A2503B">躬之不逮</text>  <text x="350" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">嘴与手的距离</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">不教人少说，教人别让话跑到手前面</text></svg></div><div class="figcap">义理图一 · 三层由外及里</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="话先与手先两栏对照，左欠右稳">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#A2503B">话在前，手在后</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">欠着</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">手在前，话在后</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不欠</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">同一件事，两种次序，两种心气</text></svg></div><div class="figcap">义理图二 · 次序</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">「躬」这个字要读准。它不是「身体」这么简单，是「自身」「自己这个人」。所以「耻躬之不逮」不是怕丢面子，是自己心里过不去：我说了那句话，我这人还没做到那儿。这一层羞，是向内的，不是向外的。若读成怕别人看不起，这一章就浅了——孔子讲的耻，多半是自己对自己的那一点不服。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">这一章与 4.24「讷于言而敏于行」是同一副骨架的两次说法：4.22 说「不出」，4.24 说「讷」，都是慢；4.22 说「躬不逮」，4.24 说「敏于行」，都是快。一慢一快，落在同一处：话慢，手快。读《论语》遇这类重出的意思，不妨合看，比单读一章更见筋骨。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">躬</div><div class="v">全书 11 见，分落 8 章（4.22、7.33、10.4、10.5、13.18、14.5、15.15、20.1）；本章 1 见。</div></div><div class="row"><div class="k k2">逮</div><div class="v">全书 3 见，分落 3 章（4.22、14.36、16.3）；本章 1 见。</div></div><div class="row"><div class="k k2">恥</div><div class="v">全书 17 见，分落 11 章；里仁 2 见（4.9、4.22）；本章 1 见。</div></div><div class="row"><div class="k k2">古</div><div class="v">全书 12 见，分落 9 章；本章 1 见（「古者」）。</div></div><div class="row"><div class="k k2">出</div><div class="v">全书 33 见，分落 28 章；本章 1 见（「言之不出」）。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 逮 refs/lunyu-baiwen.txt | wc -l 应得 3；grep -n 躬 refs/lunyu-baiwen.txt 核 11 见落点。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.62</div><div class="foot-r">第 87 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
