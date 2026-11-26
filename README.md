@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.86**，已刊 **211 件**（前言一篇 + 202 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**泰伯至 8.15（师挚之始）**。
+- 当前版本 **v0.15.87**，已刊 **216 件**（前言一篇 + 207 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**泰伯至 8.20（舜有臣五人）**。
 
 ---
 
@@ -220,6 +220,11 @@
 | 第二百课 | 笃信好学，守死善道 | 四层由内及外，末以两耻收；底本「不人」正为「不入」。 | [200](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/200.html) |
 | 第二百零一课 | 不在其位，不谋其政 | 八字两层，守位不越位；与 14.26 重出。 | [201](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/201.html) |
 | 第二百零二课 | 师挚之始，关雎之乱 | 乐之始终；「亂」为卒章；底本「關睢」形讹记存疑。 | [202](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/202.html) |
+| 第二百零三课 | 狂而不直 | 三本色各缺其配；三孤例。 | [203](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/203.html) |
+| 第二百零四课 | 学如不及 | 八字一反一守，追与惧；孤例。 | [204](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/204.html) |
+| 第二百零五课 | 巍巍乎，舜禹之有天下也 | 有天下而不与：位置越高手越松。 | [205](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/205.html) |
+| 第二百零六课 | 大哉尧之为君 | 四层上下；底本「軍」正为「君」。 | [206](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/206.html) |
+| 第二百零七课 | 舜有臣五人，而天下治 | 论人与论德两段，至德收；底本「豫」正为「予」。 | [207](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/207.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
