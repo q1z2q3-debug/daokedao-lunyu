@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第246课 食不厌精，脍不厌细（乡党 10.8）</title>
+<meta name="description" content="《乡党》10.8：食不厌精、脍不厌细；饐餲、鱼馁肉败、色恶、臭恶、失饪、不时、割不正、不得其酱，八不食；肉不使胜食气、酒无量不及乱、沽酒市脯不食、不撤姜食、不多食。一课两页：少儿页讲饭要做干净、肉要切细；坏了的不吃、颜色不对不吃、味道不对不吃、没煮熟不吃、不是时候不吃、切得不正不吃、没有合味的酱不吃；成人辨「厌」为餍足非厌恶、八不食之分、「不及乱」为节、底本两处连书脱逗，四层（精／八不食／节／常），附「饐」「餲」「餒」「飪」「醬」「薑」「脯」七处数证。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　乡党第十 · 二十七节　第 246 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第246课 · 10.8</div>
+  <h1>食不厌精，脍不厌细</h1>
+  <div class="h1-sub">乡党第十 · 10.8　第 246 课</div>
+  <div class="src">原文：食不厭精，膾不厭細。食饐而餲魚餒而肉敗，不食。色惡不食，臭惡不食。失飪不食，不時不食。割不正不食，不得其醬不食。肉雖多，不使勝食氣唯酒無量，不及亂。沽酒，市脯，不食。不撤薑食。不多食。</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">厭</div><div class="tzcap">餍足、嫌多</div></div><div class="tzitem"><div class="cell">饐餲</div><div class="tzcap">饭馊了</div></div><div class="tzitem"><div class="cell">失飪</div><div class="tzcap">没煮熟</div></div><div class="tzitem"><div class="cell">不及亂</div><div class="tzcap">不到乱性</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">饭不嫌做得精，肉不嫌切得细。饭馊了、鱼烂了、肉坏了，不吃；颜色不对不吃，味道不对不吃；没煮熟不吃，不到时候不吃；切得不正不吃，没有合味的酱不吃。肉虽多，不让它盖过饭；酒不限量，但不喝到乱。买来的酒、市上的肉干，不吃。姜不撤。不多吃。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">厭</div><div class="v">餍足、嫌其多。</div></div><div class="row"><div class="k k2">膾</div><div class="v">细切的肉。</div></div><div class="row"><div class="k k2">饐餲</div><div class="v">饭食变味发馊。</div></div><div class="row"><div class="k k2">餒</div><div class="v">鱼腐烂。</div></div><div class="row"><div class="k k2">敗</div><div class="v">肉坏。</div></div><div class="row"><div class="k k2">飪</div><div class="v">煮熟。</div></div><div class="row"><div class="k k2">不時</div><div class="v">不到该吃的时候，或非时之物。</div></div><div class="row"><div class="k k2">割不正</div><div class="v">切割不合其部位。</div></div><div class="row"><div class="k k2">醬</div><div class="v">调味之酱。</div></div><div class="row"><div class="k k2">勝食氣</div><div class="v">盖过饭的气味、分量。</div></div><div class="row"><div class="k k2">沽酒市脯</div><div class="v">买来的酒与市上的肉干。</div></div><div class="row"><div class="k k2">撤</div><div class="v">撤去。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">饭要做干净，肉要切细。</div><div class="scene">坏了的，不吃。</div><div class="scene">颜色不对，不吃；味道不对，不吃。</div><div class="scene">没煮熟，不吃；不到时候，不吃。</div><div class="scene">切得不正，不吃；没有酱，不吃。</div><div class="scene">肉再多，也不能盖过饭。</div><div class="scene">酒可以喝，不喝到乱。</div><div class="scene">姜不拿走。不多吃。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">讲究不是挑，是知道什么不该入口。</div><div class="scene">好吃的东西，也要有个停。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「食不厌精」是越精越好吗？</div></div><div class="row"><div class="k k2">问二</div><div class="v">八样不吃，是讲究还是怕死？</div></div><div class="row"><div class="k k2">问三</div><div class="v">酒「无量」却不「及乱」，这条线在哪里？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">入口的东西，先看清。</div></div><div class="row"><div class="k k2">二</div><div class="v">再好吃，也要停得住。</div></div><div class="row"><div class="k k2">三</div><div class="v">讲究是为了身体，不是为了排场。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第246课 · 10.8</div>
+  <h1>食不厌精，脍不厌细</h1>
+  <div class="h1-sub">乡党第十 · 10.8　第 246 课</div>
+  <div class="src">原文：食不厭精，膾不厭細。食饐而餲魚餒而肉敗，不食。色惡不食，臭惡不食。失飪不食，不時不食。割不正不食，不得其醬不食。肉雖多，不使勝食氣唯酒無量，不及亂。沽酒，市脯，不食。不撤薑食。不多食。</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上节 10.7 记斋，斋要变食；此节正记「食」——不是斋食，是日常之食。斋与食是一条线的两端：一端是特意的洁，一端是日常的节。八不食是「不入口」，不及乱是「不过量」，不撤姜、不多食是「有常」——三样合起来，才是「食」的礼。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">厭</div><div class="v">餍也，足也；非「厌恶」之厌。</div></div><div class="row"><div class="k k2">膾</div><div class="v">细切之肉。</div></div><div class="row"><div class="k k2">饐餲</div><div class="v">饭之变味者。</div></div><div class="row"><div class="k k2">餒</div><div class="v">鱼败曰馁。</div></div><div class="row"><div class="k k2">飪</div><div class="v">熟也。</div></div><div class="row"><div class="k k2">不時</div><div class="v">非其食时，或非其时之物。</div></div><div class="row"><div class="k k2">勝食氣</div><div class="v">胜，过也；肉气过则伤食。</div></div><div class="row"><div class="k k2">脯</div><div class="v">肉干。</div></div><div class="row"><div class="k k2">撤</div><div class="v">去也。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">「厭」之读：餍足（朱子曰「厌，饫也」，谓不嫌其精与细，本文主）；一读「厌恶」（不取，「食不厌精」非「不厌恶精食」）。</div><div class="scene">八不食之序：先「物坏」（饐餲、馁败），次「色臭」，次「失饪不时」，次「割不正不得酱」——从物之坏，到作之失，到礼之缺，三层递进。</div><div class="scene">「割不正不食」之读：切割不合部位（本文主）；一读「割不正」为「不正其割之法」。两读相近，皆谓「作之失礼」。</div><div class="scene">「肉雖多，不使勝食氣」：肉食不可过主食。一读「食氣」为饭之气味，一读为「食」之量。本书取前读，而量亦在其中：气味与分量，本是一事。</div><div class="scene">「唯酒無量，不及亂」：酒不限量，以「不及乱」为界。此句是全章最见分寸处：不限而有限，限在「乱」字上——不是量，是度。</div><div class="scene">「沽酒市脯不食」：疑其不洁、非己所作。一读为「不亲制则不食」。本书取「疑不洁」之说。</div><div class="scene">句读：底本「食饐而餲魚餒而肉敗」连书脱逗；「不使勝食氣唯酒無量」连书脱逗；「不撤薑食。不多食」当作「不撤姜食，不多食」。三处依通行本断。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">八不食以洁，三有节以度：食之礼，在不入口与不过量。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">精——食不厭精，膾不厭細。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">八不食——物坏、色臭、失饪、割酱。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">節——肉不勝食氣，酒不及亂。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">常——沽酒市脯不食、不撤薑、不多食。</div></div></div>
+  <div class="scene">四层是「求精—知禁—有节—守常」：精是起点，禁是底线，节是分寸，常是日子。八不食最容易读成挑剔，其实每一条都在说「这东西已经不对了」；而「不及乱」三字，把「吃」从口腹抬到了自守。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">底本三处连书脱逗（「食饐而餲魚餒而肉敗」「不使勝食氣唯酒無量」「不撤薑食。不多食」），依通行本断。</div><div class="q">「厭」之读：餍足（朱，本文主）、厌恶（不取）。</div><div class="q">「不時不食」之读：非食时（本文主）、非时之物（一说）。两读并存，礼兼二者。</div><div class="q">「割不正」之读：不合部位（本文主）、不正割法（一说）。</div><div class="q">「沽酒市脯不食」之故：疑不洁（本文主）、非亲制（一说）。</div><div class="q">本章所记为孔子之常抑为古礼之通例：朱子谓「此一节，孔子之饮食也」；一说杂采礼书。本书从朱说，而存异。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">精：求精</div><div class="b">八不食：知禁</div></div><div class="pair"><div class="a">色臭：物</div><div class="b">割酱：礼</div></div><div class="pair"><div class="a">肉：不勝食氣</div><div class="b">酒：不及亂</div></div><div class="pair"><div class="a">沽酒市脯：禁</div><div class="b">不撤薑：常</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《乡党》10.9「祭肉」</div><div class="b">下节：食之另一面，祭余。</div></div><div class="pair"><div class="a">《乡党》10.10「食不語」</div><div class="b">下节：食时之静。</div></div><div class="pair"><div class="a">《雍也》6.11「一簞食」</div><div class="b">食之至简，与本章之精对看。</div></div><div class="pair"><div class="a">《卫灵公》15.32「餒」</div><div class="b">「餒」之再见，义为饥馁。</div></div></div>
+  <div class="h2" id="sc-19">图一　一案八器：该撤的撤下</div><div class="figs single"><div class="fig"><div class="cap">图一 · 一案八器：该撤的撤下</div><div class="ph">图位：竖幅 3:4 水墨。食案之上列器数件：一盂饭、一盘细切的肉、一碟酱、一碟姜；案边另置两器，一器盖上、一器侧放，示意已撤。案下地面洁净，无渍。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>竖幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。一张矮食案，案面列器：一盂白饭、一盘细切肉片（切面齐整）、一碟深色酱、一碟姜片；案角另置两件器皿，一件盖着盖、一件侧倒，示意已撤去不用。案下地面洁净，以淡墨扫痕表示擦过，无汤渍。背景一堵素墙，墙影微斜。整体低饱和，淡墨渲染加少量赭石勾勒，饭与姜以极淡米黄点染。画面不出现任何文字、器铭、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="食之四层">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#8A8074">精</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不厭精細</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#A2503B">八不食</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">物坏·色臭·失饪</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">節</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">肉不勝食·酒不及亂</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">常</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不撤薑·不多食</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">求精、知禁、有节、守常</text></svg></div><div class="figcap">义理图一 · 食之四层</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="洁与度">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#A2503B">八不食：洁</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不入口</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">不及亂：度</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不过量</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">洁与度，两把尺</text></svg></div><div class="figcap">义理图二 · 洁与度</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">「食不厌精，脍不厌细」八个字，最容易被读成「越讲究越好」。可「厌」是「餍足」，不是「厌恶」：不是「不讨厌精细」，是「不嫌它精细」——精到极处也不嫌多。下一句立刻转「八不食」，就说明这讲究有底：精是求精，不是求贵。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">「唯酒无量，不及乱」是全章最妙的一句。它承认酒该放开——不限量；又把线画在「乱」上。不限而有限，这个分寸比任何定量都难：定量是别人管你，不及乱是自己管自己。孔子之礼，多半是这样：给你自由，只留一条底线。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">饐</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">餲</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">餒</div><div class="v">全书 2 见，分落 2 章（10.8、15.32）；本章 1 见（鱼败）。</div></div><div class="row"><div class="k k2">飪</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">醬</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">薑</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">脯</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">厭</div><div class="v">全书 9 见，分落 5 章（6.28、7.2、7.34、10.8、14.13）；本章 2 见（「食不厭精」「膾不厭細」）。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.15.97</div><div class="foot-r">第 246 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>

@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.96**，已刊 **236 件**（前言一篇 + 243 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党五节（10.1–10.5）**。
+- 当前版本 **v0.15.97**，已刊 **241 件**（前言一篇 + 248 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党十节（10.1–10.10）**。
 
 ---
 
@@ -261,6 +261,11 @@
 | 第二百四十一课 | 君召使摈，色勃如也 | 五处皆动，收于「宾不顾矣」；底本「檐如」通行作「襜如」。 | [241](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/241.html) |
 | 第二百四十二课 | 入公门，鞠躬如也 | 入屈、升屏、出舒、复敬；底本两处连书脱逗。 | [242](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/242.html) |
 | 第二百四十三课 | 执圭，鞠躬如也，如不胜 | 公礼如战、私礼如愉；底本两处脱逗。 | [243](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/243.html) |
+| 第二百四十四课 | 君子不以绀緅饰，红紫不为亵服 | 衣之四层；底本「厚以居去」脱倒两处，已正。 | [244](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/244.html) |
+| 第二百四十五课 | 齐，必有明衣，布 | 斋先洁身；底本重出与脱文两处，皆存疑。 | [245](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/245.html) |
+| 第二百四十六课 | 食不厌精，脍不厌细 | 八不食以洁、三有节以度；底本三处连书。 | [246](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/246.html) |
+| 第二百四十七课 | 祭于公，不宿肉 | 敬在及时不在久藏；底本脱分号。 | [247](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/247.html) |
+| 第二百四十八课 | 食不语，寝不言 | 六字：外收与内收；语、言二字分内外。 | [248](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/248.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
