@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第384课 鄙哉，硜硜乎（宪问 14.39）</title>
+<meta name="description" content="《宪问》14.39：孔子击磬于卫，荷蒉者闻声知心，先赞后贬，引诗「深厉浅揭」劝其量世而止；孔子答「果哉，末之难矣」。一课两页：少儿页讲「有人劝你别较真，你要听出他话里的道理，也要知道自己为什么不听」；成人辨「硁硁」为坚执之声、「厉揭」为随深浅而涉。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">下论　宪问第十四　第 384 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第384课 · 14.39</div>
+  <h1>鄙哉，硜硜乎</h1>
+  <div class="h1-sub">宪问第十四 · 14.39　第 384 课</div>
+  <div class="src">原文：子擊磬於衛。有荷蕢而過孔氏之門者，曰：「有心哉，擊磬乎！」旣而曰：「鄙哉，硜硜乎！莫己知也，斯已而已矣！『深則厲，淺則揭。』」子曰：「果哉！末之難矣！」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">磬</div><div class="tzcap">石制乐器</div></div><div class="tzitem"><div class="cell">硜硜</div><div class="tzcap">坚执之声</div></div><div class="tzitem"><div class="cell">厲揭</div><div class="tzcap">深浅两涉</div></div><div class="tzitem"><div class="cell">果</div><div class="tzcap">果断</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">水深就趟过去，水浅就提起衣角过去——到什么水，用什么法。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">荷蒉</div><div class="v">挑着草筐。</div></div><div class="row"><div class="k k2">硁硁</div><div class="v">敲石头那样硬邦邦的声音。</div></div><div class="row"><div class="k k2">厉</div><div class="v">穿着衣服涉水。</div></div><div class="row"><div class="k k2">揭</div><div class="v">提起衣角涉水。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">挑筐的人听见磬声，说：这人心事很重。</div><div class="scene">又说：这么硬邦邦的，谁听得懂？算了就算了。</div><div class="scene">水深有深水的过法，水浅有浅水的过法。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">你非要在全班面前讲清一件事，有人劝你「算了，没人听」。</div><div class="scene">他的话有道理，可你也要问：这是深水还是浅水？</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">挑筐的人为什么先赞后贬？</div></div><div class="row"><div class="k k2">问二</div><div class="v">「深厉浅揭」是什么意思？</div></div><div class="row"><div class="k k2">问三</div><div class="v">孔子说「末之难矣」是服气吗？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">听得进劝。</div></div><div class="row"><div class="k k2">二</div><div class="v">分清深浅再决定。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第384课 · 14.39</div>
+  <h1>鄙哉，硜硜乎</h1>
+  <div class="h1-sub">宪问第十四 · 14.39　第 384 课</div>
+  <div class="src">原文：子擊磬於衛。有荷蕢而過孔氏之門者，曰：「有心哉，擊磬乎！」旣而曰：「鄙哉，硜硜乎！莫己知也，斯已而已矣！『深則厲，淺則揭。』」子曰：「果哉！末之難矣！」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章言「知其不可而爲之」（14.38），此章言「厉揭」：一章言其「为」之毅，一章言其「为」之法。毅者不避，法者知深浅。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">磬</div><div class="v">石制打击乐器，声清而远。</div></div><div class="row"><div class="k k2">荷蕢</div><div class="v">肩负草器，谓担物之役者。</div></div><div class="row"><div class="k k2">硜硜</div><div class="v">石声，喻坚执不通。</div></div><div class="row"><div class="k k2">厲</div><div class="v">连衣涉水。</div></div><div class="row"><div class="k k2">揭</div><div class="v">摄衣涉水。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">此章五十七字，是全书「知音」最深的一章：一个挑筐的，从磬声里听出了孔子的心。</div><div class="scene">「有心哉，擊磬乎！」——先一赞：磬声里有「心」。此赞极准：孔子之乐，非「技」，是「志」。</div><div class="scene">「鄙哉，硜硜乎！」——后一贬：硁硁者，石声之硬，喻其「坚执」。此贬亦准：孔子之志，确有「硬」处。</div><div class="scene">「莫己知也，斯已而已矣！」——此句是「劝」：没人懂你，就算了罢。此与 14.35「莫我知」同境，而结论相反。</div><div class="scene">「深則厲，淺則揭」——引《诗·邶风·匏有苦叶》：水深处连衣而涉，水浅处摄衣而涉。喻「随深浅而制其宜」。</div><div class="scene">荷蒉者之意：世深则「厉」（和光同尘），世浅则「揭」（稍露其志）。你偏要「深亦厉、浅亦厉」，一味硬涉，故曰「鄙」。</div><div class="scene">「果哉！末之難矣！」——「果」者，决也：你说得真干脆。此句有二解：一者「如此则无难事」（讥其「看得太易」）；二者「你既决意如此，我也难再劝」（叹其「不可回」）。本文取后说。</div><div class="scene">再论荷蒉者之识：其人非「隐者之流」可比，是「知音而不同道」者。听声知心，是「知」；劝其变通，是「不同」。</div><div class="scene">此与 14.38「知其不可而爲之」合看：守门人「惜其劳」，荷蒉者「讥其执」。两人皆见其「硬」，皆不解其「为何硬」。</div><div class="scene">此与 9.4「子绝四」相贯：孔子非「执一」，然于「道」则不让。所谓「硁硁」，正其守道之处。</div><div class="scene">再论此章之今用：今之劝人者多矣：别较真、随大流、识时务。这些话都不错，错在「不分深浅」。有的事，水深，该「厉」；有的事，水浅，该「揭」。一味的「厉」，是执；一味的「揭」，是滑。</div><div class="scene">校记：底本「荷蕢」与通行同；「硜硜」不作「硜硜乎」之「乎」为语气词；「末之難矣」之「末」非「未」之讹。</div><div class="scene">文本内证：「磬」1 见仅本章；「硜硜」1 见仅本章；「厲」1 见仅本章；「揭」1 见仅本章。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">深厉浅揭，随宜而涉；一味硬涉，则为硁硁之鄙。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">有心哉——知音。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">硜硜乎——见执。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">厉揭——劝宜。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">果哉——不回了。</div></div></div>
+  <div class="scene">四层是知、见、劝、答：前两层「听声」，后两层「对答」。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「末之難矣」之解：你既决意，我难再劝（本文主）；一说「如此则天下无难事」，为讥其易。两说并存，本文取前说。</div><div class="q">「厲」之解：连衣涉水（本文主，《毛传》「以衣涉水曰厉」）；一说「厉」为「带」，谓「带衣而涉」。义近。</div><div class="q">校记：底本此章无讹。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">有心：知音</div><div class="b">硁硁：见执</div></div><div class="pair"><div class="a">深厉：和光</div><div class="b">浅揭：露志</div></div><div class="pair"><div class="a">14.35 莫我知</div><div class="b">14.39 斯已而已</div></div><div class="pair"><div class="a">14.38 知不可为</div><div class="b">14.39 厉揭</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《诗经·邶风·匏有苦叶》</div><div class="b">深厉浅揭，随宜而涉。</div></div><div class="pair"><div class="a">《宪问》14.35「莫我知」</div><div class="b">同境异断。</div></div><div class="pair"><div class="a">《子罕》9.4「子绝四」</div><div class="b">一不执一一守道。</div></div><div class="pair"><div class="a">《宪问》14.38「知不可为」</div><div class="b">一守门人一荷蒉者。</div></div></div>
+  <div class="h2" id="sc-19">图一　一赞一贬</div><div class="figs single"><div class="fig"><div class="cap">图一 · 一赞一贬</div><div class="ph">图位：横幅 4:3 水墨。一室中悬一磬，一人持槌叩之，磬旁有余音之纹；窗外一挑筐者过门，驻足侧耳，先点头，后摇头，手按其筐。室内静，门外动。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>横幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。一室中悬一石磬，一人持槌叩之，磬旁以淡墨绘余音之纹；窗外一挑筐者过门，驻足侧耳，先点头，后摇头，手按其筐。室内安静，门外流动。整体低饱和，青灰用于磬与门，赭石点于槌与衣缘，笔触淡墨渲染，纸面微纹理。画面不出现任何文字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="四段">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">有心哉</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">知其志</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#A2503B">硜硜乎</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">见其执</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">厲揭</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">劝其宜</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#8A8074">果哉</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不复回</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">听声知心，劝而不回</text></svg></div><div class="figcap">义理图一 · 一赞一贬</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="两栏">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#8A8074">深则厉</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">连衣而涉</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">浅则揭</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">摄衣而涉</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">一味厉，是执；一味揭，是滑</text></svg></div><div class="figcap">义理图二 · 深浅两涉</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">四层是知、见、劝、答：听声者准，对答者定。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">这一章像一场极短的对谈，只有两个回合。第一回合，挑筐的人说：你有心事。第二回合，他说：你太硬了，没人听，改改吧。然后他引了一句诗，把「改」的道理说得极漂亮：水深就趟过去，水浅就提衣角。这是「随宜」。孔子没有反驳他，只说：你说得真干脆——干脆到我也没法再说。这句「没法再说」里，既有一点认，也有一点不认。认的是：他说得对，一味硬涉确实费力；不认的是：有些水深，浅不得。今人被劝「别较真」时，多半只有两种反应：翻脸，或者照办。孔子给了第三种：听清他的理，然后决定自己的水有多深。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">磬</div><div class="v">全书 1 见，仅本章。</div></div><div class="row"><div class="k k2">厲</div><div class="v">全书 1 见，仅本章。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 深則厲淺則揭 refs/lunyu-baiwen.txt | wc -l 应得 1。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.16.20</div><div class="foot-r">第 384 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
