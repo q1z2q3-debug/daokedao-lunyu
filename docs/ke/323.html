@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第323课 子谓卫公子荆善居室。始有，曰苟合矣；少有，曰苟完矣；富有，曰苟美矣（子路 13.8）</title>
+<meta name="description" content="《子路》13.8：孔子说卫国的公子荆善于居家过日子：刚有一点，就说「差不多凑合了」；稍多一点，就说「差不多完备了」；富足了，就说「差不多美满了」。一课两页：少儿页讲「有一点就知足，多了也不贪」；成人辨「善居室」为善处其家、「苟」为「差不多、将就够」（此「苟」与 13.3「无所苟」之「苟」义别）、「合」「完」「美」为三阶，附苟合、苟完、苟美之证，并以 13.9「庶富教」合看：一章言「足而知止」，一章言「足而后教」。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　子路第十三　第 323 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第323课 · 13.8</div>
+  <h1>子谓卫公子荆善居室。始有，曰苟合矣；少有，曰苟完矣；富有，曰苟美矣</h1>
+  <div class="h1-sub">子路第十三 · 13.8　第 323 课</div>
+  <div class="src">原文：子謂衛公子荊善居屋：「始有，曰：『苟合矣』少有，曰：『苟完矣』富有，曰：『苟美矣。』」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">善居室</div><div class="tzcap">会过日子</div></div><div class="tzitem"><div class="cell">苟合</div><div class="tzcap">差不多够</div></div><div class="tzitem"><div class="cell">苟完</div><div class="tzcap">差不多齐</div></div><div class="tzitem"><div class="cell">苟美</div><div class="tzcap">差不多美</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">孔子夸卫国公子荆会过日子：有一点说够了，多一点说齐了，富了说美了。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">居室</div><div class="v">过日子、持家。</div></div><div class="row"><div class="k k2">苟</div><div class="v">差不多、将就。</div></div><div class="row"><div class="k k2">合</div><div class="v">凑合够。</div></div><div class="row"><div class="k k2">完</div><div class="v">齐备。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">有一点，就说够了。</div><div class="scene">多一点，就说齐了。</div><div class="scene">富了，就说美了。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">知足，不是不上进。</div><div class="scene">有了还嫌少，永远不够。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「善居室」是夸他会花钱吗？</div></div><div class="row"><div class="k k2">问二</div><div class="v">「苟」在这里什么意思？</div></div><div class="row"><div class="k k2">问三</div><div class="v">为什么分「合、完、美」三步？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">够用就知足。</div></div><div class="row"><div class="k k2">二</div><div class="v">多了也不炫。</div></div><div class="row"><div class="k k2">三</div><div class="v">心里有个「够」字。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第323课 · 13.8</div>
+  <h1>子谓卫公子荆善居室。始有，曰苟合矣；少有，曰苟完矣；富有，曰苟美矣</h1>
+  <div class="h1-sub">子路第十三 · 13.8　第 323 课</div>
+  <div class="src">原文：子謂衛公子荊善居屋：「始有，曰：『苟合矣』少有，曰：『苟完矣』富有，曰：『苟美矣。』」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章论鲁卫同病（13.7），此章举一人之善以对之：国病在「贪而不足」，此人善在「足而知止」。一叹一誉，相为映照。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">善居室</div><div class="v">善处其家，善过日子。</div></div><div class="row"><div class="k k2">苟</div><div class="v">此谓「差不多」、「将就够」，与 13.3「无所苟」之「苟」义别。</div></div><div class="row"><div class="k k2">合</div><div class="v">聚合，谓粗足。</div></div><div class="row"><div class="k k2">完</div><div class="v">完备。</div></div><div class="row"><div class="k k2">美</div><div class="v">美善，谓精好。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">此章须先正一字：此「苟」非「苟且」之苟，乃「苟且足矣」之苟——「差不多够了」的意思。与 13.3「无所苟」之「苟」，字同而义别。</div><div class="scene">「始有，曰苟合矣」——刚有一点，就说「差不多凑合够了」。不是不要，是不贪。</div><div class="scene">「少有，曰苟完矣」——稍多一点，就说「差不多齐备了」。完者，不缺而已，不求其盈。</div><div class="scene">「富有，曰苟美矣」——富足了，就说「差不多够美了」。美者，精好而已，不求其奢。</div><div class="scene">三阶递进，而「苟」字不变：财愈多，心愈平。此之谓「善居室」：不是「善于置产」，是「善于处心」。</div><div class="scene">此章可与 13.9「庶、富、教」合看：13.9 论「如何使之富」，此章论「富而后如何不溺」。两章合，方见孔子之「富」观：不讳富，亦不纵富。</div><div class="scene">校记：底本作「善居屋」，通行作「善居室」；「屋」与「室」义近而微别，或为异文。只记存疑，不改字。又「少有」「富有」前皆脱逗。</div><div class="scene">再论此章之「荊」：卫公子荆，卫国宗室，身处富贵而不溺，故孔子特称之。此与 13.7「鲁卫之政」正成对照：国政虽衰，而宗室中犹有一人能「知足」。</div><div class="scene">文本内证：「苟合」1 见、「苟完」1 见、「苟美」1 见，皆仅本章；「善居」1 见仅本章。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">善居室者，财愈多而心愈平；三阶一「苟」，贵在知足。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">始有——苟合。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">少有——苟完。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">富有——苟美。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">苟字不变——心平。</div></div></div>
+  <div class="scene">四层是三阶加一心：财三级而上，心一级而下。四层是「物进心退」。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「苟」之解：差不多、将就够（本文主，与 13.3「无所苟」义别）；一说「苟」为「姑且」。本文从前说。</div><div class="q">「善居屋」与「善居室」：底本作「屋」，通行作「室」，或为异文；只记存疑。</div><div class="q">校记：底本「少有」「富有」前脱逗；只记存疑，不改字。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">始有：苟合</div><div class="b">少有：苟完</div></div><div class="pair"><div class="a">富有：苟美</div><div class="b">心：苟字不变</div></div><div class="pair"><div class="a">13.7 国病在贪</div><div class="b">13.8 人善在足</div></div><div class="pair"><div class="a">13.3 无所苟</div><div class="b">13.8 苟且足</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《子路》13.9「庶富教」</div><div class="b">一论使富，一论不溺。</div></div><div class="pair"><div class="a">《子路》13.3「無所茍」</div><div class="b">同字异义。</div></div><div class="pair"><div class="a">《学而》1.?「?」</div><div class="b">（另参不患贫）</div></div><div class="pair"><div class="a">《雍也》6.?「?」</div><div class="b">（另参知足）</div></div></div>
+  <div class="h2" id="sc-19">图一　屋成三阶</div><div class="figs single"><div class="fig"><div class="cap">图一 · 屋成三阶</div><div class="ph">图位：横幅 4:3 水墨。一宅三进：外墙粗成，门户未饰；中庭稍整，梁柱已立；内室精好，帷幔垂而素。一老者立于中庭，手抚柱而不言，神色安然。壁上无画，案上仅一器。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>横幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。一宅三进并见：外垣粗成，门户未及雕饰；中庭稍整，梁柱已立；内室精好，帷幔垂而素净。一名老者立于中庭，手抚柱而不言，神态安然。壁上无画，案上仅一器。整体低饱和，青灰用于墙与柱，赭石点于衣缘与门枢，笔触淡墨渲染，纸面微纹理。画面不出现任何文字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="四段">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#8A8074">始有：苟合</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">粗足</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">少有：苟完</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不缺</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">富有：苟美</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">精好</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#A2503B">苟字不变</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">物进心退</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">财三级而上，心一级而下</text></svg></div><div class="figcap">义理图一 · 三阶一心</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="两栏">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#A2503B">善于置产</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">增其所有</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">善于处心</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">知其所止</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">善居室，非善置产</text></svg></div><div class="figcap">义理图二 · 置产与处心</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">四层是三阶加一心：财三级而上，心一级而下，是「物进心退」。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">这一章极易被读成「安贫乐道」的老套，其实不然。公子荆是宗室，是「富有」之人；孔子不说他「安于贫」，说他「善于处富」：有一点时知足，多一点时知足，富了还是知足。这个「知足」不是不上进，是「不被物牵着走」。今人之病，多不在贫，在「有了还嫌少」：房子大了嫌不够大，位子高了嫌不够高；每上一阶，欲亦上一阶，「够」字永远不到。公子荆三阶，阶阶有个「够」字——这才是「善居室」的真意：不是会攒钱，是会收心。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">苟合</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">苟完</div><div class="v">全书 1 见，仅本章。</div></div><div class="row"><div class="k k2">苟美</div><div class="v">全书 1 见，仅本章。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 苟美 refs/lunyu-baiwen.txt | wc -l 应得 1。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.16.14</div><div class="foot-r">第 323 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
