@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第284课 回也其庶乎，屡空；赐不受命，而货殖焉，亿则屡中（先进 11.19）</title>
+<meta name="description" content="《先进》11.19：孔子说：颜回差不多了，可常常空着；子贡不安于本分，去做买卖，一猜就中。一课两页：少儿页讲两个人：一个学得好却总缺钱，一个会做生意一猜就准；成人辨「庶」为庶几、近于道、「屢空」为常常空乏（家贫，「空」为匮乏）、「賜」为子贡（姓端木，名赐）、「不受命」为不安于本分之命（一说「不受命」谓不受禄命）、「貨殖」为经商殖货、「億」为臆度、猜测、「屢中」为常中，附屢空、貨殖、億則屢中三孤例之证，并记底本「奇庶」当「其庶」、「屢空賜」连书、「焉億」连书三处。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　先进第十一　第 284 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第284课 · 11.19</div>
+  <h1>回也其庶乎，屡空；赐不受命，而货殖焉，亿则屡中</h1>
+  <div class="h1-sub">先进第十一 · 11.19　第 284 课</div>
+  <div class="src">原文：子曰：「回也奇庶乎！屢空賜不受命，而貨殖焉億則屢中。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">庶</div><div class="tzcap">庶几，近于道</div></div><div class="tzitem"><div class="cell">屢空</div><div class="tzcap">常常空乏</div></div><div class="tzitem"><div class="cell">貨殖</div><div class="tzcap">经商殖货</div></div><div class="tzitem"><div class="cell">億</div><div class="tzcap">臆度、猜测</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">孔子说：颜回差不多了，可常常空着；子贡不安本分去做买卖，一猜就中。一个穷而近道，一个富而能中。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">庶</div><div class="v">差不多，近于。</div></div><div class="row"><div class="k k2">屢空</div><div class="v">常常空着，缺吃少用。</div></div><div class="row"><div class="k k2">賜</div><div class="v">子贡，姓端木，名赐。</div></div><div class="row"><div class="k k2">貨殖</div><div class="v">做买卖，积财货。</div></div><div class="row"><div class="k k2">億</div><div class="v">猜度。</div></div><div class="row"><div class="k k2">中</div><div class="v">猜中。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">颜回差不多了。</div><div class="scene">可常常空着。</div><div class="scene">子贡不安本分。</div><div class="scene">去做买卖。</div><div class="scene">一猜就中。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">一个人学问好，日子却紧。</div><div class="scene">一个人眼光准，生意就顺。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「庶」是差不多吗？</div></div><div class="row"><div class="k k2">问二</div><div class="v">「屡空」是没钱吗？</div></div><div class="row"><div class="k k2">问三</div><div class="v">孔子是在夸子贡，还是在贬他？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">穷不等于没本事。</div></div><div class="row"><div class="k k2">二</div><div class="v">会赚钱也是一种本事。</div></div><div class="row"><div class="k k2">三</div><div class="v">孔子两样都看在眼里。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第284课 · 11.19</div>
+  <h1>回也其庶乎，屡空；赐不受命，而货殖焉，亿则屡中</h1>
+  <div class="h1-sub">先进第十一 · 11.19　第 284 课</div>
+  <div class="src">原文：子曰：「回也奇庶乎！屢空賜不受命，而貨殖焉億則屢中。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章列四子之短（11.18），此章评颜回、子贡两途：一贫而近道，一富而能中。先进篇论人，至此已是第三层——不只说短，还说各人的路。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">庶</div><div class="v">庶几；近于道而未至。</div></div><div class="row"><div class="k k2">屢空</div><div class="v">常常空乏；家贫无以为继。</div></div><div class="row"><div class="k k2">賜</div><div class="v">端木赐，字子贡；孔子弟子，以言语、货殖称。</div></div><div class="row"><div class="k k2">不受命</div><div class="v">不安于命分之常；一说谓不受禄命。</div></div><div class="row"><div class="k k2">貨殖</div><div class="v">殖货；经商积财。</div></div><div class="row"><div class="k k2">億</div><div class="v">臆度、揣测；「億則屢中」谓所度常中。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">「庶」是「庶几」：近于道而未至。孔子评颜回，从不说他「已至」，只说「差不多了」——这是最高的评语，也是最留余地的评语。</div><div class="scene">「屢空」是实况：颜回家贫，常至空乏。此句与「庶几」并置，意思很深：近道者未必得福。孔子不讳言这一点。</div><div class="scene">「賜不受命」之「命」，两读：一为「命分」（安于本分），一为「禄命」（受命于官）。本文取「不安本分」，方与「货殖」相贯——子贡不安于「士」的分，去做买卖。</div><div class="scene">「億則屢中」：億，臆度也。孔子不说他「知」，只说他「中」——猜得准，是本事，不是道。一「中」字，把「货殖」与「庶几」分开了。</div><div class="scene">校记：底本「回也奇庶乎」，「奇」当为「其」。全书「奇」1 见（仅此）、「其」266 见，孤字之讹；正文照底本，页内注明，不改字。</div><div class="scene">校记二：底本「屢空賜不受命」「而貨殖焉億則屢中」两处连书无逗，通行断作「屢空。賜不受命，而貨殖焉，億則屢中」。只记存疑，不改字。</div><div class="scene">文本内证：「屢空」1 见仅本章（孤例）；「貨殖」1 见仅本章（孤例）；「億則屢中」1 见仅本章（孤例）；「奇」全书字频 1。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">一贫而近道，一富而能中：两途并存，孔子皆见。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">回也庶乎——近道。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">屢空——空乏。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">賜不受命——越分。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">貨殖億中——能中。</div></div></div>
+  <div class="scene">四层是两两对照：近道而空，越分而中。孔子把两句话并排说，不评高下——他知道「庶几」之贵，也知道「屡中」之能；一个不该穷的穷了，一个不该中的中了，这就是世事的实况。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「庶」之解：庶几、近于道（本文主）；一说「庶」为「众」，谓回也与众异。本文从「庶几」。</div><div class="q">「不受命」两读：不安命分（本文主）；一说「不受禄命」、谓不受官命。两存，从前说。</div><div class="q">「奇庶」：底本作「奇」，当为「其」（「奇」全书 1 见、「其」266 见）；正文照底本，页内注明，不改字。</div><div class="q">校记：底本两处连书（「屢空賜」「焉億」）；只记存疑，不改字。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">回：庶几</div><div class="b">回：屡空</div></div><div class="pair"><div class="a">赐：不受命</div><div class="b">赐：亿则屡中</div></div><div class="pair"><div class="a">近道：未必得福</div><div class="b">能中：未必是道</div></div><div class="pair"><div class="a">11.18 短</div><div class="b">11.19 路</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《雍也》6.11「賢哉回也」</div><div class="b">同一人，安贫之一面。</div></div><div class="pair"><div class="a">《先进》11.7「今也則亡」</div><div class="b">同一人，短命之一面。</div></div><div class="pair"><div class="a">《雍也》6.4「子華使於齊」</div><div class="b">同一路：不以富为病。</div></div><div class="pair"><div class="a">《货殖列传》</div><div class="b">子贡后世以货殖称，可与本章互证。</div></div></div>
+  <div class="h2" id="sc-19">图一　两室相对</div><div class="figs single"><div class="fig"><div class="cap">图一 · 两室相对</div><div class="ph">图位：横幅 4:3 水墨。画面分左右两室：左室空净，一席一几，几上只一编竹简，一人坐其中，衣褐补缀，神色安；右室丰盈，货帛成捆、器物陈列，一人持筹握算，神色精明。两室之间一道薄墙，墙上一窗，光从窗过。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>横幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。画面分左右两室，中隔一道薄墙，墙上开一小窗，光自窗过。左室空净，一席一几，几上只一编竹简，一人坐于席，衣褐、袖口补缀，两手置膝，神色安然；右室丰盈，货帛成捆叠置、器物陈列成列，一人立于案后，一手持筹、一手按簿，神色精明。两室冷暖分明：左室青灰，右室赭暖。整体低饱和，笔触淡墨渲染，纸面微纹理。画面不出现任何文字、簿上字迹、货帛标记、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="两两对照四段">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">回：庶几</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">近于道</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#8A8074">回：屢空</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">常常空乏</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#A2503B">賜：不受命</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">不安本分</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#8A8074">賜：億則屢中</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">猜得准</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">近道者未必得福，能中者未必是道</text></svg></div><div class="figcap">义理图一 · 两途</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="道与能两栏">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">庶几：道</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">贵在此</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#8A8074">屢中：能</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">能在此</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">一个不该穷的穷了，一个不该中的中了</text></svg></div><div class="figcap">义理图二 · 道与能</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">四层是两两对照：近道而空，越分而中。孔子并排说，不评高下。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">这一章最耐读的是它的并置。颜回「庶几」——近于道，却「屡空」——常常没饭吃；子贡「不受命」——不安于士的本分，去做买卖，却「亿则屡中」——猜得准、赚得着。孔子把这两句并排放在一起，不下判语。这不是含糊，是他看清楚了：道与福，本来就不平行；能与德，本来就不重合。后世读此章，多偏一头：或赞颜回之安贫，或夸子贡之才干。孔子两边都看见，也两边都不偏袒。他知道颜回不该穷，也知道子贡不该只被当作商人——所以一个说「庶几」，一个说「屡中」，各给一个准字，不多说一句。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">屢空</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">貨殖</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">億則屢中</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">奇／其</div><div class="v">「奇」全书字频 1（仅本章）；「其」266 见——孤字之讹。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 貨殖 refs/lunyu-baiwen.txt | wc -l 应得 1；grep -o 奇 应得 1。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.16.05</div><div class="foot-r">第 284 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
