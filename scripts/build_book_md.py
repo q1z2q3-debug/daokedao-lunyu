@@ -227,6 +227,19 @@ def main():
                      lambda m: "## 14.%d　%s" % (int(m.group(1)) - 345, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 卫灵公篇（15.1 起）母本入库于 manuscript/wei-ling-gong/NN-*.md，课号 390 对应 15.1
+    def _k15(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (15, int(m.group(1)) - 389) if m else (99, 99)
+
+    wlg = sorted(glob.glob(os.path.join(ROOT, "manuscript", "wei-ling-gong", "*.md")), key=_k15)
+    for path in wlg:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 15.%d　%s" % (int(m.group(1)) - 389, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
 
     version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
@@ -261,6 +274,8 @@ def main():
         seg.append("子路%s章" % cn(len(zl)))
     if xw:
         seg.append("宪问%s章" % cn(len(xw)))
+    if wlg:
+        seg.append("卫灵公%s章" % cn(len(wlg)))
     published = " + ".join(seg) if len(seg) - 4 else " + ".join(seg)
     head = HEAD.format(published=published, version=version, detail="、".join(seg))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
