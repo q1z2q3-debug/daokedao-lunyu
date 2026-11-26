@@ -188,6 +188,19 @@ def main():
                      lambda m: "## 11.%d　%s" % (int(m.group(1)) - 265, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 颜渊篇（12.1 起）母本入库于 manuscript/yan-yuan/NN-*.md，课号 292 对应 12.1
+    def _k12(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (12, int(m.group(1)) - 291) if m else (99, 99)
+
+    yy2 = sorted(glob.glob(os.path.join(ROOT, "manuscript", "yan-yuan", "*.md")), key=_k12)
+    for path in yy2:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 12.%d　%s" % (int(m.group(1)) - 291, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
 
     version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
@@ -216,6 +229,8 @@ def main():
         seg.append("乡党%s节" % cn(len(xd)))
     if xj:
         seg.append("先进%s章" % cn(len(xj)))
+    if yy2:
+        seg.append("颜渊%s章" % cn(len(yy2)))
     published = " + ".join(seg) if len(seg) - 4 else " + ".join(seg)
     head = HEAD.format(published=published, version=version, detail="、".join(seg))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
