@@ -10,13 +10,13 @@ NS = {'__name__': 'gen', '__file__': p}
 exec(compile(open(p, encoding='utf-8').read(), p, 'exec'), NS)
 LESSONS = NS['LESSONS']
 
-SLUG = {259: 'ru-tai-miao', 260: 'peng-you-wu-suo-gui', 261: 'peng-you-zhi-kui',
-        262: 'qin-bu-shi', 263: 'jian-qi-shuai'}
-FIG = {259: ('ke259-ru-miao-wen', 'ke259-zhi-yu-bu-zhi'),
-       260: ('ke260-yi-he-yi-bin', 'ke260-wu-gui-yu-wo-bin'),
-       261: ('ke261-tong-cai-bu-bai', 'ke261-ji-rou-you-bai'),
-       262: ('ke262-qin-yu-ju', 'ke262-qu-qing-qu-wei'),
-       263: ('ke263-wu-bian', 'ke263-wai-dong-yu-nei-jing')}
+SLUG = {259: 'ru-miao-mei-shi-wen', 260: 'peng-you-wu-suo-gui', 261: 'peng-you-zhi-kui',
+        262: 'qin-bu-shi-ju-bu-rong', 263: 'jian-qi-shuai-zhe'}
+FIG = {259: ('ke259-ru-miao', 'ke259-yan-yu-xing'),
+       260: ('ke260-wu-gui', 'ke260-fu-yu-yi'),
+       261: ('ke261-zhong-yu-zun', 'ke261-ren-yu-shen'),
+       262: ('ke262-zhang-yu-chi', 'ke262-jia-yu-jian'),
+       263: ('ke263-si-yu-yi-bian', 'ke263-bian-yu-bu-bian')}
 
 
 def kv(items):
