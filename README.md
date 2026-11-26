@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.89**，已刊 **218 件**（前言一篇 + 213 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕开篇至 9.5（子畏于匡）**。
+- 当前版本 **v0.15.90**，已刊 **219 件**（前言一篇 + 218 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕至 9.10（子见齐衰者）**。
 
 ---
 
@@ -231,6 +231,11 @@
 | 第二百一十一课 | 麻冕，礼也；今也纯，俭 | 从众与违众，只看害不害义。 | [211](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/211.html) |
 | 第二百一十二课 | 子绝四 | 意→必→固→我一条链；四孤例。 | [212](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/212.html) |
 | 第二百一十三课 | 子畏于匡 | 两设穷尽，断「如予何」；底本「章」正为「將」。 | [213](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/213.html) |
+| 第二百一十四课 | 大宰问于子贡 | 多能非圣；底本「與！」正为「？」。 | [214](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/214.html) |
+| 第二百一十五课 | 牢曰：吾不试，故艺 | 不为世用故习艺；底本脱右引号已补。 | [215](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/215.html) |
+| 第二百一十六课 | 吾有知乎哉？无知也 | 先空后尽，叩两端而竭。 | [216](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/216.html) |
+| 第二百一十七课 | 凤鸟不至，河不出图 | 两实一虚自止；底本「乎」正为「夫」。 | [217](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/217.html) |
+| 第二百一十八课 | 子见齐衰者 | 三见二礼，敬落于动作；底本脱逗已补。 | [218](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/218.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
