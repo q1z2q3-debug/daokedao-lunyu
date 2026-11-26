@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第400课 行夏之時，乘殷之輅（卫灵公 15.11）</title>
+<meta name="description" content="《卫灵公》15.11：颜渊问为邦，孔子以四「取」一「放」答之：夏时、殷辂、周冕、韶舞，放郑声、远佞人。一课两页：少儿页讲「好东西是挑来的，不是全盘照搬」；成人辨四取为「择其至」，放远为「去其害」，一取一放见为邦之纲。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">下论　卫灵公第十五　第 400 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第400课 · 15.11</div>
+  <h1>行夏之時，乘殷之輅</h1>
+  <div class="h1-sub">卫灵公第十五 · 15.11　第 400 课</div>
+  <div class="src">原文：顏淵問「爲邦」。子曰：「行夏之時，乘殷之輅，服周之冕，樂則韶舞。放鄭聲，遠佞人——鄭聲淫，佞人殆。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">夏時</div><div class="tzcap">夏历</div></div><div class="tzitem"><div class="cell">殷輅</div><div class="tzcap">殷代的车</div></div><div class="tzitem"><div class="cell">周冕</div><div class="tzcap">周代的冠</div></div><div class="tzitem"><div class="cell">放遠</div><div class="tzcap">禁绝疏远</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">好东西是挑来的：时间用夏的，车用殷的，冠用周的，乐用韶的。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">时</div><div class="v">历法。</div></div><div class="row"><div class="k k2">辂</div><div class="v">大车。</div></div><div class="row"><div class="k k2">冕</div><div class="v">礼冠。</div></div><div class="row"><div class="k k2">放</div><div class="v">禁绝、驱逐。</div></div><div class="row"><div class="k k2">殆</div><div class="v">危险。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">用夏代的方法算时间。</div><div class="scene">坐殷代结实的大车，戴周代端正的礼冠。</div><div class="scene">音乐用韶舞那样好的；淫靡的乐、巧嘴的人，都要禁、要远。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">穿衣服不必全学别人：帽子学甲，鞋子学乙，舒服又体面就好。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">为什么每样都取一个朝代？</div></div><div class="row"><div class="k k2">问二</div><div class="v">「放鄭聲」为什么要禁音乐？</div></div><div class="row"><div class="k k2">问三</div><div class="v">「遠佞人」有那么严重吗？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">学会挑，不照搬。</div></div><div class="row"><div class="k k2">二</div><div class="v">远离油嘴的人。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第400课 · 15.11</div>
+  <h1>行夏之時，乘殷之輅</h1>
+  <div class="h1-sub">卫灵公第十五 · 15.11　第 400 课</div>
+  <div class="src">原文：顏淵問「爲邦」。子曰：「行夏之時，乘殷之輅，服周之冕，樂則韶舞。放鄭聲，遠佞人——鄭聲淫，佞人殆。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章言「利器」（15.10），此章言「为邦」：一章言成仁之具，一章言治国之择。具在一身，择在一国。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">爲邦</div><div class="v">治理国家。</div></div><div class="row"><div class="k k2">夏之時</div><div class="v">夏代历法，以建寅为岁首。</div></div><div class="row"><div class="k k2">殷之輅</div><div class="v">殷代大车，质朴而坚。</div></div><div class="row"><div class="k k2">周之冕</div><div class="v">周代礼冠，华而不靡。</div></div><div class="row"><div class="k k2">韶舞</div><div class="v">舜乐，尽善尽美。</div></div><div class="row"><div class="k k2">鄭聲</div><div class="v">郑国乐曲，淫靡。</div></div><div class="row"><div class="k k2">佞人</div><div class="v">口给之人，以言惑众。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">此章三十九字，是全书论「为邦」最具体的一章，其具体在「四取一放」。</div><div class="scene">「顏淵問『爲邦』」——颜渊所问，是「治天下」之大。孔子答以「四取」，皆「器」与「制」之细。此见其「大处着眼，小处落手」。</div><div class="scene">「行夏之時」——夏历以建寅为岁首，合于农时。取之者，取其「便民」。</div><div class="scene">「乘殷之輅」——殷辂质朴坚固。取之者，取其「耐用」。</div><div class="scene">「服周之冕」——周冕华而有节。取之者，取其「得体」。</div><div class="scene">「樂則韶舞」——韶者，舜乐，尽善尽美。取之者，取其「正」。</div><div class="scene">四取之序：时、车、冠、乐。由「天」及「身」，及「仪」，及「心」。一序之中，见其「本末」。</div><div class="scene">「放鄭聲，遠佞人」——一「放」一「远」，是「去」。郑声淫，乱人心；佞人殆，乱人政。一乱其内，一乱其外。</div><div class="scene">「鄭聲淫，佞人殆」——六字是「注」：非「恶而禁之」，是「知其害而防之」。此与「禁书」不同：禁者禁其迹，此者防其害。</div><div class="scene">此与 8.15「乐则韶舞」之重出相贯：两处皆言「韶」，见「正乐」为孔门常语。</div><div class="scene">此与 9.3「礼乐」之辨相贯：礼者「节」，乐者「和」；节而不和则苦，和而不节则淫。韶者，兼之。</div><div class="scene">再论此章之深：四取非「复古」，是「择优」。孔子不主「尽从周」，亦不主「尽从夏」；其取者，皆「至善」之处。</div><div class="scene">再论此章之今用：今之「为邦」者，多两病：一曰「全盘照搬」，人家怎样我怎样；二曰「一概拒外」，凡新皆恶。孔子之法是第三条：一样一样挑，取其所长。</div><div class="scene">校记：底本「樂則韶舞」与通行同；「放鄭聲遠佞人鄭聲淫佞人殆」连书，通行于「遠佞人」下断，本文从之。</div><div class="scene">文本内证：「夏之時」1 见仅本章；「殷之輅」1 见仅本章；「鄭聲」2 见（15.11、?）；「佞人」2 见（15.11、?）。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">为邦在择：四取其至，一放其害。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">夏时殷辂——其天与其身。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">周冕韶舞——其仪与其心。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">放郑声——去内之淫。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">远佞人——去外之殆。</div></div></div>
+  <div class="scene">四层是取（二）、取（二）、放、远：前两层「择善」，后两层「去害」。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「韶舞」之解：舜乐《韶》，兼舞（本文主）；一说「舞」为「韶」之舞容，非另一乐。两说可通。</div><div class="q">「鄭聲」之解：郑国之乐，淫靡（本文主，朱熹「郑声淫」）；一说「郑声」为「郑卫之音」之泛称。义同。</div><div class="q">校记：底本此章连书脱逗一处，余无讹。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">夏时：便民</div><div class="b">殷辂：耐用</div></div><div class="pair"><div class="a">周冕：得体</div><div class="b">韶舞：正心</div></div><div class="pair"><div class="a">放郑声：内</div><div class="b">远佞人：外</div></div><div class="pair"><div class="a">8.15 乐则韶舞</div><div class="b">15.11 韶舞</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《泰伯》8.15「樂則韶舞」</div><div class="b">重出，见常语。</div></div><div class="pair"><div class="a">《八佾》3.?「樂」</div><div class="b">（另参正乐）</div></div><div class="pair"><div class="a">《卫灵公》15.10「利器」</div><div class="b">一具一择。</div></div><div class="pair"><div class="a">《颜渊》12.?「爲邦」</div><div class="b">（另参政）</div></div></div>
+  <div class="h2" id="sc-19">图一　四取一放</div><div class="figs single"><div class="fig"><div class="cap">图一 · 四取一放</div><div class="ph">图位：横幅 4:3 水墨。一案上并列四物：一历册、一车轮、一礼冠、一编钟；案角另置二物：一笙竽蒙尘、一巧言之人的木俑，被推向案外。四取在前，二放在侧。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>横幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。一案上并列四物：一册历书、一只车轮、一顶礼冠、一架编钟；案角另置二物：一具蒙尘的笙竽、一尊巧言之人的木俑，被推向案外。四物在前，二物在侧。整体低饱和，青灰用于案与器物，赭石点于冠与钟架，笔触淡墨渲染，纸面微纹理。画面不出现任何文字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="四段">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">夏時</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">取其便民</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">殷輅</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">取其耐用</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">周冕</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">取其得体</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#A2503B">韶舞</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">取其正</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">四取其至，一放其害</text></svg></div><div class="figcap">义理图一 · 四取</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="两栏">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#A2503B">鄭聲</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">淫·乱人心</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#A2503B">佞人</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">殆·乱人政</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">一放一远，内与外</text></svg></div><div class="figcap">义理图二 · 二放</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">四层是取、取、放、远：择善在前，去害在后。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">这一章最见孔子的「政治家」一面。他不谈玄，谈「历法、车、冠、乐」——都是极具体的东西。而且他的方法很现代：不是「一切都是周的好」，而是「一样一样挑最好的」。夏的历法便民，就用夏的；殷的车结实，就用殷的；周的冠得体，就用周的；乐的极致是韶，就用韶。今天做产品、做制度，最缺的就是这种「分项择优」的耐心：要么全盘照搬，要么一概拒绝。孔子两千五百年前就在做「组合式创新」。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">韶舞</div><div class="v">全书 2 见（8.15、15.11）。</div></div><div class="row"><div class="k k2">鄭聲</div><div class="v">全书 2 见。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 放鄭聲 refs/lunyu-baiwen.txt | wc -l 应得 1。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.16.22</div><div class="foot-r">第 400 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
