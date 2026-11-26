@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.09**，已刊 **301 课**（前言一篇 + 302 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊十章（12.1–12.10）**已刊。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.10**，已刊 **306 课**（前言一篇 + 307 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊十五章（12.1–12.15）**已刊。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -319,6 +319,11 @@
 | 第二百九十九课 | 文犹质也，质犹文也 | 去文则质亦无所显。 | [299](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/299.html) |
 | 第三百课 | 盍彻乎。百姓足，君孰不足 | 君之足出于民之足。 | [300](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/300.html) |
 | 第三百零一课 | 爱之欲其生，恶之欲其死，是惑也 | 惑不是不懂，是同时要相反的两件事。 | [301](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/301.html) |
+| 第三百零二课 | 君君，臣臣，父父，子子 | 名要副实，实要尽道。 | [302](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/302.html) |
+| 第三百零三课 | 片言可以折狱者，其由也与 | 信用是攒出来的。 | [303](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/303.html) |
+| 第三百零四课 | 听讼，吾犹人也。必也，使无讼乎 | 不以能断为能，以无讼为志。 | [304](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/304.html) |
+| 第三百零五课 | 居之无倦，行之以忠 | 治政两字：久与诚。 | [305](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/305.html) |
+| 第三百零六课 | 博学于文，约之以礼 | 一放一收，乃不畔。 | [306](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/306.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
