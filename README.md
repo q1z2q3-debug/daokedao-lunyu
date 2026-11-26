@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.15**，已刊 **330 课**（前言一篇 + 312 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊二十四章（12.1–12.24，已收篇）**，下论第十三《子路》起，**子路十五章（13.1–13.15）**已刊。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.16**，已刊 **345 课**（前言一篇 + 327 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊二十四章（12.1–12.24，已收篇）**，下论第十三《子路》**三十章（13.1–13.30，已收篇）**。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -348,6 +348,21 @@
 | 第三百二十八课 | 苟正其身，如正人何 | 己不正则无正人之具。 | [328](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/328.html) |
 | 第三百二十九课 | 冉子退朝：政与事 | 以闻不闻验政不政。 | [329](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/329.html) |
 | 第三百三十课 | 一言兴邦，一言丧邦 | 兴在知难，丧在莫予违。 | [330](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/330.html) |
+| 第三百三十一课 | 近者说，远者来 | 近悦是因，远来是果。 | [331](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/331.html) |
+| 第三百三十二课 | 欲速则不达 | 躁与贪，政之二病。 | [332](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/332.html) |
+| 第三百三十三课 | 父为子隐，直在其中 | 以隐为直，非以告为直。 | [333](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/333.html) |
+| 第三百三十四课 | 居处恭，执事敬，与人忠 | 三目一常，夷狄不可弃。 | [334](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/334.html) |
+| 第三百三十五课 | 行己有耻，使于四方 | 三等一讥，斗筲不足算。 | [335](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/335.html) |
+| 第三百三十六课 | 不得中行而与之 | 狂者进取，狷者有所不为。 | [336](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/336.html) |
+| 第三百三十七课 | 人而无恒 | 三引一断：不占而已矣。 | [337](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/337.html) |
+| 第三百三十八课 | 君子和而不同 | 压出来的同，一压即碎。 | [338](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/338.html) |
+| 第三百三十九课 | 乡人皆好之 | 数与质：分评者善恶。 | [339](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/339.html) |
+| 第三百四十课 | 君子易事而难说 | 器之与求备，一也两用。 | [340](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/340.html) |
+| 第三百四十一课 | 君子泰而不骄 | 安舒有余，不须人见。 | [341](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/341.html) |
+| 第三百四十二课 | 刚、毅、木、讷，近仁 | 骨力实默，近非即是。 | [342](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/342.html) |
+| 第三百四十三课 | 切切、偲偲、怡怡 | 朋友以义，兄弟以恩。 | [343](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/343.html) |
+| 第三百四十四课 | 善人教民七年 | 教之厚而后可用。 | [344](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/344.html) |
+| 第三百四十五课 | 以不教民战，是谓弃之 | 败是事之不幸，弃是人之罪。 | [345](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/345.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
