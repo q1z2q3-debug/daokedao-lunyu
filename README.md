@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.15.91**，已刊 **220 件**（前言一篇 + 223 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕至 9.15（吾自卫反鲁）**。
+- 当前版本 **v0.15.92**，已刊 **221 件**（前言一篇 + 228 课 + 专题五篇 + 论文三篇）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕至 9.20（语之而不惰者）**。
 
 ---
 
@@ -241,6 +241,11 @@
 | 第二百二十一课 | 有美玉于斯，韫椟而藏诸 | 沽之哉，而待贾；不藏不衒。 | [221](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/221.html) |
 | 第二百二十二课 | 子欲居九夷 | 君子居之，何陋之有；底本「！」正为「？」。 | [222](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/222.html) |
 | 第二百二十三课 | 吾自卫反鲁，然后乐正 | 时、事、效三句，雅颂各得其所；三孤例。 | [223](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/223.html) |
+| 第二百二十四课 | 出则事公卿，入则事父兄 | 日用四事加一问；底本脱逗已补。 | [224](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/224.html) |
+| 第二百二十五课 | 逝者如斯夫，不舍昼夜 | 地、状、常三句，以川流见道体。 | [225](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/225.html) |
+| 第二百二十六课 | 吾未见好德如好色者也 | 量的是诚；与 15.13 重出；底本误逗已去。 | [226](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/226.html) |
+| 第二百二十七课 | 譬如为山，未成一篑 | 两喻两断，止往在我；底本脱逗与叹号已正。 | [227](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/227.html) |
+| 第二百二十八课 | 语之而不惰者，其回也与 | 唯颜回不惰；底本「？」正为「！」。 | [228](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/228.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
