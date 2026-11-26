@@ -214,6 +214,19 @@ def main():
                      lambda m: "## 13.%d　%s" % (int(m.group(1)) - 315, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 宪问篇（14.1 起）母本入库于 manuscript/xian-wen/NN-*.md，课号 346 对应 14.1
+    def _k14(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (14, int(m.group(1)) - 345) if m else (99, 99)
+
+    xw = sorted(glob.glob(os.path.join(ROOT, "manuscript", "xian-wen", "*.md")), key=_k14)
+    for path in xw:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 14.%d　%s" % (int(m.group(1)) - 345, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
 
     version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
@@ -246,6 +259,8 @@ def main():
         seg.append("颜渊%s章" % cn(len(yy2)))
     if zl:
         seg.append("子路%s章" % cn(len(zl)))
+    if xw:
+        seg.append("宪问%s章" % cn(len(xw)))
     published = " + ".join(seg) if len(seg) - 4 else " + ".join(seg)
     head = HEAD.format(published=published, version=version, detail="、".join(seg))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

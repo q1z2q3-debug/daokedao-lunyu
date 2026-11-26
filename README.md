@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.16**，已刊 **345 课**（前言一篇 + 327 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊二十四章（12.1–12.24，已收篇）**，下论第十三《子路》**三十章（13.1–13.30，已收篇）**。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.17**，已刊 **355 课**（前言一篇 + 337 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊二十四章（12.1–12.24，已收篇）**，下论第十三《子路》**三十章（13.1–13.30，已收篇）**、第十四《宪问》**十章（14.1–14.10）**。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -363,6 +363,16 @@
 | 第三百四十三课 | 切切、偲偲、怡怡 | 朋友以义，兄弟以恩。 | [343](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/343.html) |
 | 第三百四十四课 | 善人教民七年 | 教之厚而后可用。 | [344](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/344.html) |
 | 第三百四十五课 | 以不教民战，是谓弃之 | 败是事之不幸，弃是人之罪。 | [345](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/345.html) |
+| 第三百四十六课 | 邦有道谷，邦无道谷耻也 | 耻在时不在位。 | [346](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/346.html) |
+| 第三百四十七课 | 士而怀居 | 念与怀，一字之别。 | [347](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/347.html) |
+| 第三百四十八课 | 危言危行，危行言孙 | 孙非谄，行不改。 | [348](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/348.html) |
+| 第三百四十九课 | 有德者必有言 | 本可生末，末不推本。 | [349](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/349.html) |
+| 第三百五十课 | 羿奡不得其死，禹稷有天下 | 力倾一时，德载一世。 | [350](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/350.html) |
+| 第三百五十一课 | 君子而不仁者有矣夫 | 位不等于本。 | [351](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/351.html) |
+| 第三百五十二课 | 爱之能勿劳乎 | 姑息非爱，顺从未忠。 | [352](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/352.html) |
+| 第三百五十三课 | 为命：四手一命 | 序不可倒，众手不专。 | [353](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/353.html) |
+| 第三百五十四课 | 子产惠人，管仲人也 | 褒有据，贬有节。 | [354](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/354.html) |
+| 第三百五十五课 | 贫而无怨难，富而无骄易 | 难易在势不在德。 | [355](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/355.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
