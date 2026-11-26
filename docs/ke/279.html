@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第279课 鲁人为长府。闵子骞曰：仍旧贯，如之何？何必改作（先进 11.14）</title>
+<meta name="description" content="《先进》11.14：鲁国要改建长府（藏货之府）。闵子骞说：照旧样子修一修，怎么样？何必改建？孔子说：这个人平常不说话，一说话就说到点上。一课两页：少儿页讲大家要大兴改建，一个人说：修修不就行了吗；成人辨「長府」为藏货之府（一说为鲁君别府）、「仍舊貫」为照旧例、因其旧、「改作」为改建重作、「夫人」为这个人（「夫」读扶，非「夫人」之称）、「言必有中」为言必中的，附長府、仍舊貫、改作、言必有中四孤例、夫人四见之证，并以 11.13「侍侧」合看——前一章写其气象，此章写其言语，一静一动。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　先进第十一　第 279 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第279课 · 11.14</div>
+  <h1>鲁人为长府。闵子骞曰：仍旧贯，如之何？何必改作</h1>
+  <div class="h1-sub">先进第十一 · 11.14　第 279 课</div>
+  <div class="src">原文：魯人爲長府。閔子騫曰：「仍舊貫，如之何？何必改作！」子曰：「夫人不言，言必有中。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">長府</div><div class="tzcap">藏货之府</div></div><div class="tzitem"><div class="cell">仍舊貫</div><div class="tzcap">照旧例因旧</div></div><div class="tzitem"><div class="cell">改作</div><div class="tzcap">改建重作</div></div><div class="tzitem"><div class="cell">言必有中</div><div class="tzcap">说话说到点上</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">鲁国要改建仓库。闵子骞说：照原样修一修就行了，何必改建？孔子说：这个人平常不开口，一开口就说到点上。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">長府</div><div class="v">鲁国藏货的府库。</div></div><div class="row"><div class="k k2">仍舊貫</div><div class="v">照旧例，因旧制。</div></div><div class="row"><div class="k k2">如之何</div><div class="v">怎么样；此处为商量的口气。</div></div><div class="row"><div class="k k2">中</div><div class="v">射中靶心；此谓说到点上。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">鲁国要改建长府。</div><div class="scene">闵子骞说：照旧修一修，怎么样？</div><div class="scene">何必改建？</div><div class="scene">孔子说：这个人平常不说话。</div><div class="scene">一说话，就说到点上。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">大兴土木之前，先问一句：非改不可吗？</div><div class="scene">平常不说话的人，开口往往最重。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">长府是什么？</div></div><div class="row"><div class="k k2">问二</div><div class="v">闵子为什么反对改建？</div></div><div class="row"><div class="k k2">问三</div><div class="v">「言必有中」是夸他会说话吗？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">能不折腾，就不折腾。</div></div><div class="row"><div class="k k2">二</div><div class="v">旧的不一定差，新的不一定好。</div></div><div class="row"><div class="k k2">三</div><div class="v">话少而准，胜过多而空。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第279课 · 11.14</div>
+  <h1>鲁人为长府。闵子骞曰：仍旧贯，如之何？何必改作</h1>
+  <div class="h1-sub">先进第十一 · 11.14　第 279 课</div>
+  <div class="src">原文：魯人爲長府。閔子騫曰：「仍舊貫，如之何？何必改作！」子曰：「夫人不言，言必有中。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章写闵子之气象（11.13），此章写闵子之言语：一章看他站着的样，一章听他开口的话。先进篇写闵子只两处，一静一动，合成一个人。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">長府</div><div class="v">藏货之府；一说鲁君别府，藏货财之处。</div></div><div class="row"><div class="k k2">仍舊貫</div><div class="v">仍，因也；貫，事也；谓因其旧制。</div></div><div class="row"><div class="k k2">改作</div><div class="v">改建重作；谓另起规模。</div></div><div class="row"><div class="k k2">夫人</div><div class="v">此人；「夫」读扶，指闵子骞，非「夫人」之称。</div></div><div class="row"><div class="k k2">言必有中</div><div class="v">言必中的；谓所言切中事理。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">「仍舊貫」三字是此章的法眼：不是守旧，是「因旧制而修之」，不另起规模。古者改作必动众，动众必伤财；闵子一句话，替鲁国省了一场大工。</div><div class="scene">「如之何」是商量口气，不是顶撞：先给一个办法，再问一句「何必改作」。闵子之谏，软而有骨——这与 11.13 的「誾誾如也」正是一人：中正而和。</div><div class="scene">「夫人不言，言必有中」两层：一层夸其言，一层夸其平素之默。孔子之意，重在「不言」——平常不说，故一说就重；若日日争辩，此语亦不成立。</div><div class="scene">「夫」读扶，此人；若读如字为「夫人」，则与闵子骞不合。此字与 11.10「非夫人之为恸」同一用法（全书「夫人」4 见：11.10、11.14、11.25、16.14）。</div><div class="scene">文本内证：「長府」1 见仅本章（孤例）；「仍舊貫」1 见仅本章（孤例）；「改作」1 见仅本章（孤例）；「言必有中」1 见仅本章（孤例）；「夫人」4 见（11.10、11.14、11.25、16.14）。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">不折腾：因其旧而修之，一言省一场大工。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">魯人爲長府——事起。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">仍舊貫——其法。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">何必改作——其问。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">言必有中——其评。</div></div></div>
+  <div class="scene">四层是事起、其法、其问、其评：先说鲁国要改建，再给一个「照旧修」的办法，再一句反问，末以孔子一评收。前三层是臣之谏，末一层是师之许——一谏一许，闵子此人便完整了。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「長府」之解：藏货之府（本文主）；一说鲁君别府、藏货财之所。两说相通。</div><div class="q">「仍舊貫」之诂：仍，因也；貫，事也（本文主，采旧注）；一说「貫」为钱贯之贯，谓仍旧贯之制。本文从前说。</div><div class="q">「夫人」之读：读扶，谓此人（本文主）；若读如字为「夫人」，则句不通。</div><div class="q">校记：底本「何必改作！」用叹号，通行或作问号；只记存疑，不改字。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">事：改建长府</div><div class="b">法：仍旧贯</div></div><div class="pair"><div class="a">问：何必改作</div><div class="b">评：言必有中</div></div><div class="pair"><div class="a">静：11.13 侍侧</div><div class="b">动：11.14 一谏</div></div><div class="pair"><div class="a">不言：素</div><div class="b">有中：一鸣</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《先进》11.13「閔子侍側」</div><div class="b">一写其气象，一写其言语。</div></div><div class="pair"><div class="a">《雍也》6.9「閔子騫」</div><div class="b">同一人，辞官之守。</div></div></div>
+  <div class="h2" id="sc-19">图一　一府旧样</div><div class="figs single"><div class="fig"><div class="cap">图一 · 一府旧样</div><div class="ph">图位：横幅 4:3 水墨。一座旧府库，垣墙斑驳、梁柱尚坚，门前工匠数人持斧凿待命，地上新木成堆；一中年士人立于阶前，一手按墙，一手指旧梁，向众人言。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>横幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。一座旧府库，垣墙斑驳、苔痕可见，梁柱尚坚，门扇半开；阶前数名工匠持斧凿待命，地上堆着新伐的木料。一名中年士人立于阶前，素色深衣、束发，一手按于旧墙，一手指向旧梁，侧身向众人言，神色平和。天色微阴，院中空净。整体低饱和，青灰用于墙与天，赭石点于木料与梁柱，笔触淡墨渲染，纸面微纹理。画面不出现任何文字、门额题字、木上有字、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="事法问评四段">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#8A8074">事：改建</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">鲁人为长府</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">法：仍旧贯</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">因其旧</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#A2503B">问：何必改作</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">软而有骨</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">评：言必有中</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">一说到点</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">一言省一场大工</text></svg></div><div class="figcap">义理图一 · 一谏一许</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="改与仍两栏">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#8A8074">改作：动众伤财</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">另起规模</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">仍旧：省而不废</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">因旧而修</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">旧的不一定差，新的不一定好</text></svg></div><div class="figcap">义理图二 · 改与仍</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">四层是事起、其法、其问、其评：臣之谏三层，师之许一层——一谏一许，闵子此人便完整。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">这一章的分量，在一个「省」字上。古者改作必动众，动众必伤财；鲁国要改建长府，闵子只说一句「仍旧贯」——照旧修一修。这不是保守，是算过账：旧府还能用，改建所费不赀，所省者不止钱财，还有民力。今人做事，多喜「改作」：新官上任先改规划，新班子先换招牌，以为不改便不见政绩。闵子这一句，是两千年前的一盆冷水。另有一层：孔子夸他的不是「会说话」，是「不言」——平常不说，故一说就重。话的价值，一半在内容，一半在分寸；日日开口的人，说什么都轻。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">長府</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">仍舊貫</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">改作</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">言必有中</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">夫人</div><div class="v">全书 4 见（11.10、11.14、11.25、16.14）。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 仍舊貫 refs/lunyu-baiwen.txt | wc -l 应得 1；grep -o 長府 应得 1。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.16.04</div><div class="foot-r">第 279 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
