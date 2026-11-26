@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.14**，已刊 **325 课**（前言一篇 + 312 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊二十四章（12.1–12.24，已收篇）**，下论第十三《子路》起，**子路十章（13.1–13.10）**已刊。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.15**，已刊 **330 课**（前言一篇 + 312 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊二十四章（12.1–12.24，已收篇）**，下论第十三《子路》起，**子路十五章（13.1–13.15）**已刊。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -343,6 +343,11 @@
 | 第三百二十三课 | 善居室：苟合、苟完、苟美 | 物进心退，贵在知足。 | [323](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/323.html) |
 | 第三百二十四课 | 庶、富、教 | 三序不可倒。 | [324](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/324.html) |
 | 第三百二十五课 | 期月可也，三年有成 | 中程之期，可核可验。 | [325](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/325.html) |
+| 第三百二十六课 | 善人为邦百年，胜残去杀 | 化俗须久，不必圣人。 | [326](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/326.html) |
+| 第三百二十七课 | 如有王者，必世而后仁 | 仁政须一代人换过。 | [327](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/327.html) |
+| 第三百二十八课 | 苟正其身，如正人何 | 己不正则无正人之具。 | [328](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/328.html) |
+| 第三百二十九课 | 冉子退朝：政与事 | 以闻不闻验政不政。 | [329](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/329.html) |
+| 第三百三十课 | 一言兴邦，一言丧邦 | 兴在知难，丧在莫予违。 | [330](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/330.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
