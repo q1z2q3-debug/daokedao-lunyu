@@ -4,7 +4,7 @@
 
 用法：python3 scripts/build_book_md.py
 源：../润泽说-论语/前言-读论语之前.md、../润泽说-论语/单课/[123].N-*.md、manuscript/ba-yi/NN-*.md（3.4 起）
-产物：book/润泽说 道可道之论语·上论（已刊）.md
+产物：book/润泽说 道可道之论语（已刊）.md
 约定：各课原 `# 标题` 降为 `## 标题`；每课前加一行课次索引（便于目录生成）。
 """
 import glob
@@ -13,11 +13,11 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(os.path.dirname(ROOT), "润泽说-论语")
-OUT = os.path.join(ROOT, "book", "润泽说 道可道之论语·上论（已刊）.md")
+OUT = os.path.join(ROOT, "book", "润泽说 道可道之论语（已刊）.md")
 
 HEAD = """---
 title: 润泽说 道可道之论语
-subtitle: 上论 · 通释读本（连载）
+subtitle: 通释读本（连载）
 author: 润泽
 base: 朱熹《论语集注》
 chapters: 498
@@ -26,7 +26,7 @@ version: {version}
 date: 2026-11-26
 ---
 
-# 润泽说 道可道之论语 · 上论（已刊）
+# 润泽说 道可道之论语（已刊）
 
 > 一章一课，一课两页：少儿页可念、成人页可考。
 > 本册为连载中的一批：{detail}。全书依朱熹本四百九十八章，按篇推进。
