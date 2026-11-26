@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.01**，已刊 **265 课**（前言一篇 + 266 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**。
+- 当前版本 **v0.16.02**，已刊 **270 课**（前言一篇 + 271 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进五章（11.1–11.5）**已刊。
 
 ---
 
@@ -266,6 +266,28 @@
 | 第二百四十六课 | 食不厌精，脍不厌细 | 八不食以洁、三有节以度；底本三处连书。 | [246](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/246.html) |
 | 第二百四十七课 | 祭于公，不宿肉 | 敬在及时不在久藏；底本脱分号。 | [247](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/247.html) |
 | 第二百四十八课 | 食不语，寝不言 | 六字：外收与内收；语、言二字分内外。 | [248](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/248.html) |
+| 第二百四十九课 | 虽疏食菜羹，瓜祭，必齐如也 | 食前必祭，祭必齐如：敬不以物之丰俭而改。 | [249](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/249.html) |
+| 第二百五十课 | 席不正不坐 | 席有其位，布之必正；不正则不居。 | [250](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/250.html) |
+| 第二百五十一课 | 乡人饮酒，杖者出，斯出矣 | 乡饮有序：杖者先出，己乃随出——未出不敢先，既出不敢後。 | [251](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/251.html) |
+| 第二百五十二课 | 乡人傩，朝服而立于阼阶 | 乡傩及门，朝服立阼阶：敬其事，安先祖。 | [252](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/252.html) |
+| 第二百五十三课 | 问人于他邦，再拜而送之 | 问远必拜，拜如亲见：礼能代人到场。 | [253](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/253.html) |
+| 第二百五十四课 | 康子馈药，拜而受之，曰：丘未达，不敢尝 | 受人之馈，礼尽于拜；用人之药，慎止于未达。 | [254](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/254.html) |
+| 第二百五十五课 | 厩焚，子退朝，曰：伤人乎？不问马 | 一火之顷，一问定序：人先于畜，人先于物。 | [255](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/255.html) |
+| 第二百五十六课 | 君赐食，必正席先尝之；赐腥，必熟而荐之；赐生，必畜之 | 受赐之礼，不在其厚，在其处置各得物性。 | [256](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/256.html) |
+| 第二百五十七课 | 疾，君视之，东首加朝服拖绅 | 身可以卧，礼不可以卧：不能著衣，则加衣。 | [257](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/257.html) |
+| 第二百五十八课 | 君命召，不俟驾行矣 | 君命之来，身先于仪；礼不废，只是追不上急。 | [258](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/258.html) |
+| 第二百五十九课 | 入太庙，每事问 | 知而犹问：礼不在知，在不敢以知自足。 | [259](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/259.html) |
+| 第二百六十课 | 朋友死，无所归，曰：于我殡 | 朋友无所归，则我为其归：义之所在，不待亲。 | [260](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/260.html) |
+| 第二百六十一课 | 朋友之馈，虽车马，非祭肉，不拜 | 拜与不拜，辨在物之尊，不在物之重。 | [261](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/261.html) |
+| 第二百六十二课 | 寝不尸，居不容 | 礼有内外：外则处处有节，内则可以不客。 | [262](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/262.html) |
+| 第二百六十三课 | 见齐衰者，虽狎必变；见冕者与瞽者，虽亵必以貌 | 遇可敬者，身必有应：敬不看远近，只看当不当。 | [263](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/263.html) |
+| 第二百六十四课 | 升车，必正立，执绥；车中不内顾，不疾言，不亲指 | 车上三不：狭处知分寸，动处知安身。 | [264](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/264.html) |
+| 第二百六十五课 | 色斯举矣，翔而后集 | 鸟审其处，人审其时：见几而作，翔而后集。 | [265](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/265.html) |
+| 第二百六十六课 | 先进于礼乐，野人也；后进于礼乐，君子也 | 质胜则野，文胜则史：孔子从先进，是从其可用。 | [266](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/266.html) |
+| 第二百六十七课 | 从我于陈蔡者，皆不及门也 | 共难者散，一叹见情：所念者人，非所苦者难。 | [267](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/267.html) |
+| 第二百六十八课 | 德行：颜渊、闵子骞、冉伯牛、仲弓；言语：宰我、子贡；政事：冉有、季路；文学：子游、子夏 | 四科十哲：才各有科，德为其本。 | [268](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/268.html) |
+| 第二百六十九课 | 回也，非助我者也！于吾言，无所不说 | 似憾实喜：最深的懂，是不出声的懂。 | [269](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/269.html) |
+| 第二百七十课 | 孝哉闵子骞！人不间于其父母昆弟之言 | 孝之实，在家人齐口而外人无隙。 | [270](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/270.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

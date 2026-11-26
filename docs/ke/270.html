@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>润泽说 道可道之论语 · 第270课 孝哉闵子骞！人不间于其父母昆弟之言（先进 11.5）</title>
+<meta name="description" content="《先进》11.5：孔子说，孝啊闵子骞！他父母兄弟都说他孝，别人对这话挑不出一点缝来。一课两页：少儿页讲一个人好不好，家里人最知道；家里人夸他，外人也没话说；成人辨「間」为非议、间隙（朱注以「非」解「間」）、「父母昆弟之言」为家里人称他孝的那句话、「人不間」为外人无从非议，附「皆弟」为底本形讹（全书「昆」0 见，「昆弟」0 见，通行作「昆弟」）、閔子騫四见两章之证，与 11.3 德行科合看——德行科四人，此章说其一。">
+<style>
+  :root{
+    --paper:#FBF7EC;
+    --paper2:#FFFDF6;
+    --ink:#2F2A24;
+    --ink2:#5C5347;
+    --muted:#8A8074;
+    --line:#DED2B9;
+    --ochre:#A2503B;
+    --ochre-soft:#C58A73;
+    --green:#4A5C55;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFFDF6 0%, rgba(255,253,246,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    opacity:.35;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(120,100,70,.035) 0 1px, transparent 1px 3px);
+    z-index:1;
+  }
+  .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:26px 22px 56px}
+
+  /* 书眉 */
+  .mast{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+    padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .series{font-size:13px;letter-spacing:.22em;color:var(--ochre)}
+  .crumb{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+  .crumb b{font-weight:400;color:var(--ink2)}
+
+  /* 页 */
+  .leaf{
+    margin-top:26px;padding:30px 30px 34px;
+    background:var(--paper2);
+    border:1px solid var(--line);
+    box-shadow:0 1px 0 #fff inset, 0 10px 26px -22px rgba(60,45,25,.5);
+    position:relative;
+  }
+  .leaf::before,.leaf::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--line);opacity:.55;
+  }
+  .leaf::before{top:8px}.leaf::after{bottom:8px}
+  .page{position:relative;padding-top:26px;padding-bottom:26px}
+  .leaf-tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--paper2);
+    padding:0 10px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;color:var(--ochre);
+  }
+
+  h1{
+    margin:2px 0 0;font-size:clamp(30px,6vw,44px);font-weight:600;
+    letter-spacing:.1em;line-height:1.25;
+  }
+  .h1-sub{font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.12em;margin-top:8px;line-height:1.8}
+
+  /* 原文 */
+  .src{
+    margin:22px 0 6px;padding:18px 0 16px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--kai);
+    font-size:clamp(19px,3.6vw,24px);
+    line-height:2.15;
+    letter-spacing:.04em;
+  }
+  .src .who{color:var(--ochre);letter-spacing:.14em;margin-right:.4em}
+  ruby{ruby-position:over}
+  rt{font-family:var(--sans);font-size:.42em;color:var(--muted);letter-spacing:0}
+
+  /* 区块标题 */
+  .h2{
+    display:flex;align-items:center;gap:10px;
+    margin:30px 0 10px;font-size:14px;letter-spacing:.2em;color:var(--ochre);
+    font-family:var(--sans);font-weight:500;
+  }
+  .h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  p{margin:10px 0;font-size:16.5px}
+  p.lead{font-size:17px;line-height:2}
+
+  /* 田字格 */
+  .tzg{display:grid;grid-template-columns:repeat(5,86px);gap:12px;margin:14px 0 6px;justify-content:start}
+  .tzitem{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+  .tzcap{display:flex;flex-direction:column;align-items:center;gap:1px;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.35;text-align:center}
+  .tzcap span{white-space:nowrap}
+  .cell{
+    width:100%;box-sizing:border-box;position:relative;aspect-ratio:1;
+    border:1px solid #CDB99C;background:#FFFEF9;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cell span{font-family:var(--kai);font-size:42px;line-height:1;color:var(--ink)}
+  .cell::before,.cell::after{content:"";position:absolute;background:none;border-top:1px dashed #E2D4BB}
+  .cell::before{left:0;right:0;top:50%;transform:translateY(-50%)}
+  .cell::after{top:0;bottom:0;left:50%;transform:translateX(-50%);border-top:0;border-left:1px dashed #E2D4BB}
+
+
+  /* 释义条目 */
+  .rows{display:grid;gap:10px;margin-top:8px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+    padding:10px 0;border-bottom:1px dashed #E7DCC6}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--kai);font-size:30px;line-height:1.2;color:var(--ochre);text-align:center}
+  .row .k.k2{font-size:19px;letter-spacing:.04em;line-height:1.5;white-space:nowrap}
+  .rows.wide .row{grid-template-columns:104px 1fr}
+  .rows.wide .k{font-size:16px}
+  .row .v{font-size:15.5px;color:var(--ink2);line-height:1.9}
+  .row .v b{font-weight:600;color:var(--ink)}
+
+  /* 生活场景 */
+  .scene{
+    margin-top:12px;padding:16px 18px;
+    background:linear-gradient(0deg, rgba(162,80,59,.035), rgba(162,80,59,.035));
+    border-left:2px solid var(--ochre-soft);
+    font-size:16px;line-height:1.95;
+  }
+
+  /* 启示 */
+  .list{counter-reset:n;margin:6px 0 0;padding:0;list-style:none}
+  .list li{counter-increment:n;display:grid;grid-template-columns:26px 1fr;gap:10px;
+    padding:7px 0;font-size:16px}
+  .list li::before{
+    content:counter(n,decimal-leading-zero);
+    font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);
+    padding-top:4px;letter-spacing:.05em;
+  }
+
+  /* 家长栏 */
+  .parent{background:#F6F1E3;border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+  .parent .h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;color:var(--green);margin-bottom:6px}
+  .parent p{font-size:15px;color:var(--ink2);margin:6px 0}
+  .parent p b{color:var(--ink);font-weight:600}
+
+  /* 成人页 */
+  .adult .h1-sub{margin-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .chip{font-family:var(--sans);font-size:12px;letter-spacing:.08em;
+    border:1px solid var(--line);padding:5px 10px;background:#FFFDF6;color:var(--ink2)}
+  .chip.yin{border-color:#BFCBC4;color:var(--green)}
+  .chip.yang{border-color:#E0BDAE;color:var(--ochre)}
+
+  .quote{
+    margin:12px 0;padding:12px 16px;border-left:2px solid var(--line);
+    font-size:15.5px;color:var(--ink2);background:#FCF9F0;
+  }
+  .quote .t{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:2px}
+
+  /* 双卡 */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:12px;background:#FFFDF6}
+  .cards .hd{
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;
+    padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ochre);
+  }
+  .cards .hd.plain{color:var(--muted)}
+  .cards .a,.cards .b{padding:12px;font-size:15px;line-height:1.85}
+  .cards .a{border-right:1px solid var(--line);color:var(--muted);text-decoration-color:#DCC9B8}
+  .cards .b{color:var(--ink)}
+  .cards .rowline{grid-column:1/-1;height:1px;background:var(--line)}
+  .cardhint{font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px}
+
+  /* 存疑 */
+  .doubt{margin-top:8px}
+  .doubt .q{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 0;border-bottom:1px dashed #E7DCC6;font-size:15.5px;color:var(--ink2)}
+  .doubt .q:last-child{border-bottom:0}
+  .doubt .q span{font-family:var(--sans);font-size:11.5px;color:var(--ochre-soft);padding-top:3px}
+
+  /* 图位 */
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .figs.single{grid-template-columns:1fr}
+  .fig{border:1px dashed #CDB99C;background:
+      repeating-linear-gradient(45deg,rgba(205,185,156,.10) 0 6px,transparent 6px 12px);
+    padding:14px 14px 12px}
+  .fig .cap{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:6px}
+  .fig .ph{height:88px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.2em}
+  .fig .ph.img{height:auto;display:block;text-align:center;padding:0;margin:2px 0 0;background:none}
+  .fig .ph.img img{display:inline-block;width:100%;max-width:720px;max-height:none;height:auto;vertical-align:top}
+  .fig .note{text-align:center}
+  .fig > img{display:block;width:100%;max-width:720px;height:auto;margin:2px auto 0}
+  .fig.has-img{border:0;padding:0;background:none}
+  .figcap{max-width:720px;margin:12px auto 0;text-align:center;font-size:11.5px;color:#8A8074;letter-spacing:.05em;line-height:1.7}
+  .rows.wide .row .k.k2{white-space:nowrap}
+  .fig .note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .figsvg{margin-top:12px}
+  .figsvg svg{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+  .fig .prompt{font-size:12px;line-height:1.7;color:var(--ink2);border-top:1px dashed #DCCBB0;padding-top:8px}
+  .fig .prompt b{color:var(--muted);font-weight:400;font-family:var(--sans);letter-spacing:.1em;display:block;margin-bottom:2px}
+
+  /* 页脚 */
+  footer{
+    margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;
+    font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.08em;
+  }
+
+  /* 窄屏 */
+  @media (max-width:640px){
+    .wrap{padding:18px 14px 40px}
+    .leaf{padding:24px 18px 28px}
+    .row{grid-template-columns:58px 1fr;gap:10px}
+    .figsvg svg{max-width:100%}
+    .rows.wide .row{grid-template-columns:76px 1fr}
+    .row .k{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .cards .a,.cards .b{padding:10px;font-size:14px;line-height:1.75}
+    .cards .hd{padding:8px 10px;letter-spacing:.1em}
+    .src{font-size:19px;line-height:2.1}
+    .tzg{grid-template-columns:repeat(5,1fr);gap:8px}
+    .cell span{font-size:31px}
+    .leaf-tag{left:18px}
+  }
+  @media print{
+    body{background:#fff}
+    body::before{display:none}
+    .leaf{box-shadow:none;break-inside:avoid}
+    .fig{border-style:solid}
+  }
+  .note2{display:block;margin-top:4px;font-size:12.5px;color:var(--muted)}
+  .leadline{font-size:14.5px;line-height:2;color:var(--ink2);margin:6px 0 14px}
+  .leadline b{color:var(--ink)}
+
+  /* ==== 排版优化 v2 ==== */
+  p{line-height:2.02}
+  .src{line-height:2.5}
+  rt{color:#9A9084}
+  .toc{margin-top:18px;border:1px solid var(--line);background:#FFFDF6;padding:14px 16px}
+  .toc-t{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:baseline;margin:6px 0}
+  .toc-t .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--ochre);min-width:44px}
+  .toc-t a{font-family:var(--sans);font-size:12px;color:var(--ink2);text-decoration:none;
+    border-bottom:1px solid #E7DCC6;padding:1px 0}
+  .toc-t a:hover{color:var(--ochre);border-color:var(--ochre-soft)}
+  details.prompt{margin-top:8px;border-top:1px dashed #DCCBB0;padding-top:8px}
+  details.prompt summary{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:var(--muted);cursor:pointer;list-style:none}
+  details.prompt summary::-webkit-details-marker{display:none}
+  details.prompt summary::before{content:"＋ "}
+  details.prompt[open] summary::before{content:"－ "}
+  details.prompt p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:8px 0 2px}
+  .fig.has-img{background:none;border-style:solid}
+  .figsvg{padding:8px 0 2px;border-top:1px solid #EFE6D2;margin-top:10px}
+  .figsvg svg{max-width:580px}
+  .cards{display:block;border:1px solid var(--line);background:#FFFDF6;margin-top:12px}
+  .cardshd{display:grid;grid-template-columns:1fr 1fr;font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;border-bottom:1px solid var(--line)}
+  .cardshd span{padding:9px 12px}
+  .cardshd span:first-child{color:var(--muted);border-right:1px solid var(--line)}
+  .cardshd span:last-child{color:var(--ochre)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #E7DCC6}
+  .pair:last-of-type{border-bottom:0}
+  .pair .a{padding:12px;font-size:15px;line-height:1.85;color:#8A8074;border-right:1px solid var(--line)}
+  .pair .b{padding:12px;font-size:15px;line-height:1.85;color:var(--ink)}
+  @media (max-width:640px){
+    .tzg{grid-template-columns:repeat(4,1fr);gap:8px}
+    .tzitem{width:100%}
+    .cell{width:100%;max-width:none}
+    .cell span{font-size:31px}
+    .tzcap{font-size:9.5px;letter-spacing:0;line-height:1.3}
+    .rows.wide .row{grid-template-columns:82px 1fr}
+    .row .k.k2{white-space:normal;font-size:14px;letter-spacing:0;line-height:1.45}
+    .src{line-height:2.45}
+    .toc{padding:12px 12px}
+    .cardshd{display:none}
+    .pair{grid-template-columns:1fr}
+    .pair .a{border-right:0;border-bottom:1px dashed #EADFC9;padding:10px 12px 8px;font-size:14px;color:#9A9084}
+    .pair .a::before{content:"俗见　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:#B5A897}
+    .pair .b{padding:8px 12px 12px;font-size:14.5px}
+    .pair .b::before{content:"正解　";font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;color:var(--ochre-soft)}
+  }
+  .list li{display:block;position:relative;padding-left:30px;counter-increment:n}
+  .list li::before{position:absolute;left:0;top:5px}
+  .list{counter-reset:n}
+  @media print{
+    .leaf.adult{break-before:page}
+    .toc{display:none}
+  }
+  .h3{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin:28px 0 10px;padding-left:11px;border-left:3px solid var(--ochre)}
+
+/* 家长栏：编号窄列 + 正文满宽（双卡 .pair 的 1fr 1fr 不适用于此处） */
+.parent .pair{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.parent .pair .k2{font-size:15px;color:var(--ochre,#A2503B);text-align:center;padding-top:6px;white-space:nowrap;letter-spacing:0}
+.parent .pair .v{font-size:15px;line-height:1.95;color:var(--ink2,#4A443B)}
+@media (max-width:640px){.parent .pair{grid-template-columns:28px 1fr;gap:8px}}
+  .figsvg svg{max-width:470px}
+
+@media(max-width:640px){.figsvg svg{max-width:100%}.tzg{grid-template-columns:repeat(5,1fr);gap:6px}.cell span{font-size:25px}}
+
+/* 四字用例表（附论五） */
+.t4{border:1px solid var(--line);margin-top:12px}
+.t4r{display:grid;grid-template-columns:128px 1fr;border-bottom:1px dashed #E7DCC6;background:#FFFDF6}
+.t4r:last-child{border-bottom:0}
+.t4r:nth-child(even){background:#FBF7EC}
+.zh{display:grid;grid-template-columns:58px 70px;align-items:center;padding:12px 6px}
+.zh .z{font-family:var(--kai);font-size:26px;color:var(--ochre);text-align:center;line-height:1.2}
+.zh .n{font-family:var(--sans);font-size:12px;color:var(--green);text-align:center;letter-spacing:.04em}
+.t4r .u{padding:12px 14px;font-size:14.5px;line-height:1.95;color:var(--ink2)}
+.t4r .u i{font-style:normal;color:var(--muted);font-size:12.5px}
+@media(max-width:640px){
+.t4r{grid-template-columns:1fr;padding:10px 12px}
+.zh{display:flex;gap:10px;align-items:baseline;padding:0 0 6px}
+.zh .z{font-size:24px}
+.t4r .u{padding:0;font-size:14.5px}
+}
+
+/* 窄屏字卡：四格改 2×2，释义换行不压字 */
+@media(max-width:480px){
+  .tzg{grid-template-columns:1fr 1fr;gap:12px 10px;justify-content:stretch}
+  .tzitem{min-width:0;width:100%}
+  .cell{width:100%}
+  .tzcap span{white-space:normal;display:block}
+}
+pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14.5px;line-height:1.9;margin:0}
+.fig .ph{height:auto;min-height:88px;padding:10px 14px;align-items:flex-start;line-height:1.85;font-size:13px}
+.doubt .q:not(:has(span)){grid-template-columns:1fr}
+
+
+
+</style>
+<link rel="manifest" href="/daokedao-lunyu/manifest.webmanifest"><meta name="theme-color" content="#FBF7EC"><link rel="apple-touch-icon" href="/daokedao-lunyu/icon-192.png"></head>
+
+<body>
+
+
+<div class="wrap"><div style="background:#FCFAF6;border-bottom:1px solid #DCD5C8;padding:9px 16px;
+font-family:'Noto Sans SC','PingFang SC',sans-serif;font-size:12px;letter-spacing:.1em;
+display:flex;justify-content:space-between;align-items:center;color:#7C6D5C">
+<span>润泽说 · 道可道之论语 · 通释</span>
+<a href="../index.html" style="color:#994433;text-decoration:none;border:0">← 目录</a></div>
+<div class="mast">
+  <div class="series">润泽说 · 道可道之论语</div>
+  <div class="crumb">上论　先进第十一　第 270 课 / 498</div>
+</div>
+<section class="page">
+  <div class="leaf-tag">少儿页 · 第270课 · 11.5</div>
+  <h1>孝哉闵子骞！人不间于其父母昆弟之言</h1>
+  <div class="h1-sub">先进第十一 · 11.5　第 270 课</div>
+  <div class="src">原文：子曰：「孝哉閔子騫，人不間於其父母皆弟之言。」</div>
+  <div class="h2" id="sc-1">四个关键字</div><div class="tzg" aria-label="四个关键字"><div class="tzitem"><div class="cell">孝哉</div><div class="tzcap">叹其孝</div></div><div class="tzitem"><div class="cell">閔子騫</div><div class="tzcap">德行科之一</div></div><div class="tzitem"><div class="cell">間</div><div class="tzcap">非议、挑缝</div></div><div class="tzitem"><div class="cell">昆弟</div><div class="tzcap">兄弟；底本作「皆弟」</div></div></div>
+  <div class="h2" id="sc-2">一句话讲清</div><div class="scene">孔子说：闵子骞真孝啊！他父母兄弟都这么说，别人想挑毛病，也挑不出来。</div>
+  <div class="h2" id="sc-3">字义小窗</div><div class="rows wide"><div class="row"><div class="k k2">孝</div><div class="v">孝顺父母。</div></div><div class="row"><div class="k k2">閔子騫</div><div class="v">孔子的学生，德行科之一。</div></div><div class="row"><div class="k k2">間</div><div class="v">挑缝、非议。</div></div><div class="row"><div class="k k2">昆弟</div><div class="v">兄弟；底本作「皆弟」，形近之讹。</div></div></div>
+  <div class="h2" id="sc-4">共读</div><div class="scene">闵子骞，孝啊。</div><div class="scene">他父母兄弟都这么说。</div><div class="scene">别人听了。</div><div class="scene">挑不出一点缝。</div>
+  <div class="h2" id="sc-5">生活里的一天</div><div class="scene">家里人说你好，最算数。</div><div class="scene">外人挑不出话，才是真名声。</div>
+  <div class="h2" id="sc-6">三个小问题</div><div class="rows"><div class="row"><div class="k k2">问一</div><div class="v">「间」是什么意思？</div></div><div class="row"><div class="k k2">问二</div><div class="v">为什么先提他父母兄弟的话？</div></div><div class="row"><div class="k k2">问三</div><div class="v">孝不孝，谁说了算？</div></div></div>
+  <div class="h2" id="sc-7">成长小启示</div><div class="rows"><div class="row"><div class="k k2">一</div><div class="v">真本事，家里人最清楚。</div></div><div class="row"><div class="k k2">二</div><div class="v">名声要经得起挑。</div></div><div class="row"><div class="k k2">三</div><div class="v">孝在日常，不在话上。</div></div></div>
+</section>
+
+<section class="page adult">
+  <div class="leaf-tag">成人页 · 第270课 · 11.5</div>
+  <h1>孝哉闵子骞！人不间于其父母昆弟之言</h1>
+  <div class="h1-sub">先进第十一 · 11.5　第 270 课</div>
+  <div class="src">原文：子曰：「孝哉閔子騫，人不間於其父母皆弟之言。」</div>
+  <div class="h2" id="sc-lian">连读</div><div class="scene">上章说颜回之默（11.4），此章说闵子之孝（11.5）：一个是全盘领受而不问，一个是家里人齐口称之而无隙。两章并列，正是德行科的两种样子——向内默识，向外无间。</div>
+  <div class="h2" id="sc-b">字义句读</div><div class="rows wide"><div class="row"><div class="k k2">孝哉</div><div class="v">叹辞，先叹而后言。</div></div><div class="row"><div class="k k2">閔子騫</div><div class="v">孔子弟子，名损，字子骞；德行科之一。</div></div><div class="row"><div class="k k2">間</div><div class="v">隙也、非也；谓非议、挑剔。</div></div><div class="row"><div class="k k2">昆弟</div><div class="v">兄与弟；底本作「皆弟」，「皆」为「昆」之形讹，正文不改。</div></div></div>
+  <div class="h2" id="sc-c">两读</div><div class="scene">「間」字是全章的关键：不是「离间」，是「找缝」。人要说一个人好，最怕别人从缝里挑——说他父母偏私、说他兄弟溢美。此章说：挑不出。</div><div class="scene">「其父母昆弟之言」有两读：一为父母兄弟称其孝之言（本文主）；一为父母兄弟之间无间言（谓家中无隙）。两读一为「人称」，一为「家和无隙」，前者更贴「人不間於…之言」的句法。</div><div class="scene">这一句的分量在「人」字：不是孔子一人说他孝，是连外人都无从非议。圣人之言尚可争，众口无隙则难争——这是《论语》里少见的「以众证一人」的写法。</div><div class="scene">底本 11.5「其父母皆弟」，全书「昆」0 见、「昆弟」0 见，通行作「昆弟」，「皆」当「昆」之形讹；正文照底本，页内注明，不改。</div><div class="scene">文本内证：「閔子騫」4 见落 2 章（6.9、11.3、11.5、11.14）；「間」4 见落 3 章（4.5、8.21、11.5、11.26）；「孝哉」1 见仅本章（孤例）。</div>
+  <div class="h2" id="sc-d">章旨</div><div class="scene">孝之实，在家人齐口而外人无隙。</div>
+  <div class="h2" id="sc-e">三层</div><div class="rows wide"><div class="row"><div class="k k2">第一层</div><div class="v">孝哉——先叹。</div></div><div class="row"><div class="k k2">第二层</div><div class="v">閔子騫——指名。</div></div><div class="row"><div class="k k2">第三层</div><div class="v">其父母昆弟之言——家人称之。</div></div><div class="row"><div class="k k2">第四层</div><div class="v">人不間——外人无隙。</div></div></div>
+  <div class="scene">四层是先叹、指名、举证、验诸众口：先叹其孝，再点其人，再举家里人的话为证，最后以外人无从挑剔作验。一证一验，孝才落地——不是自己说的，也不是老师说，是家里人说了、外人认了。</div>
+  <div class="h2" id="sc-h">存疑</div><div class="doubt"><div class="q">「皆弟」：底本作「皆」，当为「昆」之形讹（全书「昆」0 见、「昆弟」0 见，通行作「昆弟」）；正文照底本，页内注明，不改字。</div><div class="q">「人不間於其父母昆弟之言」两读：外人于其家人称孝之言无可非议（本文主）；家人之间无隙言（一说）。两存，从前说。</div><div class="q">「間」之释：非也、隙也（本文主，朱注以「非」解）；一说「间」为离间。本章从「挑缝」一路。</div><div class="q">校记：底本「孝哉閔子騫，人不間於其父母皆弟之言」，「孝哉」下底本有逗，通行或作「孝哉閔子騫！」；只记存疑，不改字。</div></div>
+  <div class="h2" id="sc-i">双卡</div><div class="cards"><div class="pair"><div class="a">叹：孝哉</div><div class="b">证：家人之言</div></div><div class="pair"><div class="a">验：外人无隙</div><div class="b">实：日常之行</div></div><div class="pair"><div class="a">11.3 德行科</div><div class="b">11.5 其一</div></div><div class="pair"><div class="a">11.4 向内默</div><div class="b">11.5 向外无间</div></div></div>
+  <div class="h2" id="sc-j">跨典</div><div class="cards"><div class="pair"><div class="a">《先进》11.3「德行：閔子騫」</div><div class="b">德行科四人之一。</div></div><div class="pair"><div class="a">《雍也》6.9「閔子騫，不仕大夫」</div><div class="b">孝之外，另有其守。</div></div><div class="pair"><div class="a">《先进》11.14「閔子侍側」</div><div class="b">「閔子騫」四见之一。</div></div><div class="pair"><div class="a">《学而》1.11「三年無改於父之道」</div><div class="b">孝之另一面。</div></div></div>
+  <div class="h2" id="sc-19">图一　一门之内，众人皆言其孝</div><div class="figs single"><div class="fig"><div class="cap">图一 · 一门之内，众人皆言其孝</div><div class="ph">图位：竖幅 3:4 水墨。一座旧宅门内，一青年男子立于庭中，衣褐朴素，手捧一器，神色恭；其侧一老父、一老母坐于阶上，一兄一弟立于旁，五人皆向其，神色和。门外立二三人，探头而视，一人摇首，一人点头，无一有讥色。画面零文字。</div></div></div><details class="prompt"><summary>提示词（存档）</summary><pre>竖幅中国古风淡彩水墨插图，暖米白纸本，墨色克制、留白充足，赭红与青灰点缀。一座旧宅门内，庭院素净，阶上有苔。一青年男子立于庭中，衣褐朴素、束发无冠，双手捧一只陶器，神色恭敬，身微前倾；阶上坐一老父与一老母，皆素衣，向其而视，神色和悦；一侧立一兄一弟，年岁相若，亦向其。门外立二三人，只露半身，探头而视：一人摇首，一人颔首，一人手拢于袖，三人皆无讥笑之色。整体低饱和，青灰用于阶与门，赭石点于陶器与衣缘，笔触淡墨渲染，纸面微纹理。画面不出现任何文字、门额题字、器物铭文、题款或印章。</pre></details>
+  <div class="h2" id="sc-20">义理图一</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="叹证验实四段">  <rect x="15" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="61" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">叹：孝哉</text>  <text x="61" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">先叹后言</text>  <rect x="120" y="56" width="92" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="166" y="88" text-anchor="middle" font-size="12" fill="#8A8074">证：家人之言</text>  <text x="166" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">父母昆弟</text>  <rect x="225" y="56" width="92" height="86" fill="#FFFDF6" stroke="#A2503B"/>  <text x="271" y="88" text-anchor="middle" font-size="12" fill="#A2503B">验：人不間</text>  <text x="271" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">外人无隙</text>  <rect x="330" y="56" width="92" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="376" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">实：在日常</text>  <text x="376" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">非在言语</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">不是自己说的，也不是老师说的</text></svg></div><div class="figcap">义理图一 · 一证一验</div>
+  <div class="h2" id="sc-21">义理图二</div><div class="figsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="家人与外人两栏">  <rect x="40" y="56" width="150" height="86" fill="#FFFDF6" stroke="#8A8074"/>  <text x="115" y="88" text-anchor="middle" font-size="12" fill="#8A8074">家人的话：偏私？</text>  <text x="115" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">最易被挑</text>  <rect x="250" y="56" width="150" height="86" fill="#FFFDF6" stroke="#4A5C55"/>  <text x="325" y="88" text-anchor="middle" font-size="12" fill="#4A5C55">外人的口：无隙</text>  <text x="325" y="112" text-anchor="middle" font-size="9.5" fill="#8A8074">最难被争</text>  <text x="220" y="182" text-anchor="middle" font-size="10.5" fill="#2F2A24">圣人之言尚可争，众口无隙则难争</text></svg></div><div class="figcap">义理图二 · 证与验</div>
+  <div class="h2" id="sc-22">附论一</div><div class="scene">四层是先叹、指名、举证、验诸众口：家里人说了，外人也认了，孝才落地。</div>
+  <div class="h2" id="sc-23">附论二</div><div class="scene">这一章的分量全在一个「人」字。孔子夸人，多是「贤哉」「善哉」一类，独此处把证据摆出来：他父母兄弟说他孝，别人挑不出缝。这里面有一层很硬的社会经验——一个人若只有老师说好、自己说好，众口必疑；若连最亲近、最有资格偏私的家人都齐口称之，而外人又挑不出，那便是真的。今人评人，常看自己人的评价，也常疑自己人的评价；此章给出的解法是：既要家里人的话，也要外人的无话可说。两样都有，才算落地。</div>
+  <div class="cardhint">数证（底本 refs/lunyu-baiwen.txt，白文全本繁简互校）</div><div class="rows"><div class="row"><div class="k k2">孝哉</div><div class="v">全书 1 见，仅本章；孤例。</div></div><div class="row"><div class="k k2">閔子騫</div><div class="v">全书 4 见，分落 2 章（6.9、11.3、11.5、11.14）。</div></div><div class="row"><div class="k k2">間</div><div class="v">全书 4 见，分落 3 章（4.5、8.21、11.5、11.26）。</div></div><div class="row"><div class="k k2">昆／昆弟</div><div class="v">全书「昆」0 见、「昆弟」0 见；底本 11.5 作「皆弟」——形讹。</div></div><div class="row"><div class="k k2">皆</div><div class="v">全书 16 见；本章 1 见（当为「昆」）。</div></div><div class="row"><div class="k k2">命令</div><div class="v">要核：grep -o 昆 refs/lunyu-baiwen.txt | wc -l 应得 0；grep -o 皆弟 应得 1。</div></div></div>
+  <footer><div class="foot-l">润泽说 · 道可道之论语　v0.16.02</div><div class="foot-r">第 270 课 / 498</div></footer>
+</section>
+</div>
+</body>
+</html>
