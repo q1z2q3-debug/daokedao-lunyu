@@ -149,6 +149,19 @@ def main():
                      lambda m: "## 8.%d　%s" % (int(m.group(1)) - 187, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 子罕篇（9.1 起）母本入库于 manuscript/zi-han/NN-*.md，课号 209 对应 9.1
+    def _k9(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (9, int(m.group(1)) - 208) if m else (99, 99)
+
+    zh = sorted(glob.glob(os.path.join(ROOT, "manuscript", "zi-han", "*.md")), key=_k9)
+    for path in zh:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 9.%d　%s" % (int(m.group(1)) - 208, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
 
     version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
@@ -171,6 +184,8 @@ def main():
         seg.append("述而%s章" % cn(len(se)))
     if tb:
         seg.append("泰伯%s章" % cn(len(tb)))
+    if zh:
+        seg.append("子罕%s章" % cn(len(zh)))
     published = " + ".join(seg) if len(seg) - 4 else " + ".join(seg)
     head = HEAD.format(published=published, version=version, detail="、".join(seg))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
