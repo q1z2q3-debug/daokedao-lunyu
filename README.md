@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.32**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**十二章（19.1–19.12）**，全书已刊 **494 课**（前言一篇 + 493 章）。
+- 当前版本 **v0.16.33**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**十六章（19.1–19.16）**，全书已刊 **498 课**（前言一篇 + 497 章）。
 
 ---
 
@@ -532,6 +532,10 @@
 | 第四百九十二课 | 信而後勞其民 | 信为事序：不信则劳成厉、谏成谤。 | [492](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/492.html) |
 | 第四百九十三课 | 大德不踰閑 | 大不逾闲、小可出入：立界而不苛。 | [493](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/493.html) |
 | 第四百九十四课 | 子夏之門人小子 | 末非无本，教有先后：区以别则不可诬。 | [494](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/494.html) |
+| 第四百九十五课 | 仕而優則學 | 仕学相回环：余力则转，转则不滞。 | [495](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/495.html) |
+| 第四百九十六课 | 喪致乎哀而止 | 致而不止则伤，止而不致则薄。 | [496](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/496.html) |
+| 第四百九十七课 | 吾友張也 | 许其能而指其未：分层非贬。 | [497](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/497.html) |
+| 第四百九十八课 | 堂堂乎張也 | 盛而难并：德须与人共。 | [498](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/498.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

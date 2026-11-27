@@ -499,6 +499,10 @@
 - 第492课｜子夏曰：「君子信而後勞其民；未信，則以爲厲己也。」｜信为事序：不信则劳成厉、谏成谤。义理图一「信为事序」，图二「厉与使」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/492.html
 - 第493课｜子夏曰：「大德不踰閑，小德出入可也。」｜大不逾闲、小可出入：立界而不苛。义理图一「大德之闲」，图二「纵与苛」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/493.html
 - 第494课｜子游曰：「子夏之門人小子，當洒掃，應對，進退，則可矣。」｜末非无本，教有先后；区以别则不可诬。义理图一「本末与先后」，图二「诬与当」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/494.html
+- 第495课｜子夏曰：「仕而優則學，學而優則仕。」｜仕学相回环，余力则转。义理图一「仕学回环」，图二「陋与空」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/495.html
+- 第496课｜子游曰：「喪致乎哀而止。」｜致而不止则伤，止而不致则薄。义理图一「致与止」，图二「任与节」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/496.html
+- 第497课｜子游曰：「吾友張也，爲難能也；然而未仁。」｜许其能而指其未：分层非贬。义理图一「能与未」，图二「掩与指」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/497.html
+- 第498课｜曾子曰：「堂堂乎張也！難與並爲仁矣。」｜盛而难并：德须与人共。义理图一「堂堂与并」，图二「退与并」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/498.html
 
 ## 专题
 - 论文一｜君子与小人：孔子语汇的定义与判准｜以 2.14 为起点：君子 108 见／小人 24 见／同章共见 18 条；由位至德的词义迁移；小人三义（德义 20／身份 3／谦称 0）；判准收敛为义利一纲。三图、四表、三附录。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/6.html
@@ -511,7 +515,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.16.32，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.16.33，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
