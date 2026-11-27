@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.30**。下论第十七《阳货》**二十六章（17.1–17.26，收篇）**、第十八《微子》**十一章（18.1–18.11，收篇）**，全书已刊 **482 课**（前言一篇 + 481 章）。
+- 当前版本 **v0.16.31**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**六章（19.1–19.6）**，全书已刊 **488 课**（前言一篇 + 487 章）。
 
 ---
 
@@ -520,6 +520,12 @@
 | 第四百八十课 | 大師摯適齊 | 八人八向：非一人之失，是一体之散。 | [480](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/480.html) |
 | 第四百八十一课 | 周公謂魯公 | 四句之次：不弃其旧，不责其全。 | [481](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/481.html) |
 | 第四百八十二课 | 周有八士 | 四序两轮：有法有人，则政可。 | [482](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/482.html) |
+| 第四百八十三课 | 士見危致命 | 四思临事：可已者，立足以待。 | [483](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/483.html) |
+| 第四百八十四课 | 執德不弘 | 执而不弘、信而不笃，有等于无。 | [484](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/484.html) |
+| 第四百八十五课 | 子夏之門人問交 | 拒以守界，容以修己：二说相济。 | [485](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/485.html) |
+| 第四百八十六课 | 雖小道 | 许其有，断其止：不专不为业。 | [486](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/486.html) |
+| 第四百八十七课 | 日知其所亡 | 日进月守：知缺而守得。 | [487](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/487.html) |
+| 第四百八十八课 | 博學而篤志 | 四事为路，仁在其中：几而非即。 | [488](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/488.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

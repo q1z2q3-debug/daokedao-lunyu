@@ -279,6 +279,19 @@ def main():
                      lambda m: "## 18.%d　%s" % (int(m.group(1)) - 471, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 子张篇（19.1 起）母本入库于 manuscript/zi-zhang/NN-*.md，课号 483 对应 19.1
+    def _k19(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (19, int(m.group(1)) - 482) if m else (99, 99)
+
+    zz = sorted(glob.glob(os.path.join(ROOT, "manuscript", "zi-zhang", "*.md")), key=_k19)
+    for path in zz:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 19.%d　%s" % (int(m.group(1)) - 482, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
 
     version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
