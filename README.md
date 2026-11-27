@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.34**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**二十章（19.1–19.20）**，全书已刊 **502 课**（前言一篇 + 501 章）。
+- 当前版本 **v0.16.35**。下论第十七《阳货》二十六章、第十八《微子》十一章、第十九《子张》**二十五章**（三篇俱收篇），全书已刊 **507 课**（前言一篇 + 506 章）。
 
 ---
 
@@ -540,6 +540,11 @@
 | 第五百课 | 孟莊子之孝 | 不改父之臣政：难在克己，不在守旧。 | [500](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/500.html) |
 | 第五百零一课 | 上失其道民散久矣 | 得情而哀：心法先于术。 | [501](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/501.html) |
 | 第五百零二课 | 紂之不善 | 恶归下流：戒自处，非为纣辩。 | [502](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/502.html) |
+| 第五百零三课 | 君子之過也 | 食而必复：过在明处，改亦在明处。 | [503](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/503.html) |
+| 第五百零四课 | 仲尼焉學 | 道在人不在地：师无常而学无外。 | [504](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/504.html) |
+| 第五百零五课 | 譬之宮牆 | 墙高则门深：墙外之断非断。 | [505](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/505.html) |
+| 第五百零六课 | 仲尼不可毀也 | 日月不可逾：毁者自见其量。 | [506](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/506.html) |
+| 第五百零七课 | 夫子之不可及也 | 言不慎则师受诬：天无阶，故不可升。 | [507](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/507.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
