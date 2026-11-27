@@ -6,3 +6,7 @@ __pycache__/
 dist/*.html
 dist/*.json
 dist/fig-png/
+dist/apk-lunyu/build/
+dist/apk-lunyu/.debug.keystore
+dist/apk-lunyu/app/src/main/assets/
+*.idsig

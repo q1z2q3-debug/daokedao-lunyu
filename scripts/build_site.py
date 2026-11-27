@@ -1053,6 +1053,14 @@ def build_index():
 <p class="lead">按课次顺序；每件都有少儿页与成人页，另附义理图。</p>
 <div class="list">%s</div>
 <a class="btn" href="book.html">从卷首读起（封面 · 扉页 · 前言）</a>
+<!-- apk-dl:start -->
+<div class="apk-dl" style="margin:26px 0 6px;padding:16px 18px;border:1px solid #DCD5C8;background:#FCFAF6;border-radius:2px">
+  <div style="font-size:12px;letter-spacing:.18em;color:#7C6D5C;margin-bottom:8px">安 卓 安 装 包 · APK</div>
+  <a href="dl/daokedao-lunyu-v0.16.42.apk" style="font-size:15.5px;border-bottom:1px solid #994433">道可道之论语 v0.16.42　下载安装（23.5 MB）</a>
+  <div style="font-size:12.5px;color:#7C6D5C;line-height:1.8;margin-top:6px">离线全本：首页、卷首、511 课与专题八篇一并收在包内，插图内嵌、宋体内置，飞行模式可读；不申请任何权限。校验值见 <a href="dl/SHA256SUMS.txt">SHA256SUMS</a>。</div>
+</div>
+<!-- apk-dl:end -->
+
 
 <h2>专题<small>不释经，只深读一处</small></h2>
 <p class="lead">专题不按章次走：一处读透，向下几层。</p>
