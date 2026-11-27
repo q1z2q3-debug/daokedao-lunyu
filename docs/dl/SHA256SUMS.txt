@@ -1,1 +1,2 @@
 ebd4ca62b0024de9d8ff9d30ac9bd967f0fe7655e9ef3ec284b7de6b5b4f74de  daokedao-lunyu-v0.16.42.apk
+d05a839f95b13fdcb189de052b1cdf0f07294d1a42f29b424943cd7458a97d42  daokedao-lunyu-v0.16.43.apk

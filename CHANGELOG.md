@@ -1,3 +1,10 @@
+## v0.16.43 · 首页口径纠正 · APK 重出
+
+- 首页统计纠正：`build_site.py` 模板原写死「全书 498 章／已刊 274 件」，与正文「已刊五百一十课」自相矛盾；改为「全书 510 章／已刊 510 课」，与 `COURSES` 实有 510 课一致。
+- 页头与文案去「连载」：页头九篇名改为「二十篇 · 五百一十章　全刊」；卷首小字长串篇名收为「二十篇 · 五百一十章 · 全书完篇；另出专题八篇、论文三篇」；页脚、`ld+json` 描述、`title`、`llms.txt` 里的「全书四百九十八章／按篇连载／连载中」一并改正。
+- APK 重出：`versionCode 16043`、`versionName 0.16.43`，包内首页随新文案；`docs/dl/` 换 `daokedao-lunyu-v0.16.43.apk` 并重算 `SHA256SUMS.txt`。
+- 首包 23.5 MB（`dist/道可道之论语-v0.16.42.apk`）确认为 v0.16.42 之前的第一版：多带 `ke/_shots` 24 张工作截图、字体名未统一，保留原处不删，正式分发以 `dist/daokedao-lunyu-*.apk` 为准。
+
 ## v0.16.42 · 安卓安装包（APK）· 内嵌宋体离线全本
 
 - 新建 `dist/apk-lunyu/`：WebView 宿主 + 全站资产，包名 `com.runze.daokedaolunyu`，minSdk 21／targetSdk 35，**零权限**；`versionCode 16042`、`versionName 0.16.42`。
