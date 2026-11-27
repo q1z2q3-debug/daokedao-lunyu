@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.27**。下论第十七《阳货》起，**前十章已成篇（17.1–17.10）**，全书已刊 **455 课**（前言一篇 + 454 章）。下论第十六《季氏》**十六章（16.1–16.14，收篇）**，全书已刊 **445 课**（前言一篇 + 444 章）。：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.28**。下论第十七《阳货》**二十章已成篇（17.1–17.20）**，全书已刊 **465 课**（前言一篇 + 464 章）。下论第十七《阳货》起，**前十章已成篇（17.1–17.10）**，全书已刊 **455 课**（前言一篇 + 454 章）。下论第十六《季氏》**十六章（16.1–16.14，收篇）**，全书已刊 **445 课**（前言一篇 + 444 章）。：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -493,6 +493,16 @@
 | 第四百五十三课 | 六言六蔽 | 过不在德，在不好学：德无学则偏。 | [453](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/453.html) |
 | 第四百五十四课 | 詩可以興 | 诗之教：四用二事一识。 | [454](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/454.html) |
 | 第四百五十五课 | 女爲周南召南矣乎 | 基不立则行无自：面墙非无路，是不见路。 | [455](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/455.html) |
+| 第四百五十六课 | 禮云禮云 | 币者器，敬者实：文存质亡则虚。 | [456](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/456.html) |
+| 第四百五十七课 | 色厲而內荏 | 厉为幕，荏为实：幕厚则实露。 | [457](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/457.html) |
+| 第四百五十八课 | 鄉原，德之賊也 | 贼不在恶，在似：无守之厚，乱德之辨。 | [458](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/458.html) |
+| 第四百五十九课 | 道聽而塗說 | 听浅出易，无畜则日损：弃者自弃。 | [459](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/459.html) |
+| 第四百六十课 | 鄙夫可與事君也與哉 | 患得患失，一心两端：患夺其守。 | [460](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/460.html) |
+| 第四百六十一课 | 古者民有三疾 | 古疾自伤，今疾伤人：真偏可教，伪偏难医。 | [461](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/461.html) |
+| 第四百六十二课 | 巧言令色 | 一「少」字留地：以言取人者，不仁。 | [462](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/462.html) |
+| 第四百六十三课 | 惡紫之奪朱 | 三恶一律：以似乱真，起微成巨。 | [463](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/463.html) |
+| 第四百六十四课 | 予欲無言 | 言之教有尽，行之教无尽：天不言而成。 | [464](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/464.html) |
+| 第四百六十五课 | 孺悲欲見孔子 | 辞以避面，歌以告实：拒而不欺。 | [465](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/465.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

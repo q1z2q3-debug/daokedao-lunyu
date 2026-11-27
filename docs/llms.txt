@@ -460,6 +460,16 @@
 - 第453课｜子曰：「由也，女聞六言六蔽矣乎？」｜仁愚、知荡、信贼、直绞、勇乱、刚狂：六美皆材，学为之匠。义理图一「六美六蔽」，图二「偏与节」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/453.html
 - 第454课｜子曰：「小子！何莫學夫詩？詩：可以興，可以觀，可以群，可以怨。」｜四用二事一识：诗之教由心及伦及物。义理图一「四用一诗」，图二「谤与诗」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/454.html
 - 第455课｜子謂伯魚曰：「女爲《周南》《召南》矣乎？」｜不为二南则正墙面而立：基不立则行无自。义理图一「面墙而立」，图二「塞与行」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/455.html
+- 第456课｜子曰：「禮云禮云！玉帛云乎哉！樂云樂云！鍾鼓云乎哉！」｜礼乐有器有意：币者器，敬者实。义理图一「币与心」，图二「虚与实」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/456.html
+- 第457课｜子曰：「色厲而內荏，譬諸小人，其猶穿窬之盜也與！」｜厉为幕，荏为实：外防内空，畏人见。义理图一「幕与空囊」，图二「空与实」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/457.html
+- 第458课｜子曰：「鄉原，德之賊也！」｜乡原似德而无守，以无不可乱有可否。义理图一「似与真」，图二「乱与立」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/458.html
+- 第459课｜子曰：「道聽而塗說，德之棄也！」｜听浅出易，无畜则日损：弃者自弃。义理图一「听与说之间」，图二「损与厚」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/459.html
+- 第460课｜子曰：「鄙夫！可與事君也與哉？其未得之也，患得之……」｜患得患失，一心两端；患夺其守。义理图一「两端一患」，图二「失与安」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/460.html
+- 第461课｜子曰：「古者民有三疾，今也或是之亡也。古之狂也肆，今之狂也蕩……」｜狂肆→荡、矜廉→忿戾、愚直→诈：古疾自伤，今疾伤人。义理图一「三对六形」，图二「教与医」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/461.html
+- 第462课｜子曰：「巧言令色，鮮矣仁。」｜与 1.3 重出：同句两记，各系其时。义理图一「同句两处」，图二「取与达」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/462.html
+- 第463课｜子曰：「惡紫之奪朱也。惡鄭聲之亂雅樂也。惡利口之覆邦家者。」｜三恶一律：以似乱真，起微成巨。义理图一「三似三乱」，图二「夺与守」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/463.html
+- 第464课｜子曰：「予欲無言！」子貢曰：「子如不言，則小子何述焉？」｜天何言哉，四时行百物生：言之教有尽，行之教无尽。义理图一「不言而成」，图二「尽与无尽」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/464.html
+- 第465课｜孺悲欲見孔子，孔子辭以疾。將命者出戶，取瑟而歌，使之聞之。｜辞以避面，歌以告实：拒而不欺。义理图一「门限之声」，图二「疑与明」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/465.html
 
 ## 专题
 - 论文一｜君子与小人：孔子语汇的定义与判准｜以 2.14 为起点：君子 108 见／小人 24 见／同章共见 18 条；由位至德的词义迁移；小人三义（德义 20／身份 3／谦称 0）；判准收敛为义利一纲。三图、四表、三附录。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/6.html
@@ -472,7 +482,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.16.27，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.16.28，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
