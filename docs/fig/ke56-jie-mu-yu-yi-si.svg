@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="节目托住意思，存节目以存其意">
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" viewBox="0 0 440 220" role="img" aria-label="节目托住意思，存节目以存其意">
   <rect x="150" y="40" width="140" height="50" fill="#FBF7EC" stroke="#4A5C55"/>
   <text x="220" y="70" text-anchor="middle" font-size="12.5" fill="#4A5C55">意思 · 礼之意</text>
   <rect x="120" y="120" width="200" height="50" fill="#FFFDF6" stroke="#A2503B"/>

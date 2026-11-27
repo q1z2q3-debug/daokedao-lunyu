@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-label="射的两套标准：中与容体，力与贯革">
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="220" viewBox="0 0 440 220" role="img" aria-label="射的两套标准：中与容体，力与贯革">
   <rect x="40" y="46" width="150" height="74" fill="#FFFDF6" stroke="#4A5C55"/>
   <text x="115" y="76" text-anchor="middle" font-size="12.5" fill="#4A5C55">礼射</text>
   <text x="115" y="100" text-anchor="middle" font-size="10" fill="#8A8074">中与容体</text>
