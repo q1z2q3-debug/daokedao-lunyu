@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-label="四字一链：学为受、思为发，共系一心；学而不思成罔，思而不学成殆" style="max-width:720px">
+<defs><marker id="a30c" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#8A8074"/></marker></defs>
+<circle cx="100" cy="80" r="40" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.4"/>
+<text x="100" y="76" text-anchor="middle" font-size="21" fill="#8C5E2A">学</text>
+<text x="100" y="98" text-anchor="middle" font-size="13.5" fill="#6E665A">受 · 纳外</text>
+<circle cx="360" cy="80" r="34" fill="none" stroke="#A2503B" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="360" y="86" text-anchor="middle" font-size="19" fill="#A2503B">心</text>
+<circle cx="620" cy="80" r="40" fill="#FCF8EF" stroke="#A2503B" stroke-width="1.4"/>
+<text x="620" y="76" text-anchor="middle" font-size="21" fill="#A2503B">思</text>
+<text x="620" y="98" text-anchor="middle" font-size="13.5" fill="#6E665A">发 · 内绎</text>
+<path d="M144 80 L320 80" stroke="#8A8074" stroke-width="1.3" fill="none" marker-end="url(#a30c)"/>
+<path d="M398 80 L572 80" stroke="#8A8074" stroke-width="1.3" fill="none" marker-end="url(#a30c)"/>
+<text x="232" y="66" text-anchor="middle" font-size="13.5" fill="#8A8074">学以立其体</text>
+<text x="488" y="66" text-anchor="middle" font-size="13.5" fill="#8A8074">思以致其用</text>
+<path d="M220 118 L240 162" stroke="#8A8074" stroke-width="1.2" fill="none" marker-end="url(#a30c)"/>
+<path d="M500 118 L480 162" stroke="#8A8074" stroke-width="1.2" fill="none" marker-end="url(#a30c)"/>
+<text x="192" y="146" text-anchor="middle" font-size="13" fill="#8A8074">学而不思</text>
+<text x="528" y="146" text-anchor="middle" font-size="13" fill="#8A8074">思而不学</text>
+<circle cx="240" cy="202" r="36" fill="#EFE9DC" stroke="#C9BEAE" stroke-width="1.2"/>
+<text x="240" y="198" text-anchor="middle" font-size="20" fill="#5F564A">罔</text>
+<text x="240" y="218" text-anchor="middle" font-size="13" fill="#6E665A">昏 · 无得</text>
+<circle cx="480" cy="202" r="36" fill="#F5E6DF" stroke="#C58A73" stroke-width="1.2"/>
+<text x="480" y="198" text-anchor="middle" font-size="20" fill="#A2503B">殆</text>
+<text x="480" y="218" text-anchor="middle" font-size="13" fill="#A2503B">危 · 不安</text>
+<text x="360" y="254" text-anchor="middle" font-size="14" fill="#6E665A">病不在学，亦不在思，在「只有一样」</text>
+</svg>

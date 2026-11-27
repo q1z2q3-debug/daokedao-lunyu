@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ke24 图一 在场与退后：测点挪一步 -->
+<svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 在场与退后：测点挪一步</text>
+<rect x="16" y="44" width="176" height="118" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="30" y="66" font-size="10.5" fill="#5C5347">在场 · 言终日</text>
+<line x1="30" y1="74" x2="178" y2="74" stroke="#DCD5C8"/>
+<text x="30" y="96" font-size="13.5" fill="#2F2A24">不违</text>
+<text x="30" y="116" font-size="10" fill="#5C5347">问难：无</text>
+<text x="30" y="132" font-size="10" fill="#5C5347">所见他：如愚</text>
+<text x="30" y="152" font-size="10.5" fill="#A2503B">信号＝零</text>
+<rect x="208" y="44" width="176" height="118" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="222" y="66" font-size="10.5" fill="#5C5347">退后 · 省其私</text>
+<line x1="222" y1="74" x2="370" y2="74" stroke="#DCD5C8"/>
+<text x="222" y="96" font-size="13.5" fill="#A2503B">足以发</text>
+<text x="222" y="116" font-size="10" fill="#5C5347">独处：燕居何为</text>
+<text x="222" y="132" font-size="10" fill="#5C5347">对人：与二三子说绎</text>
+<text x="222" y="152" font-size="10.5" fill="#A2503B">所见他：不愚</text>
+<text x="200" y="102" font-size="15" fill="#A2503B" text-anchor="middle">→</text>
+<text x="200" y="176" font-size="9.5" fill="#8A8074" text-anchor="middle">同一个人的同一件事，只换了个时候看</text>
+<line x1="16" y1="192" x2="384" y2="192" stroke="#8A8074"/>
+<text x="200" y="210" font-size="10.5" fill="#5C5347" text-anchor="middle">当场收得到「反应」，退后才收得到「学问」</text>
+<text x="200" y="232" font-size="10.5" fill="#A2503B" text-anchor="middle">「亦足以发，回也不愚」——判在发，不判在懂</text>
+<text x="200" y="254" font-size="9" fill="#8A8074" text-anchor="middle">朱子：私，谓燕居独处　｜　孔安国：退与二三子说绎道义</text>
+<text x="200" y="274" font-size="9" fill="#8A8074" text-anchor="middle">两读并存：一个人的生活，两面才全</text>
+</svg>

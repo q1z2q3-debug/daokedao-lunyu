@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ke23 图二 三句：一个标准，两个反例，一句反问 -->
+<svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" font-family="serif">
+<text x="16" y="24" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 一个标准，两个反例，一句反问</text>
+<rect x="16" y="38" width="368" height="72" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="32" y="63" font-size="15" fill="#A2503B">色难</text>
+<text x="358" y="63" text-anchor="end" font-size="10" fill="#8A8074">立标</text>
+<text x="32" y="84" font-size="10" fill="#5C5347">标准立在「最难」处：把心里的敬送到对方眉间</text>
+<text x="32" y="102" font-size="10" fill="#8A8074">难在整条链，不在最后那一格</text>
+<text x="16" y="128" font-size="10" fill="#8A8074">两个反例——都到「事」，都不到「人」</text>
+<rect x="16" y="138" width="176" height="62" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="30" y="162" font-size="13.5" fill="#2F2A24">服其劳</text>
+<text x="30" y="182" font-size="10" fill="#5C5347">手 · 替他做</text>
+<text x="30" y="196" font-size="10" fill="#8A8074">可外包：雇得到</text>
+<rect x="208" y="138" width="176" height="62" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="222" y="162" font-size="13.5" fill="#2F2A24">先生馔</text>
+<text x="222" y="182" font-size="10" fill="#5C5347">口 · 先让他吃</text>
+<text x="222" y="196" font-size="10" fill="#8A8074">可外包：办得到</text>
+<text x="200" y="222" text-anchor="middle" font-size="10.5" fill="#A2503B">↓ 只做到这两件，够不够？</text>
+<rect x="16" y="232" width="368" height="44" fill="none" stroke="#A2503B" stroke-dasharray="4 4"/>
+<text x="200" y="258" text-anchor="middle" font-size="13.5" fill="#A2503B">「曾是以为孝乎？」</text>
+<text x="200" y="292" text-anchor="middle" font-size="10" fill="#8A8074">反问不答：孔子把判词留给你</text>
+</svg>

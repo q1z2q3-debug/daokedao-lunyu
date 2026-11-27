@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif" role="img" aria-label="义理图一 三察：一层比一层深">
+<text x="14" y="108" font-size="10.5" fill="#8A8074">深</text>
+<line x1="26" y1="228" x2="26" y2="116" stroke="#B9B0A2"/>
+<line x1="21" y1="124" x2="26" y2="114" stroke="#DCD5C8"/>
+<line x1="31" y1="124" x2="26" y2="114" stroke="#DCD5C8"/>
+<rect x="48" y="186" width="112" height="44" fill="#FFFDF6" stroke="#DCD5C8"/>
+<text x="60" y="207" font-size="14" fill="#2F2A24">视 · 以</text>
+<text x="60" y="223" font-size="10.5" fill="#5C5347">他做什么</text>
+<rect x="160" y="142" width="112" height="88" fill="#FCF8EF" stroke="#DCD5C8"/>
+<text x="172" y="163" font-size="14" fill="#2F2A24">观 · 由</text>
+<text x="172" y="180" font-size="10.5" fill="#5C5347">从哪儿来</text>
+<text x="172" y="196" font-size="10.5" fill="#8A8074">为什么做</text>
+<text x="172" y="212" font-size="10.5" fill="#8A8074">走哪条路</text>
+<rect x="272" y="98" width="112" height="132" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="284" y="119" font-size="14" fill="#A2503B">察 · 安</text>
+<text x="284" y="136" font-size="10.5" fill="#5C5347">他落哪儿</text>
+<text x="284" y="152" font-size="10.5" fill="#8A8074">没事时想什么</text>
+<text x="284" y="168" font-size="10.5" fill="#8A8074">能不能久</text>
+<text x="284" y="222" font-size="10" fill="#A2503B">最难见，最可信</text>
+<line x1="16" y1="244" x2="384" y2="244" stroke="#8A8074"/>
+<text x="200" y="264" font-size="11" fill="#5C5347" text-anchor="middle">视其所以　观其所由　察其所安</text>
+<text x="200" y="284" font-size="9.5" fill="#8A8074" text-anchor="middle">三层不是三件事，是三段时间：现在／来路／长久</text>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280" role="img" aria-label="两个圆：周以事为心照一圈，比以我为心只照一小堆" style="max-width:520px">
+<defs><marker id="a29a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+<text x="110" y="42" text-anchor="middle" font-size="14" fill="#3A342B">周</text>
+<text x="110" y="58" text-anchor="middle" font-size="9" fill="#8A8074">普遍 · 一圈都到</text>
+<circle cx="110" cy="132" r="74" fill="none" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="110" cy="132" r="50" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.3"/>
+<circle cx="110" cy="132" r="3" fill="#A8763E"/>
+<text x="110" y="136" text-anchor="middle" font-size="9.5" fill="#8C5E2A">事</text>
+<circle cx="110.0" cy="58.0" r="3.2" fill="#A8763E"/>
+<circle cx="162.3" cy="79.7" r="3.2" fill="#A8763E"/>
+<circle cx="184.0" cy="132.0" r="3.2" fill="#A8763E"/>
+<circle cx="162.3" cy="184.3" r="3.2" fill="#A8763E"/>
+<circle cx="110.0" cy="206.0" r="3.2" fill="#A8763E"/>
+<circle cx="57.7" cy="184.3" r="3.2" fill="#A8763E"/>
+<circle cx="36.0" cy="132.0" r="3.2" fill="#A8763E"/>
+<circle cx="57.7" cy="79.7" r="3.2" fill="#A8763E"/>
+<text x="290" y="42" text-anchor="middle" font-size="14" fill="#3A342B">比</text>
+<text x="290" y="58" text-anchor="middle" font-size="9" fill="#8A8074">偏党 · 只照一小堆</text>
+<circle cx="290" cy="132" r="74" fill="none" stroke="#C9BEAE" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="290" cy="132" r="50" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="290" cy="132" r="3" fill="#8A8074"/>
+<text x="290" y="136" text-anchor="middle" font-size="9.5" fill="#5F564A">我</text>
+<circle cx="312.9" cy="61.6" r="4" fill="#A2503B" opacity=".85"/>
+<circle cx="333.5" cy="72.1" r="4" fill="#A2503B" opacity=".85"/>
+<circle cx="349.9" cy="88.5" r="4" fill="#A2503B" opacity=".85"/>
+<text x="200" y="204" text-anchor="middle" font-size="10" fill="#8A8074">同一个热度，圆心不同</text>
+<text x="200" y="240" text-anchor="middle" font-size="11" fill="#5F564A">周以事为心，照得宽；比以我为心，照得窄</text>
+</svg>

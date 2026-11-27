@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280" role="img" aria-label="行前言后：上行行→言，下行言→行（虚）" style="max-width:520px">
+    <defs><marker id="a28a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 z" fill="#8A8074"/></marker></defs>
+    <text x="30" y="98" text-anchor="start" font-size="10" fill="#A8763E">正</text>
+    <rect x="56" y="68" width="80" height="48" fill="#FCF8EF" stroke="#A8763E" stroke-width="1.4"/>
+    <text x="96" y="99" text-anchor="middle" font-size="15" fill="#3A342B">行</text>
+    <path d="M140 92 L186 92" stroke="#8A8074" stroke-width="1.4" marker-end="url(#a28a)"/>
+    <rect x="190" y="68" width="80" height="48" fill="#fff" stroke="#C9BEAE" stroke-width="1.2"/>
+    <text x="230" y="99" text-anchor="middle" font-size="15" fill="#3A342B">言</text>
+    <text x="200" y="134" text-anchor="middle" font-size="9.5" fill="#8A8074">言之于既行之后</text>
+    <text x="30" y="202" text-anchor="start" font-size="10" fill="#8A8074">反</text>
+    <rect x="56" y="172" width="80" height="48" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="96" y="203" text-anchor="middle" font-size="15" fill="#5F564A">言</text>
+    <path d="M140 196 L186 196" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#a28a)"/>
+    <rect x="190" y="172" width="80" height="48" fill="#fff" stroke="#8A8074" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="230" y="203" text-anchor="middle" font-size="15" fill="#8A8074">行</text>
+    <line x1="196" y1="178" x2="264" y2="214" stroke="#A2503B" stroke-width="1" opacity=".6"/>
+    <text x="200" y="238" text-anchor="middle" font-size="9.5" fill="#8A8074">言在前，行就虚了</text>
+    <text x="200" y="264" text-anchor="middle" font-size="11" fill="#5F564A">先做出来，话才跟得上</text>
+  </svg>

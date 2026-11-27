@@ -1,0 +1,20 @@
+<svg viewBox="0 0 400 340" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif" role="img" aria-label="义理图三 孝的全程">
+<text x="200" y="26" text-anchor="middle" font-size="12" fill="#8A8074" letter-spacing="2">示意 · 孝的全程，一段不许空</text>
+<line x1="40" y1="150" x2="360" y2="150" stroke="#2F2A24"/>
+<circle cx="88" cy="150" r="13" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="88" y="155" text-anchor="middle" font-size="15" fill="#A2503B">生</text>
+<text x="88" y="124" text-anchor="middle" font-size="12.5" fill="#2F2A24">事之以礼</text>
+<circle cx="200" cy="150" r="13" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="200" y="155" text-anchor="middle" font-size="15" fill="#A2503B">死</text>
+<text x="200" y="124" text-anchor="middle" font-size="12.5" fill="#2F2A24">葬之以礼</text>
+<circle cx="312" cy="150" r="13" fill="#FBF1EC" stroke="#A2503B"/>
+<text x="312" y="155" text-anchor="middle" font-size="15" fill="#A2503B">祭</text>
+<text x="312" y="124" text-anchor="middle" font-size="12.5" fill="#2F2A24">祭之以礼</text>
+<text x="88" y="192" text-anchor="middle" font-size="11.5" fill="#5C5347">养 · 敬 · 顺 · 谏</text>
+<text x="88" y="212" text-anchor="middle" font-size="11.5" fill="#A2503B">「不敬，何以别乎」</text>
+<text x="200" y="192" text-anchor="middle" font-size="11.5" fill="#5C5347">棺椁 · 衰麻 · 哭踊</text>
+<text x="200" y="212" text-anchor="middle" font-size="11.5" fill="#A2503B">厚要有度</text>
+<text x="312" y="192" text-anchor="middle" font-size="11.5" fill="#5C5347">时序 · 牲牢 · 斋戒</text>
+<text x="312" y="212" text-anchor="middle" font-size="11.5" fill="#A2503B">最容易被省</text>
+<text x="200" y="300" text-anchor="middle" font-size="12" fill="#4A5C55">一条礼贯到底：生时怎么做，死时怎么葬，葬后怎么祭</text>
+</svg>

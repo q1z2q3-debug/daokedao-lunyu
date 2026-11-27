@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 470" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif" role="img" aria-label="附论六 其：一个空位">
+      <text x="16" y="20" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 字义的来历与两型</text>
+      <rect x="15" y="30" width="112" height="86" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="71" y="54" text-anchor="middle" font-size="12" fill="#2F2A24">甲骨 · 商</text>
+      <text x="71" y="76" text-anchor="middle" font-size="11" fill="#5C5347">象簸箕形</text>
+      <text x="71" y="96" text-anchor="middle" font-size="11" fill="#5C5347">用为副词</text>
+      <text x="71" y="112" text-anchor="middle" font-size="10" fill="#8A8074">「其雨」＝大概</text>
+      <rect x="144" y="30" width="112" height="86" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="200" y="54" text-anchor="middle" font-size="12" fill="#2F2A24">西周 · 金文</text>
+      <text x="200" y="76" text-anchor="middle" font-size="11" fill="#5C5347">始作定语代词</text>
+      <text x="200" y="96" text-anchor="middle" font-size="10" fill="#8A8074">其子子孙孙</text>
+      <text x="200" y="112" text-anchor="middle" font-size="10" fill="#8A8074">永宝用</text>
+      <rect x="273" y="30" width="112" height="86" fill="#FBF1EC" stroke="#A2503B"/>
+      <text x="329" y="54" text-anchor="middle" font-size="12" fill="#2F2A24">春秋 · 论语</text>
+      <text x="329" y="76" text-anchor="middle" font-size="11" fill="#A2503B">代词成熟</text>
+      <text x="329" y="96" text-anchor="middle" font-size="11" fill="#5C5347">分化出两型</text>
+      <line x1="127" y1="72" x2="144" y2="72" stroke="#DED2B9"/>
+      <line x1="256" y1="72" x2="273" y2="72" stroke="#DED2B9"/>
+      <text x="15" y="146" font-size="11.5" fill="#8A8074" letter-spacing="1">春秋的两型：同指与异指</text>
+      <rect x="15" y="156" width="178" height="150" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="30" y="180" font-size="12" fill="#2F2A24">异指型　第三人称定语</text>
+      <text x="30" y="206" font-size="11" fill="#A2503B">父母唯其疾之忧</text>
+      <text x="30" y="230" font-size="10.5" fill="#5C5347">「其」≠ 父母（同指则不通）</text>
+      <text x="30" y="252" font-size="10.5" fill="#5C5347">空位待填：子（语境补出）</text>
+      <text x="30" y="274" font-size="10.5" fill="#5C5347">亦可填父母（最近先行语）</text>
+      <text x="30" y="294" font-size="10" fill="#8A8074">两读之别，不在字义，在填谁</text>
+      <rect x="207" y="156" width="178" height="150" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="222" y="180" font-size="12" fill="#2F2A24">同指型　反身＝自己</text>
+      <text x="222" y="206" font-size="11" fill="#4A5C55">民各甘其食，美其服</text>
+      <text x="222" y="230" font-size="10.5" fill="#5C5347">「其」＝主语自己</text>
+      <text x="222" y="252" font-size="10.5" fill="#5C5347">甘、美＝意动：以…为…</text>
+      <text x="222" y="274" font-size="10.5" fill="#5C5347">「各」在场，反身最顺</text>
+      <text x="222" y="294" font-size="10" fill="#8A8074">与 2.6 分属两型，不可混</text>
+      <line x1="15" y1="326" x2="385" y2="326" stroke="#DCD5C8"/>
+      <rect x="55" y="340" width="290" height="62" fill="#FBF1EC" stroke="#A2503B"/>
+      <text x="200" y="364" text-anchor="middle" font-size="12" fill="#A2503B">「其」只标一个领属空位</text>
+      <text x="200" y="386" text-anchor="middle" font-size="11" fill="#5C5347">空位填谁，由语境与义理共定</text>
+      <text x="15" y="426" font-size="10.5" fill="#5C5347">上古无第三人称主语代词；宾语用「之」；</text>
+      <text x="15" y="446" font-size="10.5" fill="#5C5347">领属先「厥」后「其」。孔子留空，是留给「孝」填。</text>
+    </svg>

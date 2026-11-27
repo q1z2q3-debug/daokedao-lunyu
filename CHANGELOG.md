@@ -1,3 +1,13 @@
+## v0.16.38 · 早期十二课图外置（第20–31课，《为政》2.5–2.16）
+
+- 此前清点报「十二页无图」，系按 `docs/fig` 外置文件统计所致；实测页内图俱在：义理图为内联 SVG，图一为 base64 内嵌位图，只是从未落盘，故无直链、母本无从引用。
+- 新增 `scripts/export_old_figs.py`：以页内为源，导出义理图 34 幅（`ke\d+-yi\d+` / `-fu\d+` / `-yan\d+`）、图一位图 12 张（`ke\d+-tu1.png`，无损转码，原像素不动），`docs/fig` 与 `assets` 双写，两侧各 46 个。
+- 已有语义名的 20 幅沿用旧名（`ke23-san-ju.svg` 等），不新造；旧名文件一并补 `assets` 镜像。
+- 新增 `scripts/fig_meta.py`：页内 SVG 补 `xmlns`（第 26–31 课 16 幅，此前独立打开成 XML 树）、`role="img"` 与 `aria-label`（第 20–25 课）。
+- 修 `ke/31.html` 图内字体属性残缺 12 处（`" ,"Songti SC",serif` 一类，属性名缺 `font-family=`），并修正 CSS `--serif` 变量被同一批处理误伤后复原。
+- `ke31-yi-kou-yi-gong.svg` 原副本 XML 非法，已用页内当前内容重导；旧版存档 `docs/fig/_history/ke31-yi-kou-yi-gong@v0.16.37.svg`。
+- 正文一字未改。
+
 ## v0.16.37 · 形讹表收官清账（十四组）
 
 - `docs/xing-e.html` 由「八组」补为「已证十四组」，新增五组：

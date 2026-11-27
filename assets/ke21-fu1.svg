@@ -1,0 +1,36 @@
+<svg viewBox="0 0 400 520" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif" role="img" aria-label="附论四 疾、病、爱、孝：四字辨">
+      <text x="16" y="20" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 一句四字</text>
+      <rect x="16" y="32" width="136" height="90" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="84" y="60" text-anchor="middle" font-size="16" fill="#2F2A24">疾</text>
+      <text x="84" y="84" text-anchor="middle" font-size="11.5" fill="#5C5347">初起 · 可治</text>
+      <text x="84" y="106" text-anchor="middle" font-size="11.5" fill="#8A8074">日常之患</text>
+      <line x1="152" y1="77" x2="210" y2="77" stroke="#A2503B"/>
+      <polygon points="212,77 203,72 203,82" fill="#A2503B"/>
+      <text x="182" y="67" text-anchor="middle" font-size="11.5" fill="#A2503B">加</text>
+      <rect x="214" y="32" width="170" height="90" fill="#FBF1EC" stroke="#A2503B"/>
+      <text x="299" y="60" text-anchor="middle" font-size="16" fill="#A2503B">病</text>
+      <text x="299" y="84" text-anchor="middle" font-size="11.5" fill="#5C5347">加甚 · 沉重</text>
+      <text x="299" y="106" text-anchor="middle" font-size="11.5" fill="#8A8074">成困</text>
+      <text x="16" y="142" font-size="11.5" fill="#5C5347">析言之则病为疾加；浑言之则疾亦病。</text>
+      <text x="16" y="162" font-size="11.5" fill="#8A8074">《檀弓》曾子「寝疾，病」——先疾后病，正见其加。</text>
+      <line x1="16" y1="182" x2="384" y2="182" stroke="#DCD5C8"/>
+      <rect x="16" y="192" width="368" height="120" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="32" y="218" font-size="15" fill="#2F2A24">爱</text>
+      <text x="368" y="218" font-size="11.5" fill="#8A8074" text-anchor="end">遍而不及</text>
+      <text x="32" y="244" font-size="11.5" fill="#5C5347">遍　—　无所不至</text>
+      <text x="32" y="266" font-size="11.5" fill="#5C5347">切　—　唯恐其有疾病</text>
+      <text x="32" y="288" font-size="11.5" fill="#A2503B">不及 —　替不了（界在此）</text>
+      <line x1="120" y1="316" x2="120" y2="342" stroke="#4A5C55"/>
+      <polygon points="120,344 115,335 125,335" fill="#4A5C55"/>
+      <text x="130" y="336" font-size="11.5" fill="#4A5C55">受</text>
+      <line x1="280" y1="342" x2="280" y2="316" stroke="#4A5C55"/>
+      <polygon points="280,314 275,323 285,323" fill="#4A5C55"/>
+      <text x="270" y="336" font-size="11.5" fill="#4A5C55" text-anchor="end">施</text>
+      <rect x="16" y="350" width="368" height="120" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="32" y="376" font-size="15" fill="#2F2A24">孝</text>
+      <text x="368" y="376" font-size="11.5" fill="#8A8074" text-anchor="end">受而施</text>
+      <text x="32" y="402" font-size="11.5" fill="#5C5347">体　—　以父母之心为心</text>
+      <text x="32" y="424" font-size="11.5" fill="#5C5347">事　—　不使忧落地</text>
+      <text x="32" y="446" font-size="11.5" fill="#5C5347">传　—　继志述事</text>
+      <text x="16" y="494" font-size="11.5" fill="#A2503B">疾是爱之界，孝在界这侧尽。</text>
+    </svg>

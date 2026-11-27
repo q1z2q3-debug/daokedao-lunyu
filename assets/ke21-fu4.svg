@@ -1,0 +1,28 @@
+<svg viewBox="0 0 400 460" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="serif" role="img" aria-label="附论七 在，就是及">
+      <text x="16" y="22" font-size="11.5" fill="#8A8074" letter-spacing="2">示意 · 及的三层与两种在场</text>
+      <line x1="30" y1="38" x2="30" y2="244" stroke="#DCD5C8"/>
+      <line x1="26" y1="100" x2="34" y2="100" stroke="#A2503B"/>
+      <line x1="26" y1="164" x2="34" y2="164" stroke="#A2503B"/>
+      <line x1="30" y1="100" x2="30" y2="164" stroke="#A2503B" stroke-width="3"/>
+      <rect x="44" y="38" width="341" height="62" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="60" y="63" font-size="13" fill="#2F2A24">身</text>
+      <text x="60" y="85" font-size="11" fill="#5C5347">不可及：痛、烧、伤口——在谁身上，就是谁的事</text>
+      <rect x="44" y="100" width="341" height="64" fill="#FBF1EC" stroke="#A2503B"/>
+      <text x="60" y="126" font-size="13" fill="#A2503B">心</text>
+      <text x="60" y="148" font-size="11" fill="#5C5347">可及：忧可接、夜可守、话可挡——及于忧，不及于病</text>
+      <rect x="44" y="164" width="341" height="64" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="60" y="190" font-size="13" fill="#2F2A24">命</text>
+      <text x="60" y="212" font-size="11" fill="#5C5347">不可及：寿数、生死——伯牛有疾，孔子只执其手</text>
+      <text x="15" y="264" font-size="11.5" fill="#8A8074" letter-spacing="1">两种在场，同一结构</text>
+      <rect x="15" y="274" width="178" height="86" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="30" y="298" font-size="12" fill="#2F2A24">父母病 · 子在</text>
+      <text x="30" y="322" font-size="11" fill="#A2503B">是孝：及于侍，不及于治</text>
+      <text x="30" y="344" font-size="10.5" fill="#5C5347">能及者：不让他一个人疼</text>
+      <rect x="207" y="274" width="178" height="86" fill="#FFFDF6" stroke="#DCD5C8"/>
+      <text x="222" y="298" font-size="12" fill="#2F2A24">子病 · 父母在</text>
+      <text x="222" y="322" font-size="11" fill="#4A5C55">是爱：及于守，不及于替</text>
+      <text x="222" y="344" font-size="10.5" fill="#5C5347">能及者：整夜坐着，等他退</text>
+      <text x="200" y="382" text-anchor="middle" font-size="11" fill="#8A8074">假及两式：人在心不在（色难）／以代代在（爱之偏）</text>
+      <rect x="40" y="394" width="320" height="46" fill="#FBF1EC" stroke="#A2503B"/>
+      <text x="200" y="422" text-anchor="middle" font-size="12" fill="#A2503B">替不了的是病，及得了的是「不让他一个人病」</text>
+    </svg>
