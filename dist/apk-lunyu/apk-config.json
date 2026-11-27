@@ -3,8 +3,8 @@
   "out": "daokedao-lunyu",
   "package": "com.runze.daokedaolunyu",
   "app_name": "道可道之论语",
-  "version_code": 16043,
-  "version_name": "0.16.43",
+  "version_code": 16044,
+  "version_name": "0.16.44",
   "docs": "docs",
   "entry": "index.html",
   "copy_files": [
