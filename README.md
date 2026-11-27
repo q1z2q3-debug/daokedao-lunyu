@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.26**。下论第十六《季氏》**十六章（16.1–16.14，收篇）**，全书已刊 **445 课**（前言一篇 + 444 章）。：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.27**。下论第十七《阳货》起，**前十章已成篇（17.1–17.10）**，全书已刊 **455 课**（前言一篇 + 454 章）。下论第十六《季氏》**十六章（16.1–16.14，收篇）**，全书已刊 **445 课**（前言一篇 + 444 章）。：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -483,6 +483,16 @@
 | 第四百四十三课 | 齊景公有馬千駟 | 称之权在民不在物：千驷一日断，一山至今称。 | [443](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/443.html) |
 | 第四百四十四课 | 陳亢問於伯魚 | 教在庭不在室：一言启之，自退学之。 | [444](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/444.html) |
 | 第四百四十五课 | 邦君之妻 | 一人五名：称随位变，礼以定分。 | [445](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/445.html) |
+| 第四百四十六课 | 陽貨欲見孔子 | 礼到，志不动：诺而不许。 | [446](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/446.html) |
+| 第四百四十七课 | 性相近也 | 性一而习万：近由天，远由日。 | [447](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/447.html) |
+| 第四百四十八课 | 唯上知與下愚不移 | 唯两端不移，正为中间留门。 | [448](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/448.html) |
+| 第四百四十九课 | 割雞焉用牛刀 | 牛刀割鸡：小邑亦有雅，费而不悔。 | [449](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/449.html) |
+| 第四百五十课 | 公山弗擾以費畔 | 所就者事，所守者道：欲往而不果。 | [450](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/450.html) |
+| 第四百五十一课 | 能行五者於天下 | 仁是行不是理：五者一因一效。 | [451](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/451.html) |
+| 第四百五十二课 | 佛肸召 | 磨涅者试，不磷缁者证：质成而后敢入。 | [452](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/452.html) |
+| 第四百五十三课 | 六言六蔽 | 过不在德，在不好学：德无学则偏。 | [453](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/453.html) |
+| 第四百五十四课 | 詩可以興 | 诗之教：四用二事一识。 | [454](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/454.html) |
+| 第四百五十五课 | 女爲周南召南矣乎 | 基不立则行无自：面墙非无路，是不见路。 | [455](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/455.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
