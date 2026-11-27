@@ -512,6 +512,9 @@
 - 第505课｜叔孫武叔語大夫於朝曰：「子貢賢於仲尼。」｜墙高则门深：墙外之断非断。义理图一「及肩与数仞」，图二「瞥与入」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/505.html
 - 第506课｜叔孫武叔毀仲尼。子貢曰：「無以爲也！仲尼不可毀也。」｜日月不可逾：毁者自见其量。义理图一「丘陵与日月」，图二「伤与明」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/506.html
 - 第507课｜陳子禽謂子貢曰：「子爲恭也，仲尼豈賢於子乎？」｜言不慎则师受诬：天无阶，故不可升。义理图一「天无阶」，图二「据与辨」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/507.html
+- 第508课｜堯曰：「咨！爾舜！天之曆數在爾躬。」｜授以中，担以罪：帝王之辞归于中。义理图一「授与担」，图二「诿与担」。全书最长一章。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/508.html
+- 第509课｜子張問於孔子曰：「何如，斯可以從政矣？」｜五美皆对症，四恶皆令先于教。义理图一「五美两端」，图二「四恶」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/509.html
+- 第510课｜子曰：「不知命，無以爲君子也。」｜三知由内而外：知人者，全书之收。义理图一「三知」，图二「首尾」。全书末章。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/510.html
 
 ## 专题
 - 论文一｜君子与小人：孔子语汇的定义与判准｜以 2.14 为起点：君子 108 见／小人 24 见／同章共见 18 条；由位至德的词义迁移；小人三义（德义 20／身份 3／谦称 0）；判准收敛为义利一纲。三图、四表、三附录。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/6.html
@@ -524,7 +527,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.16.35，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.16.36，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。

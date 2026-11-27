@@ -292,6 +292,19 @@ def main():
                      lambda m: "## 19.%d　%s" % (int(m.group(1)) - 482, m.group(2)), txt, count=1, flags=re.M)
         parts.append(txt.strip())
 
+    # 尧曰篇（20.1 起）母本入库于 manuscript/yao-yue/NN-*.md，课号 508 对应 20.1
+    def _k20(path):
+        m = re.match(r"(\d+)-", os.path.basename(path))
+        return (20, int(m.group(1)) - 507) if m else (99, 99)
+
+    yyue = sorted(glob.glob(os.path.join(ROOT, "manuscript", "yao-yue", "*.md")), key=_k20)
+    for path in yyue:
+        txt = open(path, encoding="utf-8").read()
+        txt = shift(txt)
+        txt = re.sub(r"^## 第 (\d+) 课 · (.+)$",
+                     lambda m: "## 20.%d　%s" % (int(m.group(1)) - 507, m.group(2)), txt, count=1, flags=re.M)
+        parts.append(txt.strip())
+
     body = "\n\n---\n\n".join(parts)
 
     version = open(os.path.join(ROOT, "VERSION"), encoding="utf-8").read().strip()
@@ -332,6 +345,10 @@ def main():
         seg.append("季氏%s章" % cn(len(js)))
     if yh:
         seg.append("阳货%s章" % cn(len(yh)))
+    if zz:
+        seg.append("子张%s章" % cn(len(zz)))
+    if yyue:
+        seg.append("尧曰%s章" % cn(len(yyue)))
     published = " + ".join(seg) if len(seg) - 4 else " + ".join(seg)
     head = HEAD.format(published=published, version=version, detail="、".join(seg))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

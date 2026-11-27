@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.35**。下论第十七《阳货》二十六章、第十八《微子》十一章、第十九《子张》**二十五章**（三篇俱收篇），全书已刊 **507 课**（前言一篇 + 506 章）。
+- 当前版本 **v0.16.36**。**全书二十篇五百一十章俱已刊行**（前言一篇，共 511 课）：上论十篇、下论十篇，篇篇收篇。合稿 1,450,031 字，图位 1024。
 
 ---
 
@@ -545,6 +545,9 @@
 | 第五百零五课 | 譬之宮牆 | 墙高则门深：墙外之断非断。 | [505](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/505.html) |
 | 第五百零六课 | 仲尼不可毀也 | 日月不可逾：毁者自见其量。 | [506](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/506.html) |
 | 第五百零七课 | 夫子之不可及也 | 言不慎则师受诬：天无阶，故不可升。 | [507](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/507.html) |
+| 第五百零八课 | 堯曰允執其中 | 授以中，担以罪：帝王之辞归于中。 | [508](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/508.html) |
+| 第五百零九课 | 尊五美屏四惡 | 五美皆对症，四恶皆令先于教。 | [509](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/509.html) |
+| 第五百一十课 | 不知命無以爲君子 | 三知由内而外：知人者，全书之收。 | [510](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/510.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
