@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.24**，已刊 **365 课**（前言一篇 + 347 页）；八佾二十六章已收篇（3.26），里仁二十六章已收篇（4.26 事君数），公冶长二十八章已收篇（5.28 十室之邑），雍也三十章已收篇（6.30 子贡问博施济众），述而三十八章已收篇（7.38 子温而厉），**子罕三十章已收篇**、**乡党二十七节（10.1–10.27，已收篇）**；下论起，**先进二十六章（11.1–11.26，已收篇）**、**颜渊二十四章（12.1–12.24，已收篇）**，下论第十三《子路》**三十章（13.1–13.30，已收篇）**、第十四《宪问》**二十章（14.1–14.20）**。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.25**，已刊 **441 课**（前言一篇 + 440 章）。学而十六、为政二十四、八佾二十六（3.26 收篇）、里仁二十六（4.26 事君数）、公冶长二十八（5.28 十室之邑）、雍也三十（6.30）、述而三十八（7.38）、子罕三十（9.30）、乡党二十七（10.27）；下论先进二十六（11.1–11.26）、颜渊二十四（12.1–12.24）、子路三十（13.1–13.30）、宪问四十四（14.1–14.44）、卫灵公四十二（15.1–15.42 收篇）、**季氏起十六章，前十课已成篇（16.1–16.10）**。艺术体例：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -202,6 +202,26 @@
 | 第一百六十二课 | 子之所慎 | 齐（斋）战疾三进，由外而内；愼 7、戰 6。 | [162](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/162.html) |
 | 第一百六十三课 | 子在齐闻韶 | 三月不知肉味；叹的是乐之力量。韶 3、肉味孤例。 | [163](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/163.html) |
 | 第一百六十四课 | 夫子为卫君乎 | 不问而问，问夷齐即知立场；求仁孤例。数证：怨 20、伯夷 5。 | [164](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/164.html) |
+| 第一百六十五课 | 饭疏食饮水，曲肱而枕之 | 日子薄，乐不缺；富贵不合义，就是天上的云。 | [165](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/165.html) |
+| 第一百六十六课 | 加我数年，五十以学易 | 再给几年时间学透一部书，过错就少了。 | [166](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/166.html) |
+| 第一百六十七课 | 子所雅言 | 读书、行礼，都换成正音：郑重，从声音开始。 | [167](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/167.html) |
+| 第一百六十八课 | 叶公问孔子于子路 | 用功忘食、快乐忘忧、忘了自己快老——这就是孔子。 | [168](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/168.html) |
+| 第一百六十九课 | 我非生而知之者 | 不是天生会，是爱古人又肯去追。 | [169](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/169.html) |
+| 第一百七十课 | 子不语怪力乱神 | 四件事他不说：越是惑人的话，越不开口。 | [170](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/170.html) |
+| 第一百七十一课 | 三人行，必有我师焉 | 身边每个人都有一样可学，短处也是镜子。 | [171](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/171.html) |
+| 第一百七十二课 | 天生德于予 | 所恃者非己之能，乃道在己——所以他敢说「其如予何」。 | [172](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/172.html) |
+| 第一百七十三课 | 二三子以我为隐乎 | 没有留一手：所行即所教，这就是我。 | [173](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/173.html) |
+| 第一百七十四课 | 子以四教 | 读书、做事、尽心、守信——四样，就是他摊开的那只手。 | [174](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/174.html) |
+| 第一百七十五课 | 圣人吾不得而见之 | 高处见不着，就守住低处那一格：一直是这样。 | [175](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/175.html) |
+| 第一百七十六课 | 钓而不纲，弋不射宿 | 取要用的，留该留的——分寸在钩与网之间。 | [176](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/176.html) |
+| 第一百七十七课 | 盖有不知而作之者 | 不妄作，多听多看——这是次一等的知，也是我唯一的路。 | [177](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/177.html) |
+| 第一百七十八课 | 互乡难与言 | 看人来时那一步干净，不看他来路。 | [178](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/178.html) |
+| 第一百七十九课 | 仁远乎哉 | 仁不在远处，在「我想要」这一念里。 | [179](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/179.html) |
+| 第一百八十课 | 陈司败问昭公知礼 | 替国君掩一句，认自己一句——两句话都叫「礼」。 | [180](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/180.html) |
+| 第一百八十一课 | 与人歌而善 | 听懂再开口：让人唱完，自己才和。 | [181](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/181.html) |
+| 第一百八十二课 | 文，莫吾犹人也 | 文章可以与人比，做人只能与自己比——所以他认「未得」。 | [182](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/182.html) |
+| 第一百八十三课 | 若圣与仁，则吾岂敢 | 名不敢领，事不敢停——他把自己缩到两件日常事上。 | [183](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/183.html) |
+| 第一百八十四课 | 子疾病，子路请祷 | 祷不在临危那几句，在平生的行事。 | [184](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/184.html) |
 | 第一百八十五课 | 奢则不孙，俭则固 | 两害取轻，与 3.4「宁俭」同旨。 | [185](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/185.html) |
 | 第一百八十六课 | 君子坦荡荡 | 只分心里有没有底；三语孤例。 | [186](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/186.html) |
 | 第一百八十七课 | 子温而厉 | 述而收篇：三对六字，每德以「而」收住过头那一面。 | [187](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/187.html) |
@@ -382,7 +402,83 @@
 | 第三百六十二课 | 一匡天下，民受其赐 | 小信死于沟渎。 | [362](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/362.html) |
 | 第三百六十三课 | 同升诸公，可以为文 | 一「不忌」当一谥。 | [363](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/363.html) |
 | 第三百六十四课 | 三职一存，卫灵不丧 | 存亡系于职，不系于君。 | [364](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/364.html) |
-| 第四百三十一课 | 其言之不怍 | 怍是知难，是敬事。 | [365](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/365.html) |
+| 第三百六十五课 | 其言之不怍，則爲之也難 | 言之不怍者，行必难；怍是敬事，不是怯。 | [365](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/365.html) |
+| 第三百六十六课 | 陳恆弒其君，請討之 | 事大则礼重，责在则言尽；告而不从，仍告。 | [366](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/366.html) |
+| 第三百六十七课 | 勿欺也，而犯之 | 以诚为质，以犯为用：不欺而顺是谀，犯而不欺是忠。 | [367](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/367.html) |
+| 第三百六十八课 | 君子上達，小人下達 | 上达于道，下达于利；非位之高下，乃心之所向。 | [368](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/368.html) |
+| 第三百六十九课 | 古之學者爲己，今之學者爲人 | 为己则学落于身，为人则学止于口。 | [369](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/369.html) |
+| 第三百七十课 | 夫子欲寡其過而未能也 | 欲寡过而未能：志在内省，言副其实；一答见其人，一赞见其使。 | [370](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/370.html) |
+| 第三百七十一课 | 不在其位，不謀其政。君子思不出其位 | 谋不越位，思不越分；守分为常，守义为变。 | [371](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/371.html) |
+| 第三百七十二课 | 君子恥其言而過其行 | 以言浮于行为耻；耻由内发，非由外压。 | [372](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/372.html) |
+| 第三百七十三课 | 仁者不憂，知者不惑，勇者不懼 | 一体三面：仁不忧、知不惑、勇不惧；自谓无能，正是自道。 | [373](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/373.html) |
+| 第三百七十四课 | 賜也，賢乎哉？夫我則不暇 | 评人之短是「方」，改己之过是「不暇」；贤者向内。 | [374](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/374.html) |
+| 第三百七十五课 | 不患人之不己知，患其不能也 | 外者不必患，内者当自患：求知之箭头须向内拨。 | [375](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/375.html) |
+| 第三百七十六课 | 不逆不億，抑亦先覺 | 不以小人之心度人，不失有征之明：信而能觉，方为贤。 | [376](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/376.html) |
+| 第三百七十七课 | 非敢爲佞也，疾固也 | 不辩其形，直陈其心：所疾者固，非敢为佞。 | [377](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/377.html) |
+| 第三百七十八课 | 驥不稱其力，稱其德也 | 才者其门，德者其室：力可惊一时，德可任千里。 | [378](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/378.html) |
+| 第三百七十九课 | 以直報怨，以德報德 | 报有等：怨如其分，德如其恩；不增不减，方为直。 | [379](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/379.html) |
+| 第三百八十课 | 不怨天，不尤人，下學而上達 | 咎无所施则心自安：不怨不尤，下学上达，知我者天。 | [380](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/380.html) |
+| 第三百八十一课 | 道之將廢，命也 | 谮可毁人于一时，不能改道之成废；知命则不校毁誉。 | [381](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/381.html) |
+| 第三百八十二课 | 賢者辟世，其次辟地 | 四辟有等：由大至小，由显至微；辟者择也，非逃也。 | [382](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/382.html) |
+| 第三百八十三课 | 知其不可而爲之者 | 知其为明，为之是毅；先问该不该，再问成不成。 | [383](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/383.html) |
+| 第三百八十四课 | 鄙哉，硜硜乎 | 深厉浅揭，随宜而涉；一味硬涉，则为硁硁之鄙。 | [384](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/384.html) |
+| 第三百八十五课 | 諒陰三年不言 | 默其言而守其职：一人之默，须一制之承。 | [385](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/385.html) |
+| 第三百八十六课 | 上好禮，則民易使也 | 礼先束上，而后下易使：易使非易欺。 | [386](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/386.html) |
+| 第三百八十七课 | 修己以安百姓 | 三层同心，皆以修己为根：敬在内，安人在中，安百姓在外。 | [387](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/387.html) |
+| 第三百八十八课 | 幼而不孫弟，長而無述 | 少长老三段皆空，方为「贼」；责其无述，非咒其死。 | [388](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/388.html) |
+| 第三百八十九课 | 非求益者也，欲速成者也 | 二征见其形，一断见其心：速成者向外，求益者向内。 | [389](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/389.html) |
+| 第三百九十课 | 俎豆之事，則嘗聞之矣 | 不以兵为学，不以禄为恋：一答见守，一行见决。 | [390](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/390.html) |
+| 第三百九十一课 | 君子固窮，小人斯濫矣 | 穷是验，不是德：守得住为固，越了界为滥。 | [391](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/391.html) |
+| 第三百九十二课 | 予一以貫之 | 非多学而识，乃一以贯之：以一串百，方为学。 | [392](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/392.html) |
+| 第三百九十三课 | 知德者鮮矣 | 知德者，知其所难，非记其名。 | [393](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/393.html) |
+| 第三百九十四课 | 恭己正南面而已矣 | 无为非不治，是不烦：恭己以正，任人以治。 | [394](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/394.html) |
+| 第三百九十五课 | 言忠信，行篤敬 | 言实行厚，则无地不通；念念在目，则行有成。 | [395](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/395.html) |
+| 第三百九十六课 | 直哉史魚，君子哉蘧伯玉 | 一直一藏，皆不失道：守其节者为直，知其时者为智。 | [396](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/396.html) |
+| 第三百九十七课 | 不失人，亦不失言 | 言之度在「时」：失人与失言，皆失其当。 | [397](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/397.html) |
+| 第三百九十八课 | 殺身以成仁 | 仁不可用，只可为：不拿仁换生，可舍身成仁。 | [398](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/398.html) |
+| 第三百九十九课 | 工欲善其事，必先利其器 | 成仁须器：贤者为法，仁者为心。 | [399](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/399.html) |
+| 第四百课 | 行夏之時，乘殷之輅 | 为邦在择：四取其至，一放其害。 | [400](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/400.html) |
+| 第四百零一课 | 人無遠慮，必有近憂 | 近忧多由不虑，远虑须有可备：算一步，则少一忧。 | [401](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/401.html) |
+| 第四百零二课 | 吾未見好德如好色者也 | 非不好德，是不如好色之切：叹在「力之不均」。 | [402](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/402.html) |
+| 第四百零三课 | 臧文仲其竊位者與 | 位为国设：知贤不举，据位而窃。 | [403](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/403.html) |
+| 第四百零四课 | 躬自厚，而薄責於人 | 厚责己而薄责人：己进人安，怨自远。 | [404](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/404.html) |
+| 第四百零五课 | 不曰如之何，吾末如之何 | 可教之基在自问：不问其难，则无入处。 | [405](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/405.html) |
+| 第四百零六课 | 群居終日，言不及義 | 境造言，言造才：三病并见，故难有成。 | [406](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/406.html) |
+| 第四百零七课 | 義以爲質，禮以行之 | 质行为出成：四环相生，缺一则不全。 | [407](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/407.html) |
+| 第四百零八课 | 君子病無能焉 | 忧在可改，不在不可主：病无能，不病不知。 | [408](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/408.html) |
+| 第四百零九课 | 君子疾沒世而名不稱焉 | 名者实之影：所疾者不称，非不显。 | [409](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/409.html) |
+| 第四百一十课 | 君子求諸己，小人求諸人 | 一内一外，其分在「第一念」。 | [410](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/410.html) |
+| 第四百一十一课 | 矜而不爭，群而不黨 | 守而不夺，合而不私：两「而」字是界。 | [411](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/411.html) |
+| 第四百一十二课 | 不以言舉人，不以人廢言 | 言可独取，人须全观。 | [412](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/412.html) |
+| 第四百一十三课 | 其恕乎，己所不欲，勿施於人 | 恕之入手在「不加」，不在「给」。 | [413](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/413.html) |
+| 第四百一十四课 | 誰毀誰譽，其有所試 | 誉必有试，毁亦然：毁誉之权须自守。 | [414](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/414.html) |
+| 第四百一十五课 | 吾猶及史之闕文 | 不知则阙，不妄补：一叹实亡，一叹厚亡。 | [415](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/415.html) |
+| 第四百一十六课 | 巧言亂德，小不忍則亂大謀 | 一渐一顷：饰言乱德，小忿乱谋。 | [416](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/416.html) |
+| 第四百一十七课 | 衆惡之，必察焉；衆好之，必察焉 | 不以众为断：两「必察」，一视同仁。 | [417](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/417.html) |
+| 第四百一十八课 | 人能弘道，非道弘人 | 道待人而行：人能弘道，非道弘人。 | [418](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/418.html) |
+| 第四百一十九课 | 過而不改，是謂過矣 | 一「是谓」，把过从「事」挪到「不改」。 | [419](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/419.html) |
+| 第四百二十课 | 吾嘗終日不食，終夜不寢，以思 | 思为学之继，非学之代。 | [420](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/420.html) |
+| 第四百二十一课 | 君子謀道不謀食 | 先道后食：非无食而道，是不以食夺道。 | [421](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/421.html) |
+| 第四百二十二课 | 知及之，仁能守之 | 取、守、立、行：四阶缺一，即未善。 | [422](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/422.html) |
+| 第四百二十三课 | 君子不可小知，而可大受 | 量有大小：小知不足以尽君子，大任不足以授小人。 | [423](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/423.html) |
+| 第四百二十四课 | 民之於仁也，甚於水火 | 仁有用而不杀：所避者非仁，是「以为仁险」。 | [424](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/424.html) |
+| 第四百二十五课 | 當仁，不讓於師 | 让位不让责：当仁，则担之。 | [425](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/425.html) |
+| 第四百二十六课 | 君子貞而不諒 | 守正而权信：常者守之，变者权之。 | [426](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/426.html) |
+| 第四百二十七课 | 事君敬其事，而後其食 | 事为本，食为末：不以食先。 | [427](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/427.html) |
+| 第四百二十八课 | 有教無類 | 不以类限教：门开，则类自化。 | [428](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/428.html) |
+| 第四百二十九课 | 道不同，不相爲謀 | 不共谋非不相恶：方向既异，议则相耗。 | [429](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/429.html) |
+| 第四百三十课 | 辭，達而已矣 | 文者达之器：以「而已」为限。 | [430](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/430.html) |
+| 第四百三十一课 | 固相師之道也 | 仁在至阶告阶：不待问而告，告而不代。 | [431](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/431.html) |
+| 第四百三十二课 | 李氏將伐顓臾 | 不均不安，则内忧；有辞则文德，无辞则干戈。 | [432](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/432.html) |
+| 第四百三十三课 | 天下有道，則禮樂征伐自天子出 | 权愈下，失愈速：十、五、三，势之验。 | [433](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/433.html) |
+| 第四百三十四课 | 祿之去公室，五世矣 | 财先失，政后移：权既下移，移者亦将被移。 | [434](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/434.html) |
+| 第四百三十五课 | 益者三友，損者三友 | 益者多逆，损者多顺：择友在「逆顺」之间。 | [435](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/435.html) |
+| 第四百三十六课 | 益者三樂，損者三樂 | 辨乐不在有无，在久暂：益者越乐越有，损者越乐越无。 | [436](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/436.html) |
+| 第四百三十七课 | 侍於君子有三愆 | 言有三候：人及、色可、事当。 | [437](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/437.html) |
+| 第四百三十八课 | 君子有三戒 | 一段一病：少在摇，壮在锐，老在补。 | [438](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/438.html) |
+| 第四百三十九课 | 君子有三畏 | 畏者知界：知有不可越，乃能有所为。 | [439](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/439.html) |
+| 第四百四十课 | 生而知之者上也 | 四等以学为轴：前三有学，末一无学。 | [440](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/440.html) |
+| 第四百四十一课 | 君子有九思 | 思者先备：九目皆防，末以义断。 | [441](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/441.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
