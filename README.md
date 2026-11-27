@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.31**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**六章（19.1–19.6）**，全书已刊 **488 课**（前言一篇 + 487 章）。
+- 当前版本 **v0.16.32**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**十二章（19.1–19.12）**，全书已刊 **494 课**（前言一篇 + 493 章）。
 
 ---
 
@@ -526,6 +526,12 @@
 | 第四百八十六课 | 雖小道 | 许其有，断其止：不专不为业。 | [486](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/486.html) |
 | 第四百八十七课 | 日知其所亡 | 日进月守：知缺而守得。 | [487](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/487.html) |
 | 第四百八十八课 | 博學而篤志 | 四事为路，仁在其中：几而非即。 | [488](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/488.html) |
+| 第四百八十九课 | 百工居肆 | 工居肆而成事，学致道而立所。 | [489](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/489.html) |
+| 第四百九十课 | 小人之過也必文 | 过不在过，在文：饰则过愈深。 | [490](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/490.html) |
+| 第四百九十一课 | 君子有三變 | 距三而象三：心一而象变。 | [491](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/491.html) |
+| 第四百九十二课 | 信而後勞其民 | 信为事序：不信则劳成厉、谏成谤。 | [492](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/492.html) |
+| 第四百九十三课 | 大德不踰閑 | 大不逾闲、小可出入：立界而不苛。 | [493](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/493.html) |
+| 第四百九十四课 | 子夏之門人小子 | 末非无本，教有先后：区以别则不可诬。 | [494](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/494.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

@@ -493,6 +493,12 @@
 - 第486课｜子夏曰：「雖小道，必有可觀者焉；致遠恐泥，是以君子不爲也。」｜许其有，断其止；观而不入，专则泥。义理图一「可观与恐泥」，图二「观与泥」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/486.html
 - 第487课｜子夏曰：「日知其所亡，月無忘其所能，可謂好學也已矣！」｜日进月守，知缺而守得。义理图一「日进月守」，图二「漏与滞」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/487.html
 - 第488课｜子夏曰：「博學而篤志，切問而近思，仁在其中矣。」｜四事为路、仁为家；言「在其中」，不言「即是」。义理图一「四事其路」，图二「即与中」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/488.html
+- 第489课｜子夏曰：「百工居肆以成其事，君子學以致其道。」｜工有定所而成器，学有定功而至道。义理图一「工肆与学」，图二「散与居」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/489.html
+- 第490课｜子夏曰：「小人之過也必文。」｜过不在过，在文；饰则加一层。义理图一「过与文」，图二「掩与改」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/490.html
+- 第491课｜子夏曰：「君子有三變：望之儼然，卽之也溫，聽其言也厲。」｜体、情、守三象，心一而象三。义理图一「望即听三象」，图二「伪与全」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/491.html
+- 第492课｜子夏曰：「君子信而後勞其民；未信，則以爲厲己也。」｜信为事序：不信则劳成厉、谏成谤。义理图一「信为事序」，图二「厉与使」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/492.html
+- 第493课｜子夏曰：「大德不踰閑，小德出入可也。」｜大不逾闲、小可出入：立界而不苛。义理图一「大德之闲」，图二「纵与苛」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/493.html
+- 第494课｜子游曰：「子夏之門人小子，當洒掃，應對，進退，則可矣。」｜末非无本，教有先后；区以别则不可诬。义理图一「本末与先后」，图二「诬与当」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/494.html
 
 ## 专题
 - 论文一｜君子与小人：孔子语汇的定义与判准｜以 2.14 为起点：君子 108 见／小人 24 见／同章共见 18 条；由位至德的词义迁移；小人三义（德义 20／身份 3／谦称 0）；判准收敛为义利一纲。三图、四表、三附录。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/6.html
@@ -505,7 +511,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.16.31，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.16.32，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
