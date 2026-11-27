@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.28**。下论第十七《阳货》**二十章已成篇（17.1–17.20）**，全书已刊 **465 课**（前言一篇 + 464 章）。下论第十七《阳货》起，**前十章已成篇（17.1–17.10）**，全书已刊 **455 课**（前言一篇 + 454 章）。下论第十六《季氏》**十六章（16.1–16.14，收篇）**，全书已刊 **445 课**（前言一篇 + 444 章）。：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.30**。下论第十七《阳货》**二十六章（17.1–17.26，收篇）**、第十八《微子》**十一章（18.1–18.11，收篇）**，全书已刊 **482 课**（前言一篇 + 481 章）。
 
 ---
 
@@ -503,6 +503,23 @@
 | 第四百六十三课 | 惡紫之奪朱 | 三恶一律：以似乱真，起微成巨。 | [463](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/463.html) |
 | 第四百六十四课 | 予欲無言 | 言之教有尽，行之教无尽：天不言而成。 | [464](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/464.html) |
 | 第四百六十五课 | 孺悲欲見孔子 | 辞以避面，歌以告实：拒而不欺。 | [465](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/465.html) |
+| 第四百六十六课 | 三年之喪 | 不与争期，只问安：安者不仁。 | [466](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/466.html) |
+| 第四百六十七课 | 飽食終日 | 犹贤乎已：无心则无下，用心有高下。 | [467](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/467.html) |
+| 第四百六十八课 | 君子尚勇乎 | 义为主，勇为从：无主之勇，上乱下盗。 | [468](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/468.html) |
+| 第四百六十九课 | 君子亦有惡乎 | 七恶一律：以似充真，乱名败实。 | [469](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/469.html) |
+| 第四百七十课 | 唯女子與小人爲難養也 | 近远皆过，病在度：取度不取判。 | [470](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/470.html) |
+| 第四百七十一课 | 年四十而見惡焉 | 断时不断人：四十之限，积习之结。 | [471](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/471.html) |
+| 第四百七十二课 | 殷有三仁焉 | 三迹一仁：去、奴、死，皆以国为心。 | [472](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/472.html) |
+| 第四百七十三课 | 柳下惠爲士師 | 道无二：直则随处黜，枉则随处容。 | [473](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/473.html) |
+| 第四百七十四课 | 齊景公待孔子 | 价在其间，断在不能：孔子行于一「断」。 | [474](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/474.html) |
+| 第四百七十五课 | 齊人歸女樂 | 饵入则政滞：一「不朝」重于千言。 | [475](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/475.html) |
+| 第四百七十六课 | 楚狂接輿 | 劝与守两不相入：不得与言，非不欲。 | [476](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/476.html) |
+| 第四百七十七课 | 長沮桀溺耦而耕 | 辟人与辟世：两「与」相对，是此章之轴。 | [477](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/477.html) |
+| 第四百七十八课 | 荷蓧丈人 | 拒其仕而留其人：洁身则乱伦。 | [478](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/478.html) |
+| 第四百七十九课 | 逸民 | 三组而一极：无可是以义为度，非无原则。 | [479](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/479.html) |
+| 第四百八十课 | 大師摯適齊 | 八人八向：非一人之失，是一体之散。 | [480](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/480.html) |
+| 第四百八十一课 | 周公謂魯公 | 四句之次：不弃其旧，不责其全。 | [481](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/481.html) |
+| 第四百八十二课 | 周有八士 | 四序两轮：有法有人，则政可。 | [482](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/482.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
