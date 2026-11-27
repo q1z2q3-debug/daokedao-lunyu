@@ -36,7 +36,15 @@ def cn(n):
         return '十' + (CN[n % 10] if n % 10 else '')
     if n < 100:
         return CN[n // 10] + '十' + (CN[n % 10] if n % 10 else '')
-    return CN[n // 100] + '百' + (('零' + CN[n % 100]) if n % 100 < 10 else (CN[n % 100 // 10] + '十' + (CN[n % 10] if n % 10 else '')))
+    a, r = divmod(n, 100)
+    s = CN[a] + '百'
+    if r == 0:
+        return s
+    if r < 10:
+        return s + '零' + CN[r]
+    if r < 20:
+        return s + '一十' + (CN[r % 10] if r % 10 else '')
+    return s + CN[r // 10] + '十' + (CN[r % 10] if r % 10 else '')
 
 
 def check(cond, msg):

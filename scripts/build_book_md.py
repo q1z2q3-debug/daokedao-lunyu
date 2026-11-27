@@ -20,9 +20,9 @@ title: 润泽说 道可道之论语
 subtitle: 通释读本（连载）
 author: 润泽
 base: 朱熹《论语集注》
-chapters: 498
+chapters: 510
 published: {published}
-version: {version}
+version: {version}  # 运行时注入，与 VERSION 同源
 date: 2026-11-26
 ---
 
