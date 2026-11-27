@@ -1,11 +1,12 @@
 ## v0.16.42 · 安卓安装包（APK）· 内嵌宋体离线全本
 
 - 新建 `dist/apk-lunyu/`：WebView 宿主 + 全站资产，包名 `com.runze.daokedaolunyu`，minSdk 21／targetSdk 35，**零权限**；`versionCode 16042`、`versionName 0.16.42`。
-- 本地手工链 `build.sh`：aapt2 → javac → d8 → zipalign → apksigner（JDK 17 + build-tools 35），不经 gradle；产物 `dist/道可道之论语-v0.16.42.apk`，**23.5 MB**，SHA256 `81615e57…`，v1/v2/v3 三签齐全，zipalign 通过。另备 `.github/workflows/apk.yml` 走 Actions（先装 fonts-noto-cjk 再出包）。
+- 本地手工链 `build.sh`：aapt2 → javac → d8 → zipalign → apksigner（JDK 17 + build-tools 35），不经 gradle；产物 `dist/道可道之论语-v0.16.42.apk`，**19.3 MB**，SHA256 `ebd4ca62…`，v1/v2/v3 三签齐全，zipalign 通过。另备 `.github/workflows/apk.yml` 走 Actions（先装 fonts-noto-cjk 再出包）。
 - `scripts/build_apk_assets.py` 灌装资产：收首页、卷首、511 课、专题八篇、图标与 manifest；不收 `fig/`（课页插图已是内嵌 `data:image/webp`）。站内绝对地址按页深改写为相对路径，裸 `index.html` 回链按层修正，`sitemap.xml` 与下载块剥除，`ke/24`、`ke/25` 的外链字体样式表删除。包内 3848 条内部链接**零断链**。
 - 字体：安卓无「Noto Serif SC」，不嵌即落回黑体。取全书用字 **3974 字**，从 `NotoSerifCJK-Regular/Bold.ttc`（SC 为第 3 个 face）子集化出两档 woff2（1.0 MB + 1.1 MB），家族名仍作 `"Noto Serif SC"`，页面原 CSS 一字不改即命中；`document.fonts` 实测两档 loaded，课页宋体与朱笔双色还原。
 - 站点：`docs/dl/` 挂包并出 `SHA256SUMS.txt`；首页卷首按钮下加「安卓安装包」下载块（版本、体积、校验值入口），`build_site.py` 模板同步，故重出站点不会丢。图标沿用 v0.16.41 的「侧身授业」adaptive 全套（mdpi–xxxhdpi + 前景层 + anydpi-v26）。
 - 版本号升 0.16.42：`build_site.py` 重出全站为零差异幂等（课页不带版本串），`verify` 全过。
+- 首包 23.5 MB 曾把 `docs/ke/_shots` 的 24 张工作截图一并打入（多 4.2 MB）；灌装脚本加 skip 后重出，511 课页与 8 篇专题不变，内部链接仍 3848 条零断链。
 - 未做真机安装验证；debug 签名换机重装会冲突，稳定 release 签名未定。
 
 ## v0.16.41 · 接入应用图标「侧身授业」

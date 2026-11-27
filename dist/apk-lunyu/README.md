@@ -14,17 +14,17 @@ SDK 只需三件：`build-tools/35.0.0`（aapt2、d8、zipalign、apksigner）�
 
 ## assets 从哪来
 
-`scripts/build_apk_assets.py` 把 `docs/` 的离线可读部分灌进 `app/src/main/assets/`，可反复重跑：
+配置在 `apk-config.json`（版本、包名、复制清单、站点前缀、剥除规则、字体）。`scripts/build_apk_assets.py <slug>` 把 `docs/` 的离线可读部分灌进 `app/src/main/assets/`，可反复重跑：
 
 - 收：`index.html`、`book.html`、`xing-e.html`、`ke/`（512 页）、`zt/`（8 页）、图标与 manifest。
-- 不收：`fig/`（课页插图已是内嵌 `data:image/webp`）、`_shots/`、`fig/_history/`、sitemap、下载块。
+- 不收：`fig/`（课页插图已是内嵌 `data:image/webp`）、`ke/_shots`、`zt/_shots`、`fig/_history`、sitemap、下载块。首包曾误收 `ke/_shots` 24 张截图（多 4.2 MB），现已剔除。
 - 改写：站内绝对地址（`https://q1z2q3-debug.github.io/daokedao-lunyu/`、`/daokedao-lunyu/`）→ 按页深补 `../` 的相对路径；裸 `index.html` 回链按层修正；`sitemap.xml` 链接与 `<!-- apk-dl:start -->` 下载块剥除；`ke/24`、`ke/25` 的外链字体样式表删除。
 - 字体：取全部页面用字（约 3974 字）从系统 `NotoSerifCJK-Regular/Bold.ttc`（SC 为第 3 个 face，`--font-number=2`）子集化出两档 woff2，置于 `assets/fonts/`，并给每页注入 `@font-face`（家族名就叫 `"Noto Serif SC"`，页面原 CSS 无需改动即命中）。不嵌则安卓落回黑体，失纸墨味。
 
 ## 产物与签名
 
 - 包内 `classes.dex` 只有宿主 Activity；签名走本地 `.debug.keystore`（不入库），v1/v2/v3 三签齐全。
-- 版本：`versionCode 16041`、`versionName 0.16.41`，与 `VERSION` 同步。升版改 `app/build.gradle` 与 `build.sh` 的 `CODE`/`NAME` 两处。
+- 版本：`versionCode 16042`、`versionName 0.16.42`，与 `VERSION` 同步。升版改 `apk-config.json` 的 `version_code`/`version_name`，并同步 `app/build.gradle` 与 `README`。
 - 发布：`cp dist/道可道之论语-vX.apk docs/dl/daokedao-lunyu-vX.apk`，在 `docs/dl/` 重算 `SHA256SUMS.txt`，首页下载块里的文件名与体积同步改。
 
 ## 已知边界

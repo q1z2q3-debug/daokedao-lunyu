@@ -1,0 +1,69 @@
+{
+  "slug": "lunyu",
+  "out": "daokedao-lunyu",
+  "package": "com.runze.daokedaolunyu",
+  "app_name": "道可道之论语",
+  "version_code": 16042,
+  "version_name": "0.16.42",
+  "docs": "docs",
+  "entry": "index.html",
+  "copy_files": [
+    "index.html",
+    "book.html",
+    "xing-e.html",
+    "favicon.svg",
+    "manifest.webmanifest",
+    "icon-192.png",
+    "icon-512.png",
+    "icon-1024.png",
+    "apple-touch-icon.png",
+    "og.png"
+  ],
+  "copy_dirs": [
+    [
+      "ke",
+      [
+        "_shots",
+        "_history"
+      ]
+    ],
+    [
+      "zt",
+      [
+        "_shots",
+        "_history"
+      ]
+    ]
+  ],
+  "site_prefixes": [
+    "https://q1z2q3-debug.github.io/daokedao-lunyu/",
+    "https://q1z2q3-debug.github.io/daokedao-lunyu",
+    "/daokedao-lunyu/"
+  ],
+  "bare_index_fix": true,
+  "strip_blocks": [
+    [
+      "<!-- apk-dl:start -->",
+      "<!-- apk-dl:end -->"
+    ]
+  ],
+  "strip_hrefs": [
+    "sitemap.xml"
+  ],
+  "strip_link_regex": [
+    "fonts/css2"
+  ],
+  "font": {
+    "family": "Noto Serif SC",
+    "weights": {
+      "400": [
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
+        2
+      ],
+      "700": [
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc",
+        2
+      ]
+    }
+  }
+}
