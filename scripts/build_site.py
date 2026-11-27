@@ -971,6 +971,10 @@ def shell(title, desc, body, canonical=""):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://q1z2q3-debug.github.io/daokedao-lunyu/og.png">
 %s<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <style>%s</style>
 </head>
 <body>

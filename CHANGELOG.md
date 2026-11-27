@@ -1,3 +1,12 @@
+## v0.16.41 · 接入应用图标「侧身授业」
+
+- 作者回传 `论语APK图标_侧身授业.zip`，入库存 `assets/icons/lunyu/`（母图 1024、adaptive 前景层 1024 RGBA、各密度 mipmap、`ic_launcher.xml`、`colors.xml`、并排图与 48px 四稿对比），附 `README.md` 记设计定稿、水印处理与打包用法。
+- 原图右下「元宝 AI 生成」水印位在纸地（x 847–996、y 946–1011），取上方同宽纹理覆盖补齐，不裁边、不缩放；各密度 mipmap 由已去水印母图重出，用户原 mipmap 带残留水印者弃用。
+- 站点：`icon-192/512/1024`、`apple-touch-icon`（180）换新；`og.png` 重做为 1200×630（左书名右圆图，同底同色）；`manifest.webmanifest` 补 1024 一档、底色改 `#F7F4EE`、512 拆 any／maskable 两条。
+- `build_site.py` 头部首次引入 `<link rel="manifest">`、PNG 图标两档与 `apple-touch-icon`；此前 manifest 文件存在而页面未引用，等于虚设。
+- `favicon.svg` 仍为朱底「论」字印：十六像素下剪影难辨，标签页用字印，安装图标用剪影。
+- 正文、课页、义理图与图一俱未改动；`verify` 全过。
+
 ## v0.16.40 · 十二课图一裁去生成水印
 
 - 十二幅图一底部各有一行「元宝 AI 生成」水印，占原 1776×1328 图下缘 y 1235–1327（距底 1–93px）。统一裁去底边 99px（含 6px 余量），画面主体不动，下缘全为纸地。
