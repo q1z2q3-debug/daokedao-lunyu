@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.25**，已刊 **441 课**（前言一篇 + 440 章）。学而十六、为政二十四、八佾二十六（3.26 收篇）、里仁二十六（4.26 事君数）、公冶长二十八（5.28 十室之邑）、雍也三十（6.30）、述而三十八（7.38）、子罕三十（9.30）、乡党二十七（10.27）；下论先进二十六（11.1–11.26）、颜渊二十四（12.1–12.24）、子路三十（13.1–13.30）、宪问四十四（14.1–14.44）、卫灵公四十二（15.1–15.42 收篇）、**季氏起十六章，前十课已成篇（16.1–16.10）**。艺术体例：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
+- 当前版本 **v0.16.26**。下论第十六《季氏》**十六章（16.1–16.14，收篇）**，全书已刊 **445 课**（前言一篇 + 444 章）。：一章一课、一课两页、两图一母本。底本形讹另立[登记表](https://q1z2q3-debug.github.io/daokedao-lunyu/xing-e.html)。
 
 ---
 
@@ -479,6 +479,10 @@
 | 第四百三十九课 | 君子有三畏 | 畏者知界：知有不可越，乃能有所为。 | [439](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/439.html) |
 | 第四百四十课 | 生而知之者上也 | 四等以学为轴：前三有学，末一无学。 | [440](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/440.html) |
 | 第四百四十一课 | 君子有九思 | 思者先备：九目皆防，末以义断。 | [441](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/441.html) |
+| 第四百四十二课 | 見善如不及 | 趋避者一事，守达者一生。 | [442](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/442.html) |
+| 第四百四十三课 | 齊景公有馬千駟 | 称之权在民不在物：千驷一日断，一山至今称。 | [443](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/443.html) |
+| 第四百四十四课 | 陳亢問於伯魚 | 教在庭不在室：一言启之，自退学之。 | [444](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/444.html) |
+| 第四百四十五课 | 邦君之妻 | 一人五名：称随位变，礼以定分。 | [445](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/445.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |
