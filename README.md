@@ -7,7 +7,7 @@
 
 - 在线阅读：<https://q1z2q3-debug.github.io/daokedao-lunyu/>
 - 卷首（封面 · 扉页 · 前言）：<https://q1z2q3-debug.github.io/daokedao-lunyu/book.html>
-- 当前版本 **v0.16.33**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**十六章（19.1–19.16）**，全书已刊 **498 课**（前言一篇 + 497 章）。
+- 当前版本 **v0.16.34**。下论第十七《阳货》二十六章、第十八《微子》十一章（均收篇）、第十九《子张》**二十章（19.1–19.20）**，全书已刊 **502 课**（前言一篇 + 501 章）。
 
 ---
 
@@ -536,6 +536,10 @@
 | 第四百九十六课 | 喪致乎哀而止 | 致而不止则伤，止而不致则薄。 | [496](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/496.html) |
 | 第四百九十七课 | 吾友張也 | 许其能而指其未：分层非贬。 | [497](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/497.html) |
 | 第四百九十八课 | 堂堂乎張也 | 盛而难并：德须与人共。 | [498](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/498.html) |
+| 第四百九十九课 | 人未有自致者也 | 常留余，极乃见：自致在亲丧。 | [499](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/499.html) |
+| 第五百课 | 孟莊子之孝 | 不改父之臣政：难在克己，不在守旧。 | [500](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/500.html) |
+| 第五百零一课 | 上失其道民散久矣 | 得情而哀：心法先于术。 | [501](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/501.html) |
+| 第五百零二课 | 紂之不善 | 恶归下流：戒自处，非为纣辩。 | [502](https://q1z2q3-debug.github.io/daokedao-lunyu/ke/502.html) |
 | 专题一 | 《诗三百》与「思无邪」深读 | 十三节、五张手写 SVG：从「辟」到「无邪」，把一句断章拆成一条读法链。 | [1](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/1.html) |
 | 专题二 | 孔子的道与德，对着老子读 | 十三节、两张对照图：德者得也两家同源；道在事中／事先，德在起点／第一级补位；最硬分歧在礼。 | [2](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/2.html) |
 | 专题三 | 2.4 读法辨：这是不是回忆 | 十一节、三张竖幅图：形态自述、写法追述、用途路标；六阶是刻度不是台阶，末阶是卸载。 | [3](https://q1z2q3-debug.github.io/daokedao-lunyu/zt/3.html) |

@@ -503,6 +503,10 @@
 - 第496课｜子游曰：「喪致乎哀而止。」｜致而不止则伤，止而不致则薄。义理图一「致与止」，图二「任与节」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/496.html
 - 第497课｜子游曰：「吾友張也，爲難能也；然而未仁。」｜许其能而指其未：分层非贬。义理图一「能与未」，图二「掩与指」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/497.html
 - 第498课｜曾子曰：「堂堂乎張也！難與並爲仁矣。」｜盛而难并：德须与人共。义理图一「堂堂与并」，图二「退与并」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/498.html
+- 第499课｜曾子曰：「吾聞諸夫子：『人未有自致者也，必也親喪乎！』」｜常留余，极乃见：自致在亲丧。义理图一「常余与极尽」，图二「七分与满」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/499.html
+- 第500课｜曾子曰：「吾聞諸夫子：『孟莊子之孝也，其他可能也……』」｜不改父之臣政，难在克己，不在守旧。义理图一「不改之难」，图二「掩与全」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/500.html
+- 第501课｜孟氏使陽膚爲士師，問於曾子。｜得情而哀：心法先于术。义理图一「得情而哀」，图二「酷与恤」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/501.html
+- 第502课｜子貢曰：「紂之不善，不如是之甚也。」｜恶归下流：戒自处，非为纣辩。义理图一「下流之聚」，图二「高与下」。：https://q1z2q3-debug.github.io/daokedao-lunyu//ke/502.html
 
 ## 专题
 - 论文一｜君子与小人：孔子语汇的定义与判准｜以 2.14 为起点：君子 108 见／小人 24 见／同章共见 18 条；由位至德的词义迁移；小人三义（德义 20／身份 3／谦称 0）；判准收敛为义利一纲。三图、四表、三附录。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/6.html
@@ -515,7 +519,7 @@
 - 专题五｜孝与道：药与饭——以「道可道」重读孝｜十章、六表、两图：指月三境读孝之三层，第十八章判孝为药，空杯解敬、通道解继、涌现解家，末出三问法。：https://q1z2q3-debug.github.io/daokedao-lunyu/zt/5.html
 
 ## 引用
-润泽《润泽说 道可道之论语 · 通释》v0.16.33，https://q1z2q3-debug.github.io/daokedao-lunyu/
+润泽《润泽说 道可道之论语 · 通释》v0.16.34，https://q1z2q3-debug.github.io/daokedao-lunyu/
 
 ## 义理口径
 一阴一阳之谓道：学为受（阴）、习为发（阳）。君子不器：可器而不着于器（杯与管之模型）。
