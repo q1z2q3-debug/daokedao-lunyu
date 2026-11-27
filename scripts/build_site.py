@@ -1056,7 +1056,7 @@ def build_index():
 <!-- apk-dl:start -->
 <div class="apk-dl" style="margin:26px 0 6px;padding:16px 18px;border:1px solid #DCD5C8;background:#FCFAF6;border-radius:2px">
   <div style="font-size:12px;letter-spacing:.18em;color:#7C6D5C;margin-bottom:8px">安 卓 安 装 包 · APK</div>
-  <a href="dl/daokedao-lunyu-v0.16.43.apk" style="font-size:15.5px;border-bottom:1px solid #994433">道可道之论语 v0.16.43　下载安装（19.3 MB）</a>
+  <a href="dl/daokedao-lunyu-v0.16.44.apk" style="font-size:15.5px;border-bottom:1px solid #994433">道可道之论语 v0.16.44　下载安装（19.3 MB）</a>
   <div style="font-size:12.5px;color:#7C6D5C;line-height:1.8;margin-top:6px">离线全本：首页、卷首、511 课与专题八篇一并收在包内，插图内嵌、宋体内置，飞行模式可读；不申请任何权限。校验值见 <a href="dl/SHA256SUMS.txt">SHA256SUMS</a>。</div>
 </div>
 <!-- apk-dl:end -->
